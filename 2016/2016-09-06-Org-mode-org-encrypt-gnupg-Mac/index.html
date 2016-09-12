@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   
-  <title>西单大悦城更换 RMBP 屏幕攻略 | Hexo</title>
+  <title>Mac 下 Emacs Org mode 加密以及 gnupg 的安装 | Hexo</title>
   <meta name="author" content="Tommy Jiang">
   
-  <meta name="description" content="RMBP 买了一年半，屏幕涂层脱落得七零八落……到西单大悦城 Apple Store 免费换了个新的，非常棒。">
+  <meta name="description" content="Mac 下 Org mode 加密之前用得好好的，最近发现执行org-encrypt-entry时有问题，原来是gnupg的原因。">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="西单大悦城更换 RMBP 屏幕攻略"/>
+  <meta property="og:title" content="Mac 下 Emacs Org mode 加密以及 gnupg 的安装"/>
   <meta property="og:site_name" content="Hexo"/>
 
   
@@ -91,7 +91,7 @@
 
 	
 		<div class="page-header page-header-inverse ">		
-			<h1 class="title title-inverse "> 西单大悦城更换 RMBP 屏幕攻略</h1>
+			<h1 class="title title-inverse "> Mac 下 Emacs Org mode 加密以及 gnupg 的安装</h1>
 		</div>		
 	
 
@@ -111,18 +111,14 @@
 	<div class="mypage">		
 	  		
 
-	  <p>RMBP 买了一年半，屏幕涂层脱落得七零八落……到西单大悦城 Apple Store 免费换了个新的，非常棒。</p>
+	  <p>Mac 下 Org mode 加密之前用得好好的，最近发现执行<code>org-encrypt-entry</code>时有问题，原来是<code>gnupg</code>的原因。</p>
 <a id="more"></a>
-<p>网上有很多关于 RMBP 涂层脱落的问题，比如<a href="https://www.zhihu.com/question/26424953" target="_blank" rel="external">知乎上的讨论</a>。其实去年10月开始 Apple 就已经发布内部通知免费维修 Macbook 和 Macbook Pro 防眩光涂层脱落问题，只是没有大肆宣传。正好离西单很近，直接到西单大悦城 Apple Store 换新。</p>
-<ul>
-<li>2016.8.22 预约8.23中午 Genius bar。</li>
-<li>2016.8.23 中午到 Genius bar，被告知没有现成的屏幕，需要订购，把电脑拿回来等通知。</li>
-<li>2016.8.25 下午收到 Apple 的邮件，告知已到货，预约8.28晚上 Genius bar。</li>
-<li>2016.8.27 上午收到西单大悦城 Apple Store 电话，通知屏幕已到货。</li>
-<li>2016.8.28 晚上拿到西单大悦城 Apple Store 维修。</li>
-<li>2016.8.29 上午取回。</li>
-</ul>
-<p>整个过程还算顺利，5100大洋一分没花，换完屏幕的 Mac 焕然一新，哈哈。</p>
+<p>迁移到<code>Spacemacs</code>之后感觉很方便，<code>base package</code>中自带了<code>exec-path-from-shell</code>，可以直接使用 Mac 系统的环境变量。</p>
+<p>前天用<code>org-encrypt-entry</code>把<code>org</code>文件加密的时候报错，查了下<code>homebrew</code>安装的<code>gnupg</code>，发现已经更新到<code>gnupg2</code>了。所以果断自己下载了<code>gnupg 1.4.21</code>的稳定版：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install gpg1</div></pre></td></tr></table></figure>
+<p>同时在<code>.spacemacs.d</code>的<code>init.el</code>中加入了<code>gnupg 1.4.21</code>的路径：</p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(<span class="name">add-to-list</span> 'exec-path <span class="string">"/usr/local/opt/gnupg/libexec/gpgbin"</span>)</div></pre></td></tr></table></figure>
+<p>又可以用来<code>gnupg</code>来给<code>org</code>文件加密了。</p>
 	  
 	</div>
 
@@ -132,13 +128,13 @@
 <ul class="pagination">
 	 
 				
-    	<li class="prev"><a href="/2016-09-06-Org-mode-org-encrypt-gnupg-Mac/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
+    	<li class="prev"><a href="/2016/2016-09-10-Beijing-railway-color/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
   		
 
         <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
 
 		
-		   <li class="next"><a href="/2016-08-26-ICBC-Asia/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+		   <li class="next"><a href="/2016/2016-08-28-Apple-xidan-joy-city-retina-display/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
         
 	
 </ul>
@@ -177,7 +173,7 @@
   <h2 class="title">Comments</h2>
 
   
-  	 <div class="ds-thread" data-thread-key="2016-08-28-Apple-xidan-joy-city-retina-display/" data-title="西单大悦城更换 RMBP 屏幕攻略" data-url="http://tommyjiang.github.io/2016-08-28-Apple-xidan-joy-city-retina-display/"></div>  
+  	 <div class="ds-thread" data-thread-key="2016/2016-09-06-Org-mode-org-encrypt-gnupg-Mac/" data-title="Mac 下 Emacs Org mode 加密以及 gnupg 的安装" data-url="http://tommyjiang.github.io/2016/2016-09-06-Org-mode-org-encrypt-gnupg-Mac/"></div>  
   
 </section>
 
@@ -191,7 +187,7 @@
 	
 	<div class="meta-widget">
 	<i class="fa fa-clock-o"></i>
-	2016-08-28 
+	2016-09-06 
 	</div>
 	
 
@@ -202,7 +198,7 @@
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    <li><a href="/categories/生活/">生活<span>7</span></a></li>
+    <li><a href="/categories/技术/">技术<span>6</span></a></li>
   </li>
 
     </ul>
@@ -215,7 +211,7 @@
 	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
     <ul id="tags" class="tag_box list-unstyled collapse in">	  
 	    
-  <li><a href="/tags/Mac/">Mac<span>2</span></a></li>
+  <li><a href="/tags/Mac/">Mac<span>2</span></a></li> <li><a href="/tags/Emacs/">Emacs<span>1</span></a></li> <li><a href="/tags/Org-mode/">Org mode<span>1</span></a></li>
     </ul>
 	</div>
 		
