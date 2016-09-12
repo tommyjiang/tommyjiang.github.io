@@ -1,0 +1,1078 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+    
+    <entry>
+      <title><![CDATA[北京地铁各线路颜色 HEX 及 RGB 代码]]></title>
+      <url>http://tommyjiang.github.io/2016-09-10-Beijing-railway-color/</url>
+      <content type="html"><![CDATA[<p>大概翻了翻，网上好像还没有北京地铁各线路颜色的 HEX 及 RGB 代码，自己整理一份。</p>
+<a id="more"></a>
+<p>北京地铁各线路颜色 HEX 和 RGB 代码如下，参考<a href="http://www.bjsubway.com/subwaymap/station_map.html" target="_blank" rel="external">北京地铁官网线路图</a>：</p>
+
+<table border="1px" align="center">
+  <tr>
+    <th style="text-align:center">线路序号</th>
+    <th style="text-align:center">颜色</th>
+    <th style="text-align:center">HEX</th>
+    <th style="text-align:center">RGB</th>
+  </tr>
+  <tr>
+    <td style="text-align:center">1号线</td>
+    <td bgcolor="bb1f20" style="text-align:center"></td>
+    <td style="text-align:center">#BB1F20</td>
+    <td style="text-align:center">rgb(187, 31, 32)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">2号线</td>
+    <td bgcolor="004a88" style="text-align:center"></td>
+    <td style="text-align:center">#004A88</td>
+    <td style="text-align:center">rgb(0, 74, 136)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">4号线</td>
+    <td bgcolor="007c8b" style="text-align:center"></td>
+    <td style="text-align:center">#007C8B</td>
+    <td style="text-align:center">rgb(0, 124, 139)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">5号线</td>
+    <td bgcolor="95006d" style="text-align:center"></td>
+    <td style="text-align:center">#95006D</td>
+    <td style="text-align:center">rgb(149, 0, 109)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">6号线</td>
+    <td bgcolor="c88700" style="text-align:center"></td>
+    <td style="text-align:center">#C88700</td>
+    <td style="text-align:center">rgb(200, 135, 0)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">7号线</td>
+    <td bgcolor="f4ba6a" style="text-align:center"></td>
+    <td style="text-align:center">#F4BA6A</td>
+    <td style="text-align:center">rgb(244, 186, 106)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">8号线</td>
+    <td bgcolor="038d57" style="text-align:center"></td>
+    <td style="text-align:center">#038D57</td>
+    <td style="text-align:center">rgb(3, 141, 87)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">9号线</td>
+    <td bgcolor="7dbd00" style="text-align:center"></td>
+    <td style="text-align:center">#7DBD00</td>
+    <td style="text-align:center">rgb(125, 189, 0)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">10号线</td>
+    <td bgcolor="0089b5" style="text-align:center"></td>
+    <td style="text-align:center">#0089B5</td>
+    <td style="text-align:center">rgb(0, 137, 181)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">13号线</td>
+    <td bgcolor="f8e700" style="text-align:center"></td>
+    <td style="text-align:center">#F8E700</td>
+    <td style="text-align:center">rgb(248, 231, 0)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">14号线</td>
+    <td bgcolor="cb958f" style="text-align:center"></td>
+    <td style="text-align:center">#CB958F</td>
+    <td style="text-align:center">rgb(203, 149, 143)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">15号线</td>
+    <td bgcolor="491b56" style="text-align:center"></td>
+    <td style="text-align:center">#491B56</td>
+    <td style="text-align:center">rgb(73, 27, 86)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">八通线</td>
+    <td bgcolor="bb1f20" style="text-align:center"></td>
+    <td style="text-align:center">#BB1F20</td>
+    <td style="text-align:center">rgb(187, 31, 32)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">房山线</td>
+    <td bgcolor="de490e" style="text-align:center"></td>
+    <td style="text-align:center">#DE490E</td>
+    <td style="text-align:center">rgb(222, 73, 14)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">昌平线</td>
+    <td bgcolor="d668a3" style="text-align:center"></td>
+    <td style="text-align:center">#D668A3</td>
+    <td style="text-align:center">rgb(214, 104, 163)</td>
+  </tr>
+</table>
+
+<h1 id="版本记录"><a href="#版本记录" class="headerlink" title="版本记录"></a>版本记录</h1><p>2015-09-10：v1.0-新建博文。</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Mac 下 Emacs Org mode 加密以及 gnupg 的安装]]></title>
+      <url>http://tommyjiang.github.io/2016-09-06-Org-mode-org-encrypt-gnupg-Mac/</url>
+      <content type="html"><![CDATA[<p>Mac 下 Org mode 加密之前用得好好的，最近发现执行<code>org-encrypt-entry</code>时有问题，原来是<code>gnupg</code>的原因。</p>
+<a id="more"></a>
+<p>迁移到<code>Spacemacs</code>之后感觉很方便，<code>base package</code>中自带了<code>exec-path-from-shell</code>，可以直接使用 Mac 系统的环境变量。</p>
+<p>前天用<code>org-encrypt-entry</code>把<code>org</code>文件加密的时候报错，查了下<code>homebrew</code>安装的<code>gnupg</code>，发现已经更新到<code>gnupg2</code>了。所以果断自己下载了<code>gnupg 1.4.21</code>的稳定版：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install gpg1</div></pre></td></tr></table></figure>
+<p>同时在<code>.spacemacs.d</code>的<code>init.el</code>中加入了<code>gnupg 1.4.21</code>的路径：</p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(<span class="name">add-to-list</span> 'exec-path <span class="string">"/usr/local/opt/gnupg/libexec/gpgbin"</span>)</div></pre></td></tr></table></figure>
+<p>又可以用来<code>gnupg</code>来给<code>org</code>文件加密了。</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[西单大悦城更换 RMBP 屏幕攻略]]></title>
+      <url>http://tommyjiang.github.io/2016-08-28-Apple-xidan-joy-city-retina-display/</url>
+      <content type="html"><![CDATA[<p>RMBP 买了一年半，屏幕涂层脱落得七零八落……到西单大悦城 Apple Store 免费换了个新的，非常棒。</p>
+<a id="more"></a>
+<p>网上有很多关于 RMBP 涂层脱落的问题，比如<a href="https://www.zhihu.com/question/26424953" target="_blank" rel="external">知乎上的讨论</a>。其实去年10月开始 Apple 就已经发布内部通知免费维修 Macbook 和 Macbook Pro 防眩光涂层脱落问题，只是没有大肆宣传。正好离西单很近，直接到西单大悦城 Apple Store 换新。</p>
+<ul>
+<li>2016.8.22 预约8.23中午 Genius bar。</li>
+<li>2016.8.23 中午到 Genius bar，被告知没有现成的屏幕，需要订购，把电脑拿回来等通知。</li>
+<li>2016.8.25 下午收到 Apple 的邮件，告知已到货，预约8.28晚上 Genius bar。</li>
+<li>2016.8.27 上午收到西单大悦城 Apple Store 电话，通知屏幕已到货。</li>
+<li>2016.8.28 晚上拿到西单大悦城 Apple Store 维修。</li>
+<li>2016.8.29 上午取回。</li>
+</ul>
+<p>整个过程还算顺利，5100大洋一分没花，换完屏幕的 Mac 焕然一新，哈哈。</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[工银亚洲香港账户开户攻略]]></title>
+      <url>http://tommyjiang.github.io/2016-08-26-ICBC-Asia/</url>
+      <content type="html"><![CDATA[<p>开了个工银亚洲的香港账户，方便进行在 HK 的交易。</p>
+<a id="more"></a>
+<p>和小哥在 HK 一起度过了愉快的半年，即使走了也很怀念那段时光，正好最近在 HK 有些财务往来，所以决定办一张工银亚洲的香港银行卡，方便进行 HK 的交易。</p>
+<h1 id="开户流程"><a href="#开户流程" class="headerlink" title="开户流程"></a>开户流程</h1><p>到单位最近的复外支行询问，答复说要去工行北京市分行办理，也不远，就在复兴门桥南边一点的天银大厦。携带的材料就更简单了，只需要身份证和有效期三个月以上的港澳通行证，柜台交了 200 块手续费，就让回来等 HK 那边的电话确认了，负责办理的小妹还特意说了一句，估计香港那边周末不加班，工作日保持手机畅通就可以了……</p>
+<p>过了一周，手机收到短信：</p>
+<blockquote>
+<p>【工银亚洲】工银亚洲客服即将致电给您进行开户申请确认，请注意接听。如有查询，请即致电(852)21895588。</p>
+</blockquote>
+<p>中午12点多正在吃饭的时候，接到了工银亚洲的开户确认电话，核实了身份证号码、单位地址和手机号，然后询问是否拿到密码封和电子密码器，开户确认手续就完成了。</p>
+<p>第二天下午发了电子密码器 12 位激活码，账户也已经开户。但工银亚洲账户需要本人通过内地工行账户向其中汇一笔钱开通，开通前拒收一切其他账户汇款，周六上午在工行柜台办了汇款，等到周一中午终于入账完毕，可以正常使用了。</p>
+<h1 id="工银亚洲香港账户介绍"><a href="#工银亚洲香港账户介绍" class="headerlink" title="工银亚洲香港账户介绍"></a>工银亚洲香港账户介绍</h1><p>工行作为网友口中的“宇宙行”，各方面业务实力还是很强的。工银亚洲在香港虽然算小行，但有工行撑腰，也算个不错的选择。</p>
+<p>账户管理费方面，首年免费，第二年起需要存 10000 港币，否则每月要收取 15 港币的账户管理费。</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[七夕·Google]]></title>
+      <url>http://tommyjiang.github.io/2016-08-09-Google-qi-xi/</url>
+      <content type="html"><![CDATA[<p>今天是中国传统佳节七夕，用今天 Google 主页的七夕图片作为配图吧。</p>
+<a id="more"></a>
+<p>Google 不愧是一个充满人文关怀的公司，今天也应景地配上了七夕的图片。中午打开 Mac 下的 Chrome 时发现整个 UI 焕然一新，原来已经升级到 v52 版本，整体 UI 借鉴了移动设备上的 <code>Material</code> 风格，界面更加简洁，科技感更强，整体配色也更高冷了。</p>
+<p><img src="/images/2016/Chrome-v52.png" alt=""></p>
+<p>说起七夕，印象比较深的有高考那年，也就是 2006 年的双七夕。还有七年前 2009 年的七夕，从学校去五道口的路上，碰到很多卖花的，不过当时的表现实在是……</p>
+<p>年少轻狂，很多时候很多事儿都想不清楚，稀里糊涂地做了选择。现在回过来看，所谓成长，大概就是有能力做出选择，并且承担选择带来的后果吧。</p>
+<blockquote>
+<p>两情若是长久时，又岂在朝朝暮暮。</p>
+</blockquote>
+<p>七夕快乐。</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[MATLAB plot 函数默认 color 调整]]></title>
+      <url>http://tommyjiang.github.io/2016-07-19-MATLAB-plot-color/</url>
+      <content type="html"><![CDATA[<p>从 MATLAB 2014b 开始，其 <code>plot</code> 函数的默认颜色有所调整。</p>
+<a id="more"></a>
+<p>新的默认配色名称为 <code>parula</code>，意为北美生活的一种森莺。</p>
+<p>如果想了解 <code>parula</code> 的配色方案，可以在 MATLAB 中输入以下命令：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">get(gca,<span class="string">'colororder'</span>)</div></pre></td></tr></table></figure>
+<p>默认配色 <code>parula</code> 的前七种颜色如下：</p>
+<table border="1px" align="center"><br>  <tr><br>    <th style="text-align:center">颜色</th><br>    <th style="text-align:center">HEX</th><br>    <th style="text-align:center">RGB</th><br>  </tr><br>  <tr><br>    <td bgcolor="0072bd" style="text-align:center"></td><br>    <td style="text-align:center">#0072BD</td><br>    <td style="text-align:center">rgb(0, 114, 189)</td><br>  </tr><br>  <tr><br>    <td bgcolor="d95319" style="text-align:center"></td><br>    <td style="text-align:center">#D95319</td><br>    <td style="text-align:center">rgb(217, 83, 25)</td><br>  </tr><br>  <tr><br>    <td bgcolor="edb120" style="text-align:center"></td><br>    <td style="text-align:center">#EDB120</td><br>    <td style="text-align:center">rgb(237, 177, 32)</td><br>  </tr><br>  <tr><br>    <td bgcolor="7e2f8e" style="text-align:center"></td><br>    <td style="text-align:center">#7E2F8E</td><br>    <td style="text-align:center">rgb(126, 47, 142)</td><br>  </tr><br>  <tr><br>    <td bgcolor="77ac30" style="text-align:center"></td><br>    <td style="text-align:center">#77AC30</td><br>    <td style="text-align:center">rgb(119, 172, 48)</td><br>  </tr><br>  <tr><br>    <td bgcolor="4dbeee" style="text-align:center"></td><br>    <td style="text-align:center">#4DBEEE</td><br>    <td style="text-align:center">rgb(77, 190, 238)</td><br>  </tr><br>  <tr><br>    <td bgcolor="a2142f" style="text-align:center"></td><br>    <td style="text-align:center">#A2142F</td><br>    <td style="text-align:center">rgb(162, 20, 47)</td><br>  </tr><br></table>
+
+<p>应该说 2014b 之后版本 MATLAB 的默认作图选择这几个颜色已经很漂亮了，不像以前都是纯蓝、灰绿这些土颜色……本来还想找点有没有好的配色方案，现在觉得默认的方案就很好了^_^</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[《大鱼海棠》经典台词]]></title>
+      <url>http://tommyjiang.github.io/2016-07-10-bigfish-begonia-md/</url>
+      <content type="html"><![CDATA[<p>昨天晚上，顶着酷热的空气和萌哥老妹到圣熙八号观赏了这部动画，作为校友也算对退学追梦的清华师兄的支持吧。</p>
+<a id="more"></a>
+<p>由于去之前已经听说网上一片骂声，所以期待挺低的，结果看完感觉还不错。画面和音乐都<br>很有感觉，尤其喜欢里面的台词，好好分享下。</p>
+<h1 id="经典台词"><a href="#经典台词" class="headerlink" title="经典台词"></a>经典台词</h1><h2 id="犯错"><a href="#犯错" class="headerlink" title="犯错"></a>犯错</h2><blockquote>
+<p>灵婆：我告诉你什么事最可悲。你遇见了一个人，犯了一个错，你想弥补想还清，到最后才发现，你根本无力回天，犯下的罪过永远无法弥补，我们永远无法还清犯下的……</p>
+</blockquote>
+<p>想起王朔《过把瘾就死》中的一个故事：</p>
+<blockquote>
+<p>就像童话中两个贪心的人挖地下的财宝，结果挖出一个人的骸骨，虽然迅速埋上了，甚至在上面种了树，栽了花，但两个人心里都知道底下埋的是什么。看见树，看见花，想的却是地下的那具骸骨。</p>
+</blockquote>
+<p>其实任何人都有自己极度反感的事，如果别人刻意或是不小心触碰到，就会留下永久的痕迹。所以平时相处时最好能提前把这些了解清楚。就像灵婆说的，有些事一旦做了就永远无法弥补……</p>
+<h2 id="从心"><a href="#从心" class="headerlink" title="从心"></a>从心</h2><blockquote>
+<p>椿爷爷：只要你的心是善良的，对错都是别人的事，照着自己的心意走。</p>
+</blockquote>
+<p>Follow your heart，可惜现实中的我太懦弱了，读博的时候也从来没想过以后的职业发展，一直在随波逐流……</p>
+<h2 id="快乐"><a href="#快乐" class="headerlink" title="快乐"></a>快乐</h2><blockquote>
+<p>湫：如果不快乐，活再久又有什么用呢。</p>
+</blockquote>
+<p>说起来容易，做起来难。这么简单的道理人人都懂，但并不是每个人都快乐。</p>
+<h2 id="忘记"><a href="#忘记" class="headerlink" title="忘记"></a>忘记</h2><blockquote>
+<p>鹿神：忘不了就别忘了，真正的忘记是不需要努力的。</p>
+</blockquote>
+<p>非常像萌哥和我说的那句：该记住的一定会记住，记不住的就是不需要记住的。好有哲理。</p>
+<p>另：庄子《逍遥游》中，鲲要先“化而为鸟，其名为鹏”才能“怒而飞”，动画中去掉了中间由鲲变成鹏的过程，鲲应该是不能飞的，只有鹏才能飞。</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[电力系统研究的个人体会]]></title>
+      <url>http://tommyjiang.github.io/2016-03-17-Power-system-research/</url>
+      <content type="html"><![CDATA[<p>从博士入学算起，从事电力系统的研究工作已经将近 6 年了，结合个人的实际经验谈谈对电力系统研究的体会。</p>
+<a id="more"></a>
+<h1 id="电力系统研究的特点"><a href="#电力系统研究的特点" class="headerlink" title="电力系统研究的特点"></a>电力系统研究的特点</h1><p>我个人认为，电力系统研究的特点包括以下几点：</p>
+<ol>
+<li>模型角度：动态模型极为复杂。</li>
+<li>技术路线角度：严重依赖仿真。</li>
+<li>研究开放性角度：极度封闭的小团体。</li>
+</ol>
+<h2 id="模型角度"><a href="#模型角度" class="headerlink" title="模型角度"></a>模型角度</h2><p>目前越来越多的电力系统研究者向优化方向靠拢，其原因是电力系统的优化问题（例如机组组合、经济调度等）一般都采用稳态或准稳态模型。与动态模型相比，稳态或准稳态模型实在是简单太多了。对于一个包括几十甚至上百台发电机的大型电力系统，其动态模型极其复杂，基本只能依靠数值仿真进行分析。然而对于研究而言，只依靠数值仿真进行分析是远远不够的，还需要在理论方面有所突破。这就迫使研究者“知难而退”，既然动态不好做，那干脆就不做。</p>
+<p>换个角度说，我之前投过一篇文章到<code>IEEE Transcatons on Power Systems</code>，一审直接被拒，其中一位 Reviewer 写到：</p>
+<blockquote>
+<p>Power systems in general are <strong>very complex systems</strong> that the number of their state and control variables can <strong>easily exceed hundreds</strong>. How the algorithm would work on larger systems? How to do prove your statement?</p>
+</blockquote>
+<p>坦白地说，他指出的问题非常关键，即电力系统的动态模型过于复杂，全局性的控制算法很难应用。但如果揪住这一点不放，那电力系统动态的研究就很难开展了。例如，优化那边经常会证明某个算法会得到最优解，但到现在为止大型电力系统的稳定性都不在电力系统动态方向研究人员的考虑之内，因为这个问题太复杂了。正是由于这一点，动态方向的研究人员更需要团结起来发出自己的声音，而不是互相质疑对方的研究没法解决大型电力系统的动态问题，如今<code>IEEE Transcatons on Power Systems</code>基本已经被优化领域的研究占领了，和这一点也不无关系。</p>
+<p>今天（2016年5月30日）心血来潮，看了下<code>IEEE Transcatons on Power Systems</code>期刊 Early Access 中清华的所有文章，一共21篇，其中动态方向只有3篇……</p>
+<h2 id="技术路线角度"><a href="#技术路线角度" class="headerlink" title="技术路线角度"></a>技术路线角度</h2><p>电力系统的研究严重依赖仿真，这应该是目前电力系统研究领域的一个普遍现状了。与电力电子和高压方向不同，电力系统研究最后的算例部分基本都是依靠仿真来佐证研究者所提出方法的有效性。仿真除了模仿真实外，还有一个戏谑的解释：仿佛是真的。由于缺乏与实际结果的对比，很多仿真结果其实并不可信。与此同时，绝大多数研究者所做的研究也只是停留在纸上谈兵的阶段，并没有干过实际工程，很难判断仿真结果是否有误。</p>
+<p>正是由于绝大多数电力系统的研究都是纸上谈兵，所以在各种宣传和报奖时，需要进行适度的夸张，从而体现自己所做研究的意义，这样做被揭穿的概率极低，可谓风险极小收益却还不错。由于电力系统领域研究者的水平不会相差很多，所以适度夸张——或者说——忽悠的能力至关重要。</p>
+<h2 id="研究开放性角度"><a href="#研究开放性角度" class="headerlink" title="研究开放性角度"></a>研究开放性角度</h2><p>关于这部分，先引用目前在 UCD 的电力系统研究领域著名学者 Federico Milano 的一段话：</p>
+<blockquote>
+<p>The experience with PSAT has taught me that the power system community is simply not responding properly to open source projects. In the last ten years, third-party contributions to PSAT have been very marginal or would have been developed even if PSAT had been not distributed as a free and open source project. On the other hand, I am quite sure that several extensions have been developed but not shared with the PSAT community.</p>
+<p>I got to the conclusion that the free and open source paradigm is not attractive for <strong>small and closed</strong> communities like the power system one. </p>
+</blockquote>
+<p><code>PSAT</code> 是 Milano 开发的电力系统仿真程序，以开源的形式共享给所有电力系统研究者。但他发现很多研究者基于 PSAT 开发了新的扩展功能，但并没有共享给整个 PSAT 社区，这让他明白了免费开源是不适合由电力系统研究者组成的这种封闭的小圈子的。</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[博客迁移至 Hexo]]></title>
+      <url>http://tommyjiang.github.io/2016-03-16-migrate-to-hexo/</url>
+      <content type="html"><![CDATA[<p>从2014年8月第一篇博文算起，已经写了一年半了。之前博客主要用的是 Jekyll + Markdown （感谢 codepiano 同学提供的主题）。即日起本博客迁移至 <code>Hexo</code>，之前的博文会挑一些重点的迁移过来。</p>
+<p>本博客使用的是<code>raytaylorlin</code>提供的<a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism" target="_blank" rel="external">raytaylorism 主题</a>，在此表示感谢。</p>
+<p>2016-08-03 更新：本博客目前使用的是<a href="https://github.com/wzpan/hexo-theme-freemind" target="_blank" rel="external">freemind 主题</a>，对作者表示感谢。</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[2015行程总结及个人飞行统计]]></title>
+      <url>http://tommyjiang.github.io/2015-12-28-Trip-2015/</url>
+      <content type="html"><![CDATA[<p>2015年转眼要结束了，在新年即将到来之际整理全年的飞机和火车行程，以及从2012年4月9日第一次坐飞机开始的所有飞行行程。</p>
+<a id="more"></a>
+<h1 id="2015行程总结"><a href="#2015行程总结" class="headerlink" title="2015行程总结"></a>2015行程总结</h1><p>2015年各月飞机里程和火车里程如下：</p>
+
+<div id="tripSum2015" style="height:400px"></div>
+
+<p>其中1、2、5、8月的飞行里程完全平行，4月是加上了北京——沈阳往返所以才多了一些，也就是说今年光北京——通辽就往返了5趟……不过8月初863已经结题了，我也毕业了，以后应该再也不用去了，哈哈。</p>
+<p>2015年飞机和火车的路线图如下：</p>
+
+<div id="tripMap" style="height:400px"></div>
+
+<p>点评一下路线图：</p>
+<ul>
+<li><p>飞机：今年个人飞行又开辟多条新航线，到过的机场新增以下4个：沈阳桃仙国际机场（SHE），杭州萧山国际机场（HGH），厦门高崎国际机场（XMN），福州长乐国际机场（FOC）。</p>
+</li>
+<li><p>火车：最耀眼的就是地图最北部的火车线路了，从通辽到霍林郭勒的往返……2月8号晚上从霍林郭勒下车走了一段路，零下30度的低温把脸都冻僵了，终生难忘的记忆啊，哈哈。</p>
+</li>
+<li><p>整体：今年全年的行程明显集中在东部地区，最西的地点竟然是北京……</p>
+</li>
+</ul>
+<h1 id="个人飞行总结"><a href="#个人飞行总结" class="headerlink" title="个人飞行总结"></a>个人飞行总结</h1><p>由于爷爷奶奶和姥姥姥爷家里离得都很近，再加上家里比较传统，一到过节就回家，没怎么出去玩过，所以我直到2012年4月9号才第一次坐飞机。</p>
+<p>先把分年度飞行线路图放上来吧，只有国内部分，不包括两次北京-美国往返以及美国国内航线：</p>
+
+<div id="flightMap" style="height:400px"></div>
+
+<p>整个西部地区只飞过昆明……东部地区航线倒是挺密集的。出发和到达最多的机场自然是PEK，通辽机场紧随其后，出发和到达均有15次……</p>
+<p>分年度飞行次数和飞行里程统计如下：</p>
+
+<div id="flightStat" style="height:400px"></div>
+
+<p>各航空公司的里程对比如下：</p>
+
+<div id="airlineStat" style="height:400px"></div>
+
+<p>Base 北京，自然首选国航，总共贡献了65%的里程。第二次去美国飞西雅图坐的是达美的航班，在美国境内是美联航，这两个公司加起来也贡献了13000公里的里程，个人飞行总里程已经接近93000公里。</p>
+
+<script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+<script type="text/javascript">
+// 路径配置
+    require.config({
+        paths: {
+            echarts: 'http://echarts.baidu.com/build/dist'
+        }
+    });
+
+    require(
+        [
+            'echarts',
+            'echarts/chart/bar',
+            'echarts/chart/pie',
+            'echarts/chart/line',
+            'echarts/chart/map'
+        ],
+        drawEcharts
+    );
+
+    function drawEcharts(ec){
+        TripSum2015(ec);
+        TripMap(ec);
+        FlightMap(ec);
+        FlightStat(ec);
+        Airline(ec);
+    }
+
+    function TripSum2015(ec){
+        var myTripSum2015 = ec.init(document.getElementById('tripSum2015'),'macarons');
+
+        option = {
+            tooltip : {
+                trigger: 'axis'
+            },
+            toolbox: {
+                show : true,
+                feature : {
+                    mark : {show: true},
+                    dataView : {show: true, readOnly: false},
+                    magicType: {show: true, type: ['bar', 'bar']},
+                    restore : {show: true},
+                    saveAsImage : {show: true}
+                }
+            },
+            calculable : true,
+            legend: {
+                data:['飞机行程','火车行程']
+            },
+            xAxis : [
+                {
+                    type : 'category',
+                    data : ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月']
+                }
+            ],
+            yAxis : [
+                {
+                    type : 'value',
+                    name : '飞机行程(km)',
+                    axisLabel : {
+                        formatter: '{value}'
+                    }
+                },
+                {
+                    type : 'value',
+                    name : '火车行程(km)',
+                    axisLabel : {
+                        formatter: '{value}'
+                    }
+                }
+            ],
+            series : [
+                {
+                    name:'飞机行程',
+                    type:'bar',
+                    data:[1264, 1264, 0, 2480, 1264, 0, 0, 1264, 0, 0, 2266, 3484]
+                },
+                {
+                    name:'火车行程',
+                    type:'bar',
+                    yAxisIndex: 1,
+                    data:[234, 1274, 468, 1061, 234, 468, 0, 426, 1177, 234, 477, 2741]
+                }
+            ]
+        };
+        myTripSum2015.setOption(option,true); //当setOption第二个参数为true时，会阻止数据合并
+    }
+
+    function TripMap(ec){
+        var myTripMap = ec.init(document.getElementById('tripMap'));
+
+        var effect = {
+            show: true,
+            scaleSize: require('zrender/tool/env').canvasSupported ? 1 : 2,
+            period: 30,             // 运动周期，无单位，值越大越慢
+            color: '#fff',
+            shadowColor: 'rgba(220,220,220,0.4)',
+            shadowBlur : 5 
+        };
+        function itemStyle(idx) {
+            return {
+                normal: {
+                    color:'#fff',
+                    borderWidth:1,
+                    borderColor:['rgba(30,144,255,1)','lime'][idx],
+                    lineStyle: {
+                        //shadowColor : ['rgba(30,144,255,1)','lime'][idx], //默认透明
+                        //shadowBlur: 10,
+                        //shadowOffsetX: 0,
+                        //shadowOffsetY: 0,
+                        type: 'solid'
+                    }
+                }
+            }
+        };
+        option = {
+            backgroundColor: '#1b1b1b',
+            color: ['rgba(30,144,255,1)','lime'],
+            title : {
+                text: '2015行程汇总',
+                x:'center',
+                textStyle : {
+                    color: '#fff'
+                }
+            },
+            tooltip : {
+                trigger: 'item',
+                formatter: '{b}'
+            },
+            legend: {
+                orient: 'vertical',
+                x:'left',
+                selectedMode:'multiple',
+                data:['飞机', '火车'],
+                textStyle : {
+                    color: '#fff'
+                }
+            },
+            toolbox: {
+                show : true,
+                orient : 'vertical',
+                x: 'right',
+                y: 'center',
+                feature : {
+                    mark : {show: true},
+                    dataView : {show: true, readOnly: false},
+                    restore : {show: true},
+                    saveAsImage : {show: true}
+            }
+        },
+        series : [
+        {
+            name: '飞机',
+            type: 'map',
+            roam: true,
+            hoverable: false,
+            mapType: 'china',
+            itemStyle:{
+                normal:{
+                    borderColor:'rgba(100,149,237,1)',
+                    borderWidth:0.5,
+                    areaStyle:{
+                        color: '#1b1b1b'
+                    }
+                }
+            },
+            data:[],
+            markLine : {
+                symbol: ['circle', 'circle'],  
+                symbolSize : 1,
+                effect : effect,
+                itemStyle : itemStyle(0),
+                smooth:true,
+            data : [
+                [{name:'北京首都国际机场'}, {name:'通辽机场'}],
+                [{name:'通辽机场'}, {name:'北京首都国际机场'}],
+                [{name:'北京首都国际机场'}, {name:'沈阳桃仙国际机场'}],
+                [{name:'沈阳桃仙国际机场'}, {name:'北京首都国际机场'}],
+                [{name:'北京首都国际机场'}, {name:'杭州萧山国际机场'}],
+                [{name:'杭州萧山国际机场'}, {name:'北京首都国际机场'}],
+                [{name:'北京首都国际机场'}, {name:'厦门高崎国际机场'}],
+                [{name:'福州长乐国际机场'}, {name:'北京首都国际机场'}],
+            ]
+            }
+        },
+        {
+            name: '火车',
+            type: 'map',
+            mapType: 'china',
+            itemStyle:{
+                normal:{
+                    borderColor:'rgba(100,149,237,1)',
+                    borderWidth:0.5,
+                    areaStyle:{
+                        color: '#1b1b1b'
+                    }
+                }
+            },
+            data:[],
+            markLine : {
+                symbol: ['circle', 'circle'],
+                symbolSize : 1,
+                effect : effect,
+                itemStyle : itemStyle(1),
+                smooth:true,
+                data : [
+                    [{name:'唐山站'}, {name:'北京南站'}],
+                    [{name:'北京南站'}, {name:'唐山站'}],
+                    [{name:'通辽站'}, {name:'霍林郭勒站'}],
+                    [{name:'霍林郭勒站'},{name:'通辽站'}],
+                    [{name:'北京南站'}, {name:'天津站'}],
+                    [{name:'天津站'}, {name:'北京南站'}],
+                    [{name:'天津站'}, {name:'唐山站'}],
+                    [{name:'唐山站'}, {name:'天津站'}],
+                    [{name:'北京南站'}, {name:'济南西站'}],
+                    [{name:'北京南站'}, {name:'济南站'}],
+                    [{name:'济南西站'}, {name:'天津站'}],
+                    [{name:'济南站'}, {name:'青岛北站'}],
+                    [{name:'青岛站'}, {name:'济南站'}],
+                    [{name:'北京站'}, {name:'秦皇岛站'}],
+                    [{name:'北京南站'}, {name:'南京南站'}],
+                    [{name:'南京南站'}, {name:'北京南站'}],
+                ]
+            },
+            geoCoord: {
+                '唐山站':[118.1268,39.6314],
+                '北京南站':[116.3855,39.8712],
+                '北京站':[116.4337,39.9098],
+                '北京首都国际机场':[116.6212,40.0611],
+                '通辽机场':[122.2170,43.5652],
+                '通辽站':[122.2776,43.6116],
+                '霍林郭勒站':[119.6760,45.5400],
+                '天津站':[117.2166,39.1418],
+                '沈阳桃仙国际机场':[123.5004,41.6436],
+                '济南西站':[116.8980,36.6753],
+                '济南站':[116.9973,36.6774],
+                '青岛北站':[120.3809,36.1757],
+                '青岛站':[120.3191,36.0703],
+                '秦皇岛站':[119.5988,39.9707],
+                '杭州萧山国际机场':[120.4433,30.2387],
+                '厦门高崎国际机场':[118.1402,24.5395],
+                '福州长乐国际机场':[119.6813,25.9348],
+                '南京南站':[118.8043,31.9750],
+            }
+        }
+        ]
+        };
+        myTripMap.setOption(option,true); //当setOption第二个参数为true时，会阻止数据合并
+}
+    function FlightMap(ec){
+        var myFlightMap = ec.init(document.getElementById('flightMap'));
+
+        var effect = {
+                       show: true,
+                       scaleSize: require('zrender/tool/env').canvasSupported ? 1 : 2,
+                       period: 30,             // 运动周期，无单位，值越大越慢
+                       color: '#fff',
+                       shadowColor: 'rgba(220,220,220,0.4)',
+                       shadowBlur : 5 
+                     };
+        function itemStyle(idx) {
+            return {
+                normal: {
+                    color:'#fff',
+                    borderWidth:1,
+                    borderColor:['rgba(30,144,255,1)','lime','gold','pink'][idx],
+                    lineStyle: {
+                        //shadowColor : ['rgba(30,144,255,1)','lime','gold','pink'][idx], //默认透明
+                        //shadowBlur: 10,
+                        //shadowOffsetX: 0,
+                        //shadowOffsetY: 0,
+                        type: 'solid'
+                    }
+                }
+            }
+        };
+        option = {
+            backgroundColor: '#1b1b1b',
+            color: ['rgba(30,144,255,1)','lime','gold','pink'],
+            title : {
+                text: '个人飞行汇总',
+                x:'center',
+                textStyle : {
+                    color: '#fff'
+                }
+            },
+            tooltip : {
+                trigger: 'item',
+                formatter: '{b}'
+            },
+            legend: {
+                orient: 'vertical',
+                x:'left',
+                selectedMode:'multiple',
+                data:['2012年新增航线', '2013年新增航线', '2014年新增航线','2015年新增航线'],
+                textStyle : {
+                    color: '#fff'
+                }
+            },
+            toolbox: {
+                show : true,
+                orient : 'vertical',
+                x: 'right',
+                y: 'center',
+                feature : {
+                    mark : {show: true},
+                    dataView : {show: true, readOnly: false},
+                    restore : {show: true},
+                    saveAsImage : {show: false}
+                }
+    },
+    series : [
+        {
+            name: '2015年新增航线',
+            type: 'map',
+            roam: true,
+            hoverable: false,
+            mapType: 'china',
+            itemStyle:{
+                normal:{
+                    borderColor:'rgba(100,149,237,1)',
+                    borderWidth:0.5,
+                    areaStyle:{
+                        color: '#1b1b1b'
+                    }
+                }
+            },
+            data:[],
+            markLine : {
+                symbol: ['circle', 'circle'],
+                symbolSize : 1,
+                effect : effect,
+                itemStyle : itemStyle(3),
+                smooth:true,
+                data : [
+                    [{name:'北京首都国际机场'}, {name:'沈阳桃仙国际机场'}],
+                    [{name:'沈阳桃仙国际机场'}, {name:'北京首都国际机场'}],
+                    [{name:'北京首都国际机场'}, {name:'杭州萧山国际机场'}],
+                    [{name:'杭州萧山国际机场'}, {name:'北京首都国际机场'}],
+                    [{name:'北京首都国际机场'}, {name:'厦门高崎国际机场'}],
+                    [{name:'福州长乐国际机场'}, {name:'北京首都国际机场'}],
+                ]
+            }
+        },
+        {
+            name: '2013年新增航线',
+            type: 'map',
+            roam: true,
+            hoverable: false,
+            mapType: 'china',
+            itemStyle:{
+                normal:{
+                    borderColor:'rgba(100,149,237,1)',
+                    borderWidth:0.5,
+                    areaStyle:{
+                        color: '#1b1b1b'
+                    }
+                }
+            },
+            data:[],
+            markLine : {
+                symbol: ['circle', 'circle'],
+                symbolSize : 1,
+                effect : effect,
+                itemStyle : itemStyle(1),
+                smooth:true,
+                data : [
+                    [{name:'北京首都国际机场'}, {name:'通辽机场'}],
+                    [{name:'通辽机场'}, {name:'北京首都国际机场'}],
+                    [{name:'北京南苑机场'}, {name:'通辽机场'}],
+                    [{name:'通辽机场'}, {name:'北京南苑机场'}],
+                    [{name:'天津滨海国际机场'}, {name:'通辽机场'}],
+                    [{name:'北京首都国际机场'}, {name:'九江庐山机场'}],
+                    [{name:'九江庐山机场'}, {name:'北京首都国际机场'}],
+                    [{name:'北京首都国际机场'}, {name:'深圳宝安国际机场'}],
+                ]
+            }
+        },
+        {
+            name: '2012年新增航线',
+            type: 'map',
+            roam: true,
+            hoverable: false,
+            mapType: 'china',
+            itemStyle:{
+                normal:{
+                    borderColor:'rgba(100,149,237,1)',
+                    borderWidth:0.5,
+                    areaStyle:{
+                        color: '#1b1b1b'
+                    }
+                }
+            },
+            data:[],
+            markLine : {
+                symbol: ['circle', 'circle'],
+                symbolSize : 1,
+                effect : effect,
+                itemStyle : itemStyle(0),
+                smooth:true,
+                data : [
+                    [{name:'武汉天河国际机场'}, {name:'北京首都国际机场'}],
+                    [{name:'北京首都国际机场'}, {name:'大连周水子国际机场'}],
+                    [{name:'大连周水子国际机场'}, {name:'北京首都国际机场'}],
+                ]
+            }
+        },
+        {
+            name: '2014年新增航线',
+            type: 'map',
+            mapType: 'china',
+            itemStyle:{
+                normal:{
+                    borderColor:'rgba(100,149,237,1)',
+                    borderWidth:0.5,
+                    areaStyle:{
+                        color: '#1b1b1b'
+                    }
+                }
+            },
+            data:[],
+            markLine : {
+                symbol: ['circle', 'circle'],
+                symbolSize : 1,
+                effect : effect,
+                itemStyle : itemStyle(2),
+                smooth:true,
+                data : [
+                    [{name:'深圳宝安国际机场'}, {name:'北京首都国际机场'}],
+                    [{name:'深圳宝安国际机场'}, {name:'天津滨海国际机场'}],
+                    [{name:'天津滨海国际机场'}, {name:'深圳宝安国际机场'}],
+                    [{name:'昆明长水国际机场'}, {name:'北京首都国际机场'}],
+                    [{name:'北京首都国际机场'}, {name:'昆明长水国际机场'}],
+                    [{name:'北京首都国际机场'}, {name:'武汉天河国际机场'}]
+                ]
+            },
+
+            geoCoord: {
+                '北京首都国际机场':[116.6212,40.0611],
+                '北京南苑机场':[116.4035,39.7976],
+                '天津滨海国际机场':[117.3655,39.1359],
+                '沈阳桃仙国际机场':[123.5004,41.6436],
+                '杭州萧山国际机场':[120.4433,30.2387],
+                '厦门高崎国际机场':[118.1402,24.5395],
+                '福州长乐国际机场':[119.6813,25.9348],
+                '武汉天河国际机场':[114.2150,30.7716],
+                '大连周水子国际机场':[121.5505,38.9688],
+                '昆明长水国际机场':[102.9433,25.1078],
+                '九江庐山机场':[115.8138,29.4887],
+                '深圳宝安国际机场':[113.8201,22.6306]
+            }
+        },
+        {
+            name:'出发次数最多（除PEK）',
+            type:'map',
+            mapType:'china',
+            data:[],
+            markPoint:{
+                symbol:'emptyCircle',
+                symbolSize:function (v){
+                    return 10+v/10
+                },
+                effect:{
+                    show:true,
+                    shadowBlur:0
+                },
+                itemStyle:{
+                    normal:{
+                        label:{show:false}
+                    },
+                    emphasis:{
+                        label:{position:'top'}
+                    }
+                },
+                data:[
+                    {name:'通辽机场',value:15}
+                ]
+            },
+        }
+    ]
+};
+        myFlightMap.setOption(option,true); //当setOption第二个参数为true时，会阻止数据合并
+}
+
+    function FlightStat(ec){
+        var myFlightStat = ec.init(document.getElementById('flightStat'),'macarons');
+
+        option = {
+             timeline:{
+                 data:['2012-01-01','2013-01-01','2014-01-01','2015-01-01'],
+                 label:{
+                     formatter:function(s){
+                         return s.slice(0, 4);
+                     }
+                 },
+                 autoPlay:true,
+                 playInterval:2000
+             },
+             options:[
+                 {
+                     title:{
+                         'text':'2012年飞行次数和里程统计',
+                         x:'center'
+                     },
+                     tooltip : {'trigger':'axis'},
+                     legend : {
+                         x:'right',
+                         'data':['飞行次数','飞行里程'],
+                         'selected':{
+                             '飞行次数':true,
+                             '飞行里程':true
+                         }
+                     },
+                     toolbox : {
+                         'show':true,
+                         orient : 'vertical',
+                         x: 'right',
+                         y: 'center',
+                         'feature':{
+                             'mark':{'show':true},
+                             'dataView':{'show':true,'readOnly':false},
+                             'magicType':{'show':true,'type':['line','bar','stack','tiled']},
+                             'restore':{'show':true},
+                             'saveAsImage':{'show':true}
+                         }
+                     },
+                     calculable : true,
+                     grid : {'y':80,'y2':100},
+                     xAxis : [{
+                         'type':'category',
+                         'axisLabel':{'interval':0},
+                         'data': ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月']
+                     }],
+                     yAxis : [
+                         {
+                             'type':'value',
+                             'max':8,
+                             'name':'飞行次数'
+                         },
+                         {
+                             'type':'value',
+                             'name':'飞行里程（km）'
+                         }
+                     ],
+                     series : [
+                         {
+                             'name':'飞行次数',
+                             'type':'bar',
+                             'data':[0, 0, 0, 1, 0, 0, 6, 0, 0, 2, 0, 0]
+                         },
+                         {
+                             'name':'飞行里程',
+                             'type':'bar',
+                             'yAxisIndex':1,
+                             'data':[0, 0, 0, 1086, 0, 0, 21547, 0, 0, 0, 1160, 0, 0]
+                         }
+                     ]
+                 },
+                 {
+                     title:{'text':'2013年飞行次数和里程统计',x:'center'},
+                     series:[
+                         {'data':[0, 0, 0, 2, 4, 1, 5, 0, 2, 3, 2, 0]},
+                         {'data':[0, 0, 0, 1312, 2576, 639, 24562, 2556, 2542, 3052]}
+                     ]
+                 },
+                 {
+                     title:{'text':'2014年飞行次数和里程统计',x:'center'},
+                     series:[
+                         {'data':[1, 1, 0, 0, 3, 2, 0, 4, 2, 2, 2, 0]},
+                         {'data':[1872, 1872, 0, 0, 3230, 1264, 0, 2528, 4188, 2172, 1264, 0]}
+                     ]
+                 },
+                 {
+                     title:{'text':'2015年飞行次数和里程统计',x:'center'},
+                     series:[
+                         {'data':[2, 2, 0, 4, 2, 0, 0, 2, 0, 0, 2, 2]},
+                         {'data':[1264, 1264, 0, 2480, 1264, 0, 0, 1264, 0, 0, 2266, 3484]}
+                     ]
+                 }
+             ]
+        };
+
+        myFlightStat.setOption(option,true); //当setOption第二个参数为true时，会阻止数据合并
+    }
+
+    function Airline(ec){
+        var myAirline = ec.init(document.getElementById('airlineStat'),'macarons');
+
+        option = {
+            title:{
+                text:'航空公司&航空联盟飞行里程（飞行总里程：92708km）',
+                x:'center'
+            },
+            tooltip:{
+                trigger:'item',
+                formatter:"{b}:{c} km ({d}%)"
+            },
+            legend:{
+                orient:'vertical',
+                x:'left',
+                data:['国航（CA）','山航（SC）','美联航（UA）','南航（CZ）','东航（MU）','联合航空（KN）','厦航（MF）','上海航空（FM）','达美航空（DL）','海航（HU）','天津航空（GS）','其他']
+            },
+            toolbox:{
+                show: true,
+                feature:{
+                    mark:{show:true},
+                    dataView:{show:true,readOnly:false},
+                    magicType:{
+                        show:true,
+                        type:['pie']
+                    }
+                },
+                restore:{show:true},
+                saveAsImage : {show: true}
+            },
+            calculable:true,
+            selectedMode:false,
+            series:[
+                {
+                    name:'航空公司',
+                    type:'pie',
+                    center:['70%','50%'],
+                    radius:[100, 140],
+                    data:[
+                        {value:60432,name:'国航（CA）'},
+                        {value:4250,name:'美联航（UA）'},
+                        {value:3834,name:'山航（SC）'},
+                        {value:2246,name:'南航（CZ）'},
+                        {value:3614,name:'东航（MU）'},
+                        {value:1742,name:'厦航（MF）'},
+                        {value:1360,name:'联合航空（KN）'},
+                        {value:1133,name:'上海航空（FM）'},
+                        {value:8689,name:'达美航空（DL）'},
+                        {value:2094,name:'海航（HU）'},
+                        {value:639,name:'天津航空（GS）'},
+                        {value:2675,name:'其他'}
+                    ]
+                },
+                {
+                    name:'航空联盟',
+                    type:'pie',
+                    center:['70%','50%'],
+                    radius:[0, 80],
+                    itemStyle : {
+                        normal : {
+                            label : {
+                                position : 'inner'
+                            },
+                        }
+                    },
+                    data:[
+                        {value:68516,name:'星空联盟'},
+                        {value:18784,name:'天合联盟'},
+                        {value:5408,name:'其他'}
+                    ]
+                }
+            ]
+        }
+
+        myAirline.setOption(option,true); //当setOption第二个参数为true时，会阻止数据合并
+    }
+</script>
+
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Anaconda 使用清华镜像源]]></title>
+      <url>http://tommyjiang.github.io/2016-08-25-anaconda-tsinghua-mirror/</url>
+      <content type="html"><![CDATA[<p>Mac/Win 下将 <code>Anaconda</code> 镜像更改为清华镜像源的方法。</p>
+<a id="more"></a>
+<h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>用惯了 Mac 或者 Linux 的同学一定会爱上 <code>brew</code> 和 <code>apt-get</code> 这种一键式的安装工具。不用像 Windows 一样到处去找各个软件的安装包，只需要一个命令就都能搞定，掌控天下的感觉:)</p>
+<p>但这种一键式安装工具极为依赖镜像源，国内的网络在连国外某些镜像时实在是太慢了，所以有很多组织和个人在国内搭建了镜像服务器，造福大众。</p>
+<p><code>Anaconda</code> 是 Python 的一个发行包，这个单词的原意是南美发现的一种巨蟒，可能是由于它包括了很多 Python 的 <code>package</code>所以叫这个名字。<code>Anaconda</code> 的 <code>defaults</code> 镜像源实在是太慢了，清华 TUNA 提供了一个<a href="https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/" target="_blank" rel="external">国内镜像源</a>，我们要做的就是将这个镜像源作为 <code>Anaconda</code> 的默认镜像源。</p>
+<h1 id="Mac"><a href="#Mac" class="headerlink" title="Mac"></a>Mac</h1><p>Mac 下切换很简单，直接在 <code>terminal</code> 中输入(参考<a href="https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/" target="_blank" rel="external">清华 TUNA 国内镜像源</a>)：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">conda config --add channels <span class="string">'https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/'</span></div><div class="line">conda config --set show_channel_urls yes</div></pre></td></tr></table></figure>
+<h1 id="Win"><a href="#Win" class="headerlink" title="Win"></a>Win</h1><p>Win 下稍微麻烦一些，如果直接在 <code>cmd</code> 中输入上述命令，<code>conda install</code> 的时候会报错：</p>
+<blockquote>
+<p>Error: Could not find anaconda.org user ‘https: </p>
+</blockquote>
+<p>方法是修改 <code>.condarc</code> 文件为以下形式(参考<a href="http://blog.5ibc.net/p/87204.html" target="_blank" rel="external">该网址</a>)：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">channels: </div><div class="line">- https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/ </div><div class="line">- defaults</div><div class="line"></div><div class="line">show_channel_urls: yes</div></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[京、津、唐高铁乘车方案和乘车小技巧]]></title>
+      <url>http://tommyjiang.github.io/2015-10-01-jing-jin-tang-high-speed-railway/</url>
+      <content type="html"><![CDATA[<p>2015年十一回家，由于买不到直达唐山/唐山北的票，选择了经天津中转的方案，将三地铁路资料汇总如下。</p>
+<a id="more"></a>
+<h1 id="京唐高铁"><a href="#京唐高铁" class="headerlink" title="京唐高铁"></a>京唐高铁</h1><p>2015年8月25日，铁道第三勘察设计院公布了<a href="http://www.tsdig.com/infom.aspx?Id=684&amp;FileName=info&amp;Language=1" target="_blank" rel="external">京唐高铁环评二次公告</a>，京唐高铁的走向也正式确定，起点为位于北京的新北京东站，终点为唐山站。</p>
+<p>其实早在2009年，就有新闻说京唐高铁即将开工，但后来由于发改委未批复而搁浅。2013年8月，习近平在北戴河主持研究河北发展问题时，提出要推动京津冀协同发展。借此东风，京唐城际重新提上日程，预计年内开工，施工周期3年半，预计2018年底通车。</p>
+<p>2016.05.26更新：有传闻说京唐城际的起点可能会改为通州九棵树附近的通州站，这样一来地铁上的时间就太长了，和北京站的动车相比没有太大优势。</p>
+<p>由于目前北京到唐山还没有直达高铁，从北京到唐山可以选择以下两种方案：</p>
+<ol>
+<li><p>高铁：从北京南出发，先经京津城际到天津，再经津秦高铁到唐山，全程244公里，最快需要70分钟左右，二等座票价110.5元。</p>
+</li>
+<li><p>动车：北京到唐山还可以选择动车，从北京站出发，经京哈线到唐山北站，全程151公里，最快也需要70分钟左右，但票价与高铁相比便宜很多，二等座只要44.5元。</p>
+</li>
+</ol>
+<p>以上两种方案有一个共同的问题，就是列车都是由北京去往东北方向，因此一到节假日基本人满为患，一票难求。为了解决这个问题，我现在一般选择由天津中转的方案：先从北京南乘坐京津城际列车到天津，再在天津站中转华东或华中去往东北的列车到唐山。这次回家改签加退票，还第一次体验了高铁的无座票（虽然只有33分钟）。</p>
+<h1 id="乘车小技巧"><a href="#乘车小技巧" class="headerlink" title="乘车小技巧"></a>乘车小技巧</h1><p>京津城际转津秦客专（北京南——天津——唐山）的乘车过程也有些小技巧：</p>
+<ul>
+<li><p>北京南站地铁出站后南北方向均可以进站，需要乘电梯到二楼，而且人比较多。如果是坐京津城际的话，可以直接从快速进站口8进站。虽然北京南和天津站都支持身份证+12306短信直接进出站，但还是建议取票，可以避免用手机来回翻12306短信。快速进站口8旁边可以取票，但人很多，而且总有一些插队的旅客，可以到快速进站口8南边的取票点取票，机器多，排队的人也少。</p>
+</li>
+<li><p>天津站换乘不需要出站，直接经地道换乘就可以。天津站共10站台18车道，其中1-5车道为普速车场，6-11车道为津秦高速车场，12-18车道为京津城际车场。从北京南坐京津城际到达天津站后，如果不是停靠在18车道，都可以下地道出站。可以提前看好转乘列车的检票口，与车道是对应的，由地道直接换乘乘车。举例来说，京津城际停靠13车道，换乘列车的检票口为10，那么下车下地道之后，只需要从10车道对应的口出地道候车即可，无需出站，可以大大节省换乘时间。但以下两种情况无法用此方法换乘：</p>
+<ol>
+<li>京津城际停靠18车道的话必须先出站再进站。</li>
+<li>地道中对应车道的出口封闭的话也需要先出站再进站。</li>
+</ol>
+</li>
+<li><p>16节车厢的动车组列车分为两种，一种是L(Long)车型，本身就是16节；另一种是由2个8节车厢的动车组重联组成的，1-8车厢与9-16车厢由于分属两辆车，之间无法互通，因此上车时一定要确认车厢。这次回来有几个10车厢的旅客从8车厢上车，想等开车之后再回10车厢，由于两个CRH动车组之间并不互通，只能在车上站半小时了。</p>
+</li>
+</ul>
+<h1 id="2016年春节补充"><a href="#2016年春节补充" class="headerlink" title="2016年春节补充"></a>2016年春节补充</h1><p>每次坐车回家都会有些新的心得，这次春节回来也不例外，北京南、天津和唐山站都更新了一些小 tips。</p>
+<h2 id="北京南站"><a href="#北京南站" class="headerlink" title="北京南站"></a>北京南站</h2><p>北京南作为始发大站，春运期间客流量极大。这次出地铁后走到了北出口方向，排队经由扶梯到二层处人满为患，从扶梯再往前侧面的一个小门进入，可以沿楼梯爬到二楼，不过如果拎着大件行李要谨慎，距离不近……</p>
+<h2 id="天津站"><a href="#天津站" class="headerlink" title="天津站"></a>天津站</h2><p>这次把天津站内的车道图照下来了，可以作为上面天津站布局的示例：</p>
+<p><img src="/images/Tianjin-railway-station.jpg" alt=""></p>
+<p>这次京津城际列车停靠在天津站的18站台，必须要先出站再进站了。不过从18站台经过闸机后，不出站可以直接坐电梯到二楼候车大厅。在候车大厅里的一个收获是发现其中还有广发贵宾厅，正好凭广发臻尚白金卡进去坐坐。虽然每次在天津站中转的时间都不长，一般在半小时以内，不过能进去喝杯热水感觉还是不错的。</p>
+<p>返程时还想到广发贵宾厅坐坐，从天津站地下南出口出来之后，没有上到地面，直接在旁边检票进站了，结果在地下的候车厅里待了一会。检票上去后第一次遇到人到站台而车还没来的情况，看着站台上钟表上显示的正点有点慌。再一查发现买的这趟车不是天津站始发的，是从于家堡来的过路车，怪不得提前 3 分钟车才进站。赶上降温天气，在站台吹了半天冷风，还挺难受的。下次一定得注意是不是始发车，不是的话也没关系，可以在候车室里多坐会，别着急到站台就行了。</p>
+<h2 id="唐山站"><a href="#唐山站" class="headerlink" title="唐山站"></a>唐山站</h2><p>从东售票厅取票之后，可以直接从旁边的小门实名制检票进到候车大厅，不用先出去再过一次安检了，很方便。</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[MATLAB 中利用 m 文件修改 Simulink 模型参数的方法]]></title>
+      <url>http://tommyjiang.github.io/2015-08-10-Simulink-m-file/</url>
+      <content type="html"><![CDATA[<p>介绍在 MATLAB 中利用 m 文件修改 Simulink 中模型参数的方法。</p>
+<a id="more"></a>
+<h1 id="电力系统仿真工具"><a href="#电力系统仿真工具" class="headerlink" title="电力系统仿真工具"></a>电力系统仿真工具</h1><p>我个人博士论文的隐名评审意见中有如下评语：</p>
+<blockquote>
+<p>除第二章的简单实验外，本文的所有结论均源于仿真，这大大降低了本文的创新性和说服力。</p>
+</blockquote>
+<p>说实话，和任何事一样，博士毕业其实是实力和运气综合作用的结果，尤其是研究生院负责的论文盲审环节，虽然可以填最多3个需要回避的老师，但也容易送到学术观点有争议或者导师的“宿敌”手中。比如我个人的这个评审意见——审我论文的这位老师很有可能是电力电子方向而不是电力系统方向的，因为电力系统方向的老师肯定清楚，目前电力系统领域的绝大多数研究，只能依靠仿真，因此不太会给出上述评语。但我还是应该感谢下这位老师，因为他虽然在评审时给了我2个C（一共4小项），但最后总评很厚道地给了个B，不然我还要继续在学校读博……</p>
+<p>说回电力系统的仿真工具，我个人了解的有以下软件：BPA、PSASP、MATLAB/Simulink、PSCAD、PSS/E、PowerFactory、RTDS、RT-Lab、PXI……这方面可以参考<a href="http://wenku.baidu.com/link?url=lyB8iBkcX7HUakjhmgnWHX0xNV7-E3RIWFrzxDXEgmgs4NYdomg6YlY2hBDBSOuXJ8JWKW0Amu6lZMeB_8HzXz4yjLper1sGNdGPOJajAQO" target="_blank" rel="external">武大曹博的PPT</a>，里面有关于各软件的详细说明和对比。就我个人而言，更喜欢用<em>纯代码</em>进行仿真，原因是纯代码调试起来更为方便，而且也更容易进行版本管理。但电力系统仿真中应用纯代码的情形毕竟较少，一般与优化相关的研究更偏好用纯代码，但动态仿真绝大多数时候还是要用 GUI 仿真软件。</p>
+<p>MATLAB/Simulink 就是一个常用的仿真工具，它的突出优点是可以和 MATLAB 代码完美对接。但利用 Simulink 模型进行仿真时，如果需要在某些时刻改变系统参数，利用 GUI 界面进行设置会比较麻烦，可以利用 m 文件实现，具体方法如下。</p>
+<h2 id="m-文件修改-Simulink-模型参数的方法"><a href="#m-文件修改-Simulink-模型参数的方法" class="headerlink" title="m 文件修改 Simulink 模型参数的方法"></a>m 文件修改 Simulink 模型参数的方法</h2><p>利用 m 文件修改 Simulink 模型参数方法的总体思想如下：首先在初始参数下仿真一段时间，记录该时间结束时系统所有状态量的值，之后修改系统参数，再以上一次仿真结束时记录的系统所有状态量的值作为初值，重新仿真，如此循环往复。</p>
+<p>可以在 m 文件中利用<code>set_param</code>函数设置 Simulink 模型仿真的相关参数：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">set_param(<span class="string">'ModelName'</span>,<span class="string">'LoadInitialState'</span>,<span class="string">'off'</span>,...</div><div class="line">          <span class="string">'SaveFinalState'</span>,<span class="string">'on'</span>,<span class="string">'SaveCompleteFinalSimState'</span>,<span class="string">'on'</span>,...</div><div class="line">          <span class="string">'FinalStateName'</span>,<span class="string">'xFinal'</span>,<span class="string">'StartTime'</span>,<span class="string">'0'</span>,<span class="string">'StopTime'</span>,<span class="string">'1'</span>);</div></pre></td></tr></table></figure>
+<p>其中<code>ModelName</code>为 Simulink 模型的文件名，注意第一次仿真不需要载入初值，因此<code>LoadInitialState</code>选项需要设为<code>off</code>，之后的仿真中则需要将该项设置为<code>on</code>。第2行对应的是保存系统状态量终值的相关设置，其中<code>FinalStateName</code>为终值存储的变量名，之后仿真的初值需要设置为该变量名。</p>
+<h1 id="相关问题"><a href="#相关问题" class="headerlink" title="相关问题"></a>相关问题</h1><h2 id="继续进行仿真时提示仿真起始时间与状态变量初始值的时间不同"><a href="#继续进行仿真时提示仿真起始时间与状态变量初始值的时间不同" class="headerlink" title="继续进行仿真时提示仿真起始时间与状态变量初始值的时间不同"></a>继续进行仿真时提示仿真起始时间与状态变量初始值的时间不同</h2><p>利用以上代码实现 m 文件修改 Simulink 模型参数继续仿真的过程中，会遇到如下警告：</p>
+<pre><code>Warning: The start time of model &apos;Exp2_1_SimModel&apos; is different from the start time saved in the initial SimState. The start time has therefore been reset to 0. 
+</code></pre><p>虽然出现了上述警告，但存储仿真结果的变量中，时间仍然是从0开始一直到全部仿真结束对应的时刻，并未出现上述警告中提到的将每次重新仿真的起始时间设置为0的情况。我试了试直接在 Simulink 中加载初始值然后仿真，并未出现上述警告。由于该警告目前对仿真结果并无影响，因此暂时将其忽略，之后如果能解决当然最好，就算解决不了也无大碍。</p>
+<h2 id="Simulink-模型中某些参数无法改变"><a href="#Simulink-模型中某些参数无法改变" class="headerlink" title="Simulink 模型中某些参数无法改变"></a>Simulink 模型中某些参数无法改变</h2><p>电力系统的仿真一般采用 Simulink 中的 SimPower 库，我利用 SimPower 搭建了一个单相半桥 PWM 的仿真模型，可以改变该模型中的调制比参数 m 以及电容电压 V_DC，但无法改变模型中反电势电源的电压幅值 Vs 和支路电阻/电感的值，修改后面二者后 MATLAB 会报以下错误：</p>
+<pre><code>Simulink cannot load the initial SimState because the model,&apos;Exp2_1_SimModel&apos;, was changed after the SimState was saved. Run the simulation again and resave the SimState.
+</code></pre><p>目前还没找到太好的解决方法，只能采用变通的方法。例如修改反电势电源电压幅值可以等效为修改调制比 m，二者对应的电流波形是相同的。</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[2015年毕业晚会观后感]]></title>
+      <url>http://tommyjiang.github.io/2015-07-09-graduation-party/</url>
+      <content type="html"><![CDATA[<p>犹记得5年前本科毕业时的毕业晚会，中途就离场了。5年后，即将博士毕业了，再来看毕业晚会，让人唏嘘不已。</p>
+<a id="more"></a>
+<h3 id="节目单"><a href="#节目单" class="headerlink" title="节目单"></a>节目单</h3><p>整场晚会的节目单如下：</p>
+<p><img src="/images/2015-Graduation-Party.png" alt=""></p>
+<h3 id="个人观后感"><a href="#个人观后感" class="headerlink" title="个人观后感"></a>个人观后感</h3><p>整场晚会印象最深刻的就是两个以毕业为主题的视频节目。</p>
+<h4 id="起点"><a href="#起点" class="headerlink" title="起点"></a>起点</h4><p>2015年清华原创毕业歌曲，视频见<a href="http://v.youku.com/v_show/id_XMTI4MjE1OTY1Mg==.html?from=s1.8-1-1.2" target="_blank" rel="external">这里</a>。整首歌用了大段的 Rap，精彩的歌词配上手绘的背景足以唤起每个清华毕业生对母校的留恋。</p>
+<blockquote>
+<p>几年前的一个夏天 我来到清华园<br>一辆崭新的二手车 打算骑四年<a href="清华校园很大，占地面积[442.14公顷](http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/about/about-6.html)，因此自行车是清华学生的标配。二手车便宜而且不容易被偷，因此受到新生的青睐。">^1</a><br>那时的清华男女比 比现在更跑偏<br>一对儿情侣甜蜜蜜 男双男单坐一边<br>微积分的习题课 坐过道和窗前<br>大学语文平仄平 还作诗一篇<br>奥运国庆大场面 刻在学长的光盘<br>百年校庆的尾巴根儿 只见过明信片<br>小桥队伍排最长 是凌晨十二点<br>五道口的枣糕王 一等小半天<br>苏世民的小书院 叮当响三年<br>天天绕道的图书馆 临走也没见着正脸<a href="[图书馆北馆（李文正楼）](http://lib.tsinghua.edu.cn/about/beiguan/beiguan.html)于百年校庆之际——2011年4月23日奠基，2013年12月工程正式启动，预计2015年9月竣工。">^2</a><br>宿舍系馆两点一线 日子太简单<br>情人坡的每个浪漫时间 我总路过去实验<br>创业志愿和实践 假期没几天<br>我开题报告参考文献 才刚看二十篇  </p>
+<p>转眼间就要告别昨天 我们何年再相见<br>(什么年 什么月 什么值得纪念)<br>那些纠结的论文和答辩 都随往事如烟<br>(什么人 什么鬼 什么值得留恋)<br>昨天 我站在起点 不知前方路多远<br>今天 我张开双手 想要拥抱这世界<br>想要飞 就必须从不妥协<br>想要追 就必须超越一切  </p>
+<p>那时刚有文图馆 学霸占座一整天<br>那时清芬小包子 一个三毛钱<a href="清芬园即七食堂，曾经以包子和麻辣香锅闻名全校，于2013年6月15日停伙。2015年本科生毕业典礼上，[邱勇校长的讲话](http://news.tsinghua.edu.cn/publish/news/4205/2015/20150712090658606540272/20150712090658606540272_.html)中提到：“我也知道，你们爱吃的清芬园包子已经不在了，现在我要告诉你们，今年年底清芬园将重新开业，我相信，开业的同时，包子也会回来。”">^3</a><br>那时没有 Color Run 北京没有阴天<br>那时学堂七点半 票总被抢完<br>那时的欢笑鬼脸 那时的我们班<br>那时的泪水汉水 那时的清华蓝<br>那时的下午四点半 追你的笑颜<br>你回头问我三千米 能不能过关  </p>
+<p>转眼间就要告别昨天 我们何年再相见<br>(什么年 什么月 什么值得纪念)<br>那些骄傲的奖杯和绩点 都随往事如烟<br>(什么人 什么鬼 什么值得留恋)<br>昨天 我站在起点 不知前方路多远<br>今天 我张开双手 想要拥抱这世界<br>想要飞 就必须从不妥协<br>想要追 就必须超越一切<br>勇敢飞 对自己从不妥协<br>勇敢追 向着下一个起点  </p>
+<p>(新起点 我们 和清华一起出发)</p>
+</blockquote>
+<h4 id="闪光的记忆"><a href="#闪光的记忆" class="headerlink" title="闪光的记忆"></a>闪光的记忆</h4><p>应该是从2012年起，每年的毕业晚会都有一个用《闪光的记忆》这首歌作为背景音乐的视频，今年当然也不例外，视频见<a href="http://v.qq.com/iframe/player.html?vid=h01594giz7r&amp;width=670&amp;height=502.5&amp;auto=0" target="_blank" rel="external">这里</a>。印象最深的是视频的最后一段——清华园普通一天各个整点时刻的场景：</p>
+<blockquote>
+<p>01:00AM 那些不眠的夜晚，陪伴我们的，除了大作业，还有一盏温柔的灯。<br>02:00AM 一座小小的屋子，飘香四溢的屋子，成为烧烤的代名词——小桥。<br>03:00AM 曾有一群人，为了一个共同的梦想在这里讨论甚至争执，不舍昼夜。<br>04:00AM 让人惊艳的美术设计背后，或许是熬夜到三四点的苦楚。<br>05:00AM 紫荆园后，盛夏日出，刚摘下的果蔬，也许还滴着晨露。<br>06:00AM 在晨光熹微，旁人熟睡的时刻，总有些人在忍受风吹日晒，绽放青春。<br>07:00AM 鲜红的旗帜，坚毅的面孔，月月年年。<br>08:00AM 早餐和生活一样在路上。<br>09:00AM 求知的眼睛，挥动的笔杆，在课堂上载着梦想启程。<br>10:00AM 水木清华众秀钟，真是无一景不可入画。<br>11:00AM 道旁的银杏树和来往的人潮，构成一抹极具生机的亮色。<br>12:00PM 很难在别处见到的热闹与魅力。<a href="原视频中误为“12:00AM”，中午12点应为12:00PM。">^4</a><br>01:00PM 梦里，天堂一定是图书馆的模样。<br>02:00PM 如果要真正感受清华，那么就来自习教室吧。<br>03:00PM 在实验中谨慎求索，辛苦劳碌，舔尝酸楚，积攒幸福。<br>04:00PM 那时候日色很慢，草坪很暖，一辈子只够爱一个人。<br>05:00PM 夕阳下的奔跑与伫足，那是我们昂扬的青春。<br>06:00PM 落日余晖遍布校园，感受舌尖上的清华。<br>07:00PM 生活，因为这里的嬉笑怒骂、管弦丝竹而不同。<br>08:00PM 周遭的嘈杂包围着专注讨论的我们。<br>09:00PM 这是真实而生动的生活。<br>10:00PM 既见君子，云胡不喜？<br>11:00PM 熄灯已经成为一种习惯，成为我们珍贵的共同记忆。<a href="最后少了一个午夜12点的时刻，我觉得可以选择静谧的紫荆宿舍外景。">^5</a>  </p>
+</blockquote>
+]]></content>
+    </entry>
+    
+  
+  
+</search>

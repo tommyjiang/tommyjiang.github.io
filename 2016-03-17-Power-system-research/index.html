@@ -1,0 +1,306 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>电力系统研究的个人体会 | Hexo</title>
+  <meta name="author" content="Tommy Jiang">
+  
+  <meta name="description" content="从博士入学算起，从事电力系统的研究工作已经将近 6 年了，结合个人的实际经验谈谈对电力系统研究的体会。">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="电力系统研究的个人体会"/>
+  <meta property="og:site_name" content="Hexo"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/journal.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+
+
+
+</head>
+
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">Hexo</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>归档
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>分类
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>标签
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>关于
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> 电力系统研究的个人体会</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <p>从博士入学算起，从事电力系统的研究工作已经将近 6 年了，结合个人的实际经验谈谈对电力系统研究的体会。</p>
+<a id="more"></a>
+<h1 id="电力系统研究的特点"><a href="#电力系统研究的特点" class="headerlink" title="电力系统研究的特点"></a>电力系统研究的特点</h1><p>我个人认为，电力系统研究的特点包括以下几点：</p>
+<ol>
+<li>模型角度：动态模型极为复杂。</li>
+<li>技术路线角度：严重依赖仿真。</li>
+<li>研究开放性角度：极度封闭的小团体。</li>
+</ol>
+<h2 id="模型角度"><a href="#模型角度" class="headerlink" title="模型角度"></a>模型角度</h2><p>目前越来越多的电力系统研究者向优化方向靠拢，其原因是电力系统的优化问题（例如机组组合、经济调度等）一般都采用稳态或准稳态模型。与动态模型相比，稳态或准稳态模型实在是简单太多了。对于一个包括几十甚至上百台发电机的大型电力系统，其动态模型极其复杂，基本只能依靠数值仿真进行分析。然而对于研究而言，只依靠数值仿真进行分析是远远不够的，还需要在理论方面有所突破。这就迫使研究者“知难而退”，既然动态不好做，那干脆就不做。</p>
+<p>换个角度说，我之前投过一篇文章到<code>IEEE Transcatons on Power Systems</code>，一审直接被拒，其中一位 Reviewer 写到：</p>
+<blockquote>
+<p>Power systems in general are <strong>very complex systems</strong> that the number of their state and control variables can <strong>easily exceed hundreds</strong>. How the algorithm would work on larger systems? How to do prove your statement?</p>
+</blockquote>
+<p>坦白地说，他指出的问题非常关键，即电力系统的动态模型过于复杂，全局性的控制算法很难应用。但如果揪住这一点不放，那电力系统动态的研究就很难开展了。例如，优化那边经常会证明某个算法会得到最优解，但到现在为止大型电力系统的稳定性都不在电力系统动态方向研究人员的考虑之内，因为这个问题太复杂了。正是由于这一点，动态方向的研究人员更需要团结起来发出自己的声音，而不是互相质疑对方的研究没法解决大型电力系统的动态问题，如今<code>IEEE Transcatons on Power Systems</code>基本已经被优化领域的研究占领了，和这一点也不无关系。</p>
+<p>今天（2016年5月30日）心血来潮，看了下<code>IEEE Transcatons on Power Systems</code>期刊 Early Access 中清华的所有文章，一共21篇，其中动态方向只有3篇……</p>
+<h2 id="技术路线角度"><a href="#技术路线角度" class="headerlink" title="技术路线角度"></a>技术路线角度</h2><p>电力系统的研究严重依赖仿真，这应该是目前电力系统研究领域的一个普遍现状了。与电力电子和高压方向不同，电力系统研究最后的算例部分基本都是依靠仿真来佐证研究者所提出方法的有效性。仿真除了模仿真实外，还有一个戏谑的解释：仿佛是真的。由于缺乏与实际结果的对比，很多仿真结果其实并不可信。与此同时，绝大多数研究者所做的研究也只是停留在纸上谈兵的阶段，并没有干过实际工程，很难判断仿真结果是否有误。</p>
+<p>正是由于绝大多数电力系统的研究都是纸上谈兵，所以在各种宣传和报奖时，需要进行适度的夸张，从而体现自己所做研究的意义，这样做被揭穿的概率极低，可谓风险极小收益却还不错。由于电力系统领域研究者的水平不会相差很多，所以适度夸张——或者说——忽悠的能力至关重要。</p>
+<h2 id="研究开放性角度"><a href="#研究开放性角度" class="headerlink" title="研究开放性角度"></a>研究开放性角度</h2><p>关于这部分，先引用目前在 UCD 的电力系统研究领域著名学者 Federico Milano 的一段话：</p>
+<blockquote>
+<p>The experience with PSAT has taught me that the power system community is simply not responding properly to open source projects. In the last ten years, third-party contributions to PSAT have been very marginal or would have been developed even if PSAT had been not distributed as a free and open source project. On the other hand, I am quite sure that several extensions have been developed but not shared with the PSAT community.</p>
+<p>I got to the conclusion that the free and open source paradigm is not attractive for <strong>small and closed</strong> communities like the power system one. </p>
+</blockquote>
+<p><code>PSAT</code> 是 Milano 开发的电力系统仿真程序，以开源的形式共享给所有电力系统研究者。但他发现很多研究者基于 PSAT 开发了新的扩展功能，但并没有共享给整个 PSAT 社区，这让他明白了免费开源是不适合由电力系统研究者组成的这种封闭的小圈子的。</p>
+	  
+	</div>
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2016-07-10-bigfish-begonia-md/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2016-03-16-migrate-to-hexo/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+
+    <!-- share -->
+    
+        
+    <div class="bdsharebuttonbox">
+        <a href="#" class="bds_more" data-cmd="more"></a>
+        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+        <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+        <a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+        <a href="#" class="bds_evernotecn" data-cmd="evernotecn" title="分享到印象笔记"></a>
+        <a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a>
+        <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+    </div>
+    <script>
+        window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};
+        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+
+
+        
+
+    
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">Comments</h2>
+
+  
+  	 <div class="ds-thread" data-thread-key="2016-03-17-Power-system-research/" data-title="电力系统研究的个人体会" data-url="http://tommyjiang.github.io/2016-03-17-Power-system-research/"></div>  
+  
+</section>
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2016-03-17 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/技术/">技术<span>6</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/电力系统/">电力系统<span>2</span></a></li> <li><a href="/tags/博士/">博士<span>2</span></a></li> <li><a href="/tags/科研/">科研<span>1</span></a></li> <li><a href="/tags/国家电网/">国家电网<span>1</span></a></li>
+    </ul>
+	</div>
+		
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+<script type="text/javascript">
+  var duoshuoQuery = { short_name: 'tommyjiang' };
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';
+    ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2016 Tommy Jiang
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+</body>
+   </html>
