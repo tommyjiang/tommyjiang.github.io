@@ -1283,6 +1283,7 @@ h6,
 }
 p {
   margin: 0 0 10.5px;
+  text-align: justify;
 }
 .lead {
   margin-bottom: 21px;
