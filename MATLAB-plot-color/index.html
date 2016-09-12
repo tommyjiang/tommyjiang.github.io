@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   
-  <title>西单大悦城更换 RMBP 屏幕攻略 | Hexo</title>
+  <title>MATLAB plot 函数默认 color 调整 | Hexo</title>
   <meta name="author" content="Tommy Jiang">
   
-  <meta name="description" content="RMBP 买了一年半，屏幕涂层脱落得七零八落……到西单大悦城 Apple Store 免费换了个新的，非常棒。">
+  <meta name="description" content="从 MATLAB 2014b 开始，其 plot 函数的默认颜色有所调整。">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="西单大悦城更换 RMBP 屏幕攻略"/>
+  <meta property="og:title" content="MATLAB plot 函数默认 color 调整"/>
   <meta property="og:site_name" content="Hexo"/>
 
   
@@ -91,7 +91,7 @@
 
 	
 		<div class="page-header page-header-inverse ">		
-			<h1 class="title title-inverse "> 西单大悦城更换 RMBP 屏幕攻略</h1>
+			<h1 class="title title-inverse "> MATLAB plot 函数默认 color 调整</h1>
 		</div>		
 	
 
@@ -111,18 +111,15 @@
 	<div class="mypage">		
 	  		
 
-	  <p>RMBP 买了一年半，屏幕涂层脱落得七零八落……到西单大悦城 Apple Store 免费换了个新的，非常棒。</p>
+	  <p>从 MATLAB 2014b 开始，其 <code>plot</code> 函数的默认颜色有所调整。</p>
 <a id="more"></a>
-<p>网上有很多关于 RMBP 涂层脱落的问题，比如<a href="https://www.zhihu.com/question/26424953" target="_blank" rel="external">知乎上的讨论</a>。其实去年10月开始 Apple 就已经发布内部通知免费维修 Macbook 和 Macbook Pro 防眩光涂层脱落问题，只是没有大肆宣传。正好离西单很近，直接到西单大悦城 Apple Store 换新。</p>
-<ul>
-<li>2016.8.22 预约8.23中午 Genius bar。</li>
-<li>2016.8.23 中午到 Genius bar，被告知没有现成的屏幕，需要订购，把电脑拿回来等通知。</li>
-<li>2016.8.25 下午收到 Apple 的邮件，告知已到货，预约8.28晚上 Genius bar。</li>
-<li>2016.8.27 上午收到西单大悦城 Apple Store 电话，通知屏幕已到货。</li>
-<li>2016.8.28 晚上拿到西单大悦城 Apple Store 维修。</li>
-<li>2016.8.29 上午取回。</li>
-</ul>
-<p>整个过程还算顺利，5100大洋一分没花，换完屏幕的 Mac 焕然一新，哈哈。</p>
+<p>新的默认配色名称为 <code>parula</code>，意为北美生活的一种森莺。</p>
+<p>如果想了解 <code>parula</code> 的配色方案，可以在 MATLAB 中输入以下命令：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">get(gca,<span class="string">'colororder'</span>)</div></pre></td></tr></table></figure>
+<p>默认配色 <code>parula</code> 的前七种颜色如下：</p>
+<table border="1px" align="center"><br>  <tr><br>    <th style="text-align:center">颜色</th><br>    <th style="text-align:center">HEX</th><br>    <th style="text-align:center">RGB</th><br>  </tr><br>  <tr><br>    <td bgcolor="0072bd" style="text-align:center"></td><br>    <td style="text-align:center">#0072BD</td><br>    <td style="text-align:center">rgb(0, 114, 189)</td><br>  </tr><br>  <tr><br>    <td bgcolor="d95319" style="text-align:center"></td><br>    <td style="text-align:center">#D95319</td><br>    <td style="text-align:center">rgb(217, 83, 25)</td><br>  </tr><br>  <tr><br>    <td bgcolor="edb120" style="text-align:center"></td><br>    <td style="text-align:center">#EDB120</td><br>    <td style="text-align:center">rgb(237, 177, 32)</td><br>  </tr><br>  <tr><br>    <td bgcolor="7e2f8e" style="text-align:center"></td><br>    <td style="text-align:center">#7E2F8E</td><br>    <td style="text-align:center">rgb(126, 47, 142)</td><br>  </tr><br>  <tr><br>    <td bgcolor="77ac30" style="text-align:center"></td><br>    <td style="text-align:center">#77AC30</td><br>    <td style="text-align:center">rgb(119, 172, 48)</td><br>  </tr><br>  <tr><br>    <td bgcolor="4dbeee" style="text-align:center"></td><br>    <td style="text-align:center">#4DBEEE</td><br>    <td style="text-align:center">rgb(77, 190, 238)</td><br>  </tr><br>  <tr><br>    <td bgcolor="a2142f" style="text-align:center"></td><br>    <td style="text-align:center">#A2142F</td><br>    <td style="text-align:center">rgb(162, 20, 47)</td><br>  </tr><br></table>
+
+<p>应该说 2014b 之后版本 MATLAB 的默认作图选择这几个颜色已经很漂亮了，不像以前都是纯蓝、灰绿这些土颜色……本来还想找点有没有好的配色方案，现在觉得默认的方案就很好了^_^</p>
 	  
 	</div>
 
@@ -132,13 +129,13 @@
 <ul class="pagination">
 	 
 				
-    	<li class="prev"><a href="/2016-2016-09-06-Org-mode-org-encrypt-gnupg-Mac/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
+    	<li class="prev"><a href="/Google-qi-xi/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
   		
 
         <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
 
 		
-		   <li class="next"><a href="/2016-2016-08-26-ICBC-Asia/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+		   <li class="next"><a href="/bigfish-begonia-md/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
         
 	
 </ul>
@@ -177,7 +174,7 @@
   <h2 class="title">Comments</h2>
 
   
-  	 <div class="ds-thread" data-thread-key="2016-2016-08-28-Apple-xidan-joy-city-retina-display/" data-title="西单大悦城更换 RMBP 屏幕攻略" data-url="http://tommyjiang.github.io/2016-2016-08-28-Apple-xidan-joy-city-retina-display/"></div>  
+  	 <div class="ds-thread" data-thread-key="MATLAB-plot-color/" data-title="MATLAB plot 函数默认 color 调整" data-url="http://tommyjiang.github.io/MATLAB-plot-color/"></div>  
   
 </section>
 
@@ -191,7 +188,7 @@
 	
 	<div class="meta-widget">
 	<i class="fa fa-clock-o"></i>
-	2016-08-28 
+	2016-07-19 
 	</div>
 	
 
@@ -202,7 +199,7 @@
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    <li><a href="/categories/生活/">生活<span>7</span></a></li>
+    <li><a href="/categories/技术/">技术<span>6</span></a></li>
   </li>
 
     </ul>
@@ -215,7 +212,7 @@
 	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
     <ul id="tags" class="tag_box list-unstyled collapse in">	  
 	    
-  <li><a href="/tags/Mac/">Mac<span>2</span></a></li>
+  <li><a href="/tags/MATLAB/">MATLAB<span>2</span></a></li>
     </ul>
 	</div>
 		

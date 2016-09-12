@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Anaconda 使用清华镜像源 | Hexo</title>
+  <title>电力系统研究的个人体会 | Hexo</title>
   <meta name="author" content="Tommy Jiang">
   
-  <meta name="description" content="Mac/Win 下将 Anaconda 镜像更改为清华镜像源的方法。">
+  <meta name="description" content="从博士入学算起，从事电力系统的研究工作已经将近 6 年了，结合个人的实际经验谈谈对电力系统研究的体会。">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Anaconda 使用清华镜像源"/>
+  <meta property="og:title" content="电力系统研究的个人体会"/>
   <meta property="og:site_name" content="Hexo"/>
 
   
@@ -91,7 +91,7 @@
 
 	
 		<div class="page-header page-header-inverse ">		
-			<h1 class="title title-inverse "> Anaconda 使用清华镜像源</h1>
+			<h1 class="title title-inverse "> 电力系统研究的个人体会</h1>
 		</div>		
 	
 
@@ -111,19 +111,29 @@
 	<div class="mypage">		
 	  		
 
-	  <p>Mac/Win 下将 <code>Anaconda</code> 镜像更改为清华镜像源的方法。</p>
+	  <p>从博士入学算起，从事电力系统的研究工作已经将近 6 年了，结合个人的实际经验谈谈对电力系统研究的体会。</p>
 <a id="more"></a>
-<h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>用惯了 Mac 或者 Linux 的同学一定会爱上 <code>brew</code> 和 <code>apt-get</code> 这种一键式的安装工具。不用像 Windows 一样到处去找各个软件的安装包，只需要一个命令就都能搞定，掌控天下的感觉:)</p>
-<p>但这种一键式安装工具极为依赖镜像源，国内的网络在连国外某些镜像时实在是太慢了，所以有很多组织和个人在国内搭建了镜像服务器，造福大众。</p>
-<p><code>Anaconda</code> 是 Python 的一个发行包，这个单词的原意是南美发现的一种巨蟒，可能是由于它包括了很多 Python 的 <code>package</code>所以叫这个名字。<code>Anaconda</code> 的 <code>defaults</code> 镜像源实在是太慢了，清华 TUNA 提供了一个<a href="https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/" target="_blank" rel="external">国内镜像源</a>，我们要做的就是将这个镜像源作为 <code>Anaconda</code> 的默认镜像源。</p>
-<h1 id="Mac"><a href="#Mac" class="headerlink" title="Mac"></a>Mac</h1><p>Mac 下切换很简单，直接在 <code>terminal</code> 中输入(参考<a href="https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/" target="_blank" rel="external">清华 TUNA 国内镜像源</a>)：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">conda config --add channels <span class="string">'https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/'</span></div><div class="line">conda config --set show_channel_urls yes</div></pre></td></tr></table></figure>
-<h1 id="Win"><a href="#Win" class="headerlink" title="Win"></a>Win</h1><p>Win 下稍微麻烦一些，如果直接在 <code>cmd</code> 中输入上述命令，<code>conda install</code> 的时候会报错：</p>
+<h1 id="电力系统研究的特点"><a href="#电力系统研究的特点" class="headerlink" title="电力系统研究的特点"></a>电力系统研究的特点</h1><p>我个人认为，电力系统研究的特点包括以下几点：</p>
+<ol>
+<li>模型角度：动态模型极为复杂。</li>
+<li>技术路线角度：严重依赖仿真。</li>
+<li>研究开放性角度：极度封闭的小团体。</li>
+</ol>
+<h2 id="模型角度"><a href="#模型角度" class="headerlink" title="模型角度"></a>模型角度</h2><p>目前越来越多的电力系统研究者向优化方向靠拢，其原因是电力系统的优化问题（例如机组组合、经济调度等）一般都采用稳态或准稳态模型。与动态模型相比，稳态或准稳态模型实在是简单太多了。对于一个包括几十甚至上百台发电机的大型电力系统，其动态模型极其复杂，基本只能依靠数值仿真进行分析。然而对于研究而言，只依靠数值仿真进行分析是远远不够的，还需要在理论方面有所突破。这就迫使研究者“知难而退”，既然动态不好做，那干脆就不做。</p>
+<p>换个角度说，我之前投过一篇文章到<code>IEEE Transcatons on Power Systems</code>，一审直接被拒，其中一位 Reviewer 写到：</p>
 <blockquote>
-<p>Error: Could not find anaconda.org user ‘https: </p>
+<p>Power systems in general are <strong>very complex systems</strong> that the number of their state and control variables can <strong>easily exceed hundreds</strong>. How the algorithm would work on larger systems? How to do prove your statement?</p>
 </blockquote>
-<p>方法是修改 <code>.condarc</code> 文件为以下形式(参考<a href="http://blog.5ibc.net/p/87204.html" target="_blank" rel="external">该网址</a>)：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">channels: </div><div class="line">- https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/ </div><div class="line">- defaults</div><div class="line"></div><div class="line">show_channel_urls: yes</div></pre></td></tr></table></figure>
+<p>坦白地说，他指出的问题非常关键，即电力系统的动态模型过于复杂，全局性的控制算法很难应用。但如果揪住这一点不放，那电力系统动态的研究就很难开展了。例如，优化那边经常会证明某个算法会得到最优解，但到现在为止大型电力系统的稳定性都不在电力系统动态方向研究人员的考虑之内，因为这个问题太复杂了。正是由于这一点，动态方向的研究人员更需要团结起来发出自己的声音，而不是互相质疑对方的研究没法解决大型电力系统的动态问题，如今<code>IEEE Transcatons on Power Systems</code>基本已经被优化领域的研究占领了，和这一点也不无关系。</p>
+<p>今天（2016年5月30日）心血来潮，看了下<code>IEEE Transcatons on Power Systems</code>期刊 Early Access 中清华的所有文章，一共21篇，其中动态方向只有3篇……</p>
+<h2 id="技术路线角度"><a href="#技术路线角度" class="headerlink" title="技术路线角度"></a>技术路线角度</h2><p>电力系统的研究严重依赖仿真，这应该是目前电力系统研究领域的一个普遍现状了。与电力电子和高压方向不同，电力系统研究最后的算例部分基本都是依靠仿真来佐证研究者所提出方法的有效性。仿真除了模仿真实外，还有一个戏谑的解释：仿佛是真的。由于缺乏与实际结果的对比，很多仿真结果其实并不可信。与此同时，绝大多数研究者所做的研究也只是停留在纸上谈兵的阶段，并没有干过实际工程，很难判断仿真结果是否有误。</p>
+<p>正是由于绝大多数电力系统的研究都是纸上谈兵，所以在各种宣传和报奖时，需要进行适度的夸张，从而体现自己所做研究的意义，这样做被揭穿的概率极低，可谓风险极小收益却还不错。由于电力系统领域研究者的水平不会相差很多，所以适度夸张——或者说——忽悠的能力至关重要。</p>
+<h2 id="研究开放性角度"><a href="#研究开放性角度" class="headerlink" title="研究开放性角度"></a>研究开放性角度</h2><p>关于这部分，先引用目前在 UCD 的电力系统研究领域著名学者 Federico Milano 的一段话：</p>
+<blockquote>
+<p>The experience with PSAT has taught me that the power system community is simply not responding properly to open source projects. In the last ten years, third-party contributions to PSAT have been very marginal or would have been developed even if PSAT had been not distributed as a free and open source project. On the other hand, I am quite sure that several extensions have been developed but not shared with the PSAT community.</p>
+<p>I got to the conclusion that the free and open source paradigm is not attractive for <strong>small and closed</strong> communities like the power system one. </p>
+</blockquote>
+<p><code>PSAT</code> 是 Milano 开发的电力系统仿真程序，以开源的形式共享给所有电力系统研究者。但他发现很多研究者基于 PSAT 开发了新的扩展功能，但并没有共享给整个 PSAT 社区，这让他明白了免费开源是不适合由电力系统研究者组成的这种封闭的小圈子的。</p>
 	  
 	</div>
 
@@ -133,13 +143,13 @@
 <ul class="pagination">
 	 
 				
-    	<li class="prev"><a href="/2016-2016-08-26-ICBC-Asia/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
+    	<li class="prev"><a href="/bigfish-begonia-md/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
   		
 
         <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
 
 		
-		   <li class="next"><a href="/2016-2016-08-09-Google-qi-xi/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+		   <li class="next"><a href="/migrate-to-hexo/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
         
 	
 </ul>
@@ -178,7 +188,7 @@
   <h2 class="title">Comments</h2>
 
   
-  	 <div class="ds-thread" data-thread-key="2016-2016-08-25-anaconda-tsinghua-mirror/" data-title="Anaconda 使用清华镜像源" data-url="http://tommyjiang.github.io/2016-2016-08-25-anaconda-tsinghua-mirror/"></div>  
+  	 <div class="ds-thread" data-thread-key="Power-system-research/" data-title="电力系统研究的个人体会" data-url="http://tommyjiang.github.io/Power-system-research/"></div>  
   
 </section>
 
@@ -192,7 +202,7 @@
 	
 	<div class="meta-widget">
 	<i class="fa fa-clock-o"></i>
-	2016-08-25 
+	2016-03-17 
 	</div>
 	
 
@@ -203,7 +213,7 @@
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    <li><a href="/categories/Geek/">Geek<span>1</span></a></li>
+    <li><a href="/categories/技术/">技术<span>6</span></a></li>
   </li>
 
     </ul>
@@ -216,7 +226,7 @@
 	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
     <ul id="tags" class="tag_box list-unstyled collapse in">	  
 	    
-  <li><a href="/tags/Python/">Python<span>1</span></a></li>
+  <li><a href="/tags/电力系统/">电力系统<span>2</span></a></li> <li><a href="/tags/博士/">博士<span>2</span></a></li> <li><a href="/tags/科研/">科研<span>1</span></a></li> <li><a href="/tags/国家电网/">国家电网<span>1</span></a></li>
     </ul>
 	</div>
 		

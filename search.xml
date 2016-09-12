@@ -5,7 +5,7 @@
     
     <entry>
       <title><![CDATA[北京地铁各线路颜色 HEX 及 RGB 代码]]></title>
-      <url>http://tommyjiang.github.io/2016-2016-09-10-Beijing-railway-color/</url>
+      <url>http://tommyjiang.github.io/Beijing-railway-color/</url>
       <content type="html"><![CDATA[<p>大概翻了翻，网上好像还没有北京地铁各线路颜色的 HEX 及 RGB 代码，自己整理一份。</p>
 <a id="more"></a>
 <p>北京地铁各线路颜色 HEX 和 RGB 代码如下，参考<a href="http://www.bjsubway.com/subwaymap/station_map.html" target="_blank" rel="external">北京地铁官网线路图</a>：</p>
@@ -115,7 +115,7 @@
     
     <entry>
       <title><![CDATA[Mac 下 Emacs Org mode 加密以及 gnupg 的安装]]></title>
-      <url>http://tommyjiang.github.io/2016-2016-09-06-Org-mode-org-encrypt-gnupg-Mac/</url>
+      <url>http://tommyjiang.github.io/Org-mode-org-encrypt-gnupg-Mac/</url>
       <content type="html"><![CDATA[<p>Mac 下 Org mode 加密之前用得好好的，最近发现执行<code>org-encrypt-entry</code>时有问题，原来是<code>gnupg</code>的原因。</p>
 <a id="more"></a>
 <p>迁移到<code>Spacemacs</code>之后感觉很方便，<code>base package</code>中自带了<code>exec-path-from-shell</code>，可以直接使用 Mac 系统的环境变量。</p>
@@ -129,7 +129,7 @@
     
     <entry>
       <title><![CDATA[西单大悦城更换 RMBP 屏幕攻略]]></title>
-      <url>http://tommyjiang.github.io/2016-2016-08-28-Apple-xidan-joy-city-retina-display/</url>
+      <url>http://tommyjiang.github.io/Apple-xidan-joy-city-retina-display/</url>
       <content type="html"><![CDATA[<p>RMBP 买了一年半，屏幕涂层脱落得七零八落……到西单大悦城 Apple Store 免费换了个新的，非常棒。</p>
 <a id="more"></a>
 <p>网上有很多关于 RMBP 涂层脱落的问题，比如<a href="https://www.zhihu.com/question/26424953" target="_blank" rel="external">知乎上的讨论</a>。其实去年10月开始 Apple 就已经发布内部通知免费维修 Macbook 和 Macbook Pro 防眩光涂层脱落问题，只是没有大肆宣传。正好离西单很近，直接到西单大悦城 Apple Store 换新。</p>
@@ -147,7 +147,7 @@
     
     <entry>
       <title><![CDATA[工银亚洲香港账户开户攻略]]></title>
-      <url>http://tommyjiang.github.io/2016-2016-08-26-ICBC-Asia/</url>
+      <url>http://tommyjiang.github.io/ICBC-Asia/</url>
       <content type="html"><![CDATA[<p>开了个工银亚洲的香港账户，方便进行在 HK 的交易。</p>
 <a id="more"></a>
 <p>和小哥在 HK 一起度过了愉快的半年，即使走了也很怀念那段时光，正好最近在 HK 有些财务往来，所以决定办一张工银亚洲的香港银行卡，方便进行 HK 的交易。</p>
@@ -165,7 +165,7 @@
     
     <entry>
       <title><![CDATA[Anaconda 使用清华镜像源]]></title>
-      <url>http://tommyjiang.github.io/2016-2016-08-25-anaconda-tsinghua-mirror/</url>
+      <url>http://tommyjiang.github.io/anaconda-tsinghua-mirror/</url>
       <content type="html"><![CDATA[<p>Mac/Win 下将 <code>Anaconda</code> 镜像更改为清华镜像源的方法。</p>
 <a id="more"></a>
 <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>用惯了 Mac 或者 Linux 的同学一定会爱上 <code>brew</code> 和 <code>apt-get</code> 这种一键式的安装工具。不用像 Windows 一样到处去找各个软件的安装包，只需要一个命令就都能搞定，掌控天下的感觉:)</p>
@@ -184,7 +184,7 @@
     
     <entry>
       <title><![CDATA[七夕·Google]]></title>
-      <url>http://tommyjiang.github.io/2016-2016-08-09-Google-qi-xi/</url>
+      <url>http://tommyjiang.github.io/Google-qi-xi/</url>
       <content type="html"><![CDATA[<p>今天是中国传统佳节七夕，用今天 Google 主页的七夕图片作为配图吧。</p>
 <a id="more"></a>
 <p>Google 不愧是一个充满人文关怀的公司，今天也应景地配上了七夕的图片。中午打开 Mac 下的 Chrome 时发现整个 UI 焕然一新，原来已经升级到 v52 版本，整体 UI 借鉴了移动设备上的 <code>Material</code> 风格，界面更加简洁，科技感更强，整体配色也更高冷了。</p>
@@ -200,7 +200,7 @@
     
     <entry>
       <title><![CDATA[MATLAB plot 函数默认 color 调整]]></title>
-      <url>http://tommyjiang.github.io/2016-2016-07-19-MATLAB-plot-color/</url>
+      <url>http://tommyjiang.github.io/MATLAB-plot-color/</url>
       <content type="html"><![CDATA[<p>从 MATLAB 2014b 开始，其 <code>plot</code> 函数的默认颜色有所调整。</p>
 <a id="more"></a>
 <p>新的默认配色名称为 <code>parula</code>，意为北美生活的一种森莺。</p>
@@ -215,7 +215,7 @@
     
     <entry>
       <title><![CDATA[《大鱼海棠》经典台词]]></title>
-      <url>http://tommyjiang.github.io/2016-2016-07-10-bigfish-begonia-md/</url>
+      <url>http://tommyjiang.github.io/bigfish-begonia-md/</url>
       <content type="html"><![CDATA[<p>昨天晚上，顶着酷热的空气和萌哥老妹到圣熙八号观赏了这部动画，作为校友也算对退学追梦的清华师兄的支持吧。</p>
 <a id="more"></a>
 <p>由于去之前已经听说网上一片骂声，所以期待挺低的，结果看完感觉还不错。画面和音乐都<br>很有感觉，尤其喜欢里面的台词，好好分享下。</p>
@@ -245,7 +245,7 @@
     
     <entry>
       <title><![CDATA[电力系统研究的个人体会]]></title>
-      <url>http://tommyjiang.github.io/2016-2016-03-17-Power-system-research/</url>
+      <url>http://tommyjiang.github.io/Power-system-research/</url>
       <content type="html"><![CDATA[<p>从博士入学算起，从事电力系统的研究工作已经将近 6 年了，结合个人的实际经验谈谈对电力系统研究的体会。</p>
 <a id="more"></a>
 <h1 id="电力系统研究的特点"><a href="#电力系统研究的特点" class="headerlink" title="电力系统研究的特点"></a>电力系统研究的特点</h1><p>我个人认为，电力系统研究的特点包括以下几点：</p>
@@ -274,7 +274,7 @@
     
     <entry>
       <title><![CDATA[博客迁移至 Hexo]]></title>
-      <url>http://tommyjiang.github.io/2016-2016-03-16-migrate-to-hexo/</url>
+      <url>http://tommyjiang.github.io/migrate-to-hexo/</url>
       <content type="html"><![CDATA[<p>从2014年8月第一篇博文算起，已经写了一年半了。之前博客主要用的是 Jekyll + Markdown （感谢 codepiano 同学提供的主题）。即日起本博客迁移至 <code>Hexo</code>，之前的博文会挑一些重点的迁移过来。</p>
 <p>本博客使用的是<code>raytaylorlin</code>提供的 <a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism" target="_blank" rel="external">raytaylorism 主题</a>，在此表示感谢。</p>
 <p>2016-08-03 更新：本博客目前使用的是 <a href="https://github.com/wzpan/hexo-theme-freemind" target="_blank" rel="external">freemind 主题</a>，对作者表示感谢。</p>
@@ -283,7 +283,7 @@
     
     <entry>
       <title><![CDATA[2015行程总结及个人飞行统计]]></title>
-      <url>http://tommyjiang.github.io/2015-2015-12-28-Trip-2015/</url>
+      <url>http://tommyjiang.github.io/Trip-2015/</url>
       <content type="html"><![CDATA[<p>2015年转眼要结束了，在新年即将到来之际整理全年的飞机和火车行程，以及从2012年4月9日第一次坐飞机开始的所有飞行行程。</p>
 <a id="more"></a>
 <h1 id="2015行程总结"><a href="#2015行程总结" class="headerlink" title="2015行程总结"></a>2015行程总结</h1><p>2015年各月飞机里程和火车里程如下：</p>
@@ -988,7 +988,7 @@
     
     <entry>
       <title><![CDATA[京、津、唐高铁乘车方案和乘车小技巧]]></title>
-      <url>http://tommyjiang.github.io/2015-2015-10-01-jing-jin-tang-high-speed-railway/</url>
+      <url>http://tommyjiang.github.io/jing-jin-tang-high-speed-railway/</url>
       <content type="html"><![CDATA[<p>2015年十一回家，由于买不到直达唐山/唐山北的票，选择了经天津中转的方案，将三地铁路资料汇总如下。</p>
 <a id="more"></a>
 <h1 id="京唐高铁"><a href="#京唐高铁" class="headerlink" title="京唐高铁"></a>京唐高铁</h1><p>2015年8月25日，铁道第三勘察设计院公布了<a href="http://www.tsdig.com/infom.aspx?Id=684&amp;FileName=info&amp;Language=1" target="_blank" rel="external">京唐高铁环评二次公告</a>，京唐高铁的走向也正式确定，起点为位于北京的新北京东站，终点为唐山站。</p>
@@ -1027,7 +1027,7 @@
     
     <entry>
       <title><![CDATA[MATLAB 中利用 m 文件修改 Simulink 模型参数的方法]]></title>
-      <url>http://tommyjiang.github.io/2015-2015-08-10-Simulink-m-file/</url>
+      <url>http://tommyjiang.github.io/Simulink-m-file/</url>
       <content type="html"><![CDATA[<p>介绍在 MATLAB 中利用 m 文件修改 Simulink 中模型参数的方法。</p>
 <a id="more"></a>
 <h1 id="电力系统仿真工具"><a href="#电力系统仿真工具" class="headerlink" title="电力系统仿真工具"></a>电力系统仿真工具</h1><p>我个人博士论文的隐名评审意见中有如下评语：</p>
@@ -1052,7 +1052,7 @@
     
     <entry>
       <title><![CDATA[2015年毕业晚会观后感]]></title>
-      <url>http://tommyjiang.github.io/2015-2015-07-09-graduation-party/</url>
+      <url>http://tommyjiang.github.io/graduation-party/</url>
       <content type="html"><![CDATA[<p>犹记得5年前本科毕业时的毕业晚会，中途就离场了。5年后，即将博士毕业了，再来看毕业晚会，让人唏嘘不已。</p>
 <a id="more"></a>
 <h3 id="节目单"><a href="#节目单" class="headerlink" title="节目单"></a>节目单</h3><p>整场晚会的节目单如下：</p>

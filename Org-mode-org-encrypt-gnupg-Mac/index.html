@@ -3,16 +3,15 @@
 <head>
   <meta charset="utf-8">
   
-  <title>博客迁移至 Hexo | Hexo</title>
+  <title>Mac 下 Emacs Org mode 加密以及 gnupg 的安装 | Hexo</title>
   <meta name="author" content="Tommy Jiang">
   
-  <meta name="description" content="从2014年8月第一篇博文算起，已经写了一年半了。之前博客主要用的是 Jekyll + Markdown （感谢 codepiano 同学提供的主题）。即日起本博客迁移至 Hexo，之前的博文会挑一些重点的迁移过来。
-本博客使用的是raytaylorlin提供的 raytaylorism 主题，在此">
+  <meta name="description" content="Mac 下 Org mode 加密之前用得好好的，最近发现执行org-encrypt-entry时有问题，原来是gnupg的原因。">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="博客迁移至 Hexo"/>
+  <meta property="og:title" content="Mac 下 Emacs Org mode 加密以及 gnupg 的安装"/>
   <meta property="og:site_name" content="Hexo"/>
 
   
@@ -92,7 +91,7 @@
 
 	
 		<div class="page-header page-header-inverse ">		
-			<h1 class="title title-inverse "> 博客迁移至 Hexo</h1>
+			<h1 class="title title-inverse "> Mac 下 Emacs Org mode 加密以及 gnupg 的安装</h1>
 		</div>		
 	
 
@@ -112,9 +111,14 @@
 	<div class="mypage">		
 	  		
 
-	  <p>从2014年8月第一篇博文算起，已经写了一年半了。之前博客主要用的是 Jekyll + Markdown （感谢 codepiano 同学提供的主题）。即日起本博客迁移至 <code>Hexo</code>，之前的博文会挑一些重点的迁移过来。</p>
-<p>本博客使用的是<code>raytaylorlin</code>提供的 <a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism" target="_blank" rel="external">raytaylorism 主题</a>，在此表示感谢。</p>
-<p>2016-08-03 更新：本博客目前使用的是 <a href="https://github.com/wzpan/hexo-theme-freemind" target="_blank" rel="external">freemind 主题</a>，对作者表示感谢。</p>
+	  <p>Mac 下 Org mode 加密之前用得好好的，最近发现执行<code>org-encrypt-entry</code>时有问题，原来是<code>gnupg</code>的原因。</p>
+<a id="more"></a>
+<p>迁移到<code>Spacemacs</code>之后感觉很方便，<code>base package</code>中自带了<code>exec-path-from-shell</code>，可以直接使用 Mac 系统的环境变量。</p>
+<p>前天用<code>org-encrypt-entry</code>把<code>org</code>文件加密的时候报错，查了下<code>homebrew</code>安装的<code>gnupg</code>，发现已经更新到<code>gnupg2</code>了。所以果断自己下载了<code>gnupg 1.4.21</code>的稳定版：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install gpg1</div></pre></td></tr></table></figure>
+<p>同时在<code>.spacemacs.d</code>的<code>init.el</code>中加入了<code>gnupg 1.4.21</code>的路径：</p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(<span class="name">add-to-list</span> 'exec-path <span class="string">"/usr/local/opt/gnupg/libexec/gpgbin"</span>)</div></pre></td></tr></table></figure>
+<p>又可以用来<code>gnupg</code>来给<code>org</code>文件加密了。</p>
 	  
 	</div>
 
@@ -124,13 +128,13 @@
 <ul class="pagination">
 	 
 				
-    	<li class="prev"><a href="/2016-2016-03-17-Power-system-research/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
+    	<li class="prev"><a href="/Beijing-railway-color/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
   		
 
         <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
 
 		
-		   <li class="next"><a href="/2015-2015-12-28-Trip-2015/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+		   <li class="next"><a href="/Apple-xidan-joy-city-retina-display/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
         
 	
 </ul>
@@ -169,7 +173,7 @@
   <h2 class="title">Comments</h2>
 
   
-  	 <div class="ds-thread" data-thread-key="2016-2016-03-16-migrate-to-hexo/" data-title="博客迁移至 Hexo" data-url="http://tommyjiang.github.io/2016-2016-03-16-migrate-to-hexo/"></div>  
+  	 <div class="ds-thread" data-thread-key="Org-mode-org-encrypt-gnupg-Mac/" data-title="Mac 下 Emacs Org mode 加密以及 gnupg 的安装" data-url="http://tommyjiang.github.io/Org-mode-org-encrypt-gnupg-Mac/"></div>  
   
 </section>
 
@@ -183,7 +187,7 @@
 	
 	<div class="meta-widget">
 	<i class="fa fa-clock-o"></i>
-	2016-03-16 
+	2016-09-06 
 	</div>
 	
 
@@ -207,7 +211,7 @@
 	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
     <ul id="tags" class="tag_box list-unstyled collapse in">	  
 	    
-  <li><a href="/tags/Hexo/">Hexo<span>1</span></a></li> <li><a href="/tags/博客/">博客<span>1</span></a></li>
+  <li><a href="/tags/Mac/">Mac<span>2</span></a></li> <li><a href="/tags/Emacs/">Emacs<span>1</span></a></li> <li><a href="/tags/Org-mode/">Org mode<span>1</span></a></li>
     </ul>
 	</div>
 		
