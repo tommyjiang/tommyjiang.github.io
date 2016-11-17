@@ -4,75 +4,8 @@
   
     
     <entry>
-      <title><![CDATA[北京十大适合一个人吃的餐厅]]></title>
-      <url>http://tommyjiang.github.io/2016-11-16-Beijing-single-res/</url>
-      <content type="html"><![CDATA[<p>一个人也要活得精彩：）</p>
-<a id="more"></a>
-
-    <div style="min-height: 500px; width: 100%;" id="map">
-    </div>
-
-    <script type="text/javascript">
-  
-        function map_init() {
-                    
-            var map = new BMap.Map("map");    // 创建Map实例
-            map.centerAndZoom(new BMap.Point(116.41,39.89), 13);  // 初始化地图,设置中心点坐标和地图级别
-            map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
-            map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
-            map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
-                    
-            //向地图中添加缩放控件
-            var ctrlNav = new window.BMap.NavigationControl({
-                               anchor: BMAP_ANCHOR_TOP_LEFT,
-                               type: BMAP_NAVIGATION_CONTROL_LARGE
-                          });
-            map.addControl(ctrlNav);
-  
-            var points = [
-                [116.395857,39.901169], // 渔芙南
-                [116.649810,39.912096], // 三禾粉匠贵州米粉店 
-                [116.323938,39.989919],
-                [116.328896,39.988039],
-                [116.321135,39.987072],
-                [116.332453,39.989007],
-                [116.324045,39.987984],
-                [116.322285,39.988316],
-                [116.322608,39.986381]
-            ];
-            
-            var size1 = new BMap.Size(21, 50);
-            var size2 = new BMap.Size(21, 0);
-            var icons = [], markers = [];
-            
-            // 向地图添加标注
-            for( var i = 0;i < points.length; i++){
-                var point = new BMap.Point(points[i][0], points[i][1]);
-                var icon_pre = 'http://o852ayzmr.bkt.clouddn.com/';
-                var icon_post = '.png';
-                var icon_string = icon_pre + (i+1).toString()  + icon_post;
-                icons[i] = new BMap.Icon(icon_string, size1, {anchor: size2})
-                // icons[i] = new BMap.Icon('http://o852ayzmr.bkt.clouddn.com/1.png', size1, {anchor: size2})
-                markers[i] = new BMap.Marker(point, {icon: icons[i]});
-                map.addOverlay(markers[i]);
-            };
-        }
-
-        //异步调用百度js
-        function map_load() {
-            var load = document.createElement("script");
-            load.src = "http://api.map.baidu.com/api?v=1.4&callback=map_init";
-            document.body.appendChild(load);
-        }  
-        window.onload = map_load;
-    </script>
-
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Hexo 博文中加入百度地图]]></title>
-      <url>http://tommyjiang.github.io/2016-11-16-Hexo-baidu-map/</url>
+      <url>http://tommyjiang.github.io/2016/2016-11-16-Hexo-baidu-map/</url>
       <content type="html"><![CDATA[<p>利用百度地图 API 实现在 Hexo 的博文中加入地图。</p>
 <a id="more"></a>
 <p>最近想丰富下生活，最先想到的就是多品尝点北京的美食。作为一个认真的人，吃过就想记下来，但只有饭馆的名字和地址显得太单调了，就想能在地图上显示的话会比较直观。搜了下百度地图的 API，不多说，直接上代码吧。更详细的内容可以参考百度地图 Javascript 的 <a href="http://lbsyun.baidu.com/index.php?title=jspopular" target="_blank" rel="external">API</a>。</p>
@@ -146,8 +79,75 @@
     </entry>
     
     <entry>
+      <title><![CDATA[北京十大适合一个人吃的餐厅]]></title>
+      <url>http://tommyjiang.github.io/2016/2016-11-16-Beijing-single-res/</url>
+      <content type="html"><![CDATA[<p>一个人也要活得精彩：）</p>
+<a id="more"></a>
+
+    <div style="min-height: 500px; width: 100%;" id="map">
+    </div>
+
+    <script type="text/javascript">
+  
+        function map_init() {
+                    
+            var map = new BMap.Map("map");    // 创建Map实例
+            map.centerAndZoom(new BMap.Point(116.41,39.89), 13);  // 初始化地图,设置中心点坐标和地图级别
+            map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+            map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+            map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+                    
+            //向地图中添加缩放控件
+            var ctrlNav = new window.BMap.NavigationControl({
+                               anchor: BMAP_ANCHOR_TOP_LEFT,
+                               type: BMAP_NAVIGATION_CONTROL_LARGE
+                          });
+            map.addControl(ctrlNav);
+  
+            var points = [
+                [116.395857,39.901169], // 渔芙南
+                [116.649810,39.912096], // 三禾粉匠贵州米粉店 
+                [116.323938,39.989919],
+                [116.328896,39.988039],
+                [116.321135,39.987072],
+                [116.332453,39.989007],
+                [116.324045,39.987984],
+                [116.322285,39.988316],
+                [116.322608,39.986381]
+            ];
+            
+            var size1 = new BMap.Size(21, 50);
+            var size2 = new BMap.Size(21, 0);
+            var icons = [], markers = [];
+            
+            // 向地图添加标注
+            for( var i = 0;i < points.length; i++){
+                var point = new BMap.Point(points[i][0], points[i][1]);
+                var icon_pre = 'http://o852ayzmr.bkt.clouddn.com/';
+                var icon_post = '.png';
+                var icon_string = icon_pre + (i+1).toString()  + icon_post;
+                icons[i] = new BMap.Icon(icon_string, size1, {anchor: size2})
+                // icons[i] = new BMap.Icon('http://o852ayzmr.bkt.clouddn.com/1.png', size1, {anchor: size2})
+                markers[i] = new BMap.Marker(point, {icon: icons[i]});
+                map.addOverlay(markers[i]);
+            };
+        }
+
+        //异步调用百度js
+        function map_load() {
+            var load = document.createElement("script");
+            load.src = "http://api.map.baidu.com/api?v=1.4&callback=map_init";
+            document.body.appendChild(load);
+        }  
+        window.onload = map_load;
+    </script>
+
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[纪念清华园站 & 我的铁路情缘]]></title>
-      <url>http://tommyjiang.github.io/2016-11-01-Tsinghua-yuan-station/</url>
+      <url>http://tommyjiang.github.io/2016/2016-11-01-Tsinghua-yuan-station/</url>
       <content type="html"><![CDATA[<p>百年老站清华园站昨天悄然谢幕，谨以此文聊表纪念，顺便聊聊我和铁路的不解之缘。</p>
 <a id="more"></a>
 <h1 id="清华园和五道口的谢幕"><a href="#清华园和五道口的谢幕" class="headerlink" title="清华园和五道口的谢幕"></a>清华园和五道口的谢幕</h1><p>2016年11月1日，百年老站清华园站停止办理客运业务，五道口熟悉的“行人车辆请注意，火车就要开过来了”也成为了历史。微博上有一段2016年10月31日晚11点50分左右 K273 次通过清华园站时候的<a href="http://weibo.com/1558146213/EfGEgrFxu?from=page_1005051558146213_profile&amp;wvr=6&amp;mod=weibotime" target="_blank" rel="external">视频</a>，视频中记录了清华园站最后的车机联控：</p>
@@ -166,7 +166,7 @@
     
     <entry>
       <title><![CDATA[愿得一心人，白首不相离]]></title>
-      <url>http://tommyjiang.github.io/2016-10-24-Forever-love/</url>
+      <url>http://tommyjiang.github.io/2016/2016-10-24-Forever-love/</url>
       <content type="html"><![CDATA[<p>最近遇到点小挫折，过程中也成长了不少。</p>
 <a id="more"></a>
 <p>1.生活技能树很重要，要多点、早点这部分技能。之前读博包括毕业后的一段时间都在主修工作技能，现在发现这部分技能在交往中几乎没用，还是要多体验生活，发展点兴趣爱好，做个饭，开个车等等，这样聊天也有话题，总不能一直聊工作吧。</p>
@@ -182,7 +182,7 @@
     
     <entry>
       <title><![CDATA[北京地铁各线路颜色 HEX 及 RGB 代码]]></title>
-      <url>http://tommyjiang.github.io/2016-09-10-Beijing-railway-color/</url>
+      <url>http://tommyjiang.github.io/2016/2016-09-10-Beijing-railway-color/</url>
       <content type="html"><![CDATA[<p>大概翻了翻，网上好像还没有北京地铁各线路颜色的 HEX 及 RGB 代码，自己整理一份。</p>
 <a id="more"></a>
 <p>北京地铁各线路颜色 HEX 和 RGB 代码如下，参考<a href="http://www.bjsubway.com/subwaymap/station_map.html" target="_blank" rel="external">北京地铁官网线路图</a>：</p>
@@ -292,7 +292,7 @@
     
     <entry>
       <title><![CDATA[Mac 下 Emacs Org mode 加密以及 gnupg 的安装]]></title>
-      <url>http://tommyjiang.github.io/2016-09-06-Org-mode-org-encrypt-gnupg-Mac/</url>
+      <url>http://tommyjiang.github.io/2016/2016-09-06-Org-mode-org-encrypt-gnupg-Mac/</url>
       <content type="html"><![CDATA[<p>Mac 下 Org mode 加密之前用得好好的，最近发现执行<code>org-encrypt-entry</code>时有问题，原来是<code>gnupg</code>的原因。</p>
 <a id="more"></a>
 <p>迁移到<code>Spacemacs</code>之后感觉很方便，<code>base package</code>中自带了<code>exec-path-from-shell</code>，可以直接使用 Mac 系统的环境变量。</p>
@@ -306,7 +306,7 @@
     
     <entry>
       <title><![CDATA[西单大悦城更换 RMBP 屏幕攻略]]></title>
-      <url>http://tommyjiang.github.io/2016-08-28-Apple-xidan-joy-city-retina-display/</url>
+      <url>http://tommyjiang.github.io/2016/2016-08-28-Apple-xidan-joy-city-retina-display/</url>
       <content type="html"><![CDATA[<p>RMBP 买了一年半，屏幕涂层脱落得七零八落……到西单大悦城 Apple Store 免费换了个新的，非常棒。</p>
 <a id="more"></a>
 <p>网上有很多关于 RMBP 涂层脱落的问题，比如<a href="https://www.zhihu.com/question/26424953" target="_blank" rel="external">知乎上的讨论</a>。其实去年10月开始 Apple 就已经发布内部通知免费维修 Macbook 和 Macbook Pro 防眩光涂层脱落问题，只是没有大肆宣传。正好离西单很近，直接到西单大悦城 Apple Store 换新。</p>
@@ -324,7 +324,7 @@
     
     <entry>
       <title><![CDATA[工银亚洲香港账户开户攻略]]></title>
-      <url>http://tommyjiang.github.io/2016-08-26-ICBC-Asia/</url>
+      <url>http://tommyjiang.github.io/2016/2016-08-26-ICBC-Asia/</url>
       <content type="html"><![CDATA[<p>开了个工银亚洲的香港账户，方便进行在 HK 的交易。</p>
 <a id="more"></a>
 <p>和小哥在 HK 一起度过了愉快的半年，即使走了也很怀念那段时光，正好最近在 HK 有些财务往来，所以决定办一张工银亚洲的香港银行卡，方便进行 HK 的交易。</p>
@@ -342,7 +342,7 @@
     
     <entry>
       <title><![CDATA[Anaconda 使用清华镜像源]]></title>
-      <url>http://tommyjiang.github.io/2016-08-25-anaconda-tsinghua-mirror/</url>
+      <url>http://tommyjiang.github.io/2016/2016-08-25-anaconda-tsinghua-mirror/</url>
       <content type="html"><![CDATA[<p>Mac/Win 下将 <code>Anaconda</code> 镜像更改为清华镜像源的方法。</p>
 <a id="more"></a>
 <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>用惯了 Mac 或者 Linux 的同学一定会爱上 <code>brew</code> 和 <code>apt-get</code> 这种一键式的安装工具。不用像 Windows 一样到处去找各个软件的安装包，只需要一个命令就都能搞定，掌控天下的感觉:)</p>
@@ -361,7 +361,7 @@
     
     <entry>
       <title><![CDATA[七夕·Google]]></title>
-      <url>http://tommyjiang.github.io/2016-08-09-Google-qi-xi/</url>
+      <url>http://tommyjiang.github.io/2016/2016-08-09-Google-qi-xi/</url>
       <content type="html"><![CDATA[<p>今天是中国传统佳节七夕，用今天 Google 主页的七夕图片作为配图吧。</p>
 <a id="more"></a>
 <p>Google 不愧是一个充满人文关怀的公司，今天也应景地配上了七夕的图片。中午打开 Mac 下的 Chrome 时发现整个 UI 焕然一新，原来已经升级到 v52 版本，整体 UI 借鉴了移动设备上的 <code>Material</code> 风格，界面更加简洁，科技感更强，整体配色也更高冷了。</p>
@@ -377,7 +377,7 @@
     
     <entry>
       <title><![CDATA[MATLAB plot 函数默认 color 调整]]></title>
-      <url>http://tommyjiang.github.io/2016-07-19-MATLAB-plot-color/</url>
+      <url>http://tommyjiang.github.io/2016/2016-07-19-MATLAB-plot-color/</url>
       <content type="html"><![CDATA[<p>从 MATLAB 2014b 开始，其 <code>plot</code> 函数的默认颜色有所调整。</p>
 <a id="more"></a>
 <p>新的默认配色名称为 <code>parula</code>，意为北美生活的一种森莺。</p>
@@ -392,7 +392,7 @@
     
     <entry>
       <title><![CDATA[《大鱼海棠》经典台词]]></title>
-      <url>http://tommyjiang.github.io/2016-07-10-bigfish-begonia-md/</url>
+      <url>http://tommyjiang.github.io/2016/2016-07-10-bigfish-begonia-md/</url>
       <content type="html"><![CDATA[<p>昨天晚上，顶着酷热的空气和萌哥老妹到圣熙八号观赏了这部动画，作为校友也算对退学追梦的清华师兄的支持吧。</p>
 <a id="more"></a>
 <p>由于去之前已经听说网上一片骂声，所以期待挺低的，结果看完感觉还不错。画面和音乐都<br>很有感觉，尤其喜欢里面的台词，好好分享下。</p>
@@ -422,7 +422,7 @@
     
     <entry>
       <title><![CDATA[电力系统研究的个人体会]]></title>
-      <url>http://tommyjiang.github.io/2016-03-17-Power-system-research/</url>
+      <url>http://tommyjiang.github.io/2016/2016-03-17-Power-system-research/</url>
       <content type="html"><![CDATA[<p>从博士入学算起，从事电力系统的研究工作已经将近 6 年了，结合个人的实际经验谈谈对电力系统研究的体会。</p>
 <a id="more"></a>
 <h1 id="电力系统研究的特点"><a href="#电力系统研究的特点" class="headerlink" title="电力系统研究的特点"></a>电力系统研究的特点</h1><p>我个人认为，电力系统研究的特点包括以下几点：</p>
@@ -451,7 +451,7 @@
     
     <entry>
       <title><![CDATA[博客迁移至 Hexo]]></title>
-      <url>http://tommyjiang.github.io/2016-03-16-migrate-to-hexo/</url>
+      <url>http://tommyjiang.github.io/2016/2016-03-16-migrate-to-hexo/</url>
       <content type="html"><![CDATA[<p>从2014年8月第一篇博文算起，已经写了一年半了。之前博客主要用的是 Jekyll + Markdown （感谢 codepiano 同学提供的主题）。即日起本博客迁移至 <code>Hexo</code>，之前的博文会挑一些重点的迁移过来。</p>
 <p>本博客使用的是<code>raytaylorlin</code>提供的 <a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism" target="_blank" rel="external">raytaylorism 主题</a>，在此表示感谢。</p>
 <p>2016-08-03 更新：本博客目前使用的是 <a href="https://github.com/wzpan/hexo-theme-freemind" target="_blank" rel="external">freemind 主题</a>，对作者表示感谢。</p>
