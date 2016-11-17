@@ -4,6 +4,73 @@
   
     
     <entry>
+      <title><![CDATA[北京十大适合一个人吃的餐厅]]></title>
+      <url>http://tommyjiang.github.io/2016-11-16-Beijing-single-res/</url>
+      <content type="html"><![CDATA[<p>一个人也要活得精彩：）</p>
+<a id="more"></a>
+
+    <div style="min-height: 500px; width: 100%;" id="map">
+    </div>
+
+    <script type="text/javascript">
+  
+        function map_init() {
+                    
+            var map = new BMap.Map("map");    // 创建Map实例
+            map.centerAndZoom(new BMap.Point(116.41,39.89), 13);  // 初始化地图,设置中心点坐标和地图级别
+            map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+            map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+            map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+                    
+            //向地图中添加缩放控件
+            var ctrlNav = new window.BMap.NavigationControl({
+                               anchor: BMAP_ANCHOR_TOP_LEFT,
+                               type: BMAP_NAVIGATION_CONTROL_LARGE
+                          });
+            map.addControl(ctrlNav);
+  
+            var points = [
+                [116.395857,39.901169], // 渔芙南
+                [116.649810,39.912096], // 三禾粉匠贵州米粉店 
+                [116.323938,39.989919],
+                [116.328896,39.988039],
+                [116.321135,39.987072],
+                [116.332453,39.989007],
+                [116.324045,39.987984],
+                [116.322285,39.988316],
+                [116.322608,39.986381]
+            ];
+            
+            var size1 = new BMap.Size(21, 50);
+            var size2 = new BMap.Size(21, 0);
+            var icons = [], markers = [];
+            
+            // 向地图添加标注
+            for( var i = 0;i < points.length; i++){
+                var point = new BMap.Point(points[i][0], points[i][1]);
+                var icon_pre = 'http://o852ayzmr.bkt.clouddn.com/';
+                var icon_post = '.png';
+                var icon_string = icon_pre + (i+1).toString()  + icon_post;
+                icons[i] = new BMap.Icon(icon_string, size1, {anchor: size2})
+                // icons[i] = new BMap.Icon('http://o852ayzmr.bkt.clouddn.com/1.png', size1, {anchor: size2})
+                markers[i] = new BMap.Marker(point, {icon: icons[i]});
+                map.addOverlay(markers[i]);
+            };
+        }
+
+        //异步调用百度js
+        function map_load() {
+            var load = document.createElement("script");
+            load.src = "http://api.map.baidu.com/api?v=1.4&callback=map_init";
+            document.body.appendChild(load);
+        }  
+        window.onload = map_load;
+    </script>
+
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Hexo 博文中加入百度地图]]></title>
       <url>http://tommyjiang.github.io/2016-11-16-Hexo-baidu-map/</url>
       <content type="html"><![CDATA[<p>利用百度地图 API 实现在 Hexo 的博文中加入地图。</p>
@@ -72,73 +139,6 @@
             load.src = "http://api.map.baidu.com/api?v=1.4&callback=map_init";
             document.body.appendChild(load);
         }
-        window.onload = map_load;
-    </script>
-
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[北京十大适合一个人吃的餐厅]]></title>
-      <url>http://tommyjiang.github.io/2016-11-16-Beijing-single-res/</url>
-      <content type="html"><![CDATA[<p>一个人也要活得精彩：）</p>
-<a id="more"></a>
-
-    <div style="min-height: 500px; width: 100%;" id="map">
-    </div>
-
-    <script type="text/javascript">
-  
-        function map_init() {
-                    
-            var map = new BMap.Map("map");    // 创建Map实例
-            map.centerAndZoom(new BMap.Point(116.41,39.89), 13);  // 初始化地图,设置中心点坐标和地图级别
-            map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
-            map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
-            map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
-                    
-            //向地图中添加缩放控件
-            var ctrlNav = new window.BMap.NavigationControl({
-                               anchor: BMAP_ANCHOR_TOP_LEFT,
-                               type: BMAP_NAVIGATION_CONTROL_LARGE
-                          });
-            map.addControl(ctrlNav);
-  
-            var points = [
-                [116.395857,39.901169], // 渔芙南
-                [116.649810,39.912096], // 三禾粉匠贵州米粉店 
-                [116.323938,39.989919],
-                [116.328896,39.988039],
-                [116.321135,39.987072],
-                [116.332453,39.989007],
-                [116.324045,39.987984],
-                [116.322285,39.988316],
-                [116.322608,39.986381]
-            ];
-            
-            var size1 = new BMap.Size(21, 50);
-            var size2 = new BMap.Size(21, 0);
-            var icons = [], markers = [];
-            
-            // 向地图添加标注
-            for( var i = 0;i < points.length; i++){
-                var point = new BMap.Point(points[i][0], points[i][1]);
-                var icon_pre = 'http://o852ayzmr.bkt.clouddn.com/';
-                var icon_post = '.png';
-                var icon_string = icon_pre + (i+1).toString()  + icon_post;
-                icons[i] = new BMap.Icon(icon_string, size1, {anchor: size2})
-                // icons[i] = new BMap.Icon('http://o852ayzmr.bkt.clouddn.com/1.png', size1, {anchor: size2})
-                markers[i] = new BMap.Marker(point, {icon: icons[i]});
-                map.addOverlay(markers[i]);
-            };
-        }
-
-        //异步调用百度js
-        function map_load() {
-            var load = document.createElement("script");
-            load.src = "http://api.map.baidu.com/api?v=1.4&callback=map_init";
-            document.body.appendChild(load);
-        }  
         window.onload = map_load;
     </script>
 
@@ -460,7 +460,7 @@
     
     <entry>
       <title><![CDATA[2015行程总结及个人飞行统计]]></title>
-      <url>http://tommyjiang.github.io/2015-12-28-Trip-2015/</url>
+      <url>http://tommyjiang.github.io/2015/2015-12-28-Trip-2015/</url>
       <content type="html"><![CDATA[<p>2015年转眼要结束了，在新年即将到来之际整理全年的飞机和火车行程，以及从2012年4月9日第一次坐飞机开始的所有飞行行程。</p>
 <a id="more"></a>
 <h1 id="2015行程总结"><a href="#2015行程总结" class="headerlink" title="2015行程总结"></a>2015行程总结</h1><p>2015年各月飞机里程和火车里程如下：</p>
@@ -1165,7 +1165,7 @@
     
     <entry>
       <title><![CDATA[京、津、唐高铁乘车方案和乘车小技巧]]></title>
-      <url>http://tommyjiang.github.io/2015-10-01-jing-jin-tang-high-speed-railway/</url>
+      <url>http://tommyjiang.github.io/2015/2015-10-01-jing-jin-tang-high-speed-railway/</url>
       <content type="html"><![CDATA[<p>2015年十一回家，由于买不到直达唐山/唐山北的票，选择了经天津中转的方案，将三地铁路资料汇总如下。</p>
 <a id="more"></a>
 <h1 id="京唐高铁"><a href="#京唐高铁" class="headerlink" title="京唐高铁"></a>京唐高铁</h1><p>2015年8月25日，铁道第三勘察设计院公布了<a href="http://www.tsdig.com/infom.aspx?Id=684&amp;FileName=info&amp;Language=1" target="_blank" rel="external">京唐高铁环评二次公告</a>，京唐高铁的走向也正式确定，起点为位于北京的新北京东站，终点为唐山站。</p>
@@ -1204,7 +1204,7 @@
     
     <entry>
       <title><![CDATA[MATLAB 中利用 m 文件修改 Simulink 模型参数的方法]]></title>
-      <url>http://tommyjiang.github.io/2015-08-10-Simulink-m-file/</url>
+      <url>http://tommyjiang.github.io/2015/2015-08-10-Simulink-m-file/</url>
       <content type="html"><![CDATA[<p>介绍在 MATLAB 中利用 m 文件修改 Simulink 中模型参数的方法。</p>
 <a id="more"></a>
 <h1 id="电力系统仿真工具"><a href="#电力系统仿真工具" class="headerlink" title="电力系统仿真工具"></a>电力系统仿真工具</h1><p>我个人博士论文的隐名评审意见中有如下评语：</p>
@@ -1229,7 +1229,7 @@
     
     <entry>
       <title><![CDATA[2015年毕业晚会观后感]]></title>
-      <url>http://tommyjiang.github.io/2015-07-09-graduation-party/</url>
+      <url>http://tommyjiang.github.io/2015/2015-07-09-graduation-party/</url>
       <content type="html"><![CDATA[<p>犹记得5年前本科毕业时的毕业晚会，中途就离场了。5年后，即将博士毕业了，再来看毕业晚会，让人唏嘘不已。</p>
 <a id="more"></a>
 <h3 id="节目单"><a href="#节目单" class="headerlink" title="节目单"></a>节目单</h3><p>整场晚会的节目单如下：</p>
