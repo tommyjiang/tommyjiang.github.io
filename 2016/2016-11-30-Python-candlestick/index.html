@@ -113,7 +113,7 @@
 
 	  <p>介绍利用 Python 的 <code>plotly</code> 包作带交易量的 K 线图。</p>
 <a id="more"></a>
-<p>Python 中的 <code>plotly</code> 提供了 K 线图的函数 <code>create_candlestick</code>，具体例子可以参考 <code>plotly</code> 官网的<a href="https://plot.ly/python/candlestick-charts/" target="_blank" rel="external">例子</a>，效果如下图：</p>
+<p>Python 中的 <code>plotly</code> 提供了 K 线图的函数 <code>create_candlestick</code>，具体可以参考 <code>plotly</code> 官网的<a href="https://plot.ly/python/candlestick-charts/" target="_blank" rel="external">例子</a>，效果如下图：</p>
 
 <script type="text/javascript">/**
 * plotly.js v1.16.2
@@ -180,9 +180,9 @@ e.exports=function(t,e,r,o){function a(t,e){g.push(t._hovertitle+": "+i.tickText
 <p>带交易量的 K 线图主要包括以下三步：</p>
 <p>1.画出不带交易量的 K 线图，可以参考 <code>plotly</code> 的例子。</p>
 <p>2.利用 <code>plotly</code> 的 <code>extend</code> 功能，在 K 线图中加入交易量，具体代码如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">add_bar = go.Bar(</div><div class="line">            x=df.index,</div><div class="line">            y=df.Volume,</div><div class="line">            name=<span class="string">'Volume'</span></div><div class="line">            )</div><div class="line"></div><div class="line">candle_fig[<span class="string">'data'</span>].extend([add_bar])</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">add_bar = go.Bar(</div><div class="line">x=df.index,</div><div class="line">y=df.Volume,</div><div class="line">name=<span class="string">'Volume'</span></div><div class="line">)</div><div class="line"></div><div class="line">candle_fig[<span class="string">'data'</span>].extend([add_bar])</div></pre></td></tr></table></figure>
 <p>3.利用 <code>plotly</code> 的 <code>subplot</code> 功能，将上图拆成两个图。具体代码如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">fig = tools.make_subplots(rows=<span class="number">3</span>, cols=<span class="number">1</span>)</div><div class="line"></div><div class="line">fig.append_trace(candle_fig[<span class="string">'data'</span>][<span class="number">0</span>], <span class="number">1</span>, <span class="number">1</span>)</div><div class="line">fig.append_trace(candle_fig[<span class="string">'data'</span>][<span class="number">1</span>], <span class="number">1</span>, <span class="number">1</span>)</div><div class="line">fig.append_trace(candle_fig[<span class="string">'data'</span>][<span class="number">2</span>], <span class="number">2</span>, <span class="number">1</span>)</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">fig = tools.make_subplots(rows=<span class="number">2</span>, cols=<span class="number">1</span>)</div><div class="line"></div><div class="line">fig.append_trace(candle_fig[<span class="string">'data'</span>][<span class="number">0</span>], <span class="number">1</span>, <span class="number">1</span>)</div><div class="line">fig.append_trace(candle_fig[<span class="string">'data'</span>][<span class="number">1</span>], <span class="number">1</span>, <span class="number">1</span>)</div><div class="line">fig.append_trace(candle_fig[<span class="string">'data'</span>][<span class="number">2</span>], <span class="number">2</span>, <span class="number">1</span>)</div></pre></td></tr></table></figure>
 <p>其中前两行对应 K 线图中上涨和下跌的股票信息，画到第一个图上；第三行即股票的交易量信息，画到第二个图上。效果如下：</p>
 
 <script type="text/javascript">/**
@@ -262,7 +262,7 @@ e.exports=function(t,e,r,o){function a(t,e){g.push(t._hovertitle+": "+i.tickText
         <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
 
 		
-		   <li class="next"><a href="/2016/2016-11-16-Hexo-baidu-map/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+		   <li class="next"><a href="/2016/2016-11-16-Beijing-single-res/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
         
 	
 </ul>
