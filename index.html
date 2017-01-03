@@ -1,475 +1,1322 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <meta charset="utf-8">
-  
-  <title>Tommy&#39;s Blog</title>
-  <meta name="author" content="Tommy Jiang">
-  
-  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    
+
+    <title></title>
+    <meta name="author" content="Tommy Jiang">
+    
+    
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
-  <meta property="og:site_name" content="Tommy&#39;s Blog"/>
+    
+    <meta property="og:site_name" content="Tommy&#39;s Blog"/>
 
-  
+    
     <meta property="og:image" content="undefined"/>
-  
+    
 
-  
-  
-    <link href="/favicon.png" rel="icon">
-  
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="alternate" href="/atom.xml" title="Tommy&#39;s Blog" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/lib/materialize.min.css">
+    <link rel="stylesheet" href="/css/lib/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="/css/themes/journal.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-
-  <script src="/js/jquery-2.0.3.min.js"></script>
-
-  <!-- analytics -->
-  
-
-
-
+    
+        <link rel="stylesheet" href="/css/lib/prettify-tomorrow-night-eighties.css" type="text/css">
+    
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 
- <body>  
-  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-	<span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-       <a class="navbar-brand" href="/">Tommy&#39;s Blog</a>
-      <div class="collapse navbar-collapse nav-menu">
-		<ul class="nav navbar-nav">
-		  
-		  <li>
-			<a href="/archives" title="All the articles.">
-			  <i class="fa fa-archive"></i>归档
-			</a>
-		  </li>
-		  
-		  <li>
-			<a href="/categories" title="All the categories.">
-			  <i class="fa fa-folder"></i>分类
-			</a>
-		  </li>
-		  
-		  <li>
-			<a href="/tags" title="All the tags.">
-			  <i class="fa fa-tags"></i>标签
-			</a>
-		  </li>
-		  
-		  <li>
-			<a href="/about" title="About me.">
-			  <i class="fa fa-user"></i>关于
-			</a>
-		  </li>
-		  
-		</ul>
-      </div>
-    </div> <!-- container -->
+
+<body>
+    <img src="/weixin_favicon.png" style="position: absolute; left: -9999px; opacity: 0; filter: alpha(opacity=0);">
+
+    <nav class="green">
+    <div class="nav-wrapper">
+        <a href="#" data-activates="main-menu" class="button-collapse">
+            <i class="fa fa-navicon"></i>
+        </a>
+        <div class="">
+            <a href="/" class="brand-logo hide-on-med-and-down">Tommy&#39;s Blog</a>
+            <ul class="right hide-on-med-and-down">
+                
+                    <li>
+                        <a class="menu-home " href="/" >
+                            <i class="fa fa-home "></i>
+                            
+                            首页
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-archive " href="/archives" >
+                            <i class="fa fa-archive "></i>
+                            
+                            归档
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                            <i class="fa fa-bookmark "></i>
+                            
+                            分类
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-about " href="/about" >
+                            <i class="fa fa-user "></i>
+                            
+                            关于
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-search modal-trigger " href="#search" >
+                            <i class="fa fa-search "></i>
+                            
+                            搜索
+                        </a>
+                    </li>
+                
+            </ul>
+            <div>
+    <ul class="side-nav green darken-1" id="main-menu">
+        
+        <li class="side-user">
+            <div class="row">
+                <div class="col s4 no-padding">
+                    <img class="avatar-image circle responsive-img" src="http://ww2.sinaimg.cn/small/74990035jw1f1rjkd681bj20rs0rsdhg.jpg" alt="User Avatar">
+                </div>
+                <div class="info col s8 valign-wrapper no-padding">
+                    <div class="valign">
+                        <p class="name">你的大名</p>
+                        <p class="desc">Web前端/iOS/技术宅</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        
+
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-home " href="/" >
+                    <i class="fa fa-home "></i>
+                    
+                    首页
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-archive " href="/archives" >
+                    <i class="fa fa-archive "></i>
+                    
+                    归档
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                    <i class="fa fa-bookmark "></i>
+                    
+                    分类
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-about " href="/about" >
+                    <i class="fa fa-user "></i>
+                    
+                    关于
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-search modal-trigger " href="#search" >
+                    <i class="fa fa-search "></i>
+                    
+                    搜索
+                </a>
+            </li>
+        
+    </ul>
+
+    <ul class="side-nav green darken-1" id="category-menu">
+    
+
+            
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/生活/">
+                    生活 <span class="right">13 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/技术/">
+                    技术 <span class="right">6 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/Geek/">
+                    Geek <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+    </ul>
+</div>
+
+        </div>
+    </div>
 </nav>
-<div class="clearfix"></div>
 
-  <div class="container">
-  	<div class="content">
-    	 <div class="page-header page-header-inverse ">
-  <h1 class="title title-inverse ">Tommy&#39;s Blog</h1>
+<div id="search" class="modal search-modal">
+    <div class="row">
+        <div class="input-field col s12">
+              <input id="search-input" type="text">
+              <label for="search-input">搜索</label>
+        </div>
+
+    </div>
+    <div id="search-result" class="search-result col s12">
+
+    </div>
 </div>
 
-<div class="row page">
 
-	
-	<div class="col-md-9">
-	
-
-		<div class="slogan">
-      <i class="fa fa-heart"></i>
-      电气 Geek
-</div>    
-		<div id="top_search"></div>
-		<div class="mypage">
-		
-		<!-- title and entry -->
-        <!-- render top articles firstly -->
-        
-		
-            
-		
-            
-		
-            
-		
-            
-		
-            
-		
-            
-		
-            
-		
-            
-		
-            
-		
-            
-		
-            
-		
-            
-		
-            
-		
-            
-		
-            
-		
-            
-		
-            
-		
-            
-		
-            
-		
-            
-		
-        
-        <!-- render other articles -->
-        
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2016-12-10 </div>
-			<div class="article-title"><a href="/2016/2016-12-10-Shou-pa-kou-crossing/" >手帕口道口通过车次信息</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>毕业工作后从五道口转到了手帕口道口，每天到道口听听车机联控还是很开心的，记录下具体的车次信息。</p>
-		<!-- only display read_more button if there's more to display -->
-		<a type="button" href="/2016/2016-12-10-Shou-pa-kou-crossing/#more" class="btn btn-default more">Read More</a>
-	
-	</div>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2016-11-30 </div>
-			<div class="article-title"><a href="/2016/2016-11-30-Python-candlestick/" >Python plotly 作带交易量的 K 线图</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>介绍利用 Python 的 <code>plotly</code> 包作带交易量的 K 线图。</p>
-		<!-- only display read_more button if there's more to display -->
-		<a type="button" href="/2016/2016-11-30-Python-candlestick/#more" class="btn btn-default more">Read More</a>
-	
-	</div>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2016-11-16 </div>
-			<div class="article-title"><a href="/2016/2016-11-16-Hexo-baidu-map/" >Hexo 博文中加入百度地图</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>利用百度地图 API 实现在 Hexo 的博文中加入地图。</p>
-		<!-- only display read_more button if there's more to display -->
-		<a type="button" href="/2016/2016-11-16-Hexo-baidu-map/#more" class="btn btn-default more">Read More</a>
-	
-	</div>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2016-11-16 </div>
-			<div class="article-title"><a href="/2016/2016-11-16-Beijing-single-res/" >北京十大适合一个人吃的餐厅</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>记录下有才姐推荐的微博上的<a href="http://weibo.com/2643091105/EhDNHuBvH?from=page_1005052643091105_profile&amp;wvr=6&amp;mod=weibotime&amp;type=comment#_rnd1479530057542">北京十大适合一个人吃的餐厅</a>，把生活丰富起来。</p>
-		<!-- only display read_more button if there's more to display -->
-		<a type="button" href="/2016/2016-11-16-Beijing-single-res/#more" class="btn btn-default more">Read More</a>
-	
-	</div>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2016-11-01 </div>
-			<div class="article-title"><a href="/2016/2016-11-01-Tsinghua-yuan-station/" >纪念清华园站 &amp; 我的铁路情缘</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>百年老站清华园站昨天悄然谢幕，谨以此文聊表纪念，顺便聊聊我和铁路的不解之缘。</p>
-		<!-- only display read_more button if there's more to display -->
-		<a type="button" href="/2016/2016-11-01-Tsinghua-yuan-station/#more" class="btn btn-default more">Read More</a>
-	
-	</div>
-</div>
-
-           
-		
-
-		</div>
-
-		<!-- pagination -->
-		<div>
-  		<center>
-		<div class="pagination">
-<ul class="pagination">
-	 
-		
-          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
+    <main>
         
 
-        <li><a href="/"><i class="fa fa-home"></i>Home</a></li>
 
-		
-		   <li class="next"> <a href="/page/2/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a> </li>          
+
+<div id="article-list" class="container main-container">
+    
+        <article class="simple-article">
+    <div class="card">
+        <div class="card-content">
+            <div class="article-title">
+                
+    
+        <h1 class="green-link-context"><a href="/2017/2017-01-03-Song-lerics/">歌词摘录</a></h1>
+    
+
+
+            </div>
+
+            <time class="red-link-context" datetime="2017-01-03T11:00:00.000Z"><a href="/2017/2017-01-03-Song-lerics/">2017-01-03</a></time>
+
+            
+    <div class="tags-row">
         
-	
-</ul>
+            <a href="/tags/音乐/" class="chip red lighten-1">音乐</a>
+        
+    </div>
+
+
+
+            
+                <div class="entry red-link-context">
+                    <p>人若矫情起来，听什么歌都像唱自己。</p>
+                </div>
+            
+        </div>
+
+        
+        <div class="card-action red-link-context">
+            <a href="/2017/2017-01-03-Song-lerics/">阅读全文</a>
+        </ div>
+        
+    </div>
+</article>
+
+    
+        <article class="simple-article">
+    <div class="card">
+        <div class="card-content">
+            <div class="article-title">
+                
+    
+        <h1 class="green-link-context"><a href="/2016/2016-12-10-Shou-pa-kou-crossing/">手帕口道口通过车次信息</a></h1>
+    
+
+
+            </div>
+
+            <time class="red-link-context" datetime="2016-12-10T11:00:00.000Z"><a href="/2016/2016-12-10-Shou-pa-kou-crossing/">2016-12-10</a></time>
+
+            
+    <div class="tags-row">
+        
+            <a href="/tags/铁路/" class="chip red lighten-1">铁路</a>
+        
+    </div>
+
+
+
+            
+                <div class="entry red-link-context">
+                    <p>毕业工作后从五道口转到了手帕口道口，每天到道口听听车机联控还是很开心的，记录下具体的车次信息。</p>
+                </div>
+            
+        </div>
+
+        
+        <div class="card-action red-link-context">
+            <a href="/2016/2016-12-10-Shou-pa-kou-crossing/">阅读全文</a>
+        </ div>
+        
+    </div>
+</article>
+
+    
+        <article class="simple-article">
+    <div class="card">
+        <div class="card-content">
+            <div class="article-title">
+                
+    
+        <h1 class="green-link-context"><a href="/2016/2016-11-16-Hexo-baidu-map/">Hexo 博文中加入百度地图</a></h1>
+    
+
+
+            </div>
+
+            <time class="red-link-context" datetime="2016-11-16T11:00:00.000Z"><a href="/2016/2016-11-16-Hexo-baidu-map/">2016-11-16</a></time>
+
+            
+    <div class="tags-row">
+        
+            <a href="/tags/Hexo/" class="chip red lighten-1">Hexo</a>
+        
+    </div>
+
+
+
+            
+                <div class="entry red-link-context">
+                    <p>利用百度地图 API 实现在 Hexo 的博文中加入地图。</p>
+                </div>
+            
+        </div>
+
+        
+        <div class="card-action red-link-context">
+            <a href="/2016/2016-11-16-Hexo-baidu-map/">阅读全文</a>
+        </ div>
+        
+    </div>
+</article>
+
+    
+        <article class="simple-article">
+    <div class="card">
+        <div class="card-content">
+            <div class="article-title">
+                
+    
+        <h1 class="green-link-context"><a href="/2016/2016-11-16-Beijing-single-res/">北京十大适合一个人吃的餐厅</a></h1>
+    
+
+
+            </div>
+
+            <time class="red-link-context" datetime="2016-11-16T11:00:00.000Z"><a href="/2016/2016-11-16-Beijing-single-res/">2016-11-16</a></time>
+
+            
+    <div class="tags-row">
+        
+            <a href="/tags/美食/" class="chip red lighten-1">美食</a>
+        
+    </div>
+
+
+
+            
+                <div class="entry red-link-context">
+                    <p>记录下有才姐推荐的微博上的<a href="http://weibo.com/2643091105/EhDNHuBvH?from=page_1005052643091105_profile&amp;wvr=6&amp;mod=weibotime&amp;type=comment#_rnd1479530057542">北京十大适合一个人吃的餐厅</a>，把生活丰富起来。</p>
+                </div>
+            
+        </div>
+
+        
+        <div class="card-action red-link-context">
+            <a href="/2016/2016-11-16-Beijing-single-res/">阅读全文</a>
+        </ div>
+        
+    </div>
+</article>
+
+    
+        <article class="simple-article">
+    <div class="card">
+        <div class="card-content">
+            <div class="article-title">
+                
+    
+        <h1 class="green-link-context"><a href="/2016/2016-11-01-Tsinghua-yuan-station/">纪念清华园站 &amp; 我的铁路情缘</a></h1>
+    
+
+
+            </div>
+
+            <time class="red-link-context" datetime="2016-11-01T11:00:00.000Z"><a href="/2016/2016-11-01-Tsinghua-yuan-station/">2016-11-01</a></time>
+
+            
+    <div class="tags-row">
+        
+            <a href="/tags/铁路/" class="chip red lighten-1">铁路</a>
+        
+    </div>
+
+
+
+            
+                <div class="entry red-link-context">
+                    <p>百年老站清华园站昨天悄然谢幕，谨以此文聊表纪念，顺便聊聊我和铁路的不解之缘。</p>
+                </div>
+            
+        </div>
+
+        
+        <div class="card-action red-link-context">
+            <a href="/2016/2016-11-01-Tsinghua-yuan-station/">阅读全文</a>
+        </ div>
+        
+    </div>
+</article>
+
+    
+        <article class="simple-article">
+    <div class="card">
+        <div class="card-content">
+            <div class="article-title">
+                
+    
+        <h1 class="green-link-context"><a href="/2016/2016-10-24-Forever-love/">愿得一心人，白首不相离</a></h1>
+    
+
+
+            </div>
+
+            <time class="red-link-context" datetime="2016-10-24T11:00:00.000Z"><a href="/2016/2016-10-24-Forever-love/">2016-10-24</a></time>
+
+            
+    <div class="tags-row">
+        
+            <a href="/tags/感情/" class="chip red lighten-1">感情</a>
+        
+    </div>
+
+
+
+            
+                <div class="entry red-link-context">
+                    <p>最近遇到点小挫折，过程中也成长了不少。</p>
+                </div>
+            
+        </div>
+
+        
+        <div class="card-action red-link-context">
+            <a href="/2016/2016-10-24-Forever-love/">阅读全文</a>
+        </ div>
+        
+    </div>
+</article>
+
+    
+        <article class="simple-article">
+    <div class="card">
+        <div class="card-content">
+            <div class="article-title">
+                
+    
+        <h1 class="green-link-context"><a href="/2016/2016-09-10-Beijing-subway-color/">北京地铁各线路颜色 HEX 及 RGB 代码</a></h1>
+    
+
+
+            </div>
+
+            <time class="red-link-context" datetime="2016-09-10T14:00:00.000Z"><a href="/2016/2016-09-10-Beijing-subway-color/">2016-09-10</a></time>
+
+            
+    <div class="tags-row">
+        
+            <a href="/tags/地铁/" class="chip red lighten-1">地铁</a>
+        
+    </div>
+
+
+
+            
+                <div class="entry red-link-context">
+                    <p>大概翻了翻，网上好像还没有北京地铁各线路颜色的 HEX 及 RGB 代码，自己整理一份。</p>
+                </div>
+            
+        </div>
+
+        
+        <div class="card-action red-link-context">
+            <a href="/2016/2016-09-10-Beijing-subway-color/">阅读全文</a>
+        </ div>
+        
+    </div>
+</article>
+
+    
+        <article class="simple-article">
+    <div class="card">
+        <div class="card-content">
+            <div class="article-title">
+                
+    
+        <h1 class="green-link-context"><a href="/2016/2016-09-06-Org-mode-org-encrypt-gnupg-Mac/">Mac 下 Emacs Org mode 加密以及 gnupg 的安装</a></h1>
+    
+
+
+            </div>
+
+            <time class="red-link-context" datetime="2016-09-06T14:00:00.000Z"><a href="/2016/2016-09-06-Org-mode-org-encrypt-gnupg-Mac/">2016-09-06</a></time>
+
+            
+    <div class="tags-row">
+        
+            <a href="/tags/Mac/" class="chip red lighten-1">Mac</a>
+        
+            <a href="/tags/Emacs/" class="chip red lighten-1">Emacs</a>
+        
+            <a href="/tags/Org-mode/" class="chip red lighten-1">Org mode</a>
+        
+    </div>
+
+
+
+            
+                <div class="entry red-link-context">
+                    <p>Mac 下 Org mode 加密之前用得好好的，最近发现执行<code>org-encrypt-entry</code>时有问题，原来是<code>gnupg</code>的原因。</p>
+                </div>
+            
+        </div>
+
+        
+        <div class="card-action red-link-context">
+            <a href="/2016/2016-09-06-Org-mode-org-encrypt-gnupg-Mac/">阅读全文</a>
+        </ div>
+        
+    </div>
+</article>
+
+    
+        <article class="simple-article">
+    <div class="card">
+        <div class="card-content">
+            <div class="article-title">
+                
+    
+        <h1 class="green-link-context"><a href="/2016/2016-08-28-Apple-xidan-joy-city-retina-display/">西单大悦城更换 RMBP 屏幕攻略</a></h1>
+    
+
+
+            </div>
+
+            <time class="red-link-context" datetime="2016-08-28T11:00:00.000Z"><a href="/2016/2016-08-28-Apple-xidan-joy-city-retina-display/">2016-08-28</a></time>
+
+            
+    <div class="tags-row">
+        
+            <a href="/tags/Mac/" class="chip red lighten-1">Mac</a>
+        
+    </div>
+
+
+
+            
+                <div class="entry red-link-context">
+                    <p>RMBP 买了一年半，屏幕涂层脱落得七零八落……到西单大悦城 Apple Store 免费换了个新的，非常棒。</p>
+                </div>
+            
+        </div>
+
+        
+        <div class="card-action red-link-context">
+            <a href="/2016/2016-08-28-Apple-xidan-joy-city-retina-display/">阅读全文</a>
+        </ div>
+        
+    </div>
+</article>
+
+    
+        <article class="simple-article">
+    <div class="card">
+        <div class="card-content">
+            <div class="article-title">
+                
+    
+        <h1 class="green-link-context"><a href="/2016/2016-08-26-ICBC-Asia/">工银亚洲香港账户开户攻略</a></h1>
+    
+
+
+            </div>
+
+            <time class="red-link-context" datetime="2016-08-26T14:00:00.000Z"><a href="/2016/2016-08-26-ICBC-Asia/">2016-08-26</a></time>
+
+            
+    <div class="tags-row">
+        
+            <a href="/tags/香港/" class="chip red lighten-1">香港</a>
+        
+    </div>
+
+
+
+            
+                <div class="entry red-link-context">
+                    <p>开了个工银亚洲的香港账户，方便进行在 HK 的交易。</p>
+                </div>
+            
+        </div>
+
+        
+        <div class="card-action red-link-context">
+            <a href="/2016/2016-08-26-ICBC-Asia/">阅读全文</a>
+        </ div>
+        
+    </div>
+</article>
+
+    
+        <article class="simple-article">
+    <div class="card">
+        <div class="card-content">
+            <div class="article-title">
+                
+    
+        <h1 class="green-link-context"><a href="/2016/2016-08-25-anaconda-tsinghua-mirror/">Anaconda 使用清华镜像源</a></h1>
+    
+
+
+            </div>
+
+            <time class="red-link-context" datetime="2016-08-25T02:00:00.000Z"><a href="/2016/2016-08-25-anaconda-tsinghua-mirror/">2016-08-25</a></time>
+
+            
+    <div class="tags-row">
+        
+            <a href="/tags/Python/" class="chip red lighten-1">Python</a>
+        
+    </div>
+
+
+
+            
+                <div class="entry red-link-context">
+                    <p>Mac/Win 下将 <code>Anaconda</code> 镜像更改为清华镜像源的方法。</p>
+                </div>
+            
+        </div>
+
+        
+        <div class="card-action red-link-context">
+            <a href="/2016/2016-08-25-anaconda-tsinghua-mirror/">阅读全文</a>
+        </ div>
+        
+    </div>
+</article>
+
+    
+        <article class="simple-article">
+    <div class="card">
+        <div class="card-content">
+            <div class="article-title">
+                
+    
+        <h1 class="green-link-context"><a href="/2016/2016-08-09-Google-qi-xi/">七夕·Google</a></h1>
+    
+
+
+            </div>
+
+            <time class="red-link-context" datetime="2016-08-09T14:00:00.000Z"><a href="/2016/2016-08-09-Google-qi-xi/">2016-08-09</a></time>
+
+            
+    <div class="tags-row">
+        
+            <a href="/tags/感情/" class="chip red lighten-1">感情</a>
+        
+            <a href="/tags/Google/" class="chip red lighten-1">Google</a>
+        
+    </div>
+
+
+
+            
+                <div class="entry red-link-context">
+                    <p>今天是中国传统佳节七夕，用今天 Google 主页的七夕图片作为配图吧。</p>
+                </div>
+            
+        </div>
+
+        
+        <div class="card-action red-link-context">
+            <a href="/2016/2016-08-09-Google-qi-xi/">阅读全文</a>
+        </ div>
+        
+    </div>
+</article>
+
+    
+        <article class="simple-article">
+    <div class="card">
+        <div class="card-content">
+            <div class="article-title">
+                
+    
+        <h1 class="green-link-context"><a href="/2016/2016-07-19-MATLAB-plot-color/">MATLAB plot 函数默认 color 调整</a></h1>
+    
+
+
+            </div>
+
+            <time class="red-link-context" datetime="2016-07-19T02:00:00.000Z"><a href="/2016/2016-07-19-MATLAB-plot-color/">2016-07-19</a></time>
+
+            
+    <div class="tags-row">
+        
+            <a href="/tags/MATLAB/" class="chip red lighten-1">MATLAB</a>
+        
+    </div>
+
+
+
+            
+                <div class="entry red-link-context">
+                    <p>从 MATLAB 2014b 开始，其 <code>plot</code> 函数的默认颜色有所调整。</p>
+                </div>
+            
+        </div>
+
+        
+        <div class="card-action red-link-context">
+            <a href="/2016/2016-07-19-MATLAB-plot-color/">阅读全文</a>
+        </ div>
+        
+    </div>
+</article>
+
+    
+        <article class="simple-article">
+    <div class="card">
+        <div class="card-content">
+            <div class="article-title">
+                
+    
+        <h1 class="green-link-context"><a href="/2016/2016-07-10-bigfish-begonia-md/">《大鱼海棠》经典台词</a></h1>
+    
+
+
+            </div>
+
+            <time class="red-link-context" datetime="2016-07-10T09:39:38.000Z"><a href="/2016/2016-07-10-bigfish-begonia-md/">2016-07-10</a></time>
+
+            
+    <div class="tags-row">
+        
+            <a href="/tags/博士/" class="chip red lighten-1">博士</a>
+        
+            <a href="/tags/感情/" class="chip red lighten-1">感情</a>
+        
+    </div>
+
+
+
+            
+                <div class="entry red-link-context">
+                    <p>昨天晚上，顶着酷热的空气和萌哥老妹到圣熙八号观赏了这部动画，作为校友也算对退学追梦的清华师兄的支持吧。</p>
+                </div>
+            
+        </div>
+
+        
+        <div class="card-action red-link-context">
+            <a href="/2016/2016-07-10-bigfish-begonia-md/">阅读全文</a>
+        </ div>
+        
+    </div>
+</article>
+
+    
+        <article class="simple-article">
+    <div class="card">
+        <div class="card-content">
+            <div class="article-title">
+                
+    
+        <h1 class="green-link-context"><a href="/2016/2016-03-17-Power-system-research/">电力系统研究的个人体会</a></h1>
+    
+
+
+            </div>
+
+            <time class="red-link-context" datetime="2016-03-16T16:19:57.000Z"><a href="/2016/2016-03-17-Power-system-research/">2016-03-17</a></time>
+
+            
+    <div class="tags-row">
+        
+            <a href="/tags/电力系统/" class="chip red lighten-1">电力系统</a>
+        
+            <a href="/tags/科研/" class="chip red lighten-1">科研</a>
+        
+            <a href="/tags/国家电网/" class="chip red lighten-1">国家电网</a>
+        
+            <a href="/tags/博士/" class="chip red lighten-1">博士</a>
+        
+    </div>
+
+
+
+            
+                <div class="entry red-link-context">
+                    <p>从博士入学算起，从事电力系统的研究工作已经将近 6 年了，结合个人的实际经验谈谈对电力系统研究的体会。</p>
+                </div>
+            
+        </div>
+
+        
+        <div class="card-action red-link-context">
+            <a href="/2016/2016-03-17-Power-system-research/">阅读全文</a>
+        </ div>
+        
+    </div>
+</article>
+
+    
+        <article class="simple-article">
+    <div class="card">
+        <div class="card-content">
+            <div class="article-title">
+                
+    
+        <h1 class="green-link-context"><a href="/2016/2016-03-16-migrate-to-hexo/">博客迁移至 Hexo</a></h1>
+    
+
+
+            </div>
+
+            <time class="red-link-context" datetime="2016-03-16T12:21:46.000Z"><a href="/2016/2016-03-16-migrate-to-hexo/">2016-03-16</a></time>
+
+            
+    <div class="tags-row">
+        
+            <a href="/tags/Hexo/" class="chip red lighten-1">Hexo</a>
+        
+            <a href="/tags/博客/" class="chip red lighten-1">博客</a>
+        
+    </div>
+
+
+
+            
+        </div>
+
+        
+    </div>
+</article>
+
+    
+        <article class="simple-article">
+    <div class="card">
+        <div class="card-content">
+            <div class="article-title">
+                
+    
+        <h1 class="green-link-context"><a href="/2015/2015-12-28-Trip-2015/">2015行程总结及个人飞行统计</a></h1>
+    
+
+
+            </div>
+
+            <time class="red-link-context" datetime="2015-12-28T02:00:00.000Z"><a href="/2015/2015-12-28-Trip-2015/">2015-12-28</a></time>
+
+            
+    <div class="tags-row">
+        
+            <a href="/tags/Echarts/" class="chip red lighten-1">Echarts</a>
+        
+            <a href="/tags/旅程/" class="chip red lighten-1">旅程</a>
+        
+    </div>
+
+
+
+            
+                <div class="entry red-link-context">
+                    <p>2015年转眼要结束了，在新年即将到来之际整理全年的飞机和火车行程，以及从2012年4月9日第一次坐飞机开始的所有飞行行程。</p>
+                </div>
+            
+        </div>
+
+        
+        <div class="card-action red-link-context">
+            <a href="/2015/2015-12-28-Trip-2015/">阅读全文</a>
+        </ div>
+        
+    </div>
+</article>
+
+    
+        <article class="simple-article">
+    <div class="card">
+        <div class="card-content">
+            <div class="article-title">
+                
+    
+        <h1 class="green-link-context"><a href="/2016/2016-12-31-Trip-2016/">2015行程总结及个人飞行统计</a></h1>
+    
+
+
+            </div>
+
+            <time class="red-link-context" datetime="2015-12-28T02:00:00.000Z"><a href="/2016/2016-12-31-Trip-2016/">2015-12-28</a></time>
+
+            
+    <div class="tags-row">
+        
+            <a href="/tags/Echarts/" class="chip red lighten-1">Echarts</a>
+        
+            <a href="/tags/旅程/" class="chip red lighten-1">旅程</a>
+        
+    </div>
+
+
+
+            
+                <div class="entry red-link-context">
+                    <p>2015年转眼要结束了，在新年即将到来之际整理全年的飞机和火车行程，以及从2012年4月9日第一次坐飞机开始的所有飞行行程。</p>
+                </div>
+            
+        </div>
+
+        
+        <div class="card-action red-link-context">
+            <a href="/2016/2016-12-31-Trip-2016/">阅读全文</a>
+        </ div>
+        
+    </div>
+</article>
+
+    
+        <article class="simple-article">
+    <div class="card">
+        <div class="card-content">
+            <div class="article-title">
+                
+    
+        <h1 class="green-link-context"><a href="/2015/2015-10-01-jing-jin-tang-high-speed-railway/">京、津、唐高铁乘车方案和乘车小技巧</a></h1>
+    
+
+
+            </div>
+
+            <time class="red-link-context" datetime="2015-10-01T02:00:00.000Z"><a href="/2015/2015-10-01-jing-jin-tang-high-speed-railway/">2015-10-01</a></time>
+
+            
+    <div class="tags-row">
+        
+            <a href="/tags/铁路/" class="chip red lighten-1">铁路</a>
+        
+    </div>
+
+
+
+            
+                <div class="entry red-link-context">
+                    <p>2015年十一回家，由于买不到直达唐山/唐山北的票，选择了经天津中转的方案，将三地铁路资料汇总如下。</p>
+                </div>
+            
+        </div>
+
+        
+        <div class="card-action red-link-context">
+            <a href="/2015/2015-10-01-jing-jin-tang-high-speed-railway/">阅读全文</a>
+        </ div>
+        
+    </div>
+</article>
+
+    
+        <article class="simple-article">
+    <div class="card">
+        <div class="card-content">
+            <div class="article-title">
+                
+    
+        <h1 class="green-link-context"><a href="/2015/2015-08-10-Simulink-m-file/">MATLAB 中利用 m 文件修改 Simulink 模型参数的方法</a></h1>
+    
+
+
+            </div>
+
+            <time class="red-link-context" datetime="2015-08-10T11:00:00.000Z"><a href="/2015/2015-08-10-Simulink-m-file/">2015-08-10</a></time>
+
+            
+    <div class="tags-row">
+        
+            <a href="/tags/电力系统/" class="chip red lighten-1">电力系统</a>
+        
+            <a href="/tags/MATLAB/" class="chip red lighten-1">MATLAB</a>
+        
+    </div>
+
+
+
+            
+                <div class="entry red-link-context">
+                    <p>介绍在 MATLAB 中利用 m 文件修改 Simulink 中模型参数的方法。</p>
+                </div>
+            
+        </div>
+
+        
+        <div class="card-action red-link-context">
+            <a href="/2015/2015-08-10-Simulink-m-file/">阅读全文</a>
+        </ div>
+        
+    </div>
+</article>
+
+    
+        <article class="simple-article">
+    <div class="card">
+        <div class="card-content">
+            <div class="article-title">
+                
+    
+        <h1 class="green-link-context"><a href="/2015/2015-07-09-graduation-party/">2015年毕业晚会观后感</a></h1>
+    
+
+
+            </div>
+
+            <time class="red-link-context" datetime="2015-07-09T14:00:00.000Z"><a href="/2015/2015-07-09-graduation-party/">2015-07-09</a></time>
+
+            
+    <div class="tags-row">
+        
+            <a href="/tags/清华/" class="chip red lighten-1">清华</a>
+        
+    </div>
+
+
+
+            
+                <div class="entry red-link-context">
+                    <p>犹记得5年前本科毕业时的毕业晚会，中途就离场了。5年后，即将博士毕业了，再来看毕业晚会，让人唏嘘不已。</p>
+                </div>
+            
+        </div>
+
+        
+        <div class="card-action red-link-context">
+            <a href="/2015/2015-07-09-graduation-party/">阅读全文</a>
+        </ div>
+        
+    </div>
+</article>
+
+    
+
+    <ul class="pagination center-align">
+    <li class="disabled">
+        <a href="/"><i class="fa fa-angle-left"></i></a>
+    </li>
+    
+    
+        <li class="active red"><a href="/">1</a></li>
+    
+    
+    <li class="disabled">
+        <a href="/"><i class="fa fa-angle-right"></i></a>
+    </li>
+ </ul>
+
 </div>
 
-  		</center>
-		</div>
-
-		
-		
-	</div> <!-- col-md-9 -->
-
-	
-		<div class="col-md-3">
-	<div id="sidebar">
-	
-			
-  <div id="site_search">
-   <div class="form-group">
-    <input type="text" id="local-search-input" name="q" results="0" placeholder="Search" class="st-search-input st-default-search-input form-control"/>
-   </div>  
-  <div id="local-search-result"></div>
+        <div class="fixed-action-btn float-sitemap">
+    <a class="btn-floating btn-large red">
+      <i class="fa fa-caret-square-o-up"></i>
+    </a>
+    <ul>
+      <li><a class="btn-return-top btn-floating waves-effect cyan" title="回到顶部"><i class="fa fa-arrow-circle-o-up"></i></a></li>
+      <li><a class="btn-floating waves-effect button-collapse light-green"  data-activates="main-menu" title="menu"><i class="fa fa-navicon"></i></a></li>
+    </ul>
   </div>
 
+    </main>
+    <footer class="page-footer green darken-1">
+    
+    <div class="container">
+        <div class="row">
+            
 
-		
-			
-	<div class="widget">
-		<h4>Categories</h4>
-		<ul class="tag_box inline list-unstyled">
-		
-			<li><a href="/categories/Geek/">Geek<span>3</span></a></li>
-		
-			<li><a href="/categories/技术/">技术<span>6</span></a></li>
-		
-			<li><a href="/categories/生活/">生活<span>11</span></a></li>
-		
-		</ul>
-	</div>
+            
+            <div class="col m8 s12">
+                <h5 class="white-text">友情链接</h5>
+                
+                    <a class="social-link" href="https://github.com/tommyjiang" target="_blank">Github</a>
+                
+                    <a class="social-link" href="http://raytaylorlin.com/" target="_blank">raytaylorism主题作者的技术博客</a>
+                
+            </div>
+            
+        </div>
+    </div>
+    
 
-		
-			
-	<div class="widget">
-		<h4>Tag Cloud</h4>
-		<ul class="tag_box inline list-unstyled">		
-		
-			<li><a href="/tags/美食/">美食<span>1</span></a></li>
-		
-			<li><a href="/tags/Google/">Google<span>1</span></a></li>
-		
-			<li><a href="/tags/旅程/">旅程<span>1</span></a></li>
-		
-			<li><a href="/tags/博客/">博客<span>1</span></a></li>
-		
-			<li><a href="/tags/国家电网/">国家电网<span>1</span></a></li>
-		
-			<li><a href="/tags/博士/">博士<span>2</span></a></li>
-		
-			<li><a href="/tags/铁路/">铁路<span>3</span></a></li>
-		
-			<li><a href="/tags/香港/">香港<span>1</span></a></li>
-		
-			<li><a href="/tags/科研/">科研<span>1</span></a></li>
-		
-			<li><a href="/tags/Mac/">Mac<span>2</span></a></li>
-		
-			<li><a href="/tags/清华/">清华<span>1</span></a></li>
-		
-			<li><a href="/tags/Emacs/">Emacs<span>1</span></a></li>
-		
-			<li><a href="/tags/Hexo/">Hexo<span>2</span></a></li>
-		
-			<li><a href="/tags/电力系统/">电力系统<span>2</span></a></li>
-		
-			<li><a href="/tags/MATLAB/">MATLAB<span>2</span></a></li>
-		
-			<li><a href="/tags/地铁/">地铁<span>1</span></a></li>
-		
-			<li><a href="/tags/Org-mode/">Org mode<span>1</span></a></li>
-		
-			<li><a href="/tags/Echarts/">Echarts<span>1</span></a></li>
-		
-			<li><a href="/tags/感情/">感情<span>3</span></a></li>
-		
-			<li><a href="/tags/Python/">Python<span>2</span></a></li>
-		
-		 
-		</ul>
-	</div>
+    <div class="footer-copyright red-link-context">
+        <div class="container">
+            © 2016 example.com, All rights reserved.
+            <p class="right" style="margin-top: 0;">本博客由 <a href="https://hexo.io">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism">raytaylorism</a></p>
+        </div>
+    </div>
+</footer>
 
 
-		
-			
-<div class="widget">
-  <h4>Recent Posts</h4>
-  <ul class="entry list-unstyled">
-    
-      <li>
-        <a href="/2016/2016-12-10-Shou-pa-kou-crossing/" ><i class="fa fa-file-o"></i>手帕口道口通过车次信息</a>
-      </li>
-    
-      <li>
-        <a href="/2016/2016-11-30-Python-candlestick/" ><i class="fa fa-file-o"></i>Python plotly 作带交易量的 K 线图</a>
-      </li>
-    
-      <li>
-        <a href="/2016/2016-11-16-Hexo-baidu-map/" ><i class="fa fa-file-o"></i>Hexo 博文中加入百度地图</a>
-      </li>
-    
-      <li>
-        <a href="/2016/2016-11-16-Beijing-single-res/" ><i class="fa fa-file-o"></i>北京十大适合一个人吃的餐厅</a>
-      </li>
-    
-      <li>
-        <a href="/2016/2016-11-01-Tsinghua-yuan-station/" ><i class="fa fa-file-o"></i>纪念清华园站 &amp; 我的铁路情缘</a>
-      </li>
-    
-  </ul>
-</div>
-
-		
-			
-<div class="widget">
-	<h4>Links</h4>
-	<ul class="blogroll list-unstyled">
-	
-		<li><i class="fa fa-github"></i><a href="https://github.com/wzpan/freemind/" title="Freemind's Github repository." target="_blank"]);">Freemind</a></li>
-	
-		<li><i class="fa fa-github"></i><a href="http://www.github.com/tommyjiang" title="My Github account." target="_blank"]);">My Github</a></li>
-	
-	</ul>
+    <noscript>
+    <div class="noscript">
+        <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+    </div>
+</noscript>
+<div class="noscript">
+    <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
 </div>
 
 
-		
-	</div> <!-- sidebar -->
-</div> <!-- col-md-3 -->
+<script src="/js/jquery.min.js"></script>
+<script src="/js/materialize.min.js"></script>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
 
-	
-	
-</div> <!-- row-fluid -->
+<script>
+    (function($) {
+        $(document).ready(function() {
+            // 隐藏禁用javascript（针对微信内置浏览器）的提示
+            $('.noscript').hide();
+
+            // 图片缩放效果
+            var $imgs = $('img').not('.slider-image').not('.avatar-image').not('.carousel-image').not('.card-cover-image').not('.qrcode');
+
+            // 给图片加上点击放大效果（materialbox插件）
+            $imgs.addClass('materialboxed').each(function(i, el) {
+                $(this).attr('data-caption', $(this).attr('alt') || ' ');
+            }).materialbox();
+
+            // 优化表格的显示
+            $('table').each(function() {
+                var $table = $(this);
+                // 除去多行代码的情况
+                if ($table.find('pre').length == 0) {
+                    $table.addClass('responsive-table striped bordered');
+                }
+            });
+
+            // 首页幻灯片
+            $('.slider').slider({indicators: true, full_width: true, interval: 8000});
+
+            $(".button-collapse").sideNav();
+            $(".category-menu").sideNav();
+
+            // 针对gallery post
+            $('.carousel').carousel({full_width: true});
+            $('.carousel-control.prev').click(function() {
+                $('.carousel').carousel('prev');
+            });
+            $('.carousel-control.next').click(function() {
+                $('.carousel').carousel('next');
+            });
+
+            // 文章目录
+            $('article').not('.simple-article').find('h1').add('h2').add('h3').add('h4').add('h5').add('h6').scrollSpy();
+
+            // 目录随屏幕滚动（防止目录过长越过footer）
+            var $toc = $('.toc');
+            var scrollTargetTop = 0;
+            $(window).scroll(function() {
+                var $activeLink = $toc.find('a.active.section');
+                if ($(window).scrollTop() < 100) {
+                    scrollTargetTop = 0;
+                } else {
+                    if ($activeLink[0]) {
+                        scrollTargetTop = $activeLink.offset().top - $toc.offset().top;
+                    }
+                }
+                $toc.css('top', '-' + scrollTargetTop + 'px');
+            });
+
+            // 修正文章目录的left-border颜色
+            var color = $('.table-of-contents-text').css('color');
+            $('.table-of-contents-link').css('border-left-color', color);
+
+            // 针对移动端做的优化：FAB按钮点击一下收回
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                $('.fixed-action-btn').addClass('click-to-toggle');
+            }
+            // 回到顶部
+            $('.btn-return-top').click(function() {
+                $('body, html').animate({
+                    scrollTop: 0
+                }, 500);
+            });
+
+            // 重置读书页面的Tab标签页的颜色
+            $('li.tab a').hover(function() {
+                $(this).toggleClass('text-lighten-4');
+            });
+            $('.indicator').addClass('red lighten-2');
+
+            
+            // 添加new标签
+            $('').append('<span class="new badge red"></span>');
+            
+
+            // 搜索功能
+            $('.modal-trigger').leanModal({
+                // 打开搜索框时自动聚焦
+                ready: function() {
+                    if ($('#search').is(":visible")) {
+                        $('#search-input').focus();
+                    }
+                }
+            });
+            var searchXml = "search.xml";
+            if (searchXml.length == 0) {
+             	searchXml = "search.xml";
+            }
+            var searchPath = "/" + searchXml;
+            initSearch(searchPath, 'search-input', 'search-result');
+        });
+
+        // 初始化搜索与匹配函数
+        var initSearch = function(path, search_id, content_id) {
+            'use strict';
+            $.ajax({
+                url: path,
+                dataType: "xml",
+                success: function(xmlResponse) {
+                    // get the contents from search data
+                    var datas = $("entry", xmlResponse).map(function() {
+                        return {
+                            title: $("title", this).text(),
+                            content: $("content", this).text(),
+                            url: $("url", this).text()
+                        };
+                    }).get();
+                    var $input = document.getElementById(search_id);
+                    var $resultContent = document.getElementById(content_id);
+                    $input.addEventListener('input', function() {
+                        var str = '<ul class=\"search-result-list\">';
+                        var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                        $resultContent.innerHTML = "";
+                        if (this.value.trim().length <= 0) {
+                            return;
+                        }
+                        // perform local searching
+                        datas.forEach(function(data) {
+                            var isMatch = true;
+                            var content_index = [];
+                            var data_title = data.title.trim().toLowerCase();
+                            var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                            var data_url = data.url;
+                            var index_title = -1;
+                            var index_content = -1;
+                            var first_occur = -1;
+                            // only match artiles with not empty titles and contents
+                            if (data_title != '' && data_content != '') {
+                                keywords.forEach(function(keyword, i) {
+                                    index_title = data_title.indexOf(keyword);
+                                    index_content = data_content.indexOf(keyword);
+                                    if (index_title < 0 && index_content < 0) {
+                                        isMatch = false;
+                                    } else {
+                                        if (index_content < 0) {
+                                            index_content = 0;
+                                        }
+                                        if (i == 0) {
+                                            first_occur = index_content;
+                                        }
+                                    }
+                                });
+                            }
+                            // show search results
+                            if (isMatch) {
+                                keywords.forEach(function(keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    data_title = data_title.replace(regS, "<span class=\"search-keyword red lighten-2\">" + keyword + "</span>");
+                                });
+
+                                str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                                var content = data.content.trim().replace(/<[^>]+>/g, "");
+                                if (first_occur >= 0) {
+                                    // cut out 100 characters
+                                    var start = first_occur - 20;
+                                    var end = first_occur + 80;
+                                    if (start < 0) {
+                                        start = 0;
+                                    }
+                                    if (start == 0) {
+                                        end = 100;
+                                    }
+                                    if (end > content.length) {
+                                        end = content.length;
+                                    }
+                                    var match_content = content.substring(start, end);
+                                    // highlight all keywords
+                                    keywords.forEach(function(keyword) {
+                                        var regS = new RegExp(keyword, "gi");
+                                        match_content = match_content.replace(regS, "<span class=\"search-keyword red lighten-2\">" + keyword + "</span>");
+                                    });
+
+                                    str += "<p class=\"search-result\">..." + match_content + "...</p>"
+                                }
+                                str += "</li>";
+                            }
+                        });
+                        str += "</ul>";
+                        $resultContent.innerHTML = str;
+                    });
+                }
+            });
+        }
+    })(jQuery);
+</script>
 
 
-	</div>
-  </div>
-  <div class="container-narrow">
-  <footer> <p>
-  &copy; 2016 Tommy Jiang
-  
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
-</p> </footer>
-</div> <!-- container-narrow -->
-  
-
-
-  
-<a id="gotop" href="#">   
-  <span>▲</span> 
-</a>
-
-<script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/main.js"></script>
-<script src="/js/search.js"></script> 
-
-
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script src="/js/prettify.js"></script>
 <script type="text/javascript">
-(function($){
-  $('.fancybox').fancybox();
-})(jQuery);
+    $(document).ready(function() {
+        $("pre").addClass("prettyprint");
+        prettyPrint();
+    });
 </script>
 
 
 
-   <script type="text/javascript">      
-     var search_path = "search.xml";
-	 if (search_path.length == 0) {
-	 	search_path = "search.xml";
-	 }
-	 var path = "/" + search_path;
-     searchFunc(path, 'local-search-input', 'local-search-result');
-   </script>
+
+
+
+
 
 </body>
-   </html>
+</html>
