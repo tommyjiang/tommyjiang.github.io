@@ -68,6 +68,81 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Hexo 博文中加入百度地图]]></title>
+      <url>http://tommyjiang.github.io/2016/2016-11-16-Hexo-baidu-map/</url>
+      <content type="html"><![CDATA[<p>利用百度地图 API 实现在 Hexo 的博文中加入地图。</p>
+<a id="more"></a>
+<p>最近想丰富下生活，最先想到的就是多品尝点北京的美食。作为一个认真的人，吃过就想记下来，但只有饭馆的名字和地址显得太单调了，就想能在地图上显示的话会比较直观。搜了下百度地图的 API，不多说，直接上代码吧。更详细的内容可以参考百度地图 Javascript 的 <a href="http://lbsyun.baidu.com/index.php?title=jspopular" target="_blank" rel="external">API</a>。</p>
+<p>首先新建一个<code>div</code>：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"min-height: 500px; width: 100%;"</span> <span class="attr">id</span>=<span class="string">"map"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>然后利用百度地图 API 在<code>div</code>中填充一个地图： </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">map_init</span>(<span class="params"></span>) </span>&#123;</div><div class="line">                </div><div class="line">        <span class="keyword">var</span> map = <span class="keyword">new</span> BMap.Map(<span class="string">"map"</span>);    <span class="comment">// 创建Map实例</span></div><div class="line">        map.centerAndZoom(<span class="keyword">new</span> BMap.Point(<span class="number">116.41</span>,<span class="number">39.89</span>), <span class="number">13</span>);  <span class="comment">// 初始化,设置中心点坐标和地图级别</span></div><div class="line">        map.addControl(<span class="keyword">new</span> BMap.MapTypeControl());   <span class="comment">//添加地图类型控件</span></div><div class="line">        map.setCurrentCity(<span class="string">"北京"</span>);          <span class="comment">// 设置地图显示的城市 此项是必须设置的</span></div><div class="line">        map.enableScrollWheelZoom(<span class="literal">true</span>);     <span class="comment">//开启鼠标滚轮缩放</span></div><div class="line">                </div><div class="line">        <span class="comment">//向地图中添加缩放控件</span></div><div class="line">        <span class="keyword">var</span> ctrlNav = <span class="keyword">new</span> <span class="built_in">window</span>.BMap.NavigationControl(&#123;</div><div class="line">                           anchor: BMAP_ANCHOR_TOP_LEFT,</div><div class="line">                           type: BMAP_NAVIGATION_CONTROL_LARGE</div><div class="line">                      &#125;);</div><div class="line">        map.addControl(ctrlNav);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">//异步调用百度js</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">map_load</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> load = <span class="built_in">document</span>.createElement(<span class="string">"script"</span>);</div><div class="line">        load.src = <span class="string">"http://api.map.baidu.com/api?v=1.4&amp;callback=map_init"</span>;</div><div class="line">        <span class="built_in">document</span>.body.appendChild(load);</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">window</span>.onload = map_load;</div><div class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></figure>
+<p>上述代码直接放在 Hexo Markdown 博文中的<code>raw</code>标签中，即：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% raw %&#125;</div><div class="line">上边的代码</div><div class="line">&#123;% endraw %&#125;</div></pre></td></tr></table></figure>
+<p>结果如下：</p>
+
+    <div style="min-height: 500px; width: 100%;" id="map">
+    </div>
+
+    <script type="text/javascript">
+  
+        function map_init() {
+                    
+            var map = new BMap.Map("map");    // 创建Map实例
+            map.centerAndZoom(new BMap.Point(116.41,39.89), 13);  // 初始化地图,设置中心点坐标和地图级别
+            map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+            map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+            map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+                    
+            //向地图中添加缩放控件
+            var ctrlNav = new window.BMap.NavigationControl({
+                               anchor: BMAP_ANCHOR_TOP_LEFT,
+                               type: BMAP_NAVIGATION_CONTROL_LARGE
+                          });
+            map.addControl(ctrlNav);
+  
+            var points = [
+                [116.395857,39.901169], // 渔芙南
+                [116.649810,39.912096], // 三禾粉匠贵州米粉店 
+                [116.323938,39.989919],
+                [116.328896,39.988039],
+                [116.321135,39.987072],
+                [116.332453,39.989007],
+                [116.324045,39.987984],
+                [116.322285,39.988316],
+                [116.322608,39.986381]
+            ];
+            
+            var size1 = new BMap.Size(21, 50);
+            var size2 = new BMap.Size(21, 0);
+            var icons = [], markers = [];
+            
+            // 向地图添加标注
+            // for( var i = 0;i < points.length; i++){
+            //     var point = new BMap.Point(points[i][0], points[i][1]);
+            //     var icon_pre = 'http://o852ayzmr.bkt.clouddn.com/';
+            //     var icon_post = '.png';
+            //     var icon_string = icon_pre + (i+1).toString()  + icon_post;
+            //     icons[i] = new BMap.Icon(icon_string, size1, {anchor: size2})
+            //     // icons[i] = new BMap.Icon('http://o852ayzmr.bkt.clouddn.com/1.png', size1, {anchor: size2})
+            //     markers[i] = new BMap.Marker(point, {icon: icons[i]});
+            //     map.addOverlay(markers[i]);
+            // };
+        }
+
+        //异步调用百度js
+        function map_load() {
+            var load = document.createElement("script");
+            load.src = "http://api.map.baidu.com/api?v=1.4&callback=map_init";
+            document.body.appendChild(load);
+        }
+        window.onload = map_load;
+    </script>
+
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[北京十大适合一个人吃的餐厅]]></title>
       <url>http://tommyjiang.github.io/2016/2016-11-16-Beijing-single-res/</url>
       <content type="html"><![CDATA[<p>记录下有才姐推荐的微博上的<a href="http://weibo.com/2643091105/EhDNHuBvH?from=page_1005052643091105_profile&amp;wvr=6&amp;mod=weibotime&amp;type=comment#_rnd1479530057542" target="_blank" rel="external">北京十大适合一个人吃的餐厅</a>，把生活丰富起来。</p>
@@ -211,81 +286,6 @@
             load.src = "http://api.map.baidu.com/api?v=1.4&callback=map_init";
             document.body.appendChild(load);
         }  
-        window.onload = map_load;
-    </script>
-
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Hexo 博文中加入百度地图]]></title>
-      <url>http://tommyjiang.github.io/2016/2016-11-16-Hexo-baidu-map/</url>
-      <content type="html"><![CDATA[<p>利用百度地图 API 实现在 Hexo 的博文中加入地图。</p>
-<a id="more"></a>
-<p>最近想丰富下生活，最先想到的就是多品尝点北京的美食。作为一个认真的人，吃过就想记下来，但只有饭馆的名字和地址显得太单调了，就想能在地图上显示的话会比较直观。搜了下百度地图的 API，不多说，直接上代码吧。更详细的内容可以参考百度地图 Javascript 的 <a href="http://lbsyun.baidu.com/index.php?title=jspopular" target="_blank" rel="external">API</a>。</p>
-<p>首先新建一个<code>div</code>：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"min-height: 500px; width: 100%;"</span> <span class="attr">id</span>=<span class="string">"map"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>然后利用百度地图 API 在<code>div</code>中填充一个地图： </p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">map_init</span>(<span class="params"></span>) </span>&#123;</div><div class="line">                </div><div class="line">        <span class="keyword">var</span> map = <span class="keyword">new</span> BMap.Map(<span class="string">"map"</span>);    <span class="comment">// 创建Map实例</span></div><div class="line">        map.centerAndZoom(<span class="keyword">new</span> BMap.Point(<span class="number">116.41</span>,<span class="number">39.89</span>), <span class="number">13</span>);  <span class="comment">// 初始化,设置中心点坐标和地图级别</span></div><div class="line">        map.addControl(<span class="keyword">new</span> BMap.MapTypeControl());   <span class="comment">//添加地图类型控件</span></div><div class="line">        map.setCurrentCity(<span class="string">"北京"</span>);          <span class="comment">// 设置地图显示的城市 此项是必须设置的</span></div><div class="line">        map.enableScrollWheelZoom(<span class="literal">true</span>);     <span class="comment">//开启鼠标滚轮缩放</span></div><div class="line">                </div><div class="line">        <span class="comment">//向地图中添加缩放控件</span></div><div class="line">        <span class="keyword">var</span> ctrlNav = <span class="keyword">new</span> <span class="built_in">window</span>.BMap.NavigationControl(&#123;</div><div class="line">                           anchor: BMAP_ANCHOR_TOP_LEFT,</div><div class="line">                           type: BMAP_NAVIGATION_CONTROL_LARGE</div><div class="line">                      &#125;);</div><div class="line">        map.addControl(ctrlNav);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">//异步调用百度js</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">map_load</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> load = <span class="built_in">document</span>.createElement(<span class="string">"script"</span>);</div><div class="line">        load.src = <span class="string">"http://api.map.baidu.com/api?v=1.4&amp;callback=map_init"</span>;</div><div class="line">        <span class="built_in">document</span>.body.appendChild(load);</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">window</span>.onload = map_load;</div><div class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></figure>
-<p>上述代码直接放在 Hexo Markdown 博文中的<code>raw</code>标签中，即：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% raw %&#125;</div><div class="line">上边的代码</div><div class="line">&#123;% endraw %&#125;</div></pre></td></tr></table></figure>
-<p>结果如下：</p>
-
-    <div style="min-height: 500px; width: 100%;" id="map">
-    </div>
-
-    <script type="text/javascript">
-  
-        function map_init() {
-                    
-            var map = new BMap.Map("map");    // 创建Map实例
-            map.centerAndZoom(new BMap.Point(116.41,39.89), 13);  // 初始化地图,设置中心点坐标和地图级别
-            map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
-            map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
-            map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
-                    
-            //向地图中添加缩放控件
-            var ctrlNav = new window.BMap.NavigationControl({
-                               anchor: BMAP_ANCHOR_TOP_LEFT,
-                               type: BMAP_NAVIGATION_CONTROL_LARGE
-                          });
-            map.addControl(ctrlNav);
-  
-            var points = [
-                [116.395857,39.901169], // 渔芙南
-                [116.649810,39.912096], // 三禾粉匠贵州米粉店 
-                [116.323938,39.989919],
-                [116.328896,39.988039],
-                [116.321135,39.987072],
-                [116.332453,39.989007],
-                [116.324045,39.987984],
-                [116.322285,39.988316],
-                [116.322608,39.986381]
-            ];
-            
-            var size1 = new BMap.Size(21, 50);
-            var size2 = new BMap.Size(21, 0);
-            var icons = [], markers = [];
-            
-            // 向地图添加标注
-            // for( var i = 0;i < points.length; i++){
-            //     var point = new BMap.Point(points[i][0], points[i][1]);
-            //     var icon_pre = 'http://o852ayzmr.bkt.clouddn.com/';
-            //     var icon_post = '.png';
-            //     var icon_string = icon_pre + (i+1).toString()  + icon_post;
-            //     icons[i] = new BMap.Icon(icon_string, size1, {anchor: size2})
-            //     // icons[i] = new BMap.Icon('http://o852ayzmr.bkt.clouddn.com/1.png', size1, {anchor: size2})
-            //     markers[i] = new BMap.Marker(point, {icon: icons[i]});
-            //     map.addOverlay(markers[i]);
-            // };
-        }
-
-        //异步调用百度js
-        function map_load() {
-            var load = document.createElement("script");
-            load.src = "http://api.map.baidu.com/api?v=1.4&callback=map_init";
-            document.body.appendChild(load);
-        }
         window.onload = map_load;
     </script>
 
@@ -2131,17 +2131,17 @@
 <h3 id="个人观后感"><a href="#个人观后感" class="headerlink" title="个人观后感"></a>个人观后感</h3><p>整场晚会印象最深刻的就是两个以毕业为主题的视频节目。</p>
 <h4 id="起点"><a href="#起点" class="headerlink" title="起点"></a>起点</h4><p>2015年清华原创毕业歌曲，视频见<a href="http://v.youku.com/v_show/id_XMTI4MjE1OTY1Mg==.html?from=s1.8-1-1.2" target="_blank" rel="external">这里</a>。整首歌用了大段的 Rap，精彩的歌词配上手绘的背景足以唤起每个清华毕业生对母校的留恋。</p>
 <blockquote>
-<p>几年前的一个夏天 我来到清华园<br>一辆崭新的二手车 打算骑四年<a href="清华校园很大，占地面积[442.14公顷](http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/about/about-6.html)，因此自行车是清华学生的标配。二手车便宜而且不容易被偷，因此受到新生的青睐。">^1</a><br>那时的清华男女比 比现在更跑偏<br>一对儿情侣甜蜜蜜 男双男单坐一边<br>微积分的习题课 坐过道和窗前<br>大学语文平仄平 还作诗一篇<br>奥运国庆大场面 刻在学长的光盘<br>百年校庆的尾巴根儿 只见过明信片<br>小桥队伍排最长 是凌晨十二点<br>五道口的枣糕王 一等小半天<br>苏世民的小书院 叮当响三年<br>天天绕道的图书馆 临走也没见着正脸<a href="[图书馆北馆（李文正楼）](http://lib.tsinghua.edu.cn/about/beiguan/beiguan.html)于百年校庆之际——2011年4月23日奠基，2013年12月工程正式启动，预计2015年9月竣工。">^2</a><br>宿舍系馆两点一线 日子太简单<br>情人坡的每个浪漫时间 我总路过去实验<br>创业志愿和实践 假期没几天<br>我开题报告参考文献 才刚看二十篇  </p>
+<p>几年前的一个夏天 我来到清华园<br>一辆崭新的二手车 打算骑四年<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup><br>那时的清华男女比 比现在更跑偏<br>一对儿情侣甜蜜蜜 男双男单坐一边<br>微积分的习题课 坐过道和窗前<br>大学语文平仄平 还作诗一篇<br>奥运国庆大场面 刻在学长的光盘<br>百年校庆的尾巴根儿 只见过明信片<br>小桥队伍排最长 是凌晨十二点<br>五道口的枣糕王 一等小半天<br>苏世民的小书院 叮当响三年<br>天天绕道的图书馆 临走也没见着正脸<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup><br>宿舍系馆两点一线 日子太简单<br>情人坡的每个浪漫时间 我总路过去实验<br>创业志愿和实践 假期没几天<br>我开题报告参考文献 才刚看二十篇  </p>
 <p>转眼间就要告别昨天 我们何年再相见<br>(什么年 什么月 什么值得纪念)<br>那些纠结的论文和答辩 都随往事如烟<br>(什么人 什么鬼 什么值得留恋)<br>昨天 我站在起点 不知前方路多远<br>今天 我张开双手 想要拥抱这世界<br>想要飞 就必须从不妥协<br>想要追 就必须超越一切  </p>
-<p>那时刚有文图馆 学霸占座一整天<br>那时清芬小包子 一个三毛钱<a href="清芬园即七食堂，曾经以包子和麻辣香锅闻名全校，于2013年6月15日停伙。2015年本科生毕业典礼上，[邱勇校长的讲话](http://news.tsinghua.edu.cn/publish/news/4205/2015/20150712090658606540272/20150712090658606540272_.html)中提到：“我也知道，你们爱吃的清芬园包子已经不在了，现在我要告诉你们，今年年底清芬园将重新开业，我相信，开业的同时，包子也会回来。”">^3</a><br>那时没有 Color Run 北京没有阴天<br>那时学堂七点半 票总被抢完<br>那时的欢笑鬼脸 那时的我们班<br>那时的泪水汉水 那时的清华蓝<br>那时的下午四点半 追你的笑颜<br>你回头问我三千米 能不能过关  </p>
+<p>那时刚有文图馆 学霸占座一整天<br>那时清芬小包子 一个三毛钱<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup><br>那时没有 Color Run 北京没有阴天<br>那时学堂七点半 票总被抢完<br>那时的欢笑鬼脸 那时的我们班<br>那时的泪水汉水 那时的清华蓝<br>那时的下午四点半 追你的笑颜<br>你回头问我三千米 能不能过关  </p>
 <p>转眼间就要告别昨天 我们何年再相见<br>(什么年 什么月 什么值得纪念)<br>那些骄傲的奖杯和绩点 都随往事如烟<br>(什么人 什么鬼 什么值得留恋)<br>昨天 我站在起点 不知前方路多远<br>今天 我张开双手 想要拥抱这世界<br>想要飞 就必须从不妥协<br>想要追 就必须超越一切<br>勇敢飞 对自己从不妥协<br>勇敢追 向着下一个起点  </p>
 <p>(新起点 我们 和清华一起出发)</p>
 </blockquote>
 <h4 id="闪光的记忆"><a href="#闪光的记忆" class="headerlink" title="闪光的记忆"></a>闪光的记忆</h4><p>应该是从2012年起，每年的毕业晚会都有一个用《闪光的记忆》这首歌作为背景音乐的视频，今年当然也不例外，视频见<a href="http://v.qq.com/iframe/player.html?vid=h01594giz7r&amp;width=670&amp;height=502.5&amp;auto=0" target="_blank" rel="external">这里</a>。印象最深的是视频的最后一段——清华园普通一天各个整点时刻的场景：</p>
 <blockquote>
-<p>01:00AM 那些不眠的夜晚，陪伴我们的，除了大作业，还有一盏温柔的灯。<br>02:00AM 一座小小的屋子，飘香四溢的屋子，成为烧烤的代名词——小桥。<br>03:00AM 曾有一群人，为了一个共同的梦想在这里讨论甚至争执，不舍昼夜。<br>04:00AM 让人惊艳的美术设计背后，或许是熬夜到三四点的苦楚。<br>05:00AM 紫荆园后，盛夏日出，刚摘下的果蔬，也许还滴着晨露。<br>06:00AM 在晨光熹微，旁人熟睡的时刻，总有些人在忍受风吹日晒，绽放青春。<br>07:00AM 鲜红的旗帜，坚毅的面孔，月月年年。<br>08:00AM 早餐和生活一样在路上。<br>09:00AM 求知的眼睛，挥动的笔杆，在课堂上载着梦想启程。<br>10:00AM 水木清华众秀钟，真是无一景不可入画。<br>11:00AM 道旁的银杏树和来往的人潮，构成一抹极具生机的亮色。<br>12:00PM 很难在别处见到的热闹与魅力。<a href="原视频中误为“12:00AM”，中午12点应为12:00PM。">^4</a><br>01:00PM 梦里，天堂一定是图书馆的模样。<br>02:00PM 如果要真正感受清华，那么就来自习教室吧。<br>03:00PM 在实验中谨慎求索，辛苦劳碌，舔尝酸楚，积攒幸福。<br>04:00PM 那时候日色很慢，草坪很暖，一辈子只够爱一个人。<br>05:00PM 夕阳下的奔跑与伫足，那是我们昂扬的青春。<br>06:00PM 落日余晖遍布校园，感受舌尖上的清华。<br>07:00PM 生活，因为这里的嬉笑怒骂、管弦丝竹而不同。<br>08:00PM 周遭的嘈杂包围着专注讨论的我们。<br>09:00PM 这是真实而生动的生活。<br>10:00PM 既见君子，云胡不喜？<br>11:00PM 熄灯已经成为一种习惯，成为我们珍贵的共同记忆。<a href="最后少了一个午夜12点的时刻，我觉得可以选择静谧的紫荆宿舍外景。">^5</a>  </p>
+<p>01:00AM 那些不眠的夜晚，陪伴我们的，除了大作业，还有一盏温柔的灯。<br>02:00AM 一座小小的屋子，飘香四溢的屋子，成为烧烤的代名词——小桥。<br>03:00AM 曾有一群人，为了一个共同的梦想在这里讨论甚至争执，不舍昼夜。<br>04:00AM 让人惊艳的美术设计背后，或许是熬夜到三四点的苦楚。<br>05:00AM 紫荆园后，盛夏日出，刚摘下的果蔬，也许还滴着晨露。<br>06:00AM 在晨光熹微，旁人熟睡的时刻，总有些人在忍受风吹日晒，绽放青春。<br>07:00AM 鲜红的旗帜，坚毅的面孔，月月年年。<br>08:00AM 早餐和生活一样在路上。<br>09:00AM 求知的眼睛，挥动的笔杆，在课堂上载着梦想启程。<br>10:00AM 水木清华众秀钟，真是无一景不可入画。<br>11:00AM 道旁的银杏树和来往的人潮，构成一抹极具生机的亮色。<br>12:00PM 很难在别处见到的热闹与魅力。<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup><br>01:00PM 梦里，天堂一定是图书馆的模样。<br>02:00PM 如果要真正感受清华，那么就来自习教室吧。<br>03:00PM 在实验中谨慎求索，辛苦劳碌，舔尝酸楚，积攒幸福。<br>04:00PM 那时候日色很慢，草坪很暖，一辈子只够爱一个人。<br>05:00PM 夕阳下的奔跑与伫足，那是我们昂扬的青春。<br>06:00PM 落日余晖遍布校园，感受舌尖上的清华。<br>07:00PM 生活，因为这里的嬉笑怒骂、管弦丝竹而不同。<br>08:00PM 周遭的嘈杂包围着专注讨论的我们。<br>09:00PM 这是真实而生动的生活。<br>10:00PM 既见君子，云胡不喜？<br>11:00PM 熄灯已经成为一种习惯，成为我们珍贵的共同记忆。<sup id="fnref:5"><a href="#fn:5" rel="footnote">5</a></sup>  </p>
 </blockquote>
-]]></content>
+<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none; padding-left: 0;"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">1.</span><span style="display: inline-block; vertical-align: top;">清华校园很大，占地面积<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/about/about-6.html" target="_blank" rel="external">442.14公顷</a>，因此自行车是清华学生的标配。二手车便宜而且不容易被偷，因此受到新生的青睐。</span><a href="#fnref:1" rev="footnote"> ↩</a></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">2.</span><span style="display: inline-block; vertical-align: top;"><a href="http://lib.tsinghua.edu.cn/about/beiguan/beiguan.html" target="_blank" rel="external">图书馆北馆（李文正楼）</a>于百年校庆之际——2011年4月23日奠基，2013年12月工程正式启动，预计2015年9月竣工。</span><a href="#fnref:2" rev="footnote"> ↩</a></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">3.</span><span style="display: inline-block; vertical-align: top;">清芬园即七食堂，曾经以包子和麻辣香锅闻名全校，于2013年6月15日停伙。2015年本科生毕业典礼上，<a href="http://news.tsinghua.edu.cn/publish/news/4205/2015/20150712090658606540272/20150712090658606540272_.html" target="_blank" rel="external">邱勇校长的讲话</a>中提到：“我也知道，你们爱吃的清芬园包子已经不在了，现在我要告诉你们，今年年底清芬园将重新开业，我相信，开业的同时，包子也会回来。”</span><a href="#fnref:3" rev="footnote"> ↩</a></li><li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">4.</span><span style="display: inline-block; vertical-align: top;">原视频中误为“12:00AM”，中午12点应为12:00PM。</span><a href="#fnref:4" rev="footnote"> ↩</a></li><li id="fn:5"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">5.</span><span style="display: inline-block; vertical-align: top;">最后少了一个午夜12点的时刻，我觉得可以选择静谧的紫荆宿舍外景。</span><a href="#fnref:5" rev="footnote"> ↩</a></li></ol></div></div>]]></content>
     </entry>
     
   
