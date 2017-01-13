@@ -15,7 +15,106 @@
 <p>——乌兰托娅《火红的萨日朗》</p>
 <p>既然爱你不能言语<br>只能微笑哭泣<br>让我从此忘了你</p>
 <p>——许茹芸《独角戏》</p>
+<p>由来只有新人笑 有谁听到旧人哭</p>
+<p>——黄安《新鸳鸯蝴蝶梦》</p>
 </blockquote>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[2016行程总结]]></title>
+      <url>http://tommyjiang.github.io/2016/2016-12-31-Trip-2016/</url>
+      <content type="html"><![CDATA[<p>2016年，参加工作后第一个完整的自然年，飞得少了，高铁多了。</p>
+<a id="more"></a>
+<p>2016年各月飞机里程和火车里程如下：</p>
+
+<div id="tripSum2016" style="height:400px"></div>
+
+<p>离开学校后出差不怎么坐飞机了，但高铁还是坐了不少，一年算下来也坐了 13000 多公里的高铁。</p>
+
+<script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+<script type="text/javascript">
+// 路径配置
+    require.config({
+        paths: {
+            echarts: 'http://echarts.baidu.com/build/dist'
+        }
+    });
+
+    require(
+        [
+            'echarts',
+            'echarts/chart/bar',
+            'echarts/chart/line',
+        ],
+        drawEcharts
+    );
+
+    function drawEcharts(ec){
+        TripSum2016(ec);
+    }
+
+    function TripSum2016(ec){
+        var myTripSum2016 = ec.init(document.getElementById('tripSum2016'),'macarons');
+
+        option = {
+            tooltip : {
+                trigger: 'axis'
+            },
+            toolbox: {
+                show : false,
+                feature : {
+                    mark : {show: true},
+                    dataView : {show: true, readOnly: false},
+                    magicType: {show: true, type: ['bar', 'bar', 'bar']},
+                    restore : {show: true},
+                    saveAsImage : {show: true}
+                }
+            },
+            calculable : true,
+            legend: {
+                data:['飞机行程', '火车行程']
+            },
+            xAxis : [
+                {
+                    type : 'category',
+                    data : ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月']
+                }
+            ],
+            yAxis : [
+                {
+                    type : 'value',
+                    name : '飞机行程(km)',
+                    axisLabel : {
+                        formatter: '{value}'
+                    }
+                },
+                {
+                    type : 'value',
+                    name : '火车行程(km)',
+                    axisLabel : {
+                        formatter: '{value}'
+                    }
+                }
+            ],
+            series : [
+                {
+                    name:'飞机行程',
+                    type:'bar',
+                    data:[0, 0, 0, 0, 0, 0, 0, 3932, 0, 0, 0, 0]
+                },
+                {
+                    name:'火车行程',
+                    type:'bar',
+                    yAxisIndex: 1,
+                    data:[2374, 468, 354, 2432, 2754, 0, 0, 451, 0, 2609, 1568, 354]
+                }
+            ]
+        };
+        myTripSum2016.setOption(option,true); //当setOption第二个参数为true时，会阻止数据合并
+    }
+</script>
+
 ]]></content>
     </entry>
     
@@ -43,6 +142,15 @@
     <td style="text-align:center">上行</td>
     <td style="text-align:center">08:03</td>
     <td style="text-align:center">07:56-08:00</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">2</td>
+    <td style="text-align:center">Y530</td>
+    <td style="text-align:center">张家口南</td>
+    <td style="text-align:center">北京西</td>
+    <td style="text-align:center">上行</td>
+    <td style="text-align:center">10:10</td>
+    <td style="text-align:center">10:03-10:07</td>
   </tr>
   <tr>
     <td style="text-align:center">2</td>

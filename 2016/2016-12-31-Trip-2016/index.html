@@ -7,13 +7,15 @@
 
     
 
-    <title>技术 | </title>
+    <title>2016行程总结 | </title>
     <meta name="author" content="Tommy Jiang">
+    
+    <meta name="description" content="2016年，参加工作后第一个完整的自然年，飞得少了，高铁多了。">
     
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="2016行程总结"/>
     <meta property="og:site_name" content="Tommy&#39;s Blog"/>
 
     
@@ -199,60 +201,202 @@
 
     <main>
         <div class="container main-container">
-    
-
-<nav class="page-nav hide-on-small-only">
+    <nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper green">
         <span class="breadcrumb">当前位置（分类目录）</span>
         
+            
+    
+    
+    <a class="breadcrumb" href="/categories/生活/">生活</a>
+
 
         
-            <a class="breadcrumb" href="/categories/技术/">技术</a>
+
         
     </div>
 </nav>
 
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>2016行程总结</h1>
+    
 
 
-    <div class="collection mt-0">
+            </div>
+            <time class="red-link-context" datetime="2016-12-31T02:00:00.000Z"><a href="/2016/2016-12-31-Trip-2016/">2016-12-31</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+    <div class="tags-row">
         
-            <a href="/2016/2016-09-10-Beijing-subway-color/" class="collection-item grey-text text-darken-1">
-                <time datetime="2016-09-10T14:00:00.000Z">2016-09-10</time>
-                <span>&nbsp;&nbsp;&nbsp;</span>
-                北京地铁各线路颜色 HEX 及 RGB 代码
-            </a>
+            <a href="/tags/Echarts/" class="chip red lighten-1">Echarts</a>
         
-            <a href="/2016/2016-09-06-Org-mode-org-encrypt-gnupg-Mac/" class="collection-item grey-text text-darken-1">
-                <time datetime="2016-09-06T14:00:00.000Z">2016-09-06</time>
-                <span>&nbsp;&nbsp;&nbsp;</span>
-                Mac 下 Emacs Org mode 加密以及 gnupg 的安装
-            </a>
-        
-            <a href="/2016/2016-07-19-MATLAB-plot-color/" class="collection-item grey-text text-darken-1">
-                <time datetime="2016-07-19T02:00:00.000Z">2016-07-19</time>
-                <span>&nbsp;&nbsp;&nbsp;</span>
-                MATLAB plot 函数默认 color 调整
-            </a>
-        
-            <a href="/2016/2016-03-17-Power-system-research/" class="collection-item grey-text text-darken-1">
-                <time datetime="2016-03-16T16:19:57.000Z">2016-03-17</time>
-                <span>&nbsp;&nbsp;&nbsp;</span>
-                电力系统研究的个人体会
-            </a>
-        
-            <a href="/2016/2016-03-16-migrate-to-hexo/" class="collection-item grey-text text-darken-1">
-                <time datetime="2016-03-16T12:21:46.000Z">2016-03-16</time>
-                <span>&nbsp;&nbsp;&nbsp;</span>
-                博客迁移至 Hexo
-            </a>
-        
-            <a href="/2015/2015-08-10-Simulink-m-file/" class="collection-item grey-text text-darken-1">
-                <time datetime="2015-08-10T11:00:00.000Z">2015-08-10</time>
-                <span>&nbsp;&nbsp;&nbsp;</span>
-                MATLAB 中利用 m 文件修改 Simulink 模型参数的方法
-            </a>
+            <a href="/tags/旅程/" class="chip red lighten-1">旅程</a>
         
     </div>
+
+
+            <div class="toc red-link-context hide-on-med-and-down">
+    
+</div>
+
+
+            <div class="entry red-link-context">
+                <p>2016年，参加工作后第一个完整的自然年，飞得少了，高铁多了。</p>
+<a id="more"></a>
+<p>2016年各月飞机里程和火车里程如下：</p>
+
+<div id="tripSum2016" style="height:400px"></div>
+
+<p>离开学校后出差不怎么坐飞机了，但高铁还是坐了不少，一年算下来也坐了 13000 多公里的高铁。</p>
+
+<script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+<script type="text/javascript">
+// 路径配置
+    require.config({
+        paths: {
+            echarts: 'http://echarts.baidu.com/build/dist'
+        }
+    });
+
+    require(
+        [
+            'echarts',
+            'echarts/chart/bar',
+            'echarts/chart/line',
+        ],
+        drawEcharts
+    );
+
+    function drawEcharts(ec){
+        TripSum2016(ec);
+    }
+
+    function TripSum2016(ec){
+        var myTripSum2016 = ec.init(document.getElementById('tripSum2016'),'macarons');
+
+        option = {
+            tooltip : {
+                trigger: 'axis'
+            },
+            toolbox: {
+                show : false,
+                feature : {
+                    mark : {show: true},
+                    dataView : {show: true, readOnly: false},
+                    magicType: {show: true, type: ['bar', 'bar', 'bar']},
+                    restore : {show: true},
+                    saveAsImage : {show: true}
+                }
+            },
+            calculable : true,
+            legend: {
+                data:['飞机行程', '火车行程']
+            },
+            xAxis : [
+                {
+                    type : 'category',
+                    data : ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月']
+                }
+            ],
+            yAxis : [
+                {
+                    type : 'value',
+                    name : '飞机行程(km)',
+                    axisLabel : {
+                        formatter: '{value}'
+                    }
+                },
+                {
+                    type : 'value',
+                    name : '火车行程(km)',
+                    axisLabel : {
+                        formatter: '{value}'
+                    }
+                }
+            ],
+            series : [
+                {
+                    name:'飞机行程',
+                    type:'bar',
+                    data:[0, 0, 0, 0, 0, 0, 0, 3932, 0, 0, 0, 0]
+                },
+                {
+                    name:'火车行程',
+                    type:'bar',
+                    yAxisIndex: 1,
+                    data:[2374, 468, 354, 2432, 2754, 0, 0, 451, 0, 2609, 1568, 354]
+                }
+            ]
+        };
+        myTripSum2016.setOption(option,true); //当setOption第二个参数为true时，会阻止数据合并
+    }
+</script>
+
+
+                
+<p class="red-link-context">
+    <a href="/2017/2017-01-03-Song-lerics/" rel="next" title="歌词摘录">
+    上一篇：歌词摘录
+  </a>
+</p>
+
+
+
+<p class="red-link-context">
+    <a href="/2016/2016-12-10-Shou-pa-kou-crossing/" rel="next" title="手帕口道口通过车次信息">
+    下一篇：手帕口道口通过车次信息
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
+    <section id="comment">
+        <div class="card">
+            <div class="card-content">
+                <!-- Duoshuo Comment BEGIN -->
+                <div class="ds-thread" data-thread-key="2016/2016-12-31-Trip-2016/" data-title="2016行程总结" data-url="http://tommyjiang.github.io/2016/2016-12-31-Trip-2016/"></div>
+
+                <script type="text/javascript">
+                    console.log(document.querySelector('.ds-thread'));
+                    var duoshuoQuery = {
+                        short_name: 'tommyjiang'
+                    };
+                    (function() {
+                        var ds = document.createElement('script');
+                        ds.type = 'text/javascript';
+                        ds.async = true;
+                        ds.src = (document.location.protocol == 'https:'
+                            ? 'https:'
+                            : 'http:') + '//static.duoshuo.com/embed.js';
+                        ds.charset = 'UTF-8';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+                    })();
+                </script>
+                <!-- Duoshuo Comment END -->
+            </div>
+        </div>
+    </section>
+
 
 
 </div>
