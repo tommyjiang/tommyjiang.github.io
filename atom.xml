@@ -1,0 +1,1780 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Tommy&#39;s Blog</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://tommyjiang.github.io/"/>
+  <updated>2017-03-22T06:05:16.000Z</updated>
+  <id>http://tommyjiang.github.io/</id>
+  
+  <author>
+    <name>Tommy Jiang</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>博客评论系统由多说迁移至友言</title>
+    <link href="http://tommyjiang.github.io/2017/2017-03-22-duoshuo-to-youyan/"/>
+    <id>http://tommyjiang.github.io/2017/2017-03-22-duoshuo-to-youyan/</id>
+    <published>2017-03-22T11:00:00.000Z</published>
+    <updated>2017-03-22T06:05:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>多说发布通知，宣布即将关闭，博客评论系统迁移至友言。</p>
+<a id="more"></a>
+<p>昨天多说官网发布通知，宣布<a href="http://dev.duoshuo.com/threads/58d1169ae293b89a20c57241" target="_blank" rel="external">多说即将关闭</a>。感谢多说长久以来坚持维护的评论系统，从即日起本博客评论系统迁移至<a href="http://www.uyan.cc/" target="_blank" rel="external">友言</a>。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;多说发布通知，宣布即将关闭，博客评论系统迁移至友言。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Geek" scheme="http://tommyjiang.github.io/categories/Geek/"/>
+    
+    
+      <category term="博客" scheme="http://tommyjiang.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>机器学习相关书籍</title>
+    <link href="http://tommyjiang.github.io/2017/2017-02-25-machine-learning/"/>
+    <id>http://tommyjiang.github.io/2017/2017-02-25-machine-learning/</id>
+    <published>2017-02-25T11:00:00.000Z</published>
+    <updated>2017-02-25T15:11:33.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>机器学习相关书籍汇总</p>
+<a id="more"></a>
+<p>☐ <a href="https://book.douban.com/subject/26708119/" target="_blank" rel="external">机器学习 周志华</a><br>☐ <a href="https://book.douban.com/subject/10590856/" target="_blank" rel="external">统计学习方法 李航</a><br>☐ <a href="https://book.douban.com/subject/2061116/" target="_blank" rel="external">Pattern Recognition And Machine Learning. Christopher Bishop</a><br>☐ <a href="https://book.douban.com/subject/3294335/" target="_blank" rel="external">The Elements of Statistical Learning. Trevor Hastie</a><br>☐ <a href="https://book.douban.com/subject/10758624/" target="_blank" rel="external">Machine Learning-A Probabilistic Perspective. Kevin P. Murphy</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;机器学习相关书籍汇总&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Geek" scheme="http://tommyjiang.github.io/categories/Geek/"/>
+    
+    
+      <category term="Python" scheme="http://tommyjiang.github.io/tags/Python/"/>
+    
+      <category term="Machine learning" scheme="http://tommyjiang.github.io/tags/Machine-learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2016 年风电并网运行情况</title>
+    <link href="http://tommyjiang.github.io/2017/2017-02-05-wind-waste-2016/"/>
+    <id>http://tommyjiang.github.io/2017/2017-02-05-wind-waste-2016/</id>
+    <published>2017-02-05T11:00:00.000Z</published>
+    <updated>2017-02-06T07:10:53.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文数据来源：<a href="http://www.nea.gov.cn/2017-01/26/c_136014615.htm" target="_blank" rel="external">国家能源局官网</a>。</p>
+<a id="more"></a>
+<p>各数据不包含香港、澳门和台湾地区数据，在作图时统一设为0。</p>
+
+<div id="newInstalled" style="height:800px"></div>
+<br>
+<div id="totalInstalled" style="height:500px"></div>
+<br>
+<div id="totalGeneration" style="height:500px"></div>
+<br>
+<div id="totalWaste" style="height:500px"></div>
+<br>
+<div id="totalWasteRatio" style="height:500px"></div>
+<br>
+<div id="totalHour" style="height:500px"></div>
+
+
+<script src="http://cdn.bootcss.com/echarts/3.4.0/echarts.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+
+<script> 
+
+var myChart = echarts.init(document.getElementById('newInstalled'));
+
+    option = {
+    title: {
+        text: '2016年新增风电并网容量',
+        subtext: '单位：万千瓦',
+        left: 'center'
+    },
+    tooltip: {
+        trigger: 'item'
+    },
+    legend: {
+        orient: 'vertical',
+        left: 'left',
+        data:['2016年']
+    },
+    visualMap: {
+        min: 0,
+        max: 325,
+        left: 'left',
+        top: 'bottom',
+        calculable: true
+    },
+    toolbox: {
+        show: true,
+        orient: 'vertical',
+        left: 'right',
+        top: 'center',
+        feature: {
+            dataView: {readOnly: false},
+            restore: {},
+            saveAsImage: {}
+        }
+    },
+    series: [
+        {
+            name: '2016年',
+            type: 'map',
+            mapType: 'china',
+            roam: false,
+            label: {
+                normal: {
+                    show: true
+                },
+                emphasis: {
+                    show: true
+                }
+            },
+            data:[
+                {name: '北京',value: 4 },
+                {name: '天津',value: 0 },
+                {name: '上海',value: 10 },
+                {name: '重庆',value: 5 },
+                {name: '河北',value: 166 },
+                {name: '河南',value: 13 },
+                {name: '云南',value: 325 },
+                {name: '辽宁',value: 56 },
+                {name: '黑龙江',value: 58 },
+                {name: '湖南',value: 61 },
+                {name: '安徽',value: 41 },
+                {name: '山东',value: 118 },
+                {name: '新疆',value: 85 },
+                {name: '江苏',value: 149 },
+                {name: '浙江',value: 15 },
+                {name: '江西',value: 41 },
+                {name: '湖北',value: 66 },
+                {name: '广西',value: 24 },
+                {name: '甘肃',value: 25 },
+                {name: '山西',value: 102 },
+                {name: '内蒙古',value: 132 },
+                {name: '陕西',value: 80 },
+                {name: '吉林',value: 61 },
+                {name: '福建',value: 42 },
+                {name: '贵州',value: 39 },
+                {name: '广东',value: 22 },
+                {name: '青海',value: 22 },
+                {name: '西藏',value: 0 },
+                {name: '四川',value: 52 },
+                {name: '宁夏',value: 120 },
+                {name: '海南',value: 0 },
+                {name: '台湾',value: 0 },
+                {name: '香港',value: 0 },
+                {name: '澳门',value: 0 }
+            ]
+        },
+    ]
+};
+
+myChart.setOption(option,true); //当setOption第二个参数为true时，会阻止数据合并
+</script>
+
+<script> 
+
+//初始化
+
+var myChart2 = echarts.init(document.getElementById('totalInstalled'));
+
+    option = {
+    title: {
+        text: '2016年累计风电并网容量',
+        subtext: '单位：万千瓦',
+        left: 'center'
+    },
+    tooltip: {
+        trigger: 'item'
+    },
+    legend: {
+        orient: 'vertical',
+        left: 'left',
+        data:['2016年']
+    },
+    visualMap: {
+        min: 0,
+        max: 2557,
+        left: 'left',
+        top: 'bottom',
+        calculable: true
+    },
+    toolbox: {
+        show: true,
+        orient: 'vertical',
+        left: 'right',
+        top: 'center',
+        feature: {
+            dataView: {readOnly: false},
+            restore: {},
+            saveAsImage: {}
+        }
+    },
+    series: [
+        {
+            name: '2016年',
+            type: 'map',
+            mapType: 'china',
+            roam: false,
+            label: {
+                normal: {
+                    show: true
+                },
+                emphasis: {
+                    show: true
+                }
+            },
+            data:[
+                {name: '北京',value: 19 },
+                {name: '天津',value: 29 },
+                {name: '上海',value: 71 },
+                {name: '重庆',value: 28 },
+                {name: '河北',value: 1188 },
+                {name: '河南',value: 104 },
+                {name: '云南',value: 737 },
+                {name: '辽宁',value: 695 },
+                {name: '黑龙江',value: 561 },
+                {name: '湖南',value: 217 },
+                {name: '安徽',value: 177 },
+                {name: '山东',value: 839 },
+                {name: '新疆',value: 1776 },
+                {name: '江苏',value: 561 },
+                {name: '浙江',value: 119 },
+                {name: '江西',value: 108 },
+                {name: '湖北',value: 201 },
+                {name: '广西',value: 67 },
+                {name: '甘肃',value: 1277 },
+                {name: '山西',value: 771 },
+                {name: '内蒙古',value: 2557 },
+                {name: '陕西',value: 249 },
+                {name: '吉林',value: 505 },
+                {name: '福建',value: 214 },
+                {name: '贵州',value: 362 },
+                {name: '广东',value: 268 },
+                {name: '青海',value: 69 },
+                {name: '西藏',value: 1 },
+                {name: '四川',value: 125 },
+                {name: '宁夏',value: 942 },
+                {name: '海南',value: 31 },
+                {name: '台湾',value: 0 },
+                {name: '香港',value: 0 },
+                {name: '澳门',value: 0 }
+            ]
+        },
+    ]
+};
+
+myChart2.setOption(option,true); //当setOption第二个参数为true时，会阻止数据合并
+</script>
+
+
+
+
+<script> 
+
+//初始化
+
+var myChart3 = echarts.init(document.getElementById('totalGeneration'));
+
+    option = {
+    title: {
+        text: '2016年风电发电量',
+        subtext: '单位：亿千瓦时',
+        left: 'center'
+    },
+    tooltip: {
+        trigger: 'item'
+    },
+    legend: {
+        orient: 'vertical',
+        left: 'left',
+        data:['2016年']
+    },
+    visualMap: {
+        min: 0,
+        max: 464,
+        left: 'left',
+        top: 'bottom',
+        calculable: true
+    },
+    toolbox: {
+        show: true,
+        orient: 'vertical',
+        left: 'right',
+        top: 'center',
+        feature: {
+            dataView: {readOnly: false},
+            restore: {},
+            saveAsImage: {}
+        }
+    },
+    series: [
+        {
+            name: '2016年',
+            type: 'map',
+            mapType: 'china',
+            roam: false,
+            label: {
+                normal: {
+                    show: true
+                },
+                emphasis: {
+                    show: true
+                }
+            },
+            data:[
+                {name: '北京',value: 3 },
+                {name: '天津',value: 6 },
+                {name: '河北',value: 219 },
+                {name: '山西',value: 135 },
+                {name: '山东',value: 147 },
+                {name: '内蒙古',value: 464 },
+                {name: '辽宁',value: 129 },
+                {name: '吉林',value: 67 },
+                {name: '黑龙江',value: 88 },
+                {name: '上海',value: 14 },
+                {name: '江苏',value: 98 },
+                {name: '浙江',value: 23 },
+                {name: '安徽',value: 34 },
+                {name: '福建',value: 50 },
+                {name: '江西',value: 19 },
+                {name: '河南',value: 18 },
+                {name: '湖北',value: 35 },
+                {name: '湖南',value: 39 },
+                {name: '重庆',value: 5 },
+                {name: '四川',value: 21 },
+                {name: '陕西',value: 28 },
+                {name: '甘肃',value: 136 },
+                {name: '青海',value: 10 },
+                {name: '宁夏',value: 129 },
+                {name: '新疆',value: 220 },
+                {name: '西藏',value: 0.1 },
+                {name: '广东',value: 50 },
+                {name: '广西',value: 13 },
+                {name: '海南',value: 6 },
+                {name: '贵州',value: 55 },
+                {name: '云南',value: 148 },
+                {name: '台湾',value: 0 },
+                {name: '香港',value: 0 },
+                {name: '澳门',value: 0 }
+            ]
+        },
+    ]
+};
+
+myChart3.setOption(option,true); //当setOption第二个参数为true时，会阻止数据合并
+</script>
+
+
+
+
+<script> 
+
+//初始化
+
+var myChart4 = echarts.init(document.getElementById('totalWaste'));
+
+    option = {
+    title: {
+        text: '2016年弃风电量',
+        subtext: '单位：亿千瓦时',
+        left: 'center'
+    },
+    tooltip: {
+        trigger: 'item'
+    },
+    legend: {
+        orient: 'vertical',
+        left: 'left',
+        data:['2016年']
+    },
+    visualMap: {
+        min: 0,
+        max: 137,
+        left: 'left',
+        top: 'bottom',
+        calculable: true
+    },
+    toolbox: {
+        show: true,
+        orient: 'vertical',
+        left: 'right',
+        top: 'center',
+        feature: {
+            dataView: {readOnly: false},
+            restore: {},
+            saveAsImage: {}
+        }
+    },
+    series: [
+        {
+            name: '2016年',
+            type: 'map',
+            mapType: 'china',
+            roam: false,
+            label: {
+                normal: {
+                    show: true
+                },
+                emphasis: {
+                    show: true
+                }
+            },
+            data:[
+                {name: '北京',value: 0 },
+                {name: '天津',value: 0 },
+                {name: '河北',value: 22 },
+                {name: '山西',value: 14 },
+                {name: '山东',value: 0 },
+                {name: '内蒙古',value: 124 },
+                {name: '辽宁',value: 19 },
+                {name: '吉林',value: 29 },
+                {name: '黑龙江',value: 20 },
+                {name: '上海',value: 0 },
+                {name: '江苏',value: 0 },
+                {name: '浙江',value: 0 },
+                {name: '安徽',value: 0 },
+                {name: '福建',value: 0 },
+                {name: '江西',value: 0 },
+                {name: '河南',value: 0 },
+                {name: '湖北',value: 0 },
+                {name: '湖南',value: 0 },
+                {name: '重庆',value: 0 },
+                {name: '四川',value: 0 },
+                {name: '陕西',value: 2 },
+                {name: '甘肃',value: 104 },
+                {name: '青海',value: 0 },
+                {name: '宁夏',value: 19 },
+                {name: '新疆',value: 137 },
+                {name: '西藏',value: 0.1 },
+                {name: '广东',value: 0 },
+                {name: '广西',value: 0 },
+                {name: '海南',value: 0 },
+                {name: '贵州',value: 0 },
+                {name: '云南',value: 0 },
+                {name: '台湾',value: 0 },
+                {name: '香港',value: 0 },
+                {name: '澳门',value: 0 }
+            ]
+        },
+    ]
+};
+
+myChart4.setOption(option,true); //当setOption第二个参数为true时，会阻止数据合并
+</script>
+
+
+
+
+<script> 
+
+var myChart5 = echarts.init(document.getElementById('totalWasteRatio'));
+
+    option = {
+    title: {
+        text: '2016年弃风率',
+        subtext: '单位：百分比',
+        left: 'center'
+    },
+    tooltip: {
+        trigger: 'item'
+    },
+    legend: {
+        orient: 'vertical',
+        left: 'left',
+        data:['2016年']
+    },
+    visualMap: {
+        min: 0,
+        max: 43,
+        left: 'left',
+        top: 'bottom',
+        calculable: true
+    },
+    toolbox: {
+        show: true,
+        orient: 'vertical',
+        left: 'right',
+        top: 'center',
+        feature: {
+            dataView: {readOnly: false},
+            restore: {},
+            saveAsImage: {}
+        }
+    },
+    series: [
+        {
+            name: '2016年',
+            type: 'map',
+            mapType: 'china',
+            roam: false,
+            label: {
+                normal: {
+                    show: true
+                },
+                emphasis: {
+                    show: true
+                }
+            },
+            data:[
+                {name: '北京',value: 0 },
+                {name: '天津',value: 0 },
+                {name: '河北',value: 9 },
+                {name: '山西',value: 9 },
+                {name: '山东',value: 0 },
+                {name: '内蒙古',value: 21 },
+                {name: '辽宁',value: 13 },
+                {name: '吉林',value: 30 },
+                {name: '黑龙江',value: 19 },
+                {name: '上海',value: 0 },
+                {name: '江苏',value: 0 },
+                {name: '浙江',value: 0 },
+                {name: '安徽',value: 0 },
+                {name: '福建',value: 0 },
+                {name: '江西',value: 0 },
+                {name: '河南',value: 0 },
+                {name: '湖北',value: 0 },
+                {name: '湖南',value: 0 },
+                {name: '重庆',value: 0 },
+                {name: '四川',value: 0 },
+                {name: '陕西',value: 7 },
+                {name: '甘肃',value: 43 },
+                {name: '青海',value: 0 },
+                {name: '宁夏',value: 13 },
+                {name: '新疆',value: 38 },
+                {name: '西藏',value: 0 },
+                {name: '广东',value: 0 },
+                {name: '广西',value: 0 },
+                {name: '海南',value: 0 },
+                {name: '贵州',value: 0 },
+                {name: '云南',value: 4 },
+                {name: '台湾',value: 0 },
+                {name: '香港',value: 0 },
+                {name: '澳门',value: 0 }
+            ]
+        },
+    ]
+};
+
+myChart5.setOption(option,true); //当setOption第二个参数为true时，会阻止数据合并
+</script>
+
+
+
+
+<script> 
+
+var myChart6 = echarts.init(document.getElementById('totalHour'));
+
+    option = {
+    title: {
+        text: '2016年风电利用小时数',
+        subtext: '单位：小时',
+        left: 'center'
+    },
+    tooltip: {
+        trigger: 'item'
+    },
+    legend: {
+        orient: 'vertical',
+        left: 'left',
+        data:['2016年']
+    },
+    visualMap: {
+        min: 1088,
+        max: 2503,
+        left: 'left',
+        top: 'bottom',
+        calculable: true
+    },
+    toolbox: {
+        show: true,
+        orient: 'vertical',
+        left: 'right',
+        top: 'center',
+        feature: {
+            dataView: {readOnly: false},
+            restore: {},
+            saveAsImage: {}
+        }
+    },
+    series: [
+        {
+            name: '2016年',
+            type: 'map',
+            mapType: 'china',
+            roam: false,
+            label: {
+                normal: {
+                    show: true
+                },
+                emphasis: {
+                    show: true
+                }
+            },
+            data:[
+                {name: '北京',value: 1750 },
+                {name: '天津',value: 2075 },
+                {name: '河北',value: 2077 },
+                {name: '山西',value: 1936 },
+                {name: '山东',value: 1869 },
+                {name: '内蒙古',value: 1830 },
+                {name: '辽宁',value: 1929 },
+                {name: '吉林',value: 1333 },
+                {name: '黑龙江',value: 1666 },
+                {name: '上海',value: 2162 },
+                {name: '江苏',value: 1980 },
+                {name: '浙江',value: 2161 },
+                {name: '安徽',value: 2109 },
+                {name: '福建',value: 2503 },
+                {name: '江西',value: 2114 },
+                {name: '河南',value: 1902 },
+                {name: '湖北',value: 2063 },
+                {name: '湖南',value: 2125 },
+                {name: '重庆',value: 1600 },
+                {name: '四川',value: 2247 },
+                {name: '陕西',value: 1951 },
+                {name: '甘肃',value: 1088 },
+                {name: '青海',value: 1726 },
+                {name: '宁夏',value: 1553 },
+                {name: '新疆',value: 1290 },
+                {name: '西藏',value: 1908 },
+                {name: '广东',value: 1848 },
+                {name: '广西',value: 2365 },
+                {name: '海南',value: 1781 },
+                {name: '贵州',value: 1806 },
+                {name: '云南',value: 2223 },
+                {name: '台湾',value: 0 },
+                {name: '香港',value: 0 },
+                {name: '澳门',value: 0 }
+            ]
+        },
+    ]
+};
+
+myChart6.setOption(option,true); //当setOption第二个参数为true时，会阻止数据合并
+</script>
+
+
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文数据来源：&lt;a href=&quot;http://www.nea.gov.cn/2017-01/26/c_136014615.htm&quot;&gt;国家能源局官网&lt;/a&gt;。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://tommyjiang.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="风电" scheme="http://tommyjiang.github.io/tags/%E9%A3%8E%E7%94%B5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>鸡年大吉</title>
+    <link href="http://tommyjiang.github.io/2017/2017-02-03-Chinese-new-year/"/>
+    <id>http://tommyjiang.github.io/2017/2017-02-03-Chinese-new-year/</id>
+    <published>2017-02-03T11:00:00.000Z</published>
+    <updated>2017-02-09T14:58:31.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>明天，应该说，就是，鸡年就要来临了。</p>
+</blockquote>
+<a id="more"></a>
+<h1 id="鸡年春节"><a href="#鸡年春节" class="headerlink" title="鸡年春节"></a>鸡年春节</h1><p>每逢佳节就会感慨单身的不易，其实家里亲戚已经算比较友善的了，但也禁不住别人成天念叨。</p>
+<p>大年三十初中同学建了个微信群，80%的都不说话在里面抢红包……同学是用来怀念的，拉个群不知道聊啥确实挺尴尬的。</p>
+<p>年也过完了，好好策划下2月的计划吧。</p>
+<h1 id="2月计划"><a href="#2月计划" class="headerlink" title="2月计划"></a>2月计划</h1><p>大言不惭地说一句：我个人的执行力很强，所以定了计划一般都要拼死执行，不过还是给自己留点弹性，生活太一板一眼的话会很累。</p>
+<h2 id="Geek"><a href="#Geek" class="headerlink" title="Geek"></a>Geek</h2><p>继续学习 Python，单刷两本 Python 数据分析相关书籍。 </p>
+<ul>
+<li>☐ <a href="https://book.douban.com/subject/25779298/" target="_blank" rel="external">利用 Python 进行数据分析</a>(Python for Data Analysis 中文版)</li>
+<li>☐ <a href="https://book.douban.com/subject/25921015/" target="_blank" rel="external">Python for Finance</a></li>
+</ul>
+<p>两本书大概浏览了一下，发现还是应该需求驱动型，单独看书效果一般。</p>
+<h2 id="社交"><a href="#社交" class="headerlink" title="社交"></a>社交</h2><ul>
+<li>☑ 发一篇征友文（已发在博客上，同时藏到知乎专栏后面，可能是史上最隐蔽的征友文了）</li>
+<li>☐ 打一次羽毛球</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;明天，应该说，就是，鸡年就要来临了。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="Python" scheme="http://tommyjiang.github.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>歌词摘录</title>
+    <link href="http://tommyjiang.github.io/2017/2017-01-03-Song-lyrics/"/>
+    <id>http://tommyjiang.github.io/2017/2017-01-03-Song-lyrics/</id>
+    <published>2017-01-03T11:00:00.000Z</published>
+    <updated>2017-02-08T03:06:07.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>人若矫情起来，听什么歌都像唱自己。</p>
+<a id="more"></a>
+<h1 id="爱情"><a href="#爱情" class="headerlink" title="爱情"></a>爱情</h1><blockquote>
+<p>难过是因为我太认真</p>
+<p>——金南玲《逆流成河》</p>
+<p>爱人在身边随处是天堂</p>
+<p>——乌兰托娅《火红的萨日朗》</p>
+<p>既然爱你不能言语<br>只能微笑哭泣<br>让我从此忘了你</p>
+<p>——许茹芸《独角戏》</p>
+<p>由来只有新人笑 有谁听到旧人哭</p>
+<p>——黄安《新鸳鸯蝴蝶梦》</p>
+<p>朝朝望呀望呀愁容添 相恋怎能不相怨</p>
+<p>——新白娘子传奇《心湖雨又风》</p>
+</blockquote>
+<h1 id="青春"><a href="#青春" class="headerlink" title="青春"></a>青春</h1><blockquote>
+<p>时光去了不回头 珍惜吧好朋友</p>
+<p>江玲/钟镇涛 《在那河畔》</p>
+<p>我们都曾有过一张天真而忧伤的脸<br>手握阳光我们望着遥远</p>
+<p>四个女生 《心愿》</p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;人若矫情起来，听什么歌都像唱自己。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="音乐" scheme="http://tommyjiang.github.io/tags/%E9%9F%B3%E4%B9%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2016行程总结</title>
+    <link href="http://tommyjiang.github.io/2016/2016-12-31-Trip-2016/"/>
+    <id>http://tommyjiang.github.io/2016/2016-12-31-Trip-2016/</id>
+    <published>2016-12-31T02:00:00.000Z</published>
+    <updated>2017-01-13T05:00:01.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>2016年，参加工作后第一个完整的自然年，飞得少了，高铁多了。</p>
+<a id="more"></a>
+<p>2016年各月飞机里程和火车里程如下：</p>
+
+<div id="tripSum2016" style="height:400px"></div>
+
+<p>离开学校后出差不怎么坐飞机了，但高铁还是坐了不少，一年算下来也坐了 13000 多公里的高铁。</p>
+
+<script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+<script type="text/javascript">
+// 路径配置
+    require.config({
+        paths: {
+            echarts: 'http://echarts.baidu.com/build/dist'
+        }
+    });
+
+    require(
+        [
+            'echarts',
+            'echarts/chart/bar',
+            'echarts/chart/line',
+        ],
+        drawEcharts
+    );
+
+    function drawEcharts(ec){
+        TripSum2016(ec);
+    }
+
+    function TripSum2016(ec){
+        var myTripSum2016 = ec.init(document.getElementById('tripSum2016'),'macarons');
+
+        option = {
+            tooltip : {
+                trigger: 'axis'
+            },
+            toolbox: {
+                show : false,
+                feature : {
+                    mark : {show: true},
+                    dataView : {show: true, readOnly: false},
+                    magicType: {show: true, type: ['bar', 'bar', 'bar']},
+                    restore : {show: true},
+                    saveAsImage : {show: true}
+                }
+            },
+            calculable : true,
+            legend: {
+                data:['飞机行程', '火车行程']
+            },
+            xAxis : [
+                {
+                    type : 'category',
+                    data : ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月']
+                }
+            ],
+            yAxis : [
+                {
+                    type : 'value',
+                    name : '飞机行程(km)',
+                    axisLabel : {
+                        formatter: '{value}'
+                    }
+                },
+                {
+                    type : 'value',
+                    name : '火车行程(km)',
+                    axisLabel : {
+                        formatter: '{value}'
+                    }
+                }
+            ],
+            series : [
+                {
+                    name:'飞机行程',
+                    type:'bar',
+                    data:[0, 0, 0, 0, 0, 0, 0, 3932, 0, 0, 0, 0]
+                },
+                {
+                    name:'火车行程',
+                    type:'bar',
+                    yAxisIndex: 1,
+                    data:[2374, 468, 354, 2432, 2754, 0, 0, 451, 0, 2609, 1568, 354]
+                }
+            ]
+        };
+        myTripSum2016.setOption(option,true); //当setOption第二个参数为true时，会阻止数据合并
+    }
+</script>
+
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;2016年，参加工作后第一个完整的自然年，飞得少了，高铁多了。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="Echarts" scheme="http://tommyjiang.github.io/tags/Echarts/"/>
+    
+      <category term="旅程" scheme="http://tommyjiang.github.io/tags/%E6%97%85%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>手帕口道口通过车次信息</title>
+    <link href="http://tommyjiang.github.io/2016/2016-12-10-Shou-pa-kou-crossing/"/>
+    <id>http://tommyjiang.github.io/2016/2016-12-10-Shou-pa-kou-crossing/</id>
+    <published>2016-12-10T11:00:00.000Z</published>
+    <updated>2017-03-19T04:55:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>毕业工作后从五道口转到了手帕口道口，每天到道口听听车机联控还是很开心的，记录下具体的车次信息。</p>
+<a id="more"></a>
+
+<table border="1px" align="center">
+  <tr>
+    <th style="text-align:center">序号</th>
+    <th style="text-align:center">车次</th>
+    <th style="text-align:center">始发站</th>
+    <th style="text-align:center">终到站</th>
+    <th style="text-align:center">上/下行</th>
+    <th style="text-align:center">北京西站开车/停车时间</th>
+    <th style="text-align:center">手帕口路口通过时间段</th>
+  </tr>
+  <tr>
+    <td style="text-align:center">1</td>
+    <td style="text-align:center">Z66</td>
+    <td style="text-align:center">南昌</td>
+    <td style="text-align:center">北京西</td>
+    <td style="text-align:center">上行</td>
+    <td style="text-align:center">07:38</td>
+    <td style="text-align:center">07:31-07:35</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">2</td>
+    <td style="text-align:center">Z134</td>
+    <td style="text-align:center">井冈山</td>
+    <td style="text-align:center">北京西</td>
+    <td style="text-align:center">上行</td>
+    <td style="text-align:center">08:03</td>
+    <td style="text-align:center">07:56-08:00</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">3</td>
+    <td style="text-align:center">Y530</td>
+    <td style="text-align:center">张家口南</td>
+    <td style="text-align:center">北京西</td>
+    <td style="text-align:center">上行</td>
+    <td style="text-align:center">10:10</td>
+    <td style="text-align:center">10:03-10:07</td>
+  <</tr><tr>
+    <td style="text-align:center">4</td>
+    <td style="text-align:center">K1071</td>
+    <td style="text-align:center">北京西</td>
+    <td style="text-align:center">安庆</td>
+    <td style="text-align:center">下行</td>
+    <td style="text-align:center">12:12</td>
+    <td style="text-align:center">12:15-12:19</td>
+  </tr>/tr>
+  <tr>
+    <td style="text-align:center">5</td>
+    <td style="text-align:center">Z65</td>
+    <td style="text-align:center">北京西</td>
+    <td style="text-align:center">南昌</td>
+    <td style="text-align:center">下行</td>
+    <td style="text-align:center">19:49</td>
+    <td style="text-align:center">19:52-19:56</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">6</td>
+    <td style="text-align:center">1136</td>
+    <td style="text-align:center">天津</td>
+    <td style="text-align:center">乌海西</td>
+    <td style="text-align:center">上行</td>
+    <td style="text-align:center">22:29</td>
+    <td style="text-align:center">22:22-22:26</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">7</td>
+    <td style="text-align:center">1303</td>
+    <td style="text-align:center">北京西</td>
+    <td style="text-align:center">郑州</td>
+    <td style="text-align:center">下行</td>
+    <td style="text-align:center">22:38</td>
+    <td style="text-align:center">22:41-22:45</td>
+  </tr>
+</table>
+
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;毕业工作后从五道口转到了手帕口道口，每天到道口听听车机联控还是很开心的，记录下具体的车次信息。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="铁路" scheme="http://tommyjiang.github.io/tags/%E9%93%81%E8%B7%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo 博文中加入百度地图</title>
+    <link href="http://tommyjiang.github.io/2016/2016-11-16-Hexo-baidu-map/"/>
+    <id>http://tommyjiang.github.io/2016/2016-11-16-Hexo-baidu-map/</id>
+    <published>2016-11-16T11:00:00.000Z</published>
+    <updated>2016-11-17T16:27:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>利用百度地图 API 实现在 Hexo 的博文中加入地图。</p>
+<a id="more"></a>
+<p>最近想丰富下生活，最先想到的就是多品尝点北京的美食。作为一个认真的人，吃过就想记下来，但只有饭馆的名字和地址显得太单调了，就想能在地图上显示的话会比较直观。搜了下百度地图的 API，不多说，直接上代码吧。更详细的内容可以参考百度地图 Javascript 的 <a href="http://lbsyun.baidu.com/index.php?title=jspopular" target="_blank" rel="external">API</a>。</p>
+<p>首先新建一个<code>div</code>：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"min-height: 500px; width: 100%;"</span> <span class="attr">id</span>=<span class="string">"map"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>然后利用百度地图 API 在<code>div</code>中填充一个地图： </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">map_init</span>(<span class="params"></span>) </span>&#123;</div><div class="line">                </div><div class="line">        <span class="keyword">var</span> map = <span class="keyword">new</span> BMap.Map(<span class="string">"map"</span>);    <span class="comment">// 创建Map实例</span></div><div class="line">        map.centerAndZoom(<span class="keyword">new</span> BMap.Point(<span class="number">116.41</span>,<span class="number">39.89</span>), <span class="number">13</span>);  <span class="comment">// 初始化,设置中心点坐标和地图级别</span></div><div class="line">        map.addControl(<span class="keyword">new</span> BMap.MapTypeControl());   <span class="comment">//添加地图类型控件</span></div><div class="line">        map.setCurrentCity(<span class="string">"北京"</span>);          <span class="comment">// 设置地图显示的城市 此项是必须设置的</span></div><div class="line">        map.enableScrollWheelZoom(<span class="literal">true</span>);     <span class="comment">//开启鼠标滚轮缩放</span></div><div class="line">                </div><div class="line">        <span class="comment">//向地图中添加缩放控件</span></div><div class="line">        <span class="keyword">var</span> ctrlNav = <span class="keyword">new</span> <span class="built_in">window</span>.BMap.NavigationControl(&#123;</div><div class="line">                           anchor: BMAP_ANCHOR_TOP_LEFT,</div><div class="line">                           type: BMAP_NAVIGATION_CONTROL_LARGE</div><div class="line">                      &#125;);</div><div class="line">        map.addControl(ctrlNav);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">//异步调用百度js</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">map_load</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> load = <span class="built_in">document</span>.createElement(<span class="string">"script"</span>);</div><div class="line">        load.src = <span class="string">"http://api.map.baidu.com/api?v=1.4&amp;callback=map_init"</span>;</div><div class="line">        <span class="built_in">document</span>.body.appendChild(load);</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">window</span>.onload = map_load;</div><div class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></figure>
+<p>上述代码直接放在 Hexo Markdown 博文中的<code>raw</code>标签中，即：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% raw %&#125;</div><div class="line">上边的代码</div><div class="line">&#123;% endraw %&#125;</div></pre></td></tr></table></figure>
+<p>结果如下：</p>
+
+    <div style="min-height: 500px; width: 100%;" id="map">
+    </div>
+
+    <script type="text/javascript">
+  
+        function map_init() {
+                    
+            var map = new BMap.Map("map");    // 创建Map实例
+            map.centerAndZoom(new BMap.Point(116.41,39.89), 13);  // 初始化地图,设置中心点坐标和地图级别
+            map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+            map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+            map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+                    
+            //向地图中添加缩放控件
+            var ctrlNav = new window.BMap.NavigationControl({
+                               anchor: BMAP_ANCHOR_TOP_LEFT,
+                               type: BMAP_NAVIGATION_CONTROL_LARGE
+                          });
+            map.addControl(ctrlNav);
+  
+            var points = [
+                [116.395857,39.901169], // 渔芙南
+                [116.649810,39.912096], // 三禾粉匠贵州米粉店 
+                [116.323938,39.989919],
+                [116.328896,39.988039],
+                [116.321135,39.987072],
+                [116.332453,39.989007],
+                [116.324045,39.987984],
+                [116.322285,39.988316],
+                [116.322608,39.986381]
+            ];
+            
+            var size1 = new BMap.Size(21, 50);
+            var size2 = new BMap.Size(21, 0);
+            var icons = [], markers = [];
+            
+            // 向地图添加标注
+            // for( var i = 0;i < points.length; i++){
+            //     var point = new BMap.Point(points[i][0], points[i][1]);
+            //     var icon_pre = 'http://o852ayzmr.bkt.clouddn.com/';
+            //     var icon_post = '.png';
+            //     var icon_string = icon_pre + (i+1).toString()  + icon_post;
+            //     icons[i] = new BMap.Icon(icon_string, size1, {anchor: size2})
+            //     // icons[i] = new BMap.Icon('http://o852ayzmr.bkt.clouddn.com/1.png', size1, {anchor: size2})
+            //     markers[i] = new BMap.Marker(point, {icon: icons[i]});
+            //     map.addOverlay(markers[i]);
+            // };
+        }
+
+        //异步调用百度js
+        function map_load() {
+            var load = document.createElement("script");
+            load.src = "http://api.map.baidu.com/api?v=1.4&callback=map_init";
+            document.body.appendChild(load);
+        }
+        window.onload = map_load;
+    </script>
+
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;利用百度地图 API 实现在 Hexo 的博文中加入地图。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Geek" scheme="http://tommyjiang.github.io/categories/Geek/"/>
+    
+    
+      <category term="Hexo" scheme="http://tommyjiang.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>北京十大适合一个人吃的餐厅</title>
+    <link href="http://tommyjiang.github.io/2016/2016-11-16-Beijing-single-res/"/>
+    <id>http://tommyjiang.github.io/2016/2016-11-16-Beijing-single-res/</id>
+    <published>2016-11-16T11:00:00.000Z</published>
+    <updated>2016-12-04T11:44:58.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>记录下有才姐推荐的微博上的<a href="http://weibo.com/2643091105/EhDNHuBvH?from=page_1005052643091105_profile&amp;wvr=6&amp;mod=weibotime&amp;type=comment#_rnd1479530057542" target="_blank" rel="external">北京十大适合一个人吃的餐厅</a>，把生活丰富起来。</p>
+<a id="more"></a>
+<p>十大适合一个人吃的餐厅的具体信息如下：<br>
+<table border="1px" align="center">
+  <tr>
+    <th style="text-align:center">序号</th>
+    <th style="text-align:center">餐厅名</th>
+    <th style="text-align:center">菜系</th>
+    <th style="text-align:center">地址</th>
+    <th style="text-align:center">地铁站</th>
+  </tr>
+  <tr>
+    <td style="text-align:center">1</td>
+    <td style="text-align:center">渔芙南</td>
+    <td style="text-align:center">湘菜</td>
+    <td style="text-align:center">西城区杨梅竹斜街166号</td>
+    <td style="text-align:center">虎坊桥</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">2</td>
+    <td style="text-align:center">三禾粉匠贵州米粉店</td>
+    <td style="text-align:center">贵州米粉</td>
+    <td style="text-align:center">通州区万达广场西门金街B区2层B1-254号</td>
+    <td style="text-align:center">通州北苑</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">3</td>
+    <td style="text-align:center">北27号</td>
+    <td style="text-align:center">兰州菜</td>
+    <td style="text-align:center">东城区三里屯北27号楼1层</td>
+    <td style="text-align:center">团结湖</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">4</td>
+    <td style="text-align:center">希有煮艺</td>
+    <td style="text-align:center">潮汕菜</td>
+    <td style="text-align:center">朝阳区后现代城3号楼底商</td>
+    <td style="text-align:center">大郊亭</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">5</td>
+    <td style="text-align:center">楚大圣</td>
+    <td style="text-align:center">鄂菜</td>
+    <td style="text-align:center">东城区戏楼胡同6号</td>
+    <td style="text-align:center">雍和宫</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">6</td>
+    <td style="text-align:center">饺真水饺</td>
+    <td style="text-align:center">饺子</td>
+    <td style="text-align:center">朝阳区广渠门外大街5号院54号楼1层08</td>
+    <td style="text-align:center">广渠门</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">7</td>
+    <td style="text-align:center">白老虎屯</td>
+    <td style="text-align:center">烤串</td>
+    <td style="text-align:center">东城区香饵胡同84号</td>
+    <td style="text-align:center">北新桥</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">8</td>
+    <td style="text-align:center">小春日和</td>
+    <td style="text-align:center">日料</td>
+    <td style="text-align:center">东城区东直门内大街288-16号</td>
+    <td style="text-align:center">北新桥</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">9</td>
+    <td style="text-align:center">家系面屋</td>
+    <td style="text-align:center">面食</td>
+    <td style="text-align:center">朝阳区太阳宫中路凯德MALL四层</td>
+    <td style="text-align:center">太阳宫</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">10</td>
+    <td style="text-align:center">河沿肉饼</td>
+    <td style="text-align:center">肉饼</td>
+    <td style="text-align:center">东城区北河沿大街159-2号</td>
+    <td style="text-align:center">王府井</td>
+  </tr>
+</table>
+</p>
+<p>十大适合一个人吃的餐厅的具体位置如下：</p>
+
+    <div style="min-height: 500px; width: 100%;" id="map">
+    </div>
+
+    <script type="text/javascript">
+  
+        function map_init() {
+                    
+            var map = new BMap.Map("map");    // 创建Map实例
+            map.centerAndZoom(new BMap.Point(116.41,39.89), 13);  // 初始化地图,设置中心点坐标和地图级别
+            map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+            map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+            map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+                    
+            //向地图中添加缩放控件
+            var ctrlNav = new window.BMap.NavigationControl({
+                               anchor: BMAP_ANCHOR_TOP_LEFT,
+                               type: BMAP_NAVIGATION_CONTROL_LARGE
+                          });
+            map.addControl(ctrlNav);
+  
+            var points = [
+                [116.395857,39.901169], // 渔芙南
+                [116.649810,39.912096], // 三禾粉匠贵州米粉店 
+                [116.459714,39.945100], // 北27号
+                [116.404120,39.942986], // 希有煮艺
+                [116.424392,39.951420], // 楚大圣
+                [116.457390,39.900186], // 饺真水饺
+                [116.420776,39.945450], // 白老虎屯
+                [116.423915,39.946522], // 小春日和
+                [116.453864,39.977176], // 家系面屋
+                [116.412775,39.922231], // 河沿肉饼
+            ];
+            
+            var size1 = new BMap.Size(21, 50);
+            var size2 = new BMap.Size(21, 0);
+            var icons = [], markers = [];
+            
+            // 向地图添加标注
+            for( var i = 0;i < points.length; i++){
+                var point = new BMap.Point(points[i][0], points[i][1]);
+                var icon_pre = 'http://o852ayzmr.bkt.clouddn.com/';
+                var icon_post = '.png';
+                var icon_string = icon_pre + (i+1).toString()  + icon_post;
+                icons[i] = new BMap.Icon(icon_string, size1, {anchor: size2})
+                // icons[i] = new BMap.Icon('http://o852ayzmr.bkt.clouddn.com/1.png', size1, {anchor: size2})
+                markers[i] = new BMap.Marker(point, {icon: icons[i]});
+                map.addOverlay(markers[i]);
+            };
+        }
+
+        //异步调用百度js
+        function map_load() {
+            var load = document.createElement("script");
+            load.src = "http://api.map.baidu.com/api?v=1.4&callback=map_init";
+            document.body.appendChild(load);
+        }  
+        window.onload = map_load;
+    </script>
+
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;记录下有才姐推荐的微博上的&lt;a href=&quot;http://weibo.com/2643091105/EhDNHuBvH?from=page_1005052643091105_profile&amp;amp;wvr=6&amp;amp;mod=weibotime&amp;amp;type=comment#_rnd1479530057542&quot;&gt;北京十大适合一个人吃的餐厅&lt;/a&gt;，把生活丰富起来。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="美食" scheme="http://tommyjiang.github.io/tags/%E7%BE%8E%E9%A3%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>纪念清华园站 &amp; 我的铁路情缘</title>
+    <link href="http://tommyjiang.github.io/2016/2016-11-01-Tsinghua-yuan-station/"/>
+    <id>http://tommyjiang.github.io/2016/2016-11-01-Tsinghua-yuan-station/</id>
+    <published>2016-11-01T11:00:00.000Z</published>
+    <updated>2016-11-16T09:21:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>百年老站清华园站昨天悄然谢幕，谨以此文聊表纪念，顺便聊聊我和铁路的不解之缘。</p>
+<a id="more"></a>
+<h1 id="清华园和五道口的谢幕"><a href="#清华园和五道口的谢幕" class="headerlink" title="清华园和五道口的谢幕"></a>清华园和五道口的谢幕</h1><p>2016年11月1日，百年老站清华园站停止办理客运业务，五道口熟悉的“行人车辆请注意，火车就要开过来了”也成为了历史。微博上有一段2016年10月31日晚11点50分左右 K273 次通过清华园站时候的<a href="http://weibo.com/1558146213/EfGEgrFxu?from=page_1005051558146213_profile&amp;wvr=6&amp;mod=weibotime" target="_blank" rel="external">视频</a>，视频中记录了清华园站最后的车机联控：</p>
+<blockquote>
+<p>“清华园车站再见，五道口再见。”<br>“清华园车站再见！五道口再见！”<br>“双清路道口再见！”<br>“再见了，拜拜了。”<br>“再见了，同志们。”<br>“再见了！”<br>“再见了……同志们……”</p>
+</blockquote>
+<p>作为一个在五道口旁生活9年的人，看到这个视频一阵心酸，有的人有的事真的只能陪你走一段路。五道口的大喇叭广播和栏杆曾经是多么习以为常的事，如今却也要黯然退场。我自己曾在2012年3月坐过北京北——通辽的K1015次，2014年9月坐过清华园——南口的S2线，四次坐车经过五道口，也算最好的纪念了吧。</p>
+<p>2016-11-04更新：上个视频的作者发布了五道口最后一趟列车 K273 次车机联控的完整版<a href="http://www.bilibili.com/video/av6934371/" target="_blank" rel="external">视频</a>。</p>
+<h1 id="我和铁路"><a href="#我和铁路" class="headerlink" title="我和铁路"></a>我和铁路</h1><p>由于爸妈都是铁路工人，加上小时候每周都往返于秦皇岛和古冶（现在是唐山的一个区）之间，我很早就对铁路很熟悉。印象最深的就是每次在站台等车时，火车呼啸着从身边经过的时候我都要捂紧耳朵。奶奶也是老铁路员工，所以住的离铁路都很近。我还记得小时候家的楼房号是303，从古冶回秦皇岛的时候坐的车也是303，那时候也没有什么K/T/Z，更别说G/D了。</p>
+<p>每天晚上睡觉的时候，我都能听到火车从不远处的铁道上经过的哐哧声和时不时伴随的车头的鸣笛声。小时候也经常到秦皇岛站旁边的信号工区跟着我妈一起上班，印象中我妈办公室旁边不远就是秦皇岛站的车站值班大厅，当时条件还十分落后，不同的车次还要用红色、蓝色和黑色圆珠笔加以区分，前面大屏上的灯显示的是秦皇岛站各股道以及上、下行一接近的情况。2007年夏天我再回去的时候，列车和车站的具体信息已经都显示到在电脑上显示了，确实进步了不少。</p>
+<p>小时候坐的车都是现在已经是古董的绿皮车，我最喜欢坐的是靠窗的位置，爸妈带我坐车的时候经常会和别人商量让我换到窗边，现在想想也确实挺熊孩子的……第一次坐长途车应该是在2001年的五一，当时从唐山坐 K190 次去上海，由于之前没定好行程，上车后我还站了很久，直到有人下车才补的卧铺票。2007年铁路第六次大提速的时候，我趴在宿舍小电视的旁边看新闻，那是第一次见到动车组，子弹头和流线的造型太夺人眼球了，直到2008年的夏天我才第一次坐动车，和本科同学一起从北京到北戴河。</p>
+<p>读博后由于经常出差，坐高铁的次数也多了很多。2012年我曾经从广州南坐车到武汉站，然后再转直特到北京西，当时京广高铁武广段已经通车，但京武段还没。2014年6月从北京南到南京南，终于体验了一回京沪高铁。不得不说坐标杆车在京沪高铁济南西和京广高铁石家庄站正线以 270km/h 以上的速度通过的时候还是很爽的。</p>
+<p>今年9月郑徐打通，京沪和京广有不那么近的连接通道了，年底沪昆高铁全线打通，云南也步入高铁时代了。作为铁路子弟，也算见证了中国铁路的发展和变迁，这也是我和铁路之间的不解之缘。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;百年老站清华园站昨天悄然谢幕，谨以此文聊表纪念，顺便聊聊我和铁路的不解之缘。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="铁路" scheme="http://tommyjiang.github.io/tags/%E9%93%81%E8%B7%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>愿得一心人，白首不相离</title>
+    <link href="http://tommyjiang.github.io/2016/2016-10-24-Forever-love/"/>
+    <id>http://tommyjiang.github.io/2016/2016-10-24-Forever-love/</id>
+    <published>2016-10-24T11:00:00.000Z</published>
+    <updated>2016-11-03T12:29:40.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近遇到点小挫折，过程中也成长了不少。</p>
+<a id="more"></a>
+<p>1.生活技能树很重要，要多点、早点这部分技能。之前读博包括毕业后的一段时间都在主修工作技能，现在发现这部分技能在交往中几乎没用，还是要多体验生活，发展点兴趣爱好，做个饭，开个车等等，这样聊天也有话题，总不能一直聊工作吧。</p>
+<p>2.尊重他人的想法。认真对待感情的人在想清楚之后都会做出决定，尊重别人的想法和决定，别太较真，别太强势。</p>
+<p>3.人是会变的，感情也是需要培养的。开始的时候别用力太猛，所谓情深不寿，两个人的感情是和经历相关的，没有共同的经历，感情就是无源之水，无本之木。</p>
+<p>4.凤凰周刊的王路有篇文章写得很好，题目叫<a href="https://zhuanlan.zhihu.com/p/22310846?refer=wanglu" target="_blank" rel="external">《必须向大龄单身女致敬》</a>，里面有这样一段话：</p>
+<blockquote>
+<p>要能够接受爱情的缺席。要能够接受一切美好事物的缺席。在有瑕疵的生命中，去尽心尽力，才有望企及真正的圆满。</p>
+</blockquote>
+<p>缘分从来都是自己主动争取来的，而不是被动等来的，现在很多单身青年都不着急，抱着提升自己的心态生活，想找一个对象却又不采取最简单直接的方式。找对象，关键是找，而不是所谓的提升自己。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近遇到点小挫折，过程中也成长了不少。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="感情" scheme="http://tommyjiang.github.io/tags/%E6%84%9F%E6%83%85/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>北京地铁各线路颜色 HEX 及 RGB 代码</title>
+    <link href="http://tommyjiang.github.io/2016/2016-09-10-Beijing-subway-color/"/>
+    <id>http://tommyjiang.github.io/2016/2016-09-10-Beijing-subway-color/</id>
+    <published>2016-09-10T14:00:00.000Z</published>
+    <updated>2016-09-12T01:20:58.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>大概翻了翻，网上好像还没有北京地铁各线路颜色的 HEX 及 RGB 代码，自己整理一份。</p>
+<a id="more"></a>
+<p>北京地铁各线路颜色 HEX 和 RGB 代码如下，参考<a href="http://www.bjsubway.com/subwaymap/station_map.html" target="_blank" rel="external">北京地铁官网线路图</a>：</p>
+
+<table border="1px" align="center">
+  <tr>
+    <th style="text-align:center">线路序号</th>
+    <th style="text-align:center">颜色</th>
+    <th style="text-align:center">HEX</th>
+    <th style="text-align:center">RGB</th>
+  </tr>
+  <tr>
+    <td style="text-align:center">1号线</td>
+    <td bgcolor="bb1f20" style="text-align:center"></td>
+    <td style="text-align:center">#BB1F20</td>
+    <td style="text-align:center">rgb(187, 31, 32)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">2号线</td>
+    <td bgcolor="004a88" style="text-align:center"></td>
+    <td style="text-align:center">#004A88</td>
+    <td style="text-align:center">rgb(0, 74, 136)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">4号线</td>
+    <td bgcolor="007c8b" style="text-align:center"></td>
+    <td style="text-align:center">#007C8B</td>
+    <td style="text-align:center">rgb(0, 124, 139)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">5号线</td>
+    <td bgcolor="95006d" style="text-align:center"></td>
+    <td style="text-align:center">#95006D</td>
+    <td style="text-align:center">rgb(149, 0, 109)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">6号线</td>
+    <td bgcolor="c88700" style="text-align:center"></td>
+    <td style="text-align:center">#C88700</td>
+    <td style="text-align:center">rgb(200, 135, 0)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">7号线</td>
+    <td bgcolor="f4ba6a" style="text-align:center"></td>
+    <td style="text-align:center">#F4BA6A</td>
+    <td style="text-align:center">rgb(244, 186, 106)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">8号线</td>
+    <td bgcolor="038d57" style="text-align:center"></td>
+    <td style="text-align:center">#038D57</td>
+    <td style="text-align:center">rgb(3, 141, 87)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">9号线</td>
+    <td bgcolor="7dbd00" style="text-align:center"></td>
+    <td style="text-align:center">#7DBD00</td>
+    <td style="text-align:center">rgb(125, 189, 0)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">10号线</td>
+    <td bgcolor="0089b5" style="text-align:center"></td>
+    <td style="text-align:center">#0089B5</td>
+    <td style="text-align:center">rgb(0, 137, 181)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">13号线</td>
+    <td bgcolor="f8e700" style="text-align:center"></td>
+    <td style="text-align:center">#F8E700</td>
+    <td style="text-align:center">rgb(248, 231, 0)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">14号线</td>
+    <td bgcolor="cb958f" style="text-align:center"></td>
+    <td style="text-align:center">#CB958F</td>
+    <td style="text-align:center">rgb(203, 149, 143)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">15号线</td>
+    <td bgcolor="491b56" style="text-align:center"></td>
+    <td style="text-align:center">#491B56</td>
+    <td style="text-align:center">rgb(73, 27, 86)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">八通线</td>
+    <td bgcolor="bb1f20" style="text-align:center"></td>
+    <td style="text-align:center">#BB1F20</td>
+    <td style="text-align:center">rgb(187, 31, 32)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">房山线</td>
+    <td bgcolor="de490e" style="text-align:center"></td>
+    <td style="text-align:center">#DE490E</td>
+    <td style="text-align:center">rgb(222, 73, 14)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">昌平线</td>
+    <td bgcolor="d668a3" style="text-align:center"></td>
+    <td style="text-align:center">#D668A3</td>
+    <td style="text-align:center">rgb(214, 104, 163)</td>
+  </tr>
+</table>
+
+<h1 id="版本记录"><a href="#版本记录" class="headerlink" title="版本记录"></a>版本记录</h1><p>2015-09-10：v1.0-新建博文。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;大概翻了翻，网上好像还没有北京地铁各线路颜色的 HEX 及 RGB 代码，自己整理一份。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://tommyjiang.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="地铁" scheme="http://tommyjiang.github.io/tags/%E5%9C%B0%E9%93%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mac 下 Emacs Org mode 加密以及 gnupg 的安装</title>
+    <link href="http://tommyjiang.github.io/2016/2016-09-06-Org-mode-org-encrypt-gnupg-Mac/"/>
+    <id>http://tommyjiang.github.io/2016/2016-09-06-Org-mode-org-encrypt-gnupg-Mac/</id>
+    <published>2016-09-06T14:00:00.000Z</published>
+    <updated>2016-09-12T01:23:46.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Mac 下 Org mode 加密之前用得好好的，最近发现执行<code>org-encrypt-entry</code>时有问题，原来是<code>gnupg</code>的原因。</p>
+<a id="more"></a>
+<p>迁移到<code>Spacemacs</code>之后感觉很方便，<code>base package</code>中自带了<code>exec-path-from-shell</code>，可以直接使用 Mac 系统的环境变量。</p>
+<p>前天用<code>org-encrypt-entry</code>把<code>org</code>文件加密的时候报错，查了下<code>homebrew</code>安装的<code>gnupg</code>，发现已经更新到<code>gnupg2</code>了。所以果断自己下载了<code>gnupg 1.4.21</code>的稳定版：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install gpg1</div></pre></td></tr></table></figure>
+<p>同时在<code>.spacemacs.d</code>的<code>init.el</code>中加入了<code>gnupg 1.4.21</code>的路径：</p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(<span class="name">add-to-list</span> 'exec-path <span class="string">"/usr/local/opt/gnupg/libexec/gpgbin"</span>)</div></pre></td></tr></table></figure>
+<p>又可以用来<code>gnupg</code>来给<code>org</code>文件加密了。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Mac 下 Org mode 加密之前用得好好的，最近发现执行&lt;code&gt;org-encrypt-entry&lt;/code&gt;时有问题，原来是&lt;code&gt;gnupg&lt;/code&gt;的原因。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://tommyjiang.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Mac" scheme="http://tommyjiang.github.io/tags/Mac/"/>
+    
+      <category term="Emacs" scheme="http://tommyjiang.github.io/tags/Emacs/"/>
+    
+      <category term="Org mode" scheme="http://tommyjiang.github.io/tags/Org-mode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>西单大悦城更换 RMBP 屏幕攻略</title>
+    <link href="http://tommyjiang.github.io/2016/2016-08-28-Apple-xidan-joy-city-retina-display/"/>
+    <id>http://tommyjiang.github.io/2016/2016-08-28-Apple-xidan-joy-city-retina-display/</id>
+    <published>2016-08-28T11:00:00.000Z</published>
+    <updated>2016-09-12T01:23:05.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>RMBP 买了一年半，屏幕涂层脱落得七零八落……到西单大悦城 Apple Store 免费换了个新的，非常棒。</p>
+<a id="more"></a>
+<p>网上有很多关于 RMBP 涂层脱落的问题，比如<a href="https://www.zhihu.com/question/26424953" target="_blank" rel="external">知乎上的讨论</a>。其实去年10月开始 Apple 就已经发布内部通知免费维修 Macbook 和 Macbook Pro 防眩光涂层脱落问题，只是没有大肆宣传。正好离西单很近，直接到西单大悦城 Apple Store 换新。</p>
+<ul>
+<li>2016.8.22 预约8.23中午 Genius bar。</li>
+<li>2016.8.23 中午到 Genius bar，被告知没有现成的屏幕，需要订购，把电脑拿回来等通知。</li>
+<li>2016.8.25 下午收到 Apple 的邮件，告知已到货，预约8.28晚上 Genius bar。</li>
+<li>2016.8.27 上午收到西单大悦城 Apple Store 电话，通知屏幕已到货。</li>
+<li>2016.8.28 晚上拿到西单大悦城 Apple Store 维修。</li>
+<li>2016.8.29 上午取回。</li>
+</ul>
+<p>整个过程还算顺利，5100大洋一分没花，换完屏幕的 Mac 焕然一新，哈哈。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;RMBP 买了一年半，屏幕涂层脱落得七零八落……到西单大悦城 Apple Store 免费换了个新的，非常棒。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="Mac" scheme="http://tommyjiang.github.io/tags/Mac/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>工银亚洲香港账户开户攻略</title>
+    <link href="http://tommyjiang.github.io/2016/2016-08-26-ICBC-Asia/"/>
+    <id>http://tommyjiang.github.io/2016/2016-08-26-ICBC-Asia/</id>
+    <published>2016-08-26T14:00:00.000Z</published>
+    <updated>2016-09-12T01:24:06.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>开了个工银亚洲的香港账户，方便进行在 HK 的交易。</p>
+<a id="more"></a>
+<p>和小哥在 HK 一起度过了愉快的半年，即使走了也很怀念那段时光，正好最近在 HK 有些财务往来，所以决定办一张工银亚洲的香港银行卡，方便进行 HK 的交易。</p>
+<h1 id="开户流程"><a href="#开户流程" class="headerlink" title="开户流程"></a>开户流程</h1><p>到单位最近的复外支行询问，答复说要去工行北京市分行办理，也不远，就在复兴门桥南边一点的天银大厦。携带的材料就更简单了，只需要身份证和有效期三个月以上的港澳通行证，柜台交了 200 块手续费，就让回来等 HK 那边的电话确认了，负责办理的小妹还特意说了一句，估计香港那边周末不加班，工作日保持手机畅通就可以了……</p>
+<p>过了一周，手机收到短信：</p>
+<blockquote>
+<p>【工银亚洲】工银亚洲客服即将致电给您进行开户申请确认，请注意接听。如有查询，请即致电(852)21895588。</p>
+</blockquote>
+<p>中午12点多正在吃饭的时候，接到了工银亚洲的开户确认电话，核实了身份证号码、单位地址和手机号，然后询问是否拿到密码封和电子密码器，开户确认手续就完成了。</p>
+<p>第二天下午发了电子密码器 12 位激活码，账户也已经开户。但工银亚洲账户需要本人通过内地工行账户向其中汇一笔钱开通，开通前拒收一切其他账户汇款，周六上午在工行柜台办了汇款，等到周一中午终于入账完毕，可以正常使用了。</p>
+<h1 id="工银亚洲香港账户介绍"><a href="#工银亚洲香港账户介绍" class="headerlink" title="工银亚洲香港账户介绍"></a>工银亚洲香港账户介绍</h1><p>工行作为网友口中的“宇宙行”，各方面业务实力还是很强的。工银亚洲在香港虽然算小行，但有工行撑腰，也算个不错的选择。</p>
+<p>账户管理费方面，首年免费，第二年起需要存 10000 港币，否则每月要收取 15 港币的账户管理费。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;开了个工银亚洲的香港账户，方便进行在 HK 的交易。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="香港" scheme="http://tommyjiang.github.io/tags/%E9%A6%99%E6%B8%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Anaconda 使用清华镜像源</title>
+    <link href="http://tommyjiang.github.io/2016/2016-08-25-anaconda-tsinghua-mirror/"/>
+    <id>http://tommyjiang.github.io/2016/2016-08-25-anaconda-tsinghua-mirror/</id>
+    <published>2016-08-25T02:00:00.000Z</published>
+    <updated>2016-09-12T01:47:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Mac/Win 下将 <code>Anaconda</code> 镜像更改为清华镜像源的方法。</p>
+<a id="more"></a>
+<h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>用惯了 Mac 或者 Linux 的同学一定会爱上 <code>brew</code> 和 <code>apt-get</code> 这种一键式的安装工具。不用像 Windows 一样到处去找各个软件的安装包，只需要一个命令就都能搞定，掌控天下的感觉:)</p>
+<p>但这种一键式安装工具极为依赖镜像源，国内的网络在连国外某些镜像时实在是太慢了，所以有很多组织和个人在国内搭建了镜像服务器，造福大众。</p>
+<p><code>Anaconda</code> 是 Python 的一个发行包，这个单词的原意是南美发现的一种巨蟒，可能是由于它包括了很多 Python 的 <code>package</code>所以叫这个名字。<code>Anaconda</code> 的 <code>defaults</code> 镜像源实在是太慢了，清华 TUNA 提供了一个<a href="https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/" target="_blank" rel="external">国内镜像源</a>，我们要做的就是将这个镜像源作为 <code>Anaconda</code> 的默认镜像源。</p>
+<h1 id="Mac"><a href="#Mac" class="headerlink" title="Mac"></a>Mac</h1><p>Mac 下切换很简单，直接在 <code>terminal</code> 中输入(参考<a href="https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/" target="_blank" rel="external">清华 TUNA 国内镜像源</a>)：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">conda config --add channels <span class="string">'https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/'</span></div><div class="line">conda config --set show_channel_urls yes</div></pre></td></tr></table></figure>
+<h1 id="Win"><a href="#Win" class="headerlink" title="Win"></a>Win</h1><p>Win 下稍微麻烦一些，如果直接在 <code>cmd</code> 中输入上述命令，<code>conda install</code> 的时候会报错：</p>
+<blockquote>
+<p>Error: Could not find anaconda.org user ‘https: </p>
+</blockquote>
+<p>方法是修改 <code>.condarc</code> 文件为以下形式(参考<a href="http://blog.5ibc.net/p/87204.html" target="_blank" rel="external">该网址</a>)：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">channels: </div><div class="line">- https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/ </div><div class="line">- defaults</div><div class="line"></div><div class="line">show_channel_urls: yes</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Mac/Win 下将 &lt;code&gt;Anaconda&lt;/code&gt; 镜像更改为清华镜像源的方法。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Geek" scheme="http://tommyjiang.github.io/categories/Geek/"/>
+    
+    
+      <category term="Python" scheme="http://tommyjiang.github.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>七夕·Google</title>
+    <link href="http://tommyjiang.github.io/2016/2016-08-09-Google-qi-xi/"/>
+    <id>http://tommyjiang.github.io/2016/2016-08-09-Google-qi-xi/</id>
+    <published>2016-08-09T14:00:00.000Z</published>
+    <updated>2017-02-06T07:24:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天是中国传统佳节七夕，Google 主页也很应景地换成了七夕的配图。</p>
+<a id="more"></a>
+<p>Google 不愧是一个充满人文关怀的公司，今天也应景地配上了七夕的图片。中午打开 Mac 下的 Chrome 时发现整个 UI 焕然一新，原来已经升级到 v52 版本，整体 UI 借鉴了移动设备上的 <code>Material</code> 风格，界面更加简洁，科技感更强，整体配色也更高冷了。</p>
+<p><img src="/images/2016/Chrome-v52.png" alt=""></p>
+<p>说起七夕，印象比较深的有高考那年，也就是 2006 年的双七夕。还有七年前 2009 年的七夕，从学校去五道口的路上，碰到很多卖花的，不过当时的表现实在是……</p>
+<p>年少轻狂，很多时候很多事儿都想不清楚，稀里糊涂地做了选择。现在回过来看，所谓成长，大概就是有能力做出选择，并且承担选择带来的后果吧。</p>
+<blockquote>
+<p>两情若是长久时，又岂在朝朝暮暮。</p>
+</blockquote>
+<p>七夕快乐。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天是中国传统佳节七夕，Google 主页也很应景地换成了七夕的配图。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="Google" scheme="http://tommyjiang.github.io/tags/Google/"/>
+    
+      <category term="感情" scheme="http://tommyjiang.github.io/tags/%E6%84%9F%E6%83%85/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MATLAB plot 函数默认 color 调整</title>
+    <link href="http://tommyjiang.github.io/2016/2016-07-19-MATLAB-plot-color/"/>
+    <id>http://tommyjiang.github.io/2016/2016-07-19-MATLAB-plot-color/</id>
+    <published>2016-07-19T02:00:00.000Z</published>
+    <updated>2017-01-03T06:17:51.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>从 MATLAB 2014b 开始，其 <code>plot</code> 函数的默认颜色有所调整。</p>
+<a id="more"></a>
+<p>新的默认配色名称为 <code>parula</code>，意为北美生活的一种森莺。</p>
+<p>如果想了解 <code>parula</code> 的配色方案，可以在 MATLAB 中输入以下命令：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">get(gca,<span class="string">'colororder'</span>)</div></pre></td></tr></table></figure>
+<p>默认配色 <code>parula</code> 的前七种颜色如下：</p>
+
+<table border="1px" align="center">
+  <tr>
+    <th style="text-align:center">颜色</th>
+    <th style="text-align:center">HEX</th>
+    <th style="text-align:center">RGB</th>
+  </tr>
+  <tr>
+    <td bgcolor="0072bd" style="text-align:center"></td>
+    <td style="text-align:center">#0072BD</td>
+    <td style="text-align:center">rgb(0, 114, 189)</td>
+  </tr>
+  <tr>
+    <td bgcolor="d95319" style="text-align:center"></td>
+    <td style="text-align:center">#D95319</td>
+    <td style="text-align:center">rgb(217, 83, 25)</td>
+  </tr>
+  <tr>
+    <td bgcolor="edb120" style="text-align:center"></td>
+    <td style="text-align:center">#EDB120</td>
+    <td style="text-align:center">rgb(237, 177, 32)</td>
+  </tr>
+  <tr>
+    <td bgcolor="7e2f8e" style="text-align:center"></td>
+    <td style="text-align:center">#7E2F8E</td>
+    <td style="text-align:center">rgb(126, 47, 142)</td>
+  </tr>
+  <tr>
+    <td bgcolor="77ac30" style="text-align:center"></td>
+    <td style="text-align:center">#77AC30</td>
+    <td style="text-align:center">rgb(119, 172, 48)</td>
+  </tr>
+  <tr>
+    <td bgcolor="4dbeee" style="text-align:center"></td>
+    <td style="text-align:center">#4DBEEE</td>
+    <td style="text-align:center">rgb(77, 190, 238)</td>
+  </tr>
+  <tr>
+    <td bgcolor="a2142f" style="text-align:center"></td>
+    <td style="text-align:center">#A2142F</td>
+    <td style="text-align:center">rgb(162, 20, 47)</td>
+  </tr>
+</table>
+
+<p>应该说 2014b 之后版本 MATLAB 的默认作图选择这几个颜色已经很漂亮了，不像以前都是纯蓝、灰绿这些土颜色……本来还想找点有没有好的配色方案，现在觉得默认的方案就很好了^_^</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;从 MATLAB 2014b 开始，其 &lt;code&gt;plot&lt;/code&gt; 函数的默认颜色有所调整。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://tommyjiang.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="MATLAB" scheme="http://tommyjiang.github.io/tags/MATLAB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《大鱼海棠》经典台词</title>
+    <link href="http://tommyjiang.github.io/2016/2016-07-10-bigfish-begonia-md/"/>
+    <id>http://tommyjiang.github.io/2016/2016-07-10-bigfish-begonia-md/</id>
+    <published>2016-07-10T09:39:38.000Z</published>
+    <updated>2016-09-15T12:32:39.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>昨天晚上，顶着酷热的空气和萌哥老妹到圣熙八号观赏了这部动画，作为校友也算对退学追梦的清华师兄的支持吧。</p>
+<a id="more"></a>
+<p>由于去之前已经听说网上一片骂声，所以期待挺低的，结果看完感觉还不错。画面和音乐都<br>很有感觉，尤其喜欢里面的台词，好好分享下。</p>
+<h1 id="经典台词"><a href="#经典台词" class="headerlink" title="经典台词"></a>经典台词</h1><h2 id="犯错"><a href="#犯错" class="headerlink" title="犯错"></a>犯错</h2><blockquote>
+<p>灵婆：我告诉你什么事最可悲。你遇见了一个人，犯了一个错，你想弥补想还清，到最后才发现，你根本无力回天，犯下的罪过永远无法弥补，我们永远无法还清犯下的……</p>
+</blockquote>
+<p>想起王朔《过把瘾就死》中的一个故事：</p>
+<blockquote>
+<p>就像童话中两个贪心的人挖地下的财宝，结果挖出一个人的骸骨，虽然迅速埋上了，甚至在上面种了树，栽了花，但两个人心里都知道底下埋的是什么。看见树，看见花，想的却是地下的那具骸骨。</p>
+</blockquote>
+<p>其实任何人都有自己极度反感的事，如果别人刻意或是不小心触碰到，就会留下永久的痕迹。所以平时相处时最好能提前把这些了解清楚。就像灵婆说的，有些事一旦做了就永远无法弥补……</p>
+<h2 id="从心"><a href="#从心" class="headerlink" title="从心"></a>从心</h2><blockquote>
+<p>椿爷爷：只要你的心是善良的，对错都是别人的事，照着自己的心意走。</p>
+</blockquote>
+<p>Follow your heart，可惜现实中的我太懦弱了，读博的时候也从来没想过以后的职业发展，一直在随波逐流……</p>
+<h2 id="快乐"><a href="#快乐" class="headerlink" title="快乐"></a>快乐</h2><blockquote>
+<p>湫：如果不快乐，活再久又有什么用呢。</p>
+</blockquote>
+<p>说起来容易，做起来难。这么简单的道理人人都懂，但并不是每个人都快乐。</p>
+<h2 id="忘记"><a href="#忘记" class="headerlink" title="忘记"></a>忘记</h2><blockquote>
+<p>鹿神：忘不了就别忘了，真正的忘记是不需要努力的。</p>
+</blockquote>
+<p>非常像萌哥和我说的那句：该记住的一定会记住，记不住的就是不需要记住的。好有哲理。</p>
+<p>另：庄子《逍遥游》中，鲲要先“化而为鸟，其名为鹏”才能“怒而飞”，动画中去掉了中间由鲲变成鹏的过程，鲲应该是不能飞的，只有鹏才能飞。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;昨天晚上，顶着酷热的空气和萌哥老妹到圣熙八号观赏了这部动画，作为校友也算对退学追梦的清华师兄的支持吧。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="感情" scheme="http://tommyjiang.github.io/tags/%E6%84%9F%E6%83%85/"/>
+    
+      <category term="博士" scheme="http://tommyjiang.github.io/tags/%E5%8D%9A%E5%A3%AB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>电力系统研究的个人体会</title>
+    <link href="http://tommyjiang.github.io/2016/2016-03-17-Power-system-research/"/>
+    <id>http://tommyjiang.github.io/2016/2016-03-17-Power-system-research/</id>
+    <published>2016-03-16T16:19:57.000Z</published>
+    <updated>2016-09-12T02:18:18.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>从博士入学算起，从事电力系统的研究工作已经将近 6 年了，结合个人的实际经验谈谈对电力系统研究的体会。</p>
+<a id="more"></a>
+<h1 id="电力系统研究的特点"><a href="#电力系统研究的特点" class="headerlink" title="电力系统研究的特点"></a>电力系统研究的特点</h1><p>我个人认为，电力系统研究的特点包括以下几点：</p>
+<ol>
+<li>模型角度：动态模型极为复杂。</li>
+<li>技术路线角度：严重依赖仿真。</li>
+<li>研究开放性角度：极度封闭的小团体。</li>
+</ol>
+<h2 id="模型角度"><a href="#模型角度" class="headerlink" title="模型角度"></a>模型角度</h2><p>目前越来越多的电力系统研究者向优化方向靠拢，其原因是电力系统的优化问题（例如机组组合、经济调度等）一般都采用稳态或准稳态模型。与动态模型相比，稳态或准稳态模型实在是简单太多了。对于一个包括几十甚至上百台发电机的大型电力系统，其动态模型极其复杂，基本只能依靠数值仿真进行分析。然而对于研究而言，只依靠数值仿真进行分析是远远不够的，还需要在理论方面有所突破。这就迫使研究者“知难而退”，既然动态不好做，那干脆就不做。</p>
+<p>换个角度说，我之前投过一篇文章到<code>IEEE Transcatons on Power Systems</code>，一审直接被拒，其中一位 Reviewer 写到：</p>
+<blockquote>
+<p>Power systems in general are <strong>very complex systems</strong> that the number of their state and control variables can <strong>easily exceed hundreds</strong>. How the algorithm would work on larger systems? How to do prove your statement?</p>
+</blockquote>
+<p>坦白地说，他指出的问题非常关键，即电力系统的动态模型过于复杂，全局性的控制算法很难应用。但如果揪住这一点不放，那电力系统动态的研究就很难开展了。例如，优化那边经常会证明某个算法会得到最优解，但到现在为止大型电力系统的稳定性都不在电力系统动态方向研究人员的考虑之内，因为这个问题太复杂了。正是由于这一点，动态方向的研究人员更需要团结起来发出自己的声音，而不是互相质疑对方的研究没法解决大型电力系统的动态问题，如今<code>IEEE Transcatons on Power Systems</code>基本已经被优化领域的研究占领了，和这一点也不无关系。</p>
+<p>今天（2016年5月30日）心血来潮，看了下<code>IEEE Transcatons on Power Systems</code>期刊 Early Access 中清华的所有文章，一共21篇，其中动态方向只有3篇……</p>
+<h2 id="技术路线角度"><a href="#技术路线角度" class="headerlink" title="技术路线角度"></a>技术路线角度</h2><p>电力系统的研究严重依赖仿真，这应该是目前电力系统研究领域的一个普遍现状了。与电力电子和高压方向不同，电力系统研究最后的算例部分基本都是依靠仿真来佐证研究者所提出方法的有效性。仿真除了模仿真实外，还有一个戏谑的解释：仿佛是真的。由于缺乏与实际结果的对比，很多仿真结果其实并不可信。与此同时，绝大多数研究者所做的研究也只是停留在纸上谈兵的阶段，并没有干过实际工程，很难判断仿真结果是否有误。</p>
+<p>正是由于绝大多数电力系统的研究都是纸上谈兵，所以在各种宣传和报奖时，需要进行适度的夸张，从而体现自己所做研究的意义，这样做被揭穿的概率极低，可谓风险极小收益却还不错。由于电力系统领域研究者的水平不会相差很多，所以适度夸张——或者说——忽悠的能力至关重要。</p>
+<h2 id="研究开放性角度"><a href="#研究开放性角度" class="headerlink" title="研究开放性角度"></a>研究开放性角度</h2><p>关于这部分，先引用目前在 UCD 的电力系统研究领域著名学者 Federico Milano 的一段话：</p>
+<blockquote>
+<p>The experience with PSAT has taught me that the power system community is simply not responding properly to open source projects. In the last ten years, third-party contributions to PSAT have been very marginal or would have been developed even if PSAT had been not distributed as a free and open source project. On the other hand, I am quite sure that several extensions have been developed but not shared with the PSAT community.</p>
+<p>I got to the conclusion that the free and open source paradigm is not attractive for <strong>small and closed</strong> communities like the power system one. </p>
+</blockquote>
+<p><code>PSAT</code> 是 Milano 开发的电力系统仿真程序，以开源的形式共享给所有电力系统研究者。但他发现很多研究者基于 PSAT 开发了新的扩展功能，但并没有共享给整个 PSAT 社区，这让他明白了免费开源是不适合由电力系统研究者组成的这种封闭的小圈子的。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;从博士入学算起，从事电力系统的研究工作已经将近 6 年了，结合个人的实际经验谈谈对电力系统研究的体会。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://tommyjiang.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="电力系统" scheme="http://tommyjiang.github.io/tags/%E7%94%B5%E5%8A%9B%E7%B3%BB%E7%BB%9F/"/>
+    
+      <category term="科研" scheme="http://tommyjiang.github.io/tags/%E7%A7%91%E7%A0%94/"/>
+    
+      <category term="国家电网" scheme="http://tommyjiang.github.io/tags/%E5%9B%BD%E5%AE%B6%E7%94%B5%E7%BD%91/"/>
+    
+      <category term="博士" scheme="http://tommyjiang.github.io/tags/%E5%8D%9A%E5%A3%AB/"/>
+    
+  </entry>
+  
+</feed>
