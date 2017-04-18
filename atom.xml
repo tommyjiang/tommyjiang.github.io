@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tommyjiang.github.io/"/>
-  <updated>2017-03-31T07:17:10.000Z</updated>
+  <updated>2017-04-18T08:14:06.000Z</updated>
   <id>http://tommyjiang.github.io/</id>
   
   <author>
@@ -14,6 +14,48 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mac 上安装 xgboost 教程</title>
+    <link href="http://tommyjiang.github.io/2017/2017-04-18-install-xgboost-on-mac/"/>
+    <id>http://tommyjiang.github.io/2017/2017-04-18-install-xgboost-on-mac/</id>
+    <published>2017-04-17T11:00:00.000Z</published>
+    <updated>2017-04-18T08:14:06.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>关于如何在 Mac 上安装 xgboost。</p>
+<a id="more"></a>
+<h1 id="关于xgboost"><a href="#关于xgboost" class="headerlink" title="关于xgboost"></a>关于xgboost</h1><p><a href="https://github.com/dmlc/xgboost" target="_blank" rel="external"><code>xgboost</code></a>是华盛顿大学的<a href="">陈天奇</a>开发的一个可以高效实现 gradient boosting 的库。<code>Kaggle</code>竞赛前5%名次获得者 Linghao Zhang 在博文<a href="https://dnc1994.com/2016/04/rank-10-percent-in-first-kaggle-competition/" target="_blank" rel="external">如何在 Kaggle 首战中进入前 10%</a>中提到：</p>
+<blockquote>
+<p>当然，这里不能不提一下 Xgboost。Gradient Boosting 本身优秀的性能加上 Xgboost 高效的实现，使得它在 Kaggle 上广为使用。几乎每场比赛的获奖者都会用 Xgboost 作为最终 Model 的重要组成部分。在实战中，我们往往会以 Xgboost 为主来建立我们的模型并且验证 Feature 的有效性。</p>
+</blockquote>
+<h1 id="安装方法"><a href="#安装方法" class="headerlink" title="安装方法"></a>安装方法</h1><p><code>xgboost</code>官网有针对 Mac 的<a href="http://xgboost.readthedocs.io/en/latest/build.html" target="_blank" rel="external">安装教程</a>，但对新手不算太友好。IBM 提供了更为详细的<a href="https://www.ibm.com/developerworks/community/blogs/jfp/entry/Installing_XGBoost_on_Mac_OSX?lang=zh" target="_blank" rel="external">教程</a>。简书上也有一篇类似的<a href="http://www.jianshu.com/p/b0ac60dc84b9" target="_blank" rel="external">教程</a>。</p>
+<p>具体步骤如下：</p>
+<ol>
+<li>安装<code>homebrew</code>。</li>
+<li>利用<code>homebrew</code>安装<code>gcc</code>。</li>
+<li>选择用户根目录作为安装<code>xgboost</code>的地址，<code>git clone xgboost</code>仓库。</li>
+<li>进入<code>xgboost</code>目录编译。</li>
+<li>（可选）安装<code>Python</code>包。</li>
+</ol>
+<p>第4步编译时，有可能提示<code>gcc</code>版本问题，可以通过在终端中输入如下命令解决：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">export</span> CXX=/usr/<span class="built_in">local</span>/Cellar/gcc/6.3.0_1/bin/g++-6</div></pre></td></tr></table></figure>
+<p>注意将上面命令中的<code>6.3.0_1</code>替换成安装的实际版本。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;关于如何在 Mac 上安装 xgboost。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Geek" scheme="http://tommyjiang.github.io/categories/Geek/"/>
+    
+    
+      <category term="xgboost" scheme="http://tommyjiang.github.io/tags/xgboost/"/>
+    
+      <category term="机器学习" scheme="http://tommyjiang.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>博客评论系统由多说迁移至友言</title>
@@ -1722,57 +1764,6 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     
     
       <category term="感情" scheme="http://tommyjiang.github.io/tags/%E6%84%9F%E6%83%85/"/>
-    
-      <category term="博士" scheme="http://tommyjiang.github.io/tags/%E5%8D%9A%E5%A3%AB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>电力系统研究的个人体会</title>
-    <link href="http://tommyjiang.github.io/2016/2016-03-17-Power-system-research/"/>
-    <id>http://tommyjiang.github.io/2016/2016-03-17-Power-system-research/</id>
-    <published>2016-03-16T16:19:57.000Z</published>
-    <updated>2016-09-12T02:18:18.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>从博士入学算起，从事电力系统的研究工作已经将近 6 年了，结合个人的实际经验谈谈对电力系统研究的体会。</p>
-<a id="more"></a>
-<h1 id="电力系统研究的特点"><a href="#电力系统研究的特点" class="headerlink" title="电力系统研究的特点"></a>电力系统研究的特点</h1><p>我个人认为，电力系统研究的特点包括以下几点：</p>
-<ol>
-<li>模型角度：动态模型极为复杂。</li>
-<li>技术路线角度：严重依赖仿真。</li>
-<li>研究开放性角度：极度封闭的小团体。</li>
-</ol>
-<h2 id="模型角度"><a href="#模型角度" class="headerlink" title="模型角度"></a>模型角度</h2><p>目前越来越多的电力系统研究者向优化方向靠拢，其原因是电力系统的优化问题（例如机组组合、经济调度等）一般都采用稳态或准稳态模型。与动态模型相比，稳态或准稳态模型实在是简单太多了。对于一个包括几十甚至上百台发电机的大型电力系统，其动态模型极其复杂，基本只能依靠数值仿真进行分析。然而对于研究而言，只依靠数值仿真进行分析是远远不够的，还需要在理论方面有所突破。这就迫使研究者“知难而退”，既然动态不好做，那干脆就不做。</p>
-<p>换个角度说，我之前投过一篇文章到<code>IEEE Transcatons on Power Systems</code>，一审直接被拒，其中一位 Reviewer 写到：</p>
-<blockquote>
-<p>Power systems in general are <strong>very complex systems</strong> that the number of their state and control variables can <strong>easily exceed hundreds</strong>. How the algorithm would work on larger systems? How to do prove your statement?</p>
-</blockquote>
-<p>坦白地说，他指出的问题非常关键，即电力系统的动态模型过于复杂，全局性的控制算法很难应用。但如果揪住这一点不放，那电力系统动态的研究就很难开展了。例如，优化那边经常会证明某个算法会得到最优解，但到现在为止大型电力系统的稳定性都不在电力系统动态方向研究人员的考虑之内，因为这个问题太复杂了。正是由于这一点，动态方向的研究人员更需要团结起来发出自己的声音，而不是互相质疑对方的研究没法解决大型电力系统的动态问题，如今<code>IEEE Transcatons on Power Systems</code>基本已经被优化领域的研究占领了，和这一点也不无关系。</p>
-<p>今天（2016年5月30日）心血来潮，看了下<code>IEEE Transcatons on Power Systems</code>期刊 Early Access 中清华的所有文章，一共21篇，其中动态方向只有3篇……</p>
-<h2 id="技术路线角度"><a href="#技术路线角度" class="headerlink" title="技术路线角度"></a>技术路线角度</h2><p>电力系统的研究严重依赖仿真，这应该是目前电力系统研究领域的一个普遍现状了。与电力电子和高压方向不同，电力系统研究最后的算例部分基本都是依靠仿真来佐证研究者所提出方法的有效性。仿真除了模仿真实外，还有一个戏谑的解释：仿佛是真的。由于缺乏与实际结果的对比，很多仿真结果其实并不可信。与此同时，绝大多数研究者所做的研究也只是停留在纸上谈兵的阶段，并没有干过实际工程，很难判断仿真结果是否有误。</p>
-<p>正是由于绝大多数电力系统的研究都是纸上谈兵，所以在各种宣传和报奖时，需要进行适度的夸张，从而体现自己所做研究的意义，这样做被揭穿的概率极低，可谓风险极小收益却还不错。由于电力系统领域研究者的水平不会相差很多，所以适度夸张——或者说——忽悠的能力至关重要。</p>
-<h2 id="研究开放性角度"><a href="#研究开放性角度" class="headerlink" title="研究开放性角度"></a>研究开放性角度</h2><p>关于这部分，先引用目前在 UCD 的电力系统研究领域著名学者 Federico Milano 的一段话：</p>
-<blockquote>
-<p>The experience with PSAT has taught me that the power system community is simply not responding properly to open source projects. In the last ten years, third-party contributions to PSAT have been very marginal or would have been developed even if PSAT had been not distributed as a free and open source project. On the other hand, I am quite sure that several extensions have been developed but not shared with the PSAT community.</p>
-<p>I got to the conclusion that the free and open source paradigm is not attractive for <strong>small and closed</strong> communities like the power system one. </p>
-</blockquote>
-<p><code>PSAT</code> 是 Milano 开发的电力系统仿真程序，以开源的形式共享给所有电力系统研究者。但他发现很多研究者基于 PSAT 开发了新的扩展功能，但并没有共享给整个 PSAT 社区，这让他明白了免费开源是不适合由电力系统研究者组成的这种封闭的小圈子的。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;从博士入学算起，从事电力系统的研究工作已经将近 6 年了，结合个人的实际经验谈谈对电力系统研究的体会。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://tommyjiang.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="电力系统" scheme="http://tommyjiang.github.io/tags/%E7%94%B5%E5%8A%9B%E7%B3%BB%E7%BB%9F/"/>
-    
-      <category term="科研" scheme="http://tommyjiang.github.io/tags/%E7%A7%91%E7%A0%94/"/>
-    
-      <category term="国家电网" scheme="http://tommyjiang.github.io/tags/%E5%9B%BD%E5%AE%B6%E7%94%B5%E7%BD%91/"/>
     
       <category term="博士" scheme="http://tommyjiang.github.io/tags/%E5%8D%9A%E5%A3%AB/"/>
     

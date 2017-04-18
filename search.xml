@@ -4,6 +4,30 @@
   
     
     <entry>
+      <title><![CDATA[Mac 上安装 xgboost 教程]]></title>
+      <url>http://tommyjiang.github.io/2017/2017-04-18-install-xgboost-on-mac/</url>
+      <content type="html"><![CDATA[<p>关于如何在 Mac 上安装 xgboost。</p>
+<a id="more"></a>
+<h1 id="关于xgboost"><a href="#关于xgboost" class="headerlink" title="关于xgboost"></a>关于xgboost</h1><p><a href="https://github.com/dmlc/xgboost" target="_blank" rel="external"><code>xgboost</code></a>是华盛顿大学的<a href="">陈天奇</a>开发的一个可以高效实现 gradient boosting 的库。<code>Kaggle</code>竞赛前5%名次获得者 Linghao Zhang 在博文<a href="https://dnc1994.com/2016/04/rank-10-percent-in-first-kaggle-competition/" target="_blank" rel="external">如何在 Kaggle 首战中进入前 10%</a>中提到：</p>
+<blockquote>
+<p>当然，这里不能不提一下 Xgboost。Gradient Boosting 本身优秀的性能加上 Xgboost 高效的实现，使得它在 Kaggle 上广为使用。几乎每场比赛的获奖者都会用 Xgboost 作为最终 Model 的重要组成部分。在实战中，我们往往会以 Xgboost 为主来建立我们的模型并且验证 Feature 的有效性。</p>
+</blockquote>
+<h1 id="安装方法"><a href="#安装方法" class="headerlink" title="安装方法"></a>安装方法</h1><p><code>xgboost</code>官网有针对 Mac 的<a href="http://xgboost.readthedocs.io/en/latest/build.html" target="_blank" rel="external">安装教程</a>，但对新手不算太友好。IBM 提供了更为详细的<a href="https://www.ibm.com/developerworks/community/blogs/jfp/entry/Installing_XGBoost_on_Mac_OSX?lang=zh" target="_blank" rel="external">教程</a>。简书上也有一篇类似的<a href="http://www.jianshu.com/p/b0ac60dc84b9" target="_blank" rel="external">教程</a>。</p>
+<p>具体步骤如下：</p>
+<ol>
+<li>安装<code>homebrew</code>。</li>
+<li>利用<code>homebrew</code>安装<code>gcc</code>。</li>
+<li>选择用户根目录作为安装<code>xgboost</code>的地址，<code>git clone xgboost</code>仓库。</li>
+<li>进入<code>xgboost</code>目录编译。</li>
+<li>（可选）安装<code>Python</code>包。</li>
+</ol>
+<p>第4步编译时，有可能提示<code>gcc</code>版本问题，可以通过在终端中输入如下命令解决：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">export</span> CXX=/usr/<span class="built_in">local</span>/Cellar/gcc/6.3.0_1/bin/g++-6</div></pre></td></tr></table></figure>
+<p>注意将上面命令中的<code>6.3.0_1</code>替换成安装的实际版本。</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[博客评论系统由多说迁移至友言]]></title>
       <url>http://tommyjiang.github.io/2017/2017-03-22-duoshuo-to-youyan/</url>
       <content type="html"><![CDATA[<p>多说发布通知，宣布即将关闭，博客评论系统迁移至友言。</p>
