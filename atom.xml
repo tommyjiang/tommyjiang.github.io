@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tommyjiang.github.io/"/>
-  <updated>2017-04-18T08:14:06.000Z</updated>
+  <updated>2017-04-27T09:08:51.000Z</updated>
   <id>http://tommyjiang.github.io/</id>
   
   <author>
@@ -14,6 +14,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>西单大悦城处理 iPhone 6 Plus 电池鼓胀问题</title>
+    <link href="http://tommyjiang.github.io/2017/2017-04-27-Apple-xidan-joy-city-iphone-battery/"/>
+    <id>http://tommyjiang.github.io/2017/2017-04-27-Apple-xidan-joy-city-iphone-battery/</id>
+    <published>2017-04-27T07:00:00.000Z</published>
+    <updated>2017-04-27T09:08:51.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>iPhone 买了两年半，中午发现电池鼓胀，到西单大悦城花 588 换了个新的。</p>
+<a id="more"></a>
+<p>中午睡觉之前玩手机，发现手机左边明显贴合不牢，同时屏幕中间凸起，上网查了查，应该是电池鼓胀问题。</p>
+<p>预约了下午3点西单大悦城的 Genius Bar，店员看了直接说电池鼓胀，换个新的，问有没有超2年。2014.12.26买的，刚好两年多一点，补了588的价钱，换了一个全新的 iPhone。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;iPhone 买了两年半，中午发现电池鼓胀，到西单大悦城花 588 换了个新的。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="iPhone" scheme="http://tommyjiang.github.io/tags/iPhone/"/>
+    
+  </entry>
   
   <entry>
     <title>Mac 上安装 xgboost 教程</title>
@@ -1718,54 +1744,6 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     
     
       <category term="MATLAB" scheme="http://tommyjiang.github.io/tags/MATLAB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《大鱼海棠》经典台词</title>
-    <link href="http://tommyjiang.github.io/2016/2016-07-10-bigfish-begonia-md/"/>
-    <id>http://tommyjiang.github.io/2016/2016-07-10-bigfish-begonia-md/</id>
-    <published>2016-07-10T09:39:38.000Z</published>
-    <updated>2016-09-15T12:32:39.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>昨天晚上，顶着酷热的空气和萌哥老妹到圣熙八号观赏了这部动画，作为校友也算对退学追梦的清华师兄的支持吧。</p>
-<a id="more"></a>
-<p>由于去之前已经听说网上一片骂声，所以期待挺低的，结果看完感觉还不错。画面和音乐都<br>很有感觉，尤其喜欢里面的台词，好好分享下。</p>
-<h1 id="经典台词"><a href="#经典台词" class="headerlink" title="经典台词"></a>经典台词</h1><h2 id="犯错"><a href="#犯错" class="headerlink" title="犯错"></a>犯错</h2><blockquote>
-<p>灵婆：我告诉你什么事最可悲。你遇见了一个人，犯了一个错，你想弥补想还清，到最后才发现，你根本无力回天，犯下的罪过永远无法弥补，我们永远无法还清犯下的……</p>
-</blockquote>
-<p>想起王朔《过把瘾就死》中的一个故事：</p>
-<blockquote>
-<p>就像童话中两个贪心的人挖地下的财宝，结果挖出一个人的骸骨，虽然迅速埋上了，甚至在上面种了树，栽了花，但两个人心里都知道底下埋的是什么。看见树，看见花，想的却是地下的那具骸骨。</p>
-</blockquote>
-<p>其实任何人都有自己极度反感的事，如果别人刻意或是不小心触碰到，就会留下永久的痕迹。所以平时相处时最好能提前把这些了解清楚。就像灵婆说的，有些事一旦做了就永远无法弥补……</p>
-<h2 id="从心"><a href="#从心" class="headerlink" title="从心"></a>从心</h2><blockquote>
-<p>椿爷爷：只要你的心是善良的，对错都是别人的事，照着自己的心意走。</p>
-</blockquote>
-<p>Follow your heart，可惜现实中的我太懦弱了，读博的时候也从来没想过以后的职业发展，一直在随波逐流……</p>
-<h2 id="快乐"><a href="#快乐" class="headerlink" title="快乐"></a>快乐</h2><blockquote>
-<p>湫：如果不快乐，活再久又有什么用呢。</p>
-</blockquote>
-<p>说起来容易，做起来难。这么简单的道理人人都懂，但并不是每个人都快乐。</p>
-<h2 id="忘记"><a href="#忘记" class="headerlink" title="忘记"></a>忘记</h2><blockquote>
-<p>鹿神：忘不了就别忘了，真正的忘记是不需要努力的。</p>
-</blockquote>
-<p>非常像萌哥和我说的那句：该记住的一定会记住，记不住的就是不需要记住的。好有哲理。</p>
-<p>另：庄子《逍遥游》中，鲲要先“化而为鸟，其名为鹏”才能“怒而飞”，动画中去掉了中间由鲲变成鹏的过程，鲲应该是不能飞的，只有鹏才能飞。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;昨天晚上，顶着酷热的空气和萌哥老妹到圣熙八号观赏了这部动画，作为校友也算对退学追梦的清华师兄的支持吧。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
-    
-    
-      <category term="感情" scheme="http://tommyjiang.github.io/tags/%E6%84%9F%E6%83%85/"/>
-    
-      <category term="博士" scheme="http://tommyjiang.github.io/tags/%E5%8D%9A%E5%A3%AB/"/>
     
   </entry>
   
