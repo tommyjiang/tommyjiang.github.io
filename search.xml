@@ -4,6 +4,30 @@
   
     
     <entry>
+      <title><![CDATA[自己动手，丰衣足食]]></title>
+      <url>http://tommyjiang.github.io/2017/2017-06-12-let's-cook-some-food/</url>
+      <content type="html"><![CDATA[<p>民以食为天，食以味为先。</p>
+<a id="more"></a>
+<h1 id="2017年6月11日-午餐"><a href="#2017年6月11日-午餐" class="headerlink" title="2017年6月11日 午餐"></a>2017年6月11日 午餐</h1><p><img src="images/2017/2017-06-11-lunch.jpg" alt=""></p>
+<p>test</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 生活 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 厨房 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[西单大悦城处理 iPhone 6 Plus 电池鼓胀问题]]></title>
       <url>http://tommyjiang.github.io/2017/2017-04-27-Apple-xidan-joy-city-iphone-battery/</url>
       <content type="html"><![CDATA[<p>iPhone 买了两年半，中午发现电池鼓胀，到西单大悦城花 588 换了个新的。</p>
@@ -11,6 +35,20 @@
 <p>中午睡觉之前玩手机，发现手机左边明显贴合不牢，同时屏幕中间凸起，上网查了查，应该是电池鼓胀问题。</p>
 <p>预约了下午3点西单大悦城的 Genius Bar，店员看了直接说电池鼓胀，换个新的，问有没有超2年。2014.12.26买的，刚好两年多一点，补了588的价钱，换了一个全新的 iPhone。</p>
 ]]></content>
+      
+        <categories>
+            
+            <category> 生活 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> iPhone </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -35,6 +73,22 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">export</span> CXX=/usr/<span class="built_in">local</span>/Cellar/gcc/6.3.0_1/bin/g++-6</div></pre></td></tr></table></figure>
 <p>注意将上面命令中的<code>6.3.0_1</code>替换成安装的实际版本。</p>
 ]]></content>
+      
+        <categories>
+            
+            <category> Geek </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> xgboost </tag>
+            
+            <tag> 机器学习 </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -45,6 +99,20 @@
 <p>昨天多说官网发布通知，宣布<a href="http://dev.duoshuo.com/threads/58d1169ae293b89a20c57241" target="_blank" rel="external">多说即将关闭</a>。感谢多说长久以来坚持维护的评论系统，从即日起本博客评论系统迁移至<a href="http://www.uyan.cc/" target="_blank" rel="external">友言</a>。</p>
 <p>注：友言评论系统无法在本地测试，需要先发布到服务器上再进行测试。</p>
 ]]></content>
+      
+        <categories>
+            
+            <category> Geek </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 博客 </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -54,6 +122,22 @@
 <a id="more"></a>
 <p>☐ <a href="https://book.douban.com/subject/26708119/" target="_blank" rel="external">机器学习 周志华</a><br>☐ <a href="https://book.douban.com/subject/10590856/" target="_blank" rel="external">统计学习方法 李航</a><br>☐ <a href="https://book.douban.com/subject/2061116/" target="_blank" rel="external">Pattern Recognition And Machine Learning. Christopher Bishop</a><br>☐ <a href="https://book.douban.com/subject/3294335/" target="_blank" rel="external">The Elements of Statistical Learning. Trevor Hastie</a><br>☐ <a href="https://book.douban.com/subject/10758624/" target="_blank" rel="external">Machine Learning-A Probabilistic Perspective. Kevin P. Murphy</a></p>
 ]]></content>
+      
+        <categories>
+            
+            <category> Geek </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> Machine learning </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -657,6 +741,20 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
 
 
 ]]></content>
+      
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 风电 </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -681,6 +779,20 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
 <li>☐ 打一次羽毛球</li>
 </ul>
 ]]></content>
+      
+        <categories>
+            
+            <category> 生活 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -707,6 +819,20 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
 <p>四个女生 《心愿》</p>
 </blockquote>
 ]]></content>
+      
+        <categories>
+            
+            <category> 生活 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 音乐 </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -804,6 +930,22 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
 </script>
 
 ]]></content>
+      
+        <categories>
+            
+            <category> 生活 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Echarts </tag>
+            
+            <tag> 旅程 </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -887,81 +1029,20 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
 </table>
 
 ]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Hexo 博文中加入百度地图]]></title>
-      <url>http://tommyjiang.github.io/2016/2016-11-16-Hexo-baidu-map/</url>
-      <content type="html"><![CDATA[<p>利用百度地图 API 实现在 Hexo 的博文中加入地图。</p>
-<a id="more"></a>
-<p>最近想丰富下生活，最先想到的就是多品尝点北京的美食。作为一个认真的人，吃过就想记下来，但只有饭馆的名字和地址显得太单调了，就想能在地图上显示的话会比较直观。搜了下百度地图的 API，不多说，直接上代码吧。更详细的内容可以参考百度地图 Javascript 的 <a href="http://lbsyun.baidu.com/index.php?title=jspopular" target="_blank" rel="external">API</a>。</p>
-<p>首先新建一个<code>div</code>：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"min-height: 500px; width: 100%;"</span> <span class="attr">id</span>=<span class="string">"map"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>然后利用百度地图 API 在<code>div</code>中填充一个地图： </p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">map_init</span>(<span class="params"></span>) </span>&#123;</div><div class="line">                </div><div class="line">        <span class="keyword">var</span> map = <span class="keyword">new</span> BMap.Map(<span class="string">"map"</span>);    <span class="comment">// 创建Map实例</span></div><div class="line">        map.centerAndZoom(<span class="keyword">new</span> BMap.Point(<span class="number">116.41</span>,<span class="number">39.89</span>), <span class="number">13</span>);  <span class="comment">// 初始化,设置中心点坐标和地图级别</span></div><div class="line">        map.addControl(<span class="keyword">new</span> BMap.MapTypeControl());   <span class="comment">//添加地图类型控件</span></div><div class="line">        map.setCurrentCity(<span class="string">"北京"</span>);          <span class="comment">// 设置地图显示的城市 此项是必须设置的</span></div><div class="line">        map.enableScrollWheelZoom(<span class="literal">true</span>);     <span class="comment">//开启鼠标滚轮缩放</span></div><div class="line">                </div><div class="line">        <span class="comment">//向地图中添加缩放控件</span></div><div class="line">        <span class="keyword">var</span> ctrlNav = <span class="keyword">new</span> <span class="built_in">window</span>.BMap.NavigationControl(&#123;</div><div class="line">                           anchor: BMAP_ANCHOR_TOP_LEFT,</div><div class="line">                           type: BMAP_NAVIGATION_CONTROL_LARGE</div><div class="line">                      &#125;);</div><div class="line">        map.addControl(ctrlNav);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">//异步调用百度js</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">map_load</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> load = <span class="built_in">document</span>.createElement(<span class="string">"script"</span>);</div><div class="line">        load.src = <span class="string">"http://api.map.baidu.com/api?v=1.4&amp;callback=map_init"</span>;</div><div class="line">        <span class="built_in">document</span>.body.appendChild(load);</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">window</span>.onload = map_load;</div><div class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></figure>
-<p>上述代码直接放在 Hexo Markdown 博文中的<code>raw</code>标签中，即：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% raw %&#125;</div><div class="line">上边的代码</div><div class="line">&#123;% endraw %&#125;</div></pre></td></tr></table></figure>
-<p>结果如下：</p>
-
-    <div style="min-height: 500px; width: 100%;" id="map">
-    </div>
-
-    <script type="text/javascript">
-  
-        function map_init() {
-                    
-            var map = new BMap.Map("map");    // 创建Map实例
-            map.centerAndZoom(new BMap.Point(116.41,39.89), 13);  // 初始化地图,设置中心点坐标和地图级别
-            map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
-            map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
-            map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
-                    
-            //向地图中添加缩放控件
-            var ctrlNav = new window.BMap.NavigationControl({
-                               anchor: BMAP_ANCHOR_TOP_LEFT,
-                               type: BMAP_NAVIGATION_CONTROL_LARGE
-                          });
-            map.addControl(ctrlNav);
-  
-            var points = [
-                [116.395857,39.901169], // 渔芙南
-                [116.649810,39.912096], // 三禾粉匠贵州米粉店 
-                [116.323938,39.989919],
-                [116.328896,39.988039],
-                [116.321135,39.987072],
-                [116.332453,39.989007],
-                [116.324045,39.987984],
-                [116.322285,39.988316],
-                [116.322608,39.986381]
-            ];
+      
+        <categories>
             
-            var size1 = new BMap.Size(21, 50);
-            var size2 = new BMap.Size(21, 0);
-            var icons = [], markers = [];
+            <category> 生活 </category>
             
-            // 向地图添加标注
-            // for( var i = 0;i < points.length; i++){
-            //     var point = new BMap.Point(points[i][0], points[i][1]);
-            //     var icon_pre = 'http://o852ayzmr.bkt.clouddn.com/';
-            //     var icon_post = '.png';
-            //     var icon_string = icon_pre + (i+1).toString()  + icon_post;
-            //     icons[i] = new BMap.Icon(icon_string, size1, {anchor: size2})
-            //     // icons[i] = new BMap.Icon('http://o852ayzmr.bkt.clouddn.com/1.png', size1, {anchor: size2})
-            //     markers[i] = new BMap.Marker(point, {icon: icons[i]});
-            //     map.addOverlay(markers[i]);
-            // };
-        }
-
-        //异步调用百度js
-        function map_load() {
-            var load = document.createElement("script");
-            load.src = "http://api.map.baidu.com/api?v=1.4&callback=map_init";
-            document.body.appendChild(load);
-        }
-        window.onload = map_load;
-    </script>
-
-]]></content>
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 铁路 </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -1112,6 +1193,109 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     </script>
 
 ]]></content>
+      
+        <categories>
+            
+            <category> 生活 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 美食 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Hexo 博文中加入百度地图]]></title>
+      <url>http://tommyjiang.github.io/2016/2016-11-16-Hexo-baidu-map/</url>
+      <content type="html"><![CDATA[<p>利用百度地图 API 实现在 Hexo 的博文中加入地图。</p>
+<a id="more"></a>
+<p>最近想丰富下生活，最先想到的就是多品尝点北京的美食。作为一个认真的人，吃过就想记下来，但只有饭馆的名字和地址显得太单调了，就想能在地图上显示的话会比较直观。搜了下百度地图的 API，不多说，直接上代码吧。更详细的内容可以参考百度地图 Javascript 的 <a href="http://lbsyun.baidu.com/index.php?title=jspopular" target="_blank" rel="external">API</a>。</p>
+<p>首先新建一个<code>div</code>：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"min-height: 500px; width: 100%;"</span> <span class="attr">id</span>=<span class="string">"map"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>然后利用百度地图 API 在<code>div</code>中填充一个地图： </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">map_init</span>(<span class="params"></span>) </span>&#123;</div><div class="line">                </div><div class="line">        <span class="keyword">var</span> map = <span class="keyword">new</span> BMap.Map(<span class="string">"map"</span>);    <span class="comment">// 创建Map实例</span></div><div class="line">        map.centerAndZoom(<span class="keyword">new</span> BMap.Point(<span class="number">116.41</span>,<span class="number">39.89</span>), <span class="number">13</span>);  <span class="comment">// 初始化,设置中心点坐标和地图级别</span></div><div class="line">        map.addControl(<span class="keyword">new</span> BMap.MapTypeControl());   <span class="comment">//添加地图类型控件</span></div><div class="line">        map.setCurrentCity(<span class="string">"北京"</span>);          <span class="comment">// 设置地图显示的城市 此项是必须设置的</span></div><div class="line">        map.enableScrollWheelZoom(<span class="literal">true</span>);     <span class="comment">//开启鼠标滚轮缩放</span></div><div class="line">                </div><div class="line">        <span class="comment">//向地图中添加缩放控件</span></div><div class="line">        <span class="keyword">var</span> ctrlNav = <span class="keyword">new</span> <span class="built_in">window</span>.BMap.NavigationControl(&#123;</div><div class="line">                           anchor: BMAP_ANCHOR_TOP_LEFT,</div><div class="line">                           type: BMAP_NAVIGATION_CONTROL_LARGE</div><div class="line">                      &#125;);</div><div class="line">        map.addControl(ctrlNav);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">//异步调用百度js</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">map_load</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> load = <span class="built_in">document</span>.createElement(<span class="string">"script"</span>);</div><div class="line">        load.src = <span class="string">"http://api.map.baidu.com/api?v=1.4&amp;callback=map_init"</span>;</div><div class="line">        <span class="built_in">document</span>.body.appendChild(load);</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">window</span>.onload = map_load;</div><div class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></figure>
+<p>上述代码直接放在 Hexo Markdown 博文中的<code>raw</code>标签中，即：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% raw %&#125;</div><div class="line">上边的代码</div><div class="line">&#123;% endraw %&#125;</div></pre></td></tr></table></figure>
+<p>结果如下：</p>
+
+    <div style="min-height: 500px; width: 100%;" id="map">
+    </div>
+
+    <script type="text/javascript">
+  
+        function map_init() {
+                    
+            var map = new BMap.Map("map");    // 创建Map实例
+            map.centerAndZoom(new BMap.Point(116.41,39.89), 13);  // 初始化地图,设置中心点坐标和地图级别
+            map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+            map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+            map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+                    
+            //向地图中添加缩放控件
+            var ctrlNav = new window.BMap.NavigationControl({
+                               anchor: BMAP_ANCHOR_TOP_LEFT,
+                               type: BMAP_NAVIGATION_CONTROL_LARGE
+                          });
+            map.addControl(ctrlNav);
+  
+            var points = [
+                [116.395857,39.901169], // 渔芙南
+                [116.649810,39.912096], // 三禾粉匠贵州米粉店 
+                [116.323938,39.989919],
+                [116.328896,39.988039],
+                [116.321135,39.987072],
+                [116.332453,39.989007],
+                [116.324045,39.987984],
+                [116.322285,39.988316],
+                [116.322608,39.986381]
+            ];
+            
+            var size1 = new BMap.Size(21, 50);
+            var size2 = new BMap.Size(21, 0);
+            var icons = [], markers = [];
+            
+            // 向地图添加标注
+            // for( var i = 0;i < points.length; i++){
+            //     var point = new BMap.Point(points[i][0], points[i][1]);
+            //     var icon_pre = 'http://o852ayzmr.bkt.clouddn.com/';
+            //     var icon_post = '.png';
+            //     var icon_string = icon_pre + (i+1).toString()  + icon_post;
+            //     icons[i] = new BMap.Icon(icon_string, size1, {anchor: size2})
+            //     // icons[i] = new BMap.Icon('http://o852ayzmr.bkt.clouddn.com/1.png', size1, {anchor: size2})
+            //     markers[i] = new BMap.Marker(point, {icon: icons[i]});
+            //     map.addOverlay(markers[i]);
+            // };
+        }
+
+        //异步调用百度js
+        function map_load() {
+            var load = document.createElement("script");
+            load.src = "http://api.map.baidu.com/api?v=1.4&callback=map_init";
+            document.body.appendChild(load);
+        }
+        window.onload = map_load;
+    </script>
+
+]]></content>
+      
+        <categories>
+            
+            <category> Geek </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -1131,6 +1315,20 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
 <p>读博后由于经常出差，坐高铁的次数也多了很多。2012年我曾经从广州南坐车到武汉站，然后再转直特到北京西，当时京广高铁武广段已经通车，但京武段还没。2014年6月从北京南到南京南，终于体验了一回京沪高铁。不得不说坐标杆车在京沪高铁济南西和京广高铁石家庄站正线以 270km/h 以上的速度通过的时候还是很爽的。</p>
 <p>今年9月郑徐打通，京沪和京广有不那么近的连接通道了，年底沪昆高铁全线打通，云南也步入高铁时代了。作为铁路子弟，也算见证了中国铁路的发展和变迁，这也是我和铁路之间的不解之缘。</p>
 ]]></content>
+      
+        <categories>
+            
+            <category> 生活 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 铁路 </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -1147,6 +1345,20 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
 </blockquote>
 <p>缘分从来都是自己主动争取来的，而不是被动等来的，现在很多单身青年都不着急，抱着提升自己的心态生活，想找一个对象却又不采取最简单直接的方式。找对象，关键是找，而不是所谓的提升自己。</p>
 ]]></content>
+      
+        <categories>
+            
+            <category> 生活 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 感情 </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -1257,6 +1469,20 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
 
 <h1 id="版本记录"><a href="#版本记录" class="headerlink" title="版本记录"></a>版本记录</h1><p>2015-09-10：v1.0-新建博文。</p>
 ]]></content>
+      
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 地铁 </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -1271,6 +1497,24 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
 <figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(<span class="name">add-to-list</span> 'exec-path <span class="string">"/usr/local/opt/gnupg/libexec/gpgbin"</span>)</div></pre></td></tr></table></figure>
 <p>又可以用来<code>gnupg</code>来给<code>org</code>文件加密了。</p>
 ]]></content>
+      
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Mac </tag>
+            
+            <tag> Emacs </tag>
+            
+            <tag> Org mode </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -1289,6 +1533,20 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
 </ul>
 <p>整个过程还算顺利，5100大洋一分没花，换完屏幕的 Mac 焕然一新，哈哈。</p>
 ]]></content>
+      
+        <categories>
+            
+            <category> 生活 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Mac </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -1307,6 +1565,20 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
 <h1 id="工银亚洲香港账户介绍"><a href="#工银亚洲香港账户介绍" class="headerlink" title="工银亚洲香港账户介绍"></a>工银亚洲香港账户介绍</h1><p>工行作为网友口中的“宇宙行”，各方面业务实力还是很强的。工银亚洲在香港虽然算小行，但有工行撑腰，也算个不错的选择。</p>
 <p>账户管理费方面，首年免费，第二年起需要存 10000 港币，否则每月要收取 15 港币的账户管理费。</p>
 ]]></content>
+      
+        <categories>
+            
+            <category> 生活 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 香港 </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -1326,6 +1598,20 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
 <p>方法是修改 <code>.condarc</code> 文件为以下形式(参考<a href="http://blog.5ibc.net/p/87204.html" target="_blank" rel="external">该网址</a>)：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">channels: </div><div class="line">- https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/ </div><div class="line">- defaults</div><div class="line"></div><div class="line">show_channel_urls: yes</div></pre></td></tr></table></figure>
 ]]></content>
+      
+        <categories>
+            
+            <category> Geek </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -1342,6 +1628,22 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
 </blockquote>
 <p>七夕快乐。</p>
 ]]></content>
+      
+        <categories>
+            
+            <category> 生活 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Google </tag>
+            
+            <tag> 感情 </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -1399,6 +1701,20 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
 
 <p>应该说 2014b 之后版本 MATLAB 的默认作图选择这几个颜色已经很漂亮了，不像以前都是纯蓝、灰绿这些土颜色……本来还想找点有没有好的配色方案，现在觉得默认的方案就很好了^_^</p>
 ]]></content>
+      
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> MATLAB </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -1429,6 +1745,22 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
 <p>非常像萌哥和我说的那句：该记住的一定会记住，记不住的就是不需要记住的。好有哲理。</p>
 <p>另：庄子《逍遥游》中，鲲要先“化而为鸟，其名为鹏”才能“怒而飞”，动画中去掉了中间由鲲变成鹏的过程，鲲应该是不能飞的，只有鹏才能飞。</p>
 ]]></content>
+      
+        <categories>
+            
+            <category> 生活 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 感情 </tag>
+            
+            <tag> 博士 </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -1458,6 +1790,26 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
 </blockquote>
 <p><code>PSAT</code> 是 Milano 开发的电力系统仿真程序，以开源的形式共享给所有电力系统研究者。但他发现很多研究者基于 PSAT 开发了新的扩展功能，但并没有共享给整个 PSAT 社区，这让他明白了免费开源是不适合由电力系统研究者组成的这种封闭的小圈子的。</p>
 ]]></content>
+      
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 电力系统 </tag>
+            
+            <tag> 科研 </tag>
+            
+            <tag> 国家电网 </tag>
+            
+            <tag> 博士 </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -1466,6 +1818,22 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
       <content type="html"><![CDATA[<p>从2014年8月第一篇博文算起，已经写了一年半了。之前博客主要用的是 Jekyll + Markdown （感谢 codepiano 同学提供的主题）。即日起本博客迁移至 <code>Hexo</code>，之前的博文会挑一些重点的迁移过来。</p>
 <p>本博客使用的是<code>raytaylorlin</code>提供的 <a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism" target="_blank" rel="external">raytaylorism 主题</a>，在此表示感谢。</p>
 ]]></content>
+      
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> 博客 </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -2171,6 +2539,22 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
 </script>
 
 ]]></content>
+      
+        <categories>
+            
+            <category> 生活 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Echarts </tag>
+            
+            <tag> 旅程 </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -2210,6 +2594,20 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
 <p>返程时还想到广发贵宾厅坐坐，从天津站地下南出口出来之后，没有上到地面，直接在旁边检票进站了，结果在地下的候车厅里待了一会。检票上去后第一次遇到人到站台而车还没来的情况，看着站台上钟表上显示的正点有点慌。再一查发现买的这趟车不是天津站始发的，是从于家堡来的过路车，怪不得提前 3 分钟车才进站。赶上降温天气，在站台吹了半天冷风，还挺难受的。下次一定得注意是不是始发车，不是的话也没关系，可以在候车室里多坐会，别着急到站台就行了。</p>
 <h2 id="唐山站"><a href="#唐山站" class="headerlink" title="唐山站"></a>唐山站</h2><p>从东售票厅取票之后，可以直接从旁边的小门实名制检票进到候车大厅，不用先出去再过一次安检了，很方便。</p>
 ]]></content>
+      
+        <categories>
+            
+            <category> 生活 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 铁路 </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -2235,6 +2633,22 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
 <pre><code>Simulink cannot load the initial SimState because the model,&apos;Exp2_1_SimModel&apos;, was changed after the SimState was saved. Run the simulation again and resave the SimState.
 </code></pre><p>目前还没找到太好的解决方法，只能采用变通的方法。例如修改反电势电源电压幅值可以等效为修改调制比 m，二者对应的电流波形是相同的。</p>
 ]]></content>
+      
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 电力系统 </tag>
+            
+            <tag> MATLAB </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -2258,6 +2672,20 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
 <p>01:00AM 那些不眠的夜晚，陪伴我们的，除了大作业，还有一盏温柔的灯。<br>02:00AM 一座小小的屋子，飘香四溢的屋子，成为烧烤的代名词——小桥。<br>03:00AM 曾有一群人，为了一个共同的梦想在这里讨论甚至争执，不舍昼夜。<br>04:00AM 让人惊艳的美术设计背后，或许是熬夜到三四点的苦楚。<br>05:00AM 紫荆园后，盛夏日出，刚摘下的果蔬，也许还滴着晨露。<br>06:00AM 在晨光熹微，旁人熟睡的时刻，总有些人在忍受风吹日晒，绽放青春。<br>07:00AM 鲜红的旗帜，坚毅的面孔，月月年年。<br>08:00AM 早餐和生活一样在路上。<br>09:00AM 求知的眼睛，挥动的笔杆，在课堂上载着梦想启程。<br>10:00AM 水木清华众秀钟，真是无一景不可入画。<br>11:00AM 道旁的银杏树和来往的人潮，构成一抹极具生机的亮色。<br>12:00PM 很难在别处见到的热闹与魅力。<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup><br>01:00PM 梦里，天堂一定是图书馆的模样。<br>02:00PM 如果要真正感受清华，那么就来自习教室吧。<br>03:00PM 在实验中谨慎求索，辛苦劳碌，舔尝酸楚，积攒幸福。<br>04:00PM 那时候日色很慢，草坪很暖，一辈子只够爱一个人。<br>05:00PM 夕阳下的奔跑与伫足，那是我们昂扬的青春。<br>06:00PM 落日余晖遍布校园，感受舌尖上的清华。<br>07:00PM 生活，因为这里的嬉笑怒骂、管弦丝竹而不同。<br>08:00PM 周遭的嘈杂包围着专注讨论的我们。<br>09:00PM 这是真实而生动的生活。<br>10:00PM 既见君子，云胡不喜？<br>11:00PM 熄灯已经成为一种习惯，成为我们珍贵的共同记忆。<sup id="fnref:5"><a href="#fn:5" rel="footnote">5</a></sup>  </p>
 </blockquote>
 <div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none; padding-left: 0;"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">1.</span><span style="display: inline-block; vertical-align: top;">清华校园很大，占地面积<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/about/about-6.html" target="_blank" rel="external">442.14公顷</a>，因此自行车是清华学生的标配。二手车便宜而且不容易被偷，因此受到新生的青睐。</span><a href="#fnref:1" rev="footnote"> ↩</a></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">2.</span><span style="display: inline-block; vertical-align: top;"><a href="http://lib.tsinghua.edu.cn/about/beiguan/beiguan.html" target="_blank" rel="external">图书馆北馆（李文正楼）</a>于百年校庆之际——2011年4月23日奠基，2013年12月工程正式启动，预计2015年9月竣工。</span><a href="#fnref:2" rev="footnote"> ↩</a></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">3.</span><span style="display: inline-block; vertical-align: top;">清芬园即七食堂，曾经以包子和麻辣香锅闻名全校，于2013年6月15日停伙。2015年本科生毕业典礼上，<a href="http://news.tsinghua.edu.cn/publish/news/4205/2015/20150712090658606540272/20150712090658606540272_.html" target="_blank" rel="external">邱勇校长的讲话</a>中提到：“我也知道，你们爱吃的清芬园包子已经不在了，现在我要告诉你们，今年年底清芬园将重新开业，我相信，开业的同时，包子也会回来。”</span><a href="#fnref:3" rev="footnote"> ↩</a></li><li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">4.</span><span style="display: inline-block; vertical-align: top;">原视频中误为“12:00AM”，中午12点应为12:00PM。</span><a href="#fnref:4" rev="footnote"> ↩</a></li><li id="fn:5"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">5.</span><span style="display: inline-block; vertical-align: top;">最后少了一个午夜12点的时刻，我觉得可以选择静谧的紫荆宿舍外景。</span><a href="#fnref:5" rev="footnote"> ↩</a></li></ol></div></div>]]></content>
+      
+        <categories>
+            
+            <category> 生活 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 清华 </tag>
+            
+        </tags>
+        
     </entry>
     
   
