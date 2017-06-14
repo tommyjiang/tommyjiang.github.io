@@ -4,9 +4,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://tommyjiang.github.io/"/>
-  <updated>2017-06-14T15:19:25.000Z</updated>
-  <id>http://tommyjiang.github.io/</id>
+  <link href="http://tommyjiang.coding.me/"/>
+  <updated>2017-06-13T09:32:05.000Z</updated>
+  <id>http://tommyjiang.coding.me/</id>
   
   <author>
     <name>Tommy Jiang</name>
@@ -16,9 +16,40 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>终极算法读书笔记</title>
+    <link href="http://tommyjiang.coding.me/2017/2017-06-13-the-master-algorithm/"/>
+    <id>http://tommyjiang.coding.me/2017/2017-06-13-the-master-algorithm/</id>
+    <published>2017-06-13T11:00:00.000Z</published>
+    <updated>2017-06-13T09:32:05.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>豆瓣看到的一本书，据说翻译很差，看了原版。</p>
+<a id="more"></a>
+<h1 id="3-经验主义"><a href="#3-经验主义" class="headerlink" title="3. 经验主义"></a>3. 经验主义</h1><ul>
+<li>理性主义者：谋定而后动</li>
+<li>经验主义者：实践出真知</li>
+</ul>
+<p>“没有免费午餐”定理的启示：仅有数据不够，还需要先验知识，脱离具体问题谈算法是没有意义的。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;豆瓣看到的一本书，据说翻译很差，看了原版。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Geek" scheme="http://tommyjiang.coding.me/categories/Geek/"/>
+    
+    
+      <category term="Machine learning" scheme="http://tommyjiang.coding.me/tags/Machine-learning/"/>
+    
+      <category term="读书" scheme="http://tommyjiang.coding.me/tags/%E8%AF%BB%E4%B9%A6/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Spacemacs + AUCTeX 编辑 TeX 文档</title>
-    <link href="http://tommyjiang.github.io/2017/2017-06-14-Spacemacs-AuCTeX/"/>
-    <id>http://tommyjiang.github.io/2017/2017-06-14-Spacemacs-AuCTeX/</id>
+    <link href="http://tommyjiang.coding.me/2017/2017-06-14-Spacemacs-AuCTeX/"/>
+    <id>http://tommyjiang.coding.me/2017/2017-06-14-Spacemacs-AuCTeX/</id>
     <published>2017-06-13T11:00:00.000Z</published>
     <updated>2017-06-14T15:19:25.000Z</updated>
     
@@ -43,52 +74,21 @@
     
     </summary>
     
-      <category term="Geek" scheme="http://tommyjiang.github.io/categories/Geek/"/>
+      <category term="Geek" scheme="http://tommyjiang.coding.me/categories/Geek/"/>
     
     
-      <category term="Emacs" scheme="http://tommyjiang.github.io/tags/Emacs/"/>
+      <category term="Emacs" scheme="http://tommyjiang.coding.me/tags/Emacs/"/>
     
-      <category term="LaTeX" scheme="http://tommyjiang.github.io/tags/LaTeX/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>终极算法读书笔记</title>
-    <link href="http://tommyjiang.github.io/2017/2017-06-13-the-master-algorithm/"/>
-    <id>http://tommyjiang.github.io/2017/2017-06-13-the-master-algorithm/</id>
-    <published>2017-06-13T11:00:00.000Z</published>
-    <updated>2017-06-13T09:32:05.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>豆瓣看到的一本书，据说翻译很差，看了原版。</p>
-<a id="more"></a>
-<h1 id="3-经验主义"><a href="#3-经验主义" class="headerlink" title="3. 经验主义"></a>3. 经验主义</h1><ul>
-<li>理性主义者：谋定而后动</li>
-<li>经验主义者：实践出真知</li>
-</ul>
-<p>“没有免费午餐”定理的启示：仅有数据不够，还需要先验知识，脱离具体问题谈算法是没有意义的。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;豆瓣看到的一本书，据说翻译很差，看了原版。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Geek" scheme="http://tommyjiang.github.io/categories/Geek/"/>
-    
-    
-      <category term="Machine learning" scheme="http://tommyjiang.github.io/tags/Machine-learning/"/>
-    
-      <category term="读书" scheme="http://tommyjiang.github.io/tags/%E8%AF%BB%E4%B9%A6/"/>
+      <category term="LaTeX" scheme="http://tommyjiang.coding.me/tags/LaTeX/"/>
     
   </entry>
   
   <entry>
     <title>赵大厨江小厨美食菜单</title>
-    <link href="http://tommyjiang.github.io/2017/2017-06-12-let&#39;s-cook-some-food/"/>
-    <id>http://tommyjiang.github.io/2017/2017-06-12-let&#39;s-cook-some-food/</id>
+    <link href="http://tommyjiang.coding.me/2017/2017-06-12-let-us-cook-some-food/"/>
+    <id>http://tommyjiang.coding.me/2017/2017-06-12-let-us-cook-some-food/</id>
     <published>2017-06-12T12:00:00.000Z</published>
-    <updated>2017-06-14T15:40:45.000Z</updated>
+    <updated>2017-06-14T15:48:56.000Z</updated>
     
     <content type="html"><![CDATA[<p>民以食为天，食以味为先。</p>
 <a id="more"></a>
@@ -113,6 +113,7 @@
 <h2 id="菜单-1"><a href="#菜单-1" class="headerlink" title="菜单"></a>菜单</h2><ul>
 <li>青椒炒鸡蛋</li>
 <li>爆炒豆芽</li>
+<li>番茄龙利鱼汤</li>
 <li>冰虾</li>
 </ul>
 <h2 id="Tips-1"><a href="#Tips-1" class="headerlink" title="Tips"></a>Tips</h2><ol>
@@ -121,6 +122,19 @@
 </ol>
 <h2 id="寄语-1"><a href="#寄语-1" class="headerlink" title="寄语"></a>寄语</h2><p>大厨寄语：新开发的菜品，番茄龙利鱼汤，酸酸烫烫的，简直太好喝啦！大厨减肥也可以喝得汤，嘻嘻，简直幸福满满呀！放入蒜之后吃不出来，但是味道浓郁up，蒜简直真是一个好东西！我爱大蒜！另外，我真的是愿意做饭的，当然作为大吃货一个也喜欢在外面直接吃饭+外面吃饭的氛围。。。这并不矛盾，嘻嘻。<span style="color:#FF66CC">我爱生活，我爱猪猪。</span>🐷</p>
 <p>小厨寄语：大厨做的菜真好吃，以后要多犒劳大厨，带大厨出去吃，一起开心！</p>
+<h1 id="2017年6月14日-晚餐"><a href="#2017年6月14日-晚餐" class="headerlink" title="2017年6月14日 晚餐"></a>2017年6月14日 晚餐</h1><p><img src="/images/2017/2017-06-14-晚餐.jpeg" alt=""></p>
+<h2 id="菜单-2"><a href="#菜单-2" class="headerlink" title="菜单"></a>菜单</h2><ul>
+<li>青椒炒鸡蛋(加热)</li>
+<li>爆炒豆芽(加热)</li>
+<li>爆炒肥肠</li>
+<li>冰虾</li>
+</ul>
+<h2 id="Tips-2"><a href="#Tips-2" class="headerlink" title="Tips"></a>Tips</h2><ol>
+<li>肥肠用开水煮十分钟，放入用花椒、料酒、酱油，煮熟后切小段。放入热油，豆瓣酱，葱姜蒜末爆炒，放入肥肠和干辣椒小米椒大火爆炒，过程中放糖和酱油。肥肠焦了之后放青椒出锅。</li>
+<li>青椒最好最后放，比较脆。</li>
+</ol>
+<h2 id="寄语-2"><a href="#寄语-2" class="headerlink" title="寄语"></a>寄语</h2><p>大厨寄语：没想到小厨那么喜欢这个肥肠，一块一块全吃啦哈哈哈。还想用剩下的明天煮面（虽然都不剩啥啦嘻嘻）。肥肠真香啊。一点腥味没有，稻香村买的，<span style="color:#FF66CC">稻香村赛高！</span>这道菜小厨这么喜欢吃还是有点出乎我的意料，这只是第一次，以后我有信心做出更好吃的肥肠，<span style="color:#FF66CC">配上米饭！嘎嘎！口水！</span></p>
+<p>小厨寄语：大厨第一次做肥肠就这么成功，可惜最近忙于塑身不能一起品尝美味，期待塑身成功之后的庆功宴！</p>
 ]]></content>
     
     <summary type="html">
@@ -129,17 +143,17 @@
     
     </summary>
     
-      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://tommyjiang.coding.me/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
-      <category term="厨房" scheme="http://tommyjiang.github.io/tags/%E5%8E%A8%E6%88%BF/"/>
+      <category term="厨房" scheme="http://tommyjiang.coding.me/tags/%E5%8E%A8%E6%88%BF/"/>
     
   </entry>
   
   <entry>
     <title>西单大悦城处理 iPhone 6 Plus 电池鼓胀问题</title>
-    <link href="http://tommyjiang.github.io/2017/2017-04-27-Apple-xidan-joy-city-iphone-battery/"/>
-    <id>http://tommyjiang.github.io/2017/2017-04-27-Apple-xidan-joy-city-iphone-battery/</id>
+    <link href="http://tommyjiang.coding.me/2017/2017-04-27-Apple-xidan-joy-city-iphone-battery/"/>
+    <id>http://tommyjiang.coding.me/2017/2017-04-27-Apple-xidan-joy-city-iphone-battery/</id>
     <published>2017-04-27T07:00:00.000Z</published>
     <updated>2017-04-27T09:08:51.000Z</updated>
     
@@ -155,17 +169,17 @@
     
     </summary>
     
-      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://tommyjiang.coding.me/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
-      <category term="iPhone" scheme="http://tommyjiang.github.io/tags/iPhone/"/>
+      <category term="iPhone" scheme="http://tommyjiang.coding.me/tags/iPhone/"/>
     
   </entry>
   
   <entry>
     <title>Mac 上安装 xgboost 教程</title>
-    <link href="http://tommyjiang.github.io/2017/2017-04-18-install-xgboost-on-mac/"/>
-    <id>http://tommyjiang.github.io/2017/2017-04-18-install-xgboost-on-mac/</id>
+    <link href="http://tommyjiang.coding.me/2017/2017-04-18-install-xgboost-on-mac/"/>
+    <id>http://tommyjiang.coding.me/2017/2017-04-18-install-xgboost-on-mac/</id>
     <published>2017-04-17T11:00:00.000Z</published>
     <updated>2017-04-18T08:14:06.000Z</updated>
     
@@ -195,19 +209,19 @@
     
     </summary>
     
-      <category term="Geek" scheme="http://tommyjiang.github.io/categories/Geek/"/>
+      <category term="Geek" scheme="http://tommyjiang.coding.me/categories/Geek/"/>
     
     
-      <category term="xgboost" scheme="http://tommyjiang.github.io/tags/xgboost/"/>
+      <category term="xgboost" scheme="http://tommyjiang.coding.me/tags/xgboost/"/>
     
-      <category term="机器学习" scheme="http://tommyjiang.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="http://tommyjiang.coding.me/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>博客评论系统由多说迁移至友言</title>
-    <link href="http://tommyjiang.github.io/2017/2017-03-22-duoshuo-to-youyan/"/>
-    <id>http://tommyjiang.github.io/2017/2017-03-22-duoshuo-to-youyan/</id>
+    <link href="http://tommyjiang.coding.me/2017/2017-03-22-duoshuo-to-youyan/"/>
+    <id>http://tommyjiang.coding.me/2017/2017-03-22-duoshuo-to-youyan/</id>
     <published>2017-03-22T11:00:00.000Z</published>
     <updated>2017-03-31T07:17:10.000Z</updated>
     
@@ -223,17 +237,17 @@
     
     </summary>
     
-      <category term="Geek" scheme="http://tommyjiang.github.io/categories/Geek/"/>
+      <category term="Geek" scheme="http://tommyjiang.coding.me/categories/Geek/"/>
     
     
-      <category term="博客" scheme="http://tommyjiang.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+      <category term="博客" scheme="http://tommyjiang.coding.me/tags/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
   <entry>
     <title>机器学习相关书籍</title>
-    <link href="http://tommyjiang.github.io/2017/2017-02-25-machine-learning/"/>
-    <id>http://tommyjiang.github.io/2017/2017-02-25-machine-learning/</id>
+    <link href="http://tommyjiang.coding.me/2017/2017-02-25-machine-learning/"/>
+    <id>http://tommyjiang.coding.me/2017/2017-02-25-machine-learning/</id>
     <published>2017-02-25T11:00:00.000Z</published>
     <updated>2017-02-25T15:11:33.000Z</updated>
     
@@ -248,19 +262,19 @@
     
     </summary>
     
-      <category term="Geek" scheme="http://tommyjiang.github.io/categories/Geek/"/>
+      <category term="Geek" scheme="http://tommyjiang.coding.me/categories/Geek/"/>
     
     
-      <category term="Python" scheme="http://tommyjiang.github.io/tags/Python/"/>
+      <category term="Python" scheme="http://tommyjiang.coding.me/tags/Python/"/>
     
-      <category term="Machine learning" scheme="http://tommyjiang.github.io/tags/Machine-learning/"/>
+      <category term="Machine learning" scheme="http://tommyjiang.coding.me/tags/Machine-learning/"/>
     
   </entry>
   
   <entry>
     <title>2016 年风电并网运行情况</title>
-    <link href="http://tommyjiang.github.io/2017/2017-02-05-wind-waste-2016/"/>
-    <id>http://tommyjiang.github.io/2017/2017-02-05-wind-waste-2016/</id>
+    <link href="http://tommyjiang.coding.me/2017/2017-02-05-wind-waste-2016/"/>
+    <id>http://tommyjiang.coding.me/2017/2017-02-05-wind-waste-2016/</id>
     <published>2017-02-05T11:00:00.000Z</published>
     <updated>2017-02-06T07:10:53.000Z</updated>
     
@@ -869,17 +883,17 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     
     </summary>
     
-      <category term="技术" scheme="http://tommyjiang.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="http://tommyjiang.coding.me/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="风电" scheme="http://tommyjiang.github.io/tags/%E9%A3%8E%E7%94%B5/"/>
+      <category term="风电" scheme="http://tommyjiang.coding.me/tags/%E9%A3%8E%E7%94%B5/"/>
     
   </entry>
   
   <entry>
     <title>鸡年大吉</title>
-    <link href="http://tommyjiang.github.io/2017/2017-02-03-Chinese-new-year/"/>
-    <id>http://tommyjiang.github.io/2017/2017-02-03-Chinese-new-year/</id>
+    <link href="http://tommyjiang.coding.me/2017/2017-02-03-Chinese-new-year/"/>
+    <id>http://tommyjiang.coding.me/2017/2017-02-03-Chinese-new-year/</id>
     <published>2017-02-03T11:00:00.000Z</published>
     <updated>2017-02-09T14:58:31.000Z</updated>
     
@@ -911,17 +925,17 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     
     </summary>
     
-      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://tommyjiang.coding.me/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
-      <category term="Python" scheme="http://tommyjiang.github.io/tags/Python/"/>
+      <category term="Python" scheme="http://tommyjiang.coding.me/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>歌词摘录</title>
-    <link href="http://tommyjiang.github.io/2017/2017-01-03-Song-lyrics/"/>
-    <id>http://tommyjiang.github.io/2017/2017-01-03-Song-lyrics/</id>
+    <link href="http://tommyjiang.coding.me/2017/2017-01-03-Song-lyrics/"/>
+    <id>http://tommyjiang.coding.me/2017/2017-01-03-Song-lyrics/</id>
     <published>2017-01-03T11:00:00.000Z</published>
     <updated>2017-02-08T03:06:07.000Z</updated>
     
@@ -953,17 +967,17 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     
     </summary>
     
-      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://tommyjiang.coding.me/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
-      <category term="音乐" scheme="http://tommyjiang.github.io/tags/%E9%9F%B3%E4%B9%90/"/>
+      <category term="音乐" scheme="http://tommyjiang.coding.me/tags/%E9%9F%B3%E4%B9%90/"/>
     
   </entry>
   
   <entry>
     <title>2016行程总结</title>
-    <link href="http://tommyjiang.github.io/2016/2016-12-31-Trip-2016/"/>
-    <id>http://tommyjiang.github.io/2016/2016-12-31-Trip-2016/</id>
+    <link href="http://tommyjiang.coding.me/2016/2016-12-31-Trip-2016/"/>
+    <id>http://tommyjiang.coding.me/2016/2016-12-31-Trip-2016/</id>
     <published>2016-12-31T02:00:00.000Z</published>
     <updated>2017-01-13T05:00:01.000Z</updated>
     
@@ -1066,19 +1080,19 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     
     </summary>
     
-      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://tommyjiang.coding.me/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
-      <category term="Echarts" scheme="http://tommyjiang.github.io/tags/Echarts/"/>
+      <category term="Echarts" scheme="http://tommyjiang.coding.me/tags/Echarts/"/>
     
-      <category term="旅程" scheme="http://tommyjiang.github.io/tags/%E6%97%85%E7%A8%8B/"/>
+      <category term="旅程" scheme="http://tommyjiang.coding.me/tags/%E6%97%85%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>手帕口道口通过车次信息</title>
-    <link href="http://tommyjiang.github.io/2016/2016-12-10-Shou-pa-kou-crossing/"/>
-    <id>http://tommyjiang.github.io/2016/2016-12-10-Shou-pa-kou-crossing/</id>
+    <link href="http://tommyjiang.coding.me/2016/2016-12-10-Shou-pa-kou-crossing/"/>
+    <id>http://tommyjiang.coding.me/2016/2016-12-10-Shou-pa-kou-crossing/</id>
     <published>2016-12-10T11:00:00.000Z</published>
     <updated>2017-03-19T04:55:13.000Z</updated>
     
@@ -1167,17 +1181,17 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     
     </summary>
     
-      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://tommyjiang.coding.me/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
-      <category term="铁路" scheme="http://tommyjiang.github.io/tags/%E9%93%81%E8%B7%AF/"/>
+      <category term="铁路" scheme="http://tommyjiang.coding.me/tags/%E9%93%81%E8%B7%AF/"/>
     
   </entry>
   
   <entry>
     <title>北京十大适合一个人吃的餐厅</title>
-    <link href="http://tommyjiang.github.io/2016/2016-11-16-Beijing-single-res/"/>
-    <id>http://tommyjiang.github.io/2016/2016-11-16-Beijing-single-res/</id>
+    <link href="http://tommyjiang.coding.me/2016/2016-11-16-Beijing-single-res/"/>
+    <id>http://tommyjiang.coding.me/2016/2016-11-16-Beijing-single-res/</id>
     <published>2016-11-16T11:00:00.000Z</published>
     <updated>2016-12-04T11:44:58.000Z</updated>
     
@@ -1333,17 +1347,17 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     
     </summary>
     
-      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://tommyjiang.coding.me/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
-      <category term="美食" scheme="http://tommyjiang.github.io/tags/%E7%BE%8E%E9%A3%9F/"/>
+      <category term="美食" scheme="http://tommyjiang.coding.me/tags/%E7%BE%8E%E9%A3%9F/"/>
     
   </entry>
   
   <entry>
     <title>Hexo 博文中加入百度地图</title>
-    <link href="http://tommyjiang.github.io/2016/2016-11-16-Hexo-baidu-map/"/>
-    <id>http://tommyjiang.github.io/2016/2016-11-16-Hexo-baidu-map/</id>
+    <link href="http://tommyjiang.coding.me/2016/2016-11-16-Hexo-baidu-map/"/>
+    <id>http://tommyjiang.coding.me/2016/2016-11-16-Hexo-baidu-map/</id>
     <published>2016-11-16T11:00:00.000Z</published>
     <updated>2016-11-17T16:27:43.000Z</updated>
     
@@ -1424,17 +1438,17 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     
     </summary>
     
-      <category term="Geek" scheme="http://tommyjiang.github.io/categories/Geek/"/>
+      <category term="Geek" scheme="http://tommyjiang.coding.me/categories/Geek/"/>
     
     
-      <category term="Hexo" scheme="http://tommyjiang.github.io/tags/Hexo/"/>
+      <category term="Hexo" scheme="http://tommyjiang.coding.me/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>纪念清华园站 &amp; 我的铁路情缘</title>
-    <link href="http://tommyjiang.github.io/2016/2016-11-01-Tsinghua-yuan-station/"/>
-    <id>http://tommyjiang.github.io/2016/2016-11-01-Tsinghua-yuan-station/</id>
+    <link href="http://tommyjiang.coding.me/2016/2016-11-01-Tsinghua-yuan-station/"/>
+    <id>http://tommyjiang.coding.me/2016/2016-11-01-Tsinghua-yuan-station/</id>
     <published>2016-11-01T11:00:00.000Z</published>
     <updated>2016-11-16T09:21:00.000Z</updated>
     
@@ -1459,17 +1473,17 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     
     </summary>
     
-      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://tommyjiang.coding.me/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
-      <category term="铁路" scheme="http://tommyjiang.github.io/tags/%E9%93%81%E8%B7%AF/"/>
+      <category term="铁路" scheme="http://tommyjiang.coding.me/tags/%E9%93%81%E8%B7%AF/"/>
     
   </entry>
   
   <entry>
     <title>愿得一心人，白首不相离</title>
-    <link href="http://tommyjiang.github.io/2016/2016-10-24-Forever-love/"/>
-    <id>http://tommyjiang.github.io/2016/2016-10-24-Forever-love/</id>
+    <link href="http://tommyjiang.coding.me/2016/2016-10-24-Forever-love/"/>
+    <id>http://tommyjiang.coding.me/2016/2016-10-24-Forever-love/</id>
     <published>2016-10-24T11:00:00.000Z</published>
     <updated>2016-11-03T12:29:40.000Z</updated>
     
@@ -1491,17 +1505,17 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     
     </summary>
     
-      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://tommyjiang.coding.me/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
-      <category term="感情" scheme="http://tommyjiang.github.io/tags/%E6%84%9F%E6%83%85/"/>
+      <category term="感情" scheme="http://tommyjiang.coding.me/tags/%E6%84%9F%E6%83%85/"/>
     
   </entry>
   
   <entry>
     <title>北京地铁各线路颜色 HEX 及 RGB 代码</title>
-    <link href="http://tommyjiang.github.io/2016/2016-09-10-Beijing-subway-color/"/>
-    <id>http://tommyjiang.github.io/2016/2016-09-10-Beijing-subway-color/</id>
+    <link href="http://tommyjiang.coding.me/2016/2016-09-10-Beijing-subway-color/"/>
+    <id>http://tommyjiang.coding.me/2016/2016-09-10-Beijing-subway-color/</id>
     <published>2016-09-10T14:00:00.000Z</published>
     <updated>2016-09-12T01:20:58.000Z</updated>
     
@@ -1617,17 +1631,17 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     
     </summary>
     
-      <category term="技术" scheme="http://tommyjiang.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="http://tommyjiang.coding.me/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="地铁" scheme="http://tommyjiang.github.io/tags/%E5%9C%B0%E9%93%81/"/>
+      <category term="地铁" scheme="http://tommyjiang.coding.me/tags/%E5%9C%B0%E9%93%81/"/>
     
   </entry>
   
   <entry>
     <title>Mac 下 Emacs Org mode 加密以及 gnupg 的安装</title>
-    <link href="http://tommyjiang.github.io/2016/2016-09-06-Org-mode-org-encrypt-gnupg-Mac/"/>
-    <id>http://tommyjiang.github.io/2016/2016-09-06-Org-mode-org-encrypt-gnupg-Mac/</id>
+    <link href="http://tommyjiang.coding.me/2016/2016-09-06-Org-mode-org-encrypt-gnupg-Mac/"/>
+    <id>http://tommyjiang.coding.me/2016/2016-09-06-Org-mode-org-encrypt-gnupg-Mac/</id>
     <published>2016-09-06T14:00:00.000Z</published>
     <updated>2016-09-12T01:23:46.000Z</updated>
     
@@ -1647,21 +1661,21 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     
     </summary>
     
-      <category term="技术" scheme="http://tommyjiang.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="http://tommyjiang.coding.me/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="Mac" scheme="http://tommyjiang.github.io/tags/Mac/"/>
+      <category term="Mac" scheme="http://tommyjiang.coding.me/tags/Mac/"/>
     
-      <category term="Emacs" scheme="http://tommyjiang.github.io/tags/Emacs/"/>
+      <category term="Emacs" scheme="http://tommyjiang.coding.me/tags/Emacs/"/>
     
-      <category term="Org mode" scheme="http://tommyjiang.github.io/tags/Org-mode/"/>
+      <category term="Org mode" scheme="http://tommyjiang.coding.me/tags/Org-mode/"/>
     
   </entry>
   
   <entry>
     <title>西单大悦城更换 RMBP 屏幕攻略</title>
-    <link href="http://tommyjiang.github.io/2016/2016-08-28-Apple-xidan-joy-city-retina-display/"/>
-    <id>http://tommyjiang.github.io/2016/2016-08-28-Apple-xidan-joy-city-retina-display/</id>
+    <link href="http://tommyjiang.coding.me/2016/2016-08-28-Apple-xidan-joy-city-retina-display/"/>
+    <id>http://tommyjiang.coding.me/2016/2016-08-28-Apple-xidan-joy-city-retina-display/</id>
     <published>2016-08-28T11:00:00.000Z</published>
     <updated>2016-09-12T01:23:05.000Z</updated>
     
@@ -1685,17 +1699,17 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     
     </summary>
     
-      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://tommyjiang.coding.me/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
-      <category term="Mac" scheme="http://tommyjiang.github.io/tags/Mac/"/>
+      <category term="Mac" scheme="http://tommyjiang.coding.me/tags/Mac/"/>
     
   </entry>
   
   <entry>
     <title>工银亚洲香港账户开户攻略</title>
-    <link href="http://tommyjiang.github.io/2016/2016-08-26-ICBC-Asia/"/>
-    <id>http://tommyjiang.github.io/2016/2016-08-26-ICBC-Asia/</id>
+    <link href="http://tommyjiang.coding.me/2016/2016-08-26-ICBC-Asia/"/>
+    <id>http://tommyjiang.coding.me/2016/2016-08-26-ICBC-Asia/</id>
     <published>2016-08-26T14:00:00.000Z</published>
     <updated>2016-09-12T01:24:06.000Z</updated>
     
@@ -1719,10 +1733,10 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     
     </summary>
     
-      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://tommyjiang.coding.me/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
-      <category term="香港" scheme="http://tommyjiang.github.io/tags/%E9%A6%99%E6%B8%AF/"/>
+      <category term="香港" scheme="http://tommyjiang.coding.me/tags/%E9%A6%99%E6%B8%AF/"/>
     
   </entry>
   
