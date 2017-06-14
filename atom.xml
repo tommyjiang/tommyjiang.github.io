@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tommyjiang.coding.me/"/>
-  <updated>2017-06-13T09:32:05.000Z</updated>
+  <updated>2017-06-14T15:19:25.000Z</updated>
   <id>http://tommyjiang.coding.me/</id>
   
   <author>
@@ -14,37 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>终极算法读书笔记</title>
-    <link href="http://tommyjiang.coding.me/2017/2017-06-13-the-master-algorithm/"/>
-    <id>http://tommyjiang.coding.me/2017/2017-06-13-the-master-algorithm/</id>
-    <published>2017-06-13T11:00:00.000Z</published>
-    <updated>2017-06-13T09:32:05.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>豆瓣看到的一本书，据说翻译很差，看了原版。</p>
-<a id="more"></a>
-<h1 id="3-经验主义"><a href="#3-经验主义" class="headerlink" title="3. 经验主义"></a>3. 经验主义</h1><ul>
-<li>理性主义者：谋定而后动</li>
-<li>经验主义者：实践出真知</li>
-</ul>
-<p>“没有免费午餐”定理的启示：仅有数据不够，还需要先验知识，脱离具体问题谈算法是没有意义的。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;豆瓣看到的一本书，据说翻译很差，看了原版。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Geek" scheme="http://tommyjiang.coding.me/categories/Geek/"/>
-    
-    
-      <category term="Machine learning" scheme="http://tommyjiang.coding.me/tags/Machine-learning/"/>
-    
-      <category term="读书" scheme="http://tommyjiang.coding.me/tags/%E8%AF%BB%E4%B9%A6/"/>
-    
-  </entry>
   
   <entry>
     <title>Spacemacs + AUCTeX 编辑 TeX 文档</title>
@@ -80,6 +49,37 @@
       <category term="Emacs" scheme="http://tommyjiang.coding.me/tags/Emacs/"/>
     
       <category term="LaTeX" scheme="http://tommyjiang.coding.me/tags/LaTeX/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>终极算法读书笔记</title>
+    <link href="http://tommyjiang.coding.me/2017/2017-06-13-the-master-algorithm/"/>
+    <id>http://tommyjiang.coding.me/2017/2017-06-13-the-master-algorithm/</id>
+    <published>2017-06-13T11:00:00.000Z</published>
+    <updated>2017-06-13T09:32:05.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>豆瓣看到的一本书，据说翻译很差，看了原版。</p>
+<a id="more"></a>
+<h1 id="3-经验主义"><a href="#3-经验主义" class="headerlink" title="3. 经验主义"></a>3. 经验主义</h1><ul>
+<li>理性主义者：谋定而后动</li>
+<li>经验主义者：实践出真知</li>
+</ul>
+<p>“没有免费午餐”定理的启示：仅有数据不够，还需要先验知识，脱离具体问题谈算法是没有意义的。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;豆瓣看到的一本书，据说翻译很差，看了原版。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Geek" scheme="http://tommyjiang.coding.me/categories/Geek/"/>
+    
+    
+      <category term="Machine learning" scheme="http://tommyjiang.coding.me/tags/Machine-learning/"/>
+    
+      <category term="读书" scheme="http://tommyjiang.coding.me/tags/%E8%AF%BB%E4%B9%A6/"/>
     
   </entry>
   
@@ -879,7 +879,7 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     
     <summary type="html">
     
-      &lt;p&gt;本文数据来源：&lt;a href=&quot;http://www.nea.gov.cn/2017-01/26/c_136014615.htm&quot;&gt;国家能源局官网&lt;/a&gt;。&lt;/p&gt;
+      &lt;p&gt;本文数据来源：&lt;a href=&quot;http://www.nea.gov.cn/2017-01/26/c_136014615.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;国家能源局官网&lt;/a&gt;。&lt;/p&gt;
     
     </summary>
     
@@ -1189,6 +1189,97 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
   </entry>
   
   <entry>
+    <title>Hexo 博文中加入百度地图</title>
+    <link href="http://tommyjiang.coding.me/2016/2016-11-16-Hexo-baidu-map/"/>
+    <id>http://tommyjiang.coding.me/2016/2016-11-16-Hexo-baidu-map/</id>
+    <published>2016-11-16T11:00:00.000Z</published>
+    <updated>2016-11-17T16:27:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>利用百度地图 API 实现在 Hexo 的博文中加入地图。</p>
+<a id="more"></a>
+<p>最近想丰富下生活，最先想到的就是多品尝点北京的美食。作为一个认真的人，吃过就想记下来，但只有饭馆的名字和地址显得太单调了，就想能在地图上显示的话会比较直观。搜了下百度地图的 API，不多说，直接上代码吧。更详细的内容可以参考百度地图 Javascript 的 <a href="http://lbsyun.baidu.com/index.php?title=jspopular" target="_blank" rel="external">API</a>。</p>
+<p>首先新建一个<code>div</code>：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"min-height: 500px; width: 100%;"</span> <span class="attr">id</span>=<span class="string">"map"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>然后利用百度地图 API 在<code>div</code>中填充一个地图： </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">map_init</span>(<span class="params"></span>) </span>&#123;</div><div class="line">                </div><div class="line">        <span class="keyword">var</span> map = <span class="keyword">new</span> BMap.Map(<span class="string">"map"</span>);    <span class="comment">// 创建Map实例</span></div><div class="line">        map.centerAndZoom(<span class="keyword">new</span> BMap.Point(<span class="number">116.41</span>,<span class="number">39.89</span>), <span class="number">13</span>);  <span class="comment">// 初始化,设置中心点坐标和地图级别</span></div><div class="line">        map.addControl(<span class="keyword">new</span> BMap.MapTypeControl());   <span class="comment">//添加地图类型控件</span></div><div class="line">        map.setCurrentCity(<span class="string">"北京"</span>);          <span class="comment">// 设置地图显示的城市 此项是必须设置的</span></div><div class="line">        map.enableScrollWheelZoom(<span class="literal">true</span>);     <span class="comment">//开启鼠标滚轮缩放</span></div><div class="line">                </div><div class="line">        <span class="comment">//向地图中添加缩放控件</span></div><div class="line">        <span class="keyword">var</span> ctrlNav = <span class="keyword">new</span> <span class="built_in">window</span>.BMap.NavigationControl(&#123;</div><div class="line">                           <span class="attr">anchor</span>: BMAP_ANCHOR_TOP_LEFT,</div><div class="line">                           <span class="attr">type</span>: BMAP_NAVIGATION_CONTROL_LARGE</div><div class="line">                      &#125;);</div><div class="line">        map.addControl(ctrlNav);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">//异步调用百度js</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">map_load</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> load = <span class="built_in">document</span>.createElement(<span class="string">"script"</span>);</div><div class="line">        load.src = <span class="string">"http://api.map.baidu.com/api?v=1.4&amp;callback=map_init"</span>;</div><div class="line">        <span class="built_in">document</span>.body.appendChild(load);</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">window</span>.onload = map_load;</div><div class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></figure>
+<p>上述代码直接放在 Hexo Markdown 博文中的<code>raw</code>标签中，即：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% raw %&#125;</div><div class="line">上边的代码</div><div class="line">&#123;% endraw %&#125;</div></pre></td></tr></table></figure>
+<p>结果如下：</p>
+
+    <div style="min-height: 500px; width: 100%;" id="map">
+    </div>
+
+    <script type="text/javascript">
+  
+        function map_init() {
+                    
+            var map = new BMap.Map("map");    // 创建Map实例
+            map.centerAndZoom(new BMap.Point(116.41,39.89), 13);  // 初始化地图,设置中心点坐标和地图级别
+            map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+            map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+            map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+                    
+            //向地图中添加缩放控件
+            var ctrlNav = new window.BMap.NavigationControl({
+                               anchor: BMAP_ANCHOR_TOP_LEFT,
+                               type: BMAP_NAVIGATION_CONTROL_LARGE
+                          });
+            map.addControl(ctrlNav);
+  
+            var points = [
+                [116.395857,39.901169], // 渔芙南
+                [116.649810,39.912096], // 三禾粉匠贵州米粉店 
+                [116.323938,39.989919],
+                [116.328896,39.988039],
+                [116.321135,39.987072],
+                [116.332453,39.989007],
+                [116.324045,39.987984],
+                [116.322285,39.988316],
+                [116.322608,39.986381]
+            ];
+            
+            var size1 = new BMap.Size(21, 50);
+            var size2 = new BMap.Size(21, 0);
+            var icons = [], markers = [];
+            
+            // 向地图添加标注
+            // for( var i = 0;i < points.length; i++){
+            //     var point = new BMap.Point(points[i][0], points[i][1]);
+            //     var icon_pre = 'http://o852ayzmr.bkt.clouddn.com/';
+            //     var icon_post = '.png';
+            //     var icon_string = icon_pre + (i+1).toString()  + icon_post;
+            //     icons[i] = new BMap.Icon(icon_string, size1, {anchor: size2})
+            //     // icons[i] = new BMap.Icon('http://o852ayzmr.bkt.clouddn.com/1.png', size1, {anchor: size2})
+            //     markers[i] = new BMap.Marker(point, {icon: icons[i]});
+            //     map.addOverlay(markers[i]);
+            // };
+        }
+
+        //异步调用百度js
+        function map_load() {
+            var load = document.createElement("script");
+            load.src = "http://api.map.baidu.com/api?v=1.4&callback=map_init";
+            document.body.appendChild(load);
+        }
+        window.onload = map_load;
+    </script>
+
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;利用百度地图 API 实现在 Hexo 的博文中加入地图。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Geek" scheme="http://tommyjiang.coding.me/categories/Geek/"/>
+    
+    
+      <category term="Hexo" scheme="http://tommyjiang.coding.me/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
     <title>北京十大适合一个人吃的餐厅</title>
     <link href="http://tommyjiang.coding.me/2016/2016-11-16-Beijing-single-res/"/>
     <id>http://tommyjiang.coding.me/2016/2016-11-16-Beijing-single-res/</id>
@@ -1343,7 +1434,7 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     
     <summary type="html">
     
-      &lt;p&gt;记录下有才姐推荐的微博上的&lt;a href=&quot;http://weibo.com/2643091105/EhDNHuBvH?from=page_1005052643091105_profile&amp;amp;wvr=6&amp;amp;mod=weibotime&amp;amp;type=comment#_rnd1479530057542&quot;&gt;北京十大适合一个人吃的餐厅&lt;/a&gt;，把生活丰富起来。&lt;/p&gt;
+      &lt;p&gt;记录下有才姐推荐的微博上的&lt;a href=&quot;http://weibo.com/2643091105/EhDNHuBvH?from=page_1005052643091105_profile&amp;amp;wvr=6&amp;amp;mod=weibotime&amp;amp;type=comment#_rnd1479530057542&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;北京十大适合一个人吃的餐厅&lt;/a&gt;，把生活丰富起来。&lt;/p&gt;
     
     </summary>
     
@@ -1351,97 +1442,6 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     
     
       <category term="美食" scheme="http://tommyjiang.coding.me/tags/%E7%BE%8E%E9%A3%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo 博文中加入百度地图</title>
-    <link href="http://tommyjiang.coding.me/2016/2016-11-16-Hexo-baidu-map/"/>
-    <id>http://tommyjiang.coding.me/2016/2016-11-16-Hexo-baidu-map/</id>
-    <published>2016-11-16T11:00:00.000Z</published>
-    <updated>2016-11-17T16:27:43.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>利用百度地图 API 实现在 Hexo 的博文中加入地图。</p>
-<a id="more"></a>
-<p>最近想丰富下生活，最先想到的就是多品尝点北京的美食。作为一个认真的人，吃过就想记下来，但只有饭馆的名字和地址显得太单调了，就想能在地图上显示的话会比较直观。搜了下百度地图的 API，不多说，直接上代码吧。更详细的内容可以参考百度地图 Javascript 的 <a href="http://lbsyun.baidu.com/index.php?title=jspopular" target="_blank" rel="external">API</a>。</p>
-<p>首先新建一个<code>div</code>：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"min-height: 500px; width: 100%;"</span> <span class="attr">id</span>=<span class="string">"map"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>然后利用百度地图 API 在<code>div</code>中填充一个地图： </p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">map_init</span>(<span class="params"></span>) </span>&#123;</div><div class="line">                </div><div class="line">        <span class="keyword">var</span> map = <span class="keyword">new</span> BMap.Map(<span class="string">"map"</span>);    <span class="comment">// 创建Map实例</span></div><div class="line">        map.centerAndZoom(<span class="keyword">new</span> BMap.Point(<span class="number">116.41</span>,<span class="number">39.89</span>), <span class="number">13</span>);  <span class="comment">// 初始化,设置中心点坐标和地图级别</span></div><div class="line">        map.addControl(<span class="keyword">new</span> BMap.MapTypeControl());   <span class="comment">//添加地图类型控件</span></div><div class="line">        map.setCurrentCity(<span class="string">"北京"</span>);          <span class="comment">// 设置地图显示的城市 此项是必须设置的</span></div><div class="line">        map.enableScrollWheelZoom(<span class="literal">true</span>);     <span class="comment">//开启鼠标滚轮缩放</span></div><div class="line">                </div><div class="line">        <span class="comment">//向地图中添加缩放控件</span></div><div class="line">        <span class="keyword">var</span> ctrlNav = <span class="keyword">new</span> <span class="built_in">window</span>.BMap.NavigationControl(&#123;</div><div class="line">                           anchor: BMAP_ANCHOR_TOP_LEFT,</div><div class="line">                           type: BMAP_NAVIGATION_CONTROL_LARGE</div><div class="line">                      &#125;);</div><div class="line">        map.addControl(ctrlNav);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">//异步调用百度js</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">map_load</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> load = <span class="built_in">document</span>.createElement(<span class="string">"script"</span>);</div><div class="line">        load.src = <span class="string">"http://api.map.baidu.com/api?v=1.4&amp;callback=map_init"</span>;</div><div class="line">        <span class="built_in">document</span>.body.appendChild(load);</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">window</span>.onload = map_load;</div><div class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></figure>
-<p>上述代码直接放在 Hexo Markdown 博文中的<code>raw</code>标签中，即：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% raw %&#125;</div><div class="line">上边的代码</div><div class="line">&#123;% endraw %&#125;</div></pre></td></tr></table></figure>
-<p>结果如下：</p>
-
-    <div style="min-height: 500px; width: 100%;" id="map">
-    </div>
-
-    <script type="text/javascript">
-  
-        function map_init() {
-                    
-            var map = new BMap.Map("map");    // 创建Map实例
-            map.centerAndZoom(new BMap.Point(116.41,39.89), 13);  // 初始化地图,设置中心点坐标和地图级别
-            map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
-            map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
-            map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
-                    
-            //向地图中添加缩放控件
-            var ctrlNav = new window.BMap.NavigationControl({
-                               anchor: BMAP_ANCHOR_TOP_LEFT,
-                               type: BMAP_NAVIGATION_CONTROL_LARGE
-                          });
-            map.addControl(ctrlNav);
-  
-            var points = [
-                [116.395857,39.901169], // 渔芙南
-                [116.649810,39.912096], // 三禾粉匠贵州米粉店 
-                [116.323938,39.989919],
-                [116.328896,39.988039],
-                [116.321135,39.987072],
-                [116.332453,39.989007],
-                [116.324045,39.987984],
-                [116.322285,39.988316],
-                [116.322608,39.986381]
-            ];
-            
-            var size1 = new BMap.Size(21, 50);
-            var size2 = new BMap.Size(21, 0);
-            var icons = [], markers = [];
-            
-            // 向地图添加标注
-            // for( var i = 0;i < points.length; i++){
-            //     var point = new BMap.Point(points[i][0], points[i][1]);
-            //     var icon_pre = 'http://o852ayzmr.bkt.clouddn.com/';
-            //     var icon_post = '.png';
-            //     var icon_string = icon_pre + (i+1).toString()  + icon_post;
-            //     icons[i] = new BMap.Icon(icon_string, size1, {anchor: size2})
-            //     // icons[i] = new BMap.Icon('http://o852ayzmr.bkt.clouddn.com/1.png', size1, {anchor: size2})
-            //     markers[i] = new BMap.Marker(point, {icon: icons[i]});
-            //     map.addOverlay(markers[i]);
-            // };
-        }
-
-        //异步调用百度js
-        function map_load() {
-            var load = document.createElement("script");
-            load.src = "http://api.map.baidu.com/api?v=1.4&callback=map_init";
-            document.body.appendChild(load);
-        }
-        window.onload = map_load;
-    </script>
-
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;利用百度地图 API 实现在 Hexo 的博文中加入地图。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Geek" scheme="http://tommyjiang.coding.me/categories/Geek/"/>
-    
-    
-      <category term="Hexo" scheme="http://tommyjiang.coding.me/tags/Hexo/"/>
     
   </entry>
   
@@ -1649,7 +1649,7 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
 <a id="more"></a>
 <p>迁移到<code>Spacemacs</code>之后感觉很方便，<code>base package</code>中自带了<code>exec-path-from-shell</code>，可以直接使用 Mac 系统的环境变量。</p>
 <p>前天用<code>org-encrypt-entry</code>把<code>org</code>文件加密的时候报错，查了下<code>homebrew</code>安装的<code>gnupg</code>，发现已经更新到<code>gnupg2</code>了。所以果断自己下载了<code>gnupg 1.4.21</code>的稳定版：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install gpg1</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install gpg1</div></pre></td></tr></table></figure>
 <p>同时在<code>.spacemacs.d</code>的<code>init.el</code>中加入了<code>gnupg 1.4.21</code>的路径：</p>
 <figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(<span class="name">add-to-list</span> 'exec-path <span class="string">"/usr/local/opt/gnupg/libexec/gpgbin"</span>)</div></pre></td></tr></table></figure>
 <p>又可以用来<code>gnupg</code>来给<code>org</code>文件加密了。</p>
