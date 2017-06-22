@@ -4,72 +4,6 @@
   
     
     <entry>
-      <title><![CDATA[Spacemacs + AUCTeX 编辑 TeX 文档]]></title>
-      <url>http://tommyjiang.coding.me/2017/2017-06-14-Spacemacs-AuCTeX/</url>
-      <content type="html"><![CDATA[<p>Spacemacs + AUCTeX 是编辑 TeX 文档的利器。</p>
-<a id="more"></a>
-<h1 id="Spacemacs-和-AUCTeX-简介"><a href="#Spacemacs-和-AUCTeX-简介" class="headerlink" title="Spacemacs 和 AUCTeX 简介"></a>Spacemacs 和 AUCTeX 简介</h1><p>目前最好用的 Emacs 配置，目前已经有将近12000个 Star，参见 <a href="https://github.com/syl20bnr/spacemacs" target="_blank" rel="external">GitHub Spacemacs Repo</a>。</p>
-<p>AUCTeX 是 GNU 用来配合 Emacs 编辑 TeX 文档的，参见 <a href="https://www.gnu.org/software/auctex/" target="_blank" rel="external">AUCTeX</a>。</p>
-<p>知乎上的<a href="https://www.zhihu.com/question/19954023/answer/23121933" target="_blank" rel="external">回答</a>推荐采用 TeXLive + Emacs + AUCTex + SumatraPDF(Win)/Skim(Mac)，并指出：</p>
-<blockquote>
-<p>这个配置唯一难在需要熟练使用 Emacs，如果不是常用，比较费时，不过，从效率上来看，熟练后的效率当是最高的。</p>
-</blockquote>
-<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><ul>
-<li>插入 section 等(sectioning)：<code>C-c C-s</code> 或 <code>, s</code></li>
-<li>插入 environment：<code>C-c C-e</code> 或 <code>, e</code></li>
-<li>补全 environment：<code>C-c C-e</code> 或 <code>, c</code></li>
-<li>插入 item：<code>, i i</code></li>
-<li>插入参考文献：<code>, r c</code> + 正则表达式</li>
-</ul>
-]]></content>
-      
-        <categories>
-            
-            <category> Geek </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> Emacs </tag>
-            
-            <tag> LaTeX </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[终极算法读书笔记]]></title>
-      <url>http://tommyjiang.coding.me/2017/2017-06-13-the-master-algorithm/</url>
-      <content type="html"><![CDATA[<p>豆瓣看到的一本书，据说翻译很差，看了原版。</p>
-<a id="more"></a>
-<h1 id="3-经验主义"><a href="#3-经验主义" class="headerlink" title="3. 经验主义"></a>3. 经验主义</h1><ul>
-<li>理性主义者：谋定而后动</li>
-<li>经验主义者：实践出真知</li>
-</ul>
-<p>“没有免费午餐”定理的启示：仅有数据不够，还需要先验知识，脱离具体问题谈算法是没有意义的。</p>
-]]></content>
-      
-        <categories>
-            
-            <category> Geek </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> Machine learning </tag>
-            
-            <tag> 读书 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[赵大厨江小厨美食菜单]]></title>
       <url>http://tommyjiang.coding.me/2017/2017-06-12-let-us-cook-some-food/</url>
       <content type="html"><![CDATA[<p>民以食为天，食以味为先。</p>
@@ -128,6 +62,15 @@
 </ol>
 <h2 id="寄语-3"><a href="#寄语-3" class="headerlink" title="寄语"></a>寄语</h2><p>大厨寄语：今天的两个菜都很成功，娃娃菜不咸不淡，汤都喝光啦，味道很浓郁，nice！只是大厨不吃碳水浑身真的没劲啊，心情也不好，555。。。面条下多啦，小厨也很喜欢，都吃光啦。我想吃多纳圈。。。但是收获挺大的，开发了几个碳水低的菜菜。技能增长ing（苦笑中）嘎嘎。</p>
 <p>小厨寄语：大厨把娃娃菜吃了一大半，可见做得有多成功，大厨要克服狂吃狠减的恶性循环，保持心情舒畅最重要。</p>
+<h1 id="2017年6月22日-晚餐"><a href="#2017年6月22日-晚餐" class="headerlink" title="2017年6月22日 晚餐"></a>2017年6月22日 晚餐</h1><p><img src="/images/2017/2017-06-22-晚餐.jpeg" alt=""></p>
+<h2 id="菜单-4"><a href="#菜单-4" class="headerlink" title="菜单"></a>菜单</h2><ul>
+<li>青椒鸡蛋炒面</li>
+</ul>
+<h2 id="Tips-4"><a href="#Tips-4" class="headerlink" title="Tips"></a>Tips</h2><ol>
+<li>青椒鸡蛋做成，炒焦一点，加入一勺老干妈，放入煮熟的手擀面，炒制混合即可。</li>
+</ol>
+<h2 id="寄语-4"><a href="#寄语-4" class="headerlink" title="寄语"></a>寄语</h2><p>大厨寄语：因为预告下暴雨，所以准备了一些手擀面，本来想做带汤的打卤面，小厨回来后提议把面条放到里面炒，味道果然棒棒的！现在觉得也许炒面比浇上卤更有味，因为汤汁不会稀释味道。面条软硬也更合适，炒面不能太软。真好吃啊！大厨好久没有吃到这么好吃的面了（真心的）味道美绝！期待下次做成西红柿鸡蛋炒面，流口水ing…</p>
+<p>小厨寄语：给大厨提议做炒面一举成功，小厨就是这么有创造力。</p>
 ]]></content>
       
         <categories>
@@ -140,6 +83,98 @@
         <tags>
             
             <tag> 厨房 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Mac 下用 Papers 3 管理文献]]></title>
+      <url>http://tommyjiang.coding.me/2017/2017-06-19-Mac-Papers/</url>
+      <content type="html"><![CDATA[<p>Mac 下利用 Papers 3 管理文献。</p>
+<a id="more"></a>
+<h1 id="Spacemacs-和-AUCTeX-简介"><a href="#Spacemacs-和-AUCTeX-简介" class="headerlink" title="Spacemacs 和 AUCTeX 简介"></a>Spacemacs 和 AUCTeX 简介</h1><h1 id="Alfred-Papers-3-搜索文献"><a href="#Alfred-Papers-3-搜索文献" class="headerlink" title="Alfred + Papers 3 搜索文献"></a>Alfred + Papers 3 搜索文献</h1><p><code>Alfred</code>是 Mac 上的神器，可以快速定位程序和文件，也可以和 Papers 3结合，但 Papers 3添加论文后会存储到其 Library，需要重新生成 index 才可以正常搜索，具体操作为：Papers 3 -&gt; Help -&gt; Troubleshooting -&gt; Rebuild Spotlight Search Index.</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Mac </tag>
+            
+            <tag> 文献 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[终极算法读书笔记]]></title>
+      <url>http://tommyjiang.coding.me/2017/2017-06-13-the-master-algorithm/</url>
+      <content type="html"><![CDATA[<p>豆瓣看到的一本书，据说翻译很差，看了原版。</p>
+<a id="more"></a>
+<h1 id="3-经验主义"><a href="#3-经验主义" class="headerlink" title="3. 经验主义"></a>3. 经验主义</h1><ul>
+<li>理性主义者：谋定而后动</li>
+<li>经验主义者：实践出真知</li>
+</ul>
+<p>“没有免费午餐”定理的启示：仅有数据不够，还需要先验知识，脱离具体问题谈算法是没有意义的。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Geek </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Machine learning </tag>
+            
+            <tag> 读书 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Spacemacs + AUCTeX 编辑 TeX 文档]]></title>
+      <url>http://tommyjiang.coding.me/2017/2017-06-14-Spacemacs-AuCTeX/</url>
+      <content type="html"><![CDATA[<p>Spacemacs + AUCTeX 是编辑 TeX 文档的利器。</p>
+<a id="more"></a>
+<h1 id="Spacemacs-和-AUCTeX-简介"><a href="#Spacemacs-和-AUCTeX-简介" class="headerlink" title="Spacemacs 和 AUCTeX 简介"></a>Spacemacs 和 AUCTeX 简介</h1><p>目前最好用的 Emacs 配置，目前已经有将近12000个 Star，参见 <a href="https://github.com/syl20bnr/spacemacs" target="_blank" rel="external">GitHub Spacemacs Repo</a>。</p>
+<p>AUCTeX 是 GNU 用来配合 Emacs 编辑 TeX 文档的，参见 <a href="https://www.gnu.org/software/auctex/" target="_blank" rel="external">AUCTeX</a>。</p>
+<p>知乎上的<a href="https://www.zhihu.com/question/19954023/answer/23121933" target="_blank" rel="external">回答</a>推荐采用 TeXLive + Emacs + AUCTex + SumatraPDF(Win)/Skim(Mac)，并指出：</p>
+<blockquote>
+<p>这个配置唯一难在需要熟练使用 Emacs，如果不是常用，比较费时，不过，从效率上来看，熟练后的效率当是最高的。</p>
+</blockquote>
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><ul>
+<li>插入 section 等(sectioning)：<code>C-c C-s</code> 或 <code>, s</code></li>
+<li>插入 environment：<code>C-c C-e</code> 或 <code>, e</code></li>
+<li>补全 environment：<code>C-c C-e</code> 或 <code>, c</code></li>
+<li>插入 item：<code>, i i</code></li>
+<li>插入参考文献：<code>, r c</code> + 正则表达式</li>
+<li>查找(evil-mode)：<code>/</code>(清除高亮 <code>SPC s c</code>)</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> Geek </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Emacs </tag>
+            
+            <tag> LaTeX </tag>
             
         </tags>
         
@@ -1164,6 +1199,95 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     </entry>
     
     <entry>
+      <title><![CDATA[Hexo 博文中加入百度地图]]></title>
+      <url>http://tommyjiang.coding.me/2016/2016-11-16-Hexo-baidu-map/</url>
+      <content type="html"><![CDATA[<p>利用百度地图 API 实现在 Hexo 的博文中加入地图。</p>
+<a id="more"></a>
+<p>最近想丰富下生活，最先想到的就是多品尝点北京的美食。作为一个认真的人，吃过就想记下来，但只有饭馆的名字和地址显得太单调了，就想能在地图上显示的话会比较直观。搜了下百度地图的 API，不多说，直接上代码吧。更详细的内容可以参考百度地图 Javascript 的 <a href="http://lbsyun.baidu.com/index.php?title=jspopular" target="_blank" rel="external">API</a>。</p>
+<p>首先新建一个<code>div</code>：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"min-height: 500px; width: 100%;"</span> <span class="attr">id</span>=<span class="string">"map"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>然后利用百度地图 API 在<code>div</code>中填充一个地图： </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">map_init</span>(<span class="params"></span>) </span>&#123;</div><div class="line">                </div><div class="line">        <span class="keyword">var</span> map = <span class="keyword">new</span> BMap.Map(<span class="string">"map"</span>);    <span class="comment">// 创建Map实例</span></div><div class="line">        map.centerAndZoom(<span class="keyword">new</span> BMap.Point(<span class="number">116.41</span>,<span class="number">39.89</span>), <span class="number">13</span>);  <span class="comment">// 初始化,设置中心点坐标和地图级别</span></div><div class="line">        map.addControl(<span class="keyword">new</span> BMap.MapTypeControl());   <span class="comment">//添加地图类型控件</span></div><div class="line">        map.setCurrentCity(<span class="string">"北京"</span>);          <span class="comment">// 设置地图显示的城市 此项是必须设置的</span></div><div class="line">        map.enableScrollWheelZoom(<span class="literal">true</span>);     <span class="comment">//开启鼠标滚轮缩放</span></div><div class="line">                </div><div class="line">        <span class="comment">//向地图中添加缩放控件</span></div><div class="line">        <span class="keyword">var</span> ctrlNav = <span class="keyword">new</span> <span class="built_in">window</span>.BMap.NavigationControl(&#123;</div><div class="line">                           <span class="attr">anchor</span>: BMAP_ANCHOR_TOP_LEFT,</div><div class="line">                           <span class="attr">type</span>: BMAP_NAVIGATION_CONTROL_LARGE</div><div class="line">                      &#125;);</div><div class="line">        map.addControl(ctrlNav);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">//异步调用百度js</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">map_load</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> load = <span class="built_in">document</span>.createElement(<span class="string">"script"</span>);</div><div class="line">        load.src = <span class="string">"http://api.map.baidu.com/api?v=1.4&amp;callback=map_init"</span>;</div><div class="line">        <span class="built_in">document</span>.body.appendChild(load);</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">window</span>.onload = map_load;</div><div class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></figure>
+<p>上述代码直接放在 Hexo Markdown 博文中的<code>raw</code>标签中，即：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% raw %&#125;</div><div class="line">上边的代码</div><div class="line">&#123;% endraw %&#125;</div></pre></td></tr></table></figure>
+<p>结果如下：</p>
+
+    <div style="min-height: 500px; width: 100%;" id="map">
+    </div>
+
+    <script type="text/javascript">
+  
+        function map_init() {
+                    
+            var map = new BMap.Map("map");    // 创建Map实例
+            map.centerAndZoom(new BMap.Point(116.41,39.89), 13);  // 初始化地图,设置中心点坐标和地图级别
+            map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+            map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+            map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+                    
+            //向地图中添加缩放控件
+            var ctrlNav = new window.BMap.NavigationControl({
+                               anchor: BMAP_ANCHOR_TOP_LEFT,
+                               type: BMAP_NAVIGATION_CONTROL_LARGE
+                          });
+            map.addControl(ctrlNav);
+  
+            var points = [
+                [116.395857,39.901169], // 渔芙南
+                [116.649810,39.912096], // 三禾粉匠贵州米粉店 
+                [116.323938,39.989919],
+                [116.328896,39.988039],
+                [116.321135,39.987072],
+                [116.332453,39.989007],
+                [116.324045,39.987984],
+                [116.322285,39.988316],
+                [116.322608,39.986381]
+            ];
+            
+            var size1 = new BMap.Size(21, 50);
+            var size2 = new BMap.Size(21, 0);
+            var icons = [], markers = [];
+            
+            // 向地图添加标注
+            // for( var i = 0;i < points.length; i++){
+            //     var point = new BMap.Point(points[i][0], points[i][1]);
+            //     var icon_pre = 'http://o852ayzmr.bkt.clouddn.com/';
+            //     var icon_post = '.png';
+            //     var icon_string = icon_pre + (i+1).toString()  + icon_post;
+            //     icons[i] = new BMap.Icon(icon_string, size1, {anchor: size2})
+            //     // icons[i] = new BMap.Icon('http://o852ayzmr.bkt.clouddn.com/1.png', size1, {anchor: size2})
+            //     markers[i] = new BMap.Marker(point, {icon: icons[i]});
+            //     map.addOverlay(markers[i]);
+            // };
+        }
+
+        //异步调用百度js
+        function map_load() {
+            var load = document.createElement("script");
+            load.src = "http://api.map.baidu.com/api?v=1.4&callback=map_init";
+            document.body.appendChild(load);
+        }
+        window.onload = map_load;
+    </script>
+
+]]></content>
+      
+        <categories>
+            
+            <category> Geek </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[北京十大适合一个人吃的餐厅]]></title>
       <url>http://tommyjiang.coding.me/2016/2016-11-16-Beijing-single-res/</url>
       <content type="html"><![CDATA[<p>记录下有才姐推荐的微博上的<a href="http://weibo.com/2643091105/EhDNHuBvH?from=page_1005052643091105_profile&amp;wvr=6&amp;mod=weibotime&amp;type=comment#_rnd1479530057542" target="_blank" rel="external">北京十大适合一个人吃的餐厅</a>，把生活丰富起来。</p>
@@ -1322,95 +1446,6 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
         <tags>
             
             <tag> 美食 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Hexo 博文中加入百度地图]]></title>
-      <url>http://tommyjiang.coding.me/2016/2016-11-16-Hexo-baidu-map/</url>
-      <content type="html"><![CDATA[<p>利用百度地图 API 实现在 Hexo 的博文中加入地图。</p>
-<a id="more"></a>
-<p>最近想丰富下生活，最先想到的就是多品尝点北京的美食。作为一个认真的人，吃过就想记下来，但只有饭馆的名字和地址显得太单调了，就想能在地图上显示的话会比较直观。搜了下百度地图的 API，不多说，直接上代码吧。更详细的内容可以参考百度地图 Javascript 的 <a href="http://lbsyun.baidu.com/index.php?title=jspopular" target="_blank" rel="external">API</a>。</p>
-<p>首先新建一个<code>div</code>：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"min-height: 500px; width: 100%;"</span> <span class="attr">id</span>=<span class="string">"map"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>然后利用百度地图 API 在<code>div</code>中填充一个地图： </p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">map_init</span>(<span class="params"></span>) </span>&#123;</div><div class="line">                </div><div class="line">        <span class="keyword">var</span> map = <span class="keyword">new</span> BMap.Map(<span class="string">"map"</span>);    <span class="comment">// 创建Map实例</span></div><div class="line">        map.centerAndZoom(<span class="keyword">new</span> BMap.Point(<span class="number">116.41</span>,<span class="number">39.89</span>), <span class="number">13</span>);  <span class="comment">// 初始化,设置中心点坐标和地图级别</span></div><div class="line">        map.addControl(<span class="keyword">new</span> BMap.MapTypeControl());   <span class="comment">//添加地图类型控件</span></div><div class="line">        map.setCurrentCity(<span class="string">"北京"</span>);          <span class="comment">// 设置地图显示的城市 此项是必须设置的</span></div><div class="line">        map.enableScrollWheelZoom(<span class="literal">true</span>);     <span class="comment">//开启鼠标滚轮缩放</span></div><div class="line">                </div><div class="line">        <span class="comment">//向地图中添加缩放控件</span></div><div class="line">        <span class="keyword">var</span> ctrlNav = <span class="keyword">new</span> <span class="built_in">window</span>.BMap.NavigationControl(&#123;</div><div class="line">                           <span class="attr">anchor</span>: BMAP_ANCHOR_TOP_LEFT,</div><div class="line">                           <span class="attr">type</span>: BMAP_NAVIGATION_CONTROL_LARGE</div><div class="line">                      &#125;);</div><div class="line">        map.addControl(ctrlNav);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">//异步调用百度js</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">map_load</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> load = <span class="built_in">document</span>.createElement(<span class="string">"script"</span>);</div><div class="line">        load.src = <span class="string">"http://api.map.baidu.com/api?v=1.4&amp;callback=map_init"</span>;</div><div class="line">        <span class="built_in">document</span>.body.appendChild(load);</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">window</span>.onload = map_load;</div><div class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></figure>
-<p>上述代码直接放在 Hexo Markdown 博文中的<code>raw</code>标签中，即：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% raw %&#125;</div><div class="line">上边的代码</div><div class="line">&#123;% endraw %&#125;</div></pre></td></tr></table></figure>
-<p>结果如下：</p>
-
-    <div style="min-height: 500px; width: 100%;" id="map">
-    </div>
-
-    <script type="text/javascript">
-  
-        function map_init() {
-                    
-            var map = new BMap.Map("map");    // 创建Map实例
-            map.centerAndZoom(new BMap.Point(116.41,39.89), 13);  // 初始化地图,设置中心点坐标和地图级别
-            map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
-            map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
-            map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
-                    
-            //向地图中添加缩放控件
-            var ctrlNav = new window.BMap.NavigationControl({
-                               anchor: BMAP_ANCHOR_TOP_LEFT,
-                               type: BMAP_NAVIGATION_CONTROL_LARGE
-                          });
-            map.addControl(ctrlNav);
-  
-            var points = [
-                [116.395857,39.901169], // 渔芙南
-                [116.649810,39.912096], // 三禾粉匠贵州米粉店 
-                [116.323938,39.989919],
-                [116.328896,39.988039],
-                [116.321135,39.987072],
-                [116.332453,39.989007],
-                [116.324045,39.987984],
-                [116.322285,39.988316],
-                [116.322608,39.986381]
-            ];
-            
-            var size1 = new BMap.Size(21, 50);
-            var size2 = new BMap.Size(21, 0);
-            var icons = [], markers = [];
-            
-            // 向地图添加标注
-            // for( var i = 0;i < points.length; i++){
-            //     var point = new BMap.Point(points[i][0], points[i][1]);
-            //     var icon_pre = 'http://o852ayzmr.bkt.clouddn.com/';
-            //     var icon_post = '.png';
-            //     var icon_string = icon_pre + (i+1).toString()  + icon_post;
-            //     icons[i] = new BMap.Icon(icon_string, size1, {anchor: size2})
-            //     // icons[i] = new BMap.Icon('http://o852ayzmr.bkt.clouddn.com/1.png', size1, {anchor: size2})
-            //     markers[i] = new BMap.Marker(point, {icon: icons[i]});
-            //     map.addOverlay(markers[i]);
-            // };
-        }
-
-        //异步调用百度js
-        function map_load() {
-            var load = document.createElement("script");
-            load.src = "http://api.map.baidu.com/api?v=1.4&callback=map_init";
-            document.body.appendChild(load);
-        }
-        window.onload = map_load;
-    </script>
-
-]]></content>
-      
-        <categories>
-            
-            <category> Geek </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> Hexo </tag>
             
         </tags>
         
