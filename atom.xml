@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tommyjiang.coding.me/"/>
-  <updated>2017-06-24T15:12:03.000Z</updated>
+  <updated>2017-07-16T13:37:14.000Z</updated>
   <id>http://tommyjiang.coding.me/</id>
   
   <author>
@@ -14,6 +14,120 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>POA 教学法感想（投稿）</title>
+    <link href="http://tommyjiang.coding.me/2017/2017-07-16-POA/"/>
+    <id>http://tommyjiang.coding.me/2017/2017-07-16-POA/</id>
+    <published>2017-07-16T14:00:00.000Z</published>
+    <updated>2017-07-16T13:37:14.000Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>
+<p>　　今天在文秋芳老师及其团队的介绍下学习了解了POA教学法（Production-oriented Approach），其教学理念包含：</p>
+<ol>
+<li>学习中心，而非学生中心，强调教师的引导作用，不追求热闹的课堂。</li>
+<li>学用一体。</li>
+<li>全人教育（whole-person  education），在教学过程中以正确的价值观对学生进行引导（主要依靠教材，教师在topics，input material，productive material等方面设计）。</li>
+</ol>
+<p>　　课程的设计分为驱动-&gt;促成-&gt;评估。驱动主要包括：（1）话题预热；（2）创设交际情景（scenario），让学生有身临其境，能为我所用的感觉（法律专业学生死刑的例子）（3）布置单元产出任务。（4）明确单元目标（应具备驱动型，可教性，细分性，逻辑性）。促成部分应了解学生的“缺口”（develop ideas，build language，prepare structure），提供促成材料（阅读、听力、网站等）。促成活动多种多样（word-phrase-sentence-discourse），从易到难，不能停留在word-level，至少应产出两三句话。总体原则为精准性、渐进性、多样性（输入和产出的类型都可以多样）；最后一步是评估，teacher-student collabrative assessing（TSCA），流程为用学生样本评价焦点-&gt;小组评价-&gt;引领讨论，讲评结合，展示事先修改的样本。要注意明确评价焦点，teaching is assessy。</p>
+<p>　　收获颇多，实践仍有一段路要走，感谢老师们！（<font face="FangSong_GB2312">本文作者赵小乙，1990年出生，现在北京一所大学任教。</font>）</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;　　今天在文秋芳老师及其团队的介绍下学习了解了POA教学法（Production-oriented Approach），其教学理念包含：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;学习中心，而非学生中心，强调教师的引导作用，不追求热闹的课堂。&lt;/li&gt;
+
+    
+    </summary>
+    
+      <category term="投稿" scheme="http://tommyjiang.coding.me/categories/%E6%8A%95%E7%A8%BF/"/>
+    
+    
+      <category term="英语教学" scheme="http://tommyjiang.coding.me/tags/%E8%8B%B1%E8%AF%AD%E6%95%99%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>机器学习相关资源汇总</title>
+    <link href="http://tommyjiang.coding.me/2017/2017-07-15-machine-learning/"/>
+    <id>http://tommyjiang.coding.me/2017/2017-07-15-machine-learning/</id>
+    <published>2017-07-15T11:00:00.000Z</published>
+    <updated>2017-07-16T07:40:03.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>机器学习相关资源汇总</p>
+<a id="more"></a>
+<h1 id="书籍"><a href="#书籍" class="headerlink" title="书籍"></a>书籍</h1><h2 id="机器学习通论"><a href="#机器学习通论" class="headerlink" title="机器学习通论"></a>机器学习通论</h2><ul>
+<li><a href="https://book.douban.com/subject/26708119/" target="_blank" rel="external">机器学习 周志华</a></li>
+<li><a href="https://book.douban.com/subject/10590856/" target="_blank" rel="external">统计学习方法 李航</a></li>
+<li><a href="https://book.douban.com/subject/2061116/" target="_blank" rel="external">Pattern Recognition And Machine Learning(PRML). Christopher Bishop</a></li>
+<li><a href="https://book.douban.com/subject/3294335/" target="_blank" rel="external">The Elements of Statistical Learning(ESL). Trevor Hastie</a></li>
+<li><a href="https://book.douban.com/subject/10758624/" target="_blank" rel="external">Machine Learning-A Probabilistic Perspective(MLAPP). Kevin P. Murphy</a></li>
+</ul>
+<h2 id="数据可视化"><a href="#数据可视化" class="headerlink" title="数据可视化"></a>数据可视化</h2><ul>
+<li><a href="https://book.douban.com/subject/25760272/" target="_blank" rel="external">数据可视化 陈为</a></li>
+<li><a href="https://book.douban.com/subject/19952397/" target="_blank" rel="external">鲜活的数据 Nathan Yau</a></li>
+<li><a href="https://book.douban.com/subject/6439420/" target="_blank" rel="external">数据可视化之美 Julie Steele</a></li>
+</ul>
+<h1 id="课程"><a href="#课程" class="headerlink" title="课程"></a>课程</h1><ul>
+<li><a href="http://cs229.stanford.edu/" target="_blank" rel="external">Machine Learning. Stanford University</a></li>
+<li><a href="https://www.edx.org/course/learning-data-introductory-machine-caltechx-cs1156x-0" target="_blank" rel="external">Learning From Data. Caltech</a></li>
+<li><a href="http://www3.nd.edu/~rjohns15/cse40647.sp14/www/home.php" target="_blank" rel="external">Data Mining. University of Notre Dame</a></li>
+<li><a href="http://courses.cs.washington.edu/courses/cse546/16au/" target="_blank" rel="external">Machine Learning. University of Washington</a></li>
+</ul>
+<h1 id="Kaggle-比赛"><a href="#Kaggle-比赛" class="headerlink" title="Kaggle 比赛"></a>Kaggle 比赛</h1><ul>
+<li><a href="https://www.kaggle.com/c/titanic" target="_blank" rel="external">Titanic: Machine Learning from Disaster</a></li>
+<li><a href="https://www.kaggle.com/c/house-prices-advanced-regression-techniques" target="_blank" rel="external">House Prices: Advanced Regression Techniques</a></li>
+<li><a href="https://www.kaggle.com/c/digit-recognizer" target="_blank" rel="external">Digit Recognizer</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;机器学习相关资源汇总&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Geek" scheme="http://tommyjiang.coding.me/categories/Geek/"/>
+    
+    
+      <category term="Python" scheme="http://tommyjiang.coding.me/tags/Python/"/>
+    
+      <category term="Machine learning" scheme="http://tommyjiang.coding.me/tags/Machine-learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>优秀的人，从来不会输给情绪 读书笔记</title>
+    <link href="http://tommyjiang.coding.me/2017/2017-06-26-outstanding-man/"/>
+    <id>http://tommyjiang.coding.me/2017/2017-06-26-outstanding-man/</id>
+    <published>2017-06-26T11:00:00.000Z</published>
+    <updated>2017-07-02T16:14:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>知乎看到的一个作者，好久没读纸质书了。</p>
+<a id="more"></a>
+<h1 id="书摘"><a href="#书摘" class="headerlink" title="书摘"></a>书摘</h1><blockquote>
+<p>人际交往很失败的人，更喜欢让别人多认可自己一点；人际交往成功的人，平时总是喜欢认可别人。</p>
+<p>回答问题时，不要说太多的话。真正有自信的人只需要突出重点来讲。</p>
+<p>在聊天时缺乏对别人的关注，喜欢过多地强调自身的感受，这是我们把天聊死的主要原因。</p>
+<p>笨的人用意志做事，聪明人用习惯做事</p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;知乎看到的一个作者，好久没读纸质书了。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="生活" scheme="http://tommyjiang.coding.me/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="读书" scheme="http://tommyjiang.coding.me/tags/%E8%AF%BB%E4%B9%A6/"/>
+    
+  </entry>
   
   <entry>
     <title>一刻 Talks 所感（投稿）</title>
@@ -226,9 +340,9 @@
       <category term="Geek" scheme="http://tommyjiang.coding.me/categories/Geek/"/>
     
     
-      <category term="Machine learning" scheme="http://tommyjiang.coding.me/tags/Machine-learning/"/>
-    
       <category term="读书" scheme="http://tommyjiang.coding.me/tags/%E8%AF%BB%E4%B9%A6/"/>
+    
+      <category term="Machine learning" scheme="http://tommyjiang.coding.me/tags/Machine-learning/"/>
     
   </entry>
   
@@ -323,33 +437,6 @@
     
     
       <category term="博客" scheme="http://tommyjiang.coding.me/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>机器学习相关书籍</title>
-    <link href="http://tommyjiang.coding.me/2017/2017-02-25-machine-learning/"/>
-    <id>http://tommyjiang.coding.me/2017/2017-02-25-machine-learning/</id>
-    <published>2017-02-25T11:00:00.000Z</published>
-    <updated>2017-02-25T15:11:33.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>机器学习相关书籍汇总</p>
-<a id="more"></a>
-<p>☐ <a href="https://book.douban.com/subject/26708119/" target="_blank" rel="external">机器学习 周志华</a><br>☐ <a href="https://book.douban.com/subject/10590856/" target="_blank" rel="external">统计学习方法 李航</a><br>☐ <a href="https://book.douban.com/subject/2061116/" target="_blank" rel="external">Pattern Recognition And Machine Learning. Christopher Bishop</a><br>☐ <a href="https://book.douban.com/subject/3294335/" target="_blank" rel="external">The Elements of Statistical Learning. Trevor Hastie</a><br>☐ <a href="https://book.douban.com/subject/10758624/" target="_blank" rel="external">Machine Learning-A Probabilistic Perspective. Kevin P. Murphy</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;机器学习相关书籍汇总&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Geek" scheme="http://tommyjiang.coding.me/categories/Geek/"/>
-    
-    
-      <category term="Python" scheme="http://tommyjiang.coding.me/tags/Python/"/>
-    
-      <category term="Machine learning" scheme="http://tommyjiang.coding.me/tags/Machine-learning/"/>
     
   </entry>
   
@@ -1176,7 +1263,7 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     <link href="http://tommyjiang.coding.me/2016/2016-12-10-Shou-pa-kou-crossing/"/>
     <id>http://tommyjiang.coding.me/2016/2016-12-10-Shou-pa-kou-crossing/</id>
     <published>2016-12-10T11:00:00.000Z</published>
-    <updated>2017-03-19T04:55:13.000Z</updated>
+    <updated>2017-06-29T07:02:50.000Z</updated>
     
     <content type="html"><![CDATA[<p>毕业工作后从五道口转到了手帕口道口，每天到道口听听车机联控还是很开心的，记录下具体的车次信息。</p>
 <a id="more"></a>
@@ -1217,7 +1304,7 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     <td style="text-align:center">上行</td>
     <td style="text-align:center">10:10</td>
     <td style="text-align:center">10:03-10:07</td>
-  <</tr><tr>
+  </tr><tr>
     <td style="text-align:center">4</td>
     <td style="text-align:center">K1071</td>
     <td style="text-align:center">北京西</td>
@@ -1225,9 +1312,18 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     <td style="text-align:center">下行</td>
     <td style="text-align:center">12:12</td>
     <td style="text-align:center">12:15-12:19</td>
-  </tr>/tr>
+  </tr>
   <tr>
     <td style="text-align:center">5</td>
+    <td style="text-align:center">K1110</td>
+    <td style="text-align:center"></td>
+    <td style="text-align:center">北京西</td>
+    <td style="text-align:center">上行</td>
+    <td style="text-align:center">12:35</td>
+    <td style="text-align:center">12:28-12:32</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">6</td>
     <td style="text-align:center">Z65</td>
     <td style="text-align:center">北京西</td>
     <td style="text-align:center">南昌</td>
@@ -1236,7 +1332,7 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     <td style="text-align:center">19:52-19:56</td>
   </tr>
   <tr>
-    <td style="text-align:center">6</td>
+    <td style="text-align:center">7</td>
     <td style="text-align:center">1136</td>
     <td style="text-align:center">天津</td>
     <td style="text-align:center">乌海西</td>
@@ -1245,7 +1341,7 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     <td style="text-align:center">22:22-22:26</td>
   </tr>
   <tr>
-    <td style="text-align:center">7</td>
+    <td style="text-align:center">8</td>
     <td style="text-align:center">1303</td>
     <td style="text-align:center">北京西</td>
     <td style="text-align:center">郑州</td>
@@ -1591,166 +1687,6 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     
     
       <category term="感情" scheme="http://tommyjiang.coding.me/tags/%E6%84%9F%E6%83%85/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>北京地铁各线路颜色 HEX 及 RGB 代码</title>
-    <link href="http://tommyjiang.coding.me/2016/2016-09-10-Beijing-subway-color/"/>
-    <id>http://tommyjiang.coding.me/2016/2016-09-10-Beijing-subway-color/</id>
-    <published>2016-09-10T14:00:00.000Z</published>
-    <updated>2016-09-12T01:20:58.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>大概翻了翻，网上好像还没有北京地铁各线路颜色的 HEX 及 RGB 代码，自己整理一份。</p>
-<a id="more"></a>
-<p>北京地铁各线路颜色 HEX 和 RGB 代码如下，参考<a href="http://www.bjsubway.com/subwaymap/station_map.html" target="_blank" rel="external">北京地铁官网线路图</a>：</p>
-
-<table border="1px" align="center">
-  <tr>
-    <th style="text-align:center">线路序号</th>
-    <th style="text-align:center">颜色</th>
-    <th style="text-align:center">HEX</th>
-    <th style="text-align:center">RGB</th>
-  </tr>
-  <tr>
-    <td style="text-align:center">1号线</td>
-    <td bgcolor="bb1f20" style="text-align:center"></td>
-    <td style="text-align:center">#BB1F20</td>
-    <td style="text-align:center">rgb(187, 31, 32)</td>
-  </tr>
-  <tr>
-    <td style="text-align:center">2号线</td>
-    <td bgcolor="004a88" style="text-align:center"></td>
-    <td style="text-align:center">#004A88</td>
-    <td style="text-align:center">rgb(0, 74, 136)</td>
-  </tr>
-  <tr>
-    <td style="text-align:center">4号线</td>
-    <td bgcolor="007c8b" style="text-align:center"></td>
-    <td style="text-align:center">#007C8B</td>
-    <td style="text-align:center">rgb(0, 124, 139)</td>
-  </tr>
-  <tr>
-    <td style="text-align:center">5号线</td>
-    <td bgcolor="95006d" style="text-align:center"></td>
-    <td style="text-align:center">#95006D</td>
-    <td style="text-align:center">rgb(149, 0, 109)</td>
-  </tr>
-  <tr>
-    <td style="text-align:center">6号线</td>
-    <td bgcolor="c88700" style="text-align:center"></td>
-    <td style="text-align:center">#C88700</td>
-    <td style="text-align:center">rgb(200, 135, 0)</td>
-  </tr>
-  <tr>
-    <td style="text-align:center">7号线</td>
-    <td bgcolor="f4ba6a" style="text-align:center"></td>
-    <td style="text-align:center">#F4BA6A</td>
-    <td style="text-align:center">rgb(244, 186, 106)</td>
-  </tr>
-  <tr>
-    <td style="text-align:center">8号线</td>
-    <td bgcolor="038d57" style="text-align:center"></td>
-    <td style="text-align:center">#038D57</td>
-    <td style="text-align:center">rgb(3, 141, 87)</td>
-  </tr>
-  <tr>
-    <td style="text-align:center">9号线</td>
-    <td bgcolor="7dbd00" style="text-align:center"></td>
-    <td style="text-align:center">#7DBD00</td>
-    <td style="text-align:center">rgb(125, 189, 0)</td>
-  </tr>
-  <tr>
-    <td style="text-align:center">10号线</td>
-    <td bgcolor="0089b5" style="text-align:center"></td>
-    <td style="text-align:center">#0089B5</td>
-    <td style="text-align:center">rgb(0, 137, 181)</td>
-  </tr>
-  <tr>
-    <td style="text-align:center">13号线</td>
-    <td bgcolor="f8e700" style="text-align:center"></td>
-    <td style="text-align:center">#F8E700</td>
-    <td style="text-align:center">rgb(248, 231, 0)</td>
-  </tr>
-  <tr>
-    <td style="text-align:center">14号线</td>
-    <td bgcolor="cb958f" style="text-align:center"></td>
-    <td style="text-align:center">#CB958F</td>
-    <td style="text-align:center">rgb(203, 149, 143)</td>
-  </tr>
-  <tr>
-    <td style="text-align:center">15号线</td>
-    <td bgcolor="491b56" style="text-align:center"></td>
-    <td style="text-align:center">#491B56</td>
-    <td style="text-align:center">rgb(73, 27, 86)</td>
-  </tr>
-  <tr>
-    <td style="text-align:center">八通线</td>
-    <td bgcolor="bb1f20" style="text-align:center"></td>
-    <td style="text-align:center">#BB1F20</td>
-    <td style="text-align:center">rgb(187, 31, 32)</td>
-  </tr>
-  <tr>
-    <td style="text-align:center">房山线</td>
-    <td bgcolor="de490e" style="text-align:center"></td>
-    <td style="text-align:center">#DE490E</td>
-    <td style="text-align:center">rgb(222, 73, 14)</td>
-  </tr>
-  <tr>
-    <td style="text-align:center">昌平线</td>
-    <td bgcolor="d668a3" style="text-align:center"></td>
-    <td style="text-align:center">#D668A3</td>
-    <td style="text-align:center">rgb(214, 104, 163)</td>
-  </tr>
-</table>
-
-<h1 id="版本记录"><a href="#版本记录" class="headerlink" title="版本记录"></a>版本记录</h1><p>2015-09-10：v1.0-新建博文。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;大概翻了翻，网上好像还没有北京地铁各线路颜色的 HEX 及 RGB 代码，自己整理一份。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://tommyjiang.coding.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="地铁" scheme="http://tommyjiang.coding.me/tags/%E5%9C%B0%E9%93%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mac 下 Emacs Org mode 加密以及 gnupg 的安装</title>
-    <link href="http://tommyjiang.coding.me/2016/2016-09-06-Org-mode-org-encrypt-gnupg-Mac/"/>
-    <id>http://tommyjiang.coding.me/2016/2016-09-06-Org-mode-org-encrypt-gnupg-Mac/</id>
-    <published>2016-09-06T14:00:00.000Z</published>
-    <updated>2016-09-12T01:23:46.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Mac 下 Org mode 加密之前用得好好的，最近发现执行<code>org-encrypt-entry</code>时有问题，原来是<code>gnupg</code>的原因。</p>
-<a id="more"></a>
-<p>迁移到<code>Spacemacs</code>之后感觉很方便，<code>base package</code>中自带了<code>exec-path-from-shell</code>，可以直接使用 Mac 系统的环境变量。</p>
-<p>前天用<code>org-encrypt-entry</code>把<code>org</code>文件加密的时候报错，查了下<code>homebrew</code>安装的<code>gnupg</code>，发现已经更新到<code>gnupg2</code>了。所以果断自己下载了<code>gnupg 1.4.21</code>的稳定版：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install gpg1</div></pre></td></tr></table></figure>
-<p>同时在<code>.spacemacs.d</code>的<code>init.el</code>中加入了<code>gnupg 1.4.21</code>的路径：</p>
-<figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(<span class="name">add-to-list</span> 'exec-path <span class="string">"/usr/local/opt/gnupg/libexec/gpgbin"</span>)</div></pre></td></tr></table></figure>
-<p>又可以用来<code>gnupg</code>来给<code>org</code>文件加密了。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Mac 下 Org mode 加密之前用得好好的，最近发现执行&lt;code&gt;org-encrypt-entry&lt;/code&gt;时有问题，原来是&lt;code&gt;gnupg&lt;/code&gt;的原因。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://tommyjiang.coding.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="Mac" scheme="http://tommyjiang.coding.me/tags/Mac/"/>
-    
-      <category term="Emacs" scheme="http://tommyjiang.coding.me/tags/Emacs/"/>
-    
-      <category term="Org mode" scheme="http://tommyjiang.coding.me/tags/Org-mode/"/>
     
   </entry>
   

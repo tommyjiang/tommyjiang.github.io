@@ -4,6 +4,110 @@
   
     
     <entry>
+      <title><![CDATA[POA 教学法感想（投稿）]]></title>
+      <url>http://tommyjiang.coding.me/2017/2017-07-16-POA/</url>
+      <content type="html"><![CDATA[<a id="more"></a>
+<p>　　今天在文秋芳老师及其团队的介绍下学习了解了POA教学法（Production-oriented Approach），其教学理念包含：</p>
+<ol>
+<li>学习中心，而非学生中心，强调教师的引导作用，不追求热闹的课堂。</li>
+<li>学用一体。</li>
+<li>全人教育（whole-person  education），在教学过程中以正确的价值观对学生进行引导（主要依靠教材，教师在topics，input material，productive material等方面设计）。</li>
+</ol>
+<p>　　课程的设计分为驱动-&gt;促成-&gt;评估。驱动主要包括：（1）话题预热；（2）创设交际情景（scenario），让学生有身临其境，能为我所用的感觉（法律专业学生死刑的例子）（3）布置单元产出任务。（4）明确单元目标（应具备驱动型，可教性，细分性，逻辑性）。促成部分应了解学生的“缺口”（develop ideas，build language，prepare structure），提供促成材料（阅读、听力、网站等）。促成活动多种多样（word-phrase-sentence-discourse），从易到难，不能停留在word-level，至少应产出两三句话。总体原则为精准性、渐进性、多样性（输入和产出的类型都可以多样）；最后一步是评估，teacher-student collabrative assessing（TSCA），流程为用学生样本评价焦点-&gt;小组评价-&gt;引领讨论，讲评结合，展示事先修改的样本。要注意明确评价焦点，teaching is assessy。</p>
+<p>　　收获颇多，实践仍有一段路要走，感谢老师们！（<font face="FangSong_GB2312">本文作者赵小乙，1990年出生，现在北京一所大学任教。</font>）</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 投稿 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 英语教学 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[机器学习相关资源汇总]]></title>
+      <url>http://tommyjiang.coding.me/2017/2017-07-15-machine-learning/</url>
+      <content type="html"><![CDATA[<p>机器学习相关资源汇总</p>
+<a id="more"></a>
+<h1 id="书籍"><a href="#书籍" class="headerlink" title="书籍"></a>书籍</h1><h2 id="机器学习通论"><a href="#机器学习通论" class="headerlink" title="机器学习通论"></a>机器学习通论</h2><ul>
+<li><a href="https://book.douban.com/subject/26708119/" target="_blank" rel="external">机器学习 周志华</a></li>
+<li><a href="https://book.douban.com/subject/10590856/" target="_blank" rel="external">统计学习方法 李航</a></li>
+<li><a href="https://book.douban.com/subject/2061116/" target="_blank" rel="external">Pattern Recognition And Machine Learning(PRML). Christopher Bishop</a></li>
+<li><a href="https://book.douban.com/subject/3294335/" target="_blank" rel="external">The Elements of Statistical Learning(ESL). Trevor Hastie</a></li>
+<li><a href="https://book.douban.com/subject/10758624/" target="_blank" rel="external">Machine Learning-A Probabilistic Perspective(MLAPP). Kevin P. Murphy</a></li>
+</ul>
+<h2 id="数据可视化"><a href="#数据可视化" class="headerlink" title="数据可视化"></a>数据可视化</h2><ul>
+<li><a href="https://book.douban.com/subject/25760272/" target="_blank" rel="external">数据可视化 陈为</a></li>
+<li><a href="https://book.douban.com/subject/19952397/" target="_blank" rel="external">鲜活的数据 Nathan Yau</a></li>
+<li><a href="https://book.douban.com/subject/6439420/" target="_blank" rel="external">数据可视化之美 Julie Steele</a></li>
+</ul>
+<h1 id="课程"><a href="#课程" class="headerlink" title="课程"></a>课程</h1><ul>
+<li><a href="http://cs229.stanford.edu/" target="_blank" rel="external">Machine Learning. Stanford University</a></li>
+<li><a href="https://www.edx.org/course/learning-data-introductory-machine-caltechx-cs1156x-0" target="_blank" rel="external">Learning From Data. Caltech</a></li>
+<li><a href="http://www3.nd.edu/~rjohns15/cse40647.sp14/www/home.php" target="_blank" rel="external">Data Mining. University of Notre Dame</a></li>
+<li><a href="http://courses.cs.washington.edu/courses/cse546/16au/" target="_blank" rel="external">Machine Learning. University of Washington</a></li>
+</ul>
+<h1 id="Kaggle-比赛"><a href="#Kaggle-比赛" class="headerlink" title="Kaggle 比赛"></a>Kaggle 比赛</h1><ul>
+<li><a href="https://www.kaggle.com/c/titanic" target="_blank" rel="external">Titanic: Machine Learning from Disaster</a></li>
+<li><a href="https://www.kaggle.com/c/house-prices-advanced-regression-techniques" target="_blank" rel="external">House Prices: Advanced Regression Techniques</a></li>
+<li><a href="https://www.kaggle.com/c/digit-recognizer" target="_blank" rel="external">Digit Recognizer</a></li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> Geek </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> Machine learning </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[优秀的人，从来不会输给情绪 读书笔记]]></title>
+      <url>http://tommyjiang.coding.me/2017/2017-06-26-outstanding-man/</url>
+      <content type="html"><![CDATA[<p>知乎看到的一个作者，好久没读纸质书了。</p>
+<a id="more"></a>
+<h1 id="书摘"><a href="#书摘" class="headerlink" title="书摘"></a>书摘</h1><blockquote>
+<p>人际交往很失败的人，更喜欢让别人多认可自己一点；人际交往成功的人，平时总是喜欢认可别人。</p>
+<p>回答问题时，不要说太多的话。真正有自信的人只需要突出重点来讲。</p>
+<p>在聊天时缺乏对别人的关注，喜欢过多地强调自身的感受，这是我们把天聊死的主要原因。</p>
+<p>笨的人用意志做事，聪明人用习惯做事</p>
+</blockquote>
+]]></content>
+      
+        <categories>
+            
+            <category> 生活 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 读书 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[一刻 Talks 所感（投稿）]]></title>
       <url>http://tommyjiang.coding.me/2017/2017-06-24-yike-talk/</url>
       <content type="html"><![CDATA[<a id="more"></a>
@@ -201,9 +305,9 @@
         
         <tags>
             
-            <tag> Machine learning </tag>
-            
             <tag> 读书 </tag>
+            
+            <tag> Machine learning </tag>
             
         </tags>
         
@@ -292,31 +396,6 @@
         <tags>
             
             <tag> 博客 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[机器学习相关书籍]]></title>
-      <url>http://tommyjiang.coding.me/2017/2017-02-25-machine-learning/</url>
-      <content type="html"><![CDATA[<p>机器学习相关书籍汇总</p>
-<a id="more"></a>
-<p>☐ <a href="https://book.douban.com/subject/26708119/" target="_blank" rel="external">机器学习 周志华</a><br>☐ <a href="https://book.douban.com/subject/10590856/" target="_blank" rel="external">统计学习方法 李航</a><br>☐ <a href="https://book.douban.com/subject/2061116/" target="_blank" rel="external">Pattern Recognition And Machine Learning. Christopher Bishop</a><br>☐ <a href="https://book.douban.com/subject/3294335/" target="_blank" rel="external">The Elements of Statistical Learning. Trevor Hastie</a><br>☐ <a href="https://book.douban.com/subject/10758624/" target="_blank" rel="external">Machine Learning-A Probabilistic Perspective. Kevin P. Murphy</a></p>
-]]></content>
-      
-        <categories>
-            
-            <category> Geek </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> Python </tag>
-            
-            <tag> Machine learning </tag>
             
         </tags>
         
@@ -1172,7 +1251,7 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     <td style="text-align:center">上行</td>
     <td style="text-align:center">10:10</td>
     <td style="text-align:center">10:03-10:07</td>
-  <</tr><tr>
+  </tr><tr>
     <td style="text-align:center">4</td>
     <td style="text-align:center">K1071</td>
     <td style="text-align:center">北京西</td>
@@ -1180,9 +1259,18 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     <td style="text-align:center">下行</td>
     <td style="text-align:center">12:12</td>
     <td style="text-align:center">12:15-12:19</td>
-  </tr>/tr>
+  </tr>
   <tr>
     <td style="text-align:center">5</td>
+    <td style="text-align:center">K1110</td>
+    <td style="text-align:center"></td>
+    <td style="text-align:center">北京西</td>
+    <td style="text-align:center">上行</td>
+    <td style="text-align:center">12:35</td>
+    <td style="text-align:center">12:28-12:32</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">6</td>
     <td style="text-align:center">Z65</td>
     <td style="text-align:center">北京西</td>
     <td style="text-align:center">南昌</td>
@@ -1191,7 +1279,7 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     <td style="text-align:center">19:52-19:56</td>
   </tr>
   <tr>
-    <td style="text-align:center">6</td>
+    <td style="text-align:center">7</td>
     <td style="text-align:center">1136</td>
     <td style="text-align:center">天津</td>
     <td style="text-align:center">乌海西</td>
@@ -1200,7 +1288,7 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     <td style="text-align:center">22:22-22:26</td>
   </tr>
   <tr>
-    <td style="text-align:center">7</td>
+    <td style="text-align:center">8</td>
     <td style="text-align:center">1303</td>
     <td style="text-align:center">北京西</td>
     <td style="text-align:center">郑州</td>
