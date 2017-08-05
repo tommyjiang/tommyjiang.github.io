@@ -56,9 +56,9 @@
 <li><a href="http://courses.cs.washington.edu/courses/cse546/16au/" target="_blank" rel="external">Machine Learning. University of Washington</a></li>
 </ul>
 <h1 id="Kaggle-比赛"><a href="#Kaggle-比赛" class="headerlink" title="Kaggle 比赛"></a>Kaggle 比赛</h1><ul>
-<li><a href="https://www.kaggle.com/c/titanic" target="_blank" rel="external">Titanic: Machine Learning from Disaster</a></li>
-<li><a href="https://www.kaggle.com/c/house-prices-advanced-regression-techniques" target="_blank" rel="external">House Prices: Advanced Regression Techniques</a></li>
-<li><a href="https://www.kaggle.com/c/digit-recognizer" target="_blank" rel="external">Digit Recognizer</a></li>
+<li><a href="https://www.kaggle.com/c/titanic" target="_blank" rel="external">Titanic: Machine Learning from Disaster(Supervised/Classification)</a></li>
+<li><a href="https://www.kaggle.com/c/house-prices-advanced-regression-techniques" target="_blank" rel="external">House Prices: Advanced Regression Techniques(Supervised/Regression)</a></li>
+<li><a href="https://www.kaggle.com/c/digit-recognizer" target="_blank" rel="external">Digit Recognizer(Supervised/Classification)</a></li>
 </ul>
 ]]></content>
       
@@ -216,31 +216,6 @@
         <tags>
             
             <tag> 厨房 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Mac 下用 Papers 3 管理文献]]></title>
-      <url>http://tommyjiang.coding.me/2017/2017-06-19-Mac-Papers/</url>
-      <content type="html"><![CDATA[<p>Mac 下利用 Papers 3 管理文献。</p>
-<a id="more"></a>
-<h1 id="Spacemacs-和-AUCTeX-简介"><a href="#Spacemacs-和-AUCTeX-简介" class="headerlink" title="Spacemacs 和 AUCTeX 简介"></a>Spacemacs 和 AUCTeX 简介</h1><h1 id="Alfred-Papers-3-搜索文献"><a href="#Alfred-Papers-3-搜索文献" class="headerlink" title="Alfred + Papers 3 搜索文献"></a>Alfred + Papers 3 搜索文献</h1><p><code>Alfred</code>是 Mac 上的神器，可以快速定位程序和文件，也可以和 Papers 3结合，但 Papers 3添加论文后会存储到其 Library，需要重新生成 index 才可以正常搜索，具体操作为：Papers 3 -&gt; Help -&gt; Troubleshooting -&gt; Rebuild Spotlight Search Index.</p>
-]]></content>
-      
-        <categories>
-            
-            <category> 技术 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> Mac </tag>
-            
-            <tag> 文献 </tag>
             
         </tags>
         
@@ -1232,7 +1207,7 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     <td style="text-align:center">北京西</td>
     <td style="text-align:center">上行</td>
     <td style="text-align:center">07:38</td>
-    <td style="text-align:center">07:31-07:35</td>
+    <td style="text-align:center">07:33-07:36</td>
   </tr>
   <tr>
     <td style="text-align:center">2</td>
@@ -1241,60 +1216,78 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     <td style="text-align:center">北京西</td>
     <td style="text-align:center">上行</td>
     <td style="text-align:center">08:03</td>
-    <td style="text-align:center">07:56-08:00</td>
+    <td style="text-align:center">07:58-08:01</td>
   </tr>
   <tr>
     <td style="text-align:center">3</td>
+    <td style="text-align:center">K148</td>
+    <td style="text-align:center">阜阳</td>
+    <td style="text-align:center">北京西</td>
+    <td style="text-align:center">上行</td>
+    <td style="text-align:center">08:33</td>
+    <td style="text-align:center">08:28-08:31</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">4</td>
     <td style="text-align:center">Y530</td>
     <td style="text-align:center">张家口南</td>
     <td style="text-align:center">北京西</td>
     <td style="text-align:center">上行</td>
     <td style="text-align:center">10:10</td>
-    <td style="text-align:center">10:03-10:07</td>
+    <td style="text-align:center">10:05-10:08</td>
   </tr><tr>
-    <td style="text-align:center">4</td>
+    <td style="text-align:center">5</td>
     <td style="text-align:center">K1071</td>
     <td style="text-align:center">北京西</td>
     <td style="text-align:center">安庆</td>
     <td style="text-align:center">下行</td>
     <td style="text-align:center">12:12</td>
-    <td style="text-align:center">12:15-12:19</td>
-  </tr>
-  <tr>
-    <td style="text-align:center">5</td>
-    <td style="text-align:center">K1110</td>
-    <td style="text-align:center"></td>
-    <td style="text-align:center">北京西</td>
-    <td style="text-align:center">上行</td>
-    <td style="text-align:center">12:35</td>
-    <td style="text-align:center">12:28-12:32</td>
+    <td style="text-align:center">12:14-12:17</td>
   </tr>
   <tr>
     <td style="text-align:center">6</td>
+    <td style="text-align:center">K1110</td>
+    <td style="text-align:center">黄山</td>
+    <td style="text-align:center">北京西</td>
+    <td style="text-align:center">上行</td>
+    <td style="text-align:center">12:35</td>
+    <td style="text-align:center">12:30-12:33</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">7</td>
     <td style="text-align:center">Z65</td>
     <td style="text-align:center">北京西</td>
     <td style="text-align:center">南昌</td>
     <td style="text-align:center">下行</td>
     <td style="text-align:center">19:49</td>
-    <td style="text-align:center">19:52-19:56</td>
+    <td style="text-align:center">19:51-19:54</td>
   </tr>
   <tr>
-    <td style="text-align:center">7</td>
+    <td style="text-align:center">8</td>
+    <td style="text-align:center">Z107</td>
+    <td style="text-align:center">北京西</td>
+    <td style="text-align:center">深圳</td>
+    <td style="text-align:center">下行</td>
+    <td style="text-align:center">19:55</td>
+    <td style="text-align:center">19:57-20:09</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">9</td>
     <td style="text-align:center">1136</td>
     <td style="text-align:center">天津</td>
     <td style="text-align:center">乌海西</td>
     <td style="text-align:center">上行</td>
     <td style="text-align:center">22:29</td>
-    <td style="text-align:center">22:22-22:26</td>
+    <td style="text-align:center">22:24-22:27</td>
   </tr>
   <tr>
-    <td style="text-align:center">8</td>
+    <td style="text-align:center">10</td>
     <td style="text-align:center">1303</td>
     <td style="text-align:center">北京西</td>
     <td style="text-align:center">郑州</td>
     <td style="text-align:center">下行</td>
     <td style="text-align:center">22:38</td>
-    <td style="text-align:center">22:41-22:45</td>
+    <td style="text-align:center">22:40-22:43</td>
   </tr>
 </table>
 

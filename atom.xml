@@ -55,7 +55,7 @@
     <link href="http://tommyjiang.coding.me/2017/2017-07-15-machine-learning/"/>
     <id>http://tommyjiang.coding.me/2017/2017-07-15-machine-learning/</id>
     <published>2017-07-15T11:00:00.000Z</published>
-    <updated>2017-07-16T07:40:03.000Z</updated>
+    <updated>2017-07-18T13:21:04.000Z</updated>
     
     <content type="html"><![CDATA[<p>机器学习相关资源汇总</p>
 <a id="more"></a>
@@ -78,9 +78,9 @@
 <li><a href="http://courses.cs.washington.edu/courses/cse546/16au/" target="_blank" rel="external">Machine Learning. University of Washington</a></li>
 </ul>
 <h1 id="Kaggle-比赛"><a href="#Kaggle-比赛" class="headerlink" title="Kaggle 比赛"></a>Kaggle 比赛</h1><ul>
-<li><a href="https://www.kaggle.com/c/titanic" target="_blank" rel="external">Titanic: Machine Learning from Disaster</a></li>
-<li><a href="https://www.kaggle.com/c/house-prices-advanced-regression-techniques" target="_blank" rel="external">House Prices: Advanced Regression Techniques</a></li>
-<li><a href="https://www.kaggle.com/c/digit-recognizer" target="_blank" rel="external">Digit Recognizer</a></li>
+<li><a href="https://www.kaggle.com/c/titanic" target="_blank" rel="external">Titanic: Machine Learning from Disaster(Supervised/Classification)</a></li>
+<li><a href="https://www.kaggle.com/c/house-prices-advanced-regression-techniques" target="_blank" rel="external">House Prices: Advanced Regression Techniques(Supervised/Regression)</a></li>
+<li><a href="https://www.kaggle.com/c/digit-recognizer" target="_blank" rel="external">Digit Recognizer(Supervised/Classification)</a></li>
 </ul>
 ]]></content>
     
@@ -245,33 +245,6 @@
     
     
       <category term="厨房" scheme="http://tommyjiang.coding.me/tags/%E5%8E%A8%E6%88%BF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mac 下用 Papers 3 管理文献</title>
-    <link href="http://tommyjiang.coding.me/2017/2017-06-19-Mac-Papers/"/>
-    <id>http://tommyjiang.coding.me/2017/2017-06-19-Mac-Papers/</id>
-    <published>2017-06-19T04:00:00.000Z</published>
-    <updated>2017-06-19T09:45:14.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Mac 下利用 Papers 3 管理文献。</p>
-<a id="more"></a>
-<h1 id="Spacemacs-和-AUCTeX-简介"><a href="#Spacemacs-和-AUCTeX-简介" class="headerlink" title="Spacemacs 和 AUCTeX 简介"></a>Spacemacs 和 AUCTeX 简介</h1><h1 id="Alfred-Papers-3-搜索文献"><a href="#Alfred-Papers-3-搜索文献" class="headerlink" title="Alfred + Papers 3 搜索文献"></a>Alfred + Papers 3 搜索文献</h1><p><code>Alfred</code>是 Mac 上的神器，可以快速定位程序和文件，也可以和 Papers 3结合，但 Papers 3添加论文后会存储到其 Library，需要重新生成 index 才可以正常搜索，具体操作为：Papers 3 -&gt; Help -&gt; Troubleshooting -&gt; Rebuild Spotlight Search Index.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Mac 下利用 Papers 3 管理文献。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://tommyjiang.coding.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="Mac" scheme="http://tommyjiang.coding.me/tags/Mac/"/>
-    
-      <category term="文献" scheme="http://tommyjiang.coding.me/tags/%E6%96%87%E7%8C%AE/"/>
     
   </entry>
   
@@ -1263,7 +1236,7 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     <link href="http://tommyjiang.coding.me/2016/2016-12-10-Shou-pa-kou-crossing/"/>
     <id>http://tommyjiang.coding.me/2016/2016-12-10-Shou-pa-kou-crossing/</id>
     <published>2016-12-10T11:00:00.000Z</published>
-    <updated>2017-06-29T07:02:50.000Z</updated>
+    <updated>2017-07-21T02:21:54.000Z</updated>
     
     <content type="html"><![CDATA[<p>毕业工作后从五道口转到了手帕口道口，每天到道口听听车机联控还是很开心的，记录下具体的车次信息。</p>
 <a id="more"></a>
@@ -1285,7 +1258,7 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     <td style="text-align:center">北京西</td>
     <td style="text-align:center">上行</td>
     <td style="text-align:center">07:38</td>
-    <td style="text-align:center">07:31-07:35</td>
+    <td style="text-align:center">07:33-07:36</td>
   </tr>
   <tr>
     <td style="text-align:center">2</td>
@@ -1294,60 +1267,78 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     <td style="text-align:center">北京西</td>
     <td style="text-align:center">上行</td>
     <td style="text-align:center">08:03</td>
-    <td style="text-align:center">07:56-08:00</td>
+    <td style="text-align:center">07:58-08:01</td>
   </tr>
   <tr>
     <td style="text-align:center">3</td>
+    <td style="text-align:center">K148</td>
+    <td style="text-align:center">阜阳</td>
+    <td style="text-align:center">北京西</td>
+    <td style="text-align:center">上行</td>
+    <td style="text-align:center">08:33</td>
+    <td style="text-align:center">08:28-08:31</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">4</td>
     <td style="text-align:center">Y530</td>
     <td style="text-align:center">张家口南</td>
     <td style="text-align:center">北京西</td>
     <td style="text-align:center">上行</td>
     <td style="text-align:center">10:10</td>
-    <td style="text-align:center">10:03-10:07</td>
+    <td style="text-align:center">10:05-10:08</td>
   </tr><tr>
-    <td style="text-align:center">4</td>
+    <td style="text-align:center">5</td>
     <td style="text-align:center">K1071</td>
     <td style="text-align:center">北京西</td>
     <td style="text-align:center">安庆</td>
     <td style="text-align:center">下行</td>
     <td style="text-align:center">12:12</td>
-    <td style="text-align:center">12:15-12:19</td>
-  </tr>
-  <tr>
-    <td style="text-align:center">5</td>
-    <td style="text-align:center">K1110</td>
-    <td style="text-align:center"></td>
-    <td style="text-align:center">北京西</td>
-    <td style="text-align:center">上行</td>
-    <td style="text-align:center">12:35</td>
-    <td style="text-align:center">12:28-12:32</td>
+    <td style="text-align:center">12:14-12:17</td>
   </tr>
   <tr>
     <td style="text-align:center">6</td>
+    <td style="text-align:center">K1110</td>
+    <td style="text-align:center">黄山</td>
+    <td style="text-align:center">北京西</td>
+    <td style="text-align:center">上行</td>
+    <td style="text-align:center">12:35</td>
+    <td style="text-align:center">12:30-12:33</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">7</td>
     <td style="text-align:center">Z65</td>
     <td style="text-align:center">北京西</td>
     <td style="text-align:center">南昌</td>
     <td style="text-align:center">下行</td>
     <td style="text-align:center">19:49</td>
-    <td style="text-align:center">19:52-19:56</td>
+    <td style="text-align:center">19:51-19:54</td>
   </tr>
   <tr>
-    <td style="text-align:center">7</td>
+    <td style="text-align:center">8</td>
+    <td style="text-align:center">Z107</td>
+    <td style="text-align:center">北京西</td>
+    <td style="text-align:center">深圳</td>
+    <td style="text-align:center">下行</td>
+    <td style="text-align:center">19:55</td>
+    <td style="text-align:center">19:57-20:09</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">9</td>
     <td style="text-align:center">1136</td>
     <td style="text-align:center">天津</td>
     <td style="text-align:center">乌海西</td>
     <td style="text-align:center">上行</td>
     <td style="text-align:center">22:29</td>
-    <td style="text-align:center">22:22-22:26</td>
+    <td style="text-align:center">22:24-22:27</td>
   </tr>
   <tr>
-    <td style="text-align:center">8</td>
+    <td style="text-align:center">10</td>
     <td style="text-align:center">1303</td>
     <td style="text-align:center">北京西</td>
     <td style="text-align:center">郑州</td>
     <td style="text-align:center">下行</td>
     <td style="text-align:center">22:38</td>
-    <td style="text-align:center">22:41-22:45</td>
+    <td style="text-align:center">22:40-22:43</td>
   </tr>
 </table>
 
@@ -1687,6 +1678,132 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     
     
       <category term="感情" scheme="http://tommyjiang.coding.me/tags/%E6%84%9F%E6%83%85/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>北京地铁各线路颜色 HEX 及 RGB 代码</title>
+    <link href="http://tommyjiang.coding.me/2016/2016-09-10-Beijing-subway-color/"/>
+    <id>http://tommyjiang.coding.me/2016/2016-09-10-Beijing-subway-color/</id>
+    <published>2016-09-10T14:00:00.000Z</published>
+    <updated>2016-09-12T01:20:58.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>大概翻了翻，网上好像还没有北京地铁各线路颜色的 HEX 及 RGB 代码，自己整理一份。</p>
+<a id="more"></a>
+<p>北京地铁各线路颜色 HEX 和 RGB 代码如下，参考<a href="http://www.bjsubway.com/subwaymap/station_map.html" target="_blank" rel="external">北京地铁官网线路图</a>：</p>
+
+<table border="1px" align="center">
+  <tr>
+    <th style="text-align:center">线路序号</th>
+    <th style="text-align:center">颜色</th>
+    <th style="text-align:center">HEX</th>
+    <th style="text-align:center">RGB</th>
+  </tr>
+  <tr>
+    <td style="text-align:center">1号线</td>
+    <td bgcolor="bb1f20" style="text-align:center"></td>
+    <td style="text-align:center">#BB1F20</td>
+    <td style="text-align:center">rgb(187, 31, 32)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">2号线</td>
+    <td bgcolor="004a88" style="text-align:center"></td>
+    <td style="text-align:center">#004A88</td>
+    <td style="text-align:center">rgb(0, 74, 136)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">4号线</td>
+    <td bgcolor="007c8b" style="text-align:center"></td>
+    <td style="text-align:center">#007C8B</td>
+    <td style="text-align:center">rgb(0, 124, 139)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">5号线</td>
+    <td bgcolor="95006d" style="text-align:center"></td>
+    <td style="text-align:center">#95006D</td>
+    <td style="text-align:center">rgb(149, 0, 109)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">6号线</td>
+    <td bgcolor="c88700" style="text-align:center"></td>
+    <td style="text-align:center">#C88700</td>
+    <td style="text-align:center">rgb(200, 135, 0)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">7号线</td>
+    <td bgcolor="f4ba6a" style="text-align:center"></td>
+    <td style="text-align:center">#F4BA6A</td>
+    <td style="text-align:center">rgb(244, 186, 106)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">8号线</td>
+    <td bgcolor="038d57" style="text-align:center"></td>
+    <td style="text-align:center">#038D57</td>
+    <td style="text-align:center">rgb(3, 141, 87)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">9号线</td>
+    <td bgcolor="7dbd00" style="text-align:center"></td>
+    <td style="text-align:center">#7DBD00</td>
+    <td style="text-align:center">rgb(125, 189, 0)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">10号线</td>
+    <td bgcolor="0089b5" style="text-align:center"></td>
+    <td style="text-align:center">#0089B5</td>
+    <td style="text-align:center">rgb(0, 137, 181)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">13号线</td>
+    <td bgcolor="f8e700" style="text-align:center"></td>
+    <td style="text-align:center">#F8E700</td>
+    <td style="text-align:center">rgb(248, 231, 0)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">14号线</td>
+    <td bgcolor="cb958f" style="text-align:center"></td>
+    <td style="text-align:center">#CB958F</td>
+    <td style="text-align:center">rgb(203, 149, 143)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">15号线</td>
+    <td bgcolor="491b56" style="text-align:center"></td>
+    <td style="text-align:center">#491B56</td>
+    <td style="text-align:center">rgb(73, 27, 86)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">八通线</td>
+    <td bgcolor="bb1f20" style="text-align:center"></td>
+    <td style="text-align:center">#BB1F20</td>
+    <td style="text-align:center">rgb(187, 31, 32)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">房山线</td>
+    <td bgcolor="de490e" style="text-align:center"></td>
+    <td style="text-align:center">#DE490E</td>
+    <td style="text-align:center">rgb(222, 73, 14)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">昌平线</td>
+    <td bgcolor="d668a3" style="text-align:center"></td>
+    <td style="text-align:center">#D668A3</td>
+    <td style="text-align:center">rgb(214, 104, 163)</td>
+  </tr>
+</table>
+
+<h1 id="版本记录"><a href="#版本记录" class="headerlink" title="版本记录"></a>版本记录</h1><p>2015-09-10：v1.0-新建博文。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;大概翻了翻，网上好像还没有北京地铁各线路颜色的 HEX 及 RGB 代码，自己整理一份。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://tommyjiang.coding.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="地铁" scheme="http://tommyjiang.coding.me/tags/%E5%9C%B0%E9%93%81/"/>
     
   </entry>
   
