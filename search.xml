@@ -2018,9 +2018,9 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
         
         <tags>
             
-            <tag> 博士 </tag>
-            
             <tag> 感情 </tag>
+            
+            <tag> 博士 </tag>
             
         </tags>
         
@@ -2065,11 +2065,11 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
             
             <tag> 电力系统 </tag>
             
+            <tag> 博士 </tag>
+            
             <tag> 科研 </tag>
             
             <tag> 国家电网 </tag>
-            
-            <tag> 博士 </tag>
             
         </tags>
         
