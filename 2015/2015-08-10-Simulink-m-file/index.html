@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<title>
+  
+    MATLAB 中利用 m 文件修改 Simulink 模型参数的方法
+  
+</title>
+
+<meta name="description" content="介绍在 MATLAB 中利用 m 文件修改 Simulink 中模型参数的方法。">
+<meta name="keywords" content="MATLAB">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MATLAB 中利用 m 文件修改 Simulink 模型参数的方法">
+<meta property="og:url" content="http://tommyjiang.coding.me/2015/2015-08-10-Simulink-m-file/index.html">
+<meta property="og:site_name" content="Xiaoyi&#39;s Blog">
+<meta property="og:description" content="介绍在 MATLAB 中利用 m 文件修改 Simulink 中模型参数的方法。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-07-28T14:59:28.302Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MATLAB 中利用 m 文件修改 Simulink 模型参数的方法">
+<meta name="twitter:description" content="介绍在 MATLAB 中利用 m 文件修改 Simulink 中模型参数的方法。">
+
+
+  <link rel="alternative" href="/atom.xml" title="Xiaoyi&#39;s Blog" type="application/atom+xml">
+
+
+
+  <link rel="icon" href="/favicon.png">
+
+
+<link rel="stylesheet" href="/perfect-scrollbar/css/perfect-scrollbar.min.css">
+<link rel="stylesheet" href="/styles/main.css">
+
+
+
+
+
+
+</head>
+<body
+  
+    class="monochrome"
+  
+  >
+  <div class="mobile-header">
+  <button class="sidebar-toggle" type="button">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <a class="title" href="/">Xiaoyi&#39;s Blog</a>
+</div>
+
+  <div class="main-container">
+    <div class="sidebar">
+  <div class="header">
+    <h1 class="title"><a href="/">Xiaoyi&#39;s Blog</a></h1>
+    
+    <div class="info">
+      <div class="content">
+        
+        
+      </div>
+      
+        <div class="avatar">
+          
+            <a href="/about"><img src="https://cn.gravatar.com/avatar/35fef74d731255cd569c2c2b0b9e87e4?s=200"></a>
+          
+        </div>
+      
+    </div>
+  </div>
+  <div class="body">
+    
+      
+        <ul class="nav">
+          
+            
+              <li class="category-list-container">
+                <a href="javascript:;">分类</a>
+                <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Geek/">Geek</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/工作/">工作</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/">技术</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/投稿/">投稿</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活/">生活</a><span class="category-list-count">41</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/读书/">读书</a><span class="category-list-count">1</span></li></ul>
+              </li>
+            
+          
+            
+              <li class="tag-list-container">
+                <a href="javascript:;">标签</a>
+                <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Apple/">Apple</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CS/">CS</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CV/">CV</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Coding/">Coding</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Collection/">Collection</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Computer-Vision/">Computer Vision</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DL/">DL</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DotA/">DotA</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Emacs/">Emacs</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Geek/">Geek</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Google/">Google</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LGBT/">LGBT</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LaTeX/">LaTeX</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lisp/">Lisp</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MATLAB/">MATLAB</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Machine-learning/">Machine learning</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Object-Detection/">Object Detection</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Paper/">Paper</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PyCharm/">PyCharm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RSS/">RSS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tips/">Tips</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/一刻-talks/">一刻 talks</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/办公/">办公</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博士/">博士</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客/">博客</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/大厨/">大厨</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具/">工具</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/广州/">广州</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/微言/">微言</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/性边缘人群/">性边缘人群</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/总结/">总结</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/感情/">感情</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据/">数据</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据标注/">数据标注</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/旅游/">旅游</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/旅行/">旅行</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/李健/">李健</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/深圳/">深圳</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/澳门/">澳门</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/爱情/">爱情</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生日/">生日</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/电力/">电力</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/美食/">美食</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/英语教学/">英语教学</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/足球/">足球</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/铁路/">铁路</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/音乐/">音乐</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/香港/">香港</a><span class="tag-list-count">5</span></li></ul>
+              </li>
+            
+          
+            
+              <li class="archive-list-container">
+                <a href="javascript:;">归档</a>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018</a><span class="archive-list-count">30</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017</a><span class="archive-list-count">25</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016</a><span class="archive-list-count">16</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/">2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/">2014</a><span class="archive-list-count">1</span></li></ul>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="/" title="Homepage">Homepage</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/archives" title="By Year">By Year</a>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="/atom.xml" title="RSS">RSS</a>
+              </li>
+            
+          
+        </ul>
+      
+    
+  </div>
+</div>
+
+    <div class="main-content">
+      
+        <div style="max-width: 1000px">
+      
+          <article id="post-2015/2015-08-10-Simulink-m-file" class="article article-type-post">
+  
+    <h1 class="article-header">
+      MATLAB 中利用 m 文件修改 Simulink 模型参数的方法
+    </h1>
+  
+  
+
+  <div class="article-info">
+    <span class="article-date">
+  2015-08-10
+</span>
+
+    
+	<span class="article-category tagcloud">
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/技术/">技术</a></li></ul>
+	</span>
+
+
+    
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MATLAB/">MATLAB</a></li></ul>
+	</span>
+
+
+  </div>
+  <div class="article-entry">
+    <p>介绍在 MATLAB 中利用 m 文件修改 Simulink 中模型参数的方法。</p>
+<a id="more"></a>
+<h1 id="电力系统仿真工具"><a href="#电力系统仿真工具" class="headerlink" title="电力系统仿真工具"></a>电力系统仿真工具</h1><p>我个人博士论文的隐名评审意见中有如下评语：</p>
+<blockquote>
+<p>除第二章的简单实验外，本文的所有结论均源于仿真，这大大降低了本文的创新性和说服力。</p>
+</blockquote>
+<p>说实话，和任何事一样，博士毕业其实是实力和运气综合作用的结果，尤其是研究生院负责的论文盲审环节，虽然可以填最多3个需要回避的老师，但也容易送到学术观点有争议或者导师的“宿敌”手中。比如我个人的这个评审意见——审我论文的这位老师很有可能是电力电子方向而不是电力系统方向的，因为电力系统方向的老师肯定清楚，目前电力系统领域的绝大多数研究，只能依靠仿真，因此不太会给出上述评语。但我还是应该感谢下这位老师，因为他虽然在评审时给了我2个C（一共4小项），但最后总评很厚道地给了个B，不然我还要继续在学校读博……</p>
+<p>说回电力系统的仿真工具，我个人了解的有以下软件：BPA、PSASP、MATLAB/Simulink、PSCAD、PSS/E、PowerFactory、RTDS、RT-Lab、PXI……这方面可以参考<a href="http://wenku.baidu.com/link?url=lyB8iBkcX7HUakjhmgnWHX0xNV7-E3RIWFrzxDXEgmgs4NYdomg6YlY2hBDBSOuXJ8JWKW0Amu6lZMeB_8HzXz4yjLper1sGNdGPOJajAQO" target="_blank" rel="noopener">武大曹博的PPT</a>，里面有关于各软件的详细说明和对比。就我个人而言，更喜欢用<em>纯代码</em>进行仿真，原因是纯代码调试起来更为方便，而且也更容易进行版本管理。但电力系统仿真中应用纯代码的情形毕竟较少，一般与优化相关的研究更偏好用纯代码，但动态仿真绝大多数时候还是要用 GUI 仿真软件。</p>
+<p>MATLAB/Simulink 就是一个常用的仿真工具，它的突出优点是可以和 MATLAB 代码完美对接。但利用 Simulink 模型进行仿真时，如果需要在某些时刻改变系统参数，利用 GUI 界面进行设置会比较麻烦，可以利用 m 文件实现，具体方法如下。</p>
+<h2 id="m-文件修改-Simulink-模型参数的方法"><a href="#m-文件修改-Simulink-模型参数的方法" class="headerlink" title="m 文件修改 Simulink 模型参数的方法"></a>m 文件修改 Simulink 模型参数的方法</h2><p>利用 m 文件修改 Simulink 模型参数方法的总体思想如下：首先在初始参数下仿真一段时间，记录该时间结束时系统所有状态量的值，之后修改系统参数，再以上一次仿真结束时记录的系统所有状态量的值作为初值，重新仿真，如此循环往复。</p>
+<p>可以在 m 文件中利用<code>set_param</code>函数设置 Simulink 模型仿真的相关参数：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">set_param(<span class="string">'ModelName'</span>,<span class="string">'LoadInitialState'</span>,<span class="string">'off'</span>,...</span><br><span class="line">          <span class="string">'SaveFinalState'</span>,<span class="string">'on'</span>,<span class="string">'SaveCompleteFinalSimState'</span>,<span class="string">'on'</span>,...</span><br><span class="line">          <span class="string">'FinalStateName'</span>,<span class="string">'xFinal'</span>,<span class="string">'StartTime'</span>,<span class="string">'0'</span>,<span class="string">'StopTime'</span>,<span class="string">'1'</span>);</span><br></pre></td></tr></table></figure>
+<p>其中<code>ModelName</code>为 Simulink 模型的文件名，注意第一次仿真不需要载入初值，因此<code>LoadInitialState</code>选项需要设为<code>off</code>，之后的仿真中则需要将该项设置为<code>on</code>。第2行对应的是保存系统状态量终值的相关设置，其中<code>FinalStateName</code>为终值存储的变量名，之后仿真的初值需要设置为该变量名。</p>
+<h1 id="相关问题"><a href="#相关问题" class="headerlink" title="相关问题"></a>相关问题</h1><h2 id="继续进行仿真时提示仿真起始时间与状态变量初始值的时间不同"><a href="#继续进行仿真时提示仿真起始时间与状态变量初始值的时间不同" class="headerlink" title="继续进行仿真时提示仿真起始时间与状态变量初始值的时间不同"></a>继续进行仿真时提示仿真起始时间与状态变量初始值的时间不同</h2><p>利用以上代码实现 m 文件修改 Simulink 模型参数继续仿真的过程中，会遇到如下警告：</p>
+<pre><code>Warning: The start time of model &apos;Exp2_1_SimModel&apos; is different from the start time saved in the initial SimState. The start time has therefore been reset to 0. 
+</code></pre><p>虽然出现了上述警告，但存储仿真结果的变量中，时间仍然是从0开始一直到全部仿真结束对应的时刻，并未出现上述警告中提到的将每次重新仿真的起始时间设置为0的情况。我试了试直接在 Simulink 中加载初始值然后仿真，并未出现上述警告。由于该警告目前对仿真结果并无影响，因此暂时将其忽略，之后如果能解决当然最好，就算解决不了也无大碍。</p>
+<h2 id="Simulink-模型中某些参数无法改变"><a href="#Simulink-模型中某些参数无法改变" class="headerlink" title="Simulink 模型中某些参数无法改变"></a>Simulink 模型中某些参数无法改变</h2><p>电力系统的仿真一般采用 Simulink 中的 SimPower 库，我利用 SimPower 搭建了一个单相半桥 PWM 的仿真模型，可以改变该模型中的调制比参数 m 以及电容电压 V_DC，但无法改变模型中反电势电源的电压幅值 Vs 和支路电阻/电感的值，修改后面二者后 MATLAB 会报以下错误：</p>
+<pre><code>Simulink cannot load the initial SimState because the model,&apos;Exp2_1_SimModel&apos;, was changed after the SimState was saved. Run the simulation again and resave the SimState.
+</code></pre><p>目前还没找到太好的解决方法，只能采用变通的方法。例如修改反电势电源电压幅值可以等效为修改调制比 m，二者对应的电流波形是相同的。</p>
+
+  </div>
+  <footer class="article-footer">
+    
+  <div class="cc">
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/deed.z" target="_blank" title="署名-相同方式共享">
+      <img src="/images/cc/cc.png">
+      
+          <img src="/images/cc/by.png">
+        
+          <img src="/images/cc/sa.png">
+      
+      <span>
+        本作品采用知识共享 署名-相同方式共享 4.0 国际许可协议进行许可。
+      </span>
+    </a>
+  </div>
+
+
+    
+
+  </footer>
+</article>
+
+
+
+
+
+
+
+          <div class="main-footer">
+  
+    © 2018 Xiaoyi&#39;s Blog - Powered by <a href="http://hexo.io" target="_blank">Hexo</a> - Theme <a href="https://github.com/denjones/hexo-theme-chan" target="_blank">Chan</a>
+  
+</div>
+
+      
+        </div>
+      
+    </div>
+  </div>
+  <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
+  <link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+             It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/PhotoSwipe/photoswipe.js"></script>
+  <script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
+
+
+<script src="/perfect-scrollbar/js/min/perfect-scrollbar.min.js"></script>
+<script src="/scripts/main.js"></script>
+
+</body>
+</html>
