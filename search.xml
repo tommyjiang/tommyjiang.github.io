@@ -4405,46 +4405,6 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     </entry>
     
     <entry>
-      <title><![CDATA[歌词摘录]]></title>
-      <url>http://tommyjiang.github.io/2017/2017-01-03-Song-lyrics/</url>
-      <content type="html"><![CDATA[<p>人若矫情起来，听什么歌都像唱自己。</p>
-<a id="more"></a>
-<h1 id="爱情"><a href="#爱情" class="headerlink" title="爱情"></a>爱情</h1><blockquote>
-<p>难过是因为我太认真</p>
-<p>——金南玲《逆流成河》</p>
-<p>爱人在身边随处是天堂</p>
-<p>——乌兰托娅《火红的萨日朗》</p>
-<p>既然爱你不能言语<br>只能微笑哭泣<br>让我从此忘了你</p>
-<p>——许茹芸《独角戏》</p>
-<p>由来只有新人笑 有谁听到旧人哭</p>
-<p>——黄安《新鸳鸯蝴蝶梦》</p>
-<p>朝朝望呀望呀愁容添 相恋怎能不相怨</p>
-<p>——新白娘子传奇《心湖雨又风》</p>
-</blockquote>
-<h1 id="青春"><a href="#青春" class="headerlink" title="青春"></a>青春</h1><blockquote>
-<p>时光去了不回头 珍惜吧好朋友</p>
-<p>江玲/钟镇涛 《在那河畔》</p>
-<p>我们都曾有过一张天真而忧伤的脸<br>手握阳光我们望着遥远</p>
-<p>四个女生 《心愿》</p>
-</blockquote>
-]]></content>
-      
-        <categories>
-            
-            <category> 生活 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 音乐 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[Echarts 实例]]></title>
       <url>http://tommyjiang.github.io/2017/2017-01-03-echarts-example/</url>
       <content type="html"><![CDATA[<p>Echarts 代码备忘。</p>
@@ -4566,6 +4526,46 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
             
         </categories>
         
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[歌词摘录]]></title>
+      <url>http://tommyjiang.github.io/2017/2017-01-03-Song-lyrics/</url>
+      <content type="html"><![CDATA[<p>人若矫情起来，听什么歌都像唱自己。</p>
+<a id="more"></a>
+<h1 id="爱情"><a href="#爱情" class="headerlink" title="爱情"></a>爱情</h1><blockquote>
+<p>难过是因为我太认真</p>
+<p>——金南玲《逆流成河》</p>
+<p>爱人在身边随处是天堂</p>
+<p>——乌兰托娅《火红的萨日朗》</p>
+<p>既然爱你不能言语<br>只能微笑哭泣<br>让我从此忘了你</p>
+<p>——许茹芸《独角戏》</p>
+<p>由来只有新人笑 有谁听到旧人哭</p>
+<p>——黄安《新鸳鸯蝴蝶梦》</p>
+<p>朝朝望呀望呀愁容添 相恋怎能不相怨</p>
+<p>——新白娘子传奇《心湖雨又风》</p>
+</blockquote>
+<h1 id="青春"><a href="#青春" class="headerlink" title="青春"></a>青春</h1><blockquote>
+<p>时光去了不回头 珍惜吧好朋友</p>
+<p>江玲/钟镇涛 《在那河畔》</p>
+<p>我们都曾有过一张天真而忧伤的脸<br>手握阳光我们望着遥远</p>
+<p>四个女生 《心愿》</p>
+</blockquote>
+]]></content>
+      
+        <categories>
+            
+            <category> 生活 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 音乐 </tag>
+            
+        </tags>
         
     </entry>
     
@@ -5551,9 +5551,9 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
         
         <tags>
             
-            <tag> 博士 </tag>
-            
             <tag> 感情 </tag>
+            
+            <tag> 博士 </tag>
             
         </tags>
         
@@ -5596,9 +5596,9 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
         
         <tags>
             
-            <tag> 电力 </tag>
-            
             <tag> 博士 </tag>
+            
+            <tag> 电力 </tag>
             
         </tags>
         
