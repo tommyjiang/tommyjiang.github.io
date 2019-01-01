@@ -41,6 +41,30 @@
   </entry>
   
   <entry>
+    <title>2018行程总结及个人飞行统计</title>
+    <link href="http://tommyjiang.github.io/2018/2018-12-31-Trip-2018/"/>
+    <id>http://tommyjiang.github.io/2018/2018-12-31-Trip-2018/</id>
+    <published>2018-12-31T02:00:00.000Z</published>
+    <updated>2019-01-01T11:05:45.757Z</updated>
+    
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>2018 行程总结。</div><a id="more"></a><h1 id="2018-行程总结"><a href="#2018-行程总结" class="headerlink" title="2018 行程总结"></a>2018 行程总结</h1><p>2018 年各月飞机里程和火车里程如下：</p><div id="tripSum2018" style="height:400px"></div><h1 id="个人飞行统计"><a href="#个人飞行统计" class="headerlink" title="个人飞行统计"></a>个人飞行统计</h1><p>各航空公司的里程对比如下：</p><div id="airlineStat" style="height:400px"></div><!--引入百度地图的jssdk，这里需要使用你在百度地图开发者平台申请的 ak--><script src="http://api.map.baidu.com/api?v=2.0&ak=x2V7KanMxVA2GuK7oFHPOiGytFSXWoyN"></script><!-- 引入 ECharts --><script src="https://cdn.bootcss.com/echarts/4.1.0/echarts.js"></script><script src="https://cdn.rawgit.com/apache/incubator-echarts/master/theme/macarons.js"></script><!-- 引入百度地图扩展 --><script src="https://cdn.bootcss.com/echarts/4.1.0/extension/bmap.js"></script><script type="text/javascript">TripSum2018();Airline();function TripSum2018(ec){    var myTripSum2018 = echarts.init(document.getElementById('tripSum2018'), 'macarons');    var option = {        tooltip : {            trigger: 'axis'        },        toolbox: {            show : true,            feature : {                mark : {show: true},                dataView : {show: true, readOnly: false},                magicType: {show: true, type: ['bar', 'bar']},                restore : {show: true},                saveAsImage : {show: true}            }        },        calculable : true,        legend: {            data:['飞机行程','火车行程']        },        xAxis : [            {                type : 'category',                data : ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月']            }        ],        yAxis : [            {                type : 'value',                name : '飞机行程(km)',                axisLabel : {                    formatter: '{value}'                }            },            {                type : 'value',                name : '火车行程(km)',                axisLabel : {                    formatter: '{value}'                }            }        ],        series : [            {                name:'飞机行程',                type:'bar',                data:[0, 8514, 0, 0, 0, 3739, 0, 0, 0, 0, 0, 0]            },            {                name:'火车行程',                type:'bar',                yAxisIndex: 1,                data:[595, 0, 354, 0, 0, 0, 372, 574, 0, 297, 0, 0]            }        ]    };    myTripSum2018.setOption(option,true); //当setOption第二个参数为true时，会阻止数据合并}    function Airline(){        var myAirline = echarts.init(document.getElementById('airlineStat'),'macarons');        option = {            title:{                text:'航空公司&航空联盟飞行里程（飞行总里程：116757 km）',                x:'center'            },            tooltip:{                trigger:'item',                formatter:"{b}:{c} km ({d}%)"            },            legend:{                orient:'vertical',                x:'left',                data:['国航（CA）','山航（SC）', '深航（ZH）','美联航（UA）','南航（CZ）','东航（MU）','联合航空（KN）','厦航（MF）','上海航空（FM）','达美航空（DL）','海航（HU）','天津航空（GS）','其他']            },            toolbox:{                show: true,                feature:{                    mark:{show:true},                    dataView:{show:true,readOnly:false},                    magicType:{                        show:true,                        type:['pie']                    }                },                restore:{show:true},                saveAsImage : {show: true}            },            calculable:true,            selectedMode:false,            series:[                {                    name:'航空公司',                    type:'pie',                    center:['70%','50%'],                    radius:[100, 140],                    data:[                        {value:70006,name:'国航（CA）'},                        {value:4250,name:'美联航（UA）'},                        {value:3834,name:'山航（SC）'},                        {value:5613,name:'深航（ZH）'},                        {value:4212,name:'南航（CZ）'},                        {value:3614,name:'东航（MU）'},                        {value:1742,name:'厦航（MF）'},                        {value:1360,name:'联合航空（KN）'},                        {value:1133,name:'上海航空（FM）'},                        {value:8689,name:'达美航空（DL）'},                        {value:2094,name:'海航（HU）'},                        {value:639,name:'天津航空（GS）'},                        {value:5123,name:'泰狮航空（GS）'},                        {value:2675,name:'其他'}                    ]                },                {                    name:'航空联盟',                    type:'pie',                    center:['70%','50%'],                    radius:[0, 80],                    itemStyle : {                        normal : {                            label : {                                position : 'inner'                            },                        }                    },                    data:[                        {value:83703,name:'星空联盟'},                        {value:22844,name:'天合联盟'},                        {value:10210,name:'其他'}                    ]                }            ]        }        myAirline.setOption(option);    }</script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
+2018 行程总结。
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="旅行" scheme="http://tommyjiang.github.io/tags/%E6%97%85%E8%A1%8C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>2018 的最后一个月</title>
     <link href="http://tommyjiang.github.io/2018/2018-12-03-2018-last-month/"/>
     <id>http://tommyjiang.github.io/2018/2018-12-03-2018-last-month/</id>
@@ -481,30 +505,6 @@ CV DL OD 文献引用关系图。
     
     
       <category term="微言" scheme="http://tommyjiang.github.io/tags/%E5%BE%AE%E8%A8%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>笑兔美食杂记</title>
-    <link href="http://tommyjiang.github.io/2018/2018-08-04-restaurant-I/"/>
-    <id>http://tommyjiang.github.io/2018/2018-08-04-restaurant-I/</id>
-    <published>2018-08-04T11:00:00.000Z</published>
-    <updated>2018-08-31T18:51:50.670Z</updated>
-    
-    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>逛吃逛吃</div><a id="more"></a><h1 id="不是烧烤-马连道店"><a href="#不是烧烤-马连道店" class="headerlink" title="不是烧烤(马连道店)"></a>不是烧烤(马连道店)</h1><p>时间:2018.08.04 19:00-20:00</p><p>难得的周末，LTE 到不是烧烤(马连道店)周末 happy。这家店号称汉口老味道，纯肉串一般(瘦肉串、蜜汁小排)，猪蹄、鸡爪、大蒜五花肉和蔬菜还可以。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
-逛吃逛吃
-&lt;/div&gt;
-    
-    </summary>
-    
-      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
-    
-    
-      <category term="美食" scheme="http://tommyjiang.github.io/tags/%E7%BE%8E%E9%A3%9F/"/>
     
   </entry>
   
