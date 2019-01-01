@@ -1,24 +1,277 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Xiaoyi&#39;s Blog</title>
+  <title>Tommy&#39;s Blog</title>
   
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://tommyjiang.coding.me/"/>
-  <updated>2018-11-04T06:30:29.234Z</updated>
-  <id>http://tommyjiang.coding.me/</id>
+  <link href="http://tommyjiang.github.io/"/>
+  <updated>2019-01-01T09:25:26.930Z</updated>
+  <id>http://tommyjiang.github.io/</id>
+  
+  <author>
+    <name>Tommy Jiang</name>
+    
+  </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>2018 程序员节</title>
-    <link href="http://tommyjiang.coding.me/2018/2018-10-24-first-coders-day/"/>
-    <id>http://tommyjiang.coding.me/2018/2018-10-24-first-coders-day/</id>
-    <published>2018-10-25T15:30:06.644Z</published>
-    <updated>2018-11-04T06:30:29.234Z</updated>
+    <title>2019 新年计划</title>
+    <link href="http://tommyjiang.github.io/2019/2019-01-01-2019-plan/"/>
+    <id>http://tommyjiang.github.io/2019/2019-01-01-2019-plan/</id>
+    <published>2019-01-01T03:00:00.000Z</published>
+    <updated>2019-01-01T09:25:26.930Z</updated>
     
-    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>第一个程序员节</div><a id="more"></a><p>2018.10.24，31 岁的我，度过了第一个程序员节。今天的北京艳阳高照，天暖宜人，有小阳春的感觉，也算应景。</p><p>我和代码的缘分，最早可以追溯到念小学的时候。当时家里买了一台裕兴学习机，可以用 Logo 语言画图，也能打游戏，可以改 BASIC 代码，不过当时我不会，都是我爸改的。</p><p>高中的时候，我也去听过一两节信息学竞赛课，其实就是计算机编程竞赛。当时教的语言是 PASCAL，老师号召买教材的时候，我还冲上去抢了一本，不到 20 块钱。由于初中没有任何基础，后来也就放弃了。</p><p>到了大学，开始正式接触编程。大一上的第一门课，就是五教5103的 C 语言，第一节课上，老师提到：<code>程序=数据结构+算法</code>，可惜当时我完全不理解这句话。有一节课老师教 printf 语句，要打印几行内容，临下课前还卖个关子，说其实有更简单的方法，后来我才知道所谓更简单的方法是用循环(loop)。大一小学期学了所谓的 C++，其实就等于把 C 的 struct 换成了 class，没学到什么 C++ 更深层的内容。 大二下，选修了 Java，同时也学 MATLAB，当时觉得 MATLAB 真好用，不用声明变量，可以直接做矩阵乘法，还有各种插值、优化算法，当然了，用的都是破解版。大二小学期学了 VHDL，被戏称为 Very hard language，主要用于控制 FPGA。</p><p>博士阶段，一年级下学期选修了数据结构，用 C 实现了马踏棋盘程序，用到了栈结构，当时没用贪心算法，试图暴力破解，发现完全不可能，才渐渐明白了<code>程序=数据结构+算法</code>这句话。博士用的最多的是仿真软件，包括 MATLAB/Simulink、PSCAD、PowerFactory，前两个分别对应 MATLAB 和 Fortran 语言，PF 最开始是自己的 DSL 语言，在大概 2014 年的时候开放了 API，可以通过 Python 调用。博士阶段我觉得做的最成功的一件事儿，就是用 Python 实现了 PF 和 MATLAB 的联合优化仿真，PF 负责计算电力系统动态，MATLAB/CPLEX 负责求解优化问题，Python 负责将两者连起来，当然了，即使实现了也没什么用，因为根本没人 care。</p><p>毕业到了电科院，和小哥在工作闲暇的时候用 Python 实现了数据爬虫和数据分析，还画了带区间交易量的 K 线图，虽然最后也没实际应用，但自己实现一个个功能的感觉还是很爽的，因为都是实实在在的，不像工作整天忽悠。当时不知道 Python 的 <code>pickle</code> 模块，每次读取结果都用 txt 格式，I/O 浪费了很多时间……</p><p>转行以后，主要用 Python 进行算法迭代和模型训练，C++ 写线上部署逻辑，虽然水平和周围 top 的同事比还有很大差距，但至少在不断积累了，之后要不断制定更高的目标，并为了目标努力奋斗！</p>]]></content>
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>一笔“狗”销，“猪”事顺利。</div><a id="more"></a><p>2019 年的元旦，我和老婆在军科。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
+一笔“狗”销，“猪”事顺利。
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="计划" scheme="http://tommyjiang.github.io/tags/%E8%AE%A1%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2018 的最后一个月</title>
+    <link href="http://tommyjiang.github.io/2018/2018-12-03-2018-last-month/"/>
+    <id>http://tommyjiang.github.io/2018/2018-12-03-2018-last-month/</id>
+    <published>2018-12-03T11:00:00.000Z</published>
+    <updated>2018-12-08T12:18:50.488Z</updated>
+    
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>2018 年就要过去了。</div><a id="more"></a><p>2018 年的最后一个月，就这样开始了。</p><p>1 号和 2 号两天周末，冬季里的常客雾霾重返北京，只能闷在家里。周日晚上雾霾依然很重，我和老婆又要回学校准备第二天上班，心情格外沉重，还好有满恒记的牛羊肉聊以慰藉。</p><p>周一上班之后，听到两个消息：一个是一位算法大牛跳来鄙司了，不知道给了多少的 package，估计至少 100 吧；另一个是新来的小伙儿要和 HR 重新谈薪，来实习几天觉得工作强度有点大，之前要少了。两相对比，越发感觉没有见识，盲目追求学历的悲哀。</p><p>想读博士，至少先明白两个道理：一，博士毕业想发挥特长，主流的道路是留校当教授；二，博士是追求上限的，上限很高的同时不排除下限也很低。</p><p>最后一个月，多努力，前事不忘后事之师，希望五年后别再为这五年的所作所为悔不当初了。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
+2018 年就要过去了。
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="感慨" scheme="http://tommyjiang.github.io/tags/%E6%84%9F%E6%85%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PRML 笔记 2：2. Probability Distributions</title>
+    <link href="http://tommyjiang.github.io/2018/2018-12-02-PRML-notes-2/"/>
+    <id>http://tommyjiang.github.io/2018/2018-12-02-PRML-notes-2/</id>
+    <published>2018-12-02T13:00:00.000Z</published>
+    <updated>2018-12-02T09:58:44.200Z</updated>
+    
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>PRML 笔记 2。</div><a id="more"></a><h1 id="2-1-二值变量"><a href="#2-1-二值变量" class="headerlink" title="2.1 二值变量"></a>2.1 二值变量</h1><ul><li>二项分布及其期望、方差</li><li>$\beta$ 分布及其期望、方差</li></ul><h1 id="2-2-多值变量"><a href="#2-2-多值变量" class="headerlink" title="2.2 多值变量"></a>2.2 多值变量</h1><ul><li>狄利克雷分布</li></ul><h1 id="2-3-高斯分布"><a href="#2-3-高斯分布" class="headerlink" title="2.3 高斯分布"></a>2.3 高斯分布</h1><h1 id="2-4-指数族"><a href="#2-4-指数族" class="headerlink" title="2.4 指数族"></a>2.4 指数族</h1><h1 id="2-5-非参数估计"><a href="#2-5-非参数估计" class="headerlink" title="2.5 非参数估计"></a>2.5 非参数估计</h1><h1 id="本章数学家"><a href="#本章数学家" class="headerlink" title="本章数学家"></a>本章数学家</h1><ul><li>数学家(1)：雅各布·伯努利(P69)</li><li>数学家(2)：狄利克雷(P77)</li><li>数学家(3)：高斯(P79)</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
+PRML 笔记 2。
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="Geek" scheme="http://tommyjiang.github.io/categories/Geek/"/>
+    
+    
+      <category term="Machine Learning" scheme="http://tommyjiang.github.io/tags/Machine-Learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PRML 笔记 1：1. Introduction</title>
+    <link href="http://tommyjiang.github.io/2018/2018-12-01-PRML-notes-1/"/>
+    <id>http://tommyjiang.github.io/2018/2018-12-01-PRML-notes-1/</id>
+    <published>2018-12-01T13:00:00.000Z</published>
+    <updated>2018-12-08T12:18:50.488Z</updated>
+    
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>PRML 笔记 1。</div><a id="more"></a><h1 id="1-0-Introduction"><a href="#1-0-Introduction" class="headerlink" title="1.0 Introduction"></a>1.0 Introduction</h1><ul><li>机器学习输入、输出：x（图片），y（vector）</li><li>机器学习模型：y(x)，x 到 y 的映射</li><li>训练集、测试集、泛化能力（核心）</li><li>输入预处理（特征提取），测试时也需要对数据进行同样的处理</li><li>有监督学习（分类、回归）</li><li>无监督学习（聚类、密度估计）</li><li>强化学习</li></ul><h1 id="1-1-案例：多项式拟合"><a href="#1-1-案例：多项式拟合" class="headerlink" title="1.1 案例：多项式拟合"></a>1.1 案例：多项式拟合</h1><ul><li>Error(loss) function：MSE</li><li>测试 function：RMSE</li><li>训练集和测试集 loss 的关系，过拟合概念</li><li>如何避免过拟合（增大数据集、加入正则项）</li></ul><h1 id="1-2-概率论"><a href="#1-2-概率论" class="headerlink" title="1.2 概率论"></a>1.2 概率论</h1><ul><li>全概率公式</li><li>贝叶斯公式</li><li>先验概率、观测、后验概率</li><li>概率密度函数、累积分布函数</li><li>期望、条件期望、方差、协方差</li><li>频率学派、贝叶斯学派（概率是确定的，还是观测值是确定的；本书倾向贝叶斯学派）</li><li>高斯分布、极大似然估计（期望、方差）、方差的低估</li><li>贝叶斯估计、最大后验估计</li></ul><h1 id="1-3-模型选择"><a href="#1-3-模型选择" class="headerlink" title="1.3 模型选择"></a>1.3 模型选择</h1><ul><li>训练集、验证集、测试集</li><li>交叉验证</li></ul><h1 id="1-4-维数灾"><a href="#1-4-维数灾" class="headerlink" title="1.4 维数灾"></a>1.4 维数灾</h1><h1 id="1-5-决策论"><a href="#1-5-决策论" class="headerlink" title="1.5 决策论"></a>1.5 决策论</h1><ul><li>最小化错误率</li><li>最小化期望损失：损失函数(cost/loss function)、效用函数</li><li>拒绝域</li><li>推断和决策</li><li>联合分布：生成模型</li><li>边缘分布，后验概率：判别模型</li><li>直接输出 label</li><li>后验概率的用途（最小化风险、拒绝选项、补偿先验概率、模型融合）</li></ul><h1 id="1-6-信息论"><a href="#1-6-信息论" class="headerlink" title="1.6 信息论"></a>1.6 信息论</h1><ul><li>最大熵分布（离散：均匀分布、连续：高斯分布）</li><li>KL 散度：表征拟合分布 q(x) 和真实分布 p(x) 之间的差异<script type="math/tex; mode=display">KL(p \vert \vert q) = -\int p(x) \mathrm{ln} \frac{q(x)}{p(x)} \mathop{}\!\mathrm{d}x</script></li><li>KL 散度的不对称性，取 0 条件(p(x) = q(x))</li><li>互信息</li></ul><h1 id="本章数学家"><a href="#本章数学家" class="headerlink" title="本章数学家"></a>本章数学家</h1><ul><li>数学家(1)：贝叶斯(P21)</li><li>数学家(2)：拉普拉斯(P27)</li><li>数学家(3)：玻尔兹曼(P53)</li><li>数学家(4)：香农(P55)</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
+PRML 笔记 1。
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="Geek" scheme="http://tommyjiang.github.io/categories/Geek/"/>
+    
+    
+      <category term="Machine Learning" scheme="http://tommyjiang.github.io/tags/Machine-Learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PRML 开源</title>
+    <link href="http://tommyjiang.github.io/2018/2018-11-28-PRML-open-source/"/>
+    <id>http://tommyjiang.github.io/2018/2018-11-28-PRML-open-source/</id>
+    <published>2018-11-28T14:00:00.000Z</published>
+    <updated>2018-12-02T08:53:36.580Z</updated>
+    
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>三大圣经之一都开源了。</div><a id="more"></a><p>在去年写的<a href="/2017/2017-07-15-machine-learning/" title="这篇博文">这篇博文</a>里，曾经介绍过机器学习三大圣经：PRML，ESL 和 MLAPP。最近，PRML 作者，微软剑桥研究院实验室负责人 Christopher Bishop 开源了他的经典著作——PRML，可以到<a href="http://link.zhihu.com/?target=https%3A//www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf" target="_blank" rel="noopener">这里</a>下载。</p><p>在这本书的前面，Bishop 写了这本书奉献给妻子和孩子，还放了他们一家四口 2006 年 3 月到土耳其安卡拉看日全食的照片。最近也在看菠萝的书《癌症·新知》，书的后记提到，本来想做老师的他，通过写科普书也获得了很多成就感。以后我也要写一本经典的书，也要在前面附上一家人的照片，为了实现这个目标，努力！</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
+三大圣经之一都开源了。
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="Geek" scheme="http://tommyjiang.github.io/categories/Geek/"/>
+    
+    
+      <category term="Machine Learning" scheme="http://tommyjiang.github.io/tags/Machine-Learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>主动学习资料</title>
+    <link href="http://tommyjiang.github.io/2018/2018-11-22-active-learning-materials/"/>
+    <id>http://tommyjiang.github.io/2018/2018-11-22-active-learning-materials/</id>
+    <published>2018-11-22T11:00:00.000Z</published>
+    <updated>2018-11-30T00:27:42.952Z</updated>
+    
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>主动学习资料汇总</div><a id="more"></a><!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc --><p><strong>目录</strong></p><ul><li><a href="#paper">Paper</a><ul><li><a href="#classification">Classification</a></li></ul></li><li><a href="#博客">博客</a></li><li><a href="#讲义">讲义</a></li></ul><!-- markdown-toc end --><h1 id="Paper"><a href="#Paper" class="headerlink" title="Paper"></a>Paper</h1><h2 id="Classification"><a href="#Classification" class="headerlink" title="Classification"></a>Classification</h2><ul><li><a href="https://arxiv.org/abs/1701.03551" target="_blank" rel="noopener">Cost-Effective Active Learning for Deep Image Classification</a></li><li><a href="https://arxiv.org/abs/1708.00489v2" target="_blank" rel="noopener">Active Learning for Convolutional Neural Networks: A Core-set Approach</a></li><li><a href="https://arxiv.org/abs/1703.02910" target="_blank" rel="noopener">Deep Bayesian Active Learning with Image Data</a><h2 id="Training"><a href="#Training" class="headerlink" title="Training"></a>Training</h2></li><li><a href="https://arxiv.org/abs/1811.09347" target="_blank" rel="noopener">Revisiting Pre-training: An Efficient Training Method for Image Classification</a></li></ul><h1 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h1><ul><li><a href="https://www.datacamp.com/community/tutorials/active-learning" target="_blank" rel="noopener">Active Learning: Curious AI Algorithms by <strong>DataCamp</strong></a></li><li><a href="https://becominghuman.ai/accelerate-machine-learning-with-active-learning-96cea4b72fdb" target="_blank" rel="noopener">Accelerate Machine Learning with Active Learning by <strong>Matthew Slotkin@Medium</strong></a></li><li><a href="https://towardsdatascience.com/active-learning-tutorial-57c3398e34d" target="_blank" rel="noopener">Active Learning Tutorial by <strong>Towards Data Science</strong></a></li></ul><h1 id="讲义"><a href="#讲义" class="headerlink" title="讲义"></a>讲义</h1><ul><li><a href="http://hunch.net/~active_learning/active_learning_icml09.pdf" target="_blank" rel="noopener">A tutorial on active learning by <strong>Dasgupta@ICML 2009</strong></a></li><li><a href="http://ice.dlut.edu.cn/valse2018/ppt/10-huangsj-AL-VALSE18.pdf" target="_blank" rel="noopener">Recent Progress on Active Learning by <strong>Sheng-Jun Huang@VALSE 2018</strong></a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
+主动学习资料汇总
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="工作" scheme="http://tommyjiang.github.io/categories/%E5%B7%A5%E4%BD%9C/"/>
+    
+    
+      <category term="CV" scheme="http://tommyjiang.github.io/tags/CV/"/>
+    
+      <category term="DL" scheme="http://tommyjiang.github.io/tags/DL/"/>
+    
+      <category term="Active Learning" scheme="http://tommyjiang.github.io/tags/Active-Learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Ubuntu 误删 Python 恢复记录</title>
+    <link href="http://tommyjiang.github.io/2018/2018-11-21-ubuntu-delete-python/"/>
+    <id>http://tommyjiang.github.io/2018/2018-11-21-ubuntu-delete-python/</id>
+    <published>2018-11-21T03:00:00.000Z</published>
+    <updated>2018-11-22T15:38:13.327Z</updated>
+    
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>不作死就不会死</div><a id="more"></a><p>上午想找个 Kaggle 比赛记录的方法，最后选了 jupyter notebook，自己笔记本里，python 版本装得太多，都乱套了，一不小心卸载了系统自带的 Python，重启之后桌面都消失了，键盘也没法用了。</p><p>上网查了解决方案，都是需要先进恢复模式，开机需要按 Shift，由于键盘没法用，这个方法也失效了。查到了 Ubuntu 官网写的，先用 Live USB，也就是 Ubuntu 的安装盘，试用 Ubuntu，然后再进命令行，先 mount 再利用 chroot 切换到电脑硬盘的 Ubuntu，然后执行 <code>sudo apt install ubuntu-minimal ubuntu-standard ubuntu-desktop</code>，关于 chroot 的用法可以参考 archlinux 的 <a href="https://wiki.archlinux.org/index.php/Chroot" target="_blank" rel="noopener">wiki</a></p><p>这里还有个坑，就是在 chroot 之前，需要先连网，然后将配置文件拷过去，否则 chroot 之后 apt install 会提示无法联网，具体命令为：<code>cp /etc/resolv.conf etc/resolv.conf</code>。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
+不作死就不会死
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="Geek" scheme="http://tommyjiang.github.io/categories/Geek/"/>
+    
+    
+      <category term="Ubuntu" scheme="http://tommyjiang.github.io/tags/Ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Paper queue</title>
+    <link href="http://tommyjiang.github.io/2018/2018-11-13-paper-queue/"/>
+    <id>http://tommyjiang.github.io/2018/2018-11-13-paper-queue/</id>
+    <published>2018-11-13T11:00:00.000Z</published>
+    <updated>2018-12-02T10:56:04.588Z</updated>
+    
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>论文队列</div><a id="more"></a><!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc --><p><strong>目录</strong></p><ul><li><a href="#paper-queue">Paper queue</a></li><li><a href="#object-detection">Object Detection</a><ul><li><a href="#framework">Framework</a><ul><li><a href="#refinedet">RefineDet</a></li><li><a href="#yolo-lite">YOLO-LITE</a></li></ul></li></ul></li><li><a href="#tricks">Tricks</a><ul><li><a href="#drop">Drop</a><ul><li><a href="#dropblock">DropBlock</a></li></ul></li></ul></li><li><a href="#active-learning">Active Learning</a><ul><li><a href="#general">General</a><ul><li><a href="#large-scale-visual-active-learning-with-deep-probabilistic-ensembles">Large-Scale Visual Active Learning with Deep Probabilistic Ensembles</a></li></ul></li><li><a href="#classification">Classification</a><ul><li><a href="#the-power-of-ensembles-for-active-learning-in-image-classification">The Power of Ensembles for Active Learning in Image Classification</a></li></ul></li><li><a href="#segmentation">Segmentation</a><ul><li><a href="#cereals">CEREALS</a></li></ul></li></ul></li><li><a href="#kaggle">Kaggle</a><ul><li><a href="#human-protein">Human protein</a><ul><li><a href="#human-level-protein-localization-with-cnn">Human-level protein localization with CNN</a></li></ul></li></ul></li></ul><!-- markdown-toc end --><h1 id="Paper-queue"><a href="#Paper-queue" class="headerlink" title="Paper queue"></a>Paper queue</h1><ul><li>Data<ul><li>Data VS Performance<ul><li><a href="https://arxiv.org/abs/1707.02968" target="_blank" rel="noopener">Revisiting Unreasonable Effectiveness of Data in Deep Learning Era</a></li></ul></li></ul></li><li>Object Detection<ul><li><a href="https://arxiv.org/abs/1808.07993" target="_blank" rel="noopener">Deep Feature Pyramid Reconfiguration for Object Detection</a> + 2018.11.14</li><li>Framework<ul><li><a href="https://arxiv.org/abs/1711.06897" target="_blank" rel="noopener">RefineDet</a> + 2018.11.14 / - 2018.11.16</li><li><a href="https://arxiv.org/abs/1811.05588" target="_blank" rel="noopener">YOLO-LITE</a> + 2018.11.15 / - 2018.11.15</li><li><a href="https://arxiv.org/abs/1807.11590" target="_blank" rel="noopener">Acquisition of Localization Confidence</a> + 2018.11.22 / </li></ul></li><li>Trick<ul><li><a href="https://arxiv.org/abs/1810.04002" target="_blank" rel="noopener">Decoupled Classification Refinement</a> + 2018.11.14 / - 2018.11.19</li></ul></li></ul></li><li>Layer<ul><li><a href="https://arxiv.org/abs/1703.06211" target="_blank" rel="noopener">Deformable Convolutional Networks</a> + 2018.11.14 / - 2018.11.17</li><li><a href="https://arxiv.org/abs/1811.11168" target="_blank" rel="noopener">Deformable ConvNets v2</a> + 2018.11.30 / - 2018.12.2</li><li><a href="https://arxiv.org/abs/1803.07066" target="_blank" rel="noopener">LRF</a> + 2018.11.14 / - 2018.11.17</li></ul></li><li>Tricks<ul><li>Drop<ul><li><a href="https://arxiv.org/abs/1810.12890" target="_blank" rel="noopener">DropBlock</a> + 2018.11.14 / - 2018.11.16</li></ul></li></ul></li><li>Kaggle<ul><li>Human protein<ul><li>[Human-level protein localization with CNN](<a href="https://openreview.net/forum?id=ryl5khRcKm**" target="_blank" rel="noopener">https://openreview.net/forum?id=ryl5khRcKm**</a> + 2018.11.06 / - 2018.11.14</li></ul></li></ul></li><li>Automobile</li></ul><h1 id="Data"><a href="#Data" class="headerlink" title="Data"></a>Data</h1><h2 id="Data-VS-Performance"><a href="#Data-VS-Performance" class="headerlink" title="Data VS Performance"></a>Data VS Performance</h2><h3 id="Revisiting-Unreasonable-Effectiveness-of-Data-in-Deep-Learning-Era"><a href="#Revisiting-Unreasonable-Effectiveness-of-Data-in-Deep-Learning-Era" class="headerlink" title="Revisiting Unreasonable Effectiveness of Data in Deep Learning Era"></a>Revisiting Unreasonable Effectiveness of Data in Deep Learning Era</h3><p>核心结论：数据增长与模型性能增长基本呈<strong>对数线性</strong>关系，即数据增加一个数量级，模型性能提高的点数相同。从 ImageNet 1M 数据集扩展到 JFT-300M 数据集，4 epoch 需要在 50 块 K-80 GPU 上训练 2 个月。</p><h1 id="Object-Detection"><a href="#Object-Detection" class="headerlink" title="Object Detection"></a>Object Detection</h1><h2 id="Framework"><a href="#Framework" class="headerlink" title="Framework"></a>Framework</h2><h3 id="RefineDet"><a href="#RefineDet" class="headerlink" title="RefineDet"></a>RefineDet</h3><p>CVPR 2018 paper，检测网络结构，主体包括 ARM(Anchor Refinement Module) 和 ODM(Object Detection Module)，利用 TCB(Transfer Connection Block)连接两者，将 ARM 的 feature 传给 ODM。</p><p>ARM 采用 VGG/ResNet，预测分类和回归时采用 3*3 的滑动窗口，从 stride 8、16、32、64 的 feature map 分别设置 scale 为 4 倍 stride，ratio 为 0.5/1/2 的 anchor。ODM 类似 SSD，TCB 借鉴 FPN 思想，融合高层 feature map 信息。训练和测试时，ARM 都会舍弃分数低于阈值的 anchor box。</p><p>结果：RefineDet320，VGG 16，40.3 FPS。RefineDet512+，ResNet-101，41.8 mAP on COCO。</p><h3 id="YOLO-LITE"><a href="#YOLO-LITE" class="headerlink" title="YOLO-LITE"></a>YOLO-LITE</h3><p>关键指标：</p><ul><li>定位：无 GPU 设备</li><li>个人电脑 21 FPS，网站 7 FPS</li><li>7 层，482 MFLOPS 计算量</li><li>mAP: PASCAL VOC 33.81%，COCO 12.26%</li></ul><p>数据集数量：</p><ul><li>PASCAL VOC 2007+2012 训练集：5011(20 类)</li><li>COCO 2014 训练集：40775(80 类**</li></ul><p>其他小网络对比：</p><ul><li>Tiny-YOLOv2 @ 23.7% mAP, 2.4 FPS</li><li>SSD Mobilenet V1 @ 21.0% mAP, 5.8 FPS</li><li>YOLO-LITE @ 12.3% mAP, 21 FPS</li></ul><h3 id="Acquisition-of-Localization-Confidence-for-Accurate-Object-Detection"><a href="#Acquisition-of-Localization-Confidence-for-Accurate-Object-Detection" class="headerlink" title="Acquisition of Localization Confidence for Accurate Object Detection"></a>Acquisition of Localization Confidence for Accurate Object Detection</h3><ul><li><h2 id="Trick"><a href="#Trick" class="headerlink" title="Trick"></a>Trick</h2><h3 id="Decoupled-Classification-Refinement-DCR"><a href="#Decoupled-Classification-Refinement-DCR" class="headerlink" title="Decoupled Classification Refinement(DCR)"></a>Decoupled Classification Refinement(DCR)</h3><p>ECCV 2018 paper，思想和 alignment 网络很像，单独训练一个网络用于 Detection 网络结果的分类，训练时采用 Hard Positive 杀误检，测试时所有结果均会经过该 refinement 网络。为减少计算量，提出了采用 RoIpooling 之后 feature 作为网络输入的方法。</p></li></ul><h1 id="Layer"><a href="#Layer" class="headerlink" title="Layer"></a>Layer</h1><h2 id="Convolution-variation"><a href="#Convolution-variation" class="headerlink" title="Convolution variation"></a>Convolution variation</h2><h3 id="Deformable-Convolutional-Networks"><a href="#Deformable-Convolutional-Networks" class="headerlink" title="Deformable Convolutional Networks"></a>Deformable Convolutional Networks</h3><p>ICCV 2017 paper，学习卷积和 RoI pooling 时，点坐标的 offset，解决卷积和 RoI pooling 无法自适应地根据物体调整位置的问题。</p><ul><li>卷积层：与普通卷积并列，3*3 卷积，2N channel 的 feature map(N 为卷积核)，输出 feature map 上 N 个点的 x/y offset。</li><li>RoI pooling：FC 层，输出归一化的 offset，需要乘 feature map 尺寸和 gamma。</li><li>PS RoI pooling：全卷积，输出 2(C+1) k^2 channel 的 feature map，即对每一类和每一个 position，都输出一个 offset。</li></ul><p>结果：COCO，R-FCN mAP 34.5 -&gt; DCN mAP 37.1</p><h3 id="Deformable-ConvNets-v2"><a href="#Deformable-ConvNets-v2" class="headerlink" title="Deformable ConvNets v2"></a>Deformable ConvNets v2</h3><p>DCN v1 提出两个层：Deformable Convolution 和 Deformable RoIpooling。</p><p>本文改进：</p><ul><li>网络中更多层使用 Deformable Convolution。</li><li>Deformable Convolution 中加入学习权重。</li></ul><h2 id="Pooling-variation"><a href="#Pooling-variation" class="headerlink" title="Pooling variation"></a>Pooling variation</h2><h3 id="Learning-Region-Features-for-Object-Detection"><a href="#Learning-Region-Features-for-Object-Detection" class="headerlink" title="Learning Region Features for Object Detection"></a>Learning Region Features for Object Detection</h3><p>ECCV 2018 paper，学习 pooling 层的参数。</p><ul><li>RoI pooling<ul><li>Support Region：RoI</li><li>Weight：1/R_{bk}</li></ul></li><li>Aligned RoI pooling<ul><li>Support Region：RoI</li><li>Weight：双线性插值，只和临近的四个 pixel 有关</li></ul></li><li>Deformable RoI pooling<ul><li>Support Region：整张图</li><li>Weight：双线性插值</li></ul></li></ul><p>图片坐标 p 编码为 2C 维，RoI 编码为 4C 维，之后做线性变换，变换矩阵可学习。图像特征通过 1*1 的卷积计算。图片坐标如果全部计算，计算量太大，因此采用稀疏采样的方法，每 \sqrt(H * W / 196) 个 pixel 进行一次采样。</p><p>结果：ResNet 50 Faster RCNN，COCO，mAP 34.1</p><h1 id="Tricks"><a href="#Tricks" class="headerlink" title="Tricks"></a>Tricks</h1><h2 id="Drop"><a href="#Drop" class="headerlink" title="Drop"></a>Drop</h2><h3 id="DropBlock"><a href="#DropBlock" class="headerlink" title="DropBlock"></a>DropBlock</h3><p>新的正则化方法，DropBlock。</p><p>文中指出，Dropout 适合 FC 层，但不适合卷积层，因为卷积层的 feature 是空间相关的。</p><p>参数包括两个，block_size 和 gamma，gamma 是用 keep probability、feat size、block size 计算得到的。训练开始时，keep prob 取 1，然后逐渐减小到 0.9。</p><p>结果：ImageNet 上，ResNet 50，top 1 76.51 -&gt; 78.35，COCO 上，RetinaNet，mAP 36.5 -&gt; 38.2。</p><h1 id="Kaggle"><a href="#Kaggle" class="headerlink" title="Kaggle"></a>Kaggle</h1><h2 id="Human-protein"><a href="#Human-protein" class="headerlink" title="Human protein"></a>Human protein</h2><h3 id="Human-level-protein-localization-with-CNN"><a href="#Human-level-protein-localization-with-CNN" class="headerlink" title="Human-level protein localization with CNN"></a>Human-level protein localization with CNN</h3><p>投 ICLR 2019 的一篇文章，核心思想是从不同的 feature map 做 GAE(Global Average Pooling)，concat 之后再过 FC 和 sigmoid，F1 score 能到 0.8，没有太多新意，pass。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
+论文队列
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="工作" scheme="http://tommyjiang.github.io/categories/%E5%B7%A5%E4%BD%9C/"/>
+    
+    
+      <category term="CV" scheme="http://tommyjiang.github.io/tags/CV/"/>
+    
+      <category term="DL" scheme="http://tommyjiang.github.io/tags/DL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2018 双十一总结</title>
+    <link href="http://tommyjiang.github.io/2018/2018-11-11-2018-double-eleven/"/>
+    <id>http://tommyjiang.github.io/2018/2018-11-11-2018-double-eleven/</id>
+    <published>2018-11-11T15:00:00.000Z</published>
+    <updated>2018-11-22T15:38:13.326Z</updated>
+    
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>又是一年一度的双十一</div><a id="more"></a><p>双十一总结。</p><h1 id="自己购物"><a href="#自己购物" class="headerlink" title="自己购物"></a>自己购物</h1><h2 id="钢笔"><a href="#钢笔" class="headerlink" title="钢笔"></a>钢笔</h2><p>今年的主力是百利金的 M200 牛奶咖啡。本来生日的时候就想下单，这次双十一满 400 减 50，再加上店铺优惠券减 30，一共省了 180，遂拔草，静待喜提。之前想买的小米机器人，因为买了这支笔，只能割爱了，以后靠我的人工智能负责家里的卫生了。</p><h2 id="牙齿护理"><a href="#牙齿护理" class="headerlink" title="牙齿护理"></a>牙齿护理</h2><p>今年双十一的另一大主题是牙齿护理装备，包括松下冲牙器、Gum 牙线、青蛙软毛小头牙刷和小鹿妈妈牙线棒。从小我的牙就不好，9 月去复查牙周，又花了将近 2000 做龈下刮治。这下长记性了，不能再花这冤枉钱了，平时就要注意牙齿的清洁和护理。等冲牙器到了试试效果怎么样。</p><h2 id="书"><a href="#书" class="headerlink" title="书"></a>书</h2><p>今年还送了大宝一本书，是三联在公众号推送的西南联大英文课，希望能给大宝提供讲课和辅导的素材。</p><h1 id="大宝购物"><a href="#大宝购物" class="headerlink" title="大宝购物"></a>大宝购物</h1><p>待补充</p><h1 id="双十一生活"><a href="#双十一生活" class="headerlink" title="双十一生活"></a>双十一生活</h1><p>今年双十一是周日，难得休息一天和大宝在家。上午去家乐福买菜准备中午做饭，一共三个菜，孜然羊肉、鱼香肉丝、辣炒木耳菜。一顿做了两顿的量，准备晚上继续吃。中午米饭放在电饭锅里，忘了取消保温模式，一直插着电，等晚上吃的时候，饭都硬了，吃完之后我俩都不太舒服，吸取教训，下次把插头先拔了。</p><p>中午的美食：</p><p><img src="/images/2018/2018-11-11-双十一做饭.jpeg" alt=""></p><p>晚上把购物车清空了，给淘宝贡献了 5000 的销售额，晚上出发晚，不想挤地铁，选了 80 换 693 的公交路线，没想到 80 路的司机太勇猛，坐车坐得很不舒服，下次还是晚上早点出来吃个饭然后回来，新开辟的公交路线以失败告终。</p><p>11.18 补充：时隔一周，和大宝再次坐 80 路，俩人还是非常不舒服，以后不坐这个破玩意儿了，还是坐地铁吧。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
+又是一年一度的双十一
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="购物" scheme="http://tommyjiang.github.io/tags/%E8%B4%AD%E7%89%A9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>吴军 态度 摘记</title>
+    <link href="http://tommyjiang.github.io/2018/2018-11-10-attitude/"/>
+    <id>http://tommyjiang.github.io/2018/2018-11-10-attitude/</id>
+    <published>2018-11-10T08:00:00.000Z</published>
+    <updated>2018-11-22T15:38:13.325Z</updated>
+    
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>吴军老师的书都还不错。</div><a id="more"></a><h1 id="态度-吴军"><a href="#态度-吴军" class="headerlink" title="态度 吴军"></a>态度 吴军</h1><p>教育首先是关怀备至地、深思熟虑地、小心翼翼地去触及年轻的心灵。</p><p><a id="org4b8c6c8"></a></p><h2 id="1-乐观的人生态度"><a href="#1-乐观的人生态度" class="headerlink" title="1. 乐观的人生态度"></a>1. 乐观的人生态度</h2><ul><li>美国人说，拼命读书能否让将来的生活更好，还是一个未知数，但是快快乐乐地生活18年，这是能够看到的，自己也能够把握；人生能有多少个18年，与其愁眉苦脸地度过少年时光，不如先快快乐乐地过18年。</li><li>人如果不能过得快乐，有再多的钱也没有半点儿意义。</li><li>有理想并努力实现自己的愿望。</li></ul><p><a id="org9be5346"></a></p><h2 id="3-抵制诱惑"><a href="#3-抵制诱惑" class="headerlink" title="3. 抵制诱惑"></a>3. 抵制诱惑</h2><ul><li>当人们对一种简单而强烈的快感上瘾后，对于其他事情就失去了兴趣，这就如同吸毒带来的快感一样。</li><li>抵御诱惑最根本的方法是有一个长远的大目标。</li><li>做一些有成就感、有回报的事情。</li></ul><p><a id="org07e68b5"></a></p><h2 id="4-成功是成功之母"><a href="#4-成功是成功之母" class="headerlink" title="4. 成功是成功之母"></a>4. 成功是成功之母</h2><ul><li>你从四五岁开始就能听完整的严肃音乐会，那个年龄的孩子大多无法安安静静地在音乐厅里坐上两个小时。后来每当旧金山有好的音乐会、芭蕾舞和歌剧演出，你都有极大的兴趣去听去看，去现场体会。随着年龄的增加，你看了世界上很多大师的表演，你的鉴别能力也在提升。</li><li>人只有成功过一次，才更容易成功第二次、第三次，因此失败不是成功之母，成功才是成功之母。</li></ul><p><a id="orgbe689ca"></a></p><h2 id="5-最好是更好的敌人"><a href="#5-最好是更好的敌人" class="headerlink" title="5. 最好是更好的敌人"></a>5. 最好是更好的敌人</h2><ul><li>很多时候，一些人无所作为不是因为不想做事，而是一根筋地追求最好，最后什么也得不到。</li><li>做事情不怕慢，就怕停。</li></ul><p><a id="orgf369a53"></a></p><h2 id="6-好习惯成就一生"><a href="#6-好习惯成就一生" class="headerlink" title="6. 好习惯成就一生"></a>6. 好习惯成就一生</h2><ul><li>撒切尔<ul><li>注意你的想法，因为它能决定你的言辞和行动。</li><li>注意你的言辞和行动，因为它能主导你的行为。</li><li>注意你的行为，因为它能变成你的习惯。</li><li>注意你的习惯，因为它能塑造你的性格。</li><li>注意你的性格，因为它能决定你的命运。</li></ul></li></ul><p><a id="org52c6b97"></a></p><h2 id="7-格局要大"><a href="#7-格局要大" class="headerlink" title="7. 格局要大"></a>7. 格局要大</h2><ul><li>上次你们副校长埃里克·格雷姆松在我们家吃饭时对你说，MIT还在世的本科校友中，有大约1/3是大公司的高管和创始人，也就是说，他们并不是那些满足于赚小钱的人。</li></ul><p><a id="orgdb83ea7"></a></p><h2 id="8-境界要高"><a href="#8-境界要高" class="headerlink" title="8. 境界要高"></a>8. 境界要高</h2><ul><li>人一旦习惯获得短期利益，境界就高不起来了，可能永远不会追求更高的境界了。</li><li>人的境界高一点儿，多关注长远，少盯着眼前，才能走得更远。</li></ul><p><a id="org003c371"></a></p><h2 id="10-教育改变命运"><a href="#10-教育改变命运" class="headerlink" title="10. 教育改变命运"></a>10. 教育改变命运</h2><ul><li>教育能让人有见识</li></ul><p><a id="orgfd916ed"></a></p><h2 id="12-做个好人"><a href="#12-做个好人" class="headerlink" title="12. 做个好人"></a>12. 做个好人</h2><ul><li>谷歌非常独特的一点就是不作恶。这对于一家以营利为目的的公司来讲，是非常难得的。</li><li>It’s nice to be great, yet it’s great to be nice.</li></ul><p><a id="org4b9199d"></a></p><h2 id="18-第一次投资的建议"><a href="#18-第一次投资的建议" class="headerlink" title="18. 第一次投资的建议"></a>18. 第一次投资的建议</h2><ul><li>永远不要相信自己能够打败市场</li><li>要对市场有信心</li><li>定投指数基金 ETF</li></ul><p><a id="orgb0f6959"></a></p><h2 id="19-投资红线"><a href="#19-投资红线" class="headerlink" title="19. 投资红线"></a>19. 投资红线</h2><ul><li>凡事说干就干是一个好习惯</li><li>做空股票</li><li>杠杆投资</li><li>不要眼红别人抓住了投机机会</li></ul><p><a id="org6a990ae"></a></p><h2 id="20-金钱观"><a href="#20-金钱观" class="headerlink" title="20. 金钱观"></a>20. 金钱观</h2><ul><li>上大学的意义：能做一些对社会比较有影响力的事，而不是以挣钱多少来衡量。换句话说，在美国，衡量精英的标准不是钱和学历，而是影响力。对于温饱不是问题的人来说，在年轻的时候能够懂得把钱看得淡一点儿，是有必要的。</li><li>满足于做一个电脑工程师、华尔街的股票交易员，或者一个家庭医生，挣的钱或许不少，但是从社会影响力来讲，依然没有摆脱穷人的心态。</li><li>如果一个人能够在能力水平上晋升一级，不仅贡献多10倍，所做的事情的影响力，包括自己的收入也常常多10倍。做5件5级的事，花的时间可能比做一件三级的事要多，但是收益和影响只有后者的5％。</li></ul><p><a id="org799b002"></a></p><h2 id="21-交友观"><a href="#21-交友观" class="headerlink" title="21. 交友观"></a>21. 交友观</h2><ul><li>你在工作之后会发现，有些同事即使共事时间很长，也不一定能深交。在工作中，更多是业务上的关系，难免有点儿功利。但是大学却不同，同学的功利心不会太强，彼此愿意相互照应，这是出于年轻人的善意和天然的交友欲望。</li><li>大学交朋友的另一个好处是，同一个班上的同学，不论家境和其他条件相差多大，到了一个班里学习，彼此就是平等的，或者相对平等。</li></ul><p><a id="orgf5ed320"></a></p><h2 id="22-爱情观"><a href="#22-爱情观" class="headerlink" title="22. 爱情观"></a>22. 爱情观</h2><ul><li>没有爱情的人是有缺陷的，没有经历真正爱情的人生也是不完整的。</li><li>唯一要注意的就是不要凡事太强势。据我观察，很多从名校毕业的人都有这个特点。</li></ul><p><a id="org1b6b793"></a></p><h2 id="25-有效沟通"><a href="#25-有效沟通" class="headerlink" title="25. 有效沟通"></a>25. 有效沟通</h2><ul><li>有效的沟通要以对方的确认为准</li><li>要以对方听得懂的话来沟通，切忌卖弄自己的知识，把简单的问题讲复杂了。</li><li>沟通要简洁，切中要害。</li><li>善辩不等于好的沟通，沟通的目的是让对方接受自己的想法，而非把对方驳得哑口无言。</li></ul><p><a id="org6a254a6"></a></p><h2 id="26-体面拒绝别人"><a href="#26-体面拒绝别人" class="headerlink" title="26. 体面拒绝别人"></a>26. 体面拒绝别人</h2><ul><li>帮忙四种 case<ul><li>能力不及，不能帮上忙，直接在第一时间委婉拒绝。</li><li>能帮上忙，但是却不想帮，因为自己的代价太大。如果不想帮，就不要勉强自己，但也要及早通知对方。</li><li>不论多困难都愿意帮，而且极有可能办成。这时，就答应对方，然后就全力去做。</li><li>虽然愿意帮，有可能帮上，也可能帮不上。这时，要将自己的实际情况告诉对方，千万不要轻易许诺，不要拍胸脯。</li></ul></li><li>切忌不要做的事<ul><li>为了显示自己的能耐吹牛皮。</li><li>对于做不到的事情，提出给人廉价的补偿。</li><li>帮忙别指望回报。</li><li>帮违反原则的忙。</li></ul></li></ul><p><a id="orgf4c767e"></a></p><h2 id="27-上帝喜欢笨人"><a href="#27-上帝喜欢笨人" class="headerlink" title="27. 上帝喜欢笨人"></a>27. 上帝喜欢笨人</h2><ul><li>笨人不懂得打擦边球，不懂得把利益最大化，因此凡事要留很大的余量。</li></ul><p><a id="org1425e8c"></a></p><h2 id="28-科学研究方法"><a href="#28-科学研究方法" class="headerlink" title="28. 科学研究方法"></a>28. 科学研究方法</h2><ul><li>提出质疑</li><li>小心求证</li><li>复杂问题分解为多个简单问题</li><li>合理地解释结果，上升到结论并推广</li></ul><p><a id="org3a89dbf"></a></p><h2 id="29-读名著"><a href="#29-读名著" class="headerlink" title="29. 读名著"></a>29. 读名著</h2><ul><li>读一部经典的介绍，或简写本和精彩章节的节选，慢慢了解了它的内容，再整篇研读。</li><li>先快速通读一遍，了解大致内容，在重要的地方做一个标记，回来再仔细读。</li></ul><p><a id="org54e7c21"></a></p><h2 id="31-学好数学"><a href="#31-学好数学" class="headerlink" title="31. 学好数学"></a>31. 学好数学</h2><ul><li>数学是所有自然科学的基础，甚至对经济学这样的人文学科也至关重要</li><li>数学能培养人的逻辑推理能力</li><li>学习数学可以提高你的阅读理解能力</li></ul><p><a id="orgfa36dab"></a></p><h2 id="32-大学学什么"><a href="#32-大学学什么" class="headerlink" title="32. 大学学什么"></a>32. 大学学什么</h2><ul><li>学习一生要用的科学常识和人文素养</li><li>学习做事情的方法，并掌握自我学习的能力</li><li>培养协作精神</li></ul><p><a id="orge508b46"></a></p><h2 id="33-选大学"><a href="#33-选大学" class="headerlink" title="33. 选大学"></a>33. 选大学</h2><ul><li>导师比学校重要</li><li>他不仅能让你在学术界迅速站稳脚跟，而且可能对你一辈子的职业发展都有帮助。</li><li>好的导师会告诉学生哪些事情不要做，这样就能给博士省很多时间。平庸的导师则要求学生按照自己的想法去做，这就抑制了学生的兴趣和创造力。</li><li>一个年轻的博士靠自己的努力被整个学术界认可，要花很长时间，甚至是不太可能的事情。</li></ul><p><a id="org0b2c978"></a></p><h2 id="34-科技论文技巧"><a href="#34-科技论文技巧" class="headerlink" title="34. 科技论文技巧"></a>34. 科技论文技巧</h2><ul><li>四部分必须写清楚<ul><li>问题的提出和前人的工作综述</li><li>自己的工作想得到什么样的结论</li><li>比较自己工作和相关工作的优劣</li><li>实验所用的数据，要尽可能地使用那些同行能够得到的。可比性对科学研究非常重要</li></ul></li></ul><p><a id="org71e468f"></a></p><h2 id="35-做事前不要过分算概率"><a href="#35-做事前不要过分算概率" class="headerlink" title="35. 做事前不要过分算概率"></a>35. 做事前不要过分算概率</h2><ul><li>在大学时，需要尝试自己喜欢做的事情。</li><li>只有很少的人每天所做的事情都是他们非常喜欢的工作。一个人是否会喜欢一件事，也是要尝试一下才知道的，特别是在年轻的时候。人的格局不能太小，不能完全用利益来衡量自己该做什么事情。</li><li>往前走，去闯/别灰心，继续闯/随缘，别后悔</li><li>年轻人在做任何决定之前应该做好准备，三思而行，但是对于想清楚的事情，做起来就不要犹豫。</li></ul><p><a id="org96fbe71"></a></p><h2 id="36-专业和业余的区别"><a href="#36-专业和业余的区别" class="headerlink" title="36. 专业和业余的区别"></a>36. 专业和业余的区别</h2><ul><li>专业特点<ul><li>发挥稳定</li><li>很好地控制自己的情绪</li><li>对小事处理认真</li><li>遵守流程规范</li><li>成体系的领域知识</li></ul></li></ul><p><a id="orga4971f6"></a></p><h2 id="38-服从是学会领导的第一步"><a href="#38-服从是学会领导的第一步" class="headerlink" title="38. 服从是学会领导的第一步"></a>38. 服从是学会领导的第一步</h2><ul><li>领导力从学会服从开始</li><li>当你没有接受过和执行过别人给你的命令时，很难理解被领导者的心理。</li><li>服从、合作、当好助手</li></ul><p><a id="orgaf7d62e"></a></p><h2 id="39-捡重要的先做"><a href="#39-捡重要的先做" class="headerlink" title="39. 捡重要的先做"></a>39. 捡重要的先做</h2><ul><li>事实上，你几乎没有时间做完所有需要完成的工作，因此只能捡最重要的先做。不要因为任务简单就开始干，遇到事情先要强迫自己慢三拍，想清楚任务的优先级，先去做那些特别重要的工作。这样才不会被大量简单重复的劳动占去全部时间，致使重要的工作没有时间做。公司里有一个词叫伪工作（pseudo work），就是指那些花了时间做却没有影响力的工作。</li></ul><p><a id="orge94a355"></a></p><h2 id="40-主动心态"><a href="#40-主动心态" class="headerlink" title="40. 主动心态"></a>40. 主动心态</h2><ul><li>所谓主动，就是指你有自己的想法和规划，并且随时和他进行沟通，得到他甚至其他同事的反馈。</li><li>公司里的工程师或者研究员通常不会像大学教授那样给你布置作业，并且给你细节指导，因为他们通常会忙于自己的工作。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
+吴军老师的书都还不错。
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="读书" scheme="http://tommyjiang.github.io/tags/%E8%AF%BB%E4%B9%A6/"/>
+    
+      <category term="教育" scheme="http://tommyjiang.github.io/tags/%E6%95%99%E8%82%B2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2018 程序员节</title>
+    <link href="http://tommyjiang.github.io/2018/2018-10-24-first-coders-day/"/>
+    <id>http://tommyjiang.github.io/2018/2018-10-24-first-coders-day/</id>
+    <published>2018-10-24T14:00:00.000Z</published>
+    <updated>2018-11-22T15:38:13.325Z</updated>
+    
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>第一个程序员节</div><a id="more"></a><p>2018.10.24，31 岁的我，度过了第一个程序员节。今天的北京艳阳高照，天暖宜人，有小阳春的感觉，也算应景。</p><p>我和代码的缘分，最早可以追溯到念小学的时候。当时家里买了一台裕兴学习机，可以用 Logo 语言画图，也能打游戏，可以改 BASIC 代码，不过当时我不会，都是我爸改的。</p><p>高中的时候，我也去听过一两节信息学竞赛课，其实就是计算机编程竞赛。当时教的语言是 PASCAL，老师号召买教材的时候，我还冲上去抢了一本，不到 20 块钱。由于初中没有任何基础，后来也就放弃了。</p><p>到了大学，开始正式接触编程。大一上的第一门课，就是五教5103的 C 语言，第一节课上，老师提到：<code>程序=数据结构+算法</code>，可惜当时我完全不理解这句话。有一节课老师教 printf 语句，要打印几行内容，临下课前还卖个关子，说其实有更简单的方法，后来我才知道所谓更简单的方法是用循环(loop)。大一小学期学了所谓的 C++，其实就等于把 C 的 struct 换成了 class，没学到什么 C++ 更深层的内容。 大二下，选修了 Java，同时也学 MATLAB，当时觉得 MATLAB 真好用，不用声明变量，可以直接做矩阵乘法，还有各种插值、优化算法，当然了，用的都是破解版。大二小学期学了 VHDL，被戏称为 Very hard language，主要用于控制 FPGA。</p><p>博士阶段，一年级下学期选修了数据结构，用 C 实现了马踏棋盘程序，用到了栈结构，当时没用贪心算法，试图暴力破解，发现完全不可能，才渐渐明白了<code>程序=数据结构+算法</code>这句话。博士用的最多的是仿真软件，包括 MATLAB/Simulink、PSCAD、PowerFactory，前两个分别对应 MATLAB 和 Fortran 语言，PF 最开始是自己的 DSL 语言，在大概 2014 年的时候开放了 API，可以通过 Python 调用。博士阶段我觉得做的最成功的一件事儿，就是用 Python 实现了 PF 和 MATLAB 的联合优化仿真，PF 负责计算电力系统动态，MATLAB/CPLEX 负责求解优化问题，Python 负责将两者连起来，当然了，即使实现了也没什么用，因为根本没人 care。</p><p>毕业到了电科院，和小哥在工作闲暇的时候用 Python 实现了数据爬虫和数据分析，还画了带区间交易量的 K 线图，虽然最后也没实际应用，但自己实现一个个功能的感觉还是很爽的，因为都是实实在在的，不像工作整天忽悠。当时不知道 Python 的 <code>pickle</code> 模块，每次读取结果都用 txt 格式，I/O 浪费了很多时间……</p><p>转行以后，主要用 Python 进行算法迭代和模型训练，C++ 写线上部署逻辑，虽然水平和周围 top 的同事比还有很大差距，但至少在不断积累了，希望以后能越来越好吧。</p>]]></content>
     
     <summary type="html">
     
@@ -28,19 +281,43 @@
     
     </summary>
     
-      <category term="生活" scheme="http://tommyjiang.coding.me/categories/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
-      <category term="Coding" scheme="http://tommyjiang.coding.me/tags/Coding/"/>
+      <category term="Coding" scheme="http://tommyjiang.github.io/tags/Coding/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Google Scholar 0 引用文章邮件提醒</title>
+    <link href="http://tommyjiang.github.io/2018/2018-09-21-google-scholar-alert/"/>
+    <id>http://tommyjiang.github.io/2018/2018-09-21-google-scholar-alert/</id>
+    <published>2018-09-21T09:00:00.000Z</published>
+    <updated>2018-11-15T14:46:51.075Z</updated>
+    
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>继续学术。</div><a id="more"></a><p>Google Scholar 是学术研究的有力助手，可以快速搜索文章，查看引用文献。有个很有用的功能是，当一篇文章有新引用的时候，自动发邮件提醒。</p><p>之前设置的提醒，都是针对已经有引用的文章，方法是直接点下面的 Cited by，再点左下角的 Create alert。今天想把最新的文章也设上提醒，发现没法直接点 Cited by，因为还没有引用，上 Stack Overflow 找到答案，记录如下。</p><ul><li>新建 Google Scholar Profile，已经有可跳过该步骤。</li><li>在自己的 Profile 页面，点中间的加号，选 Add articles。</li><li>搜索想要添加 alert 的文献，鼠标移到上面，右键，拷贝链接(Chrome 浏览器可用)。</li><li>将链接中，cluster= 后面的 20 位数字复制。</li><li>粘贴到 <code>https://scholar.google.com/scholar?oi=bibs&amp;hl=en&amp;cites=</code> 的最后面。</li><li>打开粘贴好的链接，可以 create alert 了。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
+继续学术。
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="工作" scheme="http://tommyjiang.github.io/categories/%E5%B7%A5%E4%BD%9C/"/>
+    
+    
+      <category term="Trick" scheme="http://tommyjiang.github.io/tags/Trick/"/>
     
   </entry>
   
   <entry>
     <title>2018.09 微言</title>
-    <link href="http://tommyjiang.coding.me/2018/2018-09-03-2018-09-weiyan/"/>
-    <id>http://tommyjiang.coding.me/2018/2018-09-03-2018-09-weiyan/</id>
-    <published>2018-09-26T14:55:01.861Z</published>
-    <updated>2018-09-26T14:55:01.861Z</updated>
+    <link href="http://tommyjiang.github.io/2018/2018-09-03-2018-09-weiyan/"/>
+    <id>http://tommyjiang.github.io/2018/2018-09-03-2018-09-weiyan/</id>
+    <published>2018-09-03T06:00:00.000Z</published>
+    <updated>2018-11-22T15:38:13.324Z</updated>
     
     <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>2018.09 微言</div><a id="more"></a><span class="label label-primary">北京</span><span class="label label-info">2018-09-03 16:14:04</span><span class="label label-default"><a href="https://www.douban.com/people/tommyjiang/status/2216765808/" target="_blank" rel="noopener" style="color:#FFFFFF">豆瓣</a></span><blockquote><p>今天 9 点多坐地铁，人比往常少了不少，车厢都不挤了。8 月来北京游玩的外地小孩儿回家了，北京本地小孩儿今天一大早开学了，希望每天都能像今天这样，上班省不少力气。</p></blockquote><span class="label label-primary">深度学习</span><span class="label label-info">2018-09-05 15:56:55</span><span class="label label-default"><a href="https://www.douban.com/people/tommyjiang/status/2216765808/" target="_blank" rel="noopener" style="color:#FFFFFF">豆瓣</a></span><blockquote><p>看 ShuffleNet V2 论文看得热泪盈眶，这才是清华学生该有的论文水平。只要有合适的环境和领路人，清华人不会让人失望的，“压力之下，毫无惧色”，怕就怕入错行和跟错人。</p></blockquote><span class="label label-primary">转行</span><span class="label label-info">2018-09-25 20:02:57</span><span class="label label-default"><a href="https://www.douban.com/people/tommyjiang/status/2254012240/" target="_blank" rel="noopener" style="color:#FFFFFF">豆瓣</a></span><blockquote><p>看知乎的一个回答，说到“在中国的公务员体制内，制约成员升职的有两大因素，平台和背景”，深以为然。之前在电网基层单位，又没有背景加成，不转行难道坐以待毙么。</p></blockquote>]]></content>
     
@@ -52,17 +329,17 @@
     
     </summary>
     
-      <category term="生活" scheme="http://tommyjiang.coding.me/categories/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
-      <category term="微言" scheme="http://tommyjiang.coding.me/tags/%E5%BE%AE%E8%A8%80/"/>
+      <category term="微言" scheme="http://tommyjiang.github.io/tags/%E5%BE%AE%E8%A8%80/"/>
     
   </entry>
   
   <entry>
     <title>而立之年，成家立业</title>
-    <link href="http://tommyjiang.coding.me/2018/2018-09-01-31-birthday/"/>
-    <id>http://tommyjiang.coding.me/2018/2018-09-01-31-birthday/</id>
+    <link href="http://tommyjiang.github.io/2018/2018-09-01-31-birthday/"/>
+    <id>http://tommyjiang.github.io/2018/2018-09-01-31-birthday/</id>
     <published>2018-09-01T13:00:00.000Z</published>
     <updated>2018-09-05T01:28:12.311Z</updated>
     
@@ -76,17 +353,17 @@
     
     </summary>
     
-      <category term="生活" scheme="http://tommyjiang.coding.me/categories/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
-      <category term="生日" scheme="http://tommyjiang.coding.me/tags/%E7%94%9F%E6%97%A5/"/>
+      <category term="生日" scheme="http://tommyjiang.github.io/tags/%E7%94%9F%E6%97%A5/"/>
     
   </entry>
   
   <entry>
     <title>李健访谈语录整理</title>
-    <link href="http://tommyjiang.coding.me/2018/2018-09-01-lijian-talk-index/"/>
-    <id>http://tommyjiang.coding.me/2018/2018-09-01-lijian-talk-index/</id>
+    <link href="http://tommyjiang.github.io/2018/2018-09-01-lijian-talk-index/"/>
+    <id>http://tommyjiang.github.io/2018/2018-09-01-lijian-talk-index/</id>
     <published>2018-09-01T10:00:00.000Z</published>
     <updated>2018-09-03T01:06:06.634Z</updated>
     
@@ -100,17 +377,17 @@
     
     </summary>
     
-      <category term="生活" scheme="http://tommyjiang.coding.me/categories/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
-      <category term="李健" scheme="http://tommyjiang.coding.me/tags/%E6%9D%8E%E5%81%A5/"/>
+      <category term="李健" scheme="http://tommyjiang.github.io/tags/%E6%9D%8E%E5%81%A5/"/>
     
   </entry>
   
   <entry>
     <title>吉他如何创造音乐传奇</title>
-    <link href="http://tommyjiang.coding.me/2018/2018-08-28-lijian-talk-1/"/>
-    <id>http://tommyjiang.coding.me/2018/2018-08-28-lijian-talk-1/</id>
+    <link href="http://tommyjiang.github.io/2018/2018-08-28-lijian-talk-1/"/>
+    <id>http://tommyjiang.github.io/2018/2018-08-28-lijian-talk-1/</id>
     <published>2018-08-28T10:00:00.000Z</published>
     <updated>2018-09-03T15:41:03.940Z</updated>
     
@@ -124,17 +401,17 @@
     
     </summary>
     
-      <category term="生活" scheme="http://tommyjiang.coding.me/categories/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
-      <category term="李健" scheme="http://tommyjiang.coding.me/tags/%E6%9D%8E%E5%81%A5/"/>
+      <category term="李健" scheme="http://tommyjiang.github.io/tags/%E6%9D%8E%E5%81%A5/"/>
     
   </entry>
   
   <entry>
     <title>沉住气，还能翻</title>
-    <link href="http://tommyjiang.coding.me/2018/2018-08-26-TI8/"/>
-    <id>http://tommyjiang.coding.me/2018/2018-08-26-TI8/</id>
+    <link href="http://tommyjiang.github.io/2018/2018-08-26-TI8/"/>
+    <id>http://tommyjiang.github.io/2018/2018-08-26-TI8/</id>
     <published>2018-08-26T06:00:00.000Z</published>
     <updated>2018-08-31T18:51:50.672Z</updated>
     
@@ -148,17 +425,17 @@ DotA 如人生。
     
     </summary>
     
-      <category term="生活" scheme="http://tommyjiang.coding.me/categories/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
-      <category term="DotA" scheme="http://tommyjiang.coding.me/tags/DotA/"/>
+      <category term="DotA" scheme="http://tommyjiang.github.io/tags/DotA/"/>
     
   </entry>
   
   <entry>
     <title>CV Object Detection 论文汇总</title>
-    <link href="http://tommyjiang.coding.me/2018/2018-08-15-OD-papers/"/>
-    <id>http://tommyjiang.coding.me/2018/2018-08-15-OD-papers/</id>
+    <link href="http://tommyjiang.github.io/2018/2018-08-15-OD-papers/"/>
+    <id>http://tommyjiang.github.io/2018/2018-08-15-OD-papers/</id>
     <published>2018-08-15T12:00:00.000Z</published>
     <updated>2018-08-31T18:51:50.670Z</updated>
     
@@ -172,21 +449,21 @@ CV DL OD 文献引用关系图。
     
     </summary>
     
-      <category term="技术" scheme="http://tommyjiang.coding.me/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="http://tommyjiang.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="CV" scheme="http://tommyjiang.coding.me/tags/CV/"/>
+      <category term="CV" scheme="http://tommyjiang.github.io/tags/CV/"/>
     
-      <category term="DL" scheme="http://tommyjiang.coding.me/tags/DL/"/>
+      <category term="DL" scheme="http://tommyjiang.github.io/tags/DL/"/>
     
-      <category term="Object Detection" scheme="http://tommyjiang.coding.me/tags/Object-Detection/"/>
+      <category term="Object Detection" scheme="http://tommyjiang.github.io/tags/Object-Detection/"/>
     
   </entry>
   
   <entry>
     <title>2018.08 微言</title>
-    <link href="http://tommyjiang.coding.me/2018/2018-08-15-2018-08-weiyan/"/>
-    <id>http://tommyjiang.coding.me/2018/2018-08-15-2018-08-weiyan/</id>
+    <link href="http://tommyjiang.github.io/2018/2018-08-15-2018-08-weiyan/"/>
+    <id>http://tommyjiang.github.io/2018/2018-08-15-2018-08-weiyan/</id>
     <published>2018-08-15T06:00:00.000Z</published>
     <updated>2018-08-31T18:51:50.670Z</updated>
     
@@ -200,17 +477,17 @@ CV DL OD 文献引用关系图。
     
     </summary>
     
-      <category term="生活" scheme="http://tommyjiang.coding.me/categories/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
-      <category term="微言" scheme="http://tommyjiang.coding.me/tags/%E5%BE%AE%E8%A8%80/"/>
+      <category term="微言" scheme="http://tommyjiang.github.io/tags/%E5%BE%AE%E8%A8%80/"/>
     
   </entry>
   
   <entry>
     <title>笑兔美食杂记</title>
-    <link href="http://tommyjiang.coding.me/2018/2018-08-04-restaurant-I/"/>
-    <id>http://tommyjiang.coding.me/2018/2018-08-04-restaurant-I/</id>
+    <link href="http://tommyjiang.github.io/2018/2018-08-04-restaurant-I/"/>
+    <id>http://tommyjiang.github.io/2018/2018-08-04-restaurant-I/</id>
     <published>2018-08-04T11:00:00.000Z</published>
     <updated>2018-08-31T18:51:50.670Z</updated>
     
@@ -224,274 +501,10 @@ CV DL OD 文献引用关系图。
     
     </summary>
     
-      <category term="生活" scheme="http://tommyjiang.coding.me/categories/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
-      <category term="美食" scheme="http://tommyjiang.coding.me/tags/%E7%BE%8E%E9%A3%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>RMBP 更换电池记</title>
-    <link href="http://tommyjiang.coding.me/2018/2018-08-01-RMBP-change-battery/"/>
-    <id>http://tommyjiang.coding.me/2018/2018-08-01-RMBP-change-battery/</id>
-    <published>2018-08-01T07:00:00.000Z</published>
-    <updated>2018-08-31T18:51:50.669Z</updated>
-    
-    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>喜提苹果电脑一台</div><a id="more"></a><p>用了三年半的 Mac，前几天右下角的螺丝突然掉出来了，发现后盖明显凸出。从外面苹果手机维修小哥那花 5 块买了个梅花改锥，打开后盖看看，手法不行还把一颗螺丝拧花了……发现电池明显鼓胀，也到年头该换了。</p><p>网上看很多人都是自己买电池换的，动手能力一向不行的我本来想尝试一下，后来又看到网上有换电池冒烟的<a href="https://v.youku.com/v_show/id_XOTQ0NTQ4ODA0.html" target="_blank" rel="noopener">视频</a>，果断决定在苹果官方天才吧(网上调侃称蠢材吧)换。</p><ul><li>2018.8.1 老婆帮把 RMBP 送至西单大悦城苹果店。</li><li>2018.8.3 上午9点接到苹果店电话，已经换好可取，果断上班路上顺道去喜提，RMB 1475，把键盘、触控板、电池整个都换了，感觉焕然一新。</li></ul><p>苹果店喜提留念：</p><p><img src="/images/2018/2018-08-03-喜提RMBP.jpeg" alt=""></p><p>到单位后本来想留个电池循环计数为 0 的图片留念，但开机时卡在进度条画面打不开，插上电源折腾了一会儿才打开，只能留下循环计数为 1 的图了：</p><p><img src="/images/2018/2018-08-03-循环计数1.png" alt=""></p><p>这台电脑2年前曾经去换过屏幕(<a href="https://tommyjiang.github.io/2016/2016-08-28-Apple-xidan-joy-city-retina-display/" target="_blank" rel="noopener">链接</a>)，争取这台电脑再用三年！</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
-喜提苹果电脑一台
-&lt;/div&gt;
-    
-    </summary>
-    
-      <category term="生活" scheme="http://tommyjiang.coding.me/categories/%E7%94%9F%E6%B4%BB/"/>
-    
-    
-      <category term="Mac" scheme="http://tommyjiang.coding.me/tags/Mac/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数据标注系列文章（一）</title>
-    <link href="http://tommyjiang.coding.me/2018/2018-07-25-image-annotation-1/"/>
-    <id>http://tommyjiang.coding.me/2018/2018-07-25-image-annotation-1/</id>
-    <published>2018-07-25T06:00:00.000Z</published>
-    <updated>2018-09-20T14:13:15.975Z</updated>
-    
-    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>数据标注系列文章（一）</div><a id="more"></a><!-- toc --><p>关于深度学习算法的总结网上已经汗牛充栋了，但关于数据标注的总结应该凤毛麟角甚至没人关心。毕竟和算法比起来，标注没什么技术含量。由于目前机器学习的主流仍然是监督学习(supervised learning)，监督学习的一大特点是需要标注好的数据作为输入训练模型。目前的标注需要消耗大量的人力，如何改善标注质量、节约标注成本，是值得深入讨论的问题。</p><h1 id="2012-Crowdsourcing-annotations-for-visual-object-detection"><a href="#2012-Crowdsourcing-annotations-for-visual-object-detection" class="headerlink" title="2012. Crowdsourcing annotations for visual object detection"></a>2012. Crowdsourcing annotations for visual object detection</h1><p>目前找到的最早讨论众包数据标注的文章，作者之一是大名鼎鼎的<a href="https://en.wikipedia.org/wiki/Fei-Fei_Li" target="_blank" rel="noopener">李飞飞</a>，文章链接<a href="http://vision.stanford.edu/pdf/bbox_submission.pdf" target="_blank" rel="noopener">在这</a>。</p><p>文章主要讨论了众包平台对目标检测算法数据的标注流程。目标检测算法对数据的要求是：</p><ul><li>准确性：物体周围有且仅有一个紧贴物体边缘的框(bounding box)。</li><li>全面性：图片中所有需要标注的物体都应该有对应的框。</li></ul><p>为了保证数据质量，一般的标注方法采用多数表决法(majority voting)，即让多个人标注取交集。本文采用将标注任务分解的方法，将标注任务分解为三个子任务：</p><ul><li>画框子任务：在一个物体周围画一个框。</li><li>框准确性子任务：检查框画得是否正确。</li><li>框全面性子任务：检查是否图中所有待标注物体都有一个框。</li></ul><p>对于准确性和全面性子任务，由于只需要回答是和否，因此很容易导致作弊，即不看图片全选是/否或随便选。为防止恶意操作，需要对质量进行验证(validation)。文中采用事先在图片中植入已经有 Ground Truth 的图片来进行检验。</p><p>根据统计结果，画框任务的通过率只有 *62.2%*，画一个框平均需要 50.8s。而准确性和全面性的任务平均只需要 21.9s 和 15.3s，由此得出本文的工作流比多数表决法省时间(至少需要画两次)。</p><p>标注文档清晰整洁，值得学习。</p><h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><ol><li>只讨论了检测标注任务，未涉及到画线、多边形等任务(分类任务较简单)。</li><li>全面性子任务如果发现有漏的物体，如何有效使画框子任务的人员知道应该画在哪，例如做个标记？</li><li>工钱怎么算，按画框数和检查框数？可以按照完成的平均时间比例设置单价。</li></ol><h1 id="2017-Polygon-RNN"><a href="#2017-Polygon-RNN" class="headerlink" title="2017. Polygon-RNN"></a>2017. Polygon-RNN</h1><p>CVPR 2017 Best paper 提名，论文链接看<a href="https://arxiv.org/abs/1704.05548" target="_blank" rel="noopener">这里</a>。搜了搜中文的内容，没有特别好的解读，正好借学习的机会总结。</p><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>Polygon-RNN 要解决的是如何对图片进行分割标注，即确定图片中的每一个像素是属于哪一个物体。但本文在处理时，将 pixel-labeling problem 转化为 polygon prediction task，即多边形预测任务——一个封闭多边形内的所有像素属于同一个物体。通过文中方法可以有效提升标注速度(Cityscapes 数据集上提升了 4.7 倍)。</p><h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>Polygon-RNN 的输入为一个 bounding box，输出为该 bounding box 之内物体的封闭的 polygon。封闭指的是 polygon 任意两个相邻顶点之间均有一条边。一个封闭多边形有很多等价的表示，论文中采用顺时针描述多边形，起点可以任意指定。</p><p>Polygon-RNN 中包含一个 CNN 和一个 RNN，CNN 用于提取图像特征，RNN 用于生成 polygon 的顶点。</p><h3 id="CNN"><a href="#CNN" class="headerlink" title="CNN"></a>CNN</h3><p>CNN 的输入为 224*224*3 的图片，输出为图片的特征(28*28*128)。Backbone 采用 VGG16，从 pool_2，pool_3，conv4_3 和 conv5_3 取特征接 3*3 卷积(pool_2 需要再接 max pooling，conv5_3 需要 bilinear upsample)，分别生成 28*28*128 的特征，合并组成 28*28*512 的特征，再经过 3*3 的卷积生成最终的 28*28*128 的特征。</p><h3 id="RNN"><a href="#RNN" class="headerlink" title="RNN"></a>RNN</h3><p>RNN 的输入包括 CNN 特征，t-1 和 t-2 时刻的顶点以及起点，输出是 t 时刻的顶点以及该点是否为终点。起点单独处理。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
-数据标注系列文章（一）
-&lt;/div&gt;
-    
-    </summary>
-    
-      <category term="工作" scheme="http://tommyjiang.coding.me/categories/%E5%B7%A5%E4%BD%9C/"/>
-    
-    
-      <category term="数据标注" scheme="http://tommyjiang.coding.me/tags/%E6%95%B0%E6%8D%AE%E6%A0%87%E6%B3%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>大厨新作：肘子卷饼</title>
-    <link href="http://tommyjiang.coding.me/2018/2018-07-23-pancake-shank/"/>
-    <id>http://tommyjiang.coding.me/2018/2018-07-23-pancake-shank/</id>
-    <published>2018-07-23T01:00:00.000Z</published>
-    <updated>2018-08-31T18:51:50.668Z</updated>
-    
-    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>大厨创意新作，一如既往地高水准。</div><a id="more"></a><p>周末到眉州东坡吃饭，点了招牌的东坡肘子，不太受欢迎，剩了不少。大厨当时建议点中份，我坚持点大份，作为直接责任人负责回来继续消灭。</p><p>但是现在每天上班中午和晚上都在单位吃，只能早上消灭，肘子又这么腻……还要大厨及时出马，想出了肘子卷饼的吃法。</p><p>肘子卷饼模仿春饼的做法，用小薄饼卷肘子、鸡蛋、黄瓜和小葱，大厨又创造性地加入了榨菜，使口感清爽，也可以中和肘子的油腻。用了四天，终于消灭了带回来的肘子。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
-大厨创意新作，一如既往地高水准。
-&lt;/div&gt;
-    
-    </summary>
-    
-      <category term="生活" scheme="http://tommyjiang.coding.me/categories/%E7%94%9F%E6%B4%BB/"/>
-    
-    
-      <category term="大厨" scheme="http://tommyjiang.coding.me/tags/%E5%A4%A7%E5%8E%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Emacs Lisp 计算数九天和伏天</title>
-    <link href="http://tommyjiang.coding.me/2018/2018-07-18-lisp-cal-china/"/>
-    <id>http://tommyjiang.coding.me/2018/2018-07-18-lisp-cal-china/</id>
-    <published>2018-07-18T04:00:00.000Z</published>
-    <updated>2018-08-31T18:51:50.668Z</updated>
-    
-    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>第一个用 Emacs Lisp 实现的小功能。</div><a id="more"></a><p>Lisp 诞生于 1958 年，发明人是 John McCarthy，是目前仍在使用的第二古老的高级语言(最早的是 Fortran，诞生于 1957 年)。</p><p>Lisp 来源于 <code>LISt Processing</code>(有调侃说是 <code>Lots of Isolated Stupid Parentheses</code>)，这个古老的语言和目前主流语言例如 C++，Python 和 Java 等有显著区别，下面是一段代码示例：</p><figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">defun</span> cal-china-x-winter-solstice-date (<span class="name">date</span>)</span><br><span class="line">  <span class="string">"Return winter solstice(冬至) date in Gregorian form.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">If MONTH = 12, return current year's date</span></span><br><span class="line"><span class="string">Else return last year's date"</span></span><br><span class="line">  (<span class="name">let*</span> ((<span class="name">cyear</span> (<span class="name">if</span> (<span class="name">=</span> (<span class="name">calendar-extract-month</span> date) <span class="number">12</span>)</span><br><span class="line">                    (<span class="name">calendar-extract-year</span> date)</span><br><span class="line">                  (<span class="number">1</span>- (<span class="name">calendar-extract-year</span> date)))))</span><br><span class="line">    (<span class="name">car</span> (<span class="name">rassoc</span> '<span class="string">"冬至"</span> (<span class="name">cal-china-x-solar-term-alist-new</span> cyear)))))</span><br></pre></td></tr></table></figure><p><code>Emacs</code> 也许是用 Lisp 编写的最著名的软件了。<code>Emacs</code> 自带了日历功能，<a href="https://github.com/xwl/cal-china-x" target="_blank" rel="noopener"><code>cal-china-x</code></a> 扩展实现了阴历、节气、生肖等的计算，但没有实现数九天和伏天的计算功能。正好借这个机会实现下功能，练练手。</p><h1 id="数九天计算"><a href="#数九天计算" class="headerlink" title="数九天计算"></a>数九天计算</h1><p>数九天的计算相对比较简单。从冬至当天开始算一九第一天，每过九天加一九，一直到九九第九天。</p><p>思路也比较清楚，对于某一个 <code>date</code>，先计算其与冬至的天数差。由于冬至始终在阳历的十二月，因此可以分情况讨论：</p><ul><li>阳历非十二月，计算与去年冬至的天数差。</li><li>阳历为十二月，计算与今年冬至的天数差。此时若 <code>date</code> 在冬至前则差为负数，但负数情况可以不管，因为不属于数九天。</li></ul><p>如果天数差在 0~80 天内，则需要显示数九天，具体显示格式为<code>一九(1)</code>，整个代码如下：<br><figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">defconst</span> cal-china-x-nine-characters  <span class="comment">; 数九天 array</span></span><br><span class="line">  [<span class="string">"一九"</span> <span class="string">"二九"</span> <span class="string">"三九"</span> <span class="string">"四九"</span> <span class="string">"五九"</span> <span class="string">"六九"</span> <span class="string">"七九"</span> <span class="string">"八九"</span> <span class="string">"九九"</span>])</span><br><span class="line"></span><br><span class="line">(<span class="name">defun</span> cal-china-x-winter-solstice-date (<span class="name">date</span>)  <span class="comment">; 计算冬至日期(1-11月为去年，12月为今年)</span></span><br><span class="line">  <span class="string">"Return winter solstice(冬至) date in Gregorian form.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">If MONTH = 12, return current year's date</span></span><br><span class="line"><span class="string">Else return last year's date"</span></span><br><span class="line">  (<span class="name">let*</span> ((<span class="name">cyear</span> (<span class="name">if</span> (<span class="name">=</span> (<span class="name">calendar-extract-month</span> date) <span class="number">12</span>)</span><br><span class="line">                    (<span class="name">calendar-extract-year</span> date)</span><br><span class="line">                  (<span class="number">1</span>- (<span class="name">calendar-extract-year</span> date)))))</span><br><span class="line">    (<span class="name">car</span> (<span class="name">rassoc</span> '<span class="string">"冬至"</span> (<span class="name">cal-china-x-solar-term-alist-new</span> cyear)))))</span><br><span class="line"></span><br><span class="line">(<span class="name">defun</span> winter-solstice-day-diff (<span class="name">date</span>)  <span class="comment">; 计算与指定冬至的天数差</span></span><br><span class="line">  (<span class="name">cal-china-x-days-diff</span> date (<span class="name">cal-china-x-winter-solstice-date</span> date)))</span><br><span class="line">  </span><br><span class="line">(<span class="name">defun</span> cal-china-x-get-several-nines-string (<span class="name">date</span>)  <span class="comment">; 生成数九天的 string</span></span><br><span class="line">  (<span class="name">let</span> ((<span class="name">daygap</span> (<span class="name">winter-solstice-day-diff</span> date)))</span><br><span class="line">    (<span class="name">if</span> (<span class="name">or</span> (<span class="name">&lt;</span> daygap <span class="number">0</span>) (<span class="name">&gt;</span> daygap <span class="number">80</span>))</span><br><span class="line">        <span class="string">""</span></span><br><span class="line">      (<span class="name">concat</span> (<span class="name">aref</span> cal-china-x-nine-characters (<span class="name">/</span> daygap <span class="number">9</span>))</span><br><span class="line">              <span class="string">"("</span></span><br><span class="line">              (<span class="name">number-to-string</span> (<span class="number">1</span>+ (% daygap <span class="number">9</span>)))</span><br><span class="line">              <span class="string">")"</span></span><br><span class="line">              ))))</span><br></pre></td></tr></table></figure></p><h1 id="伏天计算"><a href="#伏天计算" class="headerlink" title="伏天计算"></a>伏天计算</h1><p>民间有“头伏饺子二伏面，三伏烙饼摊鸡蛋”的习俗，看到这么多面食可以判断这基本是华北、黄淮一带的风俗。伏天计算比较复杂，原因是涉及到两个节气(夏至和立秋)，以及每日的干支。具体计算方法是：</p><blockquote><p>从夏至开始，依照干支纪日的排列，第3个庚日出现时，为初伏第一天(夏至三庚数头伏)，第4个庚日为中伏第一天，立秋后第1个庚日为末伏第一天。当夏至与立秋之间出现4个庚日时中伏为10天，出现5个庚日则为20天。</p></blockquote><figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">defun</span> cal-china-x-solar-term-date (<span class="name">date</span> solar-term)</span><br><span class="line">  <span class="string">"Return solar-term date in Gregorian form."</span></span><br><span class="line">  (<span class="name">let*</span> ((<span class="name">cyear</span> (<span class="name">calendar-extract-year</span> date)))</span><br><span class="line">    (<span class="name">car</span> (<span class="name">rassoc</span> solar-term (<span class="name">cal-china-x-solar-term-alist-new</span> cyear)))))</span><br><span class="line"></span><br><span class="line">(<span class="name">defun</span> cal-china-x-chinese-day-celestial-stem-number (<span class="name">date</span>)</span><br><span class="line">  <span class="string">"String of Chinese date of Gregorian DATE.</span></span><br><span class="line"><span class="string">Defaults to today's date if DATE is not given."</span></span><br><span class="line">  (<span class="name">let*</span> ((<span class="name">a-date</span> (<span class="name">calendar-absolute-from-gregorian</span> date)))</span><br><span class="line">    (% (<span class="name">+</span> a-date <span class="number">15</span>) <span class="number">10</span>)))</span><br><span class="line"></span><br><span class="line">(<span class="name">defun</span> cal-china-x-solar-term-celestical-stem (<span class="name">date</span> solar-term)</span><br><span class="line">  (<span class="name">cal-china-x-chinese-day-celestial-stem-number</span></span><br><span class="line">   (<span class="name">cal-china-x-solar-term-date</span> date solar-term)))</span><br><span class="line"></span><br><span class="line">(<span class="name">defun</span> cal-china-x-day-diff-from-solar-term (<span class="name">date</span> solar-term) <span class="comment">; 庚日</span></span><br><span class="line">  (<span class="name">let</span> ((<span class="name">ss-stem</span> (<span class="name">-</span> <span class="number">7</span> (<span class="name">cal-china-x-solar-term-celestical-stem</span> date solar-term))))</span><br><span class="line">    (<span class="name">if</span> (<span class="name">&lt;</span> ss-stem <span class="number">0</span>) (<span class="name">+</span> ss-stem <span class="number">10</span>)</span><br><span class="line">      ss-stem)))</span><br><span class="line"></span><br><span class="line">(<span class="name">defun</span> cal-china-x-chufu-date (<span class="name">date</span>)</span><br><span class="line">  (<span class="name">let*</span> ((<span class="name">ss-date</span> (<span class="name">cal-china-x-solar-term-date</span> date <span class="string">"夏至"</span>))</span><br><span class="line">         (<span class="name">ss-year</span> (<span class="name">calendar-extract-year</span> ss-date))</span><br><span class="line">         (<span class="name">ss-day</span> (<span class="name">calendar-extract-day</span> ss-date))</span><br><span class="line">         (<span class="name">day-diff</span> (<span class="name">+</span> <span class="number">20</span> (<span class="name">cal-china-x-day-diff-from-solar-term</span> date <span class="string">"夏至"</span>)))</span><br><span class="line">         (<span class="name">chufu-day</span> (<span class="name">-</span> day-diff (<span class="name">-</span> <span class="number">30</span> ss-day))))</span><br><span class="line">    (<span class="name">list</span> <span class="number">7</span> chufu-day ss-year)))</span><br><span class="line"></span><br><span class="line">(<span class="name">defun</span> cal-china-x-zhongfu-date (<span class="name">date</span>)</span><br><span class="line">  (<span class="name">list</span> <span class="number">7</span> (<span class="name">+</span> (<span class="name">calendar-extract-day</span> (<span class="name">cal-china-x-chufu-date</span> date)) <span class="number">10</span>)</span><br><span class="line">        (<span class="name">calendar-extract-year</span> date)))</span><br><span class="line"></span><br><span class="line">(<span class="name">defun</span> cal-china-x-mofu-date (<span class="name">date</span>)</span><br><span class="line">  (<span class="name">let*</span> ((<span class="name">ss-date</span> (<span class="name">cal-china-x-solar-term-date</span> date <span class="string">"立秋"</span>))</span><br><span class="line">         (<span class="name">ss-year</span> (<span class="name">calendar-extract-year</span> ss-date))</span><br><span class="line">         (<span class="name">ss-day</span> (<span class="name">calendar-extract-day</span> ss-date))</span><br><span class="line">         (<span class="name">day-diff</span> (<span class="name">cal-china-x-day-diff-from-solar-term</span> date <span class="string">"立秋"</span>))</span><br><span class="line">         (<span class="name">mofu-day</span> (<span class="name">+</span> day-diff ss-day)))</span><br><span class="line">    (<span class="name">list</span> <span class="number">8</span> mofu-day ss-year)))</span><br><span class="line"></span><br><span class="line">(<span class="name">defun</span> cal-china-x-get-futian-string (<span class="name">date</span>)</span><br><span class="line">  (<span class="name">let*</span> ((<span class="name">chufu</span> (<span class="name">cal-china-x-chufu-date</span> date))</span><br><span class="line">         (<span class="name">zhongfu</span> (<span class="name">cal-china-x-zhongfu-date</span> date))</span><br><span class="line">         (<span class="name">mofu</span> (<span class="name">cal-china-x-mofu-date</span> date))</span><br><span class="line">         (<span class="name">chufu-gap</span> (<span class="name">cal-china-x-days-diff</span> date chufu))</span><br><span class="line">         (<span class="name">zhongfu-gap</span> (<span class="name">cal-china-x-days-diff</span> date zhongfu))</span><br><span class="line">         (<span class="name">mofu-gap</span> (<span class="name">cal-china-x-days-diff</span> date mofu))</span><br><span class="line">         )</span><br><span class="line">    (<span class="name">if</span> (<span class="name">or</span> (<span class="name">&lt;</span> chufu-gap <span class="number">0</span>) (<span class="name">&gt;</span> mofu-gap <span class="number">9</span>))</span><br><span class="line">        <span class="string">""</span></span><br><span class="line">      (<span class="name">if</span> (<span class="name">and</span> (<span class="name">&gt;=</span> chufu-gap <span class="number">0</span>) (<span class="name">&lt;</span> zhongfu-gap <span class="number">0</span>))</span><br><span class="line">          (<span class="name">concat</span> <span class="string">"初伏("</span></span><br><span class="line">                  (<span class="name">number-to-string</span> (<span class="number">1</span>+ chufu-gap))</span><br><span class="line">                  <span class="string">")"</span>)</span><br><span class="line">        (<span class="name">if</span> (<span class="name">and</span> (<span class="name">&gt;=</span> zhongfu-gap <span class="number">0</span>) (<span class="name">&lt;</span> mofu-gap <span class="number">0</span>))</span><br><span class="line">            (<span class="name">concat</span> <span class="string">"中伏("</span></span><br><span class="line">                    (<span class="name">number-to-string</span> (<span class="number">1</span>+ zhongfu-gap))</span><br><span class="line">                    <span class="string">")"</span>)</span><br><span class="line">          (<span class="name">concat</span> <span class="string">"末伏("</span></span><br><span class="line">                  (<span class="name">number-to-string</span> (<span class="number">1</span>+ mofu-gap))</span><br><span class="line">                  <span class="string">")"</span>))))))</span><br></pre></td></tr></table></figure><p>注意如果夏至当天是庚日，则算第一个庚日，相当于初伏在夏至20天之后。</p><p>另外，<code>cal-china-x</code> 中月和日的天干地支计算有点问题，需要用 <code>Emacs</code> 自带的计算。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
-第一个用 Emacs Lisp 实现的小功能。
-&lt;/div&gt;
-    
-    </summary>
-    
-      <category term="Geek" scheme="http://tommyjiang.coding.me/categories/Geek/"/>
-    
-    
-      <category term="Lisp" scheme="http://tommyjiang.coding.me/tags/Lisp/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2018 世界杯</title>
-    <link href="http://tommyjiang.coding.me/2018/2018-07-16-2018-world-cup/"/>
-    <id>http://tommyjiang.coding.me/2018/2018-07-16-2018-world-cup/</id>
-    <published>2018-07-16T11:00:00.000Z</published>
-    <updated>2018-08-31T18:51:50.667Z</updated>
-    
-    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>成王败寇。</div><a id="more"></a><p>2018 年世界杯结束了。</p><p>决赛和老婆在家附近的串吧看的，我本人是希望克罗地亚赢，因为我支持的比利时在半决赛被法国干掉了。第一次和老婆见面的时候，我问她喜欢哪个球队，她说德国队，我就说比利时挺厉害的，球员身价加起来很高。半决赛的时候，我还半夜爬起来看了下半场最后 20 分钟的比赛，表达对比利时的支持。看到比赛最后，姆巴佩在比利时球权的时候把球往场内带，也是气得够呛，不过最后比利时还是 0:1 憾负。</p><p>决赛踢到 4:1 的时候其实就已经失去了悬念，要不是洛里玩火可能会是近几十年最悬殊的决赛比分。虽然法国踢得不好看，但是成王败寇，功利足球最终拿到了冠军，只能祝比利时在两年后的欧洲杯好运了。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
-成王败寇。
-&lt;/div&gt;
-    
-    </summary>
-    
-      <category term="生活" scheme="http://tommyjiang.coding.me/categories/%E7%94%9F%E6%B4%BB/"/>
-    
-    
-      <category term="足球" scheme="http://tommyjiang.coding.me/tags/%E8%B6%B3%E7%90%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CV DL 工程师技能树</title>
-    <link href="http://tommyjiang.coding.me/2018/2018-07-01-CV-DL/"/>
-    <id>http://tommyjiang.coding.me/2018/2018-07-01-CV-DL/</id>
-    <published>2018-07-01T14:00:00.000Z</published>
-    <updated>2018-08-31T18:51:50.667Z</updated>
-    
-    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>CV DL 工程师技能树</div><a id="more"></a><h1 id="技能"><a href="#技能" class="headerlink" title="技能"></a>技能</h1><h2 id="语言"><a href="#语言" class="headerlink" title="语言"></a>语言</h2><ul><li>Python</li><li>C++</li></ul><h2 id="CS-基础"><a href="#CS-基础" class="headerlink" title="CS 基础"></a>CS 基础</h2><ul><li>数据结构</li><li>算法</li></ul><h2 id="理论"><a href="#理论" class="headerlink" title="理论"></a>理论</h2><ul><li>基础<ul><li>最优化</li></ul></li></ul><h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><ul><li>Linux</li><li>git</li></ul><h1 id="素材"><a href="#素材" class="headerlink" title="素材"></a>素材</h1><h2 id="书籍"><a href="#书籍" class="headerlink" title="书籍"></a>书籍</h2><h2 id="课程"><a href="#课程" class="headerlink" title="课程"></a>课程</h2><h2 id="论文"><a href="#论文" class="headerlink" title="论文"></a>论文</h2><p>参考我的<a href="http://bigbossjiang.top/2018/2018-06-22-CV-DL-papers/" target="_blank" rel="noopener">文章</a></p><ul><li>Classification<ul><li>AlexNet</li><li>ZFNet</li><li>VGG</li><li>Inception(GoogLeNet)</li><li>ResNet</li></ul></li><li>Object Detection<ul><li>Fast R-CNN</li><li>Faster R-CNN</li><li>YOLO</li><li>SSD</li><li>R-FCN</li><li>FPN</li></ul></li><li>Segmentation<ul><li>FCN</li><li>Mask R-CNN</li></ul></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
-CV DL 工程师技能树
-&lt;/div&gt;
-    
-    </summary>
-    
-      <category term="工作" scheme="http://tommyjiang.coding.me/categories/%E5%B7%A5%E4%BD%9C/"/>
-    
-    
-      <category term="CS" scheme="http://tommyjiang.coding.me/tags/CS/"/>
-    
-      <category term="CV" scheme="http://tommyjiang.coding.me/tags/CV/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>从头再来</title>
-    <link href="http://tommyjiang.coding.me/2018/2018-07-01-new-start/"/>
-    <id>http://tommyjiang.coding.me/2018/2018-07-01-new-start/</id>
-    <published>2018-07-01T14:00:00.000Z</published>
-    <updated>2018-08-31T18:51:50.667Z</updated>
-    
-    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>2006-2018，从头再来。</div><a id="more"></a><p>今天是 2018 年下半年的第一天。</p><p>昨天晚上结束的世界杯八分之一决赛，31 岁的梅西率领的阿根廷在八分之一决赛被法国队 4:3 淘汰，球迷期待的梅罗世界杯对决终究没能成为现实，这也很可能是梅西的最后一场世界杯比赛了。</p><p>时间回到 2006 年 6 月 16 日，梅西的第一场世界杯比赛，段暄的解说：</p><blockquote><p>19 号梅西准备上场了，小将梅西迎来了他世界杯的第一场比赛。在下半场比赛进行到将近 30 分钟的时候，佩克尔曼给了梅西参加世界杯的机会。马拉多纳也是为梅西的上场而振臂高呼，这是阿根廷队新一代的偶像。</p></blockquote><p>2006-2018，12 年的时间，梅西经过了四届世界杯。2014 年决赛 0:1 输给德国，那是他离冠军最近的一次。花有重开日，人无再少年，足球是竞技体育最具代表性的运动，技术和天赋也没法弥补年龄大了导致的体力不足，梅西昨晚精彩的人球分过之后也无力再奉献一记劲射，只能遗憾出局。</p><p>12 年前的 6 月 8 号，我高考完回家看德国世界杯揭幕战，第二天和小道一起在家看 NBA 总决赛，小牛对热火，当时他支持的是小牛，因为后卫是特里(Terry)。时间过了一旬，我又回到了原点，今天回家准备材料，明天到公司签合同入职。</p><p>现在我做的工作是计算机视觉相关的，需要打交道的是图像，而这本来是我最不擅长的。幼儿园的时候报兴趣班，有音乐和美术可以选，我选的音乐，其实就是电子琴。结果花了爸妈 2 个月工资买了一个电子琴，没学 2 个月就闲置了，原因是幼儿园说不挣钱不办了。初中时候上美术课，老师先讲了徐悲鸿喜欢画马，然后问大家知不知道黄冑喜欢画什么，我正和同学说话没听课，随口说了“驴”，没想到竟然蒙对了。造化弄人，对美术最没兴趣的我现在竟然天天要和图片打交道。</p><p>2006 年高考我进了清华电机系，到今天算彻底告别了电力行业，完成了个人的转型。用刘欢老师的一首歌《从头再来》自勉吧：</p><blockquote><p>昨天所有的荣誉<br>已变成遥远的回忆<br>辛辛苦苦已度过半生<br>今夜重又走进风雨<br>我不能随波浮沉<br>为了我挚爱的亲人<br>再苦再难也要坚强<br>只为那些期待眼神</p><p>心若在梦就在<br>天地之间还有真爱<br>看成败人生豪迈<br>只不过是从头再来</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
-2006-2018，从头再来。
-&lt;/div&gt;
-    
-    </summary>
-    
-      <category term="工作" scheme="http://tommyjiang.coding.me/categories/%E5%B7%A5%E4%BD%9C/"/>
-    
-    
-      <category term="CS" scheme="http://tommyjiang.coding.me/tags/CS/"/>
-    
-      <category term="CV" scheme="http://tommyjiang.coding.me/tags/CV/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CV Paper 汇总</title>
-    <link href="http://tommyjiang.coding.me/2018/2018-06-22-CV-DL-papers/"/>
-    <id>http://tommyjiang.coding.me/2018/2018-06-22-CV-DL-papers/</id>
-    <published>2018-06-22T03:00:00.000Z</published>
-    <updated>2018-07-28T14:59:28.312Z</updated>
-    
-    <content type="html"><![CDATA[<p>CV DL 文献引用关系图</p><a id="more"></a><div id="refs" style="width: 120%;height: 1000px;margin: 0 auto"></div><script src="https://cdn.bootcss.com/echarts/4.1.0.rc2/echarts.js"></script><script src="https://cdn.bootcss.com/echarts/4.1.0.rc2/extension/dataTool.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script><script src="https://cdn.rawgit.com/apache/incubator-echarts/master/theme/vintage.js"></script><script type="text/javascript">    // 查找函数    function findArray(array, feature, all = true) {        for(let index in array){            let cur = array[index];            if(feature instanceof Object){                let allRight = true;                for(let key in feature){                    let value = feature[key];                    if(cur[key] == value && !all) return index;                    if(all && cur[key] != value){                        allRight = false;                        break;                    }                }                if(allRight) return index;            }else{                if(cur == feature){                    return index;                }            }        }        return -1;    }    var myChart = echarts.init(document.getElementById('refs'), 'vintage');    myChart.showLoading();$.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public/data/asset/data/les-miserables.gexf', function (xml) {    myChart.hideLoading();    // TODO 点击节点跳转到论文 arxiv 链接    // TODO 节点 symbolSize 随年份衰减    // TODO 根据 link 两篇文章年份设定权重    var graph = {        "nodes":[        // TODO Others BN GN Focal loss Wing loss        // Dataset        {"id":"ImageNet", "name":"2009-ImageNet", "symbolSize":10, "category":0}, //         {"id":"COCO", "name":"2014-COCO", "symbolSize":10, "category":0}, // 1405.0312        // Classification        {"id":"AlexNet", "name":"2012-AlexNet", "symbolSize":10, "category":1},        {"id":"ZFNet", "name":"2013-ZFNet", "symbolSize":10, "category":1}, // 1311.2901        {"id":"VGG", "name":"2014-VGG", "symbolSize":10, "category":1}, // 1409.1556        {"id":"Inception", "name":"2014-Inception", "symbolSize":10, "category":1}, // 1409.4842        // Object Detection        {"id":"R-CNN", "name":"2013-R-CNN", "symbolSize":10, "category":2}, // 1311.2524        {"id":"SPPNet", "name":"2014-SPPNet", "symbolSize":10, "category":2}, // 1406.4729        {"id":"Fast-RCNN", "name":"2015-Fast-RCNN", "symbolSize":10, "category":2}, // 1504.08083        {"id":"Faster-RCNN", "name":"2015-Faster-RCNN", "symbolSize":10, "category":2}, // 1506.01497        {"id":"FPN", "name":"2016-FPN", "symbolSize":10, "category":2}, // 1612.03144        // TODO Faster RCNN YOLO SSD R-FCN FPN        // Semantic Segmentation        {"id":"FCN", "name":"2014-FCN", "symbolSize":10, "category":3}, // 1411.4038        // Instance Segmentation        {"id":"Mask-RCNN", "name":"2017-Mask-RCNN", "symbolSize":10, "category":4}, // 1703.06870        // Tools        {"id":"Caffe", "name":"2014-Caffe", "symbolSize":10, "category":5}, // 1408.5093        ],        "links":[        // 2012-AlexNet        {"source":"AlexNet", "target":"ImageNet"}, // Ref 6        // 2013-R-CNN        {"source":"R-CNN", "target":"AlexNet"}, // Ref 25        // 2013-ZFNet        {"source":"ZFNet", "target":"AlexNet"}, // Ref 15        // 2014-Caffe        {"source":"Caffe", "target":"R-CNN"}, // Ref 3        {"source":"Caffe", "target":"AlexNet"}, // Ref 8        // 2014-VGG        {"source":"VGG", "target":"ImageNet"}, // Ref 6        {"source":"VGG", "target":"R-CNN"}, // Ref 10        {"source":"VGG", "target":"SPPNet"}, // Ref 15        {"source":"VGG", "target":"Caffe"}, // Ref 18        {"source":"VGG", "target":"AlexNet"}, // Ref 22        {"source":"VGG", "target":"FCN"}, // Ref 25        {"source":"VGG", "target":"Inception"}, // Ref 32        {"source":"VGG", "target":"ZFNet"}, // Ref 34        // 2014-Inception        {"source":"Inception", "target":"R-CNN"}, // Ref 6        {"source":"Inception", "target":"AlexNet"}, // Ref 9        // 2014-FCN        {"source":"FCN", "target":"R-CNN"}, // Ref 12        {"source":"FCN", "target":"SPPNet"},  // Ref 17        {"source":"FCN", "target":"Caffe"},  // Ref 18        {"source":"FCN", "target":"AlexNet"},  // Ref 19        {"source":"FCN", "target":"VGG"},  // Ref 31        {"source":"FCN", "target":"Inception"},  // Ref 32        {"source":"FCN", "target":"ZFNet"},  // Ref 32        // 2014-SPPNet        {"source":"SPPNet", "target":"ImageNet"}, // Ref 2        {"source":"SPPNet", "target":"AlexNet"}, // Ref 3        {"source":"SPPNet", "target":"ZFNet"}, // Ref 4        {"source":"SPPNet", "target":"R-CNN"}, // Ref 7        {"source":"SPPNet", "target":"Inception"}, // Ref 32        {"source":"SPPNet", "target":"VGG"}, // Ref 33        // 2015-Fast-RCNN        {"source":"Fast-RCNN", "target":"ImageNet"}, // Ref 4        {"source":"Fast-RCNN", "target":"R-CNN"}, // Ref 9        {"source":"Fast-RCNN", "target":"SPPNet"}, // Ref 11        {"source":"Fast-RCNN", "target":"Caffe"}, // Ref 13        {"source":"Fast-RCNN", "target":"AlexNet"}, // Ref 14        {"source":"Fast-RCNN", "target":"COCO"}, // Ref 18        {"source":"Fast-RCNN", "target":"VGG"}, // Ref 20        // 2015-Faster-RCNN        {"source":"Faster-RCNN", "target":"SPPNet"}, // Ref 1        {"source":"Faster-RCNN", "target":"Fast-RCNN"}, // Ref 2        {"source":"Faster-RCNN", "target":"VGG"}, // Ref 3        {"source":"Faster-RCNN", "target":"R-CNN"}, // Ref 5        {"source":"Faster-RCNN", "target":"FCN"}, // Ref 7        {"source":"Faster-RCNN", "target":"COCO"}, // Ref 12        // {"source":"Faster-RCNN", "target":"ResNet"}, // Ref 18        {"source":"Faster-RCNN", "target":"ZFNet"}, // Ref 32        {"source":"Faster-RCNN", "target":"Inception"}, // Ref 34        {"source":"Faster-RCNN", "target":"AlexNet"}, // Ref 37        {"source":"Faster-RCNN", "target":"Caffe"}, // Ref 38        // 2016-FPN        {"source":"FPN", "target":"Fast-RCNN"}, // Ref 11        {"source":"FPN", "target":"R-CNN"}, // Ref 12        {"source":"FPN", "target":"Mask-RCNN"}, // Ref 14        {"source":"FPN", "target":"SPPNet"}, // Ref 15        // {"source":"FPN", "target":"ResNet"}, // Ref 16        {"source":"FPN", "target":"AlexNet"}, // Ref 19        {"source":"FPN", "target":"COCO"}, // Ref 21        // {"source":"FPN", "target":"SSD"}, // Ref 22        {"source":"FPN", "target":"FCN"}, // Ref 24        // {"source":"FPN", "target":"Faster-RCNN"}, // Ref 29        // {"source":"FPN", "target":"U-Net"}, // Ref 31        {"source":"FPN", "target":"VGG"}, // Ref 36        // 2017-Mask-RCNN        // {"source":"Mask-RCNN", "target":"R-FCN"}, // Ref 11        {"source":"Mask-RCNN", "target":"Fast-RCNN"}, // Ref 12        {"source":"Mask-RCNN", "target":"R-CNN"}, // Ref 13        ]    }    var categories = [{'name': 'Dataset'},                      {'name': 'Classification'},                      {'name': 'Object Detection'},                      {'name': 'Semantic Segmentation'},                      {'name': 'Instance Segmentation'},                      {'name': 'Tools'}];    // TODO 根据 link 修改 symbolSize / 根据年份加权    graph.links.forEach(function (link) {        link.id = link.source + "-" + link.target        var cur_link = link.target        var index = findArray(graph.nodes, {id: link.target});        graph.nodes[index]['symbolSize'] += 2        console.log(link)        // console.log(graph.nodes[0]['id'])    });    graph.nodes.forEach(function (node) {        node.itemStyle = null;        node.value = node.symbolSize;        node.label = {            normal: {                show: node.symbolSize > 0            }        };    });    option = {        title: {            text: 'CV refs',            subtext: 'Circular layout',            top: 'bottom',            left: 'right'        },        tooltip: {},        legend: [{            // selectedMode: 'single',            data: categories.map(function (a) {                return a.name;            })        }],        animationDurationUpdate: 1500,        animationEasingUpdate: 'quinticInOut',        series : [            {                name: 'CV refs',                type: 'graph',                layout: 'circular',                // layout: 'force',                force: {                    repulsion: 8000,                    gravity: 0.2                },                circular: {                    rotateLabel: true                },                edgeSymbol: [null, 'arrow'],  // 有向图, edgeSymbol 为 arrow                data: graph.nodes,                links: graph.links,                categories: categories,                roam: false,                focusNodeAdjacency: true,                label: {                    normal: {                        position: 'right',                        formatter: '{b}'                    }                },                lineStyle: {                    normal: {                        color: 'source',                        curveness: 0.3                    }                }            }        ]    };    myChart.setOption(option);}, 'xml');</script>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;CV DL 文献引用关系图&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://tommyjiang.coding.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="CV" scheme="http://tommyjiang.coding.me/tags/CV/"/>
-    
-      <category term="DL" scheme="http://tommyjiang.coding.me/tags/DL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2018 端午港澳行</title>
-    <link href="http://tommyjiang.coding.me/2018/2018-05-20-HK-Macau/"/>
-    <id>http://tommyjiang.coding.me/2018/2018-05-20-HK-Macau/</id>
-    <published>2018-05-20T02:00:00.000Z</published>
-    <updated>2018-07-28T14:59:28.312Z</updated>
-    
-    <content type="html"><![CDATA[<p>再游珠三角。</p><a id="more"></a><!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc --><p><strong>Table of Contents</strong></p><ul><li><a href="#行程安排">行程安排</a><ul><li><a href="#2018-06-16">2018-06-16</a><ul><li><a href="#北京">北京</a></li><li><a href="#深圳">深圳</a></li><li><a href="#香港">香港</a></li></ul></li><li><a href="#2018-06-17">2018-06-17</a></li><li><a href="#2018-06-18">2018-06-18</a></li><li><a href="#2018-06-19">2018-06-19</a></li></ul></li></ul><!-- markdown-toc end --><h1 id="行程安排"><a href="#行程安排" class="headerlink" title="行程安排"></a>行程安排</h1><h2 id="2018-06-16"><a href="#2018-06-16" class="headerlink" title="2018-06-16"></a>2018-06-16</h2><h3 id="北京"><a href="#北京" class="headerlink" title="北京"></a>北京</h3><ul><li>早饭：早 8:00 出发，李小丰解决早餐。</li><li>值机：10:10 到首都机场准备值机，需要办理行李托运和登机牌，不需要打印行程单。</li><li>安检：头等舱过优先安检，支付宝送一次 CIP 服务，也可以直接过安检。</li></ul><h3 id="深圳"><a href="#深圳" class="headerlink" title="深圳"></a>深圳</h3><p>地铁：下午 4 点前降落，机场坐 11 号线，后海站换 2 号线，登良站 A 口出，后海滨路口转 m299/m506 路，坐 1 站到深圳湾口岸下车。<br>过关：深圳湾口岸排队过关，提前准备好港澳通行证</p><h3 id="香港"><a href="#香港" class="headerlink" title="香港"></a>香港</h3><p>深圳湾——尖沙咀：过关后坐 B2 路到元朗站，西铁线到尖东 Airbnb 房间入住，稍事休息前往港岛。</p><ul><li>九记牛腩：名不虚传，外面排的队都到台阶下面了，盛的碗看上去不大，吃一碗还挺饱的。</li><li>桥底辣蟹：湾仔骆克道，3 家挨着，点了中份蟹，炸蒜味道不错。</li></ul><table border="1px" align="center">  <tr>    <th style="text-align:center">序号</th>    <th style="text-align:center">名称</th>    <th style="text-align:center">地址</th>    <th style="text-align:center">营业时间</th>  </tr>  <tr>    <td style="text-align:center">1</td>    <td style="text-align:center">九记牛腩</td>    <td style="text-align:center">上环 A2 口 歌赋街 21 号</td>    <td style="text-align:center">12:30-22:30</td>  </tr>  <tr>    <td style="text-align:center">2</td>    <td style="text-align:center">桥底辣蟹</td>    <td style="text-align:center">铜锣湾 C 口，骆克道 421-425 号</td>    <td style="text-align:center">18:00-06:00</td>  </tr></table><br><div style="min-height: 500px; width: 100%;" id="6-16"></div>    <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.4&key=78b4d9401faf42bd388b9bbf4aa3bfd0"></script><script>    var map = new AMap.Map('6-16', {        resizeEnable: true,        center: [114.179851,22.2931], // 尖东        zoom: 13    });    map.clearMap();  // 清除地图覆盖物    var markers = [{        position: [114.157536,22.281589],        label: '九记牛腩'    }, {        position: [114.185632,22.27748],        label: '桥底辣蟹'    }    ];    var infoWindow = new AMap.InfoWindow({offset: new AMap.Pixel(0, -30)});    for (var i = 0, marker; i < markers.length; i++) {        var marker = new AMap.Marker({            icon: 'https://webapi.amap.com/theme/v1.3/markers/n/mark_b' + (i+1).toString() + '.png',            position: markers[i].position,            map: map,            offset: new AMap.Pixel(0, -46),            clickable: true        });        marker.content = markers[i].label        marker.on('click', markerClick);        marker.emit('click', {target: marker});    }    function markerClick(e) {        infoWindow.setContent(e.target.content);        infoWindow.open(map, e.target.getPosition());    }        // map.setFitView();</script>    <h2 id="2018-06-17"><a href="#2018-06-17" class="headerlink" title="2018-06-17"></a>2018-06-17</h2><p>香港美食 + 购物</p><ul><li>海港城购物：专柜多，人也多，资生堂专柜断货，到旁边的崇光 SOGO 资生堂专柜，下次可以考虑到西九龙圆方。</li><li>Lady M：</li><li>稻香：</li><li>一兰拉面：</li></ul><p>香港——澳门：上环港澳码头——澳门氹仔码头，做银河免费巴士到银河，前台寄存行李，然后步行到官也街吃晚饭。晚饭后到威尼斯人赌场看看，结束后坐巴士回酒店 check in</p><h2 id="2018-06-18"><a href="#2018-06-18" class="headerlink" title="2018-06-18"></a>2018-06-18</h2><ul><li>早餐：新鸿发茶餐厅吃早午餐</li><li>中午：新葡京酒店赌场地下一层寄存行李，然后到新马路、大三巴逛</li><li>晚餐：失误，没有提前查好，去了一个本地葡国菜茶餐厅</li><li>返程：外港码头——深圳蛇口港，下车没零钱，蹭了接驳大巴到蛇口港站，2 号线 2 站到水湾站下车入住 Airbnb</li><li>夜宵：南水村无国界烧烤</li></ul><h2 id="2018-06-19"><a href="#2018-06-19" class="headerlink" title="2018-06-19"></a>2018-06-19</h2><p>Airbnb - 点都德：m518 蛇口戏院-学府中学</p><p>点都德：海岸城店，南山区海德三道199号天利中央广场F3，可以吃到 11 点半。</p><p>点都德-机场：步行至 11 号线后海站，坐 11 号线到 机场，约 50 分钟。</p><p>返程：深圳-石家庄 9C8906 14:40-17:35，提前2小时到宝安机场，12 点 40 之前到。降落后坐摆渡车到高铁正定机场站，乘坐 G6710 21:05 正定机场-北京西返京，回家看球。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;再游珠三角。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="生活" scheme="http://tommyjiang.coding.me/categories/%E7%94%9F%E6%B4%BB/"/>
-    
-    
-      <category term="香港" scheme="http://tommyjiang.coding.me/tags/%E9%A6%99%E6%B8%AF/"/>
-    
-      <category term="澳门" scheme="http://tommyjiang.coding.me/tags/%E6%BE%B3%E9%97%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linus 自传读后感</title>
-    <link href="http://tommyjiang.coding.me/2018/2018-05-15-linus/"/>
-    <id>http://tommyjiang.coding.me/2018/2018-05-15-linus/</id>
-    <published>2018-05-14T16:00:00.000Z</published>
-    <updated>2018-07-28T14:59:28.312Z</updated>
-    
-    <content type="html"><![CDATA[<p>Talk is cheap, show me the code.</p><a id="more"></a><p>最近读完了 Linux 和 git 的作者 Linus Torvalds 的自传，很喜欢他书里的一些话，做个摘录，也写写我的体会。</p><blockquote><p>坦白说，我对 Unix 的热情从来没有淡过，我希望你们也能对某些事情说出同样的话。(Frankly, it’s never subsided. I hope you can say the same about something.)</p></blockquote><p>对一件事情有热情，有兴趣，是做好一件事最基本的前提。很多人做的工作都是自己不喜欢的，甚至不认可的，这样怎么能把工作做好呢？我之前在电网工作的时候，上班和上坟一样，想做点成果吧，觉得当领导也不靠这个，没动力；和其他单位沟通吧，啥都不愿意告诉你，一共就这么多精力还被各种开会扯淡消耗了一大半。出来之后感觉做的东西至少是看得见摸得着的，CV 也有很多开源的东西可以学习。</p><blockquote><p>但我偏不，我就是想要高配。(But no, I wanted top of the line.)</p></blockquote><p>这点和我特别像，处女座的完美主义倾向，什么都想要最好的。工作的时候想做得好一点是优点，生活中就得注意点了，容易吹毛求疵惹人讨厌。</p><blockquote><p>我发布操作系统的一个主要原因，是为了证明我不是在说大话，我是实实在在做了这件事。(One of the main reasons I distributed the operating system was to prove that it wasn’t all just hot air, that I had actually done something.)</p></blockquote><p>Linux 现在肯定是开源世界里最知名的产品了，Linus 也希望得到别人的认可，不想被别人怀疑光说不做。联想到之前的电气行业，研究的学者都把模型捂得严严实实的，这种氛围是做不出好的研究的。科研文章中也有很多是无法复现的，让别人认可的前提是别人得相信你做的东西是真的，这样自己也能获得成就感。</p><blockquote><p>作为领导者，最好最有效的做事方法，并不是让下属去完成领导吩咐的工作，而是让他们做真正想做的工作。好的领导者自己出了错的时候能够随时自知，并且懂得如何及时补救。此外，他们还会听取他人意见，把决策权交给他人。</p></blockquote><p>怎么才能让下属做真正想做的工作？除了刚才说的，要做一些踏踏实实的，看得见摸得着的工作之外，还有一点是领导者要知人善用，因材施教。每个人都有长处和短板，应该尽可能扬长避短，而不是苛求下属成为通才。国企领导的一大特点是不会承认自己犯了错误，这样会很没面子，没法在下属面前立威信，可谓现实版皇帝的新衣。但他们不知道，知错能改，善莫大焉，不承认自己的错误并不能掩饰或遮盖，反而会遭到别人的鄙视。</p><blockquote><p>成为领导不是难事，而那些缺乏主见的，就会倾向于让别人来为他们做决定，听别人的指挥做事。</p></blockquote><p>这是我的一大缺点，很多事儿自己决定不了就倾向于放任自流，不具备当领导的气质。好的领导应该具备出色的协调能力，平衡各方利益，团结各方力量，需要重点加强学习。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Talk is cheap, show me the code.&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="读书" scheme="http://tommyjiang.coding.me/categories/%E8%AF%BB%E4%B9%A6/"/>
-    
-    
-      <category term="Geek" scheme="http://tommyjiang.coding.me/tags/Geek/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>婚礼指南</title>
-    <link href="http://tommyjiang.coding.me/2018/2018-05-05-wedding/"/>
-    <id>http://tommyjiang.coding.me/2018/2018-05-05-wedding/</id>
-    <published>2018-05-05T03:18:00.000Z</published>
-    <updated>2018-07-28T14:59:28.312Z</updated>
-    
-    <content type="html"><![CDATA[<p>婚礼指南</p><a id="more"></a><table border="1px" align="center">  <tr>    <th style="text-align:center">序号</th>    <th style="text-align:center">名称</th>    <th style="text-align:center">作用</th>    <th style="text-align:center">地址</th>  </tr>  <tr>    <td style="text-align:center">1</td>    <td style="text-align:center">凤凰园铂悦山店</td>    <td style="text-align:center">婚礼酒店</td>    <td style="text-align:center">路北区长虹道与大里路交叉口东行100米</td>  </tr>  <tr>    <td style="text-align:center">2</td>    <td style="text-align:center">尚座花园</td>    <td style="text-align:center">新房</td>    <td style="text-align:center">路北区西山道与学院路交叉口东行200米</td>  </tr>  <tr>    <td style="text-align:center">3</td>    <td style="text-align:center">紫天鹅大酒店</td>    <td style="text-align:center">新娘酒店</td>    <td style="text-align:center">路南区南湖生态城，近唐山世界园艺博览会2号门</td>  </tr></table><br><div style="min-height: 500px; width: 100%;" id="container"></div>    <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.4&key=78b4d9401faf42bd388b9bbf4aa3bfd0"></script><script>    var map = new AMap.Map('container', {        resizeEnable: true,        center: [118.160456,39.63028], // 尚座        zoom: 12    });        map.clearMap();  // 清除地图覆盖物    var markers = [{        position: [118.15145,39.650079],        label: '婚礼酒店（凤凰园铂悦山店）'    }, {        position: [118.160456,39.63028],        label: '新房（尚座花园）'    }, {        position: [118.173403,39.581195],         label: '新娘酒店（紫天鹅酒店）'    }    ];    var infoWindow = new AMap.InfoWindow({offset: new AMap.Pixel(0, -30)});    for (var i = 0, marker; i < markers.length; i++) {        var marker = new AMap.Marker({            icon: 'https://webapi.amap.com/theme/v1.3/markers/n/mark_b' + (i+1).toString() + '.png',            position: markers[i].position,            map: map,            offset: new AMap.Pixel(0, -46),            clickable: true        });        marker.content = markers[i].label        marker.on('click', markerClick);        marker.emit('click', {target: marker});    }    function markerClick(e) {        infoWindow.setContent(e.target.content);        infoWindow.open(map, e.target.getPosition());    }        // map.setFitView();</script>    ]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;婚礼指南&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="生活" scheme="http://tommyjiang.coding.me/categories/%E7%94%9F%E6%B4%BB/"/>
-    
-    
-      <category term="爱情" scheme="http://tommyjiang.coding.me/tags/%E7%88%B1%E6%83%85/"/>
+      <category term="美食" scheme="http://tommyjiang.github.io/tags/%E7%BE%8E%E9%A3%9F/"/>
     
   </entry>
   

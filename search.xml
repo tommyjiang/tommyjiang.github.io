@@ -4,8 +4,720 @@
   
     
     <entry>
+      <title><![CDATA[2019 新年计划]]></title>
+      <url>http://tommyjiang.github.io/2019/2019-01-01-2019-plan/</url>
+      <content type="html"><![CDATA[
+<div class="alert alert-info"><i class="fa fa-info"></i>
+一笔“狗”销，“猪”事顺利。
+</div>
+
+<a id="more"></a>
+<p>2019 年的元旦，我和老婆在军科。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 生活 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 计划 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[2018 的最后一个月]]></title>
+      <url>http://tommyjiang.github.io/2018/2018-12-03-2018-last-month/</url>
+      <content type="html"><![CDATA[
+<div class="alert alert-info"><i class="fa fa-info"></i>
+2018 年就要过去了。
+</div>
+
+<a id="more"></a>
+<p>2018 年的最后一个月，就这样开始了。</p>
+<p>1 号和 2 号两天周末，冬季里的常客雾霾重返北京，只能闷在家里。周日晚上雾霾依然很重，我和老婆又要回学校准备第二天上班，心情格外沉重，还好有满恒记的牛羊肉聊以慰藉。</p>
+<p>周一上班之后，听到两个消息：一个是一位算法大牛跳来鄙司了，不知道给了多少的 package，估计至少 100 吧；另一个是新来的小伙儿要和 HR 重新谈薪，来实习几天觉得工作强度有点大，之前要少了。两相对比，越发感觉没有见识，盲目追求学历的悲哀。</p>
+<p>想读博士，至少先明白两个道理：一，博士毕业想发挥特长，主流的道路是留校当教授；二，博士是追求上限的，上限很高的同时不排除下限也很低。</p>
+<p>最后一个月，多努力，前事不忘后事之师，希望五年后别再为这五年的所作所为悔不当初了。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 生活 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 感慨 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[PRML 笔记 2：2. Probability Distributions]]></title>
+      <url>http://tommyjiang.github.io/2018/2018-12-02-PRML-notes-2/</url>
+      <content type="html"><![CDATA[
+<div class="alert alert-info"><i class="fa fa-info"></i>
+PRML 笔记 2。
+</div>
+
+<a id="more"></a>
+<h1 id="2-1-二值变量"><a href="#2-1-二值变量" class="headerlink" title="2.1 二值变量"></a>2.1 二值变量</h1><ul>
+<li>二项分布及其期望、方差</li>
+<li>$\beta$ 分布及其期望、方差</li>
+</ul>
+<h1 id="2-2-多值变量"><a href="#2-2-多值变量" class="headerlink" title="2.2 多值变量"></a>2.2 多值变量</h1><ul>
+<li>狄利克雷分布</li>
+</ul>
+<h1 id="2-3-高斯分布"><a href="#2-3-高斯分布" class="headerlink" title="2.3 高斯分布"></a>2.3 高斯分布</h1><h1 id="2-4-指数族"><a href="#2-4-指数族" class="headerlink" title="2.4 指数族"></a>2.4 指数族</h1><h1 id="2-5-非参数估计"><a href="#2-5-非参数估计" class="headerlink" title="2.5 非参数估计"></a>2.5 非参数估计</h1><h1 id="本章数学家"><a href="#本章数学家" class="headerlink" title="本章数学家"></a>本章数学家</h1><ul>
+<li>数学家(1)：雅各布·伯努利(P69)</li>
+<li>数学家(2)：狄利克雷(P77)</li>
+<li>数学家(3)：高斯(P79)</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> Geek </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Machine Learning </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[PRML 笔记 1：1. Introduction]]></title>
+      <url>http://tommyjiang.github.io/2018/2018-12-01-PRML-notes-1/</url>
+      <content type="html"><![CDATA[
+<div class="alert alert-info"><i class="fa fa-info"></i>
+PRML 笔记 1。
+</div>
+
+<a id="more"></a>
+<h1 id="1-0-Introduction"><a href="#1-0-Introduction" class="headerlink" title="1.0 Introduction"></a>1.0 Introduction</h1><ul>
+<li>机器学习输入、输出：x（图片），y（vector）</li>
+<li>机器学习模型：y(x)，x 到 y 的映射</li>
+<li>训练集、测试集、泛化能力（核心）</li>
+<li>输入预处理（特征提取），测试时也需要对数据进行同样的处理</li>
+<li>有监督学习（分类、回归）</li>
+<li>无监督学习（聚类、密度估计）</li>
+<li>强化学习</li>
+</ul>
+<h1 id="1-1-案例：多项式拟合"><a href="#1-1-案例：多项式拟合" class="headerlink" title="1.1 案例：多项式拟合"></a>1.1 案例：多项式拟合</h1><ul>
+<li>Error(loss) function：MSE</li>
+<li>测试 function：RMSE</li>
+<li>训练集和测试集 loss 的关系，过拟合概念</li>
+<li>如何避免过拟合（增大数据集、加入正则项）</li>
+</ul>
+<h1 id="1-2-概率论"><a href="#1-2-概率论" class="headerlink" title="1.2 概率论"></a>1.2 概率论</h1><ul>
+<li>全概率公式</li>
+<li>贝叶斯公式</li>
+<li>先验概率、观测、后验概率</li>
+<li>概率密度函数、累积分布函数</li>
+<li>期望、条件期望、方差、协方差</li>
+<li>频率学派、贝叶斯学派（概率是确定的，还是观测值是确定的；本书倾向贝叶斯学派）</li>
+<li>高斯分布、极大似然估计（期望、方差）、方差的低估</li>
+<li>贝叶斯估计、最大后验估计</li>
+</ul>
+<h1 id="1-3-模型选择"><a href="#1-3-模型选择" class="headerlink" title="1.3 模型选择"></a>1.3 模型选择</h1><ul>
+<li>训练集、验证集、测试集</li>
+<li>交叉验证</li>
+</ul>
+<h1 id="1-4-维数灾"><a href="#1-4-维数灾" class="headerlink" title="1.4 维数灾"></a>1.4 维数灾</h1><h1 id="1-5-决策论"><a href="#1-5-决策论" class="headerlink" title="1.5 决策论"></a>1.5 决策论</h1><ul>
+<li>最小化错误率</li>
+<li>最小化期望损失：损失函数(cost/loss function)、效用函数</li>
+<li>拒绝域</li>
+<li>推断和决策</li>
+<li>联合分布：生成模型</li>
+<li>边缘分布，后验概率：判别模型</li>
+<li>直接输出 label</li>
+<li>后验概率的用途（最小化风险、拒绝选项、补偿先验概率、模型融合）</li>
+</ul>
+<h1 id="1-6-信息论"><a href="#1-6-信息论" class="headerlink" title="1.6 信息论"></a>1.6 信息论</h1><ul>
+<li>最大熵分布（离散：均匀分布、连续：高斯分布）</li>
+<li>KL 散度：表征拟合分布 q(x) 和真实分布 p(x) 之间的差异<script type="math/tex; mode=display">KL(p \vert \vert q) = -\int p(x) \mathrm{ln} \frac{q(x)}{p(x)} \mathop{}\!\mathrm{d}x</script></li>
+<li>KL 散度的不对称性，取 0 条件(p(x) = q(x))</li>
+<li>互信息</li>
+</ul>
+<h1 id="本章数学家"><a href="#本章数学家" class="headerlink" title="本章数学家"></a>本章数学家</h1><ul>
+<li>数学家(1)：贝叶斯(P21)</li>
+<li>数学家(2)：拉普拉斯(P27)</li>
+<li>数学家(3)：玻尔兹曼(P53)</li>
+<li>数学家(4)：香农(P55)</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> Geek </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Machine Learning </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[PRML 开源]]></title>
+      <url>http://tommyjiang.github.io/2018/2018-11-28-PRML-open-source/</url>
+      <content type="html"><![CDATA[
+<div class="alert alert-info"><i class="fa fa-info"></i>
+三大圣经之一都开源了。
+</div>
+
+<a id="more"></a>
+<p>在去年写的<a href="/2017/2017-07-15-machine-learning/" title="这篇博文">这篇博文</a>里，曾经介绍过机器学习三大圣经：PRML，ESL 和 MLAPP。最近，PRML 作者，微软剑桥研究院实验室负责人 Christopher Bishop 开源了他的经典著作——PRML，可以到<a href="http://link.zhihu.com/?target=https%3A//www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf" target="_blank" rel="noopener">这里</a>下载。</p>
+<p>在这本书的前面，Bishop 写了这本书奉献给妻子和孩子，还放了他们一家四口 2006 年 3 月到土耳其安卡拉看日全食的照片。最近也在看菠萝的书《癌症·新知》，书的后记提到，本来想做老师的他，通过写科普书也获得了很多成就感。以后我也要写一本经典的书，也要在前面附上一家人的照片，为了实现这个目标，努力！</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Geek </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Machine Learning </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[主动学习资料]]></title>
+      <url>http://tommyjiang.github.io/2018/2018-11-22-active-learning-materials/</url>
+      <content type="html"><![CDATA[
+<div class="alert alert-info"><i class="fa fa-info"></i>
+主动学习资料汇总
+</div>
+
+<a id="more"></a>
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+<p><strong>目录</strong></p>
+<ul>
+<li><a href="#paper">Paper</a><ul>
+<li><a href="#classification">Classification</a></li>
+</ul>
+</li>
+<li><a href="#博客">博客</a></li>
+<li><a href="#讲义">讲义</a></li>
+</ul>
+<!-- markdown-toc end -->
+<h1 id="Paper"><a href="#Paper" class="headerlink" title="Paper"></a>Paper</h1><h2 id="Classification"><a href="#Classification" class="headerlink" title="Classification"></a>Classification</h2><ul>
+<li><a href="https://arxiv.org/abs/1701.03551" target="_blank" rel="noopener">Cost-Effective Active Learning for Deep Image Classification</a></li>
+<li><a href="https://arxiv.org/abs/1708.00489v2" target="_blank" rel="noopener">Active Learning for Convolutional Neural Networks: A Core-set Approach</a></li>
+<li><a href="https://arxiv.org/abs/1703.02910" target="_blank" rel="noopener">Deep Bayesian Active Learning with Image Data</a><h2 id="Training"><a href="#Training" class="headerlink" title="Training"></a>Training</h2></li>
+<li><a href="https://arxiv.org/abs/1811.09347" target="_blank" rel="noopener">Revisiting Pre-training: An Efficient Training Method for Image Classification</a></li>
+</ul>
+<h1 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h1><ul>
+<li><a href="https://www.datacamp.com/community/tutorials/active-learning" target="_blank" rel="noopener">Active Learning: Curious AI Algorithms by <strong>DataCamp</strong></a></li>
+<li><a href="https://becominghuman.ai/accelerate-machine-learning-with-active-learning-96cea4b72fdb" target="_blank" rel="noopener">Accelerate Machine Learning with Active Learning by <strong>Matthew Slotkin@Medium</strong></a></li>
+<li><a href="https://towardsdatascience.com/active-learning-tutorial-57c3398e34d" target="_blank" rel="noopener">Active Learning Tutorial by <strong>Towards Data Science</strong></a></li>
+</ul>
+<h1 id="讲义"><a href="#讲义" class="headerlink" title="讲义"></a>讲义</h1><ul>
+<li><a href="http://hunch.net/~active_learning/active_learning_icml09.pdf" target="_blank" rel="noopener">A tutorial on active learning by <strong>Dasgupta@ICML 2009</strong></a></li>
+<li><a href="http://ice.dlut.edu.cn/valse2018/ppt/10-huangsj-AL-VALSE18.pdf" target="_blank" rel="noopener">Recent Progress on Active Learning by <strong>Sheng-Jun Huang@VALSE 2018</strong></a></li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> 工作 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> CV </tag>
+            
+            <tag> DL </tag>
+            
+            <tag> Active Learning </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Ubuntu 误删 Python 恢复记录]]></title>
+      <url>http://tommyjiang.github.io/2018/2018-11-21-ubuntu-delete-python/</url>
+      <content type="html"><![CDATA[
+<div class="alert alert-info"><i class="fa fa-info"></i>
+不作死就不会死
+</div>
+
+<a id="more"></a>
+<p>上午想找个 Kaggle 比赛记录的方法，最后选了 jupyter notebook，自己笔记本里，python 版本装得太多，都乱套了，一不小心卸载了系统自带的 Python，重启之后桌面都消失了，键盘也没法用了。</p>
+<p>上网查了解决方案，都是需要先进恢复模式，开机需要按 Shift，由于键盘没法用，这个方法也失效了。查到了 Ubuntu 官网写的，先用 Live USB，也就是 Ubuntu 的安装盘，试用 Ubuntu，然后再进命令行，先 mount 再利用 chroot 切换到电脑硬盘的 Ubuntu，然后执行 <code>sudo apt install ubuntu-minimal ubuntu-standard ubuntu-desktop</code>，关于 chroot 的用法可以参考 archlinux 的 <a href="https://wiki.archlinux.org/index.php/Chroot" target="_blank" rel="noopener">wiki</a></p>
+<p>这里还有个坑，就是在 chroot 之前，需要先连网，然后将配置文件拷过去，否则 chroot 之后 apt install 会提示无法联网，具体命令为：<code>cp /etc/resolv.conf etc/resolv.conf</code>。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Geek </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Ubuntu </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Paper queue]]></title>
+      <url>http://tommyjiang.github.io/2018/2018-11-13-paper-queue/</url>
+      <content type="html"><![CDATA[
+<div class="alert alert-info"><i class="fa fa-info"></i>
+论文队列
+</div>
+
+<a id="more"></a>
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+<p><strong>目录</strong></p>
+<ul>
+<li><a href="#paper-queue">Paper queue</a></li>
+<li><a href="#object-detection">Object Detection</a><ul>
+<li><a href="#framework">Framework</a><ul>
+<li><a href="#refinedet">RefineDet</a></li>
+<li><a href="#yolo-lite">YOLO-LITE</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#tricks">Tricks</a><ul>
+<li><a href="#drop">Drop</a><ul>
+<li><a href="#dropblock">DropBlock</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#active-learning">Active Learning</a><ul>
+<li><a href="#general">General</a><ul>
+<li><a href="#large-scale-visual-active-learning-with-deep-probabilistic-ensembles">Large-Scale Visual Active Learning with Deep Probabilistic Ensembles</a></li>
+</ul>
+</li>
+<li><a href="#classification">Classification</a><ul>
+<li><a href="#the-power-of-ensembles-for-active-learning-in-image-classification">The Power of Ensembles for Active Learning in Image Classification</a></li>
+</ul>
+</li>
+<li><a href="#segmentation">Segmentation</a><ul>
+<li><a href="#cereals">CEREALS</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#kaggle">Kaggle</a><ul>
+<li><a href="#human-protein">Human protein</a><ul>
+<li><a href="#human-level-protein-localization-with-cnn">Human-level protein localization with CNN</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!-- markdown-toc end -->
+<h1 id="Paper-queue"><a href="#Paper-queue" class="headerlink" title="Paper queue"></a>Paper queue</h1><ul>
+<li>Data<ul>
+<li>Data VS Performance<ul>
+<li><a href="https://arxiv.org/abs/1707.02968" target="_blank" rel="noopener">Revisiting Unreasonable Effectiveness of Data in Deep Learning Era</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Object Detection<ul>
+<li><a href="https://arxiv.org/abs/1808.07993" target="_blank" rel="noopener">Deep Feature Pyramid Reconfiguration for Object Detection</a> + 2018.11.14</li>
+<li>Framework<ul>
+<li><a href="https://arxiv.org/abs/1711.06897" target="_blank" rel="noopener">RefineDet</a> + 2018.11.14 / - 2018.11.16</li>
+<li><a href="https://arxiv.org/abs/1811.05588" target="_blank" rel="noopener">YOLO-LITE</a> + 2018.11.15 / - 2018.11.15</li>
+<li><a href="https://arxiv.org/abs/1807.11590" target="_blank" rel="noopener">Acquisition of Localization Confidence</a> + 2018.11.22 / </li>
+</ul>
+</li>
+<li>Trick<ul>
+<li><a href="https://arxiv.org/abs/1810.04002" target="_blank" rel="noopener">Decoupled Classification Refinement</a> + 2018.11.14 / - 2018.11.19</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Layer<ul>
+<li><a href="https://arxiv.org/abs/1703.06211" target="_blank" rel="noopener">Deformable Convolutional Networks</a> + 2018.11.14 / - 2018.11.17</li>
+<li><a href="https://arxiv.org/abs/1811.11168" target="_blank" rel="noopener">Deformable ConvNets v2</a> + 2018.11.30 / - 2018.12.2</li>
+<li><a href="https://arxiv.org/abs/1803.07066" target="_blank" rel="noopener">LRF</a> + 2018.11.14 / - 2018.11.17</li>
+</ul>
+</li>
+<li>Tricks<ul>
+<li>Drop<ul>
+<li><a href="https://arxiv.org/abs/1810.12890" target="_blank" rel="noopener">DropBlock</a> + 2018.11.14 / - 2018.11.16</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Kaggle<ul>
+<li>Human protein<ul>
+<li>[Human-level protein localization with CNN](<a href="https://openreview.net/forum?id=ryl5khRcKm**" target="_blank" rel="noopener">https://openreview.net/forum?id=ryl5khRcKm**</a> + 2018.11.06 / - 2018.11.14</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Automobile</li>
+</ul>
+<h1 id="Data"><a href="#Data" class="headerlink" title="Data"></a>Data</h1><h2 id="Data-VS-Performance"><a href="#Data-VS-Performance" class="headerlink" title="Data VS Performance"></a>Data VS Performance</h2><h3 id="Revisiting-Unreasonable-Effectiveness-of-Data-in-Deep-Learning-Era"><a href="#Revisiting-Unreasonable-Effectiveness-of-Data-in-Deep-Learning-Era" class="headerlink" title="Revisiting Unreasonable Effectiveness of Data in Deep Learning Era"></a>Revisiting Unreasonable Effectiveness of Data in Deep Learning Era</h3><p>核心结论：数据增长与模型性能增长基本呈<strong>对数线性</strong>关系，即数据增加一个数量级，模型性能提高的点数相同。从 ImageNet 1M 数据集扩展到 JFT-300M 数据集，4 epoch 需要在 50 块 K-80 GPU 上训练 2 个月。</p>
+<h1 id="Object-Detection"><a href="#Object-Detection" class="headerlink" title="Object Detection"></a>Object Detection</h1><h2 id="Framework"><a href="#Framework" class="headerlink" title="Framework"></a>Framework</h2><h3 id="RefineDet"><a href="#RefineDet" class="headerlink" title="RefineDet"></a>RefineDet</h3><p>CVPR 2018 paper，检测网络结构，主体包括 ARM(Anchor Refinement Module) 和 ODM(Object Detection Module)，利用 TCB(Transfer Connection Block)连接两者，将 ARM 的 feature 传给 ODM。</p>
+<p>ARM 采用 VGG/ResNet，预测分类和回归时采用 3*3 的滑动窗口，从 stride 8、16、32、64 的 feature map 分别设置 scale 为 4 倍 stride，ratio 为 0.5/1/2 的 anchor。ODM 类似 SSD，TCB 借鉴 FPN 思想，融合高层 feature map 信息。训练和测试时，ARM 都会舍弃分数低于阈值的 anchor box。</p>
+<p>结果：RefineDet320，VGG 16，40.3 FPS。RefineDet512+，ResNet-101，41.8 mAP on COCO。</p>
+<h3 id="YOLO-LITE"><a href="#YOLO-LITE" class="headerlink" title="YOLO-LITE"></a>YOLO-LITE</h3><p>关键指标：</p>
+<ul>
+<li>定位：无 GPU 设备</li>
+<li>个人电脑 21 FPS，网站 7 FPS</li>
+<li>7 层，482 MFLOPS 计算量</li>
+<li>mAP: PASCAL VOC 33.81%，COCO 12.26%</li>
+</ul>
+<p>数据集数量：</p>
+<ul>
+<li>PASCAL VOC 2007+2012 训练集：5011(20 类)</li>
+<li>COCO 2014 训练集：40775(80 类**</li>
+</ul>
+<p>其他小网络对比：</p>
+<ul>
+<li>Tiny-YOLOv2 @ 23.7% mAP, 2.4 FPS</li>
+<li>SSD Mobilenet V1 @ 21.0% mAP, 5.8 FPS</li>
+<li>YOLO-LITE @ 12.3% mAP, 21 FPS</li>
+</ul>
+<h3 id="Acquisition-of-Localization-Confidence-for-Accurate-Object-Detection"><a href="#Acquisition-of-Localization-Confidence-for-Accurate-Object-Detection" class="headerlink" title="Acquisition of Localization Confidence for Accurate Object Detection"></a>Acquisition of Localization Confidence for Accurate Object Detection</h3><ul>
+<li><h2 id="Trick"><a href="#Trick" class="headerlink" title="Trick"></a>Trick</h2><h3 id="Decoupled-Classification-Refinement-DCR"><a href="#Decoupled-Classification-Refinement-DCR" class="headerlink" title="Decoupled Classification Refinement(DCR)"></a>Decoupled Classification Refinement(DCR)</h3><p>ECCV 2018 paper，思想和 alignment 网络很像，单独训练一个网络用于 Detection 网络结果的分类，训练时采用 Hard Positive 杀误检，测试时所有结果均会经过该 refinement 网络。为减少计算量，提出了采用 RoIpooling 之后 feature 作为网络输入的方法。</p>
+</li>
+</ul>
+<h1 id="Layer"><a href="#Layer" class="headerlink" title="Layer"></a>Layer</h1><h2 id="Convolution-variation"><a href="#Convolution-variation" class="headerlink" title="Convolution variation"></a>Convolution variation</h2><h3 id="Deformable-Convolutional-Networks"><a href="#Deformable-Convolutional-Networks" class="headerlink" title="Deformable Convolutional Networks"></a>Deformable Convolutional Networks</h3><p>ICCV 2017 paper，学习卷积和 RoI pooling 时，点坐标的 offset，解决卷积和 RoI pooling 无法自适应地根据物体调整位置的问题。</p>
+<ul>
+<li>卷积层：与普通卷积并列，3*3 卷积，2N channel 的 feature map(N 为卷积核)，输出 feature map 上 N 个点的 x/y offset。</li>
+<li>RoI pooling：FC 层，输出归一化的 offset，需要乘 feature map 尺寸和 gamma。</li>
+<li>PS RoI pooling：全卷积，输出 2(C+1) k^2 channel 的 feature map，即对每一类和每一个 position，都输出一个 offset。</li>
+</ul>
+<p>结果：COCO，R-FCN mAP 34.5 -&gt; DCN mAP 37.1</p>
+<h3 id="Deformable-ConvNets-v2"><a href="#Deformable-ConvNets-v2" class="headerlink" title="Deformable ConvNets v2"></a>Deformable ConvNets v2</h3><p>DCN v1 提出两个层：Deformable Convolution 和 Deformable RoIpooling。</p>
+<p>本文改进：</p>
+<ul>
+<li>网络中更多层使用 Deformable Convolution。</li>
+<li>Deformable Convolution 中加入学习权重。</li>
+</ul>
+<h2 id="Pooling-variation"><a href="#Pooling-variation" class="headerlink" title="Pooling variation"></a>Pooling variation</h2><h3 id="Learning-Region-Features-for-Object-Detection"><a href="#Learning-Region-Features-for-Object-Detection" class="headerlink" title="Learning Region Features for Object Detection"></a>Learning Region Features for Object Detection</h3><p>ECCV 2018 paper，学习 pooling 层的参数。</p>
+<ul>
+<li>RoI pooling<ul>
+<li>Support Region：RoI</li>
+<li>Weight：1/R_{bk}</li>
+</ul>
+</li>
+<li>Aligned RoI pooling<ul>
+<li>Support Region：RoI</li>
+<li>Weight：双线性插值，只和临近的四个 pixel 有关</li>
+</ul>
+</li>
+<li>Deformable RoI pooling<ul>
+<li>Support Region：整张图</li>
+<li>Weight：双线性插值</li>
+</ul>
+</li>
+</ul>
+<p>图片坐标 p 编码为 2C 维，RoI 编码为 4C 维，之后做线性变换，变换矩阵可学习。图像特征通过 1*1 的卷积计算。图片坐标如果全部计算，计算量太大，因此采用稀疏采样的方法，每 \sqrt(H * W / 196) 个 pixel 进行一次采样。</p>
+<p>结果：ResNet 50 Faster RCNN，COCO，mAP 34.1</p>
+<h1 id="Tricks"><a href="#Tricks" class="headerlink" title="Tricks"></a>Tricks</h1><h2 id="Drop"><a href="#Drop" class="headerlink" title="Drop"></a>Drop</h2><h3 id="DropBlock"><a href="#DropBlock" class="headerlink" title="DropBlock"></a>DropBlock</h3><p>新的正则化方法，DropBlock。</p>
+<p>文中指出，Dropout 适合 FC 层，但不适合卷积层，因为卷积层的 feature 是空间相关的。</p>
+<p>参数包括两个，block_size 和 gamma，gamma 是用 keep probability、feat size、block size 计算得到的。训练开始时，keep prob 取 1，然后逐渐减小到 0.9。</p>
+<p>结果：ImageNet 上，ResNet 50，top 1 76.51 -&gt; 78.35，COCO 上，RetinaNet，mAP 36.5 -&gt; 38.2。</p>
+<h1 id="Kaggle"><a href="#Kaggle" class="headerlink" title="Kaggle"></a>Kaggle</h1><h2 id="Human-protein"><a href="#Human-protein" class="headerlink" title="Human protein"></a>Human protein</h2><h3 id="Human-level-protein-localization-with-CNN"><a href="#Human-level-protein-localization-with-CNN" class="headerlink" title="Human-level protein localization with CNN"></a>Human-level protein localization with CNN</h3><p>投 ICLR 2019 的一篇文章，核心思想是从不同的 feature map 做 GAE(Global Average Pooling)，concat 之后再过 FC 和 sigmoid，F1 score 能到 0.8，没有太多新意，pass。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 工作 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> CV </tag>
+            
+            <tag> DL </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[2018 双十一总结]]></title>
+      <url>http://tommyjiang.github.io/2018/2018-11-11-2018-double-eleven/</url>
+      <content type="html"><![CDATA[
+<div class="alert alert-info"><i class="fa fa-info"></i>
+又是一年一度的双十一
+</div>
+
+<a id="more"></a>
+<p>双十一总结。</p>
+<h1 id="自己购物"><a href="#自己购物" class="headerlink" title="自己购物"></a>自己购物</h1><h2 id="钢笔"><a href="#钢笔" class="headerlink" title="钢笔"></a>钢笔</h2><p>今年的主力是百利金的 M200 牛奶咖啡。本来生日的时候就想下单，这次双十一满 400 减 50，再加上店铺优惠券减 30，一共省了 180，遂拔草，静待喜提。之前想买的小米机器人，因为买了这支笔，只能割爱了，以后靠我的人工智能负责家里的卫生了。</p>
+<h2 id="牙齿护理"><a href="#牙齿护理" class="headerlink" title="牙齿护理"></a>牙齿护理</h2><p>今年双十一的另一大主题是牙齿护理装备，包括松下冲牙器、Gum 牙线、青蛙软毛小头牙刷和小鹿妈妈牙线棒。从小我的牙就不好，9 月去复查牙周，又花了将近 2000 做龈下刮治。这下长记性了，不能再花这冤枉钱了，平时就要注意牙齿的清洁和护理。等冲牙器到了试试效果怎么样。</p>
+<h2 id="书"><a href="#书" class="headerlink" title="书"></a>书</h2><p>今年还送了大宝一本书，是三联在公众号推送的西南联大英文课，希望能给大宝提供讲课和辅导的素材。</p>
+<h1 id="大宝购物"><a href="#大宝购物" class="headerlink" title="大宝购物"></a>大宝购物</h1><p>待补充</p>
+<h1 id="双十一生活"><a href="#双十一生活" class="headerlink" title="双十一生活"></a>双十一生活</h1><p>今年双十一是周日，难得休息一天和大宝在家。上午去家乐福买菜准备中午做饭，一共三个菜，孜然羊肉、鱼香肉丝、辣炒木耳菜。一顿做了两顿的量，准备晚上继续吃。中午米饭放在电饭锅里，忘了取消保温模式，一直插着电，等晚上吃的时候，饭都硬了，吃完之后我俩都不太舒服，吸取教训，下次把插头先拔了。</p>
+<p>中午的美食：</p>
+<p><img src="/images/2018/2018-11-11-双十一做饭.jpeg" alt=""></p>
+<p>晚上把购物车清空了，给淘宝贡献了 5000 的销售额，晚上出发晚，不想挤地铁，选了 80 换 693 的公交路线，没想到 80 路的司机太勇猛，坐车坐得很不舒服，下次还是晚上早点出来吃个饭然后回来，新开辟的公交路线以失败告终。</p>
+<p>11.18 补充：时隔一周，和大宝再次坐 80 路，俩人还是非常不舒服，以后不坐这个破玩意儿了，还是坐地铁吧。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 生活 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 购物 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[吴军 态度 摘记]]></title>
+      <url>http://tommyjiang.github.io/2018/2018-11-10-attitude/</url>
+      <content type="html"><![CDATA[
+<div class="alert alert-info"><i class="fa fa-info"></i>
+吴军老师的书都还不错。
+</div>
+
+<a id="more"></a>
+<h1 id="态度-吴军"><a href="#态度-吴军" class="headerlink" title="态度 吴军"></a>态度 吴军</h1><p>教育首先是关怀备至地、深思熟虑地、小心翼翼地去触及年轻的心灵。</p>
+<p><a id="org4b8c6c8"></a></p>
+<h2 id="1-乐观的人生态度"><a href="#1-乐观的人生态度" class="headerlink" title="1. 乐观的人生态度"></a>1. 乐观的人生态度</h2><ul>
+<li>美国人说，拼命读书能否让将来的生活更好，还是一个未知数，但是快快乐乐地生活18年，这是能够看到的，自己也能够把握；人生能有多少个18年，与其愁眉苦脸地度过少年时光，不如先快快乐乐地过18年。</li>
+<li>人如果不能过得快乐，有再多的钱也没有半点儿意义。</li>
+<li>有理想并努力实现自己的愿望。</li>
+</ul>
+<p><a id="org9be5346"></a></p>
+<h2 id="3-抵制诱惑"><a href="#3-抵制诱惑" class="headerlink" title="3. 抵制诱惑"></a>3. 抵制诱惑</h2><ul>
+<li>当人们对一种简单而强烈的快感上瘾后，对于其他事情就失去了兴趣，这就如同吸毒带来的快感一样。</li>
+<li>抵御诱惑最根本的方法是有一个长远的大目标。</li>
+<li>做一些有成就感、有回报的事情。</li>
+</ul>
+<p><a id="org07e68b5"></a></p>
+<h2 id="4-成功是成功之母"><a href="#4-成功是成功之母" class="headerlink" title="4. 成功是成功之母"></a>4. 成功是成功之母</h2><ul>
+<li>你从四五岁开始就能听完整的严肃音乐会，那个年龄的孩子大多无法安安静静地在音乐厅里坐上两个小时。后来每当旧金山有好的音乐会、芭蕾舞和歌剧演出，你都有极大的兴趣去听去看，去现场体会。随着年龄的增加，你看了世界上很多大师的表演，你的鉴别能力也在提升。</li>
+<li>人只有成功过一次，才更容易成功第二次、第三次，因此失败不是成功之母，成功才是成功之母。</li>
+</ul>
+<p><a id="orgbe689ca"></a></p>
+<h2 id="5-最好是更好的敌人"><a href="#5-最好是更好的敌人" class="headerlink" title="5. 最好是更好的敌人"></a>5. 最好是更好的敌人</h2><ul>
+<li>很多时候，一些人无所作为不是因为不想做事，而是一根筋地追求最好，最后什么也得不到。</li>
+<li>做事情不怕慢，就怕停。</li>
+</ul>
+<p><a id="orgf369a53"></a></p>
+<h2 id="6-好习惯成就一生"><a href="#6-好习惯成就一生" class="headerlink" title="6. 好习惯成就一生"></a>6. 好习惯成就一生</h2><ul>
+<li>撒切尔<ul>
+<li>注意你的想法，因为它能决定你的言辞和行动。</li>
+<li>注意你的言辞和行动，因为它能主导你的行为。</li>
+<li>注意你的行为，因为它能变成你的习惯。</li>
+<li>注意你的习惯，因为它能塑造你的性格。</li>
+<li>注意你的性格，因为它能决定你的命运。</li>
+</ul>
+</li>
+</ul>
+<p><a id="org52c6b97"></a></p>
+<h2 id="7-格局要大"><a href="#7-格局要大" class="headerlink" title="7. 格局要大"></a>7. 格局要大</h2><ul>
+<li>上次你们副校长埃里克·格雷姆松在我们家吃饭时对你说，MIT还在世的本科校友中，有大约1/3是大公司的高管和创始人，也就是说，他们并不是那些满足于赚小钱的人。</li>
+</ul>
+<p><a id="orgdb83ea7"></a></p>
+<h2 id="8-境界要高"><a href="#8-境界要高" class="headerlink" title="8. 境界要高"></a>8. 境界要高</h2><ul>
+<li>人一旦习惯获得短期利益，境界就高不起来了，可能永远不会追求更高的境界了。</li>
+<li>人的境界高一点儿，多关注长远，少盯着眼前，才能走得更远。</li>
+</ul>
+<p><a id="org003c371"></a></p>
+<h2 id="10-教育改变命运"><a href="#10-教育改变命运" class="headerlink" title="10. 教育改变命运"></a>10. 教育改变命运</h2><ul>
+<li>教育能让人有见识</li>
+</ul>
+<p><a id="orgfd916ed"></a></p>
+<h2 id="12-做个好人"><a href="#12-做个好人" class="headerlink" title="12. 做个好人"></a>12. 做个好人</h2><ul>
+<li>谷歌非常独特的一点就是不作恶。这对于一家以营利为目的的公司来讲，是非常难得的。</li>
+<li>It’s nice to be great, yet it’s great to be nice.</li>
+</ul>
+<p><a id="org4b9199d"></a></p>
+<h2 id="18-第一次投资的建议"><a href="#18-第一次投资的建议" class="headerlink" title="18. 第一次投资的建议"></a>18. 第一次投资的建议</h2><ul>
+<li>永远不要相信自己能够打败市场</li>
+<li>要对市场有信心</li>
+<li>定投指数基金 ETF</li>
+</ul>
+<p><a id="orgb0f6959"></a></p>
+<h2 id="19-投资红线"><a href="#19-投资红线" class="headerlink" title="19. 投资红线"></a>19. 投资红线</h2><ul>
+<li>凡事说干就干是一个好习惯</li>
+<li>做空股票</li>
+<li>杠杆投资</li>
+<li>不要眼红别人抓住了投机机会</li>
+</ul>
+<p><a id="org6a990ae"></a></p>
+<h2 id="20-金钱观"><a href="#20-金钱观" class="headerlink" title="20. 金钱观"></a>20. 金钱观</h2><ul>
+<li>上大学的意义：能做一些对社会比较有影响力的事，而不是以挣钱多少来衡量。换句话说，在美国，衡量精英的标准不是钱和学历，而是影响力。对于温饱不是问题的人来说，在年轻的时候能够懂得把钱看得淡一点儿，是有必要的。</li>
+<li>满足于做一个电脑工程师、华尔街的股票交易员，或者一个家庭医生，挣的钱或许不少，但是从社会影响力来讲，依然没有摆脱穷人的心态。</li>
+<li>如果一个人能够在能力水平上晋升一级，不仅贡献多10倍，所做的事情的影响力，包括自己的收入也常常多10倍。做5件5级的事，花的时间可能比做一件三级的事要多，但是收益和影响只有后者的5％。</li>
+</ul>
+<p><a id="org799b002"></a></p>
+<h2 id="21-交友观"><a href="#21-交友观" class="headerlink" title="21. 交友观"></a>21. 交友观</h2><ul>
+<li>你在工作之后会发现，有些同事即使共事时间很长，也不一定能深交。在工作中，更多是业务上的关系，难免有点儿功利。但是大学却不同，同学的功利心不会太强，彼此愿意相互照应，这是出于年轻人的善意和天然的交友欲望。</li>
+<li>大学交朋友的另一个好处是，同一个班上的同学，不论家境和其他条件相差多大，到了一个班里学习，彼此就是平等的，或者相对平等。</li>
+</ul>
+<p><a id="orgf5ed320"></a></p>
+<h2 id="22-爱情观"><a href="#22-爱情观" class="headerlink" title="22. 爱情观"></a>22. 爱情观</h2><ul>
+<li>没有爱情的人是有缺陷的，没有经历真正爱情的人生也是不完整的。</li>
+<li>唯一要注意的就是不要凡事太强势。据我观察，很多从名校毕业的人都有这个特点。</li>
+</ul>
+<p><a id="org1b6b793"></a></p>
+<h2 id="25-有效沟通"><a href="#25-有效沟通" class="headerlink" title="25. 有效沟通"></a>25. 有效沟通</h2><ul>
+<li>有效的沟通要以对方的确认为准</li>
+<li>要以对方听得懂的话来沟通，切忌卖弄自己的知识，把简单的问题讲复杂了。</li>
+<li>沟通要简洁，切中要害。</li>
+<li>善辩不等于好的沟通，沟通的目的是让对方接受自己的想法，而非把对方驳得哑口无言。</li>
+</ul>
+<p><a id="org6a254a6"></a></p>
+<h2 id="26-体面拒绝别人"><a href="#26-体面拒绝别人" class="headerlink" title="26. 体面拒绝别人"></a>26. 体面拒绝别人</h2><ul>
+<li>帮忙四种 case<ul>
+<li>能力不及，不能帮上忙，直接在第一时间委婉拒绝。</li>
+<li>能帮上忙，但是却不想帮，因为自己的代价太大。如果不想帮，就不要勉强自己，但也要及早通知对方。</li>
+<li>不论多困难都愿意帮，而且极有可能办成。这时，就答应对方，然后就全力去做。</li>
+<li>虽然愿意帮，有可能帮上，也可能帮不上。这时，要将自己的实际情况告诉对方，千万不要轻易许诺，不要拍胸脯。</li>
+</ul>
+</li>
+<li>切忌不要做的事<ul>
+<li>为了显示自己的能耐吹牛皮。</li>
+<li>对于做不到的事情，提出给人廉价的补偿。</li>
+<li>帮忙别指望回报。</li>
+<li>帮违反原则的忙。</li>
+</ul>
+</li>
+</ul>
+<p><a id="orgf4c767e"></a></p>
+<h2 id="27-上帝喜欢笨人"><a href="#27-上帝喜欢笨人" class="headerlink" title="27. 上帝喜欢笨人"></a>27. 上帝喜欢笨人</h2><ul>
+<li>笨人不懂得打擦边球，不懂得把利益最大化，因此凡事要留很大的余量。</li>
+</ul>
+<p><a id="org1425e8c"></a></p>
+<h2 id="28-科学研究方法"><a href="#28-科学研究方法" class="headerlink" title="28. 科学研究方法"></a>28. 科学研究方法</h2><ul>
+<li>提出质疑</li>
+<li>小心求证</li>
+<li>复杂问题分解为多个简单问题</li>
+<li>合理地解释结果，上升到结论并推广</li>
+</ul>
+<p><a id="org3a89dbf"></a></p>
+<h2 id="29-读名著"><a href="#29-读名著" class="headerlink" title="29. 读名著"></a>29. 读名著</h2><ul>
+<li>读一部经典的介绍，或简写本和精彩章节的节选，慢慢了解了它的内容，再整篇研读。</li>
+<li>先快速通读一遍，了解大致内容，在重要的地方做一个标记，回来再仔细读。</li>
+</ul>
+<p><a id="org54e7c21"></a></p>
+<h2 id="31-学好数学"><a href="#31-学好数学" class="headerlink" title="31. 学好数学"></a>31. 学好数学</h2><ul>
+<li>数学是所有自然科学的基础，甚至对经济学这样的人文学科也至关重要</li>
+<li>数学能培养人的逻辑推理能力</li>
+<li>学习数学可以提高你的阅读理解能力</li>
+</ul>
+<p><a id="orgfa36dab"></a></p>
+<h2 id="32-大学学什么"><a href="#32-大学学什么" class="headerlink" title="32. 大学学什么"></a>32. 大学学什么</h2><ul>
+<li>学习一生要用的科学常识和人文素养</li>
+<li>学习做事情的方法，并掌握自我学习的能力</li>
+<li>培养协作精神</li>
+</ul>
+<p><a id="orge508b46"></a></p>
+<h2 id="33-选大学"><a href="#33-选大学" class="headerlink" title="33. 选大学"></a>33. 选大学</h2><ul>
+<li>导师比学校重要</li>
+<li>他不仅能让你在学术界迅速站稳脚跟，而且可能对你一辈子的职业发展都有帮助。</li>
+<li>好的导师会告诉学生哪些事情不要做，这样就能给博士省很多时间。平庸的导师则要求学生按照自己的想法去做，这就抑制了学生的兴趣和创造力。</li>
+<li>一个年轻的博士靠自己的努力被整个学术界认可，要花很长时间，甚至是不太可能的事情。</li>
+</ul>
+<p><a id="org0b2c978"></a></p>
+<h2 id="34-科技论文技巧"><a href="#34-科技论文技巧" class="headerlink" title="34. 科技论文技巧"></a>34. 科技论文技巧</h2><ul>
+<li>四部分必须写清楚<ul>
+<li>问题的提出和前人的工作综述</li>
+<li>自己的工作想得到什么样的结论</li>
+<li>比较自己工作和相关工作的优劣</li>
+<li>实验所用的数据，要尽可能地使用那些同行能够得到的。可比性对科学研究非常重要</li>
+</ul>
+</li>
+</ul>
+<p><a id="org71e468f"></a></p>
+<h2 id="35-做事前不要过分算概率"><a href="#35-做事前不要过分算概率" class="headerlink" title="35. 做事前不要过分算概率"></a>35. 做事前不要过分算概率</h2><ul>
+<li>在大学时，需要尝试自己喜欢做的事情。</li>
+<li>只有很少的人每天所做的事情都是他们非常喜欢的工作。一个人是否会喜欢一件事，也是要尝试一下才知道的，特别是在年轻的时候。人的格局不能太小，不能完全用利益来衡量自己该做什么事情。</li>
+<li>往前走，去闯/别灰心，继续闯/随缘，别后悔</li>
+<li>年轻人在做任何决定之前应该做好准备，三思而行，但是对于想清楚的事情，做起来就不要犹豫。</li>
+</ul>
+<p><a id="org96fbe71"></a></p>
+<h2 id="36-专业和业余的区别"><a href="#36-专业和业余的区别" class="headerlink" title="36. 专业和业余的区别"></a>36. 专业和业余的区别</h2><ul>
+<li>专业特点<ul>
+<li>发挥稳定</li>
+<li>很好地控制自己的情绪</li>
+<li>对小事处理认真</li>
+<li>遵守流程规范</li>
+<li>成体系的领域知识</li>
+</ul>
+</li>
+</ul>
+<p><a id="orga4971f6"></a></p>
+<h2 id="38-服从是学会领导的第一步"><a href="#38-服从是学会领导的第一步" class="headerlink" title="38. 服从是学会领导的第一步"></a>38. 服从是学会领导的第一步</h2><ul>
+<li>领导力从学会服从开始</li>
+<li>当你没有接受过和执行过别人给你的命令时，很难理解被领导者的心理。</li>
+<li>服从、合作、当好助手</li>
+</ul>
+<p><a id="orgaf7d62e"></a></p>
+<h2 id="39-捡重要的先做"><a href="#39-捡重要的先做" class="headerlink" title="39. 捡重要的先做"></a>39. 捡重要的先做</h2><ul>
+<li>事实上，你几乎没有时间做完所有需要完成的工作，因此只能捡最重要的先做。不要因为任务简单就开始干，遇到事情先要强迫自己慢三拍，想清楚任务的优先级，先去做那些特别重要的工作。这样才不会被大量简单重复的劳动占去全部时间，致使重要的工作没有时间做。公司里有一个词叫伪工作（pseudo work），就是指那些花了时间做却没有影响力的工作。</li>
+</ul>
+<p><a id="orge94a355"></a></p>
+<h2 id="40-主动心态"><a href="#40-主动心态" class="headerlink" title="40. 主动心态"></a>40. 主动心态</h2><ul>
+<li>所谓主动，就是指你有自己的想法和规划，并且随时和他进行沟通，得到他甚至其他同事的反馈。</li>
+<li>公司里的工程师或者研究员通常不会像大学教授那样给你布置作业，并且给你细节指导，因为他们通常会忙于自己的工作。</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> 生活 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 读书 </tag>
+            
+            <tag> 教育 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[2018 程序员节]]></title>
-      <url>http://tommyjiang.coding.me/2018/2018-10-24-first-coders-day/</url>
+      <url>http://tommyjiang.github.io/2018/2018-10-24-first-coders-day/</url>
       <content type="html"><![CDATA[
 <div class="alert alert-info"><i class="fa fa-info"></i>
 第一个程序员节
@@ -18,7 +730,7 @@
 <p>到了大学，开始正式接触编程。大一上的第一门课，就是五教5103的 C 语言，第一节课上，老师提到：<code>程序=数据结构+算法</code>，可惜当时我完全不理解这句话。有一节课老师教 printf 语句，要打印几行内容，临下课前还卖个关子，说其实有更简单的方法，后来我才知道所谓更简单的方法是用循环(loop)。大一小学期学了所谓的 C++，其实就等于把 C 的 struct 换成了 class，没学到什么 C++ 更深层的内容。 大二下，选修了 Java，同时也学 MATLAB，当时觉得 MATLAB 真好用，不用声明变量，可以直接做矩阵乘法，还有各种插值、优化算法，当然了，用的都是破解版。大二小学期学了 VHDL，被戏称为 Very hard language，主要用于控制 FPGA。</p>
 <p>博士阶段，一年级下学期选修了数据结构，用 C 实现了马踏棋盘程序，用到了栈结构，当时没用贪心算法，试图暴力破解，发现完全不可能，才渐渐明白了<code>程序=数据结构+算法</code>这句话。博士用的最多的是仿真软件，包括 MATLAB/Simulink、PSCAD、PowerFactory，前两个分别对应 MATLAB 和 Fortran 语言，PF 最开始是自己的 DSL 语言，在大概 2014 年的时候开放了 API，可以通过 Python 调用。博士阶段我觉得做的最成功的一件事儿，就是用 Python 实现了 PF 和 MATLAB 的联合优化仿真，PF 负责计算电力系统动态，MATLAB/CPLEX 负责求解优化问题，Python 负责将两者连起来，当然了，即使实现了也没什么用，因为根本没人 care。</p>
 <p>毕业到了电科院，和小哥在工作闲暇的时候用 Python 实现了数据爬虫和数据分析，还画了带区间交易量的 K 线图，虽然最后也没实际应用，但自己实现一个个功能的感觉还是很爽的，因为都是实实在在的，不像工作整天忽悠。当时不知道 Python 的 <code>pickle</code> 模块，每次读取结果都用 txt 格式，I/O 浪费了很多时间……</p>
-<p>转行以后，主要用 Python 进行算法迭代和模型训练，C++ 写线上部署逻辑，虽然水平和周围 top 的同事比还有很大差距，但至少在不断积累了，之后要不断制定更高的目标，并为了目标努力奋斗！</p>
+<p>转行以后，主要用 Python 进行算法迭代和模型训练，C++ 写线上部署逻辑，虽然水平和周围 top 的同事比还有很大差距，但至少在不断积累了，希望以后能越来越好吧。</p>
 ]]></content>
       
         <categories>
@@ -37,8 +749,44 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Google Scholar 0 引用文章邮件提醒]]></title>
+      <url>http://tommyjiang.github.io/2018/2018-09-21-google-scholar-alert/</url>
+      <content type="html"><![CDATA[
+<div class="alert alert-info"><i class="fa fa-info"></i>
+继续学术。
+</div>
+
+<a id="more"></a>
+<p>Google Scholar 是学术研究的有力助手，可以快速搜索文章，查看引用文献。有个很有用的功能是，当一篇文章有新引用的时候，自动发邮件提醒。</p>
+<p>之前设置的提醒，都是针对已经有引用的文章，方法是直接点下面的 Cited by，再点左下角的 Create alert。今天想把最新的文章也设上提醒，发现没法直接点 Cited by，因为还没有引用，上 Stack Overflow 找到答案，记录如下。</p>
+<ul>
+<li>新建 Google Scholar Profile，已经有可跳过该步骤。</li>
+<li>在自己的 Profile 页面，点中间的加号，选 Add articles。</li>
+<li>搜索想要添加 alert 的文献，鼠标移到上面，右键，拷贝链接(Chrome 浏览器可用)。</li>
+<li>将链接中，cluster= 后面的 20 位数字复制。</li>
+<li>粘贴到 <code>https://scholar.google.com/scholar?oi=bibs&amp;hl=en&amp;cites=</code> 的最后面。</li>
+<li>打开粘贴好的链接，可以 create alert 了。</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> 工作 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Trick </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[2018.09 微言]]></title>
-      <url>http://tommyjiang.coding.me/2018/2018-09-03-2018-09-weiyan/</url>
+      <url>http://tommyjiang.github.io/2018/2018-09-03-2018-09-weiyan/</url>
       <content type="html"><![CDATA[
 <div class="alert alert-info"><i class="fa fa-info"></i>
 2018.09 微言
@@ -88,7 +836,7 @@
     
     <entry>
       <title><![CDATA[而立之年，成家立业]]></title>
-      <url>http://tommyjiang.coding.me/2018/2018-09-01-31-birthday/</url>
+      <url>http://tommyjiang.github.io/2018/2018-09-01-31-birthday/</url>
       <content type="html"><![CDATA[
 <div class="alert alert-info"><i class="fa fa-info"></i>
 雄关漫道真如铁，而今迈步从头越。
@@ -119,7 +867,7 @@
     
     <entry>
       <title><![CDATA[李健访谈语录整理]]></title>
-      <url>http://tommyjiang.coding.me/2018/2018-09-01-lijian-talk-index/</url>
+      <url>http://tommyjiang.github.io/2018/2018-09-01-lijian-talk-index/</url>
       <content type="html"><![CDATA[
 <div class="alert alert-info"><i class="fa fa-info"></i>
 音乐诗人
@@ -152,7 +900,7 @@
     
     <entry>
       <title><![CDATA[吉他如何创造音乐传奇]]></title>
-      <url>http://tommyjiang.coding.me/2018/2018-08-28-lijian-talk-1/</url>
+      <url>http://tommyjiang.github.io/2018/2018-08-28-lijian-talk-1/</url>
       <content type="html"><![CDATA[
 <div class="alert alert-info"><i class="fa fa-info"></i>
 李健语录（一）
@@ -270,7 +1018,7 @@
     
     <entry>
       <title><![CDATA[沉住气，还能翻]]></title>
-      <url>http://tommyjiang.coding.me/2018/2018-08-26-TI8/</url>
+      <url>http://tommyjiang.github.io/2018/2018-08-26-TI8/</url>
       <content type="html"><![CDATA[
 <div class="alert alert-info"><i class="fa fa-info"></i>
 DotA 如人生。
@@ -300,7 +1048,7 @@ DotA 如人生。
     
     <entry>
       <title><![CDATA[CV Object Detection 论文汇总]]></title>
-      <url>http://tommyjiang.coding.me/2018/2018-08-15-OD-papers/</url>
+      <url>http://tommyjiang.github.io/2018/2018-08-15-OD-papers/</url>
       <content type="html"><![CDATA[
 <div class="alert alert-info"><i class="fa fa-info"></i>
 CV DL OD 文献引用关系图。
@@ -489,7 +1237,7 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
     
     <entry>
       <title><![CDATA[2018.08 微言]]></title>
-      <url>http://tommyjiang.coding.me/2018/2018-08-15-2018-08-weiyan/</url>
+      <url>http://tommyjiang.github.io/2018/2018-08-15-2018-08-weiyan/</url>
       <content type="html"><![CDATA[
 <div class="alert alert-info"><i class="fa fa-info"></i>
 2018.08 微言
@@ -548,7 +1296,7 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
     
     <entry>
       <title><![CDATA[笑兔美食杂记]]></title>
-      <url>http://tommyjiang.coding.me/2018/2018-08-04-restaurant-I/</url>
+      <url>http://tommyjiang.github.io/2018/2018-08-04-restaurant-I/</url>
       <content type="html"><![CDATA[
 <div class="alert alert-info"><i class="fa fa-info"></i>
 逛吃逛吃
@@ -576,7 +1324,7 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
     
     <entry>
       <title><![CDATA[RMBP 更换电池记]]></title>
-      <url>http://tommyjiang.coding.me/2018/2018-08-01-RMBP-change-battery/</url>
+      <url>http://tommyjiang.github.io/2018/2018-08-01-RMBP-change-battery/</url>
       <content type="html"><![CDATA[
 <div class="alert alert-info"><i class="fa fa-info"></i>
 喜提苹果电脑一台
@@ -612,62 +1360,8 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
     </entry>
     
     <entry>
-      <title><![CDATA[数据标注系列文章（一）]]></title>
-      <url>http://tommyjiang.coding.me/2018/2018-07-25-image-annotation-1/</url>
-      <content type="html"><![CDATA[
-<div class="alert alert-info"><i class="fa fa-info"></i>
-数据标注系列文章（一）
-</div>
-
-<a id="more"></a>
-<!-- toc -->
-<p>关于深度学习算法的总结网上已经汗牛充栋了，但关于数据标注的总结应该凤毛麟角甚至没人关心。毕竟和算法比起来，标注没什么技术含量。由于目前机器学习的主流仍然是监督学习(supervised learning)，监督学习的一大特点是需要标注好的数据作为输入训练模型。目前的标注需要消耗大量的人力，如何改善标注质量、节约标注成本，是值得深入讨论的问题。</p>
-<h1 id="2012-Crowdsourcing-annotations-for-visual-object-detection"><a href="#2012-Crowdsourcing-annotations-for-visual-object-detection" class="headerlink" title="2012. Crowdsourcing annotations for visual object detection"></a>2012. Crowdsourcing annotations for visual object detection</h1><p>目前找到的最早讨论众包数据标注的文章，作者之一是大名鼎鼎的<a href="https://en.wikipedia.org/wiki/Fei-Fei_Li" target="_blank" rel="noopener">李飞飞</a>，文章链接<a href="http://vision.stanford.edu/pdf/bbox_submission.pdf" target="_blank" rel="noopener">在这</a>。</p>
-<p>文章主要讨论了众包平台对目标检测算法数据的标注流程。目标检测算法对数据的要求是：</p>
-<ul>
-<li>准确性：物体周围有且仅有一个紧贴物体边缘的框(bounding box)。</li>
-<li>全面性：图片中所有需要标注的物体都应该有对应的框。</li>
-</ul>
-<p>为了保证数据质量，一般的标注方法采用多数表决法(majority voting)，即让多个人标注取交集。本文采用将标注任务分解的方法，将标注任务分解为三个子任务：</p>
-<ul>
-<li>画框子任务：在一个物体周围画一个框。</li>
-<li>框准确性子任务：检查框画得是否正确。</li>
-<li>框全面性子任务：检查是否图中所有待标注物体都有一个框。</li>
-</ul>
-<p>对于准确性和全面性子任务，由于只需要回答是和否，因此很容易导致作弊，即不看图片全选是/否或随便选。为防止恶意操作，需要对质量进行验证(validation)。文中采用事先在图片中植入已经有 Ground Truth 的图片来进行检验。</p>
-<p>根据统计结果，画框任务的通过率只有 *62.2%*，画一个框平均需要 50.8s。而准确性和全面性的任务平均只需要 21.9s 和 15.3s，由此得出本文的工作流比多数表决法省时间(至少需要画两次)。</p>
-<p>标注文档清晰整洁，值得学习。</p>
-<h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><ol>
-<li>只讨论了检测标注任务，未涉及到画线、多边形等任务(分类任务较简单)。</li>
-<li>全面性子任务如果发现有漏的物体，如何有效使画框子任务的人员知道应该画在哪，例如做个标记？</li>
-<li>工钱怎么算，按画框数和检查框数？可以按照完成的平均时间比例设置单价。</li>
-</ol>
-<h1 id="2017-Polygon-RNN"><a href="#2017-Polygon-RNN" class="headerlink" title="2017. Polygon-RNN"></a>2017. Polygon-RNN</h1><p>CVPR 2017 Best paper 提名，论文链接看<a href="https://arxiv.org/abs/1704.05548" target="_blank" rel="noopener">这里</a>。搜了搜中文的内容，没有特别好的解读，正好借学习的机会总结。</p>
-<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>Polygon-RNN 要解决的是如何对图片进行分割标注，即确定图片中的每一个像素是属于哪一个物体。但本文在处理时，将 pixel-labeling problem 转化为 polygon prediction task，即多边形预测任务——一个封闭多边形内的所有像素属于同一个物体。通过文中方法可以有效提升标注速度(Cityscapes 数据集上提升了 4.7 倍)。</p>
-<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>Polygon-RNN 的输入为一个 bounding box，输出为该 bounding box 之内物体的封闭的 polygon。封闭指的是 polygon 任意两个相邻顶点之间均有一条边。一个封闭多边形有很多等价的表示，论文中采用顺时针描述多边形，起点可以任意指定。</p>
-<p>Polygon-RNN 中包含一个 CNN 和一个 RNN，CNN 用于提取图像特征，RNN 用于生成 polygon 的顶点。</p>
-<h3 id="CNN"><a href="#CNN" class="headerlink" title="CNN"></a>CNN</h3><p>CNN 的输入为 224*224*3 的图片，输出为图片的特征(28*28*128)。Backbone 采用 VGG16，从 pool_2，pool_3，conv4_3 和 conv5_3 取特征接 3*3 卷积(pool_2 需要再接 max pooling，conv5_3 需要 bilinear upsample)，分别生成 28*28*128 的特征，合并组成 28*28*512 的特征，再经过 3*3 的卷积生成最终的 28*28*128 的特征。</p>
-<h3 id="RNN"><a href="#RNN" class="headerlink" title="RNN"></a>RNN</h3><p>RNN 的输入包括 CNN 特征，t-1 和 t-2 时刻的顶点以及起点，输出是 t 时刻的顶点以及该点是否为终点。起点单独处理。</p>
-]]></content>
-      
-        <categories>
-            
-            <category> 工作 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 数据标注 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[大厨新作：肘子卷饼]]></title>
-      <url>http://tommyjiang.coding.me/2018/2018-07-23-pancake-shank/</url>
+      <url>http://tommyjiang.github.io/2018/2018-07-23-pancake-shank/</url>
       <content type="html"><![CDATA[
 <div class="alert alert-info"><i class="fa fa-info"></i>
 大厨创意新作，一如既往地高水准。
@@ -696,7 +1390,7 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
     
     <entry>
       <title><![CDATA[Emacs Lisp 计算数九天和伏天]]></title>
-      <url>http://tommyjiang.coding.me/2018/2018-07-18-lisp-cal-china/</url>
+      <url>http://tommyjiang.github.io/2018/2018-07-18-lisp-cal-china/</url>
       <content type="html"><![CDATA[
 <div class="alert alert-info"><i class="fa fa-info"></i>
 第一个用 Emacs Lisp 实现的小功能。
@@ -740,7 +1434,7 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
     
     <entry>
       <title><![CDATA[2018 世界杯]]></title>
-      <url>http://tommyjiang.coding.me/2018/2018-07-16-2018-world-cup/</url>
+      <url>http://tommyjiang.github.io/2018/2018-07-16-2018-world-cup/</url>
       <content type="html"><![CDATA[
 <div class="alert alert-info"><i class="fa fa-info"></i>
 成王败寇。
@@ -769,7 +1463,7 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
     
     <entry>
       <title><![CDATA[CV DL 工程师技能树]]></title>
-      <url>http://tommyjiang.coding.me/2018/2018-07-01-CV-DL/</url>
+      <url>http://tommyjiang.github.io/2018/2018-07-01-CV-DL/</url>
       <content type="html"><![CDATA[
 <div class="alert alert-info"><i class="fa fa-info"></i>
 CV DL 工程师技能树
@@ -830,9 +1524,9 @@ CV DL 工程师技能树
         
         <tags>
             
-            <tag> CS </tag>
-            
             <tag> CV </tag>
+            
+            <tag> CS </tag>
             
         </tags>
         
@@ -840,7 +1534,7 @@ CV DL 工程师技能树
     
     <entry>
       <title><![CDATA[从头再来]]></title>
-      <url>http://tommyjiang.coding.me/2018/2018-07-01-new-start/</url>
+      <url>http://tommyjiang.github.io/2018/2018-07-01-new-start/</url>
       <content type="html"><![CDATA[
 <div class="alert alert-info"><i class="fa fa-info"></i>
 2006-2018，从头再来。
@@ -872,9 +1566,9 @@ CV DL 工程师技能树
         
         <tags>
             
-            <tag> CS </tag>
-            
             <tag> CV </tag>
+            
+            <tag> CS </tag>
             
         </tags>
         
@@ -882,7 +1576,7 @@ CV DL 工程师技能树
     
     <entry>
       <title><![CDATA[CV Paper 汇总]]></title>
-      <url>http://tommyjiang.coding.me/2018/2018-06-22-CV-DL-papers/</url>
+      <url>http://tommyjiang.github.io/2018/2018-06-22-CV-DL-papers/</url>
       <content type="html"><![CDATA[<p>CV DL 文献引用关系图</p>
 <a id="more"></a>
 
@@ -1127,7 +1821,7 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
     
     <entry>
       <title><![CDATA[2018 端午港澳行]]></title>
-      <url>http://tommyjiang.coding.me/2018/2018-05-20-HK-Macau/</url>
+      <url>http://tommyjiang.github.io/2018/2018-05-20-HK-Macau/</url>
       <content type="html"><![CDATA[<p>再游珠三角。</p>
 <a id="more"></a>
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
@@ -1269,7 +1963,7 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
     
     <entry>
       <title><![CDATA[Linus 自传读后感]]></title>
-      <url>http://tommyjiang.coding.me/2018/2018-05-15-linus/</url>
+      <url>http://tommyjiang.github.io/2018/2018-05-15-linus/</url>
       <content type="html"><![CDATA[<p>Talk is cheap, show me the code.</p>
 <a id="more"></a>
 <p>最近读完了 Linux 和 git 的作者 Linus Torvalds 的自传，很喜欢他书里的一些话，做个摘录，也写写我的体会。</p>
@@ -1312,7 +2006,7 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
     
     <entry>
       <title><![CDATA[婚礼指南]]></title>
-      <url>http://tommyjiang.coding.me/2018/2018-05-05-wedding/</url>
+      <url>http://tommyjiang.github.io/2018/2018-05-05-wedding/</url>
       <content type="html"><![CDATA[<p>婚礼指南</p>
 <a id="more"></a>
 
@@ -1414,7 +2108,7 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
     
     <entry>
       <title><![CDATA[2018春节泰国游]]></title>
-      <url>http://tommyjiang.coding.me/2018/2018-02-14-Thailand-trip/</url>
+      <url>http://tommyjiang.github.io/2018/2018-02-14-Thailand-trip/</url>
       <content type="html"><![CDATA[<p>30年第一次不在家过春节。</p>
 <a id="more"></a>
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
@@ -1490,10 +2184,170 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
     
     <entry>
       <title><![CDATA[CV 经典论文]]></title>
-      <url>http://tommyjiang.coding.me/2018/2018-02-08-CV-papers/</url>
+      <url>http://tommyjiang.github.io/2018/2018-02-08-CV-papers/</url>
       <content type="html"><![CDATA[<p>CV 经典论文汇总。</p>
 <a id="more"></a>
-<h1 id="ILSVRC"><a href="#ILSVRC" class="headerlink" title="ILSVRC"></a>ILSVRC</h1><p><a href="http://www.image-net.org/challenges/LSVRC/" target="_blank" rel="noopener">ILSVRC</a>是图像识别领域的知名比赛，可以参考这篇<a href="https://arxiv.org/abs/1409.0575" target="_blank" rel="noopener">论文</a>。从2010年开始 ILSVRC 每年举办一届，一直到2017年最后一届，目前已经交给<a href="https://www.kaggle.com/c/imagenet-object-localization-challenge" target="_blank" rel="noopener">Kaggle</a>。</p>
+<h1 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h1><ul>
+<li>ILSVRC<ul>
+<li>2012 <ul>
+<li>AlexNet</li>
+</ul>
+</li>
+<li>2013<ul>
+<li>Network in network</li>
+<li>ZFNet</li>
+</ul>
+</li>
+<li>2014<ul>
+<li>Inception</li>
+</ul>
+</li>
+<li>2015<ul>
+<li>ResNet</li>
+</ul>
+</li>
+<li>2016<ul>
+<li>Identity Mapping</li>
+</ul>
+</li>
+<li>2017<ul>
+<li>SENet</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>小网络<ul>
+<li>2016 SqueezeNet</li>
+<li>MobileNet 系列<ul>
+<li>2017 MobileNet</li>
+<li>2018 MobileNetV2</li>
+</ul>
+</li>
+<li>ShuffleNet 系列<ul>
+<li>2017 ShuffleNet</li>
+<li>2018 ShuffleNet V2</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="检测"><a href="#检测" class="headerlink" title="检测"></a>检测</h1><ul>
+<li>Two stage<ul>
+<li>RCNN 系列<ul>
+<li>2013 R-CNN</li>
+<li>2014 SPPNet</li>
+<li>2015 Fast R-CNN</li>
+<li>2015 Faster R-CNN</li>
+</ul>
+</li>
+<li>2016 R-FCN</li>
+<li>2016 FPN</li>
+</ul>
+</li>
+<li>One stage<ul>
+<li>YOLO 系列<ul>
+<li>2015 YOLO</li>
+<li>2016 YOLOv2</li>
+<li>2018 YOLOv3</li>
+</ul>
+</li>
+<li>SSD 系列<ul>
+<li>2015 SSD</li>
+<li>2017 DSSD</li>
+</ul>
+</li>
+<li>2018 RefineDet</li>
+</ul>
+</li>
+</ul>
+<h1 id="分割"><a href="#分割" class="headerlink" title="分割"></a>分割</h1><ul>
+<li>2014 FCN</li>
+</ul>
+<h1 id="技巧"><a href="#技巧" class="headerlink" title="技巧"></a>技巧</h1><ul>
+<li>2015 BN</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Computer Vision </tag>
+            
+            <tag> Paper </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Spacemacs 常用命令总结]]></title>
+      <url>http://tommyjiang.github.io/2018/2018-02-18-spacemacs-common-commands/</url>
+      <content type="html"><![CDATA[<p><code>Spacemacs</code> 常用命令汇总</p>
+<a id="more"></a>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Command</th>
+<th style="text-align:center">Function</th>
+<th style="text-align:center">Todo</th>
+<th style="text-align:center">Frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">SPC f f</td>
+<td style="text-align:center"><code>helm-find-files</code></td>
+<td style="text-align:center">Files</td>
+<td style="text-align:center">Usually</td>
+</tr>
+<tr>
+<td style="text-align:center">SPC b b</td>
+<td style="text-align:center"><code>helm-mini</code></td>
+<td style="text-align:center">Buffers</td>
+<td style="text-align:center">Usually</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+</div>
+]]></content>
+      
+        <categories>
+            
+            <category> Geek </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Emacs </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[AlexNet 论文笔记]]></title>
+      <url>http://tommyjiang.github.io/2018/2018-02-05-Alexnet-notes/</url>
+      <content type="html"><![CDATA[
+<div class="alert alert-info"><i class="fa fa-info"></i>
+AlexNet 笔记
+</div>
+
+<a id="more"></a>
+<h1 id="论文笔记"><a href="#论文笔记" class="headerlink" title="论文笔记"></a>论文笔记</h1><p><a href="http://www.image-net.org/challenges/LSVRC/" target="_blank" rel="noopener">ILSVRC</a>是图像识别领域的知名比赛，可以参考这篇<a href="https://arxiv.org/abs/1409.0575" target="_blank" rel="noopener">论文</a>。从2010年开始 ILSVRC 每年举办一届，一直到2017年最后一届，目前已经交给<a href="https://www.kaggle.com/c/imagenet-object-localization-challenge" target="_blank" rel="noopener">Kaggle</a>。</p>
 <h2 id="2012-AlexNet"><a href="#2012-AlexNet" class="headerlink" title="2012. AlexNet"></a>2012. AlexNet</h2><h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><ul>
 <li>AlexNet 的任务？<blockquote>
 <p>任务是做图像分类。具体地说，是将 ImageNet 的一个子集，共包含约120万张训练集图片，5万张验证集图片和15万张测试集图片，共有1000类。AlexNet 的输入是图片，输出是图片类别，属于经典的 Classification 问题。</p>
@@ -1530,71 +2384,20 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
 </blockquote>
 </li>
 </ul>
-<h2 id="2014-GoogLeNet"><a href="#2014-GoogLeNet" class="headerlink" title="2014. GoogLeNet"></a>2014. GoogLeNet</h2><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none; padding-left: 0;"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">1.</span><span style="display: inline-block; vertical-align: top;"><a href="http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture6.pdf" target="_blank" rel="noopener">CS231n Lecture 6 slide</a></span><a href="#fnref:1" rev="footnote"> ↩</a></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">2.</span><span style="display: inline-block; vertical-align: top;"><a href="https://arxiv.org/abs/1207.0580" target="_blank" rel="noopener">Hinton 2012年发表的论文</a></span><a href="#fnref:2" rev="footnote"> ↩</a></li></ol></div></div>]]></content>
+<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none; padding-left: 0;"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">1.</span><span style="display: inline-block; vertical-align: top;"><a href="http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture6.pdf" target="_blank" rel="noopener">CS231n Lecture 6 slide</a></span><a href="#fnref:1" rev="footnote"> ↩</a></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">2.</span><span style="display: inline-block; vertical-align: top;"><a href="https://arxiv.org/abs/1207.0580" target="_blank" rel="noopener">Hinton 2012年发表的论文</a></span><a href="#fnref:2" rev="footnote"> ↩</a></li></ol></div></div>]]></content>
       
         <categories>
             
-            <category> 技术 </category>
+            <category> 工作 </category>
             
         </categories>
         
         
         <tags>
             
-            <tag> Computer Vision </tag>
+            <tag> CV </tag>
             
-            <tag> Paper </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Spacemacs 常用命令总结]]></title>
-      <url>http://tommyjiang.coding.me/2018/2018-02-18-spacemacs-common-commands/</url>
-      <content type="html"><![CDATA[<p><code>Spacemacs</code> 常用命令汇总</p>
-<a id="more"></a>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">Command</th>
-<th style="text-align:center">Function</th>
-<th style="text-align:center">Todo</th>
-<th style="text-align:center">Frequency</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">SPC f f</td>
-<td style="text-align:center"><code>helm-find-files</code></td>
-<td style="text-align:center">Files</td>
-<td style="text-align:center">Usually</td>
-</tr>
-<tr>
-<td style="text-align:center">SPC b b</td>
-<td style="text-align:center"><code>helm-mini</code></td>
-<td style="text-align:center">Buffers</td>
-<td style="text-align:center">Usually</td>
-</tr>
-<tr>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-</tbody>
-</table>
-]]></content>
-      
-        <categories>
-            
-            <category> Geek </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> Emacs </tag>
+            <tag> DL </tag>
             
         </tags>
         
@@ -1602,7 +2405,7 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
     
     <entry>
       <title><![CDATA[换外币现汇/现钞攻略]]></title>
-      <url>http://tommyjiang.coding.me/2018/2018-02-05-cash-BOC/</url>
+      <url>http://tommyjiang.github.io/2018/2018-02-05-cash-BOC/</url>
       <content type="html"><![CDATA[<p>继去年香港刷卡被 DCC 坑，又被中行换现钞坑了一波。</p>
 <a id="more"></a>
 <p>先放工具，可以直接查现汇/现钞牌价的<a href="http://www.kuaiyilicai.com/bank/rmbfx.html" target="_blank" rel="noopener">网站</a>。</p>
@@ -1632,7 +2435,7 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
     
     <entry>
       <title><![CDATA[Deep Learning with Python 2017 第五章笔记]]></title>
-      <url>http://tommyjiang.coding.me/2018/2018-01-30-deep-learning-with-python-2017/</url>
+      <url>http://tommyjiang.github.io/2018/2018-01-30-deep-learning-with-python-2017/</url>
       <content type="html"><![CDATA[<p>第五章主要介绍的计算机视觉相关内容，做个笔记。</p>
 <a id="more"></a>
 <h1 id="5-1-Intro-to-convnets"><a href="#5-1-Intro-to-convnets" class="headerlink" title="5.1 Intro to convnets"></a>5.1 Intro to convnets</h1><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><ul>
@@ -1643,29 +2446,24 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
 <li>卷积神经网络的参数主要有哪些？</li>
 </ul>
 <h2 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h2><ul>
-<li><p>什么是卷积神经网络（Convolutional Neural Network, CNN）？</p>
-<blockquote>
+<li>什么是卷积神经网络（Convolutional Neural Network, CNN）？<blockquote>
 <p>卷积神经网络的样子可以参考 CS231n 的 <a href="http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture5.pdf" target="_blank" rel="noopener">slide</a>。简单来说，对于一个 32×32×3 的图片，全连接神经网络共有 32×32×3=3072 个权重 + 1个偏置共 3073 个参数，最后输出结果维数为 1×1×1；而对于一个 n×5×5×3 的卷积神经网络，对于其中任意一个 5×5×3 的 filter，共有 5×5×3=75 个权重 + 1 个偏置共 76 个参数，该 filter 在原始图片上滑动产生输出，最终每个 filter 输出结果为 28×28×1，整个卷积神经网络的输出为 n×28×28×1。</p>
 </blockquote>
 </li>
-<li><p>CNN 和传统神经网络相比有什么区别？ </p>
-<blockquote>
+<li>CNN 和传统神经网络相比有什么区别？ <blockquote>
 <p>传统神经网络的输入是整个图片，网络与图片中的每个点均相连，权重为图片所有点的个数（因此也叫<code>Dense Network</code>），图片中的所有信息都对最后的输出有贡献；CNN 虽然输入的也是整个图片，但每个输出只和 filter 同样大小的图片有关（例如上面的例子是每个输出只和 5×5×3=75 个点有关，这也即著名的感受野，英文为 <a href="https://en.wikipedia.org/wiki/Receptive_field#In_the_context_of_neural_networks" target="_blank" rel="noopener">Receptive Field</a>），由于单个输入尺寸较小，而且滑动时 CNN 中 filter 的权重参数不变，因此与全连接神经网络相比，CNN 的权重参数要少很多。</p>
 </blockquote>
 </li>
-<li><p>卷积神经网络中的“卷积”是什么含义？</p>
-<blockquote>
+<li>卷积神经网络中的“卷积”是什么含义？<blockquote>
 <p>卷积是一种数学上的运算，在线性系统的响应计算中有明确的物理意义，可以参考知乎这个<a href="https://www.zhihu.com/question/22298352/answer/34267457" target="_blank" rel="noopener">回答</a>。在 CNN 中，filter 滑动进行计算生成信号和卷积运算类似。</p>
 </blockquote>
 </li>
-<li><p>卷积神经网络具有哪些性质使它特别适合图像处理？<br>主要有以下两点：</p>
-<ul>
+<li>卷积神经网络具有哪些性质使它特别适合图像处理？<br>主要有以下两点：<ul>
 <li>CNN 学习的特征具有空间不变性。在某一图片某一区域学得的特征，在其他图片其他区域均可以应用。</li>
 <li>CNN 可以学习一定层级的特征。底层 layer 主要学习基本特征，上层 layer 主要学习抽象特征。</li>
 </ul>
 </li>
-<li><p>卷积神经网络的参数主要有哪些？<br>主要包括 patch size，depth，padding 和 stride。</p>
-</li>
+<li>卷积神经网络的参数主要有哪些？<br>主要包括 patch size，depth，padding 和 stride。</li>
 </ul>
 ]]></content>
       
@@ -1686,7 +2484,7 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
     
     <entry>
       <title><![CDATA[计算机视觉资料汇总]]></title>
-      <url>http://tommyjiang.coding.me/2018/2018-01-30-computer-vision/</url>
+      <url>http://tommyjiang.github.io/2018/2018-01-30-computer-vision/</url>
       <content type="html"><![CDATA[<p>CV 资料汇总</p>
 <a id="more"></a>
 <p>去年曾经写过一篇介绍机器学习资料的<a href="http://tommyjiang.coding.me/2017/2017-07-15-machine-learning/">博文</a>，现在具体做计算机视觉(Computer Vision)方向，那就再总结下 CV 方向的资料。</p>
@@ -1716,7 +2514,7 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
     
     <entry>
       <title><![CDATA[PyCharm 心得]]></title>
-      <url>http://tommyjiang.coding.me/2018/2018-01-30-pycharm/</url>
+      <url>http://tommyjiang.github.io/2018/2018-01-30-pycharm/</url>
       <content type="html"><![CDATA[<p>PyCharm 使用心得。</p>
 <a id="more"></a>
 <h1 id="PyCharm-环境变量配置"><a href="#PyCharm-环境变量配置" class="headerlink" title="PyCharm 环境变量配置"></a>PyCharm 环境变量配置</h1><p>应该算最坑的一点，和系统的（例如<code>.bashrc</code>）有区别，需要单独设置。设置方法：Run -&gt; Edit Configurations -&gt; Environment -&gt; Environment Variables -&gt; 最右… -&gt; 左下 + -&gt; Name: PYTHONPATH, Value: 需要设置的路径</p>
@@ -1741,7 +2539,7 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
     
     <entry>
       <title><![CDATA[Hexo-tag-bootstrap 示例]]></title>
-      <url>http://tommyjiang.coding.me/2018/2018-01-29-hexo-tag-bootstrap-examples/</url>
+      <url>http://tommyjiang.github.io/2018/2018-01-29-hexo-tag-bootstrap-examples/</url>
       <content type="html"><![CDATA[<p>让博客更丰富多彩。</p>
 <a id="more"></a>
 <h1 id="Syntax"><a href="#Syntax" class="headerlink" title="Syntax"></a>Syntax</h1><p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
@@ -1786,7 +2584,7 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
     
     <entry>
       <title><![CDATA[天气数据统计网站 Weather Spark]]></title>
-      <url>http://tommyjiang.coding.me/2018/2018-01-28-weather-spark/</url>
+      <url>http://tommyjiang.github.io/2018/2018-01-28-weather-spark/</url>
       <content type="html"><![CDATA[<p>全球各地气候统计数据可视化分析，旅游出行好帮手。</p>
 <a id="more"></a>
 <p>之前忘了在哪看到过 <a href="https://weatherspark.com/" target="_blank" rel="noopener">Weather Spark 这个网站</a>，觉得统计数据非常全，而且展现方式也很漂亮。这次特意记下来，出去旅游的话可以参考。</p>
@@ -1817,17 +2615,9 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
 <h2 id="最佳旅游时间"><a href="#最佳旅游时间" class="headerlink" title="最佳旅游时间"></a>最佳旅游时间</h2><p>包括最佳旅游指数和海岸指数，具体计算方法下面有详细说明，摘录如下：</p>
 <blockquote>
 <p>For each hour between 8:00 AM and 9:00 PM of each day in the analysis period (1980 to 2016), independent scores are computed for perceived temperature, cloud cover, and total precipitation. Those scores are combined into a single hourly composite score, which is then aggregated into days, averaged over all the years in the analysis period, and smoothed.</p>
-</blockquote>
-<blockquote>
 <p>Our cloud cover score is 10 for fully clear skies, falling linearly to 9 for mostly clear skies, and to 1 for fully overcast skies.</p>
-</blockquote>
-<blockquote>
 <p>Our precipitation score, which is based on the three-hour precipitation centered on the hour in question, is 10 for no precipitation, falling linearly to 9 for trace precipitation, and to 0 for 1 millimeter of precipitation or more.</p>
-</blockquote>
-<blockquote>
 <p>Our tourism temperature score is 0 for perceived temperatures below 10°C, rising linearly to 9 for 18°C, to 10 for 24°C, falling linearly to 9 for 27°C, and to 1 for 32°C or hotter.</p>
-</blockquote>
-<blockquote>
 <p>Our beach/pool temperature score is 0 for perceived temperatures below 18°C, rising linearly to 9 for 24°C, to 10 for 28°C, falling linearly to 9 for 32°C, and to 1 for 38°C or hotter.</p>
 </blockquote>
 <p>后面的几个信息相对没那么重要，不再赘述。</p>
@@ -1851,7 +2641,7 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
     
     <entry>
       <title><![CDATA[服务器远程调试工具]]></title>
-      <url>http://tommyjiang.coding.me/2018/2018-01-23-remote-working/</url>
+      <url>http://tommyjiang.github.io/2018/2018-01-23-remote-working/</url>
       <content type="html"><![CDATA[<p>工欲善其事，必先利其器。</p>
 <a id="more"></a>
 <h1 id="远程调试-PyCharm-Professional"><a href="#远程调试-PyCharm-Professional" class="headerlink" title="远程调试 PyCharm Professional"></a>远程调试 PyCharm Professional</h1><p>写代码简单，调代码难，在同一套环境中调代码更难，配过环境的同志都懂得环境配置的痛苦。直接在服务器上调试代码可以完美解决这个问题，只需稳定的网络就能保证环境的一致性。<a href="https://www.jetbrains.com/pycharm/download/#section=mac" target="_blank" rel="noopener">PyCharm Professional</a>可以远程<code>ssh</code>到服务器调试，具体流程可以参考<a href="https://blog.lishubing.net/2015/11/09/pycharm-remote-deploy-and-debug/" target="_blank" rel="noopener">使用 Pycharm 通过 SSH 同步代码与远程调试</a>。</p>
@@ -1877,7 +2667,7 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
     
     <entry>
       <title><![CDATA[2017 年终总结]]></title>
-      <url>http://tommyjiang.coding.me/2017/2017-12-31-2017-summary/</url>
+      <url>http://tommyjiang.github.io/2017/2017-12-31-2017-summary/</url>
       <content type="html"><![CDATA[<p>2017年是收获的一年。</p>
 <a id="more"></a>
 <p>又一年过去了，岁末的时候人总会有很多感慨，简单对即将过去的2017年做个总结吧。</p>
@@ -1903,7 +2693,7 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
     
     <entry>
       <title><![CDATA[网站转 RSS 订阅]]></title>
-      <url>http://tommyjiang.coding.me/2017/2017-12-13-website-to-rss/</url>
+      <url>http://tommyjiang.github.io/2017/2017-12-13-website-to-rss/</url>
       <content type="html"><![CDATA[<p>为别人的网站添加 RSS 订阅。</p>
 <a id="more"></a>
 <p>最近用<code>Spacemacs</code>的<code>elfeed</code>作为 RSS 阅读器，想订阅 <a href="https://hsreplay.net/articles/" target="_blank" rel="noopener">HSReplay</a> 的技术分析文章，无奈网站不提供 RSS，自己动手，丰衣足食。</p>
@@ -1927,7 +2717,7 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
     
     <entry>
       <title><![CDATA[内网开放 BT 端口 51413]]></title>
-      <url>http://tommyjiang.coding.me/2017/2017-12-05-port-forwarding/</url>
+      <url>http://tommyjiang.github.io/2017/2017-12-05-port-forwarding/</url>
       <content type="html"><![CDATA[<p>内网开放 BT 端口方法。</p>
 <a id="more"></a>
 <p>家里联通猫 + TP-LINK 路由上网，内网电脑 BT 端口无法被外网电脑看到，处于<code>passive</code>状态，需要分别设置。</p>
@@ -1946,7 +2736,7 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
     
     <entry>
       <title><![CDATA[北京集体户口迁入住房]]></title>
-      <url>http://tommyjiang.coding.me/2017/2017-12-04-hukou-transfer/</url>
+      <url>http://tommyjiang.github.io/2017/2017-12-04-hukou-transfer/</url>
       <content type="html"><![CDATA[<p>咱也是北京人了。</p>
 <a id="more"></a>
 <p>北京集体户口迁入住房，所需材料：</p>
@@ -1975,7 +2765,7 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
     
     <entry>
       <title><![CDATA[北京美食]]></title>
-      <url>http://tommyjiang.coding.me/2017/2017-11-21-delicious-food-beijing/</url>
+      <url>http://tommyjiang.github.io/2017/2017-11-21-delicious-food-beijing/</url>
       <content type="html"><![CDATA[<p>待吃 list。</p>
 <a id="more"></a>
 
@@ -2084,7 +2874,7 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
     
     <entry>
       <title><![CDATA[数据结构和算法]]></title>
-      <url>http://tommyjiang.coding.me/2017/2017-11-11-CS-basic-knowledge/</url>
+      <url>http://tommyjiang.github.io/2017/2017-11-11-CS-basic-knowledge/</url>
       <content type="html"><![CDATA[<p>大一学 C 语言的时候，老师就告诉我们，程序=数据结构+算法，现在才算基本理解这句话。</p>
 <a id="more"></a>
 <h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1><h2 id="树"><a href="#树" class="headerlink" title="树"></a>树</h2><ul>
@@ -2113,7 +2903,7 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
     
     <entry>
       <title><![CDATA[iOS 11 控制中心无法彻底关闭 WiFi]]></title>
-      <url>http://tommyjiang.coding.me/2017/2017-10-28-iOS-11-control-center/</url>
+      <url>http://tommyjiang.github.io/2017/2017-10-28-iOS-11-control-center/</url>
       <content type="html"><![CDATA[<p>iOS 11 控制中心竟然没法直接关 WiFi。</p>
 <a id="more"></a>
 <p>iOS 11 控制中心引入了移动数据的开关，可以不用再到设置里关数据了。</p>
@@ -2143,7 +2933,7 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
     
     <entry>
       <title><![CDATA[三里屯老书虫脱口秀]]></title>
-      <url>http://tommyjiang.coding.me/2017/2017-10-27-san-li-tun-talkshow/</url>
+      <url>http://tommyjiang.github.io/2017/2017-10-27-san-li-tun-talkshow/</url>
       <content type="html"><![CDATA[<p>跟大厨到三里屯听脱口秀放松。</p>
 <a id="more"></a>
 <p>周五大厨在豆瓣上看到了这个<a href="https://www.douban.com/event/29423534/" target="_blank" rel="noopener">活动</a>，就到著名的三里屯地区体验脱口秀。</p>
@@ -2162,7 +2952,7 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
     
     <entry>
       <title><![CDATA[Excel 图转成矢量图插入 Word 教程]]></title>
-      <url>http://tommyjiang.coding.me/2017/2017-10-23-Excel-image-to-vector-image-to-Word/</url>
+      <url>http://tommyjiang.github.io/2017/2017-10-23-Excel-image-to-vector-image-to-Word/</url>
       <content type="html"><![CDATA[<a id="more"></a>
 <ol>
 <li>Excel 做图，另存为 PDF。</li>
@@ -2189,7 +2979,7 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
     
     <entry>
       <title><![CDATA[HKUST TensorFlow 教程]]></title>
-      <url>http://tommyjiang.coding.me/2017/2017-10-21-HKUST-TensorFlow/</url>
+      <url>http://tommyjiang.github.io/2017/2017-10-21-HKUST-TensorFlow/</url>
       <content type="html"><![CDATA[<p>HKUST TensorFlow 教程笔记。</p>
 <a id="more"></a>
 <h1 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1"></a>Day 1</h1><ul>
@@ -2277,8 +3067,36 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
     </entry>
     
     <entry>
+      <title><![CDATA[视频/音频下载和提取方法]]></title>
+      <url>http://tommyjiang.github.io/2017/2017-09-09-download-cnn-video/</url>
+      <content type="html"><![CDATA[<p>大厨需要视频和音频，还好有我在。</p>
+<a id="more"></a>
+<h1 id="CNN-视频下载"><a href="#CNN-视频下载" class="headerlink" title="CNN 视频下载"></a>CNN 视频下载</h1><p>1.记录 CNN 视频网址，例如<a href="http://edition.cnn.com/videos/weather/2017/01/27/weather-five-things-about-earthquakes-orig.cnn/video/playlists/mexico-earthquake/" target="_blank" rel="noopener">这个</a>。</p>
+<p>2.打开 <a href="http://www.tubeoffline.com/download-CNN-videos.php" target="_blank" rel="noopener">TUBEOFFLINE</a>，在 video url 中输入上面的视频网址。</p>
+<p>3.获取视频下载地址，需要自备梯子。</p>
+<p>4.浏览器下载很慢，用终端中的<code>wget</code>实现下载，Mac OS 需要先<code>brew install wget</code>，然后<code>wegt url</code>。</p>
+<h1 id="从视频中提取音频"><a href="#从视频中提取音频" class="headerlink" title="从视频中提取音频"></a>从视频中提取音频</h1><p>利用<code>ffmpeg</code>，同样需要先<code>brew install ffmpeg</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i *.mp4/avi -q:a 0 -map a *.mp3</span><br></pre></td></tr></table></figure>
+]]></content>
+      
+        <categories>
+            
+            <category> 生活 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 工具 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[境外刷卡被 DCC 的教训]]></title>
-      <url>http://tommyjiang.coding.me/2017/2017-09-29-DCC/</url>
+      <url>http://tommyjiang.github.io/2017/2017-09-29-DCC/</url>
       <content type="html"><![CDATA[<p>去香港刷卡中招 DCC，吃一堑长一智吧。</p>
 <a id="more"></a>
 <h1 id="什么是-DCC"><a href="#什么是-DCC" class="headerlink" title="什么是 DCC"></a>什么是 DCC</h1><p>先看一个实际的交易过程，以 大陆 银联/VISA 人民币/美元双币卡在香港交易为例。</p>
@@ -2314,36 +3132,8 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
     </entry>
     
     <entry>
-      <title><![CDATA[视频/音频下载和提取方法]]></title>
-      <url>http://tommyjiang.coding.me/2017/2017-09-09-download-cnn-video/</url>
-      <content type="html"><![CDATA[<p>大厨需要视频和音频，还好有我在。</p>
-<a id="more"></a>
-<h1 id="CNN-视频下载"><a href="#CNN-视频下载" class="headerlink" title="CNN 视频下载"></a>CNN 视频下载</h1><p>1.记录 CNN 视频网址，例如<a href="http://edition.cnn.com/videos/weather/2017/01/27/weather-five-things-about-earthquakes-orig.cnn/video/playlists/mexico-earthquake/" target="_blank" rel="noopener">这个</a>。</p>
-<p>2.打开 <a href="http://www.tubeoffline.com/download-CNN-videos.php" target="_blank" rel="noopener">TUBEOFFLINE</a>，在 video url 中输入上面的视频网址。</p>
-<p>3.获取视频下载地址，需要自备梯子。</p>
-<p>4.浏览器下载很慢，用终端中的<code>wget</code>实现下载，Mac OS 需要先<code>brew install wget</code>，然后<code>wegt url</code>。</p>
-<h1 id="从视频中提取音频"><a href="#从视频中提取音频" class="headerlink" title="从视频中提取音频"></a>从视频中提取音频</h1><p>利用<code>ffmpeg</code>，同样需要先<code>brew install ffmpeg</code>。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i *.mp4/avi -q:a 0 -map a *.mp3</span><br></pre></td></tr></table></figure>
-]]></content>
-      
-        <categories>
-            
-            <category> 生活 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 工具 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[大厨小厨珠三角之旅游记]]></title>
-      <url>http://tommyjiang.coding.me/2017/2017-08-31-guangzhou-shenzhen-HK-trip/</url>
+      <url>http://tommyjiang.github.io/2017/2017-08-31-guangzhou-shenzhen-HK-trip/</url>
       <content type="html"><![CDATA[<p>熟悉的珠三角。</p>
 <a id="more"></a>
 <h1 id="出发"><a href="#出发" class="headerlink" title="出发"></a>出发</h1><p>8月25日用里程给大厨换了头等舱准备出发，好久不坐飞机，也没认真看登机牌，都忘了提前15分钟关舱门这回事儿，还以为值机了一定会等我们……痛改下一班航班，比原定计划晚了2个多小时抵深。</p>
@@ -2381,7 +3171,7 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
     
     <entry>
       <title><![CDATA[POA 教学法感想（投稿）]]></title>
-      <url>http://tommyjiang.coding.me/2017/2017-07-16-POA/</url>
+      <url>http://tommyjiang.github.io/2017/2017-07-16-POA/</url>
       <content type="html"><![CDATA[<p>大厨投稿。</p>
 <a id="more"></a>
 <p>　　今天在文秋芳老师及其团队的介绍下学习了解了POA教学法（Production-oriented Approach），其教学理念包含：</p>
@@ -2411,7 +3201,7 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
     
     <entry>
       <title><![CDATA[机器学习相关资源汇总]]></title>
-      <url>http://tommyjiang.coding.me/2017/2017-07-15-machine-learning/</url>
+      <url>http://tommyjiang.github.io/2017/2017-07-15-machine-learning/</url>
       <content type="html"><![CDATA[<p>机器学习相关资源汇总</p>
 <a id="more"></a>
 <h1 id="书籍"><a href="#书籍" class="headerlink" title="书籍"></a>书籍</h1><h2 id="机器学习通论"><a href="#机器学习通论" class="headerlink" title="机器学习通论"></a>机器学习通论</h2><ul>
@@ -2458,7 +3248,7 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
     
     <entry>
       <title><![CDATA[一刻 Talks 所感（投稿）]]></title>
-      <url>http://tommyjiang.coding.me/2017/2017-06-24-yike-talk/</url>
+      <url>http://tommyjiang.github.io/2017/2017-06-24-yike-talk/</url>
       <content type="html"><![CDATA[<p>大厨投稿。</p>
 <a id="more"></a>
 <p>　　今天去参加了一刻 talks 的一场关于 LGBT 的演讲，发言的虽然只有六位嘉宾，但是基本涵盖了性少数群体主要人群（有两位男性同性恋者，一位女同性恋者，两位跨性别者，一位双性恋者）。我也不知道自己是什么时候开始对性和性别这一个议题开始感兴趣，可能是从上研的时候翻译了一本关于性少数群体换偶者的书开始的。之后还参加了一些 LGBT 的活动，比如我最崇拜喜欢的潘绥铭教授在北师大的演讲，还有美国大使馆举办的活动等等。也读了一些资料，看了一些电影，我发现，越是研究这一问题的人，越对这类群体表示更多的包容和善意。而我也想成为这种能接纳别人的，很“酷”的人。而这些性边缘群体，出柜的这些人，更是因为自己的遭遇和经历更加对别人开放，友好，可能只有经历过误解，才能知道被误解的无奈，才能给予别人更多的耐心和理解；只有被伤害过，才能知道被伤害的痛苦，才能更以微笑待人，更具备同理心。</p>
@@ -2488,7 +3278,7 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
     
     <entry>
       <title><![CDATA[赵大厨江小厨美食菜单]]></title>
-      <url>http://tommyjiang.coding.me/2017/2017-06-12-let-us-cook-some-food/</url>
+      <url>http://tommyjiang.github.io/2017/2017-06-12-let-us-cook-some-food/</url>
       <content type="html"><![CDATA[<p>民以食为天，食以味为先。</p>
 <a id="more"></a>
 <h1 id="2017年6月11日-午餐"><a href="#2017年6月11日-午餐" class="headerlink" title="2017年6月11日 午餐"></a>2017年6月11日 午餐</h1><p><img src="/images/2017/2017-06-11-午餐.jpg" alt=""></p>
@@ -2573,7 +3363,7 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
     
     <entry>
       <title><![CDATA[Spacemacs + AUCTeX 编辑 TeX 文档]]></title>
-      <url>http://tommyjiang.coding.me/2017/2017-06-14-Spacemacs-AuCTeX/</url>
+      <url>http://tommyjiang.github.io/2017/2017-06-14-Spacemacs-AuCTeX/</url>
       <content type="html"><![CDATA[<p>Spacemacs + AUCTeX 是编辑 TeX 文档的利器。</p>
 <a id="more"></a>
 <h1 id="Spacemacs-和-AUCTeX-简介"><a href="#Spacemacs-和-AUCTeX-简介" class="headerlink" title="Spacemacs 和 AUCTeX 简介"></a>Spacemacs 和 AUCTeX 简介</h1><p>目前最好用的 Emacs 配置，目前已经有将近12000个 Star，参见 <a href="https://github.com/syl20bnr/spacemacs" target="_blank" rel="noopener">GitHub Spacemacs Repo</a>。</p>
@@ -2611,7 +3401,7 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
     
     <entry>
       <title><![CDATA[西单大悦城处理 iPhone 6 Plus 电池鼓胀问题]]></title>
-      <url>http://tommyjiang.coding.me/2017/2017-04-27-Apple-xidan-joy-city-iphone-battery/</url>
+      <url>http://tommyjiang.github.io/2017/2017-04-27-Apple-xidan-joy-city-iphone-battery/</url>
       <content type="html"><![CDATA[<p>iPhone 买了两年半，中午发现电池鼓胀，到西单大悦城花 588 换了个新的。</p>
 <a id="more"></a>
 <p>中午睡觉之前玩手机，发现手机左边明显贴合不牢，同时屏幕中间凸起，上网查了查，应该是电池鼓胀问题。</p>
@@ -2635,7 +3425,7 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
     
     <entry>
       <title><![CDATA[Mac 上安装 xgboost 教程]]></title>
-      <url>http://tommyjiang.coding.me/2017/2017-04-18-install-xgboost-on-mac/</url>
+      <url>http://tommyjiang.github.io/2017/2017-04-18-install-xgboost-on-mac/</url>
       <content type="html"><![CDATA[<p>关于如何在 Mac 上安装 xgboost。</p>
 <a id="more"></a>
 <h1 id="关于xgboost"><a href="#关于xgboost" class="headerlink" title="关于xgboost"></a>关于xgboost</h1><p><a href="https://github.com/dmlc/xgboost" target="_blank" rel="noopener"><code>xgboost</code></a>是华盛顿大学的<a href="">陈天奇</a>开发的一个可以高效实现 gradient boosting 的库。<code>Kaggle</code>竞赛前5%名次获得者 Linghao Zhang 在博文<a href="https://dnc1994.com/2016/04/rank-10-percent-in-first-kaggle-competition/" target="_blank" rel="noopener">如何在 Kaggle 首战中进入前 10%</a>中提到：</p>
@@ -2673,7 +3463,7 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
     
     <entry>
       <title><![CDATA[博客评论系统由多说迁移至友言]]></title>
-      <url>http://tommyjiang.coding.me/2017/2017-03-22-duoshuo-to-youyan/</url>
+      <url>http://tommyjiang.github.io/2017/2017-03-22-duoshuo-to-youyan/</url>
       <content type="html"><![CDATA[<p>多说发布通知，宣布即将关闭，博客评论系统迁移至友言。</p>
 <a id="more"></a>
 <p>昨天多说官网发布通知，宣布<a href="http://dev.duoshuo.com/threads/58d1169ae293b89a20c57241" target="_blank" rel="noopener">多说即将关闭</a>。感谢多说长久以来坚持维护的评论系统，从即日起本博客评论系统迁移至<a href="http://www.uyan.cc/" target="_blank" rel="noopener">友言</a>。</p>
@@ -2697,7 +3487,7 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
     
     <entry>
       <title><![CDATA[2016 年风电并网运行情况]]></title>
-      <url>http://tommyjiang.coding.me/2017/2017-02-05-wind-waste-2016/</url>
+      <url>http://tommyjiang.github.io/2017/2017-02-05-wind-waste-2016/</url>
       <content type="html"><![CDATA[<p>本文数据来源：<a href="http://www.nea.gov.cn/2017-01/26/c_136014615.htm" target="_blank" rel="noopener">国家能源局官网</a>。</p>
 <a id="more"></a>
 <p>各数据不包含香港、澳门和台湾地区数据，在作图时统一设为0。</p>
@@ -3314,7 +4104,7 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     
     <entry>
       <title><![CDATA[鸡年大吉]]></title>
-      <url>http://tommyjiang.coding.me/2017/2017-02-03-Chinese-new-year/</url>
+      <url>http://tommyjiang.github.io/2017/2017-02-03-Chinese-new-year/</url>
       <content type="html"><![CDATA[<blockquote>
 <p>明天，应该说，就是，鸡年就要来临了。</p>
 </blockquote>
@@ -3351,8 +4141,48 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     </entry>
     
     <entry>
+      <title><![CDATA[歌词摘录]]></title>
+      <url>http://tommyjiang.github.io/2017/2017-01-03-Song-lyrics/</url>
+      <content type="html"><![CDATA[<p>人若矫情起来，听什么歌都像唱自己。</p>
+<a id="more"></a>
+<h1 id="爱情"><a href="#爱情" class="headerlink" title="爱情"></a>爱情</h1><blockquote>
+<p>难过是因为我太认真</p>
+<p>——金南玲《逆流成河》</p>
+<p>爱人在身边随处是天堂</p>
+<p>——乌兰托娅《火红的萨日朗》</p>
+<p>既然爱你不能言语<br>只能微笑哭泣<br>让我从此忘了你</p>
+<p>——许茹芸《独角戏》</p>
+<p>由来只有新人笑 有谁听到旧人哭</p>
+<p>——黄安《新鸳鸯蝴蝶梦》</p>
+<p>朝朝望呀望呀愁容添 相恋怎能不相怨</p>
+<p>——新白娘子传奇《心湖雨又风》</p>
+</blockquote>
+<h1 id="青春"><a href="#青春" class="headerlink" title="青春"></a>青春</h1><blockquote>
+<p>时光去了不回头 珍惜吧好朋友</p>
+<p>江玲/钟镇涛 《在那河畔》</p>
+<p>我们都曾有过一张天真而忧伤的脸<br>手握阳光我们望着遥远</p>
+<p>四个女生 《心愿》</p>
+</blockquote>
+]]></content>
+      
+        <categories>
+            
+            <category> 生活 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 音乐 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Echarts 实例]]></title>
-      <url>http://tommyjiang.coding.me/2017/2017-01-03-echarts-example/</url>
+      <url>http://tommyjiang.github.io/2017/2017-01-03-echarts-example/</url>
       <content type="html"><![CDATA[<p>Echarts 代码备忘。</p>
 <a id="more"></a>
 
@@ -3476,56 +4306,8 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     </entry>
     
     <entry>
-      <title><![CDATA[歌词摘录]]></title>
-      <url>http://tommyjiang.coding.me/2017/2017-01-03-Song-lyrics/</url>
-      <content type="html"><![CDATA[<p>人若矫情起来，听什么歌都像唱自己。</p>
-<a id="more"></a>
-<h1 id="爱情"><a href="#爱情" class="headerlink" title="爱情"></a>爱情</h1><blockquote>
-<p>难过是因为我太认真</p>
-<p>——金南玲《逆流成河》</p>
-</blockquote>
-<blockquote>
-<p>爱人在身边随处是天堂</p>
-<p>——乌兰托娅《火红的萨日朗》</p>
-</blockquote>
-<blockquote>
-<p>既然爱你不能言语<br>只能微笑哭泣<br>让我从此忘了你</p>
-<p>——许茹芸《独角戏》</p>
-</blockquote>
-<blockquote>
-<p>由来只有新人笑 有谁听到旧人哭</p>
-<p>——黄安《新鸳鸯蝴蝶梦》</p>
-</blockquote>
-<blockquote>
-<p>朝朝望呀望呀愁容添 相恋怎能不相怨</p>
-<p>——新白娘子传奇《心湖雨又风》</p>
-</blockquote>
-<h1 id="青春"><a href="#青春" class="headerlink" title="青春"></a>青春</h1><blockquote>
-<p>时光去了不回头 珍惜吧好朋友</p>
-<p>江玲/钟镇涛 《在那河畔》</p>
-<p>我们都曾有过一张天真而忧伤的脸<br>手握阳光我们望着遥远</p>
-<p>四个女生 《心愿》</p>
-</blockquote>
-]]></content>
-      
-        <categories>
-            
-            <category> 生活 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 音乐 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[2016行程总结]]></title>
-      <url>http://tommyjiang.coding.me/2016/2016-12-31-Trip-2016/</url>
+      <url>http://tommyjiang.github.io/2016/2016-12-31-Trip-2016/</url>
       <content type="html"><![CDATA[<p>2016年，参加工作后第一个完整的自然年，飞得少了，高铁多了。</p>
 <a id="more"></a>
 <p>2016年各月飞机里程和火车里程如下：</p>
@@ -3636,7 +4418,7 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     
     <entry>
       <title><![CDATA[手帕口道口通过车次信息]]></title>
-      <url>http://tommyjiang.coding.me/2016/2016-12-10-Shou-pa-kou-crossing/</url>
+      <url>http://tommyjiang.github.io/2016/2016-12-10-Shou-pa-kou-crossing/</url>
       <content type="html"><![CDATA[<p>毕业工作后从五道口转到了手帕口道口，每天到道口听听车机联控还是很开心的，记录下具体的车次信息。</p>
 <a id="more"></a>
 
@@ -3777,71 +4559,8 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     </entry>
     
     <entry>
-      <title><![CDATA[Hexo 博文中加入百度地图]]></title>
-      <url>http://tommyjiang.coding.me/2016/2016-11-16-Hexo-baidu-map/</url>
-      <content type="html"><![CDATA[<p>利用百度地图 API 实现在 Hexo 的博文中加入地图。</p>
-<a id="more"></a>
-<p>最近想丰富下生活，最先想到的就是多品尝点北京的美食。作为一个认真的人，吃过就想记下来，但只有饭馆的名字和地址显得太单调了，就想能在地图上显示的话会比较直观。搜了下百度地图的 API，不多说，直接上代码吧。更详细的内容可以参考百度地图 Javascript 的 <a href="http://lbsyun.baidu.com/index.php?title=jspopular" target="_blank" rel="noopener">API</a>。</p>
-<p>首先新建一个<code>div</code>：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"min-height: 800px; width: 100%;"</span> <span class="attr">id</span>=<span class="string">"map"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>然后利用百度地图 API 在<code>div</code>中填充一个地图： </p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">	<span class="comment">// 百度地图API功能</span></span><br><span class="line">	<span class="keyword">var</span> map = <span class="keyword">new</span> BMap.Map(<span class="string">"map"</span>);    <span class="comment">// 创建Map实例</span></span><br><span class="line">	map.centerAndZoom(<span class="keyword">new</span> BMap.Point(<span class="number">116.404</span>, <span class="number">39.915</span>), <span class="number">11</span>);  <span class="comment">// 初始化地图,设置中心点坐标和地图级别</span></span><br><span class="line">	<span class="comment">//添加地图类型控件</span></span><br><span class="line">	map.addControl(<span class="keyword">new</span> BMap.MapTypeControl(&#123;</span><br><span class="line">	mapTypes:[</span><br><span class="line">            BMAP_NORMAL_MAP,</span><br><span class="line">            BMAP_HYBRID_MAP</span><br><span class="line">        ]&#125;));	  </span><br><span class="line">	map.setCurrentCity(<span class="string">"北京"</span>);          <span class="comment">// 设置地图显示的城市 此项是必须设置的</span></span><br><span class="line">	map.enableScrollWheelZoom(<span class="literal">true</span>);     <span class="comment">//开启鼠标滚轮缩放</span></span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
-<p>上述代码直接放在 Hexo Markdown 博文中的<code>raw</code>标签中，即：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% raw %&#125;</span><br><span class="line">上边的代码</span><br><span class="line">&#123;% endraw %&#125;</span><br></pre></td></tr></table></figure>
-<p>结果如下：</p>
-
-    <div style="min-height: 500px; width: 100%; overflow: hidden; margin:0; font-family:" 微软雅黑";"="" id="map">
-    </div>
-
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=x2V7KanMxVA2GuK7oFHPOiGytFSXWoyN"></script>
-    <script type="text/javascript">
-	    // 百度地图API功能
-	    var map = new BMap.Map("map");    // 创建Map实例
-	    map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
-	    //添加地图类型控件
-	    map.addControl(new BMap.MapTypeControl({
-	    mapTypes:[
-                BMAP_NORMAL_MAP,
-                BMAP_HYBRID_MAP
-            ]}));	  
-	    map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
-	    map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
-        
-    	// 百度地图API功能
-    	// var map = new BMap.Map("map");    // 创建Map实例
-    	// map.centerAndZoom(new BMap.Point(98.98284,18.787971), 15);  // 初始化地图,设置中心点坐标和地图级别
-    	// //添加地图类型控件
-    	// map.addControl(new BMap.MapTypeControl({
-    	// mapTypes:[
-        //         BMAP_NORMAL_MAP
-        //     ]}));	  
-    	// map.setCurrentCity("清迈");          // 设置地图显示的城市 此项是必须设置的
-    	// map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
-        // var point = new BMap.Point(98.965718,18.795633);    
-        // var marker = new BMap.Marker(point);        // 创建标注    
-        // map.addOverlay(marker);                     // 将标注添加到地图中 
-    </script>
-
-]]></content>
-      
-        <categories>
-            
-            <category> Geek </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> Hexo </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[北京十大适合一个人吃的餐厅]]></title>
-      <url>http://tommyjiang.coding.me/2016/2016-11-16-Beijing-single-res/</url>
+      <url>http://tommyjiang.github.io/2016/2016-11-16-Beijing-single-res/</url>
       <content type="html"><![CDATA[<p>记录下有才姐推荐的微博上的<a href="http://weibo.com/2643091105/EhDNHuBvH?from=page_1005052643091105_profile&amp;wvr=6&amp;mod=weibotime&amp;type=comment#_rnd1479530057542" target="_blank" rel="noopener">北京十大适合一个人吃的餐厅</a>，把生活丰富起来。</p>
 <a id="more"></a>
 <p>十大适合一个人吃的餐厅的具体信息如下：<br>
@@ -4004,8 +4723,71 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     </entry>
     
     <entry>
+      <title><![CDATA[Hexo 博文中加入百度地图]]></title>
+      <url>http://tommyjiang.github.io/2016/2016-11-16-Hexo-baidu-map/</url>
+      <content type="html"><![CDATA[<p>利用百度地图 API 实现在 Hexo 的博文中加入地图。</p>
+<a id="more"></a>
+<p>最近想丰富下生活，最先想到的就是多品尝点北京的美食。作为一个认真的人，吃过就想记下来，但只有饭馆的名字和地址显得太单调了，就想能在地图上显示的话会比较直观。搜了下百度地图的 API，不多说，直接上代码吧。更详细的内容可以参考百度地图 Javascript 的 <a href="http://lbsyun.baidu.com/index.php?title=jspopular" target="_blank" rel="noopener">API</a>。</p>
+<p>首先新建一个<code>div</code>：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"min-height: 800px; width: 100%;"</span> <span class="attr">id</span>=<span class="string">"map"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>然后利用百度地图 API 在<code>div</code>中填充一个地图： </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">	<span class="comment">// 百度地图API功能</span></span><br><span class="line">	<span class="keyword">var</span> map = <span class="keyword">new</span> BMap.Map(<span class="string">"map"</span>);    <span class="comment">// 创建Map实例</span></span><br><span class="line">	map.centerAndZoom(<span class="keyword">new</span> BMap.Point(<span class="number">116.404</span>, <span class="number">39.915</span>), <span class="number">11</span>);  <span class="comment">// 初始化地图,设置中心点坐标和地图级别</span></span><br><span class="line">	<span class="comment">//添加地图类型控件</span></span><br><span class="line">	map.addControl(<span class="keyword">new</span> BMap.MapTypeControl(&#123;</span><br><span class="line">	mapTypes:[</span><br><span class="line">            BMAP_NORMAL_MAP,</span><br><span class="line">            BMAP_HYBRID_MAP</span><br><span class="line">        ]&#125;));	  </span><br><span class="line">	map.setCurrentCity(<span class="string">"北京"</span>);          <span class="comment">// 设置地图显示的城市 此项是必须设置的</span></span><br><span class="line">	map.enableScrollWheelZoom(<span class="literal">true</span>);     <span class="comment">//开启鼠标滚轮缩放</span></span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<p>上述代码直接放在 Hexo Markdown 博文中的<code>raw</code>标签中，即：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% raw %&#125;</span><br><span class="line">上边的代码</span><br><span class="line">&#123;% endraw %&#125;</span><br></pre></td></tr></table></figure>
+<p>结果如下：</p>
+
+    <div style="min-height: 500px; width: 100%; overflow: hidden; margin:0; font-family:" 微软雅黑";"="" id="map">
+    </div>
+
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=x2V7KanMxVA2GuK7oFHPOiGytFSXWoyN"></script>
+    <script type="text/javascript">
+	    // 百度地图API功能
+	    var map = new BMap.Map("map");    // 创建Map实例
+	    map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
+	    //添加地图类型控件
+	    map.addControl(new BMap.MapTypeControl({
+	    mapTypes:[
+                BMAP_NORMAL_MAP,
+                BMAP_HYBRID_MAP
+            ]}));	  
+	    map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+	    map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+        
+    	// 百度地图API功能
+    	// var map = new BMap.Map("map");    // 创建Map实例
+    	// map.centerAndZoom(new BMap.Point(98.98284,18.787971), 15);  // 初始化地图,设置中心点坐标和地图级别
+    	// //添加地图类型控件
+    	// map.addControl(new BMap.MapTypeControl({
+    	// mapTypes:[
+        //         BMAP_NORMAL_MAP
+        //     ]}));	  
+    	// map.setCurrentCity("清迈");          // 设置地图显示的城市 此项是必须设置的
+    	// map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+        // var point = new BMap.Point(98.965718,18.795633);    
+        // var marker = new BMap.Marker(point);        // 创建标注    
+        // map.addOverlay(marker);                     // 将标注添加到地图中 
+    </script>
+
+]]></content>
+      
+        <categories>
+            
+            <category> Geek </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[纪念清华园站 & 我的铁路情缘]]></title>
-      <url>http://tommyjiang.coding.me/2016/2016-11-01-Tsinghua-yuan-station/</url>
+      <url>http://tommyjiang.github.io/2016/2016-11-01-Tsinghua-yuan-station/</url>
       <content type="html"><![CDATA[<p>百年老站清华园站昨天悄然谢幕，谨以此文聊表纪念，顺便聊聊我和铁路的不解之缘。</p>
 <a id="more"></a>
 <h1 id="清华园和五道口的谢幕"><a href="#清华园和五道口的谢幕" class="headerlink" title="清华园和五道口的谢幕"></a>清华园和五道口的谢幕</h1><p>2016年11月1日，百年老站清华园站停止办理客运业务，五道口熟悉的“行人车辆请注意，火车就要开过来了”也成为了历史。微博上有一段2016年10月31日晚11点50分左右 K273 次通过清华园站时候的<a href="http://weibo.com/1558146213/EfGEgrFxu?from=page_1005051558146213_profile&amp;wvr=6&amp;mod=weibotime" target="_blank" rel="noopener">视频</a>，视频中记录了清华园站最后的车机联控：</p>
@@ -4038,7 +4820,7 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     
     <entry>
       <title><![CDATA[愿得一心人，白首不相离]]></title>
-      <url>http://tommyjiang.coding.me/2016/2016-10-24-Forever-love/</url>
+      <url>http://tommyjiang.github.io/2016/2016-10-24-Forever-love/</url>
       <content type="html"><![CDATA[<p>最近遇到点小挫折，过程中也成长了不少。</p>
 <a id="more"></a>
 <p>1.生活技能树很重要，要多点、早点这部分技能。之前读博包括毕业后的一段时间都在主修工作技能，现在发现这部分技能在交往中几乎没用，还是要多体验生活，发展点兴趣爱好，做个饭，开个车等等，这样聊天也有话题，总不能一直聊工作吧。</p>
@@ -4068,7 +4850,7 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     
     <entry>
       <title><![CDATA[北京地铁各线路颜色 HEX 及 RGB 代码]]></title>
-      <url>http://tommyjiang.coding.me/2016/2016-09-10-Beijing-subway-color/</url>
+      <url>http://tommyjiang.github.io/2016/2016-09-10-Beijing-subway-color/</url>
       <content type="html"><![CDATA[<p>大概翻了翻，网上好像还没有北京地铁各线路颜色的 HEX 及 RGB 代码，自己整理一份。</p>
 <a id="more"></a>
 <p>北京地铁各线路颜色 HEX 和 RGB 代码如下，参考<a href="http://www.bjsubway.com/subwaymap/station_map.html" target="_blank" rel="noopener">北京地铁官网线路图</a>：</p>
@@ -4077,102 +4859,149 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
   <tr>
     <th style="text-align:center">线路序号</th>
     <th style="text-align:center">颜色</th>
+    <th style="text-align:center">PANTONE</th>
     <th style="text-align:center">HEX</th>
     <th style="text-align:center">RGB</th>
   </tr>
   <tr>
-    <td style="text-align:center">1号线</td>
-    <td bgcolor="bb1f20" style="text-align:center"></td>
-    <td style="text-align:center">#BB1F20</td>
-    <td style="text-align:center">rgb(187, 31, 32)</td>
+    <td style="text-align:center">1号线/八通线</td>
+    <td bgcolor="A4343A" style="text-align:center"></td>
+    <td style="text-align:center">1807 C</td>
+    <td style="text-align:center">#A4343A</td>
+    <td style="text-align:center">rgb(164, 52, 38)</td>
   </tr>
   <tr>
     <td style="text-align:center">2号线</td>
-    <td bgcolor="004a88" style="text-align:center"></td>
-    <td style="text-align:center">#004A88</td>
-    <td style="text-align:center">rgb(0, 74, 136)</td>
+    <td bgcolor="004B87" style="text-align:center"></td>
+    <td style="text-align:center">301 C</td>
+    <td style="text-align:center">#004B87</td>
+    <td style="text-align:center">rgb(0, 75, 135)</td>
   </tr>
   <tr>
-    <td style="text-align:center">4号线</td>
-    <td bgcolor="007c8b" style="text-align:center"></td>
-    <td style="text-align:center">#007C8B</td>
-    <td style="text-align:center">rgb(0, 124, 139)</td>
+    <td style="text-align:center">4号线/大兴线</td>
+    <td bgcolor="008C95" style="text-align:center"></td>
+    <td style="text-align:center">321 C</td>
+    <td style="text-align:center">#008C95</td>
+    <td style="text-align:center">rgb(0, 140, 149)</td>
   </tr>
   <tr>
     <td style="text-align:center">5号线</td>
-    <td bgcolor="95006d" style="text-align:center"></td>
-    <td style="text-align:center">#95006D</td>
-    <td style="text-align:center">rgb(149, 0, 109)</td>
+    <td bgcolor="AA0061" style="text-align:center"></td>
+    <td style="text-align:center">227 C</td>
+    <td style="text-align:center">#AA0061</td>
+    <td style="text-align:center">rgb(170, 0, 97)</td>
   </tr>
   <tr>
     <td style="text-align:center">6号线</td>
-    <td bgcolor="c88700" style="text-align:center"></td>
-    <td style="text-align:center">#C88700</td>
-    <td style="text-align:center">rgb(200, 135, 0)</td>
+    <td bgcolor="B58500" style="text-align:center"></td>
+    <td style="text-align:center">125 C</td>
+    <td style="text-align:center">#B58500</td>
+    <td style="text-align:center">rgb(181, 133, 0)</td>
   </tr>
   <tr>
     <td style="text-align:center">7号线</td>
-    <td bgcolor="f4ba6a" style="text-align:center"></td>
-    <td style="text-align:center">#F4BA6A</td>
-    <td style="text-align:center">rgb(244, 186, 106)</td>
+    <td bgcolor="FFC56E" style="text-align:center"></td>
+    <td style="text-align:center">1355 C</td>
+    <td style="text-align:center">#FFC56E</td>
+    <td style="text-align:center">rgb(255, 197, 110)</td>
   </tr>
   <tr>
     <td style="text-align:center">8号线</td>
-    <td bgcolor="038d57" style="text-align:center"></td>
-    <td style="text-align:center">#038D57</td>
-    <td style="text-align:center">rgb(3, 141, 87)</td>
+    <td bgcolor="009B77" style="text-align:center"></td>
+    <td style="text-align:center">3278 C</td>
+    <td style="text-align:center">#009B77</td>
+    <td style="text-align:center">rgb(0, 155, 119)</td>
   </tr>
   <tr>
     <td style="text-align:center">9号线</td>
-    <td bgcolor="7dbd00" style="text-align:center"></td>
-    <td style="text-align:center">#7DBD00</td>
-    <td style="text-align:center">rgb(125, 189, 0)</td>
+    <td bgcolor="97D700" style="text-align:center"></td>
+    <td style="text-align:center">375 C</td>
+    <td style="text-align:center">#97D700</td>
+    <td style="text-align:center">rgb(151, 215, 0)</td>
   </tr>
   <tr>
     <td style="text-align:center">10号线</td>
-    <td bgcolor="0089b5" style="text-align:center"></td>
-    <td style="text-align:center">#0089B5</td>
-    <td style="text-align:center">rgb(0, 137, 181)</td>
+    <td bgcolor="0092BC" style="text-align:center"></td>
+    <td style="text-align:center">313 C</td>
+    <td style="text-align:center">#0092BC</td>
+    <td style="text-align:center">rgb(0, 146, 188)</td>
   </tr>
   <tr>
     <td style="text-align:center">13号线</td>
-    <td bgcolor="f8e700" style="text-align:center"></td>
-    <td style="text-align:center">#F8E700</td>
-    <td style="text-align:center">rgb(248, 231, 0)</td>
+    <td bgcolor="F4DA40" style="text-align:center"></td>
+    <td style="text-align:center">7404 C</td>
+    <td style="text-align:center">#F4DA40</td>
+    <td style="text-align:center">rgb(244, 218, 64)</td>
   </tr>
   <tr>
     <td style="text-align:center">14号线</td>
-    <td bgcolor="cb958f" style="text-align:center"></td>
-    <td style="text-align:center">#CB958F</td>
-    <td style="text-align:center">rgb(203, 149, 143)</td>
+    <td bgcolor="CA9A8E" style="text-align:center"></td>
+    <td style="text-align:center">7612 C</td>
+    <td style="text-align:center">#CA9A8E</td>
+    <td style="text-align:center">rgb(202, 154, 142)</td>
   </tr>
   <tr>
     <td style="text-align:center">15号线</td>
-    <td bgcolor="491b56" style="text-align:center"></td>
-    <td style="text-align:center">#491B56</td>
-    <td style="text-align:center">rgb(73, 27, 86)</td>
+    <td bgcolor="653279" style="text-align:center"></td>
+    <td style="text-align:center">7664 C</td>
+    <td style="text-align:center">#653279</td>
+    <td style="text-align:center">rgb(101, 50, 121)</td>
   </tr>
   <tr>
-    <td style="text-align:center">八通线</td>
-    <td bgcolor="bb1f20" style="text-align:center"></td>
-    <td style="text-align:center">#BB1F20</td>
-    <td style="text-align:center">rgb(187, 31, 32)</td>
-  </tr>
-  <tr>
-    <td style="text-align:center">房山线</td>
-    <td bgcolor="de490e" style="text-align:center"></td>
-    <td style="text-align:center">#DE490E</td>
-    <td style="text-align:center">rgb(222, 73, 14)</td>
+    <td style="text-align:center">16号线</td>
+    <td bgcolor="6BA539" style="text-align:center"></td>
+    <td style="text-align:center">7737 C</td>
+    <td style="text-align:center">#6BA539</td>
+    <td style="text-align:center">rgb(107, 165, 57)</td>
   </tr>
   <tr>
     <td style="text-align:center">昌平线</td>
-    <td bgcolor="d668a3" style="text-align:center"></td>
-    <td style="text-align:center">#D668A3</td>
-    <td style="text-align:center">rgb(214, 104, 163)</td>
+    <td bgcolor="D986BA" style="text-align:center"></td>
+    <td style="text-align:center">673 C</td>
+    <td style="text-align:center">#D986BA</td>
+    <td style="text-align:center">rgb(217, 134, 186)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">房山线/燕房线</td>
+    <td bgcolor="D86018" style="text-align:center"></td>
+    <td style="text-align:center">1595 C</td>
+    <td style="text-align:center">#D86018</td>
+    <td style="text-align:center">rgb(216, 96, 24)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">机场线</td>
+    <td bgcolor="A192B2" style="text-align:center"></td>
+    <td style="text-align:center">666 C</td>
+    <td style="text-align:center">#A192B2</td>
+    <td style="text-align:center">rgb(161, 146, 178)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">西郊线</td>
+    <td bgcolor="D22630" style="text-align:center"></td>
+    <td style="text-align:center">1795 C</td>
+    <td style="text-align:center">#D22630</td>
+    <td style="text-align:center">rgb(210, 38, 48)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">亦庄线</td>
+    <td bgcolor="D0006F" style="text-align:center"></td>
+    <td style="text-align:center">226 C</td>
+    <td style="text-align:center">#D0006F</td>
+    <td style="text-align:center">rgb(208, 0, 111)</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">S1 线</td>
+    <td bgcolor="A45A2A" style="text-align:center"></td>
+    <td style="text-align:center">470 C</td>
+    <td style="text-align:center">#A45A2A</td>
+    <td style="text-align:center">rgb(164, 90, 42)</td>
   </tr>
 </table>
 
-<h1 id="版本记录"><a href="#版本记录" class="headerlink" title="版本记录"></a>版本记录</h1><p>2015-09-10：v1.0-新建博文。</p>
+<h1 id="版本记录"><a href="#版本记录" class="headerlink" title="版本记录"></a>版本记录</h1><ul>
+<li>2016-09-10：v1.0-新建博文。</li>
+<li>2018-11-23：v2.0-根据北京市地方标准 DB11/T 657.2-2015 中的 PANTONE color 修订。</li>
+</ul>
 ]]></content>
       
         <categories>
@@ -4192,7 +5021,7 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     
     <entry>
       <title><![CDATA[Mac 下 Emacs Org mode 加密以及 gnupg 的安装]]></title>
-      <url>http://tommyjiang.coding.me/2016/2016-09-06-Org-mode-org-encrypt-gnupg-Mac/</url>
+      <url>http://tommyjiang.github.io/2016/2016-09-06-Org-mode-org-encrypt-gnupg-Mac/</url>
       <content type="html"><![CDATA[<p>Mac 下 Org mode 加密之前用得好好的，最近发现执行<code>org-encrypt-entry</code>时有问题，原来是<code>gnupg</code>的原因。</p>
 <a id="more"></a>
 <p>迁移到<code>Spacemacs</code>之后感觉很方便，<code>base package</code>中自带了<code>exec-path-from-shell</code>，可以直接使用 Mac 系统的环境变量。</p>
@@ -4222,7 +5051,7 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     
     <entry>
       <title><![CDATA[西单大悦城更换 RMBP 屏幕攻略]]></title>
-      <url>http://tommyjiang.coding.me/2016/2016-08-28-Apple-xidan-joy-city-retina-display/</url>
+      <url>http://tommyjiang.github.io/2016/2016-08-28-Apple-xidan-joy-city-retina-display/</url>
       <content type="html"><![CDATA[<p>RMBP 买了一年半，屏幕涂层脱落得七零八落……到西单大悦城 Apple Store 免费换了个新的，非常棒。</p>
 <a id="more"></a>
 <p>网上有很多关于 RMBP 涂层脱落的问题，比如<a href="https://www.zhihu.com/question/26424953" target="_blank" rel="noopener">知乎上的讨论</a>。其实去年10月开始 Apple 就已经发布内部通知免费维修 Macbook 和 Macbook Pro 防眩光涂层脱落问题，只是没有大肆宣传。正好离西单很近，直接到西单大悦城 Apple Store 换新。</p>
@@ -4254,7 +5083,7 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     
     <entry>
       <title><![CDATA[工银亚洲香港账户开户攻略]]></title>
-      <url>http://tommyjiang.coding.me/2016/2016-08-26-ICBC-Asia/</url>
+      <url>http://tommyjiang.github.io/2016/2016-08-26-ICBC-Asia/</url>
       <content type="html"><![CDATA[<p>开了个工银亚洲的香港账户，方便进行在 HK 的交易。</p>
 <a id="more"></a>
 <p>和小哥在 HK 一起度过了愉快的半年，即使走了也很怀念那段时光，正好最近在 HK 有些财务往来，所以决定办一张工银亚洲的香港银行卡，方便进行 HK 的交易。</p>
@@ -4286,7 +5115,7 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     
     <entry>
       <title><![CDATA[Anaconda 使用清华镜像源]]></title>
-      <url>http://tommyjiang.coding.me/2016/2016-08-25-anaconda-tsinghua-mirror/</url>
+      <url>http://tommyjiang.github.io/2016/2016-08-25-anaconda-tsinghua-mirror/</url>
       <content type="html"><![CDATA[<p>Mac/Win 下将 <code>Anaconda</code> 镜像更改为清华镜像源的方法。</p>
 <a id="more"></a>
 <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>用惯了 Mac 或者 Linux 的同学一定会爱上 <code>brew</code> 和 <code>apt-get</code> 这种一键式的安装工具。不用像 Windows 一样到处去找各个软件的安装包，只需要一个命令就都能搞定，掌控天下的感觉:)</p>
@@ -4319,7 +5148,7 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     
     <entry>
       <title><![CDATA[七夕·Google]]></title>
-      <url>http://tommyjiang.coding.me/2016/2016-08-09-Google-qi-xi/</url>
+      <url>http://tommyjiang.github.io/2016/2016-08-09-Google-qi-xi/</url>
       <content type="html"><![CDATA[<p>今天是中国传统佳节七夕，Google 主页也很应景地换成了七夕的配图。</p>
 <a id="more"></a>
 <p>Google 不愧是一个充满人文关怀的公司，今天也应景地配上了七夕的图片。中午打开 Mac 下的 Chrome 时发现整个 UI 焕然一新，原来已经升级到 v52 版本，整体 UI 借鉴了移动设备上的 <code>Material</code> 风格，界面更加简洁，科技感更强，整体配色也更高冷了。</p>
@@ -4351,7 +5180,7 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     
     <entry>
       <title><![CDATA[MATLAB plot 函数默认 color 调整]]></title>
-      <url>http://tommyjiang.coding.me/2016/2016-07-19-MATLAB-plot-color/</url>
+      <url>http://tommyjiang.github.io/2016/2016-07-19-MATLAB-plot-color/</url>
       <content type="html"><![CDATA[<p>从 MATLAB 2014b 开始，其 <code>plot</code> 函数的默认颜色有所调整。</p>
 <a id="more"></a>
 <p>新的默认配色名称为 <code>parula</code>，意为北美生活的一种森莺。</p>
@@ -4422,7 +5251,7 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     
     <entry>
       <title><![CDATA[《大鱼海棠》经典台词]]></title>
-      <url>http://tommyjiang.coding.me/2016/2016-07-10-bigfish-begonia-md/</url>
+      <url>http://tommyjiang.github.io/2016/2016-07-10-bigfish-begonia-md/</url>
       <content type="html"><![CDATA[<p>昨天晚上，顶着酷热的空气和萌哥老妹到圣熙八号观赏了这部动画，作为校友也算对退学追梦的清华师兄的支持吧。</p>
 <a id="more"></a>
 <p>由于去之前已经听说网上一片骂声，所以期待挺低的，结果看完感觉还不错。画面和音乐都<br>很有感觉，尤其喜欢里面的台词，好好分享下。</p>
@@ -4468,7 +5297,7 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     
     <entry>
       <title><![CDATA[电力系统研究的个人体会]]></title>
-      <url>http://tommyjiang.coding.me/2016/2016-03-17-Power-system-research/</url>
+      <url>http://tommyjiang.github.io/2016/2016-03-17-Power-system-research/</url>
       <content type="html"><![CDATA[<p>从博士入学算起，从事电力系统的研究工作已经将近 6 年了，结合个人的实际经验谈谈对电力系统研究的体会。</p>
 <a id="more"></a>
 <h1 id="电力系统研究的特点"><a href="#电力系统研究的特点" class="headerlink" title="电力系统研究的特点"></a>电力系统研究的特点</h1><p>我个人认为，电力系统研究的特点包括以下几点：</p>
@@ -4489,8 +5318,6 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
 <h2 id="研究开放性角度"><a href="#研究开放性角度" class="headerlink" title="研究开放性角度"></a>研究开放性角度</h2><p>关于这部分，先引用目前在 UCD 的电力系统研究领域著名学者 Federico Milano 的一段话：</p>
 <blockquote>
 <p>The experience with PSAT has taught me that the power system community is simply not responding properly to open source projects. In the last ten years, third-party contributions to PSAT have been very marginal or would have been developed even if PSAT had been not distributed as a free and open source project. On the other hand, I am quite sure that several extensions have been developed but not shared with the PSAT community.</p>
-</blockquote>
-<blockquote>
 <p>I got to the conclusion that the free and open source paradigm is not attractive for <strong>small and closed</strong> communities like the power system one. </p>
 </blockquote>
 <p><code>PSAT</code> 是 Milano 开发的电力系统仿真程序，以开源的形式共享给所有电力系统研究者。但他发现很多研究者基于 PSAT 开发了新的扩展功能，但并没有共享给整个 PSAT 社区，这让他明白了免费开源是不适合由电力系统研究者组成的这种封闭的小圈子的。</p>
@@ -4515,7 +5342,7 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     
     <entry>
       <title><![CDATA[博客迁移至 Hexo]]></title>
-      <url>http://tommyjiang.coding.me/2016/2016-03-16-migrate-to-hexo/</url>
+      <url>http://tommyjiang.github.io/2016/2016-03-16-migrate-to-hexo/</url>
       <content type="html"><![CDATA[<p>从2014年8月第一篇博文算起，已经写了一年半了。之前博客主要用的是 Jekyll + Markdown （感谢 codepiano 同学提供的主题）。即日起本博客迁移至 <code>Hexo</code>，之前的博文会挑一些重点的迁移过来。</p>
 <p>本博客使用的是<code>raytaylorlin</code>提供的 <a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism" target="_blank" rel="noopener">raytaylorism 主题</a>，在此表示感谢。</p>
 ]]></content>
@@ -4539,7 +5366,7 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     
     <entry>
       <title><![CDATA[2015行程总结及个人飞行统计]]></title>
-      <url>http://tommyjiang.coding.me/2015/2015-12-28-Trip-2015/</url>
+      <url>http://tommyjiang.github.io/2015/2015-12-28-Trip-2015/</url>
       <content type="html"><![CDATA[<p>2015年转眼要结束了，在新年即将到来之际整理全年的飞机和火车行程，以及从2012年4月9日第一次坐飞机开始的所有飞行行程。</p>
 <a id="more"></a>
 <h1 id="2015行程总结"><a href="#2015行程总结" class="headerlink" title="2015行程总结"></a>2015行程总结</h1><p>2015年各月飞机里程和火车里程如下：</p>
@@ -5932,7 +6759,7 @@ function FlightStat(){
     
     <entry>
       <title><![CDATA[京、津、唐高铁乘车方案和乘车小技巧]]></title>
-      <url>http://tommyjiang.coding.me/2015/2015-10-01-jing-jin-tang-high-speed-railway/</url>
+      <url>http://tommyjiang.github.io/2015/2015-10-01-jing-jin-tang-high-speed-railway/</url>
       <content type="html"><![CDATA[<p>2015年十一回家，由于买不到直达唐山/唐山北的票，选择了经天津中转的方案，将三地铁路资料汇总如下。</p>
 <a id="more"></a>
 <h1 id="京唐高铁"><a href="#京唐高铁" class="headerlink" title="京唐高铁"></a>京唐高铁</h1><p>2015年8月25日，铁道第三勘察设计院公布了<a href="http://www.tsdig.com/infom.aspx?Id=684&amp;FileName=info&amp;Language=1" target="_blank" rel="noopener">京唐高铁环评二次公告</a>，京唐高铁的走向也正式确定，起点为位于北京的新北京东站，终点为唐山站。</p>
@@ -5940,29 +6767,24 @@ function FlightStat(){
 <p>2016.05.26更新：有传闻说京唐城际的起点可能会改为通州九棵树附近的通州站，这样一来地铁上的时间就太长了，和北京站的动车相比没有太大优势。</p>
 <p>由于目前北京到唐山还没有直达高铁，从北京到唐山可以选择以下两种方案：</p>
 <ol>
-<li><p>高铁：从北京南出发，先经京津城际到天津，再经津秦高铁到唐山，全程244公里，最快需要70分钟左右，二等座票价110.5元。</p>
-</li>
-<li><p>动车：北京到唐山还可以选择动车，从北京站出发，经京哈线到唐山北站，全程151公里，最快也需要70分钟左右，但票价与高铁相比便宜很多，二等座只要44.5元。</p>
-</li>
+<li>高铁：从北京南出发，先经京津城际到天津，再经津秦高铁到唐山，全程244公里，最快需要70分钟左右，二等座票价110.5元。</li>
+<li>动车：北京到唐山还可以选择动车，从北京站出发，经京哈线到唐山北站，全程151公里，最快也需要70分钟左右，但票价与高铁相比便宜很多，二等座只要44.5元。</li>
 </ol>
 <p>以上两种方案有一个共同的问题，就是列车都是由北京去往东北方向，因此一到节假日基本人满为患，一票难求。为了解决这个问题，我现在一般选择由天津中转的方案：先从北京南乘坐京津城际列车到天津，再在天津站中转华东或华中去往东北的列车到唐山。这次回家改签加退票，还第一次体验了高铁的无座票（虽然只有33分钟）。</p>
 <h1 id="乘车小技巧"><a href="#乘车小技巧" class="headerlink" title="乘车小技巧"></a>乘车小技巧</h1><p>京津城际转津秦客专（北京南——天津——唐山）的乘车过程也有些小技巧：</p>
 <ul>
-<li><p>北京南站地铁出站后南北方向均可以进站，需要乘电梯到二楼，而且人比较多。如果是坐京津城际的话，可以直接从快速进站口8进站。虽然北京南和天津站都支持身份证+12306短信直接进出站，但还是建议取票，可以避免用手机来回翻12306短信。快速进站口8旁边可以取票，但人很多，而且总有一些插队的旅客，可以到快速进站口8南边的取票点取票，机器多，排队的人也少。</p>
-</li>
-<li><p>天津站换乘不需要出站，直接经地道换乘就可以。天津站共10站台18车道，其中1-5车道为普速车场，6-11车道为津秦高速车场，12-18车道为京津城际车场。从北京南坐京津城际到达天津站后，如果不是停靠在18车道，都可以下地道出站。可以提前看好转乘列车的检票口，与车道是对应的，由地道直接换乘乘车。举例来说，京津城际停靠13车道，换乘列车的检票口为10，那么下车下地道之后，只需要从10车道对应的口出地道候车即可，无需出站，可以大大节省换乘时间。但以下两种情况无法用此方法换乘：</p>
-<ol>
+<li>北京南站地铁出站后南北方向均可以进站，需要乘电梯到二楼，而且人比较多。如果是坐京津城际的话，可以直接从快速进站口8进站。虽然北京南和天津站都支持身份证+12306短信直接进出站，但还是建议取票，可以避免用手机来回翻12306短信。快速进站口8旁边可以取票，但人很多，而且总有一些插队的旅客，可以到快速进站口8南边的取票点取票，机器多，排队的人也少。</li>
+<li>天津站换乘不需要出站，直接经地道换乘就可以。天津站共10站台18车道，其中1-5车道为普速车场，6-11车道为津秦高速车场，12-18车道为京津城际车场。从北京南坐京津城际到达天津站后，如果不是停靠在18车道，都可以下地道出站。可以提前看好转乘列车的检票口，与车道是对应的，由地道直接换乘乘车。举例来说，京津城际停靠13车道，换乘列车的检票口为10，那么下车下地道之后，只需要从10车道对应的口出地道候车即可，无需出站，可以大大节省换乘时间。但以下两种情况无法用此方法换乘：<ol>
 <li>京津城际停靠18车道的话必须先出站再进站。</li>
 <li>地道中对应车道的出口封闭的话也需要先出站再进站。</li>
 </ol>
 </li>
-<li><p>16节车厢的动车组列车分为两种，一种是L(Long)车型，本身就是16节；另一种是由2个8节车厢的动车组重联组成的，1-8车厢与9-16车厢由于分属两辆车，之间无法互通，因此上车时一定要确认车厢。这次回来有几个10车厢的旅客从8车厢上车，想等开车之后再回10车厢，由于两个CRH动车组之间并不互通，只能在车上站半小时了。</p>
-</li>
+<li>16节车厢的动车组列车分为两种，一种是L(Long)车型，本身就是16节；另一种是由2个8节车厢的动车组重联组成的，1-8车厢与9-16车厢由于分属两辆车，之间无法互通，因此上车时一定要确认车厢。这次回来有几个10车厢的旅客从8车厢上车，想等开车之后再回10车厢，由于两个CRH动车组之间并不互通，只能在车上站半小时了。</li>
 </ul>
 <h1 id="2016年春节补充"><a href="#2016年春节补充" class="headerlink" title="2016年春节补充"></a>2016年春节补充</h1><p>每次坐车回家都会有些新的心得，这次春节回来也不例外，北京南、天津和唐山站都更新了一些小 tips。</p>
 <h2 id="北京南站"><a href="#北京南站" class="headerlink" title="北京南站"></a>北京南站</h2><p>北京南作为始发大站，春运期间客流量极大。这次出地铁后走到了北出口方向，排队经由扶梯到二层处人满为患，从扶梯再往前侧面的一个小门进入，可以沿楼梯爬到二楼，不过如果拎着大件行李要谨慎，距离不近……</p>
 <h2 id="天津站"><a href="#天津站" class="headerlink" title="天津站"></a>天津站</h2><p>这次把天津站内的车道图照下来了，可以作为上面天津站布局的示例：</p>
-<p><img src="/images/Tianjin-railway-station.jpg" alt=""></p>
+<p><img src="/images/2015/2015-10-01-Tianjin-railway-station.jpg" alt=""></p>
 <p>这次京津城际列车停靠在天津站的18站台，必须要先出站再进站了。不过从18站台经过闸机后，不出站可以直接坐电梯到二楼候车大厅。在候车大厅里的一个收获是发现其中还有广发贵宾厅，正好凭广发臻尚白金卡进去坐坐。虽然每次在天津站中转的时间都不长，一般在半小时以内，不过能进去喝杯热水感觉还是不错的。</p>
 <p>返程时还想到广发贵宾厅坐坐，从天津站地下南出口出来之后，没有上到地面，直接在旁边检票进站了，结果在地下的候车厅里待了一会。检票上去后第一次遇到人到站台而车还没来的情况，看着站台上钟表上显示的正点有点慌。再一查发现买的这趟车不是天津站始发的，是从于家堡来的过路车，怪不得提前 3 分钟车才进站。赶上降温天气，在站台吹了半天冷风，还挺难受的。下次一定得注意是不是始发车，不是的话也没关系，可以在候车室里多坐会，别着急到站台就行了。</p>
 <h2 id="唐山站"><a href="#唐山站" class="headerlink" title="唐山站"></a>唐山站</h2><p>从东售票厅取票之后，可以直接从旁边的小门实名制检票进到候车大厅，不用先出去再过一次安检了，很方便。</p>
@@ -5985,7 +6807,7 @@ function FlightStat(){
     
     <entry>
       <title><![CDATA[MATLAB 中利用 m 文件修改 Simulink 模型参数的方法]]></title>
-      <url>http://tommyjiang.coding.me/2015/2015-08-10-Simulink-m-file/</url>
+      <url>http://tommyjiang.github.io/2015/2015-08-10-Simulink-m-file/</url>
       <content type="html"><![CDATA[<p>介绍在 MATLAB 中利用 m 文件修改 Simulink 中模型参数的方法。</p>
 <a id="more"></a>
 <h1 id="电力系统仿真工具"><a href="#电力系统仿真工具" class="headerlink" title="电力系统仿真工具"></a>电力系统仿真工具</h1><p>我个人博士论文的隐名评审意见中有如下评语：</p>
@@ -6000,10 +6822,10 @@ function FlightStat(){
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">set_param(<span class="string">'ModelName'</span>,<span class="string">'LoadInitialState'</span>,<span class="string">'off'</span>,...</span><br><span class="line">          <span class="string">'SaveFinalState'</span>,<span class="string">'on'</span>,<span class="string">'SaveCompleteFinalSimState'</span>,<span class="string">'on'</span>,...</span><br><span class="line">          <span class="string">'FinalStateName'</span>,<span class="string">'xFinal'</span>,<span class="string">'StartTime'</span>,<span class="string">'0'</span>,<span class="string">'StopTime'</span>,<span class="string">'1'</span>);</span><br></pre></td></tr></table></figure>
 <p>其中<code>ModelName</code>为 Simulink 模型的文件名，注意第一次仿真不需要载入初值，因此<code>LoadInitialState</code>选项需要设为<code>off</code>，之后的仿真中则需要将该项设置为<code>on</code>。第2行对应的是保存系统状态量终值的相关设置，其中<code>FinalStateName</code>为终值存储的变量名，之后仿真的初值需要设置为该变量名。</p>
 <h1 id="相关问题"><a href="#相关问题" class="headerlink" title="相关问题"></a>相关问题</h1><h2 id="继续进行仿真时提示仿真起始时间与状态变量初始值的时间不同"><a href="#继续进行仿真时提示仿真起始时间与状态变量初始值的时间不同" class="headerlink" title="继续进行仿真时提示仿真起始时间与状态变量初始值的时间不同"></a>继续进行仿真时提示仿真起始时间与状态变量初始值的时间不同</h2><p>利用以上代码实现 m 文件修改 Simulink 模型参数继续仿真的过程中，会遇到如下警告：</p>
-<pre><code>Warning: The start time of model &apos;Exp2_1_SimModel&apos; is different from the start time saved in the initial SimState. The start time has therefore been reset to 0. 
+<pre><code>Warning: The start time of model &#39;Exp2_1_SimModel&#39; is different from the start time saved in the initial SimState. The start time has therefore been reset to 0. 
 </code></pre><p>虽然出现了上述警告，但存储仿真结果的变量中，时间仍然是从0开始一直到全部仿真结束对应的时刻，并未出现上述警告中提到的将每次重新仿真的起始时间设置为0的情况。我试了试直接在 Simulink 中加载初始值然后仿真，并未出现上述警告。由于该警告目前对仿真结果并无影响，因此暂时将其忽略，之后如果能解决当然最好，就算解决不了也无大碍。</p>
 <h2 id="Simulink-模型中某些参数无法改变"><a href="#Simulink-模型中某些参数无法改变" class="headerlink" title="Simulink 模型中某些参数无法改变"></a>Simulink 模型中某些参数无法改变</h2><p>电力系统的仿真一般采用 Simulink 中的 SimPower 库，我利用 SimPower 搭建了一个单相半桥 PWM 的仿真模型，可以改变该模型中的调制比参数 m 以及电容电压 V_DC，但无法改变模型中反电势电源的电压幅值 Vs 和支路电阻/电感的值，修改后面二者后 MATLAB 会报以下错误：</p>
-<pre><code>Simulink cannot load the initial SimState because the model,&apos;Exp2_1_SimModel&apos;, was changed after the SimState was saved. Run the simulation again and resave the SimState.
+<pre><code>Simulink cannot load the initial SimState because the model,&#39;Exp2_1_SimModel&#39;, was changed after the SimState was saved. Run the simulation again and resave the SimState.
 </code></pre><p>目前还没找到太好的解决方法，只能采用变通的方法。例如修改反电势电源电压幅值可以等效为修改调制比 m，二者对应的电流波形是相同的。</p>
 ]]></content>
       
@@ -6024,7 +6846,7 @@ function FlightStat(){
     
     <entry>
       <title><![CDATA[外地驾驶证到期在北京换领新驾驶证流程总结]]></title>
-      <url>http://tommyjiang.coding.me/2015/2015-07-03-driver-license-renew/</url>
+      <url>http://tommyjiang.github.io/2015/2015-07-03-driver-license-renew/</url>
       <content type="html"><![CDATA[<p>2009年十一考的驾照，虽然没怎么开过车，但马上到6年，也要换新的驾照了，正好也把家里的驾照换成北京的，换驾照流程记录如下。</p>
 <a id="more"></a>
 <h1 id="体检"><a href="#体检" class="headerlink" title="体检"></a>体检</h1><h2 id="第一次体检"><a href="#第一次体检" class="headerlink" title="第一次体检"></a>第一次体检</h2><p>换驾照需要提供《机动车驾驶人身体条件证明》，北京市承担机动车驾驶员体检工作的医疗机构名单可以参考这里。我选的是离学校最近的海淀医院，周一至周五中午1点到下午3点半可以进行司机体检，在2楼202房间，费用10元，只需要带身份证和驾驶证即可，不需要提前打印《身体条件证明》那张表，体检完医院会打印一份。</p>
@@ -6052,11 +6874,11 @@ function FlightStat(){
     
     <entry>
       <title><![CDATA[2015年毕业晚会观后感]]></title>
-      <url>http://tommyjiang.coding.me/2015/2015-07-09-graduation-party/</url>
+      <url>http://tommyjiang.github.io/2015/2015-07-09-graduation-party/</url>
       <content type="html"><![CDATA[<p>犹记得5年前本科毕业时的毕业晚会，中途就离场了。5年后，即将博士毕业了，再来看毕业晚会，让人唏嘘不已。</p>
 <a id="more"></a>
 <h3 id="节目单"><a href="#节目单" class="headerlink" title="节目单"></a>节目单</h3><p>整场晚会的节目单如下：</p>
-<p><img src="/images/2015-Graduation-Party.png" alt=""></p>
+<p><img src="/images/2015/2015-07-09-Graduation-Party.png" alt=""></p>
 <h3 id="个人观后感"><a href="#个人观后感" class="headerlink" title="个人观后感"></a>个人观后感</h3><p>整场晚会印象最深刻的就是两个以毕业为主题的视频节目。</p>
 <h4 id="起点"><a href="#起点" class="headerlink" title="起点"></a>起点</h4><p>2015年清华原创毕业歌曲，视频见<a href="http://v.youku.com/v_show/id_XMTI4MjE1OTY1Mg==.html?from=s1.8-1-1.2" target="_blank" rel="noopener">这里</a>。整首歌用了大段的 Rap，精彩的歌词配上手绘的背景足以唤起每个清华毕业生对母校的留恋。</p>
 <blockquote>
@@ -6083,16 +6905,16 @@ function FlightStat(){
     
     <entry>
       <title><![CDATA[抵港一周年纪念]]></title>
-      <url>http://tommyjiang.coding.me/2014/2014-11-10-Hong-Kong-anniversary/</url>
-      <content type="html"><![CDATA[<p>　　转眼间又到11月了，去年这时候我起身赴港，一周年之际，写篇博客纪念我的香港生活，以及我与香港的不解之缘。</p>
+      <url>http://tommyjiang.github.io/2014/2014-11-10-Hong-Kong-anniversary/</url>
+      <content type="html"><![CDATA[<p>转眼间又到11月了，去年这时候我起身赴港，一周年之际，写篇博客纪念我的香港生活，以及我与香港的不解之缘。</p>
 <a id="more"></a>
 <h1 id="缘起"><a href="#缘起" class="headerlink" title="缘起"></a>缘起</h1><blockquote>
 <p>小河弯弯向南流 流到香江去看一看<br>东方之珠 我的爱人 你的风采是否浪漫依然<br>月儿弯弯的海港 夜色深深 灯火闪亮<br>东方之珠 整夜未眠<br>守着沧海桑田变幻的诺言<br>让海风吹拂了五千年<br>每一滴泪珠 仿佛都说出你的尊严<br>让海潮伴我来保佑你<br>请别忘记我 永远不变黄色的脸<br>船儿弯弯入海港 回头望望沧海茫茫<br>东方之珠拥抱着我<br>让我温暖 你那苍凉的胸膛<br>让海风吹拂了五千年<br>每一滴泪珠 仿佛都说出你的尊严<br>让海潮伴我来保佑你<br>请别忘记我 永远不变黄色的脸</p>
 </blockquote>
-<p>　　《东方之珠》是内地人耳熟能详的，也可能是最容易想到的与香港有关的歌曲了。然而我印象中最早听到这首歌还是在幼儿园，那天还是阴天，快到晚上了，身边的小朋友一个个都被家长接走了，只有我一个人坐在屋子里，听老师单曲循环这首歌。原因是我妈那天有事，没能来按时接我，最后来接我时天都黑了。后来想想，一下午都沉浸在《东方之珠》的旋律里，应该算是我和香港最早的缘分了，虽然当时我并不知道这首歌唱的是香港。</p>
-<p>　　转眼到了1997年，香港回归的年份，全国都沉浸在喜悦的氛围中。作为祖国的花朵，自然会被拉去参加与香港回归相关的事情。我自己就参加了香港回归知识竞赛和香港回归舞蹈表演，都是作为秦皇岛铁路小学参加北京铁路局天津铁路分局举办的活动。先说知识竞赛吧，记得是每人发一本书，上面画一些重点，死记硬背之后去参赛，当时我过年都还在背题。记了一大堆人名，安子介、霍英东、邵逸夫……最后考试的时候有道题印象尤深，世界船王是（），我填的包玉刚，答案是香港的包玉刚。翻开发的书一看，确实是香港的包玉刚……这不是香港回归竞赛么，不是香港的还能是台湾的么……舞蹈表演听起来比较奇幻，虽然现在体型发胖，没法起舞了。不过当时还排练了好久，而且我是扮演香港儿童，和大陆的儿童团聚，后面还有一群小白鸽。现在还有表演的照片在家里，就不传上来了。</p>
-<h1 id="首次抵港"><a href="#首次抵港" class="headerlink" title="首次抵港"></a>首次抵港</h1><p>　　2012年6月底，赴佛山参加博士生实践。2012年6月30日，从福田口岸过关，来到了教科书中提到的万恶的资本主义社会，世界三大金融中心之一的香港。当晚从第一城坐到旺角东，然后步行到旺角，再经油麻地到尖沙咀，深切地感受了香港闹市区的繁华和嘈杂。第二天上午又到港岛的中环苹果店买了个Thunderbolt和网口的转接头，品尝了米其林一星的添好运，还到维多利亚公园围观了港人的七一大游行。下午就乘车由福田口岸过关返回佛山，结束了短暂的香港两日游。</p>
-<h1 id="半年的香港交换学习"><a href="#半年的香港交换学习" class="headerlink" title="半年的香港交换学习"></a>半年的香港交换学习</h1><p>　　2013年11月10日再次由福田口岸过关到达香港，开始半年的香港交换学习生活。仍然是住在小哥家，不过这次终于不是睡在客厅了，而是搬进了卧室。香港的天气并没有想象中的那么难熬，不过3月份连日阴天不见阳光确实让我抑郁了一阵。在港的最大收获就是在小哥的带领下，试图学了学做饭，虽然最后手艺仍不理想，但好歹是饿不死了。另外还去广东的广州肇庆以及潮汕分别转了一圈，深圳去的就太多了。还记得和瓜瓜、胖哥哥和岩峰在深圳happy那天回港后赶上香港20年来最早的黑雨警告，也算一个特别的回忆吧。</p>
+<p>《东方之珠》是内地人耳熟能详的，也可能是最容易想到的与香港有关的歌曲了。然而我印象中最早听到这首歌还是在幼儿园，那天还是阴天，快到晚上了，身边的小朋友一个个都被家长接走了，只有我一个人坐在屋子里，听老师单曲循环这首歌。原因是我妈那天有事，没能来按时接我，最后来接我时天都黑了。后来想想，一下午都沉浸在《东方之珠》的旋律里，应该算是我和香港最早的缘分了，虽然当时我并不知道这首歌唱的是香港。</p>
+<p>转眼到了1997年，香港回归的年份，全国都沉浸在喜悦的氛围中。作为祖国的花朵，自然会被拉去参加与香港回归相关的事情。我自己就参加了香港回归知识竞赛和香港回归舞蹈表演，都是作为秦皇岛铁路小学参加北京铁路局天津铁路分局举办的活动。先说知识竞赛吧，记得是每人发一本书，上面画一些重点，死记硬背之后去参赛，当时我过年都还在背题。记了一大堆人名，安子介、霍英东、邵逸夫……最后考试的时候有道题印象尤深，世界船王是（），我填的包玉刚，答案是香港的包玉刚。翻开发的书一看，确实是香港的包玉刚……这不是香港回归竞赛么，不是香港的还能是台湾的么……舞蹈表演听起来比较奇幻，虽然现在体型发胖，没法起舞了。不过当时还排练了好久，而且我是扮演香港儿童，和大陆的儿童团聚，后面还有一群小白鸽。现在还有表演的照片在家里，就不传上来了。</p>
+<h1 id="首次抵港"><a href="#首次抵港" class="headerlink" title="首次抵港"></a>首次抵港</h1><p>2012年6月底，赴佛山参加博士生实践。2012年6月30日，从福田口岸过关，来到了教科书中提到的万恶的资本主义社会，世界三大金融中心之一的香港。当晚从第一城坐到旺角东，然后步行到旺角，再经油麻地到尖沙咀，深切地感受了香港闹市区的繁华和嘈杂。第二天上午又到港岛的中环苹果店买了个Thunderbolt和网口的转接头，品尝了米其林一星的添好运，还到维多利亚公园围观了港人的七一大游行。下午就乘车由福田口岸过关返回佛山，结束了短暂的香港两日游。</p>
+<h1 id="半年的香港交换学习"><a href="#半年的香港交换学习" class="headerlink" title="半年的香港交换学习"></a>半年的香港交换学习</h1><p>2013年11月10日再次由福田口岸过关到达香港，开始半年的香港交换学习生活。仍然是住在小哥家，不过这次终于不是睡在客厅了，而是搬进了卧室。香港的天气并没有想象中的那么难熬，不过3月份连日阴天不见阳光确实让我抑郁了一阵。在港的最大收获就是在小哥的带领下，试图学了学做饭，虽然最后手艺仍不理想，但好歹是饿不死了。另外还去广东的广州肇庆以及潮汕分别转了一圈，深圳去的就太多了。还记得和瓜瓜、胖哥哥和岩峰在深圳happy那天回港后赶上香港20年来最早的黑雨警告，也算一个特别的回忆吧。</p>
 ]]></content>
       
         <categories>
