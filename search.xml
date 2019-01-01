@@ -12,7 +12,83 @@
 </div>
 
 <a id="more"></a>
-<p>2019 年的元旦，我和老婆在军科。</p>
+<p>2019 年的元旦，我和老婆回家，好好计划新一年。</p>
+<h1 id="健康"><a href="#健康" class="headerlink" title="健康"></a>健康</h1><!-- echarts -->
+
+<div id="weight2019" style="height:400px"></div>
+
+
+<!--百度地图jssdk-->
+<script src="http://api.map.baidu.com/api?v=2.0&ak=x2V7KanMxVA2GuK7oFHPOiGytFSXWoyN"></script>
+<!-- 引入 ECharts -->
+<script src="https://cdn.bootcss.com/echarts/4.1.0/echarts.js"></script>
+<script src="https://cdn.rawgit.com/apache/incubator-echarts/master/theme/macarons.js"></script>
+<!-- 引入百度地图扩展 -->
+<script src="https://cdn.bootcss.com/echarts/4.1.0/extension/bmap.js"></script>
+<script type="text/javascript">
+weight2019();
+
+function weight2019(ec){
+    var weight2019 = echarts.init(document.getElementById('weight2019'), 'macarons');
+
+    var option = {
+        tooltip : {
+            trigger: 'axis'
+        },
+        toolbox: {
+            show : true,
+            feature : {
+                mark : {show: true},
+                dataView : {show: true, readOnly: false},
+                magicType: {show: true, type: ['bar', 'bar']},
+                restore : {show: true},
+                saveAsImage : {show: true}
+            }
+        },
+        calculable : true,
+        legend: {
+            data:['飞机行程','火车行程']
+        },
+        xAxis : [
+            {
+                type : 'category',
+                data : ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月']
+            }
+        ],
+        yAxis : [
+            {
+                type : 'value',
+                name : '飞机行程(km)',
+                axisLabel : {
+                    formatter: '{value}'
+                }
+            },
+            {
+                type : 'value',
+                name : '火车行程(km)',
+                axisLabel : {
+                    formatter: '{value}'
+                }
+            }
+        ],
+        series : [
+            {
+                name:'飞机行程',
+                type:'bar',
+                data:[0, 8514, 0, 0, 0, 3739, 0, 0, 0, 0, 0, 0]
+            },
+            {
+                name:'火车行程',
+                type:'bar',
+                yAxisIndex: 1,
+                data:[595, 0, 354, 0, 0, 0, 372, 574, 0, 297, 0, 0]
+            }
+        ]
+    };
+    weight2019.setOption(option,true); //当setOption第二个参数为true时，会阻止数据合并
+}
+</script>
+
 ]]></content>
       
         <categories>
@@ -39,14 +115,16 @@
 </div>
 
 <a id="more"></a>
-<h1 id="2018-行程总结"><a href="#2018-行程总结" class="headerlink" title="2018 行程总结"></a>2018 行程总结</h1><p>2018 年各月飞机里程和火车里程如下：</p>
+<h1 id="2018-行程总结"><a href="#2018-行程总结" class="headerlink" title="2018 行程总结"></a>2018 行程总结</h1><p>2018 年各月飞机里程和火车里程：</p>
 
 <div id="tripSum2018" style="height:400px"></div>
 
+<p>换工作以后，还没出过差，所有的火车和飞机都是旅游和回家探亲。以后要和大宝游遍全世界。</p>
 <h1 id="个人飞行统计"><a href="#个人飞行统计" class="headerlink" title="个人飞行统计"></a>个人飞行统计</h1><p>各航空公司的里程对比如下：</p>
 
 <div id="airlineStat" style="height:400px"></div>
 
+<p>国航 7w + ，占比超 60%，但离 100w 的终身白金还有很长一段路……</p>
 
 <!--引入百度地图的jssdk，这里需要使用你在百度地图开发者平台申请的 ak-->
 <script src="http://api.map.baidu.com/api?v=2.0&ak=x2V7KanMxVA2GuK7oFHPOiGytFSXWoyN"></script>
