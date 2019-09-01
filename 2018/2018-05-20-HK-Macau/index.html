@@ -32,6 +32,7 @@
   <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/prism.css" media="screen" type="text/css">
   <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
@@ -39,6 +40,7 @@
   <![endif]-->
 
   <script src="/js/jquery-2.0.3.min.js"></script>
+  <script src="/js/prism.js" async></script>
   
   <!-- analytics -->
   
@@ -46,8 +48,8 @@
 
 
 </head>
-</html>
- <body>  
+
+<body>
   <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
       <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -91,8 +93,8 @@
 <div class="clearfix"></div>
 
   <div class="container">
-  	<div class="content">
-    	 
+    <div class="content">
+      
 
 
 	
@@ -293,6 +295,10 @@
 <section id="comment">
   <h2 class="title">留言</h2>
   
+  	 <div id="disqus_thread">
+     <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  	 </div>
+  
 </section>
 
 
@@ -317,7 +323,7 @@
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    </li><li><a href="/categories/生活/">生活<span>46</span></a></li>
+    </li><li><a href="/categories/生活/">生活<span>49</span></a></li>
   
 
     </ul>
@@ -349,17 +355,28 @@
 
 </div><!-- row -->
 
+<script type="text/javascript">
+var disqus_shortname = 'bigbossjiang';
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
 
 
-	</div>
+
+    </div>
   </div>
   <div class="container-narrow">
-  <footer> <p>
+    <footer> <p>
   &copy; 2019 Tommy Jiang
   
       with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
-</div> <!-- container-narrow -->
+  </div> <!-- container-narrow -->
   
 
 
@@ -414,4 +431,4 @@
 </script>
 <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
-   </html>
+</html>

@@ -32,6 +32,7 @@
   <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/prism.css" media="screen" type="text/css">
   <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
@@ -39,6 +40,7 @@
   <![endif]-->
 
   <script src="/js/jquery-2.0.3.min.js"></script>
+  <script src="/js/prism.js" async></script>
   
   <!-- analytics -->
   
@@ -46,8 +48,8 @@
 
 
 </head>
-</html>
- <body>  
+
+<body>
   <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
       <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -91,8 +93,8 @@
 <div class="clearfix"></div>
 
   <div class="container">
-  	<div class="content">
-    	 
+    <div class="content">
+      
 
 
 	
@@ -122,7 +124,8 @@
 <h1 id="远程调试-PyCharm-Professional"><a href="#远程调试-PyCharm-Professional" class="headerlink" title="远程调试 PyCharm Professional"></a>远程调试 PyCharm Professional</h1><p>写代码简单，调代码难，在同一套环境中调代码更难，配过环境的同志都懂得环境配置的痛苦。直接在服务器上调试代码可以完美解决这个问题，只需稳定的网络就能保证环境的一致性。<a href="https://www.jetbrains.com/pycharm/download/#section=mac" target="_blank" rel="noopener">PyCharm Professional</a>可以远程<code>ssh</code>到服务器调试，具体流程可以参考<a href="https://blog.lishubing.net/2015/11/09/pycharm-remote-deploy-and-debug/" target="_blank" rel="noopener">使用 Pycharm 通过 SSH 同步代码与远程调试</a>。</p>
 <h1 id="远程文件传输-GUI-Cyberduck"><a href="#远程文件传输-GUI-Cyberduck" class="headerlink" title="远程文件传输 GUI Cyberduck"></a>远程文件传输 GUI Cyberduck</h1><p>有时候需要把服务器的文件拷贝到本地，虽说可以用<code>scp</code>命令但没有 GUI 总感觉不太直观。Mac 下可以用免费的<a href="https://cyberduck.io/" target="_blank" rel="noopener">Cyberduck</a>建立 SFTP 连接，非常方便。</p>
 <h1 id="远程文件传输命令-scp"><a href="#远程文件传输命令-scp" class="headerlink" title="远程文件传输命令 scp"></a>远程文件传输命令 scp</h1><p>GUI 直观，但是操作比较繁琐。对于从一个服务器向另一个服务器拷贝文件的操作，可以直接利用<code>scp</code>命令，基本格式如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp [-r] [[user@]host1:]file1 ... [[user@]host2:]file2</span><br></pre></td></tr></table></figure>
+<pre><code class="lang-bash">scp [-r] [[user@]host1:]file1 ... [[user@]host2:]file2
+</code></pre>
 	  
 	</div>
 
@@ -179,6 +182,10 @@
 <section id="comment">
   <h2 class="title">留言</h2>
   
+  	 <div id="disqus_thread">
+     <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  	 </div>
+  
 </section>
 
 
@@ -203,7 +210,7 @@
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    </li><li><a href="/categories/技术/">技术<span>17</span></a></li>
+    </li><li><a href="/categories/技术/">技术<span>18</span></a></li>
   
 
     </ul>
@@ -235,17 +242,28 @@
 
 </div><!-- row -->
 
+<script type="text/javascript">
+var disqus_shortname = 'bigbossjiang';
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
 
 
-	</div>
+
+    </div>
   </div>
   <div class="container-narrow">
-  <footer> <p>
+    <footer> <p>
   &copy; 2019 Tommy Jiang
   
       with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
-</div> <!-- container-narrow -->
+  </div> <!-- container-narrow -->
   
 
 
@@ -300,4 +318,4 @@
 </script>
 <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
-   </html>
+</html>

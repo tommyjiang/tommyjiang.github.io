@@ -32,6 +32,7 @@
   <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/prism.css" media="screen" type="text/css">
   <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
@@ -39,6 +40,7 @@
   <![endif]-->
 
   <script src="/js/jquery-2.0.3.min.js"></script>
+  <script src="/js/prism.js" async></script>
   
   <!-- analytics -->
   
@@ -46,8 +48,8 @@
 
 
 </head>
-</html>
- <body>  
+
+<body>
   <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
       <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -91,8 +93,8 @@
 <div class="clearfix"></div>
 
   <div class="container">
-  	<div class="content">
-    	 
+    <div class="content">
+      
 
 
 	
@@ -124,10 +126,6 @@
 <div id="tripSum2015" style="height:400px"></div>
 
 <p>其中1、2、5、8月的飞行里程完全平行，4月是加上了北京——沈阳往返所以才多了一些，也就是说今年光北京——通辽就往返了5趟……不过8月初863已经结题了，我也毕业了，以后应该再也不用去了，哈哈。</p>
-<p>2015年飞机和火车的路线图如下：</p>
-
-<div id="tripMap" style="height:600px"></div>
-
 <p>点评一下路线图：</p>
 <ul>
 <li>飞机：今年个人飞行又开辟多条新航线，到过的机场新增以下4个：沈阳桃仙国际机场（SHE），杭州萧山国际机场（HGH），厦门高崎国际机场（XMN），福州长乐国际机场（FOC）。</li>
@@ -135,10 +133,6 @@
 <li>整体：今年全年的行程明显集中在东部地区，最西的地点竟然是北京……</li>
 </ul>
 <h1 id="个人飞行总结"><a href="#个人飞行总结" class="headerlink" title="个人飞行总结"></a>个人飞行总结</h1><p>由于爷爷奶奶和姥姥姥爷家里离得都很近，再加上家里比较传统，一到过节就回家，没怎么出去玩过，所以我直到2012年4月9号才第一次坐飞机。</p>
-<p>先把分年度飞行线路图放上来吧，只有国内部分，不包括两次北京-美国往返以及美国国内航线：</p>
-
-<div id="flightMap" style="height:400px"></div>
-
 <p>整个西部地区只飞过昆明……东部地区航线倒是挺密集的。出发和到达最多的机场自然是PEK，通辽机场紧随其后，出发和到达均有15次……</p>
 <p>分年度飞行次数和飞行里程统计如下：</p>
 
@@ -160,7 +154,6 @@
 <script type="text/javascript">
 FlightStat()
 TripSum2015();
-TripMap();
 Airline();
 
 //    function drawEcharts(ec){
@@ -1546,6 +1539,10 @@ function FlightStat(){
 <section id="comment">
   <h2 class="title">留言</h2>
   
+  	 <div id="disqus_thread">
+     <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  	 </div>
+  
 </section>
 
 
@@ -1570,7 +1567,7 @@ function FlightStat(){
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    </li><li><a href="/categories/生活/">生活<span>46</span></a></li>
+    </li><li><a href="/categories/生活/">生活<span>49</span></a></li>
   
 
     </ul>
@@ -1602,17 +1599,28 @@ function FlightStat(){
 
 </div><!-- row -->
 
+<script type="text/javascript">
+var disqus_shortname = 'bigbossjiang';
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
 
 
-	</div>
+
+    </div>
   </div>
   <div class="container-narrow">
-  <footer> <p>
+    <footer> <p>
   &copy; 2019 Tommy Jiang
   
       with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
-</div> <!-- container-narrow -->
+  </div> <!-- container-narrow -->
   
 
 
@@ -1667,4 +1675,4 @@ function FlightStat(){
 </script>
 <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
-   </html>
+</html>

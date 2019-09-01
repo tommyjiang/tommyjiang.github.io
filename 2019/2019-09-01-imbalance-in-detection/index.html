@@ -3,15 +3,15 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title>HKUST TensorFlow 教程 | Tommy&#39;s Blog</title>
+  <title>目标检测中的样本不平衡问题 | Tommy&#39;s Blog</title>
   <meta name="author" content="Tommy Jiang">
   
-  <meta name="description" content="HKUST TensorFlow 教程笔记。">
+  <meta name="description" content="处理 imbalance 的方法。">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="HKUST TensorFlow 教程">
+  <meta property="og:title" content="目标检测中的样本不平衡问题">
   <meta property="og:site_name" content="Tommy&#39;s Blog">
 
   
@@ -32,6 +32,7 @@
   <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/prism.css" media="screen" type="text/css">
   <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
@@ -39,6 +40,7 @@
   <![endif]-->
 
   <script src="/js/jquery-2.0.3.min.js"></script>
+  <script src="/js/prism.js" async></script>
   
   <!-- analytics -->
   
@@ -46,8 +48,8 @@
 
 
 </head>
-</html>
- <body>  
+
+<body>
   <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
       <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -91,13 +93,13 @@
 <div class="clearfix"></div>
 
   <div class="container">
-  	<div class="content">
-    	 
+    <div class="content">
+      
 
 
 	
 		<div class="page-header page-header-inverse ">		
-			<h1 class="title title-inverse "> HKUST TensorFlow 教程</h1>
+			<h1 class="title title-inverse "> 目标检测中的样本不平衡问题</h1>
 		</div>		
 	
 
@@ -117,76 +119,25 @@
 	<div class="mypage">		
 	  		
 
-	  <p>HKUST TensorFlow 教程笔记。</p>
-<a id="more"></a>
-<h1 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1"></a>Day 1</h1><ul>
-<li>TensorFlow installation<ul>
-<li><code>pip install</code> (GPU version only for Linux)</li>
-<li>Build from source</li>
-</ul>
-</li>
-<li>TensorFlow basic usage<ul>
-<li>Check installation and version</li>
-<li>Hello world</li>
-</ul>
-</li>
-<li>TF Mechanics<ul>
-<li>Computational Graph</li>
-<li>Placeholder</li>
-<li>Tensor: concept, ranks, shapes and types</li>
-</ul>
-</li>
-<li>Machine learning basics<ul>
-<li>Linear Regression<ul>
-<li>Gradient descent algorithm</li>
-</ul>
-</li>
-<li>Logistic Regression<ul>
-<li>Sigmoid function</li>
-</ul>
-</li>
-<li>Softmax Classification<ul>
-<li>Cost: cross entropy</li>
-<li>epoch, batch size, iterations</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h1 id="Day-1-5"><a href="#Day-1-5" class="headerlink" title="Day 1.5"></a>Day 1.5</h1><ul>
-<li>XOR with Logistic Regression<ul>
-<li>Single unit/Multiple units</li>
-</ul>
-</li>
-<li>Solutions: Deep Neural Network</li>
-<li>Challenges<ul>
-<li>Forward propagation/Back propagation(Chain rule)</li>
-<li>Activation units: ReLU</li>
-<li>Overfitting</li>
-<li>Regularization/Dropout</li>
-</ul>
-</li>
-<li>TensorBoard</li>
-</ul>
-<h1 id="Day-2"><a href="#Day-2" class="headerlink" title="Day 2"></a>Day 2</h1><ul>
-<li>Convolutional Neural Network<ul>
-<li>width, height, depth</li>
-<li>filter</li>
-<li>Convolutional Layer<ul>
-<li>CONV + ReLU</li>
-</ul>
-</li>
-<li>Pooling Layer<ul>
-<li>downsampling (Max pooling)</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h1 id="Day-3"><a href="#Day-3" class="headerlink" title="Day 3"></a>Day 3</h1><ul>
-<li>RNN (left for future)</li>
-</ul>
 	  
+<div class="alert alert-info"><i class="fa fa-info"></i>
+处理 imbalance 的方法。
+</div>
+
+<a id="more"></a>
+<h1 id="样本不平衡问题"><a href="#样本不平衡问题" class="headerlink" title="样本不平衡问题"></a>样本不平衡问题</h1><p>目标检测中的样本不平衡问题，是指对于目标检测模型，负样本的个数远多于正样本<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>，同时，负样本中简单负样本的个数也远多于困难负样本。模型训练过程中，需要避免这种不平衡对模型性能的影响，以免模型将所有样本都判断为负样本。</p>
+<ul>
+<li>单阶段网络：目前绝大多数单阶段网络仍然基于 anchor 。网络 anchor 的正负样本和困难/简单负样本不平衡问题十分突出。</li>
+<li>两阶段网络：两阶段网络中第一阶段的 RPN 与单阶段网络类似，但第二阶段 proposal 的不平衡问题得到了很大缓解，这主要是由于 RPN 处理(top N_pre + nms + top N_pos)后，proposal 中的简单负样本大大减少，从而同时减轻了正负样本和困难/简单负样本的不平衡问题。</li>
+</ul>
+<h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><h2 id="按比例随机采样"><a href="#按比例随机采样" class="headerlink" title="按比例随机采样"></a>按比例随机采样</h2><p>Faster R-CNN 中，第一阶段 RPN 采用按比例随机采样，图片 batch size 为 1，anchor batch size 为 256，正负样本比例为 1 比 1，如果正样本不足 128(256 的 1/2)，则用负样本凑。</p>
+<blockquote>
+<p>We randomly sample 256 anchors in an image to compute the loss function of a mini-batch, where the sampled positive and negative anchors have a ratio of up to 1:1. If there are fewer than 128 positive samples in an image, we pad the mini-batch with negative ones.(Faster R-CNN 3.1.3 Training RPN)</p>
+</blockquote>
+<p>第二阶段 Fast R-CNN 同样采用按比例随机采样，正负样本比例为 1:3，</p>
+<h2 id="在线难样本挖掘-OHEM-online-hard-example-mining"><a href="#在线难样本挖掘-OHEM-online-hard-example-mining" class="headerlink" title="在线难样本挖掘(OHEM, online hard example mining)"></a>在线难样本挖掘(OHEM, online hard example mining)</h2><p>随机采样</p>
+<h2 id="Focal-Loss"><a href="#Focal-Loss" class="headerlink" title="Focal Loss"></a>Focal Loss</h2><p>注</p>
+<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none; padding-left: 0;"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">1.</span><span style="display: inline-block; vertical-align: top;">TODO：正负样本比例最好能有个具体的数值。</span><a href="#fnref:1" rev="footnote"> ↩</a></li></ol></div></div>	  
 	</div>
 
 	<!-- recommended posts -->
@@ -197,14 +148,14 @@
 	<div class="pagination">
 <ul class="pagination">
 	 
-				
-    	<li class="prev"><a href="/2017/2017-10-23-Excel-image-to-vector-image-to-Word/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
-  		
+		
+          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+        
 
         <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
 
 		
-		   <li class="next"><a href="/2017/2017-09-09-download-cnn-video/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+		   <li class="next"><a href="/2019/2019-09-01-LC-weekly-contest-152/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
         
 	
 </ul>
@@ -242,6 +193,10 @@
 <section id="comment">
   <h2 class="title">留言</h2>
   
+  	 <div id="disqus_thread">
+     <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  	 </div>
+  
 </section>
 
 
@@ -255,7 +210,7 @@
 	
 	<div class="meta-widget">
 	<i class="fa fa-clock-o"></i>
-	2017-10-21 
+	2019-09-01 
 	</div>
 	
 
@@ -266,7 +221,7 @@
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    </li><li><a href="/categories/Geek/">Geek<span>17</span></a></li>
+    </li><li><a href="/categories/工作/">工作<span>10</span></a></li>
   
 
     </ul>
@@ -279,7 +234,7 @@
 	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
     <ul id="tags" class="tag_box list-unstyled collapse in">	  
 	    
-  <li><a href="/tags/Machine-learning/">Machine learning<span>3</span></a></li>
+  <li><a href="/tags/CV/">CV<span>9</span></a></li> <li><a href="/tags/CS/">CS<span>3</span></a></li>
     </ul>
 	</div>
 	
@@ -298,17 +253,28 @@
 
 </div><!-- row -->
 
+<script type="text/javascript">
+var disqus_shortname = 'bigbossjiang';
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
 
 
-	</div>
+
+    </div>
   </div>
   <div class="container-narrow">
-  <footer> <p>
+    <footer> <p>
   &copy; 2019 Tommy Jiang
   
       with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
-</div> <!-- container-narrow -->
+  </div> <!-- container-narrow -->
   
 
 
@@ -363,4 +329,4 @@
 </script>
 <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
-   </html>
+</html>

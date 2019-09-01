@@ -4,6 +4,927 @@
   
     
     <entry>
+      <title><![CDATA[目标检测中的样本不平衡问题]]></title>
+      <url>http://tommyjiang.github.io/2019/2019-09-01-imbalance-in-detection/</url>
+      <content type="html"><![CDATA[
+<div class="alert alert-info"><i class="fa fa-info"></i>
+处理 imbalance 的方法。
+</div>
+
+<a id="more"></a>
+<h1 id="样本不平衡问题"><a href="#样本不平衡问题" class="headerlink" title="样本不平衡问题"></a>样本不平衡问题</h1><p>目标检测中的样本不平衡问题，是指对于目标检测模型，负样本的个数远多于正样本<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>，同时，负样本中简单负样本的个数也远多于困难负样本。模型训练过程中，需要避免这种不平衡对模型性能的影响，以免模型将所有样本都判断为负样本。</p>
+<ul>
+<li>单阶段网络：目前绝大多数单阶段网络仍然基于 anchor 。网络 anchor 的正负样本和困难/简单负样本不平衡问题十分突出。</li>
+<li>两阶段网络：两阶段网络中第一阶段的 RPN 与单阶段网络类似，但第二阶段 proposal 的不平衡问题得到了很大缓解，这主要是由于 RPN 处理(top N_pre + nms + top N_pos)后，proposal 中的简单负样本大大减少，从而同时减轻了正负样本和困难/简单负样本的不平衡问题。</li>
+</ul>
+<h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><h2 id="按比例随机采样"><a href="#按比例随机采样" class="headerlink" title="按比例随机采样"></a>按比例随机采样</h2><p>Faster R-CNN 中，第一阶段 RPN 采用按比例随机采样，图片 batch size 为 1，anchor batch size 为 256，正负样本比例为 1 比 1，如果正样本不足 128(256 的 1/2)，则用负样本凑。</p>
+<blockquote>
+<p>We randomly sample 256 anchors in an image to compute the loss function of a mini-batch, where the sampled positive and negative anchors have a ratio of up to 1:1. If there are fewer than 128 positive samples in an image, we pad the mini-batch with negative ones.(Faster R-CNN 3.1.3 Training RPN)</p>
+</blockquote>
+<p>第二阶段 Fast R-CNN 同样采用按比例随机采样，正负样本比例为 1:3，</p>
+<h2 id="在线难样本挖掘-OHEM-online-hard-example-mining"><a href="#在线难样本挖掘-OHEM-online-hard-example-mining" class="headerlink" title="在线难样本挖掘(OHEM, online hard example mining)"></a>在线难样本挖掘(OHEM, online hard example mining)</h2><p>随机采样</p>
+<h2 id="Focal-Loss"><a href="#Focal-Loss" class="headerlink" title="Focal Loss"></a>Focal Loss</h2><p>注</p>
+<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none; padding-left: 0;"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">1.</span><span style="display: inline-block; vertical-align: top;">TODO：正负样本比例最好能有个具体的数值。</span><a href="#fnref:1" rev="footnote"> ↩</a></li></ol></div></div>]]></content>
+      
+        <categories>
+            
+            <category> 工作 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> CV </tag>
+            
+            <tag> CS </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[LeetCode Weekly Contest 152]]></title>
+      <url>http://tommyjiang.github.io/2019/2019-09-01-LC-weekly-contest-152/</url>
+      <content type="html"><![CDATA[
+<div class="alert alert-info"><i class="fa fa-info"></i>
+LeetCode Weekly Contest 152.
+</div>
+
+<a id="more"></a>
+<h1 id="问题-1"><a href="#问题-1" class="headerlink" title="问题 1"></a>问题 1</h1><p><a href="https://leetcode.com/problems/prime-arrangements/" target="_blank" rel="noopener">题目链接</a></p>
+<p>思路：从 1 到 n 质数和合数分别计数，结果为<code>质数阶乘 * 合数阶乘 % MOD</code>。<br>复杂度：时间复杂度 O(n^2)，空间复杂度 O(1)。</p>
+<p>Python</p>
+<pre><code class="lang-python">class Solution:
+    def numPrimeArrangements(self, n: int) -&gt; int:
+        def is_prime(n):
+            for i in range(2, n // 2 + 1):
+                if n % i == 0:
+                    return False
+
+            return True
+
+        p = 0
+        c = 1  # 1 是合数
+        mod = 10 ** 9 + 7
+
+        for i in range(2, n+1):
+            if is_prime(i):
+                p += 1
+            else:
+                c += 1
+
+        return math.factorial(p) % mod * math.factorial(c) % mod
+</code></pre>
+<p>C++</p>
+<pre><code class="lang-cpp">class Solution {
+public:
+    bool prime(int n) {
+        if (n &lt; 2)
+            return false;
+
+        for (int i = 2; i * i &lt;= n; i++)
+            if (n % i == 0)
+                return false;
+
+        return true;
+    }
+    int numPrimeArrangements(int n) {
+        const int MOD = 1e9 + 7;
+        long long res = 1;
+
+        int p = 0;
+        int c = 1;
+
+        for (int i = 2; i &lt;= n; i++){
+            if (prime(i)) {
+                p += 1;
+            } else {
+                c += 1;
+            }
+        }
+
+        for (int i = 1; i &lt;= p; i++)
+            res = res * i % MOD;
+
+        for (int i = 1; i &lt;= c; i++)
+            res = res * i % MOD;
+
+        return res;
+    }
+};
+</code></pre>
+<h1 id="问题-2"><a href="#问题-2" class="headerlink" title="问题 2"></a>问题 2</h1><p><a href="https://leetcode.com/problems/diet-plan-performance/" target="_blank" rel="noopener">题目链接</a></p>
+<p>解法：计算前缀和，每次去掉一个元素，加入一个元素。<br>复杂度：时间复杂度 O(n)，空间复杂度 O(1)。</p>
+<pre><code class="lang-python">class Solution:
+    def dietPlanPerformance(self, A: List[int], k: int, 
+                            lower: int, upper: int) -&gt; int:
+        res = 0
+        n = len(A)
+
+        s = sum(A[:k])
+
+        if s &gt; upper:
+            res += 1
+        elif s &lt; lower:
+            res -= 1
+
+        for i in range(n-k):
+            s -= A[i]
+            s += A[i+k]
+
+            if s &gt; upper:
+                res += 1
+            elif s &lt; lower:
+                res -= 1
+
+        return res
+</code></pre>
+<pre><code class="lang-cpp">class Solution {
+public:
+    int dietPlanPerformance(vector&lt;int&gt;&amp; A, int k, int lower, int upper) {
+        int res = 0;
+
+        int n = A.size();
+
+        int s = 0;
+
+        for (int i = 0; i &lt; k; ++i){
+            s += A[i];
+        }
+
+        if (s &gt; upper) {
+                res += 1;
+        } else if (s &lt; lower) {
+                res -= 1;
+        }
+
+        for (int i = 0; i &lt; n-k; i++){
+            s -= A[i];
+            s += A[i+k];
+
+            if (s &gt; upper) {
+                res += 1;
+            } else if (s &lt; lower) {
+                res -= 1;
+            }
+        }
+
+        return res;
+    }
+};
+</code></pre>
+<h1 id="问题-3"><a href="#问题-3" class="headerlink" title="问题 3"></a>问题 3</h1><p><a href="https://leetcode.com/problems/can-make-palindrome-from-substring/" target="_blank" rel="noopener">题目链接</a></p>
+<p>解法：26 个字母出现个数用前缀哈希存储，查询和比较 key 的差异为 O(1)，注意可以 rearrange，所以字母出现次数差异只保留 % 2 的值，最后对字符串奇偶长度做判断。</p>
+<p>复杂度：时间复杂度 O(n)，空间复杂度 O(n)</p>
+<pre><code class="lang-python">class Solution:
+    def canMakePaliQueries(self, s: str, 
+                           queries: List[List[int]]) -&gt; List[bool]:
+        n = len(s)
+
+        f = [[0 for _ in range(n+1)] for _ in range(26)]
+
+        for c in range(26):
+            for i in range(n):
+                if s[i] == chr(ord(&#39;a&#39;) + c):
+                    f[c][i+1] = f[c][i] + 1
+                else:
+                    f[c][i+1] = f[c][i]
+        res = []
+
+        for q in queries:
+            l, r, k = q[0], q[1] + 1, q[2]
+            odd = 0
+
+            for c in range(26):
+                if (f[c][r] - f[c][l]) % 2 != 0:
+                    odd += 1
+
+            res.append(odd &lt;= 2 * k + 1);
+
+        return res
+</code></pre>
+<pre><code class="lang-cpp">
+class Solution {
+public:
+    vector&lt;bool&gt; canMakePaliQueries(string s, vector&lt;vector&lt;int&gt;&gt;&amp; queries) {
+        int n = s.size();
+        vector&lt;vector&lt;int&gt;&gt; freq(26, vector&lt;int&gt;(n + 1, 0));
+
+        for (int c = 0; c &lt; 26; c++)
+            for (int i = 0; i &lt; n; i++)
+                freq[c][i + 1] = freq[c][i] + (s[i] == &#39;a&#39; + c ? 1 : 0);
+
+        vector&lt;bool&gt; answer;
+
+        for (vector&lt;int&gt; &amp;query : queries) {
+            int left = query[0], right = query[1], k = query[2];
+            right++;
+
+            int odd = 0;
+
+            for (int c = 0; c &lt; 26; c++)
+                if ((freq[c][right] - freq[c][left]) % 2 != 0)
+                    odd++;
+
+            answer.push_back(odd_count &lt;= 2 * k + 1);
+        }
+
+        return answer;
+    }
+};
+</code></pre>
+<h1 id="问题-4"><a href="#问题-4" class="headerlink" title="问题 4"></a>问题 4</h1>]]></content>
+      
+        <categories>
+            
+            <category> 工作 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> LeetCode </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[老妹儿婚礼]]></title>
+      <url>http://tommyjiang.github.io/2019/2019-08-26-old-sister-wedding/</url>
+      <content type="html"><![CDATA[
+<div class="alert alert-info"><i class="fa fa-info"></i>
+恭贺草原王子大婚。
+</div>
+
+<a id="more"></a>
+<p>周末两天时间，特意请假去了趟科尔沁草原的明珠——白城，参加草原王子——老妹儿的婚礼。</p>
+<p>老妹儿是东北方言，使用灵活广泛，能想到和这个词比较接近的，应该是天津方言中的“小姐姐”。和鄙班第一次打交道的朋友，第一次听到鄙班一系列乱中有序的昵称(包括但不限于妹妹、叔叔、奶夫等)时一般都会崩溃，老妹儿自然也在其中。值得一提的是，一般的昵称都是一个人独有，而老妹儿和我两个人则是互称老妹儿。</p>
+<h1 id="出发"><a href="#出发" class="headerlink" title="出发"></a>出发</h1><p>周六一大早萌嫂开车亲自送萌哥、学哥和我到南苑机场，大兴机场今年 9 月底就要投入使用了，这次也算和中国第一个机场——南苑机场(IATA 代码：NAY；ICAO 代码：ZBNY)道个别。每周二、四、六，南苑都有飞白城的航班，省得再去内蒙兴安盟首府乌兰浩特折腾一趟了。</p>
+<p>在登机口遇到了老妹儿的伴郎靖哥哥。我们三个都是 2012 年 7 月广东佛山南海区博士生实践的队员，他俩都分到了南海区最北面的偏远地带，以至于老妹儿周末来找我的时候连住的地方都没有，还和我挤一张床睡了两晚。</p>
+<p>航班正点起飞，沿着跑道向北起飞后一个 180 度转弯掉头向南，第一次在空中看到大兴机场。飞机 12 点降落在白城长安机场，降落时拍了一张机场附近的照片：</p>
+
+<img src="/images/2019/2019-08-24-白城降落.jpg" width="500px">
+
+<h1 id="预热"><a href="#预热" class="headerlink" title="预热"></a>预热</h1><p>下飞机先到一个饭馆吃正宗东北菜。虽然在北京吃饭的标准至少是人均一个菜，但考虑到东北菜的分量，人均 0.8 个菜都不一定能吃完，再配上独特的甜品：拔丝地瓜，连主食都可以省了。席上新娘亲自介绍一整桌亲朋好友，在见识了新娘的高端朋友后，我果断建议就不要再继续介绍新郎朋友了。老妹儿在席上发表重要讲话，欢迎大家来草原“见识”他们的婚礼。</p>
+<p>酒足饭饱，本该是午休时间，作为长期中午只能在单位眯一小觉的人，热切地期盼能在草原宾馆的床上好好睡一觉。但同学们兴致不减，放下包就出发去 K 歌了。我和萌哥看了一会儿 TI 9 LGD 和 OG 的比赛，略有耽搁，两个人打车过去，起步价 5 元到地方才 7 元，强烈地感受到草原人民的幸福。</p>
+<p>既然到草原 K 歌，当然要点草原歌曲，也不枉我之前去过十几次草原，一图胜千言，秀一下航线图，最密集的就是北京——通辽航线：</p>
+
+<img src="/images/2019/2019-08-24-白城航线图.jpg" width="300px">
+
+<p>第一次去通辽还是在 2012 年 3 月，有幸当时有老妹儿同行，原因是我的小老板是老妹儿大老板的博士，虽然毕业了还和原来的课题组一起做项目。算起来那是我第一次出差，北京——通辽来回都是硬卧，睡一晚上才到，虽然北京 3 月已经不算冷了，但草原还是冷得够呛，出差回来我就发烧了。</p>
+<p>晚上安排了蒙餐烤全羊，我之前出差吃过不少，没什么特别的感觉。席上高导亲自回答各种娱乐八卦问题，长了不少见识。酒足饭饱后第二场开始，选在老金家烧烤，其实前面那顿大家吃得都差不多了，但第二天还要接亲，所以不能喝太多，简单觥筹交错之后，11 点就回宾馆休息了。</p>
+<h1 id="接亲"><a href="#接亲" class="headerlink" title="接亲"></a>接亲</h1><p>周日早上起来，7 点 50 从酒店出发到老妹儿家楼下，步行 5 分钟就到了。楼下除了一个大彩虹门，还有一排小门，样子让我想起了京都伏见稻荷大社的千本鸟居。</p>
+<p>早上 8 点 18 分，车队准时前往新娘住的威尼斯水上乐园。众所周知，白城是一个国际大都市，拥有威尼斯水上乐园、西雅图精品假日酒店、胜利基辅宾馆等一系列国际化建筑，丝毫不比 2012 年夏天我和老妹儿一起去开会的加州圣迭戈差。除了我们这帮同学，老妹儿的家人有不少也跟车一起过来了。</p>
+<p>第一个项目自然是传统的撞门，这次酒店的门比较特殊，是往外开的，所以里面的兄弟们没法堵，只能往里拽。撞门环节还算顺利，但门打开之后新娘没有同意老妹儿进屋，于是在老妹儿的带领下，同学们分别用中英文表达了诚意：</p>
+<blockquote>
+<p>中：我来接你了。<br>英：I’m coming for you.</p>
+</blockquote>
+<p>高级知识分子的婚礼，没点文化水平还真不敢来。</p>
+<p>进屋后先做三个游戏，抖甩乒乓球、诸葛帽吃糖、脸撕保鲜膜。</p>
+<ol>
+<li><p>抖甩乒乓球：老妹儿参加的唯一一个游戏。盒子装满乒乓球，绑在腰后面，不许用手，把所有乒乓球跳出来，老妹儿跳的劲太大，别的花都跳掉了。</p>
+</li>
+<li><p>诸葛帽吃糖：新娘不让老妹儿继续玩了，只能我们这群同学上了。这个游戏如果只允许自己吃自己的，还是很有难度的，好在可以几个人互换吃糖。</p>
+</li>
+<li><p>脸撕保鲜膜：这个游戏很熟悉，去年我婚礼的时候就玩过，重点是不能靠脸用蛮力弄破，要用头顶破。</p>
+</li>
+</ol>
+<p>游戏做完就到了喜闻乐见的找鞋环节。在围观第一个游戏的时候我就在看后面窗帘架上面有没有，最后揭晓后发现是别在两个窗帘中间了，另外一只藏到了岳父岳母坐的沙发后面。</p>
+<p>出门之前，按照新娘当地的习俗，新郎还需要面向父母和新娘家乡方向磕头，老妹儿干净利落地完成，赢得了在场群众的纷纷喝彩。顺利接亲归来，在家里合影留念，前往典礼现场。</p>
+<h1 id="典礼"><a href="#典礼" class="headerlink" title="典礼"></a>典礼</h1><p>典礼开始前，亲朋好友就已经就位了。音乐造足了氛围后，主持人先上来了……张老师千呼万唤始出来，出来后一个急转弯踩着音乐的节拍径直往楼上走，步伐和十几年前初见时并无二致。</p>
+<p>典礼过程中印象最深的是新娘说，感谢你能理解我做的事的意义(大意)，这一句话想必击中了在场绝大多数研究生尤其是各位博士的内心。因为每个研究生毕业答辩的时候，最害怕的问题应该就是答辩评委问，你做的工作有什么意义？</p>
+<p>现在想起来，2015 年初我和老妹儿一起写博士论文的时候，和老妹儿互怼了好几次。当时老妹儿就说他家在草原，我不相信，后来一查，果然白城是科尔沁草原的明珠，为此我还专门把老妹的手机铃声调成了凤凰传奇的《我从草原来》。当时老妹儿还说博士论文的参考文献不能低于多少，说他师兄都是这样的，我就下载了他师兄的论文然后一个一个统计，最后把数据甩给他啪啪打脸。我认为自己博士课题的唯一意义，就是让我赶快毕业滚蛋。</p>
+<p>典礼快结束终于发了筷子，虽然是婚宴，但菜品的味道还不错，我连着吃了好几个大虾。吃得正开心时，抬眼一看，其他桌的亲朋好友已经走了不少，看来我们桌应该是消灭得最干净的一桌了。</p>
+<h1 id="返程"><a href="#返程" class="headerlink" title="返程"></a>返程</h1><p>中午典礼结束，回酒店休息，一觉睡到快 3 点，LGD 败者组决赛不敌 Liquid，总决赛也不用看了。老妹儿中午参加完典礼，下午还过来给我们送水果，着实让人感动。带的李子确实甜，不过沙果太酸了，咬了一口就放下了。和高师兄一唱一和，老妹儿又带我们去吃了老金家烧烤，5 点 20 多的火车，吃到了 4 点 55 才出发，到了取票直接检票上车，去长春的路上还拍到了白城的风车(手机相机效果不好，凑合看吧)。</p>
+
+<img src="/images/2019/2019-08-25-白城风车.jpg" width="600px">
+
+<p>到长春已经是晚上 8 点多了，在蔡爷带领下我们一行四人又到车站附近的饺子馆来了一顿晚餐，俗话说：上车饺子下车面，还吃了东北特色的锅包肉，应该是这次来吃到的最好吃的锅包肉了。</p>
+<p>晚上回京的车次是 Z62 的软卧，四个人一个包厢。这个车非常好，长春始发，8 小时一站直达北京站，软卧包厢四个人一起也不用受熄灯影响，果断开始双升，从长春打到四平打到沈阳北，1 点中才睡，最终 8 比 Q 憾负。车上睡了 5 个小时，睡梦中经过了秦皇岛和唐山，5 点半列车员过来喊起床，又眯了一会儿，再一睁眼已经过建国门，列车很快停在了北京站的站台，草原王子的婚礼之旅也算正式落下了帷幕。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 生活 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 婚礼 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[陈天奇《机器学习科研的十年》读后感]]></title>
+      <url>http://tommyjiang.github.io/2019/2019-07-19-chen-tianqi-zhihu-post-thought/</url>
+      <content type="html"><![CDATA[
+<div class="alert alert-info"><i class="fa fa-info"></i>
+见贤思齐。
+</div>
+
+<a id="more"></a>
+<p>读了陈天奇最新的文章<a href="https://zhuanlan.zhihu.com/p/74249758" target="_blank" rel="noopener">《机器学习科研的十年》</a>，写写感想。</p>
+<h1 id="良好的外部环境"><a href="#良好的外部环境" class="headerlink" title="良好的外部环境"></a>良好的外部环境</h1><p>陈天奇在文中分享了他的主要经历：本科上海交大 ACM、实习 MSRA、交换香港、博士 UW、实习 Google、教职 CMU。文中也列出了他的主要合作者，戴文渊(第四范式创始人)、李航(统计学习方法一书的作者、字节跳动人工智能实验室总监)、Carlos、Ian Goodfellow(GAN 发明人、Apple 机器学习总监)，还有其他一些文中没有名字的同学。</p>
+<h1 id="勤勉的个人努力"><a href="#勤勉的个人努力" class="headerlink" title="勤勉的个人努力"></a>勤勉的个人努力</h1><p>陈天奇在文中多次提到了各种想法和尝试的具体情景：</p>
+<blockquote>
+<p>再到时不时在树下踱步想如何加旋转不变的模型的尝试</p>
+<p>我在排队参观西雅图艺术博物馆的 infinity mirror 展览的途中把加速器内存拷贝支持的第一个方案写在了一张星巴克的餐巾纸上</p>
+<p>在去加州的飞机上，我尝试在纸上画出为了优化矩阵乘法可能的循环变换</p>
+</blockquote>
+<p>能在个人生活中穿插这么多努力，可见确实非常喜欢自己所做的事情，还记得之前电网领导问我能给自己打多少分，做到这样绝对超过 100 分了。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 职业 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 选择 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[CV DL Object Detection Paper 汇总]]></title>
+      <url>http://tommyjiang.github.io/2019/2019-04-30-CV-DL-OD-papers/</url>
+      <content type="html"><![CDATA[
+<div class="alert alert-info"><i class="fa fa-info"></i>
+CV DL OD 文献引用关系图
+</div>
+
+<a id="more"></a>
+
+
+<div id="refs" style="width: 100%;height: 1000px;margin: 0 auto"></div>
+<script src="https://cdn.bootcss.com/echarts/4.2.1-rc1/echarts.js"></script>
+<script src="https://cdn.bootcss.com/echarts/4.2.1-rc1/extension/dataTool.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.js"></script>
+<script src="https://cdn.rawgit.com/apache/incubator-echarts/master/theme/vintage.js"></script>
+
+<script type="text/javascript">
+    // 查找函数
+    function findArray(array, feature, all = true) {
+        for(let index in array){
+            let cur = array[index];
+            if(feature instanceof Object){
+                let allRight = true;
+                for(let key in feature){
+                    let value = feature[key];
+                    if(cur[key] == value && !all) return index;
+                    if(all && cur[key] != value){
+                        allRight = false;
+                        break;
+                    }
+                }
+                if(allRight) return index;
+            }else{
+                if(cur == feature){
+                    return index;
+                }
+            }
+        }
+        return -1;
+    }
+    var myChart = echarts.init(document.getElementById('refs'), 'vintage');
+    myChart.showLoading();
+$.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public/data/asset/data/les-miserables.gexf', function (xml) {
+    myChart.hideLoading();
+
+    // TODO 点击节点跳转到论文 arxiv 链接
+    // TODO 节点 symbolSize 随年份衰减
+    // TODO 根据 link 两篇文章年份设定权重
+    var graph = {
+        "nodes":[
+        // TODO Mask-RCNN
+        // Object Detection
+        {"id":"R-CNN", "name":"2013-R-CNN", "symbolSize":10, "category":1}, // 1311.2524
+        {"id":"SPPNet", "name":"2014-SPPNet", "symbolSize":10, "category":1}, // 1406.4729
+        {"id":"Fast-RCNN", "name":"2015-Fast-RCNN", "symbolSize":10, "category":1}, // 1504.08083
+        {"id":"Faster-RCNN", "name":"2015-Faster-RCNN", "symbolSize":10, "category":1}, // 1506.01497
+        {"id":"ResNet", "name":"2015-ResNet", "symbolSize":10, "category":0}, // 1512.03385
+        {"id":"FPN", "name":"2016-FPN", "symbolSize":10, "category":1}, // 1612.03144
+        {"id":"Cascade RetinaNet", "name":"2019-Cascade-RetinaNet", "symbolSize":10, "category":2}, // 1907.06881
+        ],
+        "links":[
+        // 2014-SPPNet
+        {"source":"SPPNet", "target":"R-CNN"}, // Ref 7
+        // 2015-Fast-RCNN
+        {"source":"Fast-RCNN", "target":"R-CNN"}, // Ref 9
+        {"source":"Fast-RCNN", "target":"SPPNet"}, // Ref 11
+        // 2015-Faster-RCNN
+        {"source":"Faster-RCNN", "target":"SPPNet"}, // Ref 1
+        {"source":"Faster-RCNN", "target":"Fast-RCNN"}, // Ref 2
+        {"source":"Faster-RCNN", "target":"R-CNN"}, // Ref 5
+        // 2015-ResNet
+        {"source":"ResNet", "target":"Fast-RCNN"}, // Ref 7
+        {"source":"ResNet", "target":"R-CNN"}, // Ref 8
+        // 2016-FPN
+        {"source":"FPN", "target":"Fast-RCNN"}, // Ref 11
+        {"source":"FPN", "target":"R-CNN"}, // Ref 12
+        {"source":"FPN", "target":"SPPNet"}, // Ref 15
+        // {"source":"FPN", "target":"SSD"}, // Ref 22
+        {"source":"FPN", "target":"Faster-RCNN"}, // Ref 29
+        // 2019-Cascade-RetinaNet
+        // {"source":"Cascade RetinaNet", "target":"DSSD"}, // Ref 8
+        {"source":"Cascade RetinaNet", "target":"Fast-RCNN"}, // Ref 10
+        // {"source":"Cascade RetinaNet", "target":"Mask R-CNN"}, // Ref 11
+        {"source":"Cascade RetinaNet", "target":"ResNet"}, // Ref 12
+        ]
+    }
+    var categories = [{'name': '基础网络'},
+                      {'name': '两阶段网络'},
+                      {'name': '单阶段网络'}
+                     ];
+    // TODO 根据 link 修改 symbolSize / 根据年份加权
+    graph.links.forEach(function (link) {
+        link.id = link.source + "-" + link.target
+        var cur_link = link.target
+        var index = findArray(graph.nodes, {id: link.target});
+        graph.nodes[index]['symbolSize'] += 2
+        console.log(link)
+        // console.log(graph.nodes[0]['id'])
+    });
+    graph.nodes.forEach(function (node) {
+        node.itemStyle = null;
+        node.value = node.symbolSize;
+        node.label = {
+            normal: {
+                show: node.symbolSize > 0
+            }
+        };
+    });
+    option = {
+        title: {
+            text: 'CV refs',
+            subtext: 'Circular layout',
+            top: 'bottom',
+            left: 'right'
+        },
+        tooltip: {},
+        legend: [{
+            // selectedMode: 'single',
+            data: categories.map(function (a) {
+                return a.name;
+            })
+        }],
+        animation: false,
+        // animationDurationUpdate: 1500,
+        // animationEasingUpdate: 'quinticInOut',
+        series : [
+            {
+                name: 'CV refs',
+                type: 'graph',
+                // layout: 'circular',
+                layout: 'force',
+                force: {
+                    repulsion: 2000,
+                    gravity: 0.2
+                },
+                circular: {
+                    rotateLabel: true
+                },
+                edgeSymbol: [null, 'arrow'],  // 有向图, edgeSymbol 为 arrow
+                data: graph.nodes,
+                links: graph.links,
+                categories: categories,
+                roam: true,
+                focusNodeAdjacency: true,
+                itemStyle: {
+                    normal: {
+                        borderColor: '#fff',
+                        borderWidth: 1,
+                        shadowColor: 'rgba(0, 0, 0, 0.3)'
+                    }
+                },
+                label: {
+                    normal: {
+                        position: 'right',
+                        formatter: '{b}'
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        color: 'source',
+                        curveness: 0.3
+                    }
+                }
+            }
+        ]
+    };
+
+    myChart.setOption(option);
+}, 'xml');
+</script>
+
+
+]]></content>
+      
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> CV </tag>
+            
+            <tag> DL </tag>
+            
+            <tag> 目标检测 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[多买高性价比东西]]></title>
+      <url>http://tommyjiang.github.io/2019/2019-03-25-high-cost-effective-things/</url>
+      <content type="html"><![CDATA[
+<div class="alert alert-info"><i class="fa fa-info"></i>
+总结过去几年买的高性价比的东西。
+</div>
+
+<a id="more"></a>
+<p>买东西应该秉承不买贵的，只买对的的原则，但绝大多数情况下，贵的东西肯定更好，所以更应该衡量的是性价比。在能够承担的范围内，可以优先考虑性价比高的，哪怕贵一点也没关系。比如最近几年买的这些东西：</p>
+<ul>
+<li><p>Cherry 原厂机械键盘(红轴和茶轴)：转行之前在电网，经常要写汇报材料，用机械键盘打字绝对是一种享受，现在需要敲代码，就更离不开机械键盘了。这两个键盘买了四、五年了，还是一如既往地好用，只是定期需要把键都卸下来擦一擦，不然都是灰尘。</p>
+</li>
+<li><p>Retina MacBook Pro：15 年初托小哥从香港带回来的，学生优惠价不到 14000，大陆行货要 18000。用到现在已经四年了，只换了一次电池和一个电源适配器，看 paper 写代码神器，争取再用四年。美中不足的是升级了 Mojave 系统以后，Mac 没有官方授权的 N 卡驱动，只能在 Win 下打游戏了。</p>
+</li>
+<li><p>iPhone：14 年底入手的，也用了四年多了，中间换过一次电池，现在电池又不行了。不过 iPhone 最近几年的品控越来越差，性价比也越来越低，下一个手机可能考虑换小米或者华为的拍照手机了。</p>
+</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> 生活 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 感想 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[炉石记录]]></title>
+      <url>http://tommyjiang.github.io/2019/2019-02-20-hearthstone/</url>
+      <content type="html"><![CDATA[
+<div class="alert alert-info"><i class="fa fa-info"></i>
+炉石老玩家
+</div>
+
+<a id="more"></a>
+
+<div id="hs" style="height:400px"></div>
+
+<h1 id="2019"><a href="#2019" class="headerlink" title="2019"></a>2019</h1><ul>
+<li>2019-02-21：<ul>
+<li>亚服：分解部门准备退环境的卡，合伊瑟拉和玛里苟斯。</li>
+<li>欧服：战士经典卡补齐，合哈里森。</li>
+<li>美服：开暴龙王、合哈里森，补齐除猎人外 8 职业经典卡。</li>
+</ul>
+</li>
+</ul>
+
+<!-- 引入 ECharts -->
+<script src="https://cdn.bootcss.com/echarts/4.1.0/echarts.js"></script>
+<script src="https://cdn.rawgit.com/apache/incubator-echarts/master/theme/macarons.js"></script>
+<script type="text/javascript">
+hs();
+
+function hs(ec){
+    var hs = echarts.init(document.getElementById('hs'), 'macarons'); 
+    <!-- 填空 -->
+    var data = [["2019-02-20", 3865, 18545, 4005, 21610, 3985, 22645],
+                ["2019-02-21", 3925, 19705, 3940, 19230, 3985, 19520],
+                ["2019-02-22", 3995, 19705, 4150, 19230, 4130, 19650],
+                ["2019-02-23", 3995, 19500, 4200, 20420, 4240, 19040],
+                ["2019-02-24", 4115, 19500, 4200, 20420, 4045, 19225]
+               ] 
+    var option = {
+         title: {text: '炉石'}, 
+         legend: {
+             data: ['亚服金币', '亚服尘', '欧服金币', '欧服尘', '美服金币', '美服尘']
+         },
+         tooltip: {
+             trigger: 'axis',
+             formatter: function(params) {
+                 return params[0].name + '<br/>'
+                        + params[0].seriesName + ' : ' + params[0].value + '<br/>'
+                        + params[2].seriesName + ' : ' + params[2].value + '<br/>'
+                        + params[4].seriesName + ' : ' + params[4].value + '<br/>'
+                        + params[1].seriesName + ' : ' + params[1].value + '<br/>'
+                        + params[3].seriesName + ' : ' + params[3].value + '<br/>'
+                        + params[5].seriesName + ' : ' + params[5].value
+                        ;
+             }
+         },
+         toolbox: {
+             show: false
+         },
+         xAxis: {
+             data: data.map(function (item) {
+                 return item[0];
+             })
+         },
+         yAxis: [
+             {
+                 name: '金币',
+                 min: 2500,
+                 max: 4500,
+                 splitLine: {
+                     show: false
+                 }
+             },
+             {
+                 name: '奥术之尘',
+                 min: 18000,
+                 max: 25000,
+                 splitLine: {
+                     show: false
+                 }
+             }
+         ],
+         dataZoom: [{
+             startValue: '2019-02-20'
+         }, {
+             type: 'inside'
+         }],
+        series: [
+            {
+                name: '亚服金币',
+                type: 'line',
+                itemStyle: {
+                    normal: {
+                        color: '#faff72'
+                    }
+                },
+                data: data.map(function (item) {
+                    return item[1];
+                })
+            },
+            {
+                name: '亚服尘',
+                type: 'line',
+                itemStyle: {
+                    normal: {
+                        color: '#fff143'
+                    }
+                },
+                yAxisIndex: 1,
+                data: data.map(function (item) {
+                    return item[2];
+                })
+            },
+            {
+                name: '欧服金币',
+                type: 'line',
+                itemStyle: {
+                    normal: {
+                        color: '#44cef6'
+                    }
+                },
+                data: data.map(function (item) {
+                    return item[3];
+                })
+            },
+            {
+                name: '欧服尘',
+                type: 'line',
+                itemStyle: {
+                    normal: {
+                        color: '#3eede7'
+                    }
+                },
+                yAxisIndex: 1,
+                data: data.map(function (item) {
+                    return item[4];
+                })
+            },
+            {
+                name: '美服金币',
+                type: 'line',
+                itemStyle: {
+                    normal: {
+                        color: '#f00056'
+                    }
+                },
+                data: data.map(function (item) {
+                    return item[5];
+                })
+            },
+            {
+                name: '美服尘',
+                type: 'line',
+                itemStyle: {
+                    normal: {
+                        color: '#ff2121'
+                    }
+                },
+                yAxisIndex: 1,
+                data: data.map(function (item) {
+                    return item[6];
+                })
+            },
+        ]
+    };
+    hs.setOption(option, true); //当setOption第二个参数为true时，会阻止数据合并
+}
+
+</script>
+
+]]></content>
+      
+        <categories>
+            
+            <category> 生活 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 炉石 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[2019-01 随想]]></title>
+      <url>http://tommyjiang.github.io/2019/2019-01-24-some-thought/</url>
+      <content type="html"><![CDATA[
+<div class="alert alert-info"><i class="fa fa-info"></i>
+老来多健忘
+</div>
+
+<a id="more"></a>
+<p>读博之后感觉记忆力比巅峰状态差了很多，现在很多事儿不记在手机上很容易就忘了，一些想法也是，在这随时记下来。</p>
+<ol>
+<li>元旦以来将近一个月的时间，已经减了 5 斤，体重降到 74 以下。大学入学体检的时候，是 9 开头的两位数的体重，大一一年瘦到了 140，减了 40+ 斤。当年曾经被人嘲笑的小胖子，如今出现了逆生长，体重控制得还不错。反观当年身材还算正常的各位，一部分已经发福到没法看了。笑到最后才是笑得最好的，继续努力。</li>
+<li>公司发了放假暂行规定，发现只有入职以后领证才能休婚假，之前在国网提了离职被领导忽悠，说在这就别休了，也没当回事儿就没休，现在到了这边休不了了，白白损失 10 天假期。本以为博士毕业就不会再忽悠了，没想到临走还是被电网坑了。</li>
+<li>有些时候该放弃就要放弃，遇到困难也要及时和人沟通，别都自己扛着。现在还清楚地记得本科毕设答辩是 2010.6.22，和高考出分整整差了 4 年。由于毕设没做好，很狼狈地被取消了优良毕业生的称号。大四毕设答辩完还和萌哥吃了顿饭，当时他建议我把遇到的情况和老板反映，虽然我知道反映了也没用，但做和没做之间的差别还是挺大的，有问题应该及时和别人反映。而且话说回来，从那时候起就应该对博士的整个过程及时调低预期，也不会被坑这么惨了，更何况，从博士论文送审的时候就已经注定以后不会在电力行业混了，竟然还投入了两年半的沉没成本，教训深刻。</li>
+<li>知乎上拿到了电气工程的优秀回答者，下一步准备往深度学习优秀回答者努力，正在写计算机视觉相关问题的回答。写的过程中发现，我的强项还是搜集整理资料，并且能用比较容易理解的方式讲给不懂的人，以后选行业可以试试教育方面。</li>
+<li>网申了两次 + 找业务员申浦发 AE 白都被秒拒，前几天浦发竟然还厚着脸皮给我打电话，让我申请浦发男人卡，问能否直接办 AE 白，答曰不能，果断挂电话。网上看别人申额度给了 4k，果然是猴子行。</li>
+</ol>
+]]></content>
+      
+        <categories>
+            
+            <category> 生活 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 计划 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[海鲜宴]]></title>
+      <url>http://tommyjiang.github.io/2019/2019-01-12-seafood/</url>
+      <content type="html"><![CDATA[
+<div class="alert alert-info"><i class="fa fa-info"></i>
+许久不见的美食。
+</div>
+
+<a id="more"></a>
+<p><img src="/images/2019/2019-01-12-海鲜宴.jpg" alt=""></p>
+<h2 id="菜单"><a href="#菜单" class="headerlink" title="菜单"></a>菜单</h2><ul>
+<li>清蒸扇贝</li>
+<li>辣炒海蛏</li>
+<li>凉拌土豆丝</li>
+<li>萝卜土豆丸子</li>
+<li>辣炒生菜</li>
+</ul>
+<h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><h2 id="寄语"><a href="#寄语" class="headerlink" title="寄语"></a>寄语</h2><p>大厨寄语：买的海鲜一定要放在水里吐沙子两小时。小猪最爱吃这样爆炒的海鲜啦。海鲜还是带着壳吃比较有感觉！希望丰富的蛋白质可以保佑大厨减肥顺利进行，加油呀！</p>
+<p><img src="/images/2019/2019-01-12-海鲜宴大厨.png" alt=""></p>
+<p>小厨寄语：最近大小厨都在减肥，特意选择了海鲜，好吃不胖型。辛苦大厨把每个扇贝都冲了一遍，吃的时候完全不牙碜，好吃实惠。特意从董那拿来了土豆丝和丸子，相得益彰。很久没在家做饭了，怀念晚上早回来在家做饭的日子，以后争取回家做饭！</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 生活 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 海鲜 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Mac 系统降级]]></title>
+      <url>http://tommyjiang.github.io/2019/2019-01-09-Mac-downgrade/</url>
+      <content type="html"><![CDATA[
+<div class="alert alert-info"><i class="fa fa-info"></i>
+工作电脑不要轻易升级系统！
+</div>
+
+<a id="more"></a>
+<p>上午在知乎看了一篇<a href="https://www.zhihu.com/question/305613293/answer/569592293" target="_blank" rel="noopener">回答</a>，跟风升级了 Mojave 系统，升级完发现 Apple 和 NVIDIA 干架，Mac 全线产品从 N 卡换成了 A 卡，现在竟然连 N 卡的驱动也不批准了，导致像我这种老 Mac 用户升级后没法用显卡。</p>
+<p>想回退系统，发现只能抹掉重装，太麻烦了，网上还有一种方法是 Command + Alt + Shift + R，可以装 Mac 初始带的系统，但 10.13 开始磁盘格式从 HFS+ 转到了 APFS，这个方法也不行了。</p>
+<p>总结：</p>
+<ol>
+<li>升级前一定要用 Time Machine 备份，可以随时降级。</li>
+<li>工作电脑不要轻易升级系统，省得耽误干活。</li>
+</ol>
+<p>折腾过程中的收获：</p>
+<ul>
+<li><a href="http://blog.topspeedsnail.com/archives/6603" target="_blank" rel="noopener">Ubuntu 16.04 无线热点方法</a></li>
+<li>Mac 启动时卡在进度条：启动后按住 Command + Option + P + R</li>
+<li><a href="https://blog.csdn.net/toopoo/article/details/84765391" target="_blank" rel="noopener">Emacs 升级后无法正常打开解决方法</a></li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> 工作 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Mac </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[提出离职一周年]]></title>
+      <url>http://tommyjiang.github.io/2019/2019-01-02-resign-SGCC-one-year/</url>
+      <content type="html"><![CDATA[
+<div class="alert alert-info"><i class="fa fa-info"></i>
+2018 年 1 月 2 日，正式向领导提出辞职。
+</div>
+
+<a id="more"></a>
+<p>迎新年的第二天，也迎来了从电网提离职一周年的纪念。</p>
+<p>去年的这个时候，刚和领导提完离职回到家。那天下午，领导又组织我们技术攻坚小组开会，会上说今年我们的干劲要保持和去年一样。还说到其他部门领导说，不能培养这些博士，培养完他们都走了，说完还哈哈大笑了几声。等同事们都离开之后，我和领导汇报了我的动态——我也准备换个地方干了。然后又是和单位纠缠了两个月，3 月 7 号才正式离职。</p>
+<p>回顾离职这一年，也曾经犹豫和彷徨过，想着如果不离职，晚上还能早点下班，6 点半就到家了，也能和大宝晚上出去转一转，不会像现在这么辛苦。但转念一想，确实没法忍受电网的诸多问题，如果继续干，最好的策略就是在里面混，可惜我又不想混。既来之，则安之，这两年多努力，以后争取轻松点。</p>
+<p>新年在家看了央视的 MV <a href="https://www.bilibili.com/video/av39532478/?redirectFrom=h5" target="_blank" rel="noopener">《我和我的祖国》</a>，里面记录的基本都是大国企，比如：</p>
+<ul>
+<li>北京市消防总队故宫特勤中队</li>
+<li>C919 飞机设计研发团队</li>
+<li>中国电力建设集团 赞比亚下凯富峡水电站</li>
+<li>航天科技集团一院 长征三号甲系列运载火箭研制团队</li>
+<li>中国女排</li>
+<li>塞罕坝机械林场</li>
+<li>中交天津航道局有限公司 天鲲号建设者</li>
+<li>中交四航局 港珠澳大桥岛隧工程建设者</li>
+<li>雪龙2号 建设团队</li>
+<li>墨子号量子科学实验卫星团队</li>
+<li>中国铁路北京局集团有限公司 复兴号列车工作人员</li>
+</ul>
+<p>之前在大国企的时候，也没干什么了不起的事儿，成就感和自豪感没有，又看到各种扯淡的情况，比如各种糊弄报奖、提拔领导孩子之类的，终于选择了离开，希望以后能越走越好吧。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 工作 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 电网 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[2019 新年计划]]></title>
       <url>http://tommyjiang.github.io/2019/2019-01-01-2019-plan/</url>
       <content type="html"><![CDATA[
@@ -13,79 +934,430 @@
 
 <a id="more"></a>
 <p>2019 年的元旦，我和老婆回家，好好计划新一年。</p>
-<h1 id="健康"><a href="#健康" class="headerlink" title="健康"></a>健康</h1><!-- echarts -->
+<h1 id="健康"><a href="#健康" class="headerlink" title="健康"></a>健康</h1><ul>
+<li>体检<ul>
+<li>✅ 3 月牙周复诊(2019-04-02，牙周状况还可以，需要补牙)</li>
+<li>🗸 9 月牙周复诊</li>
+<li>🗸 10 月年体检</li>
+</ul>
+</li>
+<li>作息<ul>
+<li>每天 0 点 15 睡觉，7 点 15 起床，保证 7 小时睡眠，中午午休半小时</li>
+</ul>
+</li>
+<li>减肥<ul>
+<li>体重减到 72 公斤</li>
+</ul>
+</li>
+</ul>
 
 <div id="weight2019" style="height:400px"></div>
 
+<h1 id="大宝"><a href="#大宝" class="headerlink" title="大宝"></a>大宝</h1><ul>
+<li>和大宝相亲相爱</li>
+</ul>
 
-<!--百度地图jssdk-->
-<script src="http://api.map.baidu.com/api?v=2.0&ak=x2V7KanMxVA2GuK7oFHPOiGytFSXWoyN"></script>
+<div id="relationship2019" style="height:200px"></div>
+
+<h1 id="专业"><a href="#专业" class="headerlink" title="专业"></a>专业</h1><ul>
+<li>技术栈<ul>
+<li>算法 + 数据结构(2019-01-01~2019-03-31)<ul>
+<li>刷 Leetcode 题目 400 道(2019-01-01 完成 219 题，年底需要完成 619 题)</li>
+<li>集中刷 LeetCode 题，LeetCode Weekly Contest 130(2019-03-31) 第一次四道题 AC。3 月 31 日已完成 500 道，精力重点转移到 C++ 方向。</li>
+</ul>
+</li>
+<li>C++ 语言<ul>
+<li>✅ C++ Primer 中文第五版(主要内容看完)</li>
+<li>🗸 C++ 程序设计(第 8、9、11、12 章，面向对象相关内容)<h1 id="阅读"><a href="#阅读" class="headerlink" title="阅读"></a>阅读</h1></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>国学<ul>
+<li>汉字来源<ul>
+<li>🗸 《白鱼解字》流沙河</li>
+<li>🗸 《细说汉字》左民安</li>
+</ul>
+</li>
+<li>诗经<ul>
+<li>🗸 《诗经注析》程俊英、蒋见元</li>
+<li>🗸 《诗经十三经注疏》毛亨/毛苌，郑玄笺注，孔颖达疏</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="进度记录"><a href="#进度记录" class="headerlink" title="进度记录"></a>进度记录</h2><h3 id="Leetcode"><a href="#Leetcode" class="headerlink" title="Leetcode"></a>Leetcode</h3>
+<div id="lc" style="height:400px"></div>
+
+
 <!-- 引入 ECharts -->
-<script src="https://cdn.bootcss.com/echarts/4.1.0/echarts.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.1.0/echarts.js"></script>
 <script src="https://cdn.rawgit.com/apache/incubator-echarts/master/theme/macarons.js"></script>
-<!-- 引入百度地图扩展 -->
-<script src="https://cdn.bootcss.com/echarts/4.1.0/extension/bmap.js"></script>
 <script type="text/javascript">
 weight2019();
+relationship2019();
+leetcode();
 
+<!-- 体重 -->
 function weight2019(ec){
-    var weight2019 = echarts.init(document.getElementById('weight2019'), 'macarons');
-
+    var weight2019 = echarts.init(document.getElementById('weight2019'), 'macarons'); 
+    <!-- 填空 体重 -->
+    var data = [["2019-01-01", 76.2], ["2019-01-02", 75.5], ["2019-01-03", 75.6], ["2019-01-04", 75.4], 
+                ["2019-01-05", 75.4], ["2019-01-06", 75.8], ["2019-01-07", 75.7], ["2019-01-08", 75.8],
+                ["2019-01-09", 76.2], ["2019-01-10", 75.6], ["2019-01-11", 75.4], ["2019-01-12", 75.0],
+                ["2019-01-13", 75.4], ["2019-01-14", 74.9], ["2019-01-15", 75.0], ['2019-01-16', 74.8],
+                ['2019-01-17', 75.0], ['2019-01-18', 74.6], ['2019-01-19', 73.9], ['2019-01-20', 73.5],
+                ['2019-01-21', 74.1], ['2019-01-22', 74.0], ['2019-01-23', 73.6], ['2019-01-24', 73.3],
+                ['2019-01-25', 73.5], ['2019-01-26', 73.3], ['2019-01-27', 73.8], ['2019-01-28', 73.7],
+                ['2019-01-29', 73.5], ['2019-01-30', 73.4], ['2019-01-31', 73.6], ['2019-02-01', 73.9],
+                ['2019-02-02', 74.1], ['2019-02-03', 73.9], ['2019-02-04', 74.2], ['2019-02-05', 74.5],
+                ['2019-02-06', 75.1], ['2019-02-07', 74.8], ['2019-02-08', 74.9], ['2019-02-09', 75.1],
+                ['2019-02-10', 75.5], ['2019-02-11', 75.3], ['2019-02-12', 74.3], ['2019-02-13', 74.2],
+                ['2019-02-14', 73.7], ['2019-02-15', 74.7], ['2019-02-16', 74.2], ['2019-02-17', 73.9],
+                ['2019-02-18', 73.6], ['2019-02-19', 73.7], ['2019-02-20', 73.4], ['2019-02-21', 73.7],
+                ['2019-02-22', 73.6], ['2019-02-23', 73.7], ['2019-02-24', 73.6], ['2019-02-25', 73.7],
+                ['2019-02-26', 73.7], ['2019-02-27', 73.8], ['2019-02-28', 73.7], ['2019-03-01', 73.3],
+                ['2019-03-02', 73.6], ['2019-03-03', 73.7], ['2019-03-04', 74.0], ['2019-03-05', 73.8],
+                ['2019-03-06', 73.8], ['2019-03-07', 74.0], ['2019-03-08', 73.6], ['2019-03-09', 73.8],
+                ['2019-03-10', 73.8], ['2019-03-11', 73.5], ['2019-03-12', 73.4], ['2019-03-13', 73.1],
+                ['2019-03-14', 73.5], ['2019-03-15', 73.5], ['2019-03-16', 73.8], ['2019-03-17', 73.3],
+                ['2019-03-18', 74.0], ['2019-03-19', 73.7], ['2019-03-20', 73.5], ['2019-03-21', 73.5],
+                ['2019-03-22', 73.6], ['2019-03-23', 73.2], ['2019-03-24', 73.2], ['2019-03-25', 73.6],
+                ['2019-03-26', 73.8], ['2019-03-27', 73.9], ['2019-03-28', 73.7], ['2019-03-29', 73.6],
+                ['2019-03-30', 74.4], ['2019-03-31', 74.0], ['2019-04-01', 73.8], ['2019-04-02', 73.8],
+                ['2019-04-03', 73.9], ['2019-04-04', 73.6], ['2019-04-05', 73.7], ['2019-04-06', 74.0],
+                ['2019-04-07', 74.2], ['2019-04-08', 74.0], ['2019-04-09', 73.8], ['2019-04-10', 73.5],
+                ['2019-04-11', 73.2], ['2019-04-12', 73.6], ['2019-04-13', 73.9], ['2019-04-14', 73.9],
+                ['2019-04-15', 73.5], ['2019-04-16', 73.6], ['2019-04-17', 73.3], ['2019-04-18', 73.6],
+                ['2019-04-19', 73.3], ['2019-04-20', 73.8], ['2019-04-21', 73.6], ['2019-04-22', 73.6],
+                ['2019-04-23', 73.5], ['2019-04-24', 73.6], ['2019-04-25', 73.7], ['2019-04-26', 73.6],
+                ['2019-04-27', 73.5], ['2019-04-28', 73.6], ['2019-04-29', 73.8], ['2019-04-30', 73.6],
+                ['2019-05-01', 74.2], ['2019-05-02', 74.1], ['2019-05-03', 73.8], ['2019-05-04', 73.6],
+                ['2019-05-05', 73.7], ['2019-05-06', 73.6], ['2019-05-07', 73.8], ['2019-05-08', 73.6],
+                ['2019-05-09', 73.4], ['2019-05-10', 73.3], ['2019-05-11', 73.3], ['2019-05-13', 73.8],
+                ['2019-05-13', 74.0], ['2019-05-14', 73.4], ['2019-05-15', 73,3], ['2019-05-16', 73.5],
+                ['2019-05-17', 72.8], ['2019-05-18', 73.0], ['2019-05-19', 72.9], ['2019-05-20', 72.8],
+                ['2019-05-21', 73.0], ['2019-05-22', 72.5], ['2019-05-23', 73.1], ['2019-05-24', 73.1],
+                ['2019-05-25', 72.8], ['2019-05-26', 73.2], ['2019-05-27', 73.9], ['2019-05-28', 73.4],
+                ['2019-05-29', 72.9], ['2019-05-30', 72.6], ['2019-05-31', 72.7], ['2019-06-01', 72.9],
+                ['2019-06-02', 72.7], ['2019-06-03', 73.0], ['2019-06-04', 72.8], ['2019-06-05', 72.6],
+                ['2019-06-06', 72.8], ['2019-06-07', 73.0], ['2019-06-08', 72.6], ['2019-06-09', 73.0],
+                ['2019-06-11', 73.2], ['2019-06-12', 73.0], ['2019-06-13', 72.9], ['2019-06-14', 72.8],
+                ['2019-06-15', 72.8], ['2019-06-16', 73.0], ['2019-06-17', 72.6], ['2019-06-18', 72.8],
+                ['2019-06-19', 72.6], ['2019-06-20', 72.8], ['2019-06-21', 72.6], ['2019-06-22', 72.7],
+                ['2019-06-23', 72.6], ['2019-06-24', 73.0], ['2019-06-25', 72.8], ['2019-06-22', 72.8],
+                ['2019-06-27', 72.6], ['2019-06-28', 72.9], ['2019-06-29', 72.6], ['2019-06-30', 72.6],
+                ['2019-07-01', 72.6], ['2019-07-02', 72.5], ['2019-07-03', 72.8], ['2019-07-04', 73.0],
+                ['2019-07-05', 72.8], ['2019-07-06', 72.9], ['2019-07-07', 73.2], ['2019-07-08', 73.5],
+                ['2019-07-09', 73.6], ['2019-07-10', 73.5], ['2019-07-11', 73.2], ['2019-07-12', 73.0],
+                ['2019-07-13', 73.2], ['2019-07-14', 72.8], ['2019-07-15', 72.5], ['2019-07-16', 72.3],
+                ['2019-07-17', 72.3], ['2019-07-18', 71.9], ['2019-07-19', 72.2], ['2019-07-20', 72.6],
+                ['2019-07-21', 72.5], ['2019-07-22', 72.3], ['2019-07-23', 72.6], ['2019-07-24', 72.3],
+                ['2019-07-25', 72.7], ['2019-07-26', 73.2], ['2019-07-27', 72.9], ['2019-07-28', 72.7],
+                ['2019-07-29', 72.6], ['2019-07-30', 72.3]
+                ] 
+    var comments = {"2019-01-01": "董董元旦火锅", "2019-01-06": "烤肉乐烧烤自助", "2019-01-13": "海鲜宴",
+                    '2019-01-20': '家宴吐了', "2019-02-10": "春节回家", "2019-02-15": "情人节米斯特披萨",
+                    '2019-02-17': '董来元宵节', '2019-03-29': "万人香锅(大蔡、萌哥、小牛)", 
+                    '2019-05-27': '大宝咖喱饭', '2019-07-02': "贪吃一番街"
+                   }
     var option = {
-        tooltip : {
-            trigger: 'axis'
+         title: {text: '2019 体重'}, 
+         tooltip: {
+             trigger: 'axis',
+             formatter: function (params, ticket, callback) {
+                           var res='时间：' + params[0].name + '<br>'
+                           res += '体重：' + params[0].data + '<br>'
+                           if(comments[params[0].name] != null){
+                               res += '注释：' + comments[params[0].name]
+                           }
+                           return res
+             }
+         },
+         xAxis: {
+             data: data.map(function (item) {
+                 return item[0];
+             })
+         },
+         yAxis: {
+             min: 70,
+             max: 78,
+             splitLine: {
+                 show: false
+             }
+         },
+         toolbox: {
+             left: 'center',
+             feature: {
+                 dataZoom: {
+                     yAxisIndex: 'none'
+                 },
+                 restore: {},
+                 saveAsImage: {}
+             }
+         },
+         dataZoom: [{
+             startValue: '2019-01-01'
+         }, {
+             type: 'inside'
+         }],
+         visualMap: {
+             top: '30%',
+             right: 0,
+             pieces: [{
+                 gt: 70,
+                 lte: 72,
+                 color: '#096'
+             }, {
+                 gt: 72,
+                 lte: 74,
+                 color: '#ffde33'
+             }, {
+                 gt: 74,
+                 lte: 76,
+                 color: '#ff9933'
+             }, {
+                 gt: 76,
+                 lte: 78,
+                 color: '#cc0033'
+             }, {
+                 gt: 78,
+                 color: '#660099'
+             }],
+             outOfRange: {
+                 color: '#999'
+             }
         },
-        toolbox: {
-            show : true,
-            feature : {
-                mark : {show: true},
-                dataView : {show: true, readOnly: false},
-                magicType: {show: true, type: ['bar', 'bar']},
-                restore : {show: true},
-                saveAsImage : {show: true}
+        series: {
+            name: '2019 体重',
+            type: 'line',
+            data: data.map(function (item) {
+                return item[1];
+            }),
+            markLine: {
+                symbolSize: 0,
+                label: {
+                    show: false
+                },
+                data: [{
+                    yAxis: 70 
+                }, {
+                    yAxis: 72
+                }, {
+                    yAxis: 74
+                }, {
+                    yAxis: 76
+                }, {
+                    yAxis: 78
+                }]
             }
-        },
-        calculable : true,
-        legend: {
-            data:['飞机行程','火车行程']
-        },
-        xAxis : [
-            {
-                type : 'category',
-                data : ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月']
-            }
-        ],
-        yAxis : [
-            {
-                type : 'value',
-                name : '飞机行程(km)',
-                axisLabel : {
-                    formatter: '{value}'
-                }
-            },
-            {
-                type : 'value',
-                name : '火车行程(km)',
-                axisLabel : {
-                    formatter: '{value}'
-                }
-            }
-        ],
-        series : [
-            {
-                name:'飞机行程',
-                type:'bar',
-                data:[0, 8514, 0, 0, 0, 3739, 0, 0, 0, 0, 0, 0]
-            },
-            {
-                name:'火车行程',
-                type:'bar',
-                yAxisIndex: 1,
-                data:[595, 0, 354, 0, 0, 0, 372, 574, 0, 297, 0, 0]
-            }
-        ]
+        }
     };
-    weight2019.setOption(option,true); //当setOption第二个参数为true时，会阻止数据合并
+    weight2019.setOption(option, true); //当setOption第二个参数为true时，会阻止数据合并
+}
+
+<!-- 大宝关系 -->
+function relationship2019(ec){
+    var relationship2019 = echarts.init(document.getElementById('relationship2019')); 
+    <!-- 填空 关系 -->
+    var data = [["2019-01-01", 8], ["2019-01-02", 8], ["2019-01-03", 8], ["2019-01-04", 7],
+                ["2019-01-05", 7], ["2019-01-06", 9], ["2019-01-07", 7], ["2019-01-08", 10],
+                ["2019-01-09", 10], ["2019-01-10", 9], ["2019-01-11", 10], ["2019-01-12", 10],
+                ["2019-01-13", 10], ['2019-01-14', 10], ['2019-01-15', 9], ['2019-01-16', 10],
+                ['2019-01-17', 0], ['2019-01-18', 10], ['2019-01-19', 10], ['2019-01-20', 10],
+                ['2019-01-21', 10], ['2019-01-22', 10], ['2019-01-23', 10], ['2019-01-24', 10],
+                ['2019-01-25', 10], ['2019-01-26', 10], ['2019-01-27', 7], ['2019-01-28', 9],
+                ['2019-01-29', 10] , ['2019-01-30', 10], ['2019-01-31', 10], ['2019-02-01', 10],
+                ['2019-02-02', 10], ['2019-02-03', 10], ['2019-02-04', 10], ['2019-02-05', 10],
+                ['2019-02-06', 10], ['2019-02-07', 10], ['2019-02-08', 10], ['2019-02-09', 10],
+                ['2019-02-10', 10], ['2019-02-11', 10], ['2019-02-12', 10], ['2019-02-13', 10],
+                ['2019-02-14', 10], ['2019-02-15', 10], ['2019-02-16', 10], ['2019-02-17', 10],
+                ['2019-02-18', 10], ['2019-02-19', 10], ['2019-02-20', 10], ['2019-02-21', 5],
+                ['2019-02-22', 10], ['2019-02-23', 10], ['2019-02-24', 10], ['2019-02-25', 10],
+                ['2019-02-26', 8], ['2019-02-27', 10], ['2019-02-28', 10], ['2019-03-01', 10],
+                ['2019-03-02', 10], ['2019-03-03', 7], ['2019-03-04', 10], ['2019-03-05', 10],
+                ['2019-03-06', 10], ['2019-03-07', 10], ['2019-03-08', 10], ['2019-03-09', 10],
+                ['2019-03-10', 10], ['2019-03-11', 10], ['2019-03-12', 10], ['2019-03-13', 10], 
+                ['2019-03-14', 10], ['2019-03-15', 4], ['2019-03-16', 10], ['2019-03-17', 10],
+                ['2019-03-18', 10], ['2019-03-19', 10], ['2019-03-20', 10], ['2019-03-21', 10],
+                ['2019-03-22', 10], ['2019-03-23', 10], ['2019-03-24', 10], ['2019-03-25', 10],
+                ['2019-03-26', 10], ['2019-03-27', 10], ['2019-03-28', 10], ['2019-03-29', 4],
+                ['2019-03-30', 10], ['2019-03-31', 10], ['2019-04-01', 10], ['2019-04-02', 10],
+                ['2019-04-03', 10], ['2019-04-04', 10], ['2019-04-05', 10], ['2019-04-06', 10],
+                ['2019-04-07', 10], ['2019-04-08', 10], ['2019-04-09', 10], ['2019-04-10', 10],
+                ['2019-04-11', 10], ['2019-04-12', 10], ['2019-04-13', 10], ['2019-04-14', 7],
+                ['2019-04-15', 10], ['2019-04-16', 10], ['2019-04-17', 10], ['2019-04-18', 4],
+                ['2019-04-19', 10], ['2019-04-20', 10], ['2019-04-21', 10], ['2019-04-22', 7],
+                ['2019-04-23', 10], ['2019-04-24', 10], ['2019-04-25', 10], ['2019-04-26', 10],
+                ['2019-04-27', 10], ['2019-04-28', 10], ['2019-04-29', 10], ['2019-04-30', 10],
+                ['2019-05-01', 10], ['2019-05-02', 10], ['2019-05-03', 10], ['2019-05-04', 10],
+                ['2019-05-05', 10], ['2019-05-06', 7], ['2019-05-07', 10], ['2019-05-08', 10],
+                ['2019-05-09', 10], ['2019-05-10', 7], ['2019-05-11', 10], ['2019-05-12', 10],
+                ['2019-05-13', 10], ['2019-05-14', 10], ['2019-05-15', 10], ['2019-05-16', 10],
+                ['2019-05-17', 10], ['2019-05-18', 10], ['2019-05-19', 10], ['2019-05-20', 10],
+                ['2019-05-21', 10], ['2019-05-22', 7], ['2019-05-23', 10], ['2019-05-24', 10],
+                ['2019-05-25', 10], ['2019-05-26', 10], ['2019-05-27', 10], ['2019-05-28', 10],
+                ['2019-05-29', 10], ['2019-05-30', 10], ['2019-05-31', 8], ['2019-06-01', 10],
+                ['2019-06-02', 10], ['2019-06-03', 10], ['2019-06-04', 10], ['2019-06-05', 10],
+                ['2019-06-06', 10], ['2019-06-07', 10], ['2019-06-08', 10], ['2019-06-09', 10],
+                ['2019-06-10', 10], ['2019-06-11', 10], ['2019-06-12', 10], ['2019-06-13', 10],
+                ['2019-06-14', 10], ['2019-06-15', 10], ['2019-06-16', 10], ['2019-06-17', 10],
+                ['2019-06-18', 10], ['2019-06-19', 10], ['2019-06-20', 10], ['2019-06-21', 10],
+                ['2019-06-22', 10], ['2019-06-23', 10], ['2019-06-24', 10], ['2019-06-25', 10],
+                ['2019-06-26', 10], ['2019-06-27', 10], ['2019-06-28', 10], ['2019-06-29', 10],
+                ['2019-06-30', 10], ['2019-07-01', 10], ['2019-07-02', 10], ['2019-07-03', 10],
+                ['2019-07-04', 10], ['2019-07-05', 10], ['2019-07-06', 10], ['2019-07-07', 10],
+                ['2019-07-08', 10], ['2019-07-09', 4],  ['2019-07-10', 10], ['2019-07-11', 10],
+                ['2019-07-12', 10], ['2019-07-13', 10], ['2019-07-14', 10], ['2019-07-15', 10],
+                ['2019-07-16', 10], ['2019-07-17', 10], ['2019-07-18', 10], ['2019-07-19', 10],
+                ['2019-07-20', 10], ['2019-07-21', 10], ['2019-07-22', 10], ['2019-07-23', 10],
+                ['2019-07-24', 10], ['2019-07-25', 10], ['2019-07-26', 10], ['2019-07-27', 10],
+                ['2019-07-28', 10], ['2019-07-29', 10], ['2019-07-30', 10], ['2019-07-31', 10],
+                ]
+
+    var comments = {<!-- "2019-01-01": '3(摩擦没告诉大宝) + 5', "2019-01-02": '4 + 4(没给大宝带本回来)', -->
+                    <!-- "2019-01-03": '4 + 4(PMS)',  "2019-01-04": '4 + 3(大宝不理我)',  -->
+                    <!-- '2019-01-05': '3(不给我买电脑、身体不舒服还想要) + 4', -->
+                    <!-- '2019-01-06': '4 + 5', '2019-01-07': '3 + 4', -->
+                    <!-- '2019-01-12': '5(s) + 5', '2019-01-13': '5 + 5(狼人杀)', -->
+                    <!-- '2019-01-14': '5 + 5(狼人杀视频)', '2019-01-15': '4.5(没捂捂) + 4.5', -->
+                    <!-- '2019-01-17': '0(没抱抱吵架) + 0', -->
+                    <!-- '2019-01-21': '5 + 5(大宝半夜不睡觉)', '2019-01-22': '5 + 5(三起三落)', -->
+                    <!-- '2019-01-24': '5 + 5(新品到货)', '2019-01-27': '2(不买糕点还说我小社恐) + 5', -->
+                    <!-- '2019-01-28': '5 + 4(大宝流血)', '2019-02-14': '5(s) + 5', '2019-02-21': '5 + 0(不理大宝)', -->
+                    <!-- '2019-02-23': '5(口住) + 5', '2019-03-03': '5 + 2(不照顾大宝)',  -->
+                    <!-- '2019-03-15': '2(善给人压 + s) + 2', '2019-03-19': '5(s) + 5', -->
+                    <!-- '2019-03-29': '4 + 0(摩擦被大宝发现了)', '2019-04-06': '5 + 5(大热 J)' -->
+                    <!-- '2019-04-18': '4 + 0(微博)', '2019-04-22': '5 + 2(说大宝胖)' -->
+                    <!-- '2019-05-06': '5 + 2(弄疼兔兔了)', '2019-05-11': '5(s) + 5', -->
+                    <!-- '2019-05-12': '5(s) + 5', '2019-05-14': '5(s) + 5', -->
+                    <!-- '2019-07-09': '2 + 2(涩谷惨案)' -->
+                    }
+    var option = { 
+        tooltip: {
+            position: 'top',
+            formatter: function (params, ticket, callback) {
+                          var res='日期：' + params.data[0] + '<br>'
+                          res += '关系指数：' + params.data[1] + '<br>'
+                          if(comments[params.data[0]] != null){
+                              res += '注释：' + comments[params.data[0]]
+                          }
+                          return res
+            }
+
+        },
+        visualMap: {
+            min: 0,
+            max: 10,
+            calculable: true,
+            orient: 'horizontal',
+            left: 'center',
+            top: 'top',
+            inRange: {
+                color: ['#268bd2', '#cb4b16']
+            },
+        },
+        calendar: {
+            range: '2019',
+            orient: 'horizontal',
+            cellSize: [14.2, 20],
+            dayLabel: {
+              firstDay: 1, // 从周一开始
+              nameMap: 'cn'
+            },
+            monthLabel: {
+              nameMap: 'cn'
+            },
+        },
+        series: {
+            type: 'heatmap',
+            coordinateSystem: 'calendar',
+            data: data
+        }
+    }
+    relationship2019.setOption(option, true); //当setOption第二个参数为true时，会阻止数据合并
+}
+
+<!-- Leetcode -->
+function leetcode(ec){
+    var leetcode = echarts.init(document.getElementById('lc')); 
+
+    <!-- 填空 Leetcode -->
+    var data = [["2019-01-01", 219], ["2019-01-02", 219], ["2019-01-03", 225], ["2019-01-04", 228],
+                ["2019-01-05", 231], ["2019-01-06", 238], ["2019-01-07", 241], ["2019-01-08", 246],
+                ["2019-01-09", 248], ["2019-01-10", 251], ["2019-01-11", 253], ["2019-01-12", 255],
+                ["2019-01-13", 257], ["2019-01-14", 259], ['2019-01-15', 264], ['2019-01-16', 266],
+                ['2019-01-17', 267], ['2019-01-18', 269], ['2019-01-19', 270], ['2019-01-20', 271],
+                ['2019-01-21', 273], ['2019-01-22', 276], ['2019-01-23', 278], ['2019-01-24', 281],
+                ['2019-01-25', 283], ['2019-01-26', 283], ['2019-01-27', 283], ['2019-01-28', 287],
+                ['2019-01-29', 289], ['2019-01-30', 295], ['2019-01-31', 300], ['2019-02-01', 309],
+                ['2019-02-02', 309], ['2019-02-03', 309], ['2019-02-04', 312], ['2019-02-05', 312],
+                ['2019-02-06', 312], ['2019-02-07', 312], ['2019-02-08', 315], ['2019-02-09', 318],
+                ['2019-02-10', 320], ['2019-02-11', 323], ['2019-02-12', 325], ['2019-02-13', 328],
+                ['2019-02-14', 329], ['2019-02-15', 330], ['2019-02-16', 331], ['2019-02-17', 332],
+                ['2019-02-18', 333], ['2019-02-19', 334], ['2019-02-20', 335], ['2019-02-21', 339],
+                ['2019-02-22', 341], ['2019-02-23', 344], ['2019-02-24', 347], ['2019-02-25', 348],
+                ['2019-02-26', 350], ['2019-02-27', 351], ['2019-02-28', 353], ['2019-03-01', 357],
+                ['2019-03-02', 360], ['2019-03-03', 370], ['2019-03-04', 373], ['2019-03-05', 376],
+                ['2019-03-06', 380], ['2019-03-07', 382], ['2019-03-08', 388], ['2019-03-09', 395],
+                ['2019-03-10', 397], ['2019-03-11', 399], ['2019-03-12', 401], ['2019-03-13', 403],
+                ['2019-03-14', 405], ['2019-03-15', 408], ['2019-03-16', 411], ['2019-03-17', 420],
+                ['2019-03-18', 425], ['2019-03-19', 430], ['2019-03-20', 435], ['2019-03-21', 440],
+                ['2019-03-22', 445], ['2019-03-23', 450], ['2019-03-24', 455], ['2019-03-25', 460],
+                ['2019-03-26', 465], ['2019-03-27', 470], ['2019-03-28', 475], ['2019-03-29', 480],
+                ['2019-03-30', 485], ['2019-03-31', 500]]
+    var option = {
+         title: {text: 'Leetcode'}, 
+         tooltip: {
+             trigger: 'axis'
+         },
+         xAxis: {
+             data: data.map(function (item) {
+                 return item[0];
+             })
+         },
+         yAxis: {
+             min: 200,
+             max: 700,
+             splitLine: {
+                 show: false
+             }
+         },
+         toolbox: {
+             left: 'center',
+             feature: {
+                 dataZoom: {
+                     yAxisIndex: 'none'
+                 },
+                 restore: {},
+                 saveAsImage: {}
+             }
+         },
+         dataZoom: [{
+             startValue: '2019-01-01'
+         }, {
+             type: 'inside'
+         }],
+        series: {
+            name: 'Leetcode',
+            type: 'line',
+            lineStyle: {
+                normal: {
+                    color: '#F3B13D',
+                }
+            },
+            itemStyle: {
+                normal: {
+                    color: '#F3B13D',
+                }
+            },
+            data: data.map(function (item) {
+                return item[1];
+            }),
+        }
+    };
+    leetcode.setOption(option, true); //当setOption第二个参数为true时，会阻止数据合并
 }
 </script>
 
@@ -295,37 +1567,6 @@ function TripSum2018(ec){
     </entry>
     
     <entry>
-      <title><![CDATA[2018 的最后一个月]]></title>
-      <url>http://tommyjiang.github.io/2018/2018-12-03-2018-last-month/</url>
-      <content type="html"><![CDATA[
-<div class="alert alert-info"><i class="fa fa-info"></i>
-2018 年就要过去了。
-</div>
-
-<a id="more"></a>
-<p>2018 年的最后一个月，就这样开始了。</p>
-<p>1 号和 2 号两天周末，冬季里的常客雾霾重返北京，只能闷在家里。周日晚上雾霾依然很重，我和老婆又要回学校准备第二天上班，心情格外沉重，还好有满恒记的牛羊肉聊以慰藉。</p>
-<p>周一上班之后，听到两个消息：一个是一位算法大牛跳来鄙司了，不知道给了多少的 package，估计至少 100 吧；另一个是新来的小伙儿要和 HR 重新谈薪，来实习几天觉得工作强度有点大，之前要少了。两相对比，越发感觉没有见识，盲目追求学历的悲哀。</p>
-<p>想读博士，至少先明白两个道理：一，博士毕业想发挥特长，主流的道路是留校当教授；二，博士是追求上限的，上限很高的同时不排除下限也很低。</p>
-<p>最后一个月，多努力，前事不忘后事之师，希望五年后别再为这五年的所作所为悔不当初了。</p>
-]]></content>
-      
-        <categories>
-            
-            <category> 生活 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 感慨 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[PRML 笔记 2：2. Probability Distributions]]></title>
       <url>http://tommyjiang.github.io/2018/2018-12-02-PRML-notes-2/</url>
       <content type="html"><![CDATA[
@@ -517,8 +1758,6 @@ PRML 笔记 1。
             <tag> CV </tag>
             
             <tag> DL </tag>
-            
-            <tag> Active Learning </tag>
             
         </tags>
         
@@ -1663,7 +2902,16 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
 <a id="more"></a>
 <p>Lisp 诞生于 1958 年，发明人是 John McCarthy，是目前仍在使用的第二古老的高级语言(最早的是 Fortran，诞生于 1957 年)。</p>
 <p>Lisp 来源于 <code>LISt Processing</code>(有调侃说是 <code>Lots of Isolated Stupid Parentheses</code>)，这个古老的语言和目前主流语言例如 C++，Python 和 Java 等有显著区别，下面是一段代码示例：</p>
-<figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">defun</span> cal-china-x-winter-solstice-date (<span class="name">date</span>)</span><br><span class="line">  <span class="string">"Return winter solstice(冬至) date in Gregorian form.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">If MONTH = 12, return current year's date</span></span><br><span class="line"><span class="string">Else return last year's date"</span></span><br><span class="line">  (<span class="name">let*</span> ((<span class="name">cyear</span> (<span class="name">if</span> (<span class="name">=</span> (<span class="name">calendar-extract-month</span> date) <span class="number">12</span>)</span><br><span class="line">                    (<span class="name">calendar-extract-year</span> date)</span><br><span class="line">                  (<span class="number">1</span>- (<span class="name">calendar-extract-year</span> date)))))</span><br><span class="line">    (<span class="name">car</span> (<span class="name">rassoc</span> '<span class="string">"冬至"</span> (<span class="name">cal-china-x-solar-term-alist-new</span> cyear)))))</span><br></pre></td></tr></table></figure>
+<pre><code class="lang-lisp">(defun cal-china-x-winter-solstice-date (date)
+  &quot;Return winter solstice(冬至) date in Gregorian form.
+
+If MONTH = 12, return current year&#39;s date
+Else return last year&#39;s date&quot;
+  (let* ((cyear (if (= (calendar-extract-month date) 12)
+                    (calendar-extract-year date)
+                  (1- (calendar-extract-year date)))))
+    (car (rassoc &#39;&quot;冬至&quot; (cal-china-x-solar-term-alist-new cyear)))))
+</code></pre>
 <p><code>Emacs</code> 也许是用 Lisp 编写的最著名的软件了。<code>Emacs</code> 自带了日历功能，<a href="https://github.com/xwl/cal-china-x" target="_blank" rel="noopener"><code>cal-china-x</code></a> 扩展实现了阴历、节气、生肖等的计算，但没有实现数九天和伏天的计算功能。正好借这个机会实现下功能，练练手。</p>
 <h1 id="数九天计算"><a href="#数九天计算" class="headerlink" title="数九天计算"></a>数九天计算</h1><p>数九天的计算相对比较简单。从冬至当天开始算一九第一天，每过九天加一九，一直到九九第九天。</p>
 <p>思路也比较清楚，对于某一个 <code>date</code>，先计算其与冬至的天数差。由于冬至始终在阳历的十二月，因此可以分情况讨论：</p>
@@ -1671,12 +2919,99 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
 <li>阳历非十二月，计算与去年冬至的天数差。</li>
 <li>阳历为十二月，计算与今年冬至的天数差。此时若 <code>date</code> 在冬至前则差为负数，但负数情况可以不管，因为不属于数九天。</li>
 </ul>
-<p>如果天数差在 0~80 天内，则需要显示数九天，具体显示格式为<code>一九(1)</code>，整个代码如下：<br><figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">defconst</span> cal-china-x-nine-characters  <span class="comment">; 数九天 array</span></span><br><span class="line">  [<span class="string">"一九"</span> <span class="string">"二九"</span> <span class="string">"三九"</span> <span class="string">"四九"</span> <span class="string">"五九"</span> <span class="string">"六九"</span> <span class="string">"七九"</span> <span class="string">"八九"</span> <span class="string">"九九"</span>])</span><br><span class="line"></span><br><span class="line">(<span class="name">defun</span> cal-china-x-winter-solstice-date (<span class="name">date</span>)  <span class="comment">; 计算冬至日期(1-11月为去年，12月为今年)</span></span><br><span class="line">  <span class="string">"Return winter solstice(冬至) date in Gregorian form.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">If MONTH = 12, return current year's date</span></span><br><span class="line"><span class="string">Else return last year's date"</span></span><br><span class="line">  (<span class="name">let*</span> ((<span class="name">cyear</span> (<span class="name">if</span> (<span class="name">=</span> (<span class="name">calendar-extract-month</span> date) <span class="number">12</span>)</span><br><span class="line">                    (<span class="name">calendar-extract-year</span> date)</span><br><span class="line">                  (<span class="number">1</span>- (<span class="name">calendar-extract-year</span> date)))))</span><br><span class="line">    (<span class="name">car</span> (<span class="name">rassoc</span> '<span class="string">"冬至"</span> (<span class="name">cal-china-x-solar-term-alist-new</span> cyear)))))</span><br><span class="line"></span><br><span class="line">(<span class="name">defun</span> winter-solstice-day-diff (<span class="name">date</span>)  <span class="comment">; 计算与指定冬至的天数差</span></span><br><span class="line">  (<span class="name">cal-china-x-days-diff</span> date (<span class="name">cal-china-x-winter-solstice-date</span> date)))</span><br><span class="line">  </span><br><span class="line">(<span class="name">defun</span> cal-china-x-get-several-nines-string (<span class="name">date</span>)  <span class="comment">; 生成数九天的 string</span></span><br><span class="line">  (<span class="name">let</span> ((<span class="name">daygap</span> (<span class="name">winter-solstice-day-diff</span> date)))</span><br><span class="line">    (<span class="name">if</span> (<span class="name">or</span> (<span class="name">&lt;</span> daygap <span class="number">0</span>) (<span class="name">&gt;</span> daygap <span class="number">80</span>))</span><br><span class="line">        <span class="string">""</span></span><br><span class="line">      (<span class="name">concat</span> (<span class="name">aref</span> cal-china-x-nine-characters (<span class="name">/</span> daygap <span class="number">9</span>))</span><br><span class="line">              <span class="string">"("</span></span><br><span class="line">              (<span class="name">number-to-string</span> (<span class="number">1</span>+ (% daygap <span class="number">9</span>)))</span><br><span class="line">              <span class="string">")"</span></span><br><span class="line">              ))))</span><br></pre></td></tr></table></figure></p>
+<p>如果天数差在 0~80 天内，则需要显示数九天，具体显示格式为<code>一九(1)</code>，整个代码如下：</p>
+<pre><code class="lang-lisp">(defconst cal-china-x-nine-characters  ; 数九天 array
+  [&quot;一九&quot; &quot;二九&quot; &quot;三九&quot; &quot;四九&quot; &quot;五九&quot; &quot;六九&quot; &quot;七九&quot; &quot;八九&quot; &quot;九九&quot;])
+
+(defun cal-china-x-winter-solstice-date (date)  ; 计算冬至日期(1-11月为去年，12月为今年)
+  &quot;Return winter solstice(冬至) date in Gregorian form.
+
+If MONTH = 12, return current year&#39;s date
+Else return last year&#39;s date&quot;
+  (let* ((cyear (if (= (calendar-extract-month date) 12)
+                    (calendar-extract-year date)
+                  (1- (calendar-extract-year date)))))
+    (car (rassoc &#39;&quot;冬至&quot; (cal-china-x-solar-term-alist-new cyear)))))
+
+(defun winter-solstice-day-diff (date)  ; 计算与指定冬至的天数差
+  (cal-china-x-days-diff date (cal-china-x-winter-solstice-date date)))
+
+(defun cal-china-x-get-several-nines-string (date)  ; 生成数九天的 string
+  (let ((daygap (winter-solstice-day-diff date)))
+    (if (or (&lt; daygap 0) (&gt; daygap 80))
+        &quot;&quot;
+      (concat (aref cal-china-x-nine-characters (/ daygap 9))
+              &quot;(&quot;
+              (number-to-string (1+ (% daygap 9)))
+              &quot;)&quot;
+              ))))
+</code></pre>
 <h1 id="伏天计算"><a href="#伏天计算" class="headerlink" title="伏天计算"></a>伏天计算</h1><p>民间有“头伏饺子二伏面，三伏烙饼摊鸡蛋”的习俗，看到这么多面食可以判断这基本是华北、黄淮一带的风俗。伏天计算比较复杂，原因是涉及到两个节气(夏至和立秋)，以及每日的干支。具体计算方法是：</p>
 <blockquote>
 <p>从夏至开始，依照干支纪日的排列，第3个庚日出现时，为初伏第一天(夏至三庚数头伏)，第4个庚日为中伏第一天，立秋后第1个庚日为末伏第一天。当夏至与立秋之间出现4个庚日时中伏为10天，出现5个庚日则为20天。</p>
 </blockquote>
-<figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">defun</span> cal-china-x-solar-term-date (<span class="name">date</span> solar-term)</span><br><span class="line">  <span class="string">"Return solar-term date in Gregorian form."</span></span><br><span class="line">  (<span class="name">let*</span> ((<span class="name">cyear</span> (<span class="name">calendar-extract-year</span> date)))</span><br><span class="line">    (<span class="name">car</span> (<span class="name">rassoc</span> solar-term (<span class="name">cal-china-x-solar-term-alist-new</span> cyear)))))</span><br><span class="line"></span><br><span class="line">(<span class="name">defun</span> cal-china-x-chinese-day-celestial-stem-number (<span class="name">date</span>)</span><br><span class="line">  <span class="string">"String of Chinese date of Gregorian DATE.</span></span><br><span class="line"><span class="string">Defaults to today's date if DATE is not given."</span></span><br><span class="line">  (<span class="name">let*</span> ((<span class="name">a-date</span> (<span class="name">calendar-absolute-from-gregorian</span> date)))</span><br><span class="line">    (% (<span class="name">+</span> a-date <span class="number">15</span>) <span class="number">10</span>)))</span><br><span class="line"></span><br><span class="line">(<span class="name">defun</span> cal-china-x-solar-term-celestical-stem (<span class="name">date</span> solar-term)</span><br><span class="line">  (<span class="name">cal-china-x-chinese-day-celestial-stem-number</span></span><br><span class="line">   (<span class="name">cal-china-x-solar-term-date</span> date solar-term)))</span><br><span class="line"></span><br><span class="line">(<span class="name">defun</span> cal-china-x-day-diff-from-solar-term (<span class="name">date</span> solar-term) <span class="comment">; 庚日</span></span><br><span class="line">  (<span class="name">let</span> ((<span class="name">ss-stem</span> (<span class="name">-</span> <span class="number">7</span> (<span class="name">cal-china-x-solar-term-celestical-stem</span> date solar-term))))</span><br><span class="line">    (<span class="name">if</span> (<span class="name">&lt;</span> ss-stem <span class="number">0</span>) (<span class="name">+</span> ss-stem <span class="number">10</span>)</span><br><span class="line">      ss-stem)))</span><br><span class="line"></span><br><span class="line">(<span class="name">defun</span> cal-china-x-chufu-date (<span class="name">date</span>)</span><br><span class="line">  (<span class="name">let*</span> ((<span class="name">ss-date</span> (<span class="name">cal-china-x-solar-term-date</span> date <span class="string">"夏至"</span>))</span><br><span class="line">         (<span class="name">ss-year</span> (<span class="name">calendar-extract-year</span> ss-date))</span><br><span class="line">         (<span class="name">ss-day</span> (<span class="name">calendar-extract-day</span> ss-date))</span><br><span class="line">         (<span class="name">day-diff</span> (<span class="name">+</span> <span class="number">20</span> (<span class="name">cal-china-x-day-diff-from-solar-term</span> date <span class="string">"夏至"</span>)))</span><br><span class="line">         (<span class="name">chufu-day</span> (<span class="name">-</span> day-diff (<span class="name">-</span> <span class="number">30</span> ss-day))))</span><br><span class="line">    (<span class="name">list</span> <span class="number">7</span> chufu-day ss-year)))</span><br><span class="line"></span><br><span class="line">(<span class="name">defun</span> cal-china-x-zhongfu-date (<span class="name">date</span>)</span><br><span class="line">  (<span class="name">list</span> <span class="number">7</span> (<span class="name">+</span> (<span class="name">calendar-extract-day</span> (<span class="name">cal-china-x-chufu-date</span> date)) <span class="number">10</span>)</span><br><span class="line">        (<span class="name">calendar-extract-year</span> date)))</span><br><span class="line"></span><br><span class="line">(<span class="name">defun</span> cal-china-x-mofu-date (<span class="name">date</span>)</span><br><span class="line">  (<span class="name">let*</span> ((<span class="name">ss-date</span> (<span class="name">cal-china-x-solar-term-date</span> date <span class="string">"立秋"</span>))</span><br><span class="line">         (<span class="name">ss-year</span> (<span class="name">calendar-extract-year</span> ss-date))</span><br><span class="line">         (<span class="name">ss-day</span> (<span class="name">calendar-extract-day</span> ss-date))</span><br><span class="line">         (<span class="name">day-diff</span> (<span class="name">cal-china-x-day-diff-from-solar-term</span> date <span class="string">"立秋"</span>))</span><br><span class="line">         (<span class="name">mofu-day</span> (<span class="name">+</span> day-diff ss-day)))</span><br><span class="line">    (<span class="name">list</span> <span class="number">8</span> mofu-day ss-year)))</span><br><span class="line"></span><br><span class="line">(<span class="name">defun</span> cal-china-x-get-futian-string (<span class="name">date</span>)</span><br><span class="line">  (<span class="name">let*</span> ((<span class="name">chufu</span> (<span class="name">cal-china-x-chufu-date</span> date))</span><br><span class="line">         (<span class="name">zhongfu</span> (<span class="name">cal-china-x-zhongfu-date</span> date))</span><br><span class="line">         (<span class="name">mofu</span> (<span class="name">cal-china-x-mofu-date</span> date))</span><br><span class="line">         (<span class="name">chufu-gap</span> (<span class="name">cal-china-x-days-diff</span> date chufu))</span><br><span class="line">         (<span class="name">zhongfu-gap</span> (<span class="name">cal-china-x-days-diff</span> date zhongfu))</span><br><span class="line">         (<span class="name">mofu-gap</span> (<span class="name">cal-china-x-days-diff</span> date mofu))</span><br><span class="line">         )</span><br><span class="line">    (<span class="name">if</span> (<span class="name">or</span> (<span class="name">&lt;</span> chufu-gap <span class="number">0</span>) (<span class="name">&gt;</span> mofu-gap <span class="number">9</span>))</span><br><span class="line">        <span class="string">""</span></span><br><span class="line">      (<span class="name">if</span> (<span class="name">and</span> (<span class="name">&gt;=</span> chufu-gap <span class="number">0</span>) (<span class="name">&lt;</span> zhongfu-gap <span class="number">0</span>))</span><br><span class="line">          (<span class="name">concat</span> <span class="string">"初伏("</span></span><br><span class="line">                  (<span class="name">number-to-string</span> (<span class="number">1</span>+ chufu-gap))</span><br><span class="line">                  <span class="string">")"</span>)</span><br><span class="line">        (<span class="name">if</span> (<span class="name">and</span> (<span class="name">&gt;=</span> zhongfu-gap <span class="number">0</span>) (<span class="name">&lt;</span> mofu-gap <span class="number">0</span>))</span><br><span class="line">            (<span class="name">concat</span> <span class="string">"中伏("</span></span><br><span class="line">                    (<span class="name">number-to-string</span> (<span class="number">1</span>+ zhongfu-gap))</span><br><span class="line">                    <span class="string">")"</span>)</span><br><span class="line">          (<span class="name">concat</span> <span class="string">"末伏("</span></span><br><span class="line">                  (<span class="name">number-to-string</span> (<span class="number">1</span>+ mofu-gap))</span><br><span class="line">                  <span class="string">")"</span>))))))</span><br></pre></td></tr></table></figure>
+<pre><code class="lang-lisp">(defun cal-china-x-solar-term-date (date solar-term)
+  &quot;Return solar-term date in Gregorian form.&quot;
+  (let* ((cyear (calendar-extract-year date)))
+    (car (rassoc solar-term (cal-china-x-solar-term-alist-new cyear)))))
+
+(defun cal-china-x-chinese-day-celestial-stem-number (date)
+  &quot;String of Chinese date of Gregorian DATE.
+Defaults to today&#39;s date if DATE is not given.&quot;
+  (let* ((a-date (calendar-absolute-from-gregorian date)))
+    (% (+ a-date 15) 10)))
+
+(defun cal-china-x-solar-term-celestical-stem (date solar-term)
+  (cal-china-x-chinese-day-celestial-stem-number
+   (cal-china-x-solar-term-date date solar-term)))
+
+(defun cal-china-x-day-diff-from-solar-term (date solar-term) ; 庚日
+  (let ((ss-stem (- 7 (cal-china-x-solar-term-celestical-stem date solar-term))))
+    (if (&lt; ss-stem 0) (+ ss-stem 10)
+      ss-stem)))
+
+(defun cal-china-x-chufu-date (date)
+  (let* ((ss-date (cal-china-x-solar-term-date date &quot;夏至&quot;))
+         (ss-year (calendar-extract-year ss-date))
+         (ss-day (calendar-extract-day ss-date))
+         (day-diff (+ 20 (cal-china-x-day-diff-from-solar-term date &quot;夏至&quot;)))
+         (chufu-day (- day-diff (- 30 ss-day))))
+    (list 7 chufu-day ss-year)))
+
+(defun cal-china-x-zhongfu-date (date)
+  (list 7 (+ (calendar-extract-day (cal-china-x-chufu-date date)) 10)
+        (calendar-extract-year date)))
+
+(defun cal-china-x-mofu-date (date)
+  (let* ((ss-date (cal-china-x-solar-term-date date &quot;立秋&quot;))
+         (ss-year (calendar-extract-year ss-date))
+         (ss-day (calendar-extract-day ss-date))
+         (day-diff (cal-china-x-day-diff-from-solar-term date &quot;立秋&quot;))
+         (mofu-day (+ day-diff ss-day)))
+    (list 8 mofu-day ss-year)))
+
+(defun cal-china-x-get-futian-string (date)
+  (let* ((chufu (cal-china-x-chufu-date date))
+         (zhongfu (cal-china-x-zhongfu-date date))
+         (mofu (cal-china-x-mofu-date date))
+         (chufu-gap (cal-china-x-days-diff date chufu))
+         (zhongfu-gap (cal-china-x-days-diff date zhongfu))
+         (mofu-gap (cal-china-x-days-diff date mofu))
+         )
+    (if (or (&lt; chufu-gap 0) (&gt; mofu-gap 9))
+        &quot;&quot;
+      (if (and (&gt;= chufu-gap 0) (&lt; zhongfu-gap 0))
+          (concat &quot;初伏(&quot;
+                  (number-to-string (1+ chufu-gap))
+                  &quot;)&quot;)
+        (if (and (&gt;= zhongfu-gap 0) (&lt; mofu-gap 0))
+            (concat &quot;中伏(&quot;
+                    (number-to-string (1+ zhongfu-gap))
+                    &quot;)&quot;)
+          (concat &quot;末伏(&quot;
+                  (number-to-string (1+ mofu-gap))
+                  &quot;)&quot;))))))
+</code></pre>
 <p>注意如果夏至当天是庚日，则算第一个庚日，相当于初伏在夏至20天之后。</p>
 <p>另外，<code>cal-china-x</code> 中月和日的天干地支计算有点问题，需要用 <code>Emacs</code> 自带的计算。</p>
 ]]></content>
@@ -2306,13 +3641,13 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
 
 <div style="min-height: 500px; width: 100%;" id="container"></div>
     
-<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.4&key=78b4d9401faf42bd388b9bbf4aa3bfd0"></script>
+<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.4&key=78b4d9401faf42bd388b9bbf4aa3bfd0"></script>
 
 <script>
     var map = new AMap.Map('container', {
         resizeEnable: true,
         center: [118.160456,39.63028], // 尚座
-        zoom: 12
+        zoom: 14
     });    
 
     map.clearMap();  // 清除地图覆盖物
@@ -2376,7 +3711,7 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
       <content type="html"><![CDATA[<p>30年第一次不在家过春节。</p>
 <a id="more"></a>
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
-<p><strong>Table of Contents</strong></p>
+<p><strong>目录</strong></p>
 <ul>
 <li><a href="#总结">总结</a><ul>
 <li><a href="#出国前准备">出国前准备</a></li>
@@ -2544,59 +3879,6 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
             <tag> Computer Vision </tag>
             
             <tag> Paper </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Spacemacs 常用命令总结]]></title>
-      <url>http://tommyjiang.github.io/2018/2018-02-18-spacemacs-common-commands/</url>
-      <content type="html"><![CDATA[<p><code>Spacemacs</code> 常用命令汇总</p>
-<a id="more"></a>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">Command</th>
-<th style="text-align:center">Function</th>
-<th style="text-align:center">Todo</th>
-<th style="text-align:center">Frequency</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">SPC f f</td>
-<td style="text-align:center"><code>helm-find-files</code></td>
-<td style="text-align:center">Files</td>
-<td style="text-align:center">Usually</td>
-</tr>
-<tr>
-<td style="text-align:center">SPC b b</td>
-<td style="text-align:center"><code>helm-mini</code></td>
-<td style="text-align:center">Buffers</td>
-<td style="text-align:center">Usually</td>
-</tr>
-<tr>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-</tbody>
-</table>
-</div>
-]]></content>
-      
-        <categories>
-            
-            <category> Geek </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> Emacs </tag>
             
         </tags>
         
@@ -2911,7 +4193,8 @@ AlexNet 笔记
 <h1 id="远程调试-PyCharm-Professional"><a href="#远程调试-PyCharm-Professional" class="headerlink" title="远程调试 PyCharm Professional"></a>远程调试 PyCharm Professional</h1><p>写代码简单，调代码难，在同一套环境中调代码更难，配过环境的同志都懂得环境配置的痛苦。直接在服务器上调试代码可以完美解决这个问题，只需稳定的网络就能保证环境的一致性。<a href="https://www.jetbrains.com/pycharm/download/#section=mac" target="_blank" rel="noopener">PyCharm Professional</a>可以远程<code>ssh</code>到服务器调试，具体流程可以参考<a href="https://blog.lishubing.net/2015/11/09/pycharm-remote-deploy-and-debug/" target="_blank" rel="noopener">使用 Pycharm 通过 SSH 同步代码与远程调试</a>。</p>
 <h1 id="远程文件传输-GUI-Cyberduck"><a href="#远程文件传输-GUI-Cyberduck" class="headerlink" title="远程文件传输 GUI Cyberduck"></a>远程文件传输 GUI Cyberduck</h1><p>有时候需要把服务器的文件拷贝到本地，虽说可以用<code>scp</code>命令但没有 GUI 总感觉不太直观。Mac 下可以用免费的<a href="https://cyberduck.io/" target="_blank" rel="noopener">Cyberduck</a>建立 SFTP 连接，非常方便。</p>
 <h1 id="远程文件传输命令-scp"><a href="#远程文件传输命令-scp" class="headerlink" title="远程文件传输命令 scp"></a>远程文件传输命令 scp</h1><p>GUI 直观，但是操作比较繁琐。对于从一个服务器向另一个服务器拷贝文件的操作，可以直接利用<code>scp</code>命令，基本格式如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp [-r] [[user@]host1:]file1 ... [[user@]host2:]file2</span><br></pre></td></tr></table></figure>
+<pre><code class="lang-bash">scp [-r] [[user@]host1:]file1 ... [[user@]host2:]file2
+</code></pre>
 ]]></content>
       
         <categories>
@@ -3137,35 +4420,6 @@ AlexNet 笔记
     </entry>
     
     <entry>
-      <title><![CDATA[数据结构和算法]]></title>
-      <url>http://tommyjiang.github.io/2017/2017-11-11-CS-basic-knowledge/</url>
-      <content type="html"><![CDATA[<p>大一学 C 语言的时候，老师就告诉我们，程序=数据结构+算法，现在才算基本理解这句话。</p>
-<a id="more"></a>
-<h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1><h2 id="树"><a href="#树" class="headerlink" title="树"></a>树</h2><ul>
-<li>树的遍历<ul>
-<li>DFS/BFS</li>
-</ul>
-</li>
-</ul>
-<h1 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h1><h2 id="基本算法"><a href="#基本算法" class="headerlink" title="基本算法"></a>基本算法</h2><h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><h2 id="算法思想"><a href="#算法思想" class="headerlink" title="算法思想"></a>算法思想</h2><h3 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h3><ul>
-<li>全排列：输出<code>list</code>或<code>string</code>的全排列。</li>
-<li>全组合：输出<code>list</code>或<code>string</code>的全组合。</li>
-</ul>
-<h3 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h3><ul>
-<li>动态规划和递归的区别</li>
-</ul>
-]]></content>
-      
-        <categories>
-            
-            <category> Geek </category>
-            
-        </categories>
-        
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[iOS 11 控制中心无法彻底关闭 WiFi]]></title>
       <url>http://tommyjiang.github.io/2017/2017-10-28-iOS-11-control-center/</url>
       <content type="html"><![CDATA[<p>iOS 11 控制中心竟然没法直接关 WiFi。</p>
@@ -3242,95 +4496,6 @@ AlexNet 笔记
     </entry>
     
     <entry>
-      <title><![CDATA[HKUST TensorFlow 教程]]></title>
-      <url>http://tommyjiang.github.io/2017/2017-10-21-HKUST-TensorFlow/</url>
-      <content type="html"><![CDATA[<p>HKUST TensorFlow 教程笔记。</p>
-<a id="more"></a>
-<h1 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1"></a>Day 1</h1><ul>
-<li>TensorFlow installation<ul>
-<li><code>pip install</code> (GPU version only for Linux)</li>
-<li>Build from source</li>
-</ul>
-</li>
-<li>TensorFlow basic usage<ul>
-<li>Check installation and version</li>
-<li>Hello world</li>
-</ul>
-</li>
-<li>TF Mechanics<ul>
-<li>Computational Graph</li>
-<li>Placeholder</li>
-<li>Tensor: concept, ranks, shapes and types</li>
-</ul>
-</li>
-<li>Machine learning basics<ul>
-<li>Linear Regression<ul>
-<li>Gradient descent algorithm</li>
-</ul>
-</li>
-<li>Logistic Regression<ul>
-<li>Sigmoid function</li>
-</ul>
-</li>
-<li>Softmax Classification<ul>
-<li>Cost: cross entropy</li>
-<li>epoch, batch size, iterations</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h1 id="Day-1-5"><a href="#Day-1-5" class="headerlink" title="Day 1.5"></a>Day 1.5</h1><ul>
-<li>XOR with Logistic Regression<ul>
-<li>Single unit/Multiple units</li>
-</ul>
-</li>
-<li>Solutions: Deep Neural Network</li>
-<li>Challenges<ul>
-<li>Forward propagation/Back propagation(Chain rule)</li>
-<li>Activation units: ReLU</li>
-<li>Overfitting</li>
-<li>Regularization/Dropout</li>
-</ul>
-</li>
-<li>TensorBoard</li>
-</ul>
-<h1 id="Day-2"><a href="#Day-2" class="headerlink" title="Day 2"></a>Day 2</h1><ul>
-<li>Convolutional Neural Network<ul>
-<li>width, height, depth</li>
-<li>filter</li>
-<li>Convolutional Layer<ul>
-<li>CONV + ReLU</li>
-</ul>
-</li>
-<li>Pooling Layer<ul>
-<li>downsampling (Max pooling)</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h1 id="Day-3"><a href="#Day-3" class="headerlink" title="Day 3"></a>Day 3</h1><ul>
-<li>RNN (left for future)</li>
-</ul>
-]]></content>
-      
-        <categories>
-            
-            <category> Geek </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> Machine learning </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[视频/音频下载和提取方法]]></title>
       <url>http://tommyjiang.github.io/2017/2017-09-09-download-cnn-video/</url>
       <content type="html"><![CDATA[<p>大厨需要视频和音频，还好有我在。</p>
@@ -3340,8 +4505,8 @@ AlexNet 笔记
 <p>3.获取视频下载地址，需要自备梯子。</p>
 <p>4.浏览器下载很慢，用终端中的<code>wget</code>实现下载，Mac OS 需要先<code>brew install wget</code>，然后<code>wegt url</code>。</p>
 <h1 id="从视频中提取音频"><a href="#从视频中提取音频" class="headerlink" title="从视频中提取音频"></a>从视频中提取音频</h1><p>利用<code>ffmpeg</code>，同样需要先<code>brew install ffmpeg</code>。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i *.mp4/avi -q:a 0 -map a *.mp3</span><br></pre></td></tr></table></figure>
-]]></content>
+<pre><code>ffmpeg -i *.mp4/avi -q:a 0 -map a *.mp3
+</code></pre>]]></content>
       
         <categories>
             
@@ -3502,9 +4667,7 @@ AlexNet 笔记
         
         <tags>
             
-            <tag> Python </tag>
-            
-            <tag> Machine learning </tag>
+            <tag> Machine Learning </tag>
             
         </tags>
         
@@ -3706,7 +4869,8 @@ AlexNet 笔记
 <li>（可选）安装<code>Python</code>包。</li>
 </ol>
 <p>第4步编译时，有可能提示<code>gcc</code>版本问题，可以通过在终端中输入如下命令解决：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> CXX=/usr/<span class="built_in">local</span>/Cellar/gcc/6.3.0_1/bin/g++-6</span><br></pre></td></tr></table></figure>
+<pre><code class="lang-bash">export CXX=/usr/local/Cellar/gcc/6.3.0_1/bin/g++-6
+</code></pre>
 <p>注意将上面命令中的<code>6.3.0_1</code>替换成安装的实际版本。</p>
 ]]></content>
       
@@ -3719,7 +4883,7 @@ AlexNet 笔记
         
         <tags>
             
-            <tag> Machine learning </tag>
+            <tag> Machine Learning </tag>
             
         </tags>
         
@@ -4405,6 +5569,46 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     </entry>
     
     <entry>
+      <title><![CDATA[歌词摘录]]></title>
+      <url>http://tommyjiang.github.io/2017/2017-01-03-Song-lyrics/</url>
+      <content type="html"><![CDATA[<p>人若矫情起来，听什么歌都像唱自己。</p>
+<a id="more"></a>
+<h1 id="爱情"><a href="#爱情" class="headerlink" title="爱情"></a>爱情</h1><blockquote>
+<p>难过是因为我太认真</p>
+<p>——金南玲《逆流成河》</p>
+<p>爱人在身边随处是天堂</p>
+<p>——乌兰托娅《火红的萨日朗》</p>
+<p>既然爱你不能言语<br>只能微笑哭泣<br>让我从此忘了你</p>
+<p>——许茹芸《独角戏》</p>
+<p>由来只有新人笑 有谁听到旧人哭</p>
+<p>——黄安《新鸳鸯蝴蝶梦》</p>
+<p>朝朝望呀望呀愁容添 相恋怎能不相怨</p>
+<p>——新白娘子传奇《心湖雨又风》</p>
+</blockquote>
+<h1 id="青春"><a href="#青春" class="headerlink" title="青春"></a>青春</h1><blockquote>
+<p>时光去了不回头 珍惜吧好朋友</p>
+<p>江玲/钟镇涛 《在那河畔》</p>
+<p>我们都曾有过一张天真而忧伤的脸<br>手握阳光我们望着遥远</p>
+<p>四个女生 《心愿》</p>
+</blockquote>
+]]></content>
+      
+        <categories>
+            
+            <category> 生活 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 音乐 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Echarts 实例]]></title>
       <url>http://tommyjiang.github.io/2017/2017-01-03-echarts-example/</url>
       <content type="html"><![CDATA[<p>Echarts 代码备忘。</p>
@@ -4526,46 +5730,6 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
             
         </categories>
         
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[歌词摘录]]></title>
-      <url>http://tommyjiang.github.io/2017/2017-01-03-Song-lyrics/</url>
-      <content type="html"><![CDATA[<p>人若矫情起来，听什么歌都像唱自己。</p>
-<a id="more"></a>
-<h1 id="爱情"><a href="#爱情" class="headerlink" title="爱情"></a>爱情</h1><blockquote>
-<p>难过是因为我太认真</p>
-<p>——金南玲《逆流成河》</p>
-<p>爱人在身边随处是天堂</p>
-<p>——乌兰托娅《火红的萨日朗》</p>
-<p>既然爱你不能言语<br>只能微笑哭泣<br>让我从此忘了你</p>
-<p>——许茹芸《独角戏》</p>
-<p>由来只有新人笑 有谁听到旧人哭</p>
-<p>——黄安《新鸳鸯蝴蝶梦》</p>
-<p>朝朝望呀望呀愁容添 相恋怎能不相怨</p>
-<p>——新白娘子传奇《心湖雨又风》</p>
-</blockquote>
-<h1 id="青春"><a href="#青春" class="headerlink" title="青春"></a>青春</h1><blockquote>
-<p>时光去了不回头 珍惜吧好朋友</p>
-<p>江玲/钟镇涛 《在那河畔》</p>
-<p>我们都曾有过一张天真而忧伤的脸<br>手握阳光我们望着遥远</p>
-<p>四个女生 《心愿》</p>
-</blockquote>
-]]></content>
-      
-        <categories>
-            
-            <category> 生活 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 音乐 </tag>
-            
-        </tags>
         
     </entry>
     
@@ -4823,182 +5987,35 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     </entry>
     
     <entry>
-      <title><![CDATA[北京十大适合一个人吃的餐厅]]></title>
-      <url>http://tommyjiang.github.io/2016/2016-11-16-Beijing-single-res/</url>
-      <content type="html"><![CDATA[<p>记录下有才姐推荐的微博上的<a href="http://weibo.com/2643091105/EhDNHuBvH?from=page_1005052643091105_profile&amp;wvr=6&amp;mod=weibotime&amp;type=comment#_rnd1479530057542" target="_blank" rel="noopener">北京十大适合一个人吃的餐厅</a>，把生活丰富起来。</p>
-<a id="more"></a>
-<p>十大适合一个人吃的餐厅的具体信息如下：<br>
-<table border="1px" align="center">
-  <tr>
-    <th style="text-align:center">序号</th>
-    <th style="text-align:center">餐厅名</th>
-    <th style="text-align:center">菜系</th>
-    <th style="text-align:center">地址</th>
-    <th style="text-align:center">地铁站</th>
-  </tr>
-  <tr>
-    <td style="text-align:center">1</td>
-    <td style="text-align:center">渔芙南</td>
-    <td style="text-align:center">湘菜</td>
-    <td style="text-align:center">西城区杨梅竹斜街166号</td>
-    <td style="text-align:center">虎坊桥</td>
-  </tr>
-  <tr>
-    <td style="text-align:center">2</td>
-    <td style="text-align:center">三禾粉匠贵州米粉店</td>
-    <td style="text-align:center">贵州米粉</td>
-    <td style="text-align:center">通州区万达广场西门金街B区2层B1-254号</td>
-    <td style="text-align:center">通州北苑</td>
-  </tr>
-  <tr>
-    <td style="text-align:center">3</td>
-    <td style="text-align:center">北27号</td>
-    <td style="text-align:center">兰州菜</td>
-    <td style="text-align:center">东城区三里屯北27号楼1层</td>
-    <td style="text-align:center">团结湖</td>
-  </tr>
-  <tr>
-    <td style="text-align:center">4</td>
-    <td style="text-align:center">希有煮艺</td>
-    <td style="text-align:center">潮汕菜</td>
-    <td style="text-align:center">朝阳区后现代城3号楼底商</td>
-    <td style="text-align:center">大郊亭</td>
-  </tr>
-  <tr>
-    <td style="text-align:center">5</td>
-    <td style="text-align:center">楚大圣</td>
-    <td style="text-align:center">鄂菜</td>
-    <td style="text-align:center">东城区戏楼胡同6号</td>
-    <td style="text-align:center">雍和宫</td>
-  </tr>
-  <tr>
-    <td style="text-align:center">6</td>
-    <td style="text-align:center">饺真水饺</td>
-    <td style="text-align:center">饺子</td>
-    <td style="text-align:center">朝阳区广渠门外大街5号院54号楼1层08</td>
-    <td style="text-align:center">广渠门</td>
-  </tr>
-  <tr>
-    <td style="text-align:center">7</td>
-    <td style="text-align:center">白老虎屯</td>
-    <td style="text-align:center">烤串</td>
-    <td style="text-align:center">东城区香饵胡同84号</td>
-    <td style="text-align:center">北新桥</td>
-  </tr>
-  <tr>
-    <td style="text-align:center">8</td>
-    <td style="text-align:center">小春日和</td>
-    <td style="text-align:center">日料</td>
-    <td style="text-align:center">东城区东直门内大街288-16号</td>
-    <td style="text-align:center">北新桥</td>
-  </tr>
-  <tr>
-    <td style="text-align:center">9</td>
-    <td style="text-align:center">家系面屋</td>
-    <td style="text-align:center">面食</td>
-    <td style="text-align:center">朝阳区太阳宫中路凯德MALL四层</td>
-    <td style="text-align:center">太阳宫</td>
-  </tr>
-  <tr>
-    <td style="text-align:center">10</td>
-    <td style="text-align:center">河沿肉饼</td>
-    <td style="text-align:center">肉饼</td>
-    <td style="text-align:center">东城区北河沿大街159-2号</td>
-    <td style="text-align:center">王府井</td>
-  </tr>
-</table>
-</p>
-<p>十大适合一个人吃的餐厅的具体位置如下：</p>
-
-    <div style="min-height: 500px; width: 100%;" id="map">
-    </div>
-
-    <script type="text/javascript">
-  
-        function map_init() {
-                    
-            var map = new BMap.Map("map");    // 创建Map实例
-            map.centerAndZoom(new BMap.Point(116.41,39.89), 13);  // 初始化地图,设置中心点坐标和地图级别
-            map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
-            map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
-            map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
-                    
-            //向地图中添加缩放控件
-            var ctrlNav = new window.BMap.NavigationControl({
-                               anchor: BMAP_ANCHOR_TOP_LEFT,
-                               type: BMAP_NAVIGATION_CONTROL_LARGE
-                          });
-            map.addControl(ctrlNav);
-  
-            var points = [
-                [116.395857,39.901169], // 渔芙南
-                [116.649810,39.912096], // 三禾粉匠贵州米粉店 
-                [116.459714,39.945100], // 北27号
-                [116.404120,39.942986], // 希有煮艺
-                [116.424392,39.951420], // 楚大圣
-                [116.457390,39.900186], // 饺真水饺
-                [116.420776,39.945450], // 白老虎屯
-                [116.423915,39.946522], // 小春日和
-                [116.453864,39.977176], // 家系面屋
-                [116.412775,39.922231], // 河沿肉饼
-            ];
-            
-            var size1 = new BMap.Size(21, 50);
-            var size2 = new BMap.Size(21, 0);
-            var icons = [], markers = [];
-            
-            // 向地图添加标注
-            for( var i = 0;i < points.length; i++){
-                var point = new BMap.Point(points[i][0], points[i][1]);
-                var icon_pre = 'http://o852ayzmr.bkt.clouddn.com/';
-                var icon_post = '.png';
-                var icon_string = icon_pre + (i+1).toString()  + icon_post;
-                icons[i] = new BMap.Icon(icon_string, size1, {anchor: size2})
-                // icons[i] = new BMap.Icon('http://o852ayzmr.bkt.clouddn.com/1.png', size1, {anchor: size2})
-                markers[i] = new BMap.Marker(point, {icon: icons[i]});
-                map.addOverlay(markers[i]);
-            };
-        }
-
-        //异步调用百度js
-        function map_load() {
-            var load = document.createElement("script");
-            load.src = "http://api.map.baidu.com/api?v=1.4&callback=map_init";
-            document.body.appendChild(load);
-        }  
-        window.onload = map_load;
-    </script>
-
-]]></content>
-      
-        <categories>
-            
-            <category> 生活 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 美食 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[Hexo 博文中加入百度地图]]></title>
       <url>http://tommyjiang.github.io/2016/2016-11-16-Hexo-baidu-map/</url>
       <content type="html"><![CDATA[<p>利用百度地图 API 实现在 Hexo 的博文中加入地图。</p>
 <a id="more"></a>
 <p>最近想丰富下生活，最先想到的就是多品尝点北京的美食。作为一个认真的人，吃过就想记下来，但只有饭馆的名字和地址显得太单调了，就想能在地图上显示的话会比较直观。搜了下百度地图的 API，不多说，直接上代码吧。更详细的内容可以参考百度地图 Javascript 的 <a href="http://lbsyun.baidu.com/index.php?title=jspopular" target="_blank" rel="noopener">API</a>。</p>
 <p>首先新建一个<code>div</code>：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"min-height: 800px; width: 100%;"</span> <span class="attr">id</span>=<span class="string">"map"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<pre><code class="lang-html">    &lt;div style=&quot;min-height: 800px; width: 100%;&quot; id=&quot;map&quot;&gt;
+    &lt;/div&gt;
+</code></pre>
 <p>然后利用百度地图 API 在<code>div</code>中填充一个地图： </p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">	<span class="comment">// 百度地图API功能</span></span><br><span class="line">	<span class="keyword">var</span> map = <span class="keyword">new</span> BMap.Map(<span class="string">"map"</span>);    <span class="comment">// 创建Map实例</span></span><br><span class="line">	map.centerAndZoom(<span class="keyword">new</span> BMap.Point(<span class="number">116.404</span>, <span class="number">39.915</span>), <span class="number">11</span>);  <span class="comment">// 初始化地图,设置中心点坐标和地图级别</span></span><br><span class="line">	<span class="comment">//添加地图类型控件</span></span><br><span class="line">	map.addControl(<span class="keyword">new</span> BMap.MapTypeControl(&#123;</span><br><span class="line">	mapTypes:[</span><br><span class="line">            BMAP_NORMAL_MAP,</span><br><span class="line">            BMAP_HYBRID_MAP</span><br><span class="line">        ]&#125;));	  </span><br><span class="line">	map.setCurrentCity(<span class="string">"北京"</span>);          <span class="comment">// 设置地图显示的城市 此项是必须设置的</span></span><br><span class="line">	map.enableScrollWheelZoom(<span class="literal">true</span>);     <span class="comment">//开启鼠标滚轮缩放</span></span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<pre><code class="lang-javascript">&lt;script type=&quot;text/javascript&quot;&gt;
+    // 百度地图API功能
+    var map = new BMap.Map(&quot;map&quot;);    // 创建Map实例
+    map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
+    //添加地图类型控件
+    map.addControl(new BMap.MapTypeControl({
+    mapTypes:[
+            BMAP_NORMAL_MAP,
+            BMAP_HYBRID_MAP
+        ]}));      
+    map.setCurrentCity(&quot;北京&quot;);          // 设置地图显示的城市 此项是必须设置的
+    map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+&lt;/script&gt;
+</code></pre>
 <p>上述代码直接放在 Hexo Markdown 博文中的<code>raw</code>标签中，即：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% raw %&#125;</span><br><span class="line">上边的代码</span><br><span class="line">&#123;% endraw %&#125;</span><br></pre></td></tr></table></figure>
-<p>结果如下：</p>
+<pre><code>{% raw %}
+上边的代码
+{% endraw %}
+</code></pre><p>结果如下：</p>
 
     <div style="min-height: 500px; width: 100%; overflow: hidden; margin:0; font-family:" 微软雅黑";"="" id="map">
     </div>
@@ -5290,9 +6307,11 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
 <a id="more"></a>
 <p>迁移到<code>Spacemacs</code>之后感觉很方便，<code>base package</code>中自带了<code>exec-path-from-shell</code>，可以直接使用 Mac 系统的环境变量。</p>
 <p>前天用<code>org-encrypt-entry</code>把<code>org</code>文件加密的时候报错，查了下<code>homebrew</code>安装的<code>gnupg</code>，发现已经更新到<code>gnupg2</code>了。所以果断自己下载了<code>gnupg 1.4.21</code>的稳定版：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install gpg1</span><br></pre></td></tr></table></figure>
+<pre><code class="lang-shell">brew install gpg1
+</code></pre>
 <p>同时在<code>.spacemacs.d</code>的<code>init.el</code>中加入了<code>gnupg 1.4.21</code>的路径：</p>
-<figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">add-to-list</span> 'exec-path <span class="string">"/usr/local/opt/gnupg/libexec/gpgbin"</span>)</span><br></pre></td></tr></table></figure>
+<pre><code class="lang-lisp">(add-to-list &#39;exec-path &quot;/usr/local/opt/gnupg/libexec/gpgbin&quot;)
+</code></pre>
 <p>又可以用来<code>gnupg</code>来给<code>org</code>文件加密了。</p>
 ]]></content>
       
@@ -5386,13 +6405,20 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
 <p>但这种一键式安装工具极为依赖镜像源，国内的网络在连国外某些镜像时实在是太慢了，所以有很多组织和个人在国内搭建了镜像服务器，造福大众。</p>
 <p><code>Anaconda</code> 是 Python 的一个发行包，这个单词的原意是南美发现的一种巨蟒，可能是由于它包括了很多 Python 的 <code>package</code>所以叫这个名字。<code>Anaconda</code> 的 <code>defaults</code> 镜像源实在是太慢了，清华 TUNA 提供了一个<a href="https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/" target="_blank" rel="noopener">国内镜像源</a>，我们要做的就是将这个镜像源作为 <code>Anaconda</code> 的默认镜像源。</p>
 <h1 id="Mac"><a href="#Mac" class="headerlink" title="Mac"></a>Mac</h1><p>Mac 下切换很简单，直接在 <code>terminal</code> 中输入(参考<a href="https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/" target="_blank" rel="noopener">清华 TUNA 国内镜像源</a>)：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">conda config --add channels <span class="string">'https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/'</span></span><br><span class="line">conda config --<span class="built_in">set</span> show_channel_urls yes</span><br></pre></td></tr></table></figure>
+<pre><code class="lang-bash">conda config --add channels &#39;https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/&#39;
+conda config --set show_channel_urls yes
+</code></pre>
 <h1 id="Win"><a href="#Win" class="headerlink" title="Win"></a>Win</h1><p>Win 下稍微麻烦一些，如果直接在 <code>cmd</code> 中输入上述命令，<code>conda install</code> 的时候会报错：</p>
 <blockquote>
 <p>Error: Could not find anaconda.org user ‘https: </p>
 </blockquote>
 <p>方法是修改 <code>.condarc</code> 文件为以下形式(参考<a href="http://blog.5ibc.net/p/87204.html" target="_blank" rel="noopener">该网址</a>)：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">channels: </span><br><span class="line">- https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/ </span><br><span class="line">- defaults</span><br><span class="line"></span><br><span class="line">show_channel_urls: yes</span><br></pre></td></tr></table></figure>
+<pre><code class="lang-bash">channels: 
+- https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/ 
+- defaults
+
+show_channel_urls: yes
+</code></pre>
 ]]></content>
       
         <categories>
@@ -5417,7 +6443,7 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
 <a id="more"></a>
 <p>Google 不愧是一个充满人文关怀的公司，今天也应景地配上了七夕的图片。中午打开 Mac 下的 Chrome 时发现整个 UI 焕然一新，原来已经升级到 v52 版本，整体 UI 借鉴了移动设备上的 <code>Material</code> 风格，界面更加简洁，科技感更强，整体配色也更高冷了。</p>
 <p><img src="/images/2016/Chrome-v52.png" alt=""></p>
-<p>说起七夕，印象比较深的有高考那年，也就是 2006 年的双七夕。还有七年前 2009 年的七夕，从学校去五道口的路上，碰到很多卖花的，不过当时的表现实在是……</p>
+<p>说起七夕，印象比较深的有高考那年，也就是 2006 年的双七夕。</p>
 <p>年少轻狂，很多时候很多事儿都想不清楚，稀里糊涂地做了选择。现在回过来看，所谓成长，大概就是有能力做出选择，并且承担选择带来的后果吧。</p>
 <blockquote>
 <p>两情若是长久时，又岂在朝朝暮暮。</p>
@@ -5449,7 +6475,8 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
 <a id="more"></a>
 <p>新的默认配色名称为 <code>parula</code>，意为北美生活的一种森莺。</p>
 <p>如果想了解 <code>parula</code> 的配色方案，可以在 MATLAB 中输入以下命令：</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">get(gca,<span class="string">'colororder'</span>)</span><br></pre></td></tr></table></figure>
+<pre><code class="lang-matlab">get(gca,&#39;colororder&#39;)
+</code></pre>
 <p>默认配色 <code>parula</code> 的前七种颜色如下：</p>
 
 <table border="1px" align="center">
@@ -5551,9 +6578,9 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
         
         <tags>
             
-            <tag> 感情 </tag>
-            
             <tag> 博士 </tag>
+            
+            <tag> 感情 </tag>
             
         </tags>
         
@@ -5596,9 +6623,9 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
         
         <tags>
             
-            <tag> 博士 </tag>
-            
             <tag> 电力 </tag>
+            
+            <tag> 博士 </tag>
             
         </tags>
         
@@ -5608,7 +6635,6 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
       <title><![CDATA[博客迁移至 Hexo]]></title>
       <url>http://tommyjiang.github.io/2016/2016-03-16-migrate-to-hexo/</url>
       <content type="html"><![CDATA[<p>从2014年8月第一篇博文算起，已经写了一年半了。之前博客主要用的是 Jekyll + Markdown （感谢 codepiano 同学提供的主题）。即日起本博客迁移至 <code>Hexo</code>，之前的博文会挑一些重点的迁移过来。</p>
-<p>本博客使用的是<code>raytaylorlin</code>提供的 <a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism" target="_blank" rel="noopener">raytaylorism 主题</a>，在此表示感谢。</p>
 ]]></content>
       
         <categories>
@@ -5638,10 +6664,6 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
 <div id="tripSum2015" style="height:400px"></div>
 
 <p>其中1、2、5、8月的飞行里程完全平行，4月是加上了北京——沈阳往返所以才多了一些，也就是说今年光北京——通辽就往返了5趟……不过8月初863已经结题了，我也毕业了，以后应该再也不用去了，哈哈。</p>
-<p>2015年飞机和火车的路线图如下：</p>
-
-<div id="tripMap" style="height:600px"></div>
-
 <p>点评一下路线图：</p>
 <ul>
 <li>飞机：今年个人飞行又开辟多条新航线，到过的机场新增以下4个：沈阳桃仙国际机场（SHE），杭州萧山国际机场（HGH），厦门高崎国际机场（XMN），福州长乐国际机场（FOC）。</li>
@@ -5649,10 +6671,6 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
 <li>整体：今年全年的行程明显集中在东部地区，最西的地点竟然是北京……</li>
 </ul>
 <h1 id="个人飞行总结"><a href="#个人飞行总结" class="headerlink" title="个人飞行总结"></a>个人飞行总结</h1><p>由于爷爷奶奶和姥姥姥爷家里离得都很近，再加上家里比较传统，一到过节就回家，没怎么出去玩过，所以我直到2012年4月9号才第一次坐飞机。</p>
-<p>先把分年度飞行线路图放上来吧，只有国内部分，不包括两次北京-美国往返以及美国国内航线：</p>
-
-<div id="flightMap" style="height:400px"></div>
-
 <p>整个西部地区只飞过昆明……东部地区航线倒是挺密集的。出发和到达最多的机场自然是PEK，通辽机场紧随其后，出发和到达均有15次……</p>
 <p>分年度飞行次数和飞行里程统计如下：</p>
 
@@ -5674,7 +6692,6 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
 <script type="text/javascript">
 FlightStat()
 TripSum2015();
-TripMap();
 Airline();
 
 //    function drawEcharts(ec){
@@ -7083,7 +8100,10 @@ function FlightStat(){
 <p>MATLAB/Simulink 就是一个常用的仿真工具，它的突出优点是可以和 MATLAB 代码完美对接。但利用 Simulink 模型进行仿真时，如果需要在某些时刻改变系统参数，利用 GUI 界面进行设置会比较麻烦，可以利用 m 文件实现，具体方法如下。</p>
 <h2 id="m-文件修改-Simulink-模型参数的方法"><a href="#m-文件修改-Simulink-模型参数的方法" class="headerlink" title="m 文件修改 Simulink 模型参数的方法"></a>m 文件修改 Simulink 模型参数的方法</h2><p>利用 m 文件修改 Simulink 模型参数方法的总体思想如下：首先在初始参数下仿真一段时间，记录该时间结束时系统所有状态量的值，之后修改系统参数，再以上一次仿真结束时记录的系统所有状态量的值作为初值，重新仿真，如此循环往复。</p>
 <p>可以在 m 文件中利用<code>set_param</code>函数设置 Simulink 模型仿真的相关参数：</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">set_param(<span class="string">'ModelName'</span>,<span class="string">'LoadInitialState'</span>,<span class="string">'off'</span>,...</span><br><span class="line">          <span class="string">'SaveFinalState'</span>,<span class="string">'on'</span>,<span class="string">'SaveCompleteFinalSimState'</span>,<span class="string">'on'</span>,...</span><br><span class="line">          <span class="string">'FinalStateName'</span>,<span class="string">'xFinal'</span>,<span class="string">'StartTime'</span>,<span class="string">'0'</span>,<span class="string">'StopTime'</span>,<span class="string">'1'</span>);</span><br></pre></td></tr></table></figure>
+<pre><code class="lang-MATLAB">set_param(&#39;ModelName&#39;,&#39;LoadInitialState&#39;,&#39;off&#39;,...
+          &#39;SaveFinalState&#39;,&#39;on&#39;,&#39;SaveCompleteFinalSimState&#39;,&#39;on&#39;,...
+          &#39;FinalStateName&#39;,&#39;xFinal&#39;,&#39;StartTime&#39;,&#39;0&#39;,&#39;StopTime&#39;,&#39;1&#39;);
+</code></pre>
 <p>其中<code>ModelName</code>为 Simulink 模型的文件名，注意第一次仿真不需要载入初值，因此<code>LoadInitialState</code>选项需要设为<code>off</code>，之后的仿真中则需要将该项设置为<code>on</code>。第2行对应的是保存系统状态量终值的相关设置，其中<code>FinalStateName</code>为终值存储的变量名，之后仿真的初值需要设置为该变量名。</p>
 <h1 id="相关问题"><a href="#相关问题" class="headerlink" title="相关问题"></a>相关问题</h1><h2 id="继续进行仿真时提示仿真起始时间与状态变量初始值的时间不同"><a href="#继续进行仿真时提示仿真起始时间与状态变量初始值的时间不同" class="headerlink" title="继续进行仿真时提示仿真起始时间与状态变量初始值的时间不同"></a>继续进行仿真时提示仿真起始时间与状态变量初始值的时间不同</h2><p>利用以上代码实现 m 文件修改 Simulink 模型参数继续仿真的过程中，会遇到如下警告：</p>
 <pre><code>Warning: The start time of model &#39;Exp2_1_SimModel&#39; is different from the start time saved in the initial SimState. The start time has therefore been reset to 0. 
@@ -7176,9 +8196,9 @@ function FlightStat(){
 <p>小河弯弯向南流 流到香江去看一看<br>东方之珠 我的爱人 你的风采是否浪漫依然<br>月儿弯弯的海港 夜色深深 灯火闪亮<br>东方之珠 整夜未眠<br>守着沧海桑田变幻的诺言<br>让海风吹拂了五千年<br>每一滴泪珠 仿佛都说出你的尊严<br>让海潮伴我来保佑你<br>请别忘记我 永远不变黄色的脸<br>船儿弯弯入海港 回头望望沧海茫茫<br>东方之珠拥抱着我<br>让我温暖 你那苍凉的胸膛<br>让海风吹拂了五千年<br>每一滴泪珠 仿佛都说出你的尊严<br>让海潮伴我来保佑你<br>请别忘记我 永远不变黄色的脸</p>
 </blockquote>
 <p>《东方之珠》是内地人耳熟能详的，也可能是最容易想到的与香港有关的歌曲了。然而我印象中最早听到这首歌还是在幼儿园，那天还是阴天，快到晚上了，身边的小朋友一个个都被家长接走了，只有我一个人坐在屋子里，听老师单曲循环这首歌。原因是我妈那天有事，没能来按时接我，最后来接我时天都黑了。后来想想，一下午都沉浸在《东方之珠》的旋律里，应该算是我和香港最早的缘分了，虽然当时我并不知道这首歌唱的是香港。</p>
-<p>转眼到了1997年，香港回归的年份，全国都沉浸在喜悦的氛围中。作为祖国的花朵，自然会被拉去参加与香港回归相关的事情。我自己就参加了香港回归知识竞赛和香港回归舞蹈表演，都是作为秦皇岛铁路小学参加北京铁路局天津铁路分局举办的活动。先说知识竞赛吧，记得是每人发一本书，上面画一些重点，死记硬背之后去参赛，当时我过年都还在背题。记了一大堆人名，安子介、霍英东、邵逸夫……最后考试的时候有道题印象尤深，世界船王是（），我填的包玉刚，答案是香港的包玉刚。翻开发的书一看，确实是香港的包玉刚……这不是香港回归竞赛么，不是香港的还能是台湾的么……舞蹈表演听起来比较奇幻，虽然现在体型发胖，没法起舞了。不过当时还排练了好久，而且我是扮演香港儿童，和大陆的儿童团聚，后面还有一群小白鸽。现在还有表演的照片在家里，就不传上来了。</p>
-<h1 id="首次抵港"><a href="#首次抵港" class="headerlink" title="首次抵港"></a>首次抵港</h1><p>2012年6月底，赴佛山参加博士生实践。2012年6月30日，从福田口岸过关，来到了教科书中提到的万恶的资本主义社会，世界三大金融中心之一的香港。当晚从第一城坐到旺角东，然后步行到旺角，再经油麻地到尖沙咀，深切地感受了香港闹市区的繁华和嘈杂。第二天上午又到港岛的中环苹果店买了个Thunderbolt和网口的转接头，品尝了米其林一星的添好运，还到维多利亚公园围观了港人的七一大游行。下午就乘车由福田口岸过关返回佛山，结束了短暂的香港两日游。</p>
-<h1 id="半年的香港交换学习"><a href="#半年的香港交换学习" class="headerlink" title="半年的香港交换学习"></a>半年的香港交换学习</h1><p>2013年11月10日再次由福田口岸过关到达香港，开始半年的香港交换学习生活。仍然是住在小哥家，不过这次终于不是睡在客厅了，而是搬进了卧室。香港的天气并没有想象中的那么难熬，不过3月份连日阴天不见阳光确实让我抑郁了一阵。在港的最大收获就是在小哥的带领下，试图学了学做饭，虽然最后手艺仍不理想，但好歹是饿不死了。另外还去广东的广州肇庆以及潮汕分别转了一圈，深圳去的就太多了。还记得和瓜瓜、胖哥哥和岩峰在深圳happy那天回港后赶上香港20年来最早的黑雨警告，也算一个特别的回忆吧。</p>
+<p>转眼到了 1997 年，香港回归的年份，全国都沉浸在喜悦的氛围中。作为祖国的花朵，自然会被拉去参加与香港回归相关的事情。我自己就参加了香港回归知识竞赛和香港回归舞蹈表演，都是作为秦皇岛铁路小学参加北京铁路局天津铁路分局举办的活动。先说知识竞赛吧，记得是每人发一本书，上面画一些重点，死记硬背之后去参赛，当时我过年都还在背题。记了一大堆人名，安子介、霍英东、邵逸夫……最后考试的时候有道题印象尤深，世界船王是（），我填的包玉刚，答案是香港的包玉刚。翻开发的书一看，确实是香港的包玉刚……这不是香港回归竞赛么，不是香港的还能是台湾的么……舞蹈表演听起来比较奇幻，虽然现在体型发胖，没法起舞了。不过当时还排练了好久，而且我是扮演香港儿童，和大陆的儿童团聚，后面还有一群小白鸽。现在还有表演的照片在家里，就不传上来了。</p>
+<h1 id="首次抵港"><a href="#首次抵港" class="headerlink" title="首次抵港"></a>首次抵港</h1><p>2012 年 6 月底，赴佛山参加博士生实践。2012 年 6 月 30 日，从福田口岸过关，来到了教科书中提到的万恶的资本主义社会，世界三大金融中心之一的香港。当晚从第一城坐到旺角东，然后步行到旺角，再经油麻地到尖沙咀，深切地感受了香港闹市区的繁华和嘈杂。第二天上午又到港岛的中环苹果店买了个 Thunderbolt 和网口的转接头，品尝了米其林一星的添好运，还到维多利亚公园围观了港人的七一大游行。下午就乘车由福田口岸过关返回佛山，结束了短暂的香港两日游。</p>
+<h1 id="半年的香港交换学习"><a href="#半年的香港交换学习" class="headerlink" title="半年的香港交换学习"></a>半年的香港交换学习</h1><p>2013 年 11 月 10 日再次由福田口岸过关到达香港，开始半年的香港交换学习生活。仍然是住在小哥家，不过这次终于不是睡在客厅了，而是搬进了卧室。香港的天气并没有想象中的那么难熬，不过 3 月份连日阴天不见阳光确实让我抑郁了一阵。在港的最大收获就是在小哥的带领下，试图学了学做饭，虽然最后手艺仍不理想，但好歹是饿不死了。另外还去广东的广州肇庆以及潮汕分别转了一圈，深圳去的就太多了。还记得和瓜瓜、胖哥哥和岩峰在深圳 happy 那天回港后赶上香港 20 年来最早的黑雨警告，也算一个特别的回忆吧。</p>
 ]]></content>
       
         <categories>

@@ -32,6 +32,7 @@
   <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/prism.css" media="screen" type="text/css">
   <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
@@ -39,6 +40,7 @@
   <![endif]-->
 
   <script src="/js/jquery-2.0.3.min.js"></script>
+  <script src="/js/prism.js" async></script>
   
   <!-- analytics -->
   
@@ -46,8 +48,8 @@
 
 
 </head>
-</html>
- <body>  
+
+<body>
   <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
       <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -91,8 +93,8 @@
 <div class="clearfix"></div>
 
   <div class="container">
-  	<div class="content">
-    	 
+    <div class="content">
+      
 
 
 	
@@ -125,7 +127,16 @@
 <a id="more"></a>
 <p>Lisp 诞生于 1958 年，发明人是 John McCarthy，是目前仍在使用的第二古老的高级语言(最早的是 Fortran，诞生于 1957 年)。</p>
 <p>Lisp 来源于 <code>LISt Processing</code>(有调侃说是 <code>Lots of Isolated Stupid Parentheses</code>)，这个古老的语言和目前主流语言例如 C++，Python 和 Java 等有显著区别，下面是一段代码示例：</p>
-<figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">defun</span> cal-china-x-winter-solstice-date (<span class="name">date</span>)</span><br><span class="line">  <span class="string">"Return winter solstice(冬至) date in Gregorian form.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">If MONTH = 12, return current year's date</span></span><br><span class="line"><span class="string">Else return last year's date"</span></span><br><span class="line">  (<span class="name">let*</span> ((<span class="name">cyear</span> (<span class="name">if</span> (<span class="name">=</span> (<span class="name">calendar-extract-month</span> date) <span class="number">12</span>)</span><br><span class="line">                    (<span class="name">calendar-extract-year</span> date)</span><br><span class="line">                  (<span class="number">1</span>- (<span class="name">calendar-extract-year</span> date)))))</span><br><span class="line">    (<span class="name">car</span> (<span class="name">rassoc</span> '<span class="string">"冬至"</span> (<span class="name">cal-china-x-solar-term-alist-new</span> cyear)))))</span><br></pre></td></tr></table></figure>
+<pre><code class="lang-lisp">(defun cal-china-x-winter-solstice-date (date)
+  &quot;Return winter solstice(冬至) date in Gregorian form.
+
+If MONTH = 12, return current year&#39;s date
+Else return last year&#39;s date&quot;
+  (let* ((cyear (if (= (calendar-extract-month date) 12)
+                    (calendar-extract-year date)
+                  (1- (calendar-extract-year date)))))
+    (car (rassoc &#39;&quot;冬至&quot; (cal-china-x-solar-term-alist-new cyear)))))
+</code></pre>
 <p><code>Emacs</code> 也许是用 Lisp 编写的最著名的软件了。<code>Emacs</code> 自带了日历功能，<a href="https://github.com/xwl/cal-china-x" target="_blank" rel="noopener"><code>cal-china-x</code></a> 扩展实现了阴历、节气、生肖等的计算，但没有实现数九天和伏天的计算功能。正好借这个机会实现下功能，练练手。</p>
 <h1 id="数九天计算"><a href="#数九天计算" class="headerlink" title="数九天计算"></a>数九天计算</h1><p>数九天的计算相对比较简单。从冬至当天开始算一九第一天，每过九天加一九，一直到九九第九天。</p>
 <p>思路也比较清楚，对于某一个 <code>date</code>，先计算其与冬至的天数差。由于冬至始终在阳历的十二月，因此可以分情况讨论：</p>
@@ -133,12 +144,99 @@
 <li>阳历非十二月，计算与去年冬至的天数差。</li>
 <li>阳历为十二月，计算与今年冬至的天数差。此时若 <code>date</code> 在冬至前则差为负数，但负数情况可以不管，因为不属于数九天。</li>
 </ul>
-<p>如果天数差在 0~80 天内，则需要显示数九天，具体显示格式为<code>一九(1)</code>，整个代码如下：<br><figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">defconst</span> cal-china-x-nine-characters  <span class="comment">; 数九天 array</span></span><br><span class="line">  [<span class="string">"一九"</span> <span class="string">"二九"</span> <span class="string">"三九"</span> <span class="string">"四九"</span> <span class="string">"五九"</span> <span class="string">"六九"</span> <span class="string">"七九"</span> <span class="string">"八九"</span> <span class="string">"九九"</span>])</span><br><span class="line"></span><br><span class="line">(<span class="name">defun</span> cal-china-x-winter-solstice-date (<span class="name">date</span>)  <span class="comment">; 计算冬至日期(1-11月为去年，12月为今年)</span></span><br><span class="line">  <span class="string">"Return winter solstice(冬至) date in Gregorian form.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">If MONTH = 12, return current year's date</span></span><br><span class="line"><span class="string">Else return last year's date"</span></span><br><span class="line">  (<span class="name">let*</span> ((<span class="name">cyear</span> (<span class="name">if</span> (<span class="name">=</span> (<span class="name">calendar-extract-month</span> date) <span class="number">12</span>)</span><br><span class="line">                    (<span class="name">calendar-extract-year</span> date)</span><br><span class="line">                  (<span class="number">1</span>- (<span class="name">calendar-extract-year</span> date)))))</span><br><span class="line">    (<span class="name">car</span> (<span class="name">rassoc</span> '<span class="string">"冬至"</span> (<span class="name">cal-china-x-solar-term-alist-new</span> cyear)))))</span><br><span class="line"></span><br><span class="line">(<span class="name">defun</span> winter-solstice-day-diff (<span class="name">date</span>)  <span class="comment">; 计算与指定冬至的天数差</span></span><br><span class="line">  (<span class="name">cal-china-x-days-diff</span> date (<span class="name">cal-china-x-winter-solstice-date</span> date)))</span><br><span class="line">  </span><br><span class="line">(<span class="name">defun</span> cal-china-x-get-several-nines-string (<span class="name">date</span>)  <span class="comment">; 生成数九天的 string</span></span><br><span class="line">  (<span class="name">let</span> ((<span class="name">daygap</span> (<span class="name">winter-solstice-day-diff</span> date)))</span><br><span class="line">    (<span class="name">if</span> (<span class="name">or</span> (<span class="name">&lt;</span> daygap <span class="number">0</span>) (<span class="name">&gt;</span> daygap <span class="number">80</span>))</span><br><span class="line">        <span class="string">""</span></span><br><span class="line">      (<span class="name">concat</span> (<span class="name">aref</span> cal-china-x-nine-characters (<span class="name">/</span> daygap <span class="number">9</span>))</span><br><span class="line">              <span class="string">"("</span></span><br><span class="line">              (<span class="name">number-to-string</span> (<span class="number">1</span>+ (% daygap <span class="number">9</span>)))</span><br><span class="line">              <span class="string">")"</span></span><br><span class="line">              ))))</span><br></pre></td></tr></table></figure></p>
+<p>如果天数差在 0~80 天内，则需要显示数九天，具体显示格式为<code>一九(1)</code>，整个代码如下：</p>
+<pre><code class="lang-lisp">(defconst cal-china-x-nine-characters  ; 数九天 array
+  [&quot;一九&quot; &quot;二九&quot; &quot;三九&quot; &quot;四九&quot; &quot;五九&quot; &quot;六九&quot; &quot;七九&quot; &quot;八九&quot; &quot;九九&quot;])
+
+(defun cal-china-x-winter-solstice-date (date)  ; 计算冬至日期(1-11月为去年，12月为今年)
+  &quot;Return winter solstice(冬至) date in Gregorian form.
+
+If MONTH = 12, return current year&#39;s date
+Else return last year&#39;s date&quot;
+  (let* ((cyear (if (= (calendar-extract-month date) 12)
+                    (calendar-extract-year date)
+                  (1- (calendar-extract-year date)))))
+    (car (rassoc &#39;&quot;冬至&quot; (cal-china-x-solar-term-alist-new cyear)))))
+
+(defun winter-solstice-day-diff (date)  ; 计算与指定冬至的天数差
+  (cal-china-x-days-diff date (cal-china-x-winter-solstice-date date)))
+
+(defun cal-china-x-get-several-nines-string (date)  ; 生成数九天的 string
+  (let ((daygap (winter-solstice-day-diff date)))
+    (if (or (&lt; daygap 0) (&gt; daygap 80))
+        &quot;&quot;
+      (concat (aref cal-china-x-nine-characters (/ daygap 9))
+              &quot;(&quot;
+              (number-to-string (1+ (% daygap 9)))
+              &quot;)&quot;
+              ))))
+</code></pre>
 <h1 id="伏天计算"><a href="#伏天计算" class="headerlink" title="伏天计算"></a>伏天计算</h1><p>民间有“头伏饺子二伏面，三伏烙饼摊鸡蛋”的习俗，看到这么多面食可以判断这基本是华北、黄淮一带的风俗。伏天计算比较复杂，原因是涉及到两个节气(夏至和立秋)，以及每日的干支。具体计算方法是：</p>
 <blockquote>
 <p>从夏至开始，依照干支纪日的排列，第3个庚日出现时，为初伏第一天(夏至三庚数头伏)，第4个庚日为中伏第一天，立秋后第1个庚日为末伏第一天。当夏至与立秋之间出现4个庚日时中伏为10天，出现5个庚日则为20天。</p>
 </blockquote>
-<figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">defun</span> cal-china-x-solar-term-date (<span class="name">date</span> solar-term)</span><br><span class="line">  <span class="string">"Return solar-term date in Gregorian form."</span></span><br><span class="line">  (<span class="name">let*</span> ((<span class="name">cyear</span> (<span class="name">calendar-extract-year</span> date)))</span><br><span class="line">    (<span class="name">car</span> (<span class="name">rassoc</span> solar-term (<span class="name">cal-china-x-solar-term-alist-new</span> cyear)))))</span><br><span class="line"></span><br><span class="line">(<span class="name">defun</span> cal-china-x-chinese-day-celestial-stem-number (<span class="name">date</span>)</span><br><span class="line">  <span class="string">"String of Chinese date of Gregorian DATE.</span></span><br><span class="line"><span class="string">Defaults to today's date if DATE is not given."</span></span><br><span class="line">  (<span class="name">let*</span> ((<span class="name">a-date</span> (<span class="name">calendar-absolute-from-gregorian</span> date)))</span><br><span class="line">    (% (<span class="name">+</span> a-date <span class="number">15</span>) <span class="number">10</span>)))</span><br><span class="line"></span><br><span class="line">(<span class="name">defun</span> cal-china-x-solar-term-celestical-stem (<span class="name">date</span> solar-term)</span><br><span class="line">  (<span class="name">cal-china-x-chinese-day-celestial-stem-number</span></span><br><span class="line">   (<span class="name">cal-china-x-solar-term-date</span> date solar-term)))</span><br><span class="line"></span><br><span class="line">(<span class="name">defun</span> cal-china-x-day-diff-from-solar-term (<span class="name">date</span> solar-term) <span class="comment">; 庚日</span></span><br><span class="line">  (<span class="name">let</span> ((<span class="name">ss-stem</span> (<span class="name">-</span> <span class="number">7</span> (<span class="name">cal-china-x-solar-term-celestical-stem</span> date solar-term))))</span><br><span class="line">    (<span class="name">if</span> (<span class="name">&lt;</span> ss-stem <span class="number">0</span>) (<span class="name">+</span> ss-stem <span class="number">10</span>)</span><br><span class="line">      ss-stem)))</span><br><span class="line"></span><br><span class="line">(<span class="name">defun</span> cal-china-x-chufu-date (<span class="name">date</span>)</span><br><span class="line">  (<span class="name">let*</span> ((<span class="name">ss-date</span> (<span class="name">cal-china-x-solar-term-date</span> date <span class="string">"夏至"</span>))</span><br><span class="line">         (<span class="name">ss-year</span> (<span class="name">calendar-extract-year</span> ss-date))</span><br><span class="line">         (<span class="name">ss-day</span> (<span class="name">calendar-extract-day</span> ss-date))</span><br><span class="line">         (<span class="name">day-diff</span> (<span class="name">+</span> <span class="number">20</span> (<span class="name">cal-china-x-day-diff-from-solar-term</span> date <span class="string">"夏至"</span>)))</span><br><span class="line">         (<span class="name">chufu-day</span> (<span class="name">-</span> day-diff (<span class="name">-</span> <span class="number">30</span> ss-day))))</span><br><span class="line">    (<span class="name">list</span> <span class="number">7</span> chufu-day ss-year)))</span><br><span class="line"></span><br><span class="line">(<span class="name">defun</span> cal-china-x-zhongfu-date (<span class="name">date</span>)</span><br><span class="line">  (<span class="name">list</span> <span class="number">7</span> (<span class="name">+</span> (<span class="name">calendar-extract-day</span> (<span class="name">cal-china-x-chufu-date</span> date)) <span class="number">10</span>)</span><br><span class="line">        (<span class="name">calendar-extract-year</span> date)))</span><br><span class="line"></span><br><span class="line">(<span class="name">defun</span> cal-china-x-mofu-date (<span class="name">date</span>)</span><br><span class="line">  (<span class="name">let*</span> ((<span class="name">ss-date</span> (<span class="name">cal-china-x-solar-term-date</span> date <span class="string">"立秋"</span>))</span><br><span class="line">         (<span class="name">ss-year</span> (<span class="name">calendar-extract-year</span> ss-date))</span><br><span class="line">         (<span class="name">ss-day</span> (<span class="name">calendar-extract-day</span> ss-date))</span><br><span class="line">         (<span class="name">day-diff</span> (<span class="name">cal-china-x-day-diff-from-solar-term</span> date <span class="string">"立秋"</span>))</span><br><span class="line">         (<span class="name">mofu-day</span> (<span class="name">+</span> day-diff ss-day)))</span><br><span class="line">    (<span class="name">list</span> <span class="number">8</span> mofu-day ss-year)))</span><br><span class="line"></span><br><span class="line">(<span class="name">defun</span> cal-china-x-get-futian-string (<span class="name">date</span>)</span><br><span class="line">  (<span class="name">let*</span> ((<span class="name">chufu</span> (<span class="name">cal-china-x-chufu-date</span> date))</span><br><span class="line">         (<span class="name">zhongfu</span> (<span class="name">cal-china-x-zhongfu-date</span> date))</span><br><span class="line">         (<span class="name">mofu</span> (<span class="name">cal-china-x-mofu-date</span> date))</span><br><span class="line">         (<span class="name">chufu-gap</span> (<span class="name">cal-china-x-days-diff</span> date chufu))</span><br><span class="line">         (<span class="name">zhongfu-gap</span> (<span class="name">cal-china-x-days-diff</span> date zhongfu))</span><br><span class="line">         (<span class="name">mofu-gap</span> (<span class="name">cal-china-x-days-diff</span> date mofu))</span><br><span class="line">         )</span><br><span class="line">    (<span class="name">if</span> (<span class="name">or</span> (<span class="name">&lt;</span> chufu-gap <span class="number">0</span>) (<span class="name">&gt;</span> mofu-gap <span class="number">9</span>))</span><br><span class="line">        <span class="string">""</span></span><br><span class="line">      (<span class="name">if</span> (<span class="name">and</span> (<span class="name">&gt;=</span> chufu-gap <span class="number">0</span>) (<span class="name">&lt;</span> zhongfu-gap <span class="number">0</span>))</span><br><span class="line">          (<span class="name">concat</span> <span class="string">"初伏("</span></span><br><span class="line">                  (<span class="name">number-to-string</span> (<span class="number">1</span>+ chufu-gap))</span><br><span class="line">                  <span class="string">")"</span>)</span><br><span class="line">        (<span class="name">if</span> (<span class="name">and</span> (<span class="name">&gt;=</span> zhongfu-gap <span class="number">0</span>) (<span class="name">&lt;</span> mofu-gap <span class="number">0</span>))</span><br><span class="line">            (<span class="name">concat</span> <span class="string">"中伏("</span></span><br><span class="line">                    (<span class="name">number-to-string</span> (<span class="number">1</span>+ zhongfu-gap))</span><br><span class="line">                    <span class="string">")"</span>)</span><br><span class="line">          (<span class="name">concat</span> <span class="string">"末伏("</span></span><br><span class="line">                  (<span class="name">number-to-string</span> (<span class="number">1</span>+ mofu-gap))</span><br><span class="line">                  <span class="string">")"</span>))))))</span><br></pre></td></tr></table></figure>
+<pre><code class="lang-lisp">(defun cal-china-x-solar-term-date (date solar-term)
+  &quot;Return solar-term date in Gregorian form.&quot;
+  (let* ((cyear (calendar-extract-year date)))
+    (car (rassoc solar-term (cal-china-x-solar-term-alist-new cyear)))))
+
+(defun cal-china-x-chinese-day-celestial-stem-number (date)
+  &quot;String of Chinese date of Gregorian DATE.
+Defaults to today&#39;s date if DATE is not given.&quot;
+  (let* ((a-date (calendar-absolute-from-gregorian date)))
+    (% (+ a-date 15) 10)))
+
+(defun cal-china-x-solar-term-celestical-stem (date solar-term)
+  (cal-china-x-chinese-day-celestial-stem-number
+   (cal-china-x-solar-term-date date solar-term)))
+
+(defun cal-china-x-day-diff-from-solar-term (date solar-term) ; 庚日
+  (let ((ss-stem (- 7 (cal-china-x-solar-term-celestical-stem date solar-term))))
+    (if (&lt; ss-stem 0) (+ ss-stem 10)
+      ss-stem)))
+
+(defun cal-china-x-chufu-date (date)
+  (let* ((ss-date (cal-china-x-solar-term-date date &quot;夏至&quot;))
+         (ss-year (calendar-extract-year ss-date))
+         (ss-day (calendar-extract-day ss-date))
+         (day-diff (+ 20 (cal-china-x-day-diff-from-solar-term date &quot;夏至&quot;)))
+         (chufu-day (- day-diff (- 30 ss-day))))
+    (list 7 chufu-day ss-year)))
+
+(defun cal-china-x-zhongfu-date (date)
+  (list 7 (+ (calendar-extract-day (cal-china-x-chufu-date date)) 10)
+        (calendar-extract-year date)))
+
+(defun cal-china-x-mofu-date (date)
+  (let* ((ss-date (cal-china-x-solar-term-date date &quot;立秋&quot;))
+         (ss-year (calendar-extract-year ss-date))
+         (ss-day (calendar-extract-day ss-date))
+         (day-diff (cal-china-x-day-diff-from-solar-term date &quot;立秋&quot;))
+         (mofu-day (+ day-diff ss-day)))
+    (list 8 mofu-day ss-year)))
+
+(defun cal-china-x-get-futian-string (date)
+  (let* ((chufu (cal-china-x-chufu-date date))
+         (zhongfu (cal-china-x-zhongfu-date date))
+         (mofu (cal-china-x-mofu-date date))
+         (chufu-gap (cal-china-x-days-diff date chufu))
+         (zhongfu-gap (cal-china-x-days-diff date zhongfu))
+         (mofu-gap (cal-china-x-days-diff date mofu))
+         )
+    (if (or (&lt; chufu-gap 0) (&gt; mofu-gap 9))
+        &quot;&quot;
+      (if (and (&gt;= chufu-gap 0) (&lt; zhongfu-gap 0))
+          (concat &quot;初伏(&quot;
+                  (number-to-string (1+ chufu-gap))
+                  &quot;)&quot;)
+        (if (and (&gt;= zhongfu-gap 0) (&lt; mofu-gap 0))
+            (concat &quot;中伏(&quot;
+                    (number-to-string (1+ zhongfu-gap))
+                    &quot;)&quot;)
+          (concat &quot;末伏(&quot;
+                  (number-to-string (1+ mofu-gap))
+                  &quot;)&quot;))))))
+</code></pre>
 <p>注意如果夏至当天是庚日，则算第一个庚日，相当于初伏在夏至20天之后。</p>
 <p>另外，<code>cal-china-x</code> 中月和日的天干地支计算有点问题，需要用 <code>Emacs</code> 自带的计算。</p>
 	  
@@ -197,6 +295,10 @@
 <section id="comment">
   <h2 class="title">留言</h2>
   
+  	 <div id="disqus_thread">
+     <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  	 </div>
+  
 </section>
 
 
@@ -221,7 +323,7 @@
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    </li><li><a href="/categories/Geek/">Geek<span>17</span></a></li>
+    </li><li><a href="/categories/Geek/">Geek<span>14</span></a></li>
   
 
     </ul>
@@ -253,17 +355,28 @@
 
 </div><!-- row -->
 
+<script type="text/javascript">
+var disqus_shortname = 'bigbossjiang';
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
 
 
-	</div>
+
+    </div>
   </div>
   <div class="container-narrow">
-  <footer> <p>
+    <footer> <p>
   &copy; 2019 Tommy Jiang
   
       with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
-</div> <!-- container-narrow -->
+  </div> <!-- container-narrow -->
   
 
 
@@ -318,4 +431,4 @@
 </script>
 <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
-   </html>
+</html>

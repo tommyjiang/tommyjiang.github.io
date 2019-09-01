@@ -32,6 +32,7 @@
   <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/prism.css" media="screen" type="text/css">
   <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
@@ -39,6 +40,7 @@
   <![endif]-->
 
   <script src="/js/jquery-2.0.3.min.js"></script>
+  <script src="/js/prism.js" async></script>
   
   <!-- analytics -->
   
@@ -46,8 +48,8 @@
 
 
 </head>
-</html>
- <body>  
+
+<body>
   <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
       <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -91,8 +93,8 @@
 <div class="clearfix"></div>
 
   <div class="container">
-  	<div class="content">
-    	 
+    <div class="content">
+      
 
 
 	
@@ -128,7 +130,10 @@
 <p>MATLAB/Simulink 就是一个常用的仿真工具，它的突出优点是可以和 MATLAB 代码完美对接。但利用 Simulink 模型进行仿真时，如果需要在某些时刻改变系统参数，利用 GUI 界面进行设置会比较麻烦，可以利用 m 文件实现，具体方法如下。</p>
 <h2 id="m-文件修改-Simulink-模型参数的方法"><a href="#m-文件修改-Simulink-模型参数的方法" class="headerlink" title="m 文件修改 Simulink 模型参数的方法"></a>m 文件修改 Simulink 模型参数的方法</h2><p>利用 m 文件修改 Simulink 模型参数方法的总体思想如下：首先在初始参数下仿真一段时间，记录该时间结束时系统所有状态量的值，之后修改系统参数，再以上一次仿真结束时记录的系统所有状态量的值作为初值，重新仿真，如此循环往复。</p>
 <p>可以在 m 文件中利用<code>set_param</code>函数设置 Simulink 模型仿真的相关参数：</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">set_param(<span class="string">'ModelName'</span>,<span class="string">'LoadInitialState'</span>,<span class="string">'off'</span>,...</span><br><span class="line">          <span class="string">'SaveFinalState'</span>,<span class="string">'on'</span>,<span class="string">'SaveCompleteFinalSimState'</span>,<span class="string">'on'</span>,...</span><br><span class="line">          <span class="string">'FinalStateName'</span>,<span class="string">'xFinal'</span>,<span class="string">'StartTime'</span>,<span class="string">'0'</span>,<span class="string">'StopTime'</span>,<span class="string">'1'</span>);</span><br></pre></td></tr></table></figure>
+<pre><code class="lang-MATLAB">set_param(&#39;ModelName&#39;,&#39;LoadInitialState&#39;,&#39;off&#39;,...
+          &#39;SaveFinalState&#39;,&#39;on&#39;,&#39;SaveCompleteFinalSimState&#39;,&#39;on&#39;,...
+          &#39;FinalStateName&#39;,&#39;xFinal&#39;,&#39;StartTime&#39;,&#39;0&#39;,&#39;StopTime&#39;,&#39;1&#39;);
+</code></pre>
 <p>其中<code>ModelName</code>为 Simulink 模型的文件名，注意第一次仿真不需要载入初值，因此<code>LoadInitialState</code>选项需要设为<code>off</code>，之后的仿真中则需要将该项设置为<code>on</code>。第2行对应的是保存系统状态量终值的相关设置，其中<code>FinalStateName</code>为终值存储的变量名，之后仿真的初值需要设置为该变量名。</p>
 <h1 id="相关问题"><a href="#相关问题" class="headerlink" title="相关问题"></a>相关问题</h1><h2 id="继续进行仿真时提示仿真起始时间与状态变量初始值的时间不同"><a href="#继续进行仿真时提示仿真起始时间与状态变量初始值的时间不同" class="headerlink" title="继续进行仿真时提示仿真起始时间与状态变量初始值的时间不同"></a>继续进行仿真时提示仿真起始时间与状态变量初始值的时间不同</h2><p>利用以上代码实现 m 文件修改 Simulink 模型参数继续仿真的过程中，会遇到如下警告：</p>
 <pre><code>Warning: The start time of model &#39;Exp2_1_SimModel&#39; is different from the start time saved in the initial SimState. The start time has therefore been reset to 0. 
@@ -192,6 +197,10 @@
 <section id="comment">
   <h2 class="title">留言</h2>
   
+  	 <div id="disqus_thread">
+     <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  	 </div>
+  
 </section>
 
 
@@ -216,7 +225,7 @@
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    </li><li><a href="/categories/技术/">技术<span>17</span></a></li>
+    </li><li><a href="/categories/技术/">技术<span>18</span></a></li>
   
 
     </ul>
@@ -248,17 +257,28 @@
 
 </div><!-- row -->
 
+<script type="text/javascript">
+var disqus_shortname = 'bigbossjiang';
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
 
 
-	</div>
+
+    </div>
   </div>
   <div class="container-narrow">
-  <footer> <p>
+    <footer> <p>
   &copy; 2019 Tommy Jiang
   
       with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
-</div> <!-- container-narrow -->
+  </div> <!-- container-narrow -->
   
 
 
@@ -313,4 +333,4 @@
 </script>
 <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
-   </html>
+</html>

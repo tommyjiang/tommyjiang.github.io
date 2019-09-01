@@ -49,6 +49,10 @@ body {
   font-size: 0.9em;
 }
 
+a {
+    word-break: break-word;
+}
+
 /* =============================================================================
    page, post
    ========================================================================== */
@@ -333,6 +337,7 @@ header h1{
 }
 
 h1{
+  color: #2C3E50;
   font-size:2.6em;
   line-height:1.2em;
   margin-bottom:0.6667em;
@@ -346,17 +351,17 @@ h1,h2,h3,h4,h5,h6{
 
 h2{
   margin: 0.83em 0;
-  color: green;
+  color: #3498DB;
   padding-top: 40px;
   margin-top: -25px;
 }
 
 h3 {
-  color: #9C4C17;
+  color: #F39C12
 }
 
 h4 {
-  color: #B94A48;
+  color: #E74C3C;
 }
 
 .page-header {
@@ -411,7 +416,7 @@ h4 {
 }
 
 .page h3.title a, .page h3.title-top a {
-  color: black;
+  color: white;
 }
 
 .page h3.title div.article-title, .page h3.title-top div-article-title {
@@ -427,7 +432,7 @@ h4 {
   /* right:5px; */
   float: right;
   font-size:0.7em;
-  color: #777;
+  color: #ECF0F1;
   padding-top: 6px;
 }
 
