@@ -3,15 +3,15 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   
-  <title>LeetCode Biweekly Contest 14 | Tommy&#39;s Blog</title>
+  <title>LeetCode Weekly Contest 165 | Tommy&#39;s Blog</title>
   <meta name="author" content="Tommy Jiang">
   
-  <meta name="description" content="LeetCode Biweekly Contest 14.">
+  <meta name="description" content="LeetCode Weekly Contest 165.">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="LeetCode Biweekly Contest 14">
+  <meta property="og:title" content="LeetCode Weekly Contest 165">
   <meta property="og:site_name" content="Tommy&#39;s Blog">
 
   
@@ -99,7 +99,7 @@
 
 	
 		<div class="page-header page-header-inverse ">		
-			<h1 class="title title-inverse "> LeetCode Biweekly Contest 14</h1>
+			<h1 class="title title-inverse "> LeetCode Weekly Contest 165</h1>
 		</div>		
 	
 
@@ -121,183 +121,123 @@
 
 	  
 <div class="alert alert-info"><i class="fa fa-info"></i>
-LeetCode Biweekly Contest 14.
+LeetCode Weekly Contest 165.
 </div>
 
 <a id="more"></a>
-<h1 id="问题-1"><a href="#问题-1" class="headerlink" title="问题 1"></a>问题 1</h1><p><a href="https://leetcode.com/problems/hexspeak/" target="_blank" rel="noopener">题目链接</a></p>
-<p>整数转换为 16 进制字符串：</p>
-<ul>
-<li>Python 用自带的 <code>hex</code> 函数。</li>
-<li>C++ 用 <code>stringstream</code> 中的 <code>hex</code>。</li>
-</ul>
+<h1 id="问题-1"><a href="#问题-1" class="headerlink" title="问题 1"></a>问题 1</h1><p><a href="https://leetcode.com/problems/find-winner-on-a-tic-tac-toe-game/" target="_blank" rel="noopener">题目链接</a></p>
+<p>判断每行、每列、两条对角线的字符是否相同，棋盘状态始终有效，不需要考虑 corner case。</p>
+<h1 id="问题-2"><a href="#问题-2" class="headerlink" title="问题 2"></a>问题 2</h1><p><a href="https://leetcode.com/problems/number-of-burgers-with-no-waste-of-ingredients/" target="_blank" rel="noopener">题目链接</a></p>
+<p>鸡兔同笼问题，数学题。</p>
+<h1 id="问题-3"><a href="#问题-3" class="headerlink" title="问题 3"></a>问题 3</h1><p><a href="https://leetcode.com/problems/count-square-submatrices-with-all-ones/" target="_blank" rel="noopener">题目链接</a></p>
+<p>这道题比赛的时候没做出来，结束后发现想复杂了，进阶题是求所有元素是 1 的子矩阵(不要求方阵)。</p>
+<p>解法：DP，根据左、上、左上三者最小值更新当前值，参考 <a href="https://leetcode.com/problems/maximal-square/" target="_blank" rel="noopener">LC 221</a>。</p>
+<p>复杂度：时间复杂度 O(n^2)，空间复杂度 O(n^2)，可优化为 O(n)。</p>
 <p>Python</p>
 <pre><code class="lang-python">class Solution:
-    def toHexspeak(self, num: str) -&gt; str:
-        num = hex(int(num))[2:]
+    def countSquares(self, A: List[List[int]]) -&gt; int:
+        m, n = len(A), len(A[0])
 
-        num = num.replace(&#39;1&#39;, &#39;I&#39;).replace(&#39;0&#39;, &#39;O&#39;).upper()
+        dp = [[0 for _ in range(n+1)] for _ in range(m+1)]
 
-        for x in num:
-            if x not in {&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;, &quot;E&quot;, &quot;F&quot;, &quot;I&quot;, &quot;O&quot;}:
-                return &#39;ERROR&#39;
-
-        return num
-</code></pre>
-<p>C++</p>
-<pre><code class="lang-cpp">class Solution {
-public:
-    string toHexspeak(string num) {
-        auto n = stol(num);
-        stringstream st;
-        st &lt;&lt; hex &lt;&lt; uppercase &lt;&lt; n;  // 用 hex + uppercase 进行转换
-        string s(st.str());
-        for (auto i = 0; i &lt; s.size(); ++i) {
-            if (s[i] &gt; &#39;1&#39; &amp;&amp; s[i] &lt;= &#39;9&#39;) return &quot;ERROR&quot;;
-            if (s[i] == &#39;0&#39;) s[i] = &#39;O&#39;;
-            if (s[i] == &#39;1&#39;) s[i] = &#39;I&#39;;
-        }
-        return s;
-    }
-};
-</code></pre>
-<h1 id="问题-2"><a href="#问题-2" class="headerlink" title="问题 2"></a>问题 2</h1><p><a href="https://leetcode.com/problems/remove-interval/" target="_blank" rel="noopener">题目链接</a></p>
-<p>解法：遍历判断与每个 interval 起始/结束时间的关系。<br>复杂度：时间复杂度 O(n)，空间复杂度 O(n)。</p>
-<p>Python</p>
-<pre><code class="lang-python">class Solution:
-    def removeInterval(self, intervals: List[List[int]], 
-                       toBeRemoved: List[int]) -&gt; List[List[int]]:
-        res = []
-
-        s, e = toBeRemoved
-
-        for i, interval in enumerate(intervals):
-            i_s, i_e = interval
-            if s &gt;= i_e or e &lt;= i_s:
-                res.append(interval)
-            else:
-                if i_s &lt; s &lt;= i_e:
-                    res.append([i_s, s])
-                if i_s &lt;= e &lt; i_e:
-                    res.append([e, i_e])
+        res = 0
+        for i in range(1, m+1):
+            for j in range(1, n+1):
+                if A[i-1][j-1] == 1:
+                   dp[i][j] = min(dp[i][j-1], dp[i-1][j-1], dp[i-1][j]) + A[i-1][j-1]
+                   res += dp[i][j]
 
         return res
 </code></pre>
 <p>C++</p>
 <pre><code class="lang-cpp">class Solution {
 public:
-    vector&lt;vector&lt;int&gt;&gt; removeInterval(vector&lt;vector&lt;int&gt;&gt;&amp; intervals, 
-                                       vector&lt;int&gt;&amp; toBeRemoved) {
-        vector&lt;vector&lt;int&gt;&gt; res;
+    int countSquares(vector&lt;vector&lt;int&gt;&gt;&amp; matrix) {
+        int m = matrix.size(), n = matrix[0].size();
 
-        int s = toBeRemoved[0], e = toBeRemoved[1];
+        vector&lt;vector &lt;int&gt;&gt; dp(m+1, vector&lt;int&gt;(n+1, 0));
+        int res = 0;
 
-        for (int i = 0; i &lt; intervals.size(); i++){
-            int i_s = intervals[i][0], i_e = intervals[i][1];
-
-            if (s &gt;= i_e || e &lt;= i_s){
-                res.push_back(vector&lt;int&gt;{i_s, i_e});
-            } else {
-                if (i_s &lt; s &amp;&amp; s &lt;= i_e) {
-                    res.push_back(vector&lt;int&gt;{i_s, s});
-                }
-                if (i_s &lt;= e &amp;&amp; e &lt; i_e) {
-                    res.push_back(vector&lt;int&gt;{e, i_e});
+        for (int i = 0; i &lt; m; i++) {
+            for (int j = 0; j &lt; n; j++) {
+                if (matrix[i][j] == 1) {
+                    dp[i+1][j+1] = min(dp[i][j+1], min(dp[i+1][j], dp[i][j])) + 1;
+                    res += dp[i+1][j+1];
                 }
             }
-
         }
 
         return res;
     }
 };
 </code></pre>
-<h1 id="问题-3"><a href="#问题-3" class="headerlink" title="问题 3"></a>问题 3</h1><p><a href="https://leetcode.com/problems/can-make-palindrome-from-substring/" target="_blank" rel="noopener">题目链接</a></p>
-<p>解法：DFS，利用返回值计数。</p>
-<p>复杂度：时间复杂度 O(n)，空间复杂度 O(n)。</p>
+<h1 id="问题-4"><a href="#问题-4" class="headerlink" title="问题 4"></a>问题 4</h1><p><a href="https://leetcode.com/problems/palindrome-partitioning-iii/" target="_blank" rel="noopener">题目链接</a><br>解法：DP。<br>复杂度：时间复杂度 O(kn^2)，空间复杂度 O(kn)。</p>
 <p>Python</p>
 <pre><code class="lang-python">class Solution:
-    def deleteTreeNodes(self, nodes: int, parent: List[int], value: List[int]) -&gt; int:
-        nei = collections.defaultdict(list)
+    def palindromePartition(self, s: str, k: int) -&gt; int:
+        n = len(s)
+        memo = {}
 
-        for i, x in enumerate(parent):
-            if x != -1:
-                nei[x].append(i)
+        def cost(s, i, j):
+            r = 0
+            while i &lt; j:
+                if s[i] != s[j]:
+                    r += 1
+                i += 1
+                j -= 1
+            return r
 
-        self.n = nodes
+        def dfs(i, k):
+            if (i, k) in memo: 
+                return memo[(i, k)]
+            if n - i == k:
+                return 0
+            if k == 1:
+                return cost(s, i, n - 1)
+            res = float(&#39;inf&#39;)
+            for j in range(i + 1, n - k + 2):
+                res = min(res, cost(s, i, j - 1) + dfs(j, k - 1))
+            memo[(i, k)] = res
+            return res
 
-        def dfs(i):
-            res = value[i]
-            ces = 1
-            for x in nei[i]:
-                s, c = dfs(x)
-                res += s
-                ces += c if s != 0 else 0
-
-            return (res, ces) if res != 0 else (res, 0)
-
-        s, c = dfs(0)
-
-        return c
+        return dfs(0 , k)
 </code></pre>
 <p>C++</p>
 <pre><code class="lang-cpp">class Solution {
 public:
-    vector&lt;int&gt; nodeNum(vector&lt;int&gt;&amp; value, int node, unordered_map&lt;int, vector&lt;int&gt;&gt;&amp; nei) {
-        int sum = value[node], count = 1;
-        for (auto &amp;child : nei[node]) {
-            vector&lt;int&gt; res = nodeNum(value, child, nei);
-            sum += res[0];
-            count += (res[0] == 0) ? 0 : res[1];
-        }
-        return {sum, sum == 0 ? 0 : count};
-    }
-    int deleteTreeNodes(int nodes, vector&lt;int&gt;&amp; parent, vector&lt;int&gt;&amp; value) {
-        int root = -1;
-        unordered_map&lt;int, vector&lt;int&gt;&gt; nei;
+    int palindromePartition(string s, int k) {
+        int n = s.size();
+        vector&lt;vector &lt;int&gt;&gt; memo(n+1, vector&lt;int&gt;(k+1, -1));
 
-        for (int i = 0; i &lt; parent.size(); ++i) {
-            nei[parent[i]].push_back(i);
-            if (parent[i] == -1) root = i;
-        }
-        vector&lt;int&gt; res = nodeNum(value, root, nei);
-        return res[1];
+        return dfs(s, n, 0, k, memo); 
     }
-};
-</code></pre>
-<h1 id="问题-4"><a href="#问题-4" class="headerlink" title="问题 4"></a>问题 4</h1><p><a href="https://leetcode.com/problems/number-of-ships-in-a-rectangle/" target="_blank" rel="noopener">题目链接</a><br>解法：两个坐标二分搜索。</p>
-<p>Python</p>
-<pre><code class="lang-python">class Solution(object):
-    def countShips(self, sea: &#39;Sea&#39;, P: &#39;Point&#39;, Q: &#39;Point&#39;) -&gt; int:
-        res = 0
-        if P.x &gt;= Q.x and P.y &gt;= Q.y and sea.hasShips(P, Q):
-            if P.x == Q.x and P.y == Q.y: return 1
-            mx, my = (P.x + Q.x) // 2, (P.y + Q.y) // 2
-            res += self.countShips(sea, P, Point(mx + 1, my + 1))
-            res += self.countShips(sea, Point(mx, P.y), Point(Q.x, my + 1))
-            res += self.countShips(sea, Point(mx, my), Q)
-            res += self.countShips(sea, Point(P.x, my), Point(mx + 1, Q.y))
-        return res
-</code></pre>
-<p>C++</p>
-<pre><code class="lang-cpp">class Solution {
-public:
-    int countShips(Sea sea, vector&lt;int&gt; topRight, vector&lt;int&gt; bottomLeft) {
+
+    int cost(string&amp; s, int i, int j) {
         int res = 0;
-
-        if (topRight[0] &gt;= bottomLeft[0] &amp;&amp; topRight[1] &gt;= bottomLeft[1] 
-            &amp;&amp; sea.hasShips(topRight, bottomLeft)) {
-            if (topRight[0] == bottomLeft[0] &amp;&amp; topRight[1] == bottomLeft[1]) {
-                return 1;
+        while (i &lt; j) {
+            if (s[i] != s[j]) {
+                res++;
             }
-            int mx = (topRight[0] + bottomLeft[0]) / 2;
-            int my = (topRight[1] + bottomLeft[1]) / 2;
-            res += countShips(sea, topRight, {mx+1, my+1});
-            res += countShips(sea, {mx, topRight[1]}, {bottomLeft[0], my+1});
-            res += countShips(sea, {mx, my}, bottomLeft);
-            res += countShips(sea, {topRight[0], my}, {mx+1, bottomLeft[1]});
+            i++;
+            j--;
+        }
+        return res;
+    }                   
+
+
+    int dfs(string&amp; s, int n, int i, int k, vector&lt;vector &lt;int&gt;&gt;&amp; dp) {
+        if (dp[i][k] != -1) return dp[i][k];
+
+        if (n - i == k) return 0;
+
+        if (k == 1) return cost(s, i, n - 1);
+
+        int res = INT_MAX;
+        for (int j = i + 1; j &lt; n-k+2; j++) {
+            res = min(res, cost(s, i, j - 1) + dfs(s, n, j, k - 1, dp));
         }
 
+        dp[i][k] = res;
         return res;
     }
 };
@@ -313,14 +253,14 @@ public:
 	<div class="pagination">
 <ul class="pagination">
 	 
-				
-    	<li class="prev"><a href="/2019/2019-12-01-LC-weekly-contest-165/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
-  		
+		
+          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+        
 
         <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
 
 		
-		   <li class="next"><a href="/2019/2019-09-01-imbalance-in-detection/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+		   <li class="next"><a href="/2019/2019-11-30-LC-biweekly-contest-14/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
         
 	
 </ul>

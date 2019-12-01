@@ -4,6 +4,149 @@
   
     
     <entry>
+      <title><![CDATA[LeetCode Weekly Contest 165]]></title>
+      <url>http://tommyjiang.github.io/2019/2019-12-01-LC-weekly-contest-165/</url>
+      <content type="html"><![CDATA[
+<div class="alert alert-info"><i class="fa fa-info"></i>
+LeetCode Weekly Contest 165.
+</div>
+
+<a id="more"></a>
+<h1 id="问题-1"><a href="#问题-1" class="headerlink" title="问题 1"></a>问题 1</h1><p><a href="https://leetcode.com/problems/find-winner-on-a-tic-tac-toe-game/" target="_blank" rel="noopener">题目链接</a></p>
+<p>判断每行、每列、两条对角线的字符是否相同，棋盘状态始终有效，不需要考虑 corner case。</p>
+<h1 id="问题-2"><a href="#问题-2" class="headerlink" title="问题 2"></a>问题 2</h1><p><a href="https://leetcode.com/problems/number-of-burgers-with-no-waste-of-ingredients/" target="_blank" rel="noopener">题目链接</a></p>
+<p>鸡兔同笼问题，数学题。</p>
+<h1 id="问题-3"><a href="#问题-3" class="headerlink" title="问题 3"></a>问题 3</h1><p><a href="https://leetcode.com/problems/count-square-submatrices-with-all-ones/" target="_blank" rel="noopener">题目链接</a></p>
+<p>这道题比赛的时候没做出来，结束后发现想复杂了，进阶题是求所有元素是 1 的子矩阵(不要求方阵)。</p>
+<p>解法：DP，根据左、上、左上三者最小值更新当前值，参考 <a href="https://leetcode.com/problems/maximal-square/" target="_blank" rel="noopener">LC 221</a>。</p>
+<p>复杂度：时间复杂度 O(n^2)，空间复杂度 O(n^2)，可优化为 O(n)。</p>
+<p>Python</p>
+<pre><code class="lang-python">class Solution:
+    def countSquares(self, A: List[List[int]]) -&gt; int:
+        m, n = len(A), len(A[0])
+
+        dp = [[0 for _ in range(n+1)] for _ in range(m+1)]
+
+        res = 0
+        for i in range(1, m+1):
+            for j in range(1, n+1):
+                if A[i-1][j-1] == 1:
+                   dp[i][j] = min(dp[i][j-1], dp[i-1][j-1], dp[i-1][j]) + A[i-1][j-1]
+                   res += dp[i][j]
+
+        return res
+</code></pre>
+<p>C++</p>
+<pre><code class="lang-cpp">class Solution {
+public:
+    int countSquares(vector&lt;vector&lt;int&gt;&gt;&amp; matrix) {
+        int m = matrix.size(), n = matrix[0].size();
+
+        vector&lt;vector &lt;int&gt;&gt; dp(m+1, vector&lt;int&gt;(n+1, 0));
+        int res = 0;
+
+        for (int i = 0; i &lt; m; i++) {
+            for (int j = 0; j &lt; n; j++) {
+                if (matrix[i][j] == 1) {
+                    dp[i+1][j+1] = min(dp[i][j+1], min(dp[i+1][j], dp[i][j])) + 1;
+                    res += dp[i+1][j+1];
+                }
+            }
+        }
+
+        return res;
+    }
+};
+</code></pre>
+<h1 id="问题-4"><a href="#问题-4" class="headerlink" title="问题 4"></a>问题 4</h1><p><a href="https://leetcode.com/problems/palindrome-partitioning-iii/" target="_blank" rel="noopener">题目链接</a><br>解法：DP。<br>复杂度：时间复杂度 O(kn^2)，空间复杂度 O(kn)。</p>
+<p>Python</p>
+<pre><code class="lang-python">class Solution:
+    def palindromePartition(self, s: str, k: int) -&gt; int:
+        n = len(s)
+        memo = {}
+
+        def cost(s, i, j):
+            r = 0
+            while i &lt; j:
+                if s[i] != s[j]:
+                    r += 1
+                i += 1
+                j -= 1
+            return r
+
+        def dfs(i, k):
+            if (i, k) in memo: 
+                return memo[(i, k)]
+            if n - i == k:
+                return 0
+            if k == 1:
+                return cost(s, i, n - 1)
+            res = float(&#39;inf&#39;)
+            for j in range(i + 1, n - k + 2):
+                res = min(res, cost(s, i, j - 1) + dfs(j, k - 1))
+            memo[(i, k)] = res
+            return res
+
+        return dfs(0 , k)
+</code></pre>
+<p>C++</p>
+<pre><code class="lang-cpp">class Solution {
+public:
+    int palindromePartition(string s, int k) {
+        int n = s.size();
+        vector&lt;vector &lt;int&gt;&gt; memo(n+1, vector&lt;int&gt;(k+1, -1));
+
+        return dfs(s, n, 0, k, memo); 
+    }
+
+    int cost(string&amp; s, int i, int j) {
+        int res = 0;
+        while (i &lt; j) {
+            if (s[i] != s[j]) {
+                res++;
+            }
+            i++;
+            j--;
+        }
+        return res;
+    }                   
+
+
+    int dfs(string&amp; s, int n, int i, int k, vector&lt;vector &lt;int&gt;&gt;&amp; dp) {
+        if (dp[i][k] != -1) return dp[i][k];
+
+        if (n - i == k) return 0;
+
+        if (k == 1) return cost(s, i, n - 1);
+
+        int res = INT_MAX;
+        for (int j = i + 1; j &lt; n-k+2; j++) {
+            res = min(res, cost(s, i, j - 1) + dfs(s, n, j, k - 1, dp));
+        }
+
+        dp[i][k] = res;
+        return res;
+    }
+};
+</code></pre>
+]]></content>
+      
+        <categories>
+            
+            <category> 工作 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> LeetCode </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[LeetCode Biweekly Contest 14]]></title>
       <url>http://tommyjiang.github.io/2019/2019-11-30-LC-biweekly-contest-14/</url>
       <content type="html"><![CDATA[
