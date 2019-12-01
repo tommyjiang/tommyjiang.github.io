@@ -1255,15 +1255,15 @@ h6 .small,
 }
 h1,
 .h1 {
-  font-size: 39px;
+  font-size: 1.8em;
 }
 h2,
 .h2 {
-  font-size: 32px;
+  font-size: 1.6em;
 }
 h3,
 .h3 {
-  font-size: 26px;
+  font-size: 1.3em;
 }
 h4,
 .h4 {
@@ -6840,6 +6840,7 @@ h1.title-inverse {
 }
 h1.title {
   color: #000000;
+  font-size: 2.5em;
 }
 h1.title-inverse {
   color: #ffffff;

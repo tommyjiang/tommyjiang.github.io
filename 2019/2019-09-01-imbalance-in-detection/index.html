@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="utf-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   
   <title>目标检测中的样本不平衡问题 | Tommy&#39;s Blog</title>
   <meta name="author" content="Tommy Jiang">
@@ -42,7 +42,7 @@
   <script src="/js/jquery-2.0.3.min.js"></script>
   <script src="/js/prism.js" async></script>
   
-  <!-- analytics -->
+  <!-- analytics --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -50,7 +50,7 @@
 </head>
 
 <body>
-  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
       <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 	<span class="sr-only">Toggle navigation</span>
@@ -125,19 +125,44 @@
 </div>
 
 <a id="more"></a>
-<h1 id="样本不平衡问题"><a href="#样本不平衡问题" class="headerlink" title="样本不平衡问题"></a>样本不平衡问题</h1><p>目标检测中的样本不平衡问题，是指对于目标检测模型，负样本的个数远多于正样本<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>，同时，负样本中简单负样本的个数也远多于困难负样本。模型训练过程中，需要避免这种不平衡对模型性能的影响，以免模型将所有样本都判断为负样本。</p>
+<h1 id="目标检测中的样本不平衡问题"><a href="#目标检测中的样本不平衡问题" class="headerlink" title="目标检测中的样本不平衡问题"></a>目标检测中的样本不平衡问题</h1><p>目标检测中的样本不平衡问题，是指对于目标检测模型，负样本的个数远多于正样本(比例约为 10000:1)，同时，负样本中简单负样本的个数也远多于困难负样本。模型训练过程中，需要避免这种不平衡对模型性能的影响，以免模型将所有样本都判断为负样本。</p>
 <ul>
 <li>单阶段网络：目前绝大多数单阶段网络仍然基于 anchor 。网络 anchor 的正负样本和困难/简单负样本不平衡问题十分突出。</li>
 <li>两阶段网络：两阶段网络中第一阶段的 RPN 与单阶段网络类似，但第二阶段 proposal 的不平衡问题得到了很大缓解，这主要是由于 RPN 处理(top N_pre + nms + top N_pos)后，proposal 中的简单负样本大大减少，从而同时减轻了正负样本和困难/简单负样本的不平衡问题。</li>
 </ul>
-<h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><h2 id="按比例随机采样"><a href="#按比例随机采样" class="headerlink" title="按比例随机采样"></a>按比例随机采样</h2><p>Faster R-CNN 中，第一阶段 RPN 采用按比例随机采样，图片 batch size 为 1，anchor batch size 为 256，正负样本比例为 1 比 1，如果正样本不足 128(256 的 1/2)，则用负样本凑。</p>
+<h1 id="解决样本不平衡的方法"><a href="#解决样本不平衡的方法" class="headerlink" title="解决样本不平衡的方法"></a>解决样本不平衡的方法</h1><h2 id="按比例随机采样"><a href="#按比例随机采样" class="headerlink" title="按比例随机采样"></a>按比例随机采样</h2><p>Faster R-CNN 中，第一阶段 RPN 采用按比例随机采样，图片 batch size 为 1，anchor batch size 为 256，正负样本比例为 1 比 1，如果正样本不足 128(256 的 1/2)，则用负样本凑。</p>
 <blockquote>
 <p>We randomly sample 256 anchors in an image to compute the loss function of a mini-batch, where the sampled positive and negative anchors have a ratio of up to 1:1. If there are fewer than 128 positive samples in an image, we pad the mini-batch with negative ones.(Faster R-CNN 3.1.3 Training RPN)</p>
 </blockquote>
-<p>第二阶段 Fast R-CNN 同样采用按比例随机采样，正负样本比例为 1:3，</p>
-<h2 id="在线难样本挖掘-OHEM-online-hard-example-mining"><a href="#在线难样本挖掘-OHEM-online-hard-example-mining" class="headerlink" title="在线难样本挖掘(OHEM, online hard example mining)"></a>在线难样本挖掘(OHEM, online hard example mining)</h2><p>随机采样</p>
-<h2 id="Focal-Loss"><a href="#Focal-Loss" class="headerlink" title="Focal Loss"></a>Focal Loss</h2><p>注</p>
-<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none; padding-left: 0;"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">1.</span><span style="display: inline-block; vertical-align: top;">TODO：正负样本比例最好能有个具体的数值。</span><a href="#fnref:1" rev="footnote"> ↩</a></li></ol></div></div>	  
+<p>第二阶段 Fast R-CNN 同样采用按比例随机采样，正负样本比例为 1:3。</p>
+<blockquote>
+<p>We take 25% of the RoIs from object proposals that have intersection over union (IoU) overlap with a ground truth bounding box of at least 0:5. These RoIs comprise the examples labeled with a foreground object class. The remaining RoIs are sampled from object proposals that have a maximum IoU with ground truth in the interval [0:1; 0:5), following [11].(Fast R-CNN 2.3 Mini-batch sampling)</p>
+</blockquote>
+<h2 id="在线难样本挖掘-OHEM-Online-Hard-Example-Mining"><a href="#在线难样本挖掘-OHEM-Online-Hard-Example-Mining" class="headerlink" title="在线难样本挖掘(OHEM, Online Hard Example Mining)"></a>在线难样本挖掘(OHEM, Online Hard Example Mining)</h2><p>按比例随机采样控制了正负样本的比例，基本解决了正负样本不平衡的问题，但负样本的随机采样会导致简单负样本占绝大多数。SSD 在训练时加入了难样本挖掘，选出负样本中 loss 最大的进行训练，同时仍然保证正负样本比例为 1:3，以解决简单/困难负样本不平衡的问题。</p>
+<blockquote>
+<p>Instead of using all the negative examples, we sort them using the highest confidence loss for each default box and pick the top ones so that the ratio between the negatives and positives is at most 3:1. We found that this leads to faster optimization and a more stable training.(SSD 2.2 Training Hard negative mining)</p>
+</blockquote>
+<h2 id="Focal-Loss"><a href="#Focal-Loss" class="headerlink" title="Focal Loss"></a>Focal Loss</h2><p>Focal loss 应该是最有名的处理不平衡问题的 paper 了，文中提出了一种新的 loss 即 focal loss：</p>
+<script type="math/tex; mode=display">\mathrm{FL}(p_t) = -\alpha_{t}(1-p_t)^{\gamma}\mathrm{log}(p_t)</script><p>其中 $ \alpha_t $ 作用是平衡正负样本权重，$ \gamma $ 作用是平衡简单/困难负样本权重，所以 focal loss 理论上能同时解决上面提到的两方面不平衡问题。原 paper 中给出的结果，$\alpha_t = 0.25, \gamma = 2 $ 时效果最好。注意，使用 focal loss 后，不需要再保证正负样本比例，原文中使用了所有 anchor 进行训练。</p>
+<blockquote>
+<p>We emphasize that when training RetinaNet, the focal loss is applied to all ~100k anchors in each sampled image.(Focal loss 4.1 Inference and Training Focal Loss)</p>
+</blockquote>
+<h2 id="IoU-平衡采样"><a href="#IoU-平衡采样" class="headerlink" title="IoU 平衡采样"></a>IoU 平衡采样</h2><p>OHEM 存在以下两个问题：</p>
+<ol>
+<li>需要计算所有 anchor 的 loss，付出额外的空间和时间代价。</li>
+<li>标注如果有 noise label，会影响模型性能。</li>
+</ol>
+<p>IoU 平衡采样是 Libra R-CNN 中提出的，作者发现 60% 的困难负样本与 GT 的 IoU 都大于 0.05，而随机采样时与 GT IoU 大于 0.05 的 anchor 只占 30%，说明困难负样本不容易被选中。这个方法的核心思想是根据 anchor 与 GT 的 IoU 划分不同区间，在每个区间中进行均匀采样，保证与 GT IoU 大的负样本(很多是困难负样本)能够以较大的概率被选中。</p>
+<blockquote>
+<p>To raise the selected probability of hard negatives, we evenly split the sampling interval into K bins according to IoU. N demanded negative samples are equally distributed to each bin. Then we select samples from them uniformly.</p>
+</blockquote>
+<h2 id="GHM"><a href="#GHM" class="headerlink" title="GHM"></a>GHM</h2><p>GHM 文章首先根据梯度的模和样本的 label 将样本分为难易不同的样本，梯度的模越接近 0 说明越简单，越接近 1 则说明越困难。文章发现对于训练好的 detection 模型，仍然存在相当比例的困难样本，需要解决的具体问题是如何适当降低这部分困难样本的权重，提升模型性能。</p>
+<p>为此，文中首先定义了梯度密度的概念，用于刻画一个样本梯度模值附近所有样本的总数，总数越多说明样本处的密度越高。</p>
+<ul>
+<li>分类 loss：采用加权交叉熵，权重为梯度密度的倒数，即降低密集样本的权重，这样就同时降低了非常密集的简单样本和同样密集的困难样本的权重。</li>
+<li>回归 loss：采用改进的 Smooth L1 loss($\sqrt{d^2 + \mu ^ 2} - \mu$)，类似分类 loss 同样采用加权平均，同时降低简单和困难样本的权重。</li>
+</ul>
+	  
 	</div>
 
 	<!-- recommended posts -->
@@ -148,9 +173,9 @@
 	<div class="pagination">
 <ul class="pagination">
 	 
-		
-          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
-        
+				
+    	<li class="prev"><a href="/2019/2019-11-30-LC-biweekly-contest-14/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+  		
 
         <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
 
@@ -221,7 +246,7 @@
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    </li><li><a href="/categories/工作/">工作<span>10</span></a></li>
+    </li><li><a href="/categories/工作/">工作<span>12</span></a></li>
   
 
     </ul>
@@ -234,7 +259,7 @@
 	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
     <ul id="tags" class="tag_box list-unstyled collapse in">	  
 	    
-  <li><a href="/tags/CV/">CV<span>9</span></a></li> <li><a href="/tags/CS/">CS<span>3</span></a></li>
+  <li><a href="/tags/CV/">CV<span>9</span></a></li>
     </ul>
 	</div>
 	
@@ -327,6 +352,6 @@ var disqus_shortname = 'bigbossjiang';
             all[i].SourceElement().parentNode.className += ' has-jax';
     });
 </script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>
