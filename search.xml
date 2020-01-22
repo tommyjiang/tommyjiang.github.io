@@ -109,7 +109,7 @@ public:
             j--;
         }
         return res;
-    }                   
+    }
 
 
     int dfs(string&amp; s, int n, int i, int k, vector&lt;vector &lt;int&gt;&gt;&amp; dp) {
@@ -195,7 +195,7 @@ public:
 <p>解法：遍历判断与每个 interval 起始/结束时间的关系。<br>复杂度：时间复杂度 O(n)，空间复杂度 O(n)。</p>
 <p>Python</p>
 <pre><code class="lang-python">class Solution:
-    def removeInterval(self, intervals: List[List[int]], 
+    def removeInterval(self, intervals: List[List[int]],
                        toBeRemoved: List[int]) -&gt; List[List[int]]:
         res = []
 
@@ -216,7 +216,7 @@ public:
 <p>C++</p>
 <pre><code class="lang-cpp">class Solution {
 public:
-    vector&lt;vector&lt;int&gt;&gt; removeInterval(vector&lt;vector&lt;int&gt;&gt;&amp; intervals, 
+    vector&lt;vector&lt;int&gt;&gt; removeInterval(vector&lt;vector&lt;int&gt;&gt;&amp; intervals,
                                        vector&lt;int&gt;&amp; toBeRemoved) {
         vector&lt;vector&lt;int&gt;&gt; res;
 
@@ -487,7 +487,7 @@ public:
 <p>解法：计算前缀和，每次去掉一个元素，加入一个元素。<br>复杂度：时间复杂度 O(n)，空间复杂度 O(1)。</p>
 <p>Python</p>
 <pre><code class="lang-python">class Solution:
-    def dietPlanPerformance(self, A: List[int], k: int, 
+    def dietPlanPerformance(self, A: List[int], k: int,
                             lower: int, upper: int) -&gt; int:
         res = 0
         n = len(A)
@@ -550,7 +550,7 @@ public:
 <p>复杂度：时间复杂度 O(n)，空间复杂度 O(n)。</p>
 <p>Python</p>
 <pre><code class="lang-python">class Solution:
-    def canMakePaliQueries(self, s: str, 
+    def canMakePaliQueries(self, s: str,
                            queries: List[List[int]]) -&gt; List[bool]:
         n = len(s)
 
@@ -579,7 +579,7 @@ public:
 <p>C++</p>
 <pre><code class="lang-cpp">class Solution {
 public:
-    vector&lt;bool&gt; canMakePaliQueries(string s, 
+    vector&lt;bool&gt; canMakePaliQueries(string s,
                                     vector&lt;vector&lt;int&gt;&gt;&amp; queries) {
         int n = s.size();
         vector&lt;vector&lt;int&gt;&gt; freq(26, vector&lt;int&gt;(n + 1, 0));
@@ -632,7 +632,7 @@ public:
 <p>C++</p>
 <pre><code class="lang-cpp">class Solution {
 public:
-    vector&lt;int&gt; findNumOfValidWords(vector&lt;string&gt;&amp; words, 
+    vector&lt;int&gt; findNumOfValidWords(vector&lt;string&gt;&amp; words,
                                     vector&lt;string&gt;&amp; puzzles) {
         unordered_map&lt;int, int&gt; count;
 
@@ -1050,16 +1050,16 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
 hs();
 
 function hs(ec){
-    var hs = echarts.init(document.getElementById('hs'), 'macarons'); 
+    var hs = echarts.init(document.getElementById('hs'), 'macarons');
     <!-- 填空 -->
     var data = [["2019-02-20", 3865, 18545, 4005, 21610, 3985, 22645],
                 ["2019-02-21", 3925, 19705, 3940, 19230, 3985, 19520],
                 ["2019-02-22", 3995, 19705, 4150, 19230, 4130, 19650],
                 ["2019-02-23", 3995, 19500, 4200, 20420, 4240, 19040],
                 ["2019-02-24", 4115, 19500, 4200, 20420, 4045, 19225]
-               ] 
+               ]
     var option = {
-         title: {text: '炉石'}, 
+         title: {text: '炉石'},
          legend: {
              data: ['亚服金币', '亚服尘', '欧服金币', '欧服尘', '美服金币', '美服尘']
          },
@@ -1438,9 +1438,9 @@ leetcode();
 
 <!-- 体重 -->
 function weight2019(ec){
-    var weight2019 = echarts.init(document.getElementById('weight2019'), 'macarons'); 
+    var weight2019 = echarts.init(document.getElementById('weight2019'), 'macarons');
     <!-- 填空 体重 -->
-    var data = [["2019-01-01", 76.2], ["2019-01-02", 75.5], ["2019-01-03", 75.6], ["2019-01-04", 75.4], 
+    var data = [["2019-01-01", 76.2], ["2019-01-02", 75.5], ["2019-01-03", 75.6], ["2019-01-04", 75.4],
                 ["2019-01-05", 75.4], ["2019-01-06", 75.8], ["2019-01-07", 75.7], ["2019-01-08", 75.8],
                 ["2019-01-09", 76.2], ["2019-01-10", 75.6], ["2019-01-11", 75.4], ["2019-01-12", 75.0],
                 ["2019-01-13", 75.4], ["2019-01-14", 74.9], ["2019-01-15", 75.0], ['2019-01-16', 74.8],
@@ -1493,14 +1493,14 @@ function weight2019(ec){
                 ['2019-07-21', 72.5], ['2019-07-22', 72.3], ['2019-07-23', 72.6], ['2019-07-24', 72.3],
                 ['2019-07-25', 72.7], ['2019-07-26', 73.2], ['2019-07-27', 72.9], ['2019-07-28', 72.7],
                 ['2019-07-29', 72.6], ['2019-07-30', 72.3]
-                ] 
+                ]
     var comments = {"2019-01-01": "董董元旦火锅", "2019-01-06": "烤肉乐烧烤自助", "2019-01-13": "海鲜宴",
                     '2019-01-20': '家宴吐了', "2019-02-10": "春节回家", "2019-02-15": "情人节米斯特披萨",
-                    '2019-02-17': '董来元宵节', '2019-03-29': "万人香锅(大蔡、萌哥、小牛)", 
+                    '2019-02-17': '董来元宵节', '2019-03-29': "万人香锅(大蔡、萌哥、小牛)",
                     '2019-05-27': '大宝咖喱饭', '2019-07-02': "贪吃一番街"
                    }
     var option = {
-         title: {text: '2019 体重'}, 
+         title: {text: '2019 体重'},
          tooltip: {
              trigger: 'axis',
              formatter: function (params, ticket, callback) {
@@ -1578,7 +1578,7 @@ function weight2019(ec){
                     show: false
                 },
                 data: [{
-                    yAxis: 70 
+                    yAxis: 70
                 }, {
                     yAxis: 72
                 }, {
@@ -1596,7 +1596,7 @@ function weight2019(ec){
 
 <!-- 大宝关系 -->
 function relationship2019(ec){
-    var relationship2019 = echarts.init(document.getElementById('relationship2019')); 
+    var relationship2019 = echarts.init(document.getElementById('relationship2019'));
     <!-- 填空 关系 -->
     var data = [["2019-01-01", 8], ["2019-01-02", 8], ["2019-01-03", 8], ["2019-01-04", 7],
                 ["2019-01-05", 7], ["2019-01-06", 9], ["2019-01-07", 7], ["2019-01-08", 10],
@@ -1615,7 +1615,7 @@ function relationship2019(ec){
                 ['2019-02-26', 8], ['2019-02-27', 10], ['2019-02-28', 10], ['2019-03-01', 10],
                 ['2019-03-02', 10], ['2019-03-03', 7], ['2019-03-04', 10], ['2019-03-05', 10],
                 ['2019-03-06', 10], ['2019-03-07', 10], ['2019-03-08', 10], ['2019-03-09', 10],
-                ['2019-03-10', 10], ['2019-03-11', 10], ['2019-03-12', 10], ['2019-03-13', 10], 
+                ['2019-03-10', 10], ['2019-03-11', 10], ['2019-03-12', 10], ['2019-03-13', 10],
                 ['2019-03-14', 10], ['2019-03-15', 4], ['2019-03-16', 10], ['2019-03-17', 10],
                 ['2019-03-18', 10], ['2019-03-19', 10], ['2019-03-20', 10], ['2019-03-21', 10],
                 ['2019-03-22', 10], ['2019-03-23', 10], ['2019-03-24', 10], ['2019-03-25', 10],
@@ -1671,7 +1671,7 @@ function relationship2019(ec){
                     <!-- '2019-05-12': '5(s) + 5', '2019-05-14': '5(s) + 5', -->
                     <!-- '2019-07-09': '2 + 2(涩谷惨案)' -->
                     }
-    var option = { 
+    var option = {
         tooltip: {
             position: 'top',
             formatter: function (params, ticket, callback) {
@@ -1718,7 +1718,7 @@ function relationship2019(ec){
 
 <!-- Leetcode -->
 function leetcode(ec){
-    var leetcode = echarts.init(document.getElementById('lc')); 
+    var leetcode = echarts.init(document.getElementById('lc'));
 
     <!-- 填空 Leetcode -->
     var data = [["2019-01-01", 219], ["2019-01-02", 219], ["2019-01-03", 225], ["2019-01-04", 228],
@@ -1745,7 +1745,7 @@ function leetcode(ec){
                 ['2019-03-26', 465], ['2019-03-27', 470], ['2019-03-28', 475], ['2019-03-29', 480],
                 ['2019-03-30', 485], ['2019-03-31', 500]]
     var option = {
-         title: {text: 'Leetcode'}, 
+         title: {text: 'Leetcode'},
          tooltip: {
              trigger: 'axis'
          },
@@ -2004,121 +2004,6 @@ function TripSum2018(ec){
     </entry>
     
     <entry>
-      <title><![CDATA[PRML 笔记 2：2. Probability Distributions]]></title>
-      <url>http://tommyjiang.github.io/2018/2018-12-02-PRML-notes-2/</url>
-      <content type="html"><![CDATA[
-<div class="alert alert-info"><i class="fa fa-info"></i>
-PRML 笔记 2。
-</div>
-
-<a id="more"></a>
-<h1 id="2-1-二值变量"><a href="#2-1-二值变量" class="headerlink" title="2.1 二值变量"></a>2.1 二值变量</h1><ul>
-<li>二项分布及其期望、方差</li>
-<li>$\beta$ 分布及其期望、方差</li>
-</ul>
-<h1 id="2-2-多值变量"><a href="#2-2-多值变量" class="headerlink" title="2.2 多值变量"></a>2.2 多值变量</h1><ul>
-<li>狄利克雷分布</li>
-</ul>
-<h1 id="2-3-高斯分布"><a href="#2-3-高斯分布" class="headerlink" title="2.3 高斯分布"></a>2.3 高斯分布</h1><h1 id="2-4-指数族"><a href="#2-4-指数族" class="headerlink" title="2.4 指数族"></a>2.4 指数族</h1><h1 id="2-5-非参数估计"><a href="#2-5-非参数估计" class="headerlink" title="2.5 非参数估计"></a>2.5 非参数估计</h1><h1 id="本章数学家"><a href="#本章数学家" class="headerlink" title="本章数学家"></a>本章数学家</h1><ul>
-<li>数学家(1)：雅各布·伯努利(P69)</li>
-<li>数学家(2)：狄利克雷(P77)</li>
-<li>数学家(3)：高斯(P79)</li>
-</ul>
-]]></content>
-      
-        <categories>
-            
-            <category> Geek </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> Machine Learning </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[PRML 笔记 1：1. Introduction]]></title>
-      <url>http://tommyjiang.github.io/2018/2018-12-01-PRML-notes-1/</url>
-      <content type="html"><![CDATA[
-<div class="alert alert-info"><i class="fa fa-info"></i>
-PRML 笔记 1。
-</div>
-
-<a id="more"></a>
-<h1 id="1-0-Introduction"><a href="#1-0-Introduction" class="headerlink" title="1.0 Introduction"></a>1.0 Introduction</h1><ul>
-<li>机器学习输入、输出：x（图片），y（vector）</li>
-<li>机器学习模型：y(x)，x 到 y 的映射</li>
-<li>训练集、测试集、泛化能力（核心）</li>
-<li>输入预处理（特征提取），测试时也需要对数据进行同样的处理</li>
-<li>有监督学习（分类、回归）</li>
-<li>无监督学习（聚类、密度估计）</li>
-<li>强化学习</li>
-</ul>
-<h1 id="1-1-案例：多项式拟合"><a href="#1-1-案例：多项式拟合" class="headerlink" title="1.1 案例：多项式拟合"></a>1.1 案例：多项式拟合</h1><ul>
-<li>Error(loss) function：MSE</li>
-<li>测试 function：RMSE</li>
-<li>训练集和测试集 loss 的关系，过拟合概念</li>
-<li>如何避免过拟合（增大数据集、加入正则项）</li>
-</ul>
-<h1 id="1-2-概率论"><a href="#1-2-概率论" class="headerlink" title="1.2 概率论"></a>1.2 概率论</h1><ul>
-<li>全概率公式</li>
-<li>贝叶斯公式</li>
-<li>先验概率、观测、后验概率</li>
-<li>概率密度函数、累积分布函数</li>
-<li>期望、条件期望、方差、协方差</li>
-<li>频率学派、贝叶斯学派（概率是确定的，还是观测值是确定的；本书倾向贝叶斯学派）</li>
-<li>高斯分布、极大似然估计（期望、方差）、方差的低估</li>
-<li>贝叶斯估计、最大后验估计</li>
-</ul>
-<h1 id="1-3-模型选择"><a href="#1-3-模型选择" class="headerlink" title="1.3 模型选择"></a>1.3 模型选择</h1><ul>
-<li>训练集、验证集、测试集</li>
-<li>交叉验证</li>
-</ul>
-<h1 id="1-4-维数灾"><a href="#1-4-维数灾" class="headerlink" title="1.4 维数灾"></a>1.4 维数灾</h1><h1 id="1-5-决策论"><a href="#1-5-决策论" class="headerlink" title="1.5 决策论"></a>1.5 决策论</h1><ul>
-<li>最小化错误率</li>
-<li>最小化期望损失：损失函数(cost/loss function)、效用函数</li>
-<li>拒绝域</li>
-<li>推断和决策</li>
-<li>联合分布：生成模型</li>
-<li>边缘分布，后验概率：判别模型</li>
-<li>直接输出 label</li>
-<li>后验概率的用途（最小化风险、拒绝选项、补偿先验概率、模型融合）</li>
-</ul>
-<h1 id="1-6-信息论"><a href="#1-6-信息论" class="headerlink" title="1.6 信息论"></a>1.6 信息论</h1><ul>
-<li>最大熵分布（离散：均匀分布、连续：高斯分布）</li>
-<li>KL 散度：表征拟合分布 q(x) 和真实分布 p(x) 之间的差异<script type="math/tex; mode=display">KL(p \vert \vert q) = -\int p(x) \mathrm{ln} \frac{q(x)}{p(x)} \mathop{}\!\mathrm{d}x</script></li>
-<li>KL 散度的不对称性，取 0 条件(p(x) = q(x))</li>
-<li>互信息</li>
-</ul>
-<h1 id="本章数学家"><a href="#本章数学家" class="headerlink" title="本章数学家"></a>本章数学家</h1><ul>
-<li>数学家(1)：贝叶斯(P21)</li>
-<li>数学家(2)：拉普拉斯(P27)</li>
-<li>数学家(3)：玻尔兹曼(P53)</li>
-<li>数学家(4)：香农(P55)</li>
-</ul>
-]]></content>
-      
-        <categories>
-            
-            <category> Geek </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> Machine Learning </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[PRML 开源]]></title>
       <url>http://tommyjiang.github.io/2018/2018-11-28-PRML-open-source/</url>
       <content type="html"><![CDATA[
@@ -2127,7 +2012,7 @@ PRML 笔记 1。
 </div>
 
 <a id="more"></a>
-<p>在去年写的<a href="/2017/2017-07-15-machine-learning/" title="这篇博文">这篇博文</a>里，曾经介绍过机器学习三大圣经：PRML，ESL 和 MLAPP。最近，PRML 作者，微软剑桥研究院实验室负责人 Christopher Bishop 开源了他的经典著作——PRML，可以到<a href="http://link.zhihu.com/?target=https%3A//www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf" target="_blank" rel="noopener">这里</a>下载。</p>
+<p>在去年写的里，曾经介绍过机器学习三大圣经：PRML，ESL 和 MLAPP。最近，PRML 作者，微软剑桥研究院实验室负责人 Christopher Bishop 开源了他的经典著作——PRML，可以到<a href="http://link.zhihu.com/?target=https%3A//www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf" target="_blank" rel="noopener">这里</a>下载。</p>
 <p>在这本书的前面，Bishop 写了这本书奉献给妻子和孩子，还放了他们一家四口 2006 年 3 月到土耳其安卡拉看日全食的照片。最近也在看菠萝的书《癌症·新知》，书的后记提到，本来想做老师的他，通过写科普书也获得了很多成就感。以后我也要写一本经典的书，也要在前面附上一家人的照片，为了实现这个目标，努力！</p>
 ]]></content>
       
@@ -2141,60 +2026,6 @@ PRML 笔记 1。
         <tags>
             
             <tag> Machine Learning </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[主动学习资料]]></title>
-      <url>http://tommyjiang.github.io/2018/2018-11-22-active-learning-materials/</url>
-      <content type="html"><![CDATA[
-<div class="alert alert-info"><i class="fa fa-info"></i>
-主动学习资料汇总
-</div>
-
-<a id="more"></a>
-<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
-<p><strong>目录</strong></p>
-<ul>
-<li><a href="#paper">Paper</a><ul>
-<li><a href="#classification">Classification</a></li>
-</ul>
-</li>
-<li><a href="#博客">博客</a></li>
-<li><a href="#讲义">讲义</a></li>
-</ul>
-<!-- markdown-toc end -->
-<h1 id="Paper"><a href="#Paper" class="headerlink" title="Paper"></a>Paper</h1><h2 id="Classification"><a href="#Classification" class="headerlink" title="Classification"></a>Classification</h2><ul>
-<li><a href="https://arxiv.org/abs/1701.03551" target="_blank" rel="noopener">Cost-Effective Active Learning for Deep Image Classification</a></li>
-<li><a href="https://arxiv.org/abs/1708.00489v2" target="_blank" rel="noopener">Active Learning for Convolutional Neural Networks: A Core-set Approach</a></li>
-<li><a href="https://arxiv.org/abs/1703.02910" target="_blank" rel="noopener">Deep Bayesian Active Learning with Image Data</a><h2 id="Training"><a href="#Training" class="headerlink" title="Training"></a>Training</h2></li>
-<li><a href="https://arxiv.org/abs/1811.09347" target="_blank" rel="noopener">Revisiting Pre-training: An Efficient Training Method for Image Classification</a></li>
-</ul>
-<h1 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h1><ul>
-<li><a href="https://www.datacamp.com/community/tutorials/active-learning" target="_blank" rel="noopener">Active Learning: Curious AI Algorithms by <strong>DataCamp</strong></a></li>
-<li><a href="https://becominghuman.ai/accelerate-machine-learning-with-active-learning-96cea4b72fdb" target="_blank" rel="noopener">Accelerate Machine Learning with Active Learning by <strong>Matthew Slotkin@Medium</strong></a></li>
-<li><a href="https://towardsdatascience.com/active-learning-tutorial-57c3398e34d" target="_blank" rel="noopener">Active Learning Tutorial by <strong>Towards Data Science</strong></a></li>
-</ul>
-<h1 id="讲义"><a href="#讲义" class="headerlink" title="讲义"></a>讲义</h1><ul>
-<li><a href="http://hunch.net/~active_learning/active_learning_icml09.pdf" target="_blank" rel="noopener">A tutorial on active learning by <strong>Dasgupta@ICML 2009</strong></a></li>
-<li><a href="http://ice.dlut.edu.cn/valse2018/ppt/10-huangsj-AL-VALSE18.pdf" target="_blank" rel="noopener">Recent Progress on Active Learning by <strong>Sheng-Jun Huang@VALSE 2018</strong></a></li>
-</ul>
-]]></content>
-      
-        <categories>
-            
-            <category> 工作 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> CV </tag>
-            
-            <tag> DL </tag>
             
         </tags>
         
@@ -2224,185 +2055,6 @@ PRML 笔记 1。
         <tags>
             
             <tag> Ubuntu </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Paper queue]]></title>
-      <url>http://tommyjiang.github.io/2018/2018-11-13-paper-queue/</url>
-      <content type="html"><![CDATA[
-<div class="alert alert-info"><i class="fa fa-info"></i>
-论文队列
-</div>
-
-<a id="more"></a>
-<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
-<p><strong>目录</strong></p>
-<ul>
-<li><a href="#paper-queue">Paper queue</a></li>
-<li><a href="#object-detection">Object Detection</a><ul>
-<li><a href="#framework">Framework</a><ul>
-<li><a href="#refinedet">RefineDet</a></li>
-<li><a href="#yolo-lite">YOLO-LITE</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#tricks">Tricks</a><ul>
-<li><a href="#drop">Drop</a><ul>
-<li><a href="#dropblock">DropBlock</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#active-learning">Active Learning</a><ul>
-<li><a href="#general">General</a><ul>
-<li><a href="#large-scale-visual-active-learning-with-deep-probabilistic-ensembles">Large-Scale Visual Active Learning with Deep Probabilistic Ensembles</a></li>
-</ul>
-</li>
-<li><a href="#classification">Classification</a><ul>
-<li><a href="#the-power-of-ensembles-for-active-learning-in-image-classification">The Power of Ensembles for Active Learning in Image Classification</a></li>
-</ul>
-</li>
-<li><a href="#segmentation">Segmentation</a><ul>
-<li><a href="#cereals">CEREALS</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#kaggle">Kaggle</a><ul>
-<li><a href="#human-protein">Human protein</a><ul>
-<li><a href="#human-level-protein-localization-with-cnn">Human-level protein localization with CNN</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<!-- markdown-toc end -->
-<h1 id="Paper-queue"><a href="#Paper-queue" class="headerlink" title="Paper queue"></a>Paper queue</h1><ul>
-<li>Data<ul>
-<li>Data VS Performance<ul>
-<li><a href="https://arxiv.org/abs/1707.02968" target="_blank" rel="noopener">Revisiting Unreasonable Effectiveness of Data in Deep Learning Era</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Object Detection<ul>
-<li><a href="https://arxiv.org/abs/1808.07993" target="_blank" rel="noopener">Deep Feature Pyramid Reconfiguration for Object Detection</a> + 2018.11.14</li>
-<li>Framework<ul>
-<li><a href="https://arxiv.org/abs/1711.06897" target="_blank" rel="noopener">RefineDet</a> + 2018.11.14 / - 2018.11.16</li>
-<li><a href="https://arxiv.org/abs/1811.05588" target="_blank" rel="noopener">YOLO-LITE</a> + 2018.11.15 / - 2018.11.15</li>
-<li><a href="https://arxiv.org/abs/1807.11590" target="_blank" rel="noopener">Acquisition of Localization Confidence</a> + 2018.11.22 / </li>
-</ul>
-</li>
-<li>Trick<ul>
-<li><a href="https://arxiv.org/abs/1810.04002" target="_blank" rel="noopener">Decoupled Classification Refinement</a> + 2018.11.14 / - 2018.11.19</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Layer<ul>
-<li><a href="https://arxiv.org/abs/1703.06211" target="_blank" rel="noopener">Deformable Convolutional Networks</a> + 2018.11.14 / - 2018.11.17</li>
-<li><a href="https://arxiv.org/abs/1811.11168" target="_blank" rel="noopener">Deformable ConvNets v2</a> + 2018.11.30 / - 2018.12.2</li>
-<li><a href="https://arxiv.org/abs/1803.07066" target="_blank" rel="noopener">LRF</a> + 2018.11.14 / - 2018.11.17</li>
-</ul>
-</li>
-<li>Tricks<ul>
-<li>Drop<ul>
-<li><a href="https://arxiv.org/abs/1810.12890" target="_blank" rel="noopener">DropBlock</a> + 2018.11.14 / - 2018.11.16</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Kaggle<ul>
-<li>Human protein<ul>
-<li>[Human-level protein localization with CNN](<a href="https://openreview.net/forum?id=ryl5khRcKm**" target="_blank" rel="noopener">https://openreview.net/forum?id=ryl5khRcKm**</a> + 2018.11.06 / - 2018.11.14</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Automobile</li>
-</ul>
-<h1 id="Data"><a href="#Data" class="headerlink" title="Data"></a>Data</h1><h2 id="Data-VS-Performance"><a href="#Data-VS-Performance" class="headerlink" title="Data VS Performance"></a>Data VS Performance</h2><h3 id="Revisiting-Unreasonable-Effectiveness-of-Data-in-Deep-Learning-Era"><a href="#Revisiting-Unreasonable-Effectiveness-of-Data-in-Deep-Learning-Era" class="headerlink" title="Revisiting Unreasonable Effectiveness of Data in Deep Learning Era"></a>Revisiting Unreasonable Effectiveness of Data in Deep Learning Era</h3><p>核心结论：数据增长与模型性能增长基本呈<strong>对数线性</strong>关系，即数据增加一个数量级，模型性能提高的点数相同。从 ImageNet 1M 数据集扩展到 JFT-300M 数据集，4 epoch 需要在 50 块 K-80 GPU 上训练 2 个月。</p>
-<h1 id="Object-Detection"><a href="#Object-Detection" class="headerlink" title="Object Detection"></a>Object Detection</h1><h2 id="Framework"><a href="#Framework" class="headerlink" title="Framework"></a>Framework</h2><h3 id="RefineDet"><a href="#RefineDet" class="headerlink" title="RefineDet"></a>RefineDet</h3><p>CVPR 2018 paper，检测网络结构，主体包括 ARM(Anchor Refinement Module) 和 ODM(Object Detection Module)，利用 TCB(Transfer Connection Block)连接两者，将 ARM 的 feature 传给 ODM。</p>
-<p>ARM 采用 VGG/ResNet，预测分类和回归时采用 3*3 的滑动窗口，从 stride 8、16、32、64 的 feature map 分别设置 scale 为 4 倍 stride，ratio 为 0.5/1/2 的 anchor。ODM 类似 SSD，TCB 借鉴 FPN 思想，融合高层 feature map 信息。训练和测试时，ARM 都会舍弃分数低于阈值的 anchor box。</p>
-<p>结果：RefineDet320，VGG 16，40.3 FPS。RefineDet512+，ResNet-101，41.8 mAP on COCO。</p>
-<h3 id="YOLO-LITE"><a href="#YOLO-LITE" class="headerlink" title="YOLO-LITE"></a>YOLO-LITE</h3><p>关键指标：</p>
-<ul>
-<li>定位：无 GPU 设备</li>
-<li>个人电脑 21 FPS，网站 7 FPS</li>
-<li>7 层，482 MFLOPS 计算量</li>
-<li>mAP: PASCAL VOC 33.81%，COCO 12.26%</li>
-</ul>
-<p>数据集数量：</p>
-<ul>
-<li>PASCAL VOC 2007+2012 训练集：5011(20 类)</li>
-<li>COCO 2014 训练集：40775(80 类**</li>
-</ul>
-<p>其他小网络对比：</p>
-<ul>
-<li>Tiny-YOLOv2 @ 23.7% mAP, 2.4 FPS</li>
-<li>SSD Mobilenet V1 @ 21.0% mAP, 5.8 FPS</li>
-<li>YOLO-LITE @ 12.3% mAP, 21 FPS</li>
-</ul>
-<h3 id="Acquisition-of-Localization-Confidence-for-Accurate-Object-Detection"><a href="#Acquisition-of-Localization-Confidence-for-Accurate-Object-Detection" class="headerlink" title="Acquisition of Localization Confidence for Accurate Object Detection"></a>Acquisition of Localization Confidence for Accurate Object Detection</h3><ul>
-<li><h2 id="Trick"><a href="#Trick" class="headerlink" title="Trick"></a>Trick</h2><h3 id="Decoupled-Classification-Refinement-DCR"><a href="#Decoupled-Classification-Refinement-DCR" class="headerlink" title="Decoupled Classification Refinement(DCR)"></a>Decoupled Classification Refinement(DCR)</h3><p>ECCV 2018 paper，思想和 alignment 网络很像，单独训练一个网络用于 Detection 网络结果的分类，训练时采用 Hard Positive 杀误检，测试时所有结果均会经过该 refinement 网络。为减少计算量，提出了采用 RoIpooling 之后 feature 作为网络输入的方法。</p>
-</li>
-</ul>
-<h1 id="Layer"><a href="#Layer" class="headerlink" title="Layer"></a>Layer</h1><h2 id="Convolution-variation"><a href="#Convolution-variation" class="headerlink" title="Convolution variation"></a>Convolution variation</h2><h3 id="Deformable-Convolutional-Networks"><a href="#Deformable-Convolutional-Networks" class="headerlink" title="Deformable Convolutional Networks"></a>Deformable Convolutional Networks</h3><p>ICCV 2017 paper，学习卷积和 RoI pooling 时，点坐标的 offset，解决卷积和 RoI pooling 无法自适应地根据物体调整位置的问题。</p>
-<ul>
-<li>卷积层：与普通卷积并列，3*3 卷积，2N channel 的 feature map(N 为卷积核)，输出 feature map 上 N 个点的 x/y offset。</li>
-<li>RoI pooling：FC 层，输出归一化的 offset，需要乘 feature map 尺寸和 gamma。</li>
-<li>PS RoI pooling：全卷积，输出 2(C+1) k^2 channel 的 feature map，即对每一类和每一个 position，都输出一个 offset。</li>
-</ul>
-<p>结果：COCO，R-FCN mAP 34.5 -&gt; DCN mAP 37.1</p>
-<h3 id="Deformable-ConvNets-v2"><a href="#Deformable-ConvNets-v2" class="headerlink" title="Deformable ConvNets v2"></a>Deformable ConvNets v2</h3><p>DCN v1 提出两个层：Deformable Convolution 和 Deformable RoIpooling。</p>
-<p>本文改进：</p>
-<ul>
-<li>网络中更多层使用 Deformable Convolution。</li>
-<li>Deformable Convolution 中加入学习权重。</li>
-</ul>
-<h2 id="Pooling-variation"><a href="#Pooling-variation" class="headerlink" title="Pooling variation"></a>Pooling variation</h2><h3 id="Learning-Region-Features-for-Object-Detection"><a href="#Learning-Region-Features-for-Object-Detection" class="headerlink" title="Learning Region Features for Object Detection"></a>Learning Region Features for Object Detection</h3><p>ECCV 2018 paper，学习 pooling 层的参数。</p>
-<ul>
-<li>RoI pooling<ul>
-<li>Support Region：RoI</li>
-<li>Weight：1/R_{bk}</li>
-</ul>
-</li>
-<li>Aligned RoI pooling<ul>
-<li>Support Region：RoI</li>
-<li>Weight：双线性插值，只和临近的四个 pixel 有关</li>
-</ul>
-</li>
-<li>Deformable RoI pooling<ul>
-<li>Support Region：整张图</li>
-<li>Weight：双线性插值</li>
-</ul>
-</li>
-</ul>
-<p>图片坐标 p 编码为 2C 维，RoI 编码为 4C 维，之后做线性变换，变换矩阵可学习。图像特征通过 1*1 的卷积计算。图片坐标如果全部计算，计算量太大，因此采用稀疏采样的方法，每 \sqrt(H * W / 196) 个 pixel 进行一次采样。</p>
-<p>结果：ResNet 50 Faster RCNN，COCO，mAP 34.1</p>
-<h1 id="Tricks"><a href="#Tricks" class="headerlink" title="Tricks"></a>Tricks</h1><h2 id="Drop"><a href="#Drop" class="headerlink" title="Drop"></a>Drop</h2><h3 id="DropBlock"><a href="#DropBlock" class="headerlink" title="DropBlock"></a>DropBlock</h3><p>新的正则化方法，DropBlock。</p>
-<p>文中指出，Dropout 适合 FC 层，但不适合卷积层，因为卷积层的 feature 是空间相关的。</p>
-<p>参数包括两个，block_size 和 gamma，gamma 是用 keep probability、feat size、block size 计算得到的。训练开始时，keep prob 取 1，然后逐渐减小到 0.9。</p>
-<p>结果：ImageNet 上，ResNet 50，top 1 76.51 -&gt; 78.35，COCO 上，RetinaNet，mAP 36.5 -&gt; 38.2。</p>
-<h1 id="Kaggle"><a href="#Kaggle" class="headerlink" title="Kaggle"></a>Kaggle</h1><h2 id="Human-protein"><a href="#Human-protein" class="headerlink" title="Human protein"></a>Human protein</h2><h3 id="Human-level-protein-localization-with-CNN"><a href="#Human-level-protein-localization-with-CNN" class="headerlink" title="Human-level protein localization with CNN"></a>Human-level protein localization with CNN</h3><p>投 ICLR 2019 的一篇文章，核心思想是从不同的 feature map 做 GAE(Global Average Pooling)，concat 之后再过 FC 和 sigmoid，F1 score 能到 0.8，没有太多新意，pass。</p>
-]]></content>
-      
-        <categories>
-            
-            <category> 工作 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> CV </tag>
-            
-            <tag> DL </tag>
             
         </tags>
         
@@ -2667,7 +2319,7 @@ PRML 笔记 1。
 <p>2018.10.24，31 岁的我，度过了第一个程序员节。今天的北京艳阳高照，天暖宜人，有小阳春的感觉，也算应景。</p>
 <p>我和代码的缘分，最早可以追溯到念小学的时候。当时家里买了一台裕兴学习机，可以用 Logo 语言画图，也能打游戏，可以改 BASIC 代码，不过当时我不会，都是我爸改的。</p>
 <p>高中的时候，我也去听过一两节信息学竞赛课，其实就是计算机编程竞赛。当时教的语言是 PASCAL，老师号召买教材的时候，我还冲上去抢了一本，不到 20 块钱。由于初中没有任何基础，后来也就放弃了。</p>
-<p>到了大学，开始正式接触编程。大一上的第一门课，就是五教5103的 C 语言，第一节课上，老师提到：<code>程序=数据结构+算法</code>，可惜当时我完全不理解这句话。有一节课老师教 printf 语句，要打印几行内容，临下课前还卖个关子，说其实有更简单的方法，后来我才知道所谓更简单的方法是用循环(loop)。大一小学期学了所谓的 C++，其实就等于把 C 的 struct 换成了 class，没学到什么 C++ 更深层的内容。 大二下，选修了 Java，同时也学 MATLAB，当时觉得 MATLAB 真好用，不用声明变量，可以直接做矩阵乘法，还有各种插值、优化算法，当然了，用的都是破解版。大二小学期学了 VHDL，被戏称为 Very hard language，主要用于控制 FPGA。</p>
+<p>到了大学，开始正式接触编程。大一上的第一门课，就是五教 5103 的 C 语言，第一节课上，老师提到：<code>程序=数据结构+算法</code>，可惜当时我完全不理解这句话。有一节课老师教 printf 语句，要打印几行内容，临下课前还卖个关子，说其实有更简单的方法，后来我才知道所谓更简单的方法是用循环(loop)。大一小学期学了所谓的 C++，其实就等于把 C 的 struct 换成了 class，没学到什么 C++ 更深层的内容。 大二下，选修了 Java，同时也学 MATLAB，当时觉得 MATLAB 真好用，不用声明变量，可以直接做矩阵乘法，还有各种插值、优化算法，当然了，用的都是破解版。大二小学期学了 VHDL，被戏称为 Very hard language，主要用于控制 FPGA。</p>
 <p>博士阶段，一年级下学期选修了数据结构，用 C 实现了马踏棋盘程序，用到了栈结构，当时没用贪心算法，试图暴力破解，发现完全不可能，才渐渐明白了<code>程序=数据结构+算法</code>这句话。博士用的最多的是仿真软件，包括 MATLAB/Simulink、PSCAD、PowerFactory，前两个分别对应 MATLAB 和 Fortran 语言，PF 最开始是自己的 DSL 语言，在大概 2014 年的时候开放了 API，可以通过 Python 调用。博士阶段我觉得做的最成功的一件事儿，就是用 Python 实现了 PF 和 MATLAB 的联合优化仿真，PF 负责计算电力系统动态，MATLAB/CPLEX 负责求解优化问题，Python 负责将两者连起来，当然了，即使实现了也没什么用，因为根本没人 care。</p>
 <p>毕业到了电科院，和小哥在工作闲暇的时候用 Python 实现了数据爬虫和数据分析，还画了带区间交易量的 K 线图，虽然最后也没实际应用，但自己实现一个个功能的感觉还是很爽的，因为都是实实在在的，不像工作整天忽悠。当时不知道 Python 的 <code>pickle</code> 模块，每次读取结果都用 txt 格式，I/O 浪费了很多时间……</p>
 <p>转行以后，主要用 Python 进行算法迭代和模型训练，C++ 写线上部署逻辑，虽然水平和周围 top 的同事比还有很大差距，但至少在不断积累了，希望以后能越来越好吧。</p>
@@ -2800,39 +2452,6 @@ PRML 笔记 1。
         <tags>
             
             <tag> 生日 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[李健访谈语录整理]]></title>
-      <url>http://tommyjiang.github.io/2018/2018-09-01-lijian-talk-index/</url>
-      <content type="html"><![CDATA[
-<div class="alert alert-info"><i class="fa fa-info"></i>
-音乐诗人
-</div>
-
-<a id="more"></a>
-<h1 id="演讲"><a href="#演讲" class="headerlink" title="演讲"></a>演讲</h1><ol>
-<li><a href="/2018/2018-08-28-lijian-talk-1/" title="我与音乐这些年">我与音乐这些年</a>
-</li>
-</ol>
-<h1 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h1><ol>
-<li><a href="http://www.lifeweek.com.cn/2017/0622/49237.shtml" target="_blank" rel="noopener">李健自述：立与不立皆辛苦</a></li>
-</ol>
-]]></content>
-      
-        <categories>
-            
-            <category> 生活 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 李健 </tag>
             
         </tags>
         
@@ -2981,195 +2600,6 @@ DotA 如人生。
         <tags>
             
             <tag> DotA </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[CV Object Detection 论文汇总]]></title>
-      <url>http://tommyjiang.github.io/2018/2018-08-15-OD-papers/</url>
-      <content type="html"><![CDATA[
-<div class="alert alert-info"><i class="fa fa-info"></i>
-CV DL OD 文献引用关系图。
-</div>
-
-<a id="more"></a>
-
-
-<div id="refs" style="width: 120%;height: 1000px;margin: 0 auto"></div>
-<script src="https://cdn.bootcss.com/echarts/4.1.0.rc2/echarts.js"></script>
-<script src="https://cdn.bootcss.com/echarts/4.1.0.rc2/extension/dataTool.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-<script src="https://cdn.rawgit.com/apache/incubator-echarts/master/theme/vintage.js"></script>
-
-<script type="text/javascript">
-    // 查找函数
-    function findArray(array, feature, all = true) {
-        for(let index in array){
-            let cur = array[index];
-            if(feature instanceof Object){
-                let allRight = true;
-                for(let key in feature){
-                    let value = feature[key];
-                    if(cur[key] == value && !all) return index;
-                    if(all && cur[key] != value){
-                        allRight = false;
-                        break;
-                    }
-                }
-                if(allRight) return index;
-            }else{
-                if(cur == feature){
-                    return index;
-                }
-            }
-        }
-        return -1;
-    }
-    var myChart = echarts.init(document.getElementById('refs'), 'vintage');
-    myChart.showLoading();
-$.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public/data/asset/data/les-miserables.gexf', function (xml) {
-    myChart.hideLoading();
-
-    // TODO 节点 symbolSize 随年份衰减
-    // TODO 根据 link 两篇文章年份设定权重
-    var graph = {
-        "nodes":[
-        // Two-stage 
-        // TODO R-FCN Mask-RCNN
-        {"id":"R-CNN", "name":"2013-R-CNN", "symbolSize":10, "category":0}, // 1311.2524
-        {"id":"SPPNet", "name":"2014-SPPNet", "symbolSize":10, "category":0}, // 1406.4729
-        {"id":"Fast-RCNN", "name":"2015-Fast-RCNN", "symbolSize":10, "category":0}, // 1504.08083
-        {"id":"Faster-RCNN", "name":"2015-Faster-RCNN", "symbolSize":10, "category":0}, // 1506.01497
-        {"id":"FPN", "name":"2016-FPN", "symbolSize":10, "category":0}, // 1612.03144
-        {"id":"Mask-RCNN", "name":"2017-Mask-RCNN", "symbolSize":10, "category":0}, // 1703.06870
-        // One-stage
-        // TODO YOLO SSD RetinaNet YOLO9000 YOLOv3 DSSD RON DeNet
-        {"id":"YOLO", "name":"2015-YOLO", "symbolSize":10, "category":1}, // 1506.02640
-        ],
-        "links":[
-        // 2013-R-CNN
-        // 2014-SPPNet
-        {"source":"SPPNet", "target":"R-CNN"}, // Ref 7
-        // 2015-Fast-RCNN
-        {"source":"Fast-RCNN", "target":"R-CNN"}, // Ref 9
-        {"source":"Fast-RCNN", "target":"SPPNet"}, // Ref 11
-        // 2015-Faster-RCNN
-        {"source":"Faster-RCNN", "target":"SPPNet"}, // Ref 1
-        {"source":"Faster-RCNN", "target":"Fast-RCNN"}, // Ref 2
-        {"source":"Faster-RCNN", "target":"R-CNN"}, // Ref 5
-        // 2016-FPN
-        {"source":"FPN", "target":"Fast-RCNN"}, // Ref 11
-        {"source":"FPN", "target":"R-CNN"}, // Ref 12
-        {"source":"FPN", "target":"Mask-RCNN"}, // Ref 14
-        {"source":"FPN", "target":"SPPNet"}, // Ref 15
-        // {"source":"FPN", "target":"SSD"}, // Ref 22
-        // {"source":"FPN", "target":"Faster-RCNN"}, // Ref 29
-        // 2017-Mask-RCNN
-        // {"source":"Mask-RCNN", "target":"R-FCN"}, // Ref 11
-        {"source":"Mask-RCNN", "target":"Fast-RCNN"}, // Ref 12
-        {"source":"Mask-RCNN", "target":"R-CNN"}, // Ref 13
-        // 2015-YOLO
-        {"source":"YOLO", "target":"R-CNN"}, // Ref 13
-        {"source":"YOLO", "target":"Fast-RCNN"}, // Ref 14
-        {"source":"YOLO", "target":"SPPNet"}, // Ref 17
-        {"source":"YOLO", "target":"Faster-RCNN"}, // Ref 28
-        ]
-    }
-    var categories = [{'name': 'Two-stage'},
-                      {'name': 'One-stage'},
-                      ];
-    // TODO 根据 link 修改 symbolSize / 根据年份加权
-    graph.links.forEach(function (link) {
-        link.id = link.source + "-" + link.target
-        var cur_link = link.target
-        var index = findArray(graph.nodes, {id: link.target});
-        graph.nodes[index]['symbolSize'] += 2
-        console.log(link)
-        // console.log(graph.nodes[0]['id'])
-    });
-    graph.nodes.forEach(function (node) {
-        node.itemStyle = null;
-        node.value = node.symbolSize;
-        node.label = {
-            normal: {
-                show: node.symbolSize > 0
-            }
-        };
-    });
-    option = {
-        title: {
-            text: 'CV refs',
-            subtext: 'Circular layout',
-            top: 'bottom',
-            left: 'right'
-        },
-        tooltip: {},
-        legend: [{
-            // selectedMode: 'single',
-            data: categories.map(function (a) {
-                return a.name;
-            })
-        }],
-        animationDurationUpdate: 1500,
-        animationEasingUpdate: 'quinticInOut',
-        series : [
-            {
-                name: 'CV refs',
-                type: 'graph',
-                layout: 'circular',
-                // layout: 'force',
-                force: {
-                    repulsion: 8000,
-                    gravity: 0.2
-                },
-                circular: {
-                    rotateLabel: true
-                },
-                edgeSymbol: [null, 'arrow'],  // 有向图, edgeSymbol 为 arrow
-                data: graph.nodes,
-                links: graph.links,
-                categories: categories,
-                roam: false,
-                focusNodeAdjacency: true,
-                label: {
-                    normal: {
-                        position: 'right',
-                        formatter: '{b}'
-                    }
-                },
-                lineStyle: {
-                    normal: {
-                        color: 'source',
-                        curveness: 0.3
-                    }
-                }
-            }
-        ]
-    };
-
-    myChart.setOption(option);
-}, 'xml');
-</script>
-
-
-]]></content>
-      
-        <categories>
-            
-            <category> 技术 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> CV </tag>
-            
-            <tag> DL </tag>
-            
-            <tag> Object Detection </tag>
             
         </tags>
         
@@ -3498,77 +2928,6 @@ Defaults to today&#39;s date if DATE is not given.&quot;
     </entry>
     
     <entry>
-      <title><![CDATA[CV DL 工程师技能树]]></title>
-      <url>http://tommyjiang.github.io/2018/2018-07-01-CV-DL/</url>
-      <content type="html"><![CDATA[
-<div class="alert alert-info"><i class="fa fa-info"></i>
-CV DL 工程师技能树
-</div>
-
-<a id="more"></a>
-<h1 id="技能"><a href="#技能" class="headerlink" title="技能"></a>技能</h1><h2 id="语言"><a href="#语言" class="headerlink" title="语言"></a>语言</h2><ul>
-<li>Python</li>
-<li>C++</li>
-</ul>
-<h2 id="CS-基础"><a href="#CS-基础" class="headerlink" title="CS 基础"></a>CS 基础</h2><ul>
-<li>数据结构</li>
-<li>算法</li>
-</ul>
-<h2 id="理论"><a href="#理论" class="headerlink" title="理论"></a>理论</h2><ul>
-<li>基础<ul>
-<li>最优化</li>
-</ul>
-</li>
-</ul>
-<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><ul>
-<li>Linux</li>
-<li>git</li>
-</ul>
-<h1 id="素材"><a href="#素材" class="headerlink" title="素材"></a>素材</h1><h2 id="书籍"><a href="#书籍" class="headerlink" title="书籍"></a>书籍</h2><h2 id="课程"><a href="#课程" class="headerlink" title="课程"></a>课程</h2><h2 id="论文"><a href="#论文" class="headerlink" title="论文"></a>论文</h2><p>参考我的<a href="http://bigbossjiang.top/2018/2018-06-22-CV-DL-papers/" target="_blank" rel="noopener">文章</a></p>
-<ul>
-<li>Classification<ul>
-<li>AlexNet</li>
-<li>ZFNet</li>
-<li>VGG</li>
-<li>Inception(GoogLeNet)</li>
-<li>ResNet</li>
-</ul>
-</li>
-<li>Object Detection<ul>
-<li>Fast R-CNN</li>
-<li>Faster R-CNN</li>
-<li>YOLO</li>
-<li>SSD</li>
-<li>R-FCN</li>
-<li>FPN</li>
-</ul>
-</li>
-<li>Segmentation<ul>
-<li>FCN</li>
-<li>Mask R-CNN</li>
-</ul>
-</li>
-</ul>
-]]></content>
-      
-        <categories>
-            
-            <category> 工作 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> CV </tag>
-            
-            <tag> CS </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[从头再来]]></title>
       <url>http://tommyjiang.github.io/2018/2018-07-01-new-start/</url>
       <content type="html"><![CDATA[
@@ -3605,251 +2964,6 @@ CV DL 工程师技能树
             <tag> CV </tag>
             
             <tag> CS </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[CV Paper 汇总]]></title>
-      <url>http://tommyjiang.github.io/2018/2018-06-22-CV-DL-papers/</url>
-      <content type="html"><![CDATA[<p>CV DL 文献引用关系图</p>
-<a id="more"></a>
-
-
-<div id="refs" style="width: 120%;height: 1000px;margin: 0 auto"></div>
-<script src="https://cdn.bootcss.com/echarts/4.1.0.rc2/echarts.js"></script>
-<script src="https://cdn.bootcss.com/echarts/4.1.0.rc2/extension/dataTool.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-<script src="https://cdn.rawgit.com/apache/incubator-echarts/master/theme/vintage.js"></script>
-
-<script type="text/javascript">
-    // 查找函数
-    function findArray(array, feature, all = true) {
-        for(let index in array){
-            let cur = array[index];
-            if(feature instanceof Object){
-                let allRight = true;
-                for(let key in feature){
-                    let value = feature[key];
-                    if(cur[key] == value && !all) return index;
-                    if(all && cur[key] != value){
-                        allRight = false;
-                        break;
-                    }
-                }
-                if(allRight) return index;
-            }else{
-                if(cur == feature){
-                    return index;
-                }
-            }
-        }
-        return -1;
-    }
-    var myChart = echarts.init(document.getElementById('refs'), 'vintage');
-    myChart.showLoading();
-$.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public/data/asset/data/les-miserables.gexf', function (xml) {
-    myChart.hideLoading();
-
-    // TODO 点击节点跳转到论文 arxiv 链接
-    // TODO 节点 symbolSize 随年份衰减
-    // TODO 根据 link 两篇文章年份设定权重
-    var graph = {
-        "nodes":[
-        // TODO Others BN GN Focal loss Wing loss
-        // Dataset
-        {"id":"ImageNet", "name":"2009-ImageNet", "symbolSize":10, "category":0}, // 
-        {"id":"COCO", "name":"2014-COCO", "symbolSize":10, "category":0}, // 1405.0312
-        // Classification
-        {"id":"AlexNet", "name":"2012-AlexNet", "symbolSize":10, "category":1},
-        {"id":"ZFNet", "name":"2013-ZFNet", "symbolSize":10, "category":1}, // 1311.2901
-        {"id":"VGG", "name":"2014-VGG", "symbolSize":10, "category":1}, // 1409.1556
-        {"id":"Inception", "name":"2014-Inception", "symbolSize":10, "category":1}, // 1409.4842
-        // Object Detection
-        {"id":"R-CNN", "name":"2013-R-CNN", "symbolSize":10, "category":2}, // 1311.2524
-        {"id":"SPPNet", "name":"2014-SPPNet", "symbolSize":10, "category":2}, // 1406.4729
-        {"id":"Fast-RCNN", "name":"2015-Fast-RCNN", "symbolSize":10, "category":2}, // 1504.08083
-        {"id":"Faster-RCNN", "name":"2015-Faster-RCNN", "symbolSize":10, "category":2}, // 1506.01497
-        {"id":"FPN", "name":"2016-FPN", "symbolSize":10, "category":2}, // 1612.03144
-        // TODO Faster RCNN YOLO SSD R-FCN FPN
-        // Semantic Segmentation
-        {"id":"FCN", "name":"2014-FCN", "symbolSize":10, "category":3}, // 1411.4038
-        // Instance Segmentation
-        {"id":"Mask-RCNN", "name":"2017-Mask-RCNN", "symbolSize":10, "category":4}, // 1703.06870
-        // Tools
-        {"id":"Caffe", "name":"2014-Caffe", "symbolSize":10, "category":5}, // 1408.5093
-        ],
-        "links":[
-        // 2012-AlexNet
-        {"source":"AlexNet", "target":"ImageNet"}, // Ref 6
-        // 2013-R-CNN
-        {"source":"R-CNN", "target":"AlexNet"}, // Ref 25
-        // 2013-ZFNet
-        {"source":"ZFNet", "target":"AlexNet"}, // Ref 15
-        // 2014-Caffe
-        {"source":"Caffe", "target":"R-CNN"}, // Ref 3
-        {"source":"Caffe", "target":"AlexNet"}, // Ref 8
-        // 2014-VGG
-        {"source":"VGG", "target":"ImageNet"}, // Ref 6
-        {"source":"VGG", "target":"R-CNN"}, // Ref 10
-        {"source":"VGG", "target":"SPPNet"}, // Ref 15
-        {"source":"VGG", "target":"Caffe"}, // Ref 18
-        {"source":"VGG", "target":"AlexNet"}, // Ref 22
-        {"source":"VGG", "target":"FCN"}, // Ref 25
-        {"source":"VGG", "target":"Inception"}, // Ref 32
-        {"source":"VGG", "target":"ZFNet"}, // Ref 34
-        // 2014-Inception
-        {"source":"Inception", "target":"R-CNN"}, // Ref 6
-        {"source":"Inception", "target":"AlexNet"}, // Ref 9
-        // 2014-FCN
-        {"source":"FCN", "target":"R-CNN"}, // Ref 12
-        {"source":"FCN", "target":"SPPNet"},  // Ref 17
-        {"source":"FCN", "target":"Caffe"},  // Ref 18
-        {"source":"FCN", "target":"AlexNet"},  // Ref 19
-        {"source":"FCN", "target":"VGG"},  // Ref 31
-        {"source":"FCN", "target":"Inception"},  // Ref 32
-        {"source":"FCN", "target":"ZFNet"},  // Ref 32
-        // 2014-SPPNet
-        {"source":"SPPNet", "target":"ImageNet"}, // Ref 2
-        {"source":"SPPNet", "target":"AlexNet"}, // Ref 3
-        {"source":"SPPNet", "target":"ZFNet"}, // Ref 4
-        {"source":"SPPNet", "target":"R-CNN"}, // Ref 7
-        {"source":"SPPNet", "target":"Inception"}, // Ref 32
-        {"source":"SPPNet", "target":"VGG"}, // Ref 33
-        // 2015-Fast-RCNN
-        {"source":"Fast-RCNN", "target":"ImageNet"}, // Ref 4
-        {"source":"Fast-RCNN", "target":"R-CNN"}, // Ref 9
-        {"source":"Fast-RCNN", "target":"SPPNet"}, // Ref 11
-        {"source":"Fast-RCNN", "target":"Caffe"}, // Ref 13
-        {"source":"Fast-RCNN", "target":"AlexNet"}, // Ref 14
-        {"source":"Fast-RCNN", "target":"COCO"}, // Ref 18
-        {"source":"Fast-RCNN", "target":"VGG"}, // Ref 20
-        // 2015-Faster-RCNN
-        {"source":"Faster-RCNN", "target":"SPPNet"}, // Ref 1
-        {"source":"Faster-RCNN", "target":"Fast-RCNN"}, // Ref 2
-        {"source":"Faster-RCNN", "target":"VGG"}, // Ref 3
-        {"source":"Faster-RCNN", "target":"R-CNN"}, // Ref 5
-        {"source":"Faster-RCNN", "target":"FCN"}, // Ref 7
-        {"source":"Faster-RCNN", "target":"COCO"}, // Ref 12
-        // {"source":"Faster-RCNN", "target":"ResNet"}, // Ref 18
-        {"source":"Faster-RCNN", "target":"ZFNet"}, // Ref 32
-        {"source":"Faster-RCNN", "target":"Inception"}, // Ref 34
-        {"source":"Faster-RCNN", "target":"AlexNet"}, // Ref 37
-        {"source":"Faster-RCNN", "target":"Caffe"}, // Ref 38
-        // 2016-FPN
-        {"source":"FPN", "target":"Fast-RCNN"}, // Ref 11
-        {"source":"FPN", "target":"R-CNN"}, // Ref 12
-        {"source":"FPN", "target":"Mask-RCNN"}, // Ref 14
-        {"source":"FPN", "target":"SPPNet"}, // Ref 15
-        // {"source":"FPN", "target":"ResNet"}, // Ref 16
-        {"source":"FPN", "target":"AlexNet"}, // Ref 19
-        {"source":"FPN", "target":"COCO"}, // Ref 21
-        // {"source":"FPN", "target":"SSD"}, // Ref 22
-        {"source":"FPN", "target":"FCN"}, // Ref 24
-        // {"source":"FPN", "target":"Faster-RCNN"}, // Ref 29
-        // {"source":"FPN", "target":"U-Net"}, // Ref 31
-        {"source":"FPN", "target":"VGG"}, // Ref 36
-        // 2017-Mask-RCNN
-        // {"source":"Mask-RCNN", "target":"R-FCN"}, // Ref 11
-        {"source":"Mask-RCNN", "target":"Fast-RCNN"}, // Ref 12
-        {"source":"Mask-RCNN", "target":"R-CNN"}, // Ref 13
-        ]
-    }
-    var categories = [{'name': 'Dataset'},
-                      {'name': 'Classification'},
-                      {'name': 'Object Detection'},
-                      {'name': 'Semantic Segmentation'},
-                      {'name': 'Instance Segmentation'},
-                      {'name': 'Tools'}];
-    // TODO 根据 link 修改 symbolSize / 根据年份加权
-    graph.links.forEach(function (link) {
-        link.id = link.source + "-" + link.target
-        var cur_link = link.target
-        var index = findArray(graph.nodes, {id: link.target});
-        graph.nodes[index]['symbolSize'] += 2
-        console.log(link)
-        // console.log(graph.nodes[0]['id'])
-    });
-    graph.nodes.forEach(function (node) {
-        node.itemStyle = null;
-        node.value = node.symbolSize;
-        node.label = {
-            normal: {
-                show: node.symbolSize > 0
-            }
-        };
-    });
-    option = {
-        title: {
-            text: 'CV refs',
-            subtext: 'Circular layout',
-            top: 'bottom',
-            left: 'right'
-        },
-        tooltip: {},
-        legend: [{
-            // selectedMode: 'single',
-            data: categories.map(function (a) {
-                return a.name;
-            })
-        }],
-        animationDurationUpdate: 1500,
-        animationEasingUpdate: 'quinticInOut',
-        series : [
-            {
-                name: 'CV refs',
-                type: 'graph',
-                layout: 'circular',
-                // layout: 'force',
-                force: {
-                    repulsion: 8000,
-                    gravity: 0.2
-                },
-                circular: {
-                    rotateLabel: true
-                },
-                edgeSymbol: [null, 'arrow'],  // 有向图, edgeSymbol 为 arrow
-                data: graph.nodes,
-                links: graph.links,
-                categories: categories,
-                roam: false,
-                focusNodeAdjacency: true,
-                label: {
-                    normal: {
-                        position: 'right',
-                        formatter: '{b}'
-                    }
-                },
-                lineStyle: {
-                    normal: {
-                        color: 'source',
-                        curveness: 0.3
-                    }
-                }
-            }
-        ]
-    };
-
-    myChart.setOption(option);
-}, 'xml');
-</script>
-
-
-]]></content>
-      
-        <categories>
-            
-            <category> 技术 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> CV </tag>
-            
-            <tag> DL </tag>
             
         </tags>
         
@@ -3914,7 +3028,7 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
 <br>
 
 <div style="min-height: 500px; width: 100%;" id="6-16"></div>
-    
+
 <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.4&key=78b4d9401faf42bd388b9bbf4aa3bfd0"></script>
 
 <script>
@@ -3954,10 +3068,10 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
         infoWindow.setContent(e.target.content);
         infoWindow.open(map, e.target.getPosition());
     }
-    
+
     // map.setFitView();
 </script>
-    
+
 
 <h2 id="2018-06-17"><a href="#2018-06-17" class="headerlink" title="2018-06-17"></a>2018-06-17</h2><p>香港美食 + 购物</p>
 <ul>
@@ -4077,7 +3191,7 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
 <br>
 
 <div style="min-height: 500px; width: 100%;" id="container"></div>
-    
+
 <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.4&key=78b4d9401faf42bd388b9bbf4aa3bfd0"></script>
 
 <script>
@@ -4085,7 +3199,7 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
         resizeEnable: true,
         center: [118.160456,39.63028], // 尚座
         zoom: 14
-    });    
+    });
 
     map.clearMap();  // 清除地图覆盖物
 
@@ -4096,7 +3210,7 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
         position: [118.160456,39.63028],
         label: '新房（尚座花园）'
     }, {
-        position: [118.173403,39.581195], 
+        position: [118.173403,39.581195],
         label: '新娘酒店（紫天鹅酒店）'
     }
     ];
@@ -4120,10 +3234,10 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
         infoWindow.setContent(e.target.content);
         infoWindow.open(map, e.target.getPosition());
     }
-    
+
     // map.setFitView();
 </script>
-    
+
 
 ]]></content>
       
@@ -4219,174 +3333,6 @@ $.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public
     </entry>
     
     <entry>
-      <title><![CDATA[CV 经典论文]]></title>
-      <url>http://tommyjiang.github.io/2018/2018-02-08-CV-papers/</url>
-      <content type="html"><![CDATA[<p>CV 经典论文汇总。</p>
-<a id="more"></a>
-<h1 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h1><ul>
-<li>ILSVRC<ul>
-<li>2012 <ul>
-<li>AlexNet</li>
-</ul>
-</li>
-<li>2013<ul>
-<li>Network in network</li>
-<li>ZFNet</li>
-</ul>
-</li>
-<li>2014<ul>
-<li>Inception</li>
-</ul>
-</li>
-<li>2015<ul>
-<li>ResNet</li>
-</ul>
-</li>
-<li>2016<ul>
-<li>Identity Mapping</li>
-</ul>
-</li>
-<li>2017<ul>
-<li>SENet</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>小网络<ul>
-<li>2016 SqueezeNet</li>
-<li>MobileNet 系列<ul>
-<li>2017 MobileNet</li>
-<li>2018 MobileNetV2</li>
-</ul>
-</li>
-<li>ShuffleNet 系列<ul>
-<li>2017 ShuffleNet</li>
-<li>2018 ShuffleNet V2</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h1 id="检测"><a href="#检测" class="headerlink" title="检测"></a>检测</h1><ul>
-<li>Two stage<ul>
-<li>RCNN 系列<ul>
-<li>2013 R-CNN</li>
-<li>2014 SPPNet</li>
-<li>2015 Fast R-CNN</li>
-<li>2015 Faster R-CNN</li>
-</ul>
-</li>
-<li>2016 R-FCN</li>
-<li>2016 FPN</li>
-</ul>
-</li>
-<li>One stage<ul>
-<li>YOLO 系列<ul>
-<li>2015 YOLO</li>
-<li>2016 YOLOv2</li>
-<li>2018 YOLOv3</li>
-</ul>
-</li>
-<li>SSD 系列<ul>
-<li>2015 SSD</li>
-<li>2017 DSSD</li>
-</ul>
-</li>
-<li>2018 RefineDet</li>
-</ul>
-</li>
-</ul>
-<h1 id="分割"><a href="#分割" class="headerlink" title="分割"></a>分割</h1><ul>
-<li>2014 FCN</li>
-</ul>
-<h1 id="技巧"><a href="#技巧" class="headerlink" title="技巧"></a>技巧</h1><ul>
-<li>2015 BN</li>
-</ul>
-]]></content>
-      
-        <categories>
-            
-            <category> 技术 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> Computer Vision </tag>
-            
-            <tag> Paper </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[AlexNet 论文笔记]]></title>
-      <url>http://tommyjiang.github.io/2018/2018-02-05-Alexnet-notes/</url>
-      <content type="html"><![CDATA[
-<div class="alert alert-info"><i class="fa fa-info"></i>
-AlexNet 笔记
-</div>
-
-<a id="more"></a>
-<h1 id="论文笔记"><a href="#论文笔记" class="headerlink" title="论文笔记"></a>论文笔记</h1><p><a href="http://www.image-net.org/challenges/LSVRC/" target="_blank" rel="noopener">ILSVRC</a>是图像识别领域的知名比赛，可以参考这篇<a href="https://arxiv.org/abs/1409.0575" target="_blank" rel="noopener">论文</a>。从2010年开始 ILSVRC 每年举办一届，一直到2017年最后一届，目前已经交给<a href="https://www.kaggle.com/c/imagenet-object-localization-challenge" target="_blank" rel="noopener">Kaggle</a>。</p>
-<h2 id="2012-AlexNet"><a href="#2012-AlexNet" class="headerlink" title="2012. AlexNet"></a>2012. AlexNet</h2><h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><ul>
-<li>AlexNet 的任务？<blockquote>
-<p>任务是做图像分类。具体地说，是将 ImageNet 的一个子集，共包含约120万张训练集图片，5万张验证集图片和15万张测试集图片，共有1000类。AlexNet 的输入是图片，输出是图片类别，属于经典的 Classification 问题。</p>
-</blockquote>
-</li>
-<li>AlexNet 的网络结构？<blockquote>
-<p>AlexNet 包含5个卷积层，3个池化层，2个标准化层和3个全连接层，共13层，其中权重层（卷积层和全连接层）共8层。具体结构可以参考 Stanford CS231n 的 <a href="http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture9.pdf" target="_blank" rel="noopener">slide</a>。</p>
-</blockquote>
-</li>
-<li>AlexNet 共有多少参数？<blockquote>
-<p>总共约有6000万个参数。具体计算可以参考<a href="https://stackoverflow.com/questions/40060949/how-to-calculate-the-number-of-parameters-of-alexnet" target="_blank" rel="noopener">Stackoverflow 的问题</a>。特别需要注意卷积层参数的计算方法。最终全连接层约有5700万参数，卷积层约有300万参数。</p>
-</blockquote>
-</li>
-<li>AlexNet 的激活函数是什么？为什么不选择传统的 Sigmoid？<blockquote>
-<p>ReLU(Rectified Linear Unit)。ReLU 与 Sigmoid 相比有如下优势<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
-<ul>
-<li>不容易饱和（反向传播计算梯度时）。</li>
-<li>计算效率高。</li>
-<li>训练时收敛速度快。</li>
-</ul>
-</blockquote>
-</li>
-<li>AlexNet 如何防止过拟合？<blockquote>
-<p>主要用了两种方法：（1）Data Augmentation.（2）Dropout<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>.</p>
-</blockquote>
-</li>
-<li>AlexNet 的优化求解算法是什么？与传统 SGD 相比有何优势？<blockquote>
-<p>算法是带有 weight decay 的 SGD + Momentum。与传统 SGD 相比有如下优势：</p>
-<ul>
-<li>传统 SGD 优化时会沿梯度较陡方向振荡，梯度较缓方向优化较慢。 </li>
-<li>传统 SGD 无法摆脱局部最优及鞍点。 </li>
-<li>传统 SGD 由于随机样本带来的噪声，易出现振荡。 </li>
-</ul>
-</blockquote>
-</li>
-</ul>
-<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none; padding-left: 0;"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">1.</span><span style="display: inline-block; vertical-align: top;"><a href="http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture6.pdf" target="_blank" rel="noopener">CS231n Lecture 6 slide</a></span><a href="#fnref:1" rev="footnote"> ↩</a></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">2.</span><span style="display: inline-block; vertical-align: top;"><a href="https://arxiv.org/abs/1207.0580" target="_blank" rel="noopener">Hinton 2012年发表的论文</a></span><a href="#fnref:2" rev="footnote"> ↩</a></li></ol></div></div>]]></content>
-      
-        <categories>
-            
-            <category> 工作 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> CV </tag>
-            
-            <tag> DL </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[换外币现汇/现钞攻略]]></title>
       <url>http://tommyjiang.github.io/2018/2018-02-05-cash-BOC/</url>
       <content type="html"><![CDATA[<p>继去年香港刷卡被 DCC 坑，又被中行换现钞坑了一波。</p>
@@ -4411,110 +3357,6 @@ AlexNet 笔记
         <tags>
             
             <tag> Tips </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Deep Learning with Python 2017 第五章笔记]]></title>
-      <url>http://tommyjiang.github.io/2018/2018-01-30-deep-learning-with-python-2017/</url>
-      <content type="html"><![CDATA[<p>第五章主要介绍的计算机视觉相关内容，做个笔记。</p>
-<a id="more"></a>
-<h1 id="5-1-Intro-to-convnets"><a href="#5-1-Intro-to-convnets" class="headerlink" title="5.1 Intro to convnets"></a>5.1 Intro to convnets</h1><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><ul>
-<li>什么是卷积神经网络？</li>
-<li>卷积神经网络和传统神经网络相比有什么区别？</li>
-<li>卷积神经网络中的“卷积”是什么含义？</li>
-<li>卷积神经网络具有哪些性质使它特别适合图像处理？</li>
-<li>卷积神经网络的参数主要有哪些？</li>
-</ul>
-<h2 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h2><ul>
-<li>什么是卷积神经网络（Convolutional Neural Network, CNN）？<blockquote>
-<p>卷积神经网络的样子可以参考 CS231n 的 <a href="http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture5.pdf" target="_blank" rel="noopener">slide</a>。简单来说，对于一个 32×32×3 的图片，全连接神经网络共有 32×32×3=3072 个权重 + 1个偏置共 3073 个参数，最后输出结果维数为 1×1×1；而对于一个 n×5×5×3 的卷积神经网络，对于其中任意一个 5×5×3 的 filter，共有 5×5×3=75 个权重 + 1 个偏置共 76 个参数，该 filter 在原始图片上滑动产生输出，最终每个 filter 输出结果为 28×28×1，整个卷积神经网络的输出为 n×28×28×1。</p>
-</blockquote>
-</li>
-<li>CNN 和传统神经网络相比有什么区别？ <blockquote>
-<p>传统神经网络的输入是整个图片，网络与图片中的每个点均相连，权重为图片所有点的个数（因此也叫<code>Dense Network</code>），图片中的所有信息都对最后的输出有贡献；CNN 虽然输入的也是整个图片，但每个输出只和 filter 同样大小的图片有关（例如上面的例子是每个输出只和 5×5×3=75 个点有关，这也即著名的感受野，英文为 <a href="https://en.wikipedia.org/wiki/Receptive_field#In_the_context_of_neural_networks" target="_blank" rel="noopener">Receptive Field</a>），由于单个输入尺寸较小，而且滑动时 CNN 中 filter 的权重参数不变，因此与全连接神经网络相比，CNN 的权重参数要少很多。</p>
-</blockquote>
-</li>
-<li>卷积神经网络中的“卷积”是什么含义？<blockquote>
-<p>卷积是一种数学上的运算，在线性系统的响应计算中有明确的物理意义，可以参考知乎这个<a href="https://www.zhihu.com/question/22298352/answer/34267457" target="_blank" rel="noopener">回答</a>。在 CNN 中，filter 滑动进行计算生成信号和卷积运算类似。</p>
-</blockquote>
-</li>
-<li>卷积神经网络具有哪些性质使它特别适合图像处理？<br>主要有以下两点：<ul>
-<li>CNN 学习的特征具有空间不变性。在某一图片某一区域学得的特征，在其他图片其他区域均可以应用。</li>
-<li>CNN 可以学习一定层级的特征。底层 layer 主要学习基本特征，上层 layer 主要学习抽象特征。</li>
-</ul>
-</li>
-<li>卷积神经网络的参数主要有哪些？<br>主要包括 patch size，depth，padding 和 stride。</li>
-</ul>
-]]></content>
-      
-        <categories>
-            
-            <category> 技术 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> Computer Vision </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[计算机视觉资料汇总]]></title>
-      <url>http://tommyjiang.github.io/2018/2018-01-30-computer-vision/</url>
-      <content type="html"><![CDATA[<p>CV 资料汇总</p>
-<a id="more"></a>
-<p>去年曾经写过一篇介绍机器学习资料的<a href="http://tommyjiang.coding.me/2017/2017-07-15-machine-learning/" target="_blank" rel="noopener">博文</a>，现在具体做计算机视觉(Computer Vision)方向，那就再总结下 CV 方向的资料。</p>
-<h1 id="公开课"><a href="#公开课" class="headerlink" title="公开课"></a>公开课</h1><ul>
-<li><a href="http://cs231n.stanford.edu/" target="_blank" rel="noopener">Stanford CS231n</a>：神课，不多说。</li>
-<li><a href="http://speech.ee.ntu.edu.tw/~tlkagk/courses_ML17_2.html" target="_blank" rel="noopener">NTU Machine Learning 2017 Fall</a>：台湾国立大学李宏毅老师的机器学习课程，有关于卷积神经网络的 <a href="http://speech.ee.ntu.edu.tw/~tlkagk/courses/ML_2017/Lecture/CNN.pdf" target="_blank" rel="noopener">slide</a>。</li>
-</ul>
-<h1 id="书籍"><a href="#书籍" class="headerlink" title="书籍"></a>书籍</h1><ul>
-<li><a href="https://book.douban.com/subject/27038207/" target="_blank" rel="noopener">Deep Learning with Python</a>：<code>Keras</code>作者出的书，第5章是关于 CV 的。</li>
-</ul>
-]]></content>
-      
-        <categories>
-            
-            <category> 技术 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> Computer Vision </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[PyCharm 心得]]></title>
-      <url>http://tommyjiang.github.io/2018/2018-01-30-pycharm/</url>
-      <content type="html"><![CDATA[<p>PyCharm 使用心得。</p>
-<a id="more"></a>
-<h1 id="PyCharm-环境变量配置"><a href="#PyCharm-环境变量配置" class="headerlink" title="PyCharm 环境变量配置"></a>PyCharm 环境变量配置</h1><p>应该算最坑的一点，和系统的（例如<code>.bashrc</code>）有区别，需要单独设置。设置方法：Run -&gt; Edit Configurations -&gt; Environment -&gt; Environment Variables -&gt; 最右… -&gt; 左下 + -&gt; Name: PYTHONPATH, Value: 需要设置的路径</p>
-]]></content>
-      
-        <categories>
-            
-            <category> 技术 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> Python </tag>
-            
-            <tag> PyCharm </tag>
             
         </tags>
         
@@ -4571,7 +3413,7 @@ AlexNet 笔记
       <content type="html"><![CDATA[<p>全球各地气候统计数据可视化分析，旅游出行好帮手。</p>
 <a id="more"></a>
 <p>之前忘了在哪看到过 <a href="https://weatherspark.com/" target="_blank" rel="noopener">Weather Spark 这个网站</a>，觉得统计数据非常全，而且展现方式也很漂亮。这次特意记下来，出去旅游的话可以参考。</p>
-<h1 id="整体介绍"><a href="#整体介绍" class="headerlink" title="整体介绍"></a>整体介绍</h1><p>以<a href="https://weatherspark.com/y/131055/Average-Weather-in-Beijing-China-Year-Round" target="_blank" rel="noopener">北京全年天气</a>为例，看看这个网站都有哪些内容。 </p>
+<h1 id="整体介绍"><a href="#整体介绍" class="headerlink" title="整体介绍"></a>整体介绍</h1><p>以<a href="https://weatherspark.com/y/131055/Average-Weather-in-Beijing-China-Year-Round" target="_blank" rel="noopener">北京全年天气</a>为例，看看这个网站都有哪些内容。</p>
 <ul>
 <li>天气概述</li>
 <li>温度</li>
@@ -4617,33 +3459,6 @@ AlexNet 笔记
         <tags>
             
             <tag> 数据 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[服务器远程调试工具]]></title>
-      <url>http://tommyjiang.github.io/2018/2018-01-23-remote-working/</url>
-      <content type="html"><![CDATA[<p>工欲善其事，必先利其器。</p>
-<a id="more"></a>
-<h1 id="远程调试-PyCharm-Professional"><a href="#远程调试-PyCharm-Professional" class="headerlink" title="远程调试 PyCharm Professional"></a>远程调试 PyCharm Professional</h1><p>写代码简单，调代码难，在同一套环境中调代码更难，配过环境的同志都懂得环境配置的痛苦。直接在服务器上调试代码可以完美解决这个问题，只需稳定的网络就能保证环境的一致性。<a href="https://www.jetbrains.com/pycharm/download/#section=mac" target="_blank" rel="noopener">PyCharm Professional</a>可以远程<code>ssh</code>到服务器调试，具体流程可以参考<a href="https://blog.lishubing.net/2015/11/09/pycharm-remote-deploy-and-debug/" target="_blank" rel="noopener">使用 Pycharm 通过 SSH 同步代码与远程调试</a>。</p>
-<h1 id="远程文件传输-GUI-Cyberduck"><a href="#远程文件传输-GUI-Cyberduck" class="headerlink" title="远程文件传输 GUI Cyberduck"></a>远程文件传输 GUI Cyberduck</h1><p>有时候需要把服务器的文件拷贝到本地，虽说可以用<code>scp</code>命令但没有 GUI 总感觉不太直观。Mac 下可以用免费的<a href="https://cyberduck.io/" target="_blank" rel="noopener">Cyberduck</a>建立 SFTP 连接，非常方便。</p>
-<h1 id="远程文件传输命令-scp"><a href="#远程文件传输命令-scp" class="headerlink" title="远程文件传输命令 scp"></a>远程文件传输命令 scp</h1><p>GUI 直观，但是操作比较繁琐。对于从一个服务器向另一个服务器拷贝文件的操作，可以直接利用<code>scp</code>命令，基本格式如下：</p>
-<pre><code class="lang-bash">scp [-r] [[user@]host1:]file1 ... [[user@]host2:]file2
-</code></pre>
-]]></content>
-      
-        <categories>
-            
-            <category> 技术 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 工具 </tag>
             
         </tags>
         
@@ -4788,7 +3603,7 @@ AlexNet 笔记
 </table>
 
 <div style="min-height: 500px; width: 100%;" id="container"></div>
-    
+
 <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.4&key=78b4d9401faf42bd388b9bbf4aa3bfd0"></script>
 
 <script>
@@ -4796,7 +3611,7 @@ AlexNet 笔记
         resizeEnable: true,
         center: [116.336455, 39.889884], // 达官营
         zoom: 15
-    });    
+    });
 
     map.clearMap();  // 清除地图覆盖物
 
@@ -4834,10 +3649,10 @@ AlexNet 笔记
         infoWindow.setContent(e.target.content);
         infoWindow.open(map, e.target.getPosition());
     }
-    
+
     // map.setFitView();
 </script>
-    
+
 
 ]]></content>
       
@@ -4902,33 +3717,6 @@ AlexNet 笔记
             
         </categories>
         
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Excel 图转成矢量图插入 Word 教程]]></title>
-      <url>http://tommyjiang.github.io/2017/2017-10-23-Excel-image-to-vector-image-to-Word/</url>
-      <content type="html"><![CDATA[<a id="more"></a>
-<ol>
-<li>Excel 做图，另存为 PDF。</li>
-<li>Adobe Acrobat 裁剪页面，去掉白边。</li>
-<li>用 <a href="https://inkscape.org/en/" target="_blank" rel="noopener">Inkscape</a> 将 PDF 转换为 emf 格式。</li>
-<li>将 emf 格式插入 Word。</li>
-</ol>
-]]></content>
-      
-        <categories>
-            
-            <category> 技术 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 办公 </tag>
-            
-        </tags>
         
     </entry>
     
@@ -5066,51 +3854,6 @@ AlexNet 笔记
     </entry>
     
     <entry>
-      <title><![CDATA[机器学习相关资源汇总]]></title>
-      <url>http://tommyjiang.github.io/2017/2017-07-15-machine-learning/</url>
-      <content type="html"><![CDATA[<p>机器学习相关资源汇总</p>
-<a id="more"></a>
-<h1 id="书籍"><a href="#书籍" class="headerlink" title="书籍"></a>书籍</h1><h2 id="机器学习通论"><a href="#机器学习通论" class="headerlink" title="机器学习通论"></a>机器学习通论</h2><ul>
-<li><a href="https://book.douban.com/subject/26708119/" target="_blank" rel="noopener">机器学习 周志华</a></li>
-<li><a href="https://book.douban.com/subject/10590856/" target="_blank" rel="noopener">统计学习方法 李航</a></li>
-<li><a href="https://book.douban.com/subject/2061116/" target="_blank" rel="noopener">Pattern Recognition And Machine Learning(PRML). Christopher Bishop</a></li>
-<li><a href="https://book.douban.com/subject/3294335/" target="_blank" rel="noopener">The Elements of Statistical Learning(ESL). Trevor Hastie</a></li>
-<li><a href="https://book.douban.com/subject/10758624/" target="_blank" rel="noopener">Machine Learning-A Probabilistic Perspective(MLAPP). Kevin P. Murphy</a></li>
-</ul>
-<h2 id="数据可视化"><a href="#数据可视化" class="headerlink" title="数据可视化"></a>数据可视化</h2><ul>
-<li><a href="https://book.douban.com/subject/25760272/" target="_blank" rel="noopener">数据可视化 陈为</a></li>
-<li><a href="https://book.douban.com/subject/19952397/" target="_blank" rel="noopener">鲜活的数据 Nathan Yau</a></li>
-<li><a href="https://book.douban.com/subject/6439420/" target="_blank" rel="noopener">数据可视化之美 Julie Steele</a></li>
-</ul>
-<h1 id="课程"><a href="#课程" class="headerlink" title="课程"></a>课程</h1><ul>
-<li><a href="http://cs229.stanford.edu/" target="_blank" rel="noopener">Machine Learning. Stanford University</a></li>
-<li><a href="https://www.edx.org/course/learning-data-introductory-machine-caltechx-cs1156x-0" target="_blank" rel="noopener">Learning From Data. Caltech</a></li>
-<li><a href="http://www3.nd.edu/~rjohns15/cse40647.sp14/www/home.php" target="_blank" rel="noopener">Data Mining. University of Notre Dame</a></li>
-<li><a href="http://courses.cs.washington.edu/courses/cse546/16au/" target="_blank" rel="noopener">Machine Learning. University of Washington</a></li>
-</ul>
-<h1 id="Kaggle-比赛"><a href="#Kaggle-比赛" class="headerlink" title="Kaggle 比赛"></a>Kaggle 比赛</h1><ul>
-<li><a href="https://www.kaggle.com/c/titanic" target="_blank" rel="noopener">Titanic: Machine Learning from Disaster(Supervised/Classification)</a></li>
-<li><a href="https://www.kaggle.com/c/house-prices-advanced-regression-techniques" target="_blank" rel="noopener">House Prices: Advanced Regression Techniques(Supervised/Regression)</a></li>
-<li><a href="https://www.kaggle.com/c/digit-recognizer" target="_blank" rel="noopener">Digit Recognizer(Supervised/Classification)</a></li>
-</ul>
-]]></content>
-      
-        <categories>
-            
-            <category> Geek </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> Machine Learning </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[一刻 Talks 所感（投稿）]]></title>
       <url>http://tommyjiang.github.io/2017/2017-06-24-yike-talk/</url>
       <content type="html"><![CDATA[<p>大厨投稿。</p>
@@ -5170,7 +3913,7 @@ AlexNet 笔记
 <li>冰虾</li>
 </ul>
 <h2 id="Tips-1"><a href="#Tips-1" class="headerlink" title="Tips"></a>Tips</h2><ol>
-<li>龙利鱼先切成小块，用料酒、姜丝、油腌制15分钟。之后加油炒西红柿，放入蒜末炒制西红柿成汤状。随后放入煮好的龙利鱼和汤加盐出锅。 </li>
+<li>龙利鱼先切成小块，用料酒、姜丝、油腌制15分钟。之后加油炒西红柿，放入蒜末炒制西红柿成汤状。随后放入煮好的龙利鱼和汤加盐出锅。</li>
 <li>蒜是神器，切细末，多放蒜。</li>
 </ol>
 <h2 id="寄语-1"><a href="#寄语-1" class="headerlink" title="寄语"></a>寄语</h2><p>大厨寄语：新开发的菜品，番茄龙利鱼汤，酸酸烫烫的，简直太好喝啦！大厨减肥也可以喝得汤，嘻嘻，简直幸福满满呀！放入蒜之后吃不出来，但是味道浓郁up，蒜简直真是一个好东西！我爱大蒜！另外，我真的是愿意做饭的，当然作为大吃货一个也喜欢在外面直接吃饭+外面吃饭的氛围。。。这并不矛盾，嘻嘻。<span style="color:#FF66CC">我爱生活，我爱猪猪。</span>🐷</p>
@@ -5288,69 +4031,6 @@ AlexNet 笔记
     </entry>
     
     <entry>
-      <title><![CDATA[Mac 上安装 xgboost 教程]]></title>
-      <url>http://tommyjiang.github.io/2017/2017-04-18-install-xgboost-on-mac/</url>
-      <content type="html"><![CDATA[<p>关于如何在 Mac 上安装 xgboost。</p>
-<a id="more"></a>
-<h1 id="关于xgboost"><a href="#关于xgboost" class="headerlink" title="关于xgboost"></a>关于xgboost</h1><p><a href="https://github.com/dmlc/xgboost" target="_blank" rel="noopener"><code>xgboost</code></a>是华盛顿大学的<a href="">陈天奇</a>开发的一个可以高效实现 gradient boosting 的库。<code>Kaggle</code>竞赛前5%名次获得者 Linghao Zhang 在博文<a href="https://dnc1994.com/2016/04/rank-10-percent-in-first-kaggle-competition/" target="_blank" rel="noopener">如何在 Kaggle 首战中进入前 10%</a>中提到：</p>
-<blockquote>
-<p>当然，这里不能不提一下 Xgboost。Gradient Boosting 本身优秀的性能加上 Xgboost 高效的实现，使得它在 Kaggle 上广为使用。几乎每场比赛的获奖者都会用 Xgboost 作为最终 Model 的重要组成部分。在实战中，我们往往会以 Xgboost 为主来建立我们的模型并且验证 Feature 的有效性。</p>
-</blockquote>
-<h1 id="安装方法"><a href="#安装方法" class="headerlink" title="安装方法"></a>安装方法</h1><p><code>xgboost</code>官网有针对 Mac 的<a href="http://xgboost.readthedocs.io/en/latest/build.html" target="_blank" rel="noopener">安装教程</a>，但对新手不算太友好。IBM 提供了更为详细的<a href="https://www.ibm.com/developerworks/community/blogs/jfp/entry/Installing_XGBoost_on_Mac_OSX?lang=zh" target="_blank" rel="noopener">教程</a>。简书上也有一篇类似的<a href="http://www.jianshu.com/p/b0ac60dc84b9" target="_blank" rel="noopener">教程</a>。</p>
-<p>具体步骤如下：</p>
-<ol>
-<li>安装<code>homebrew</code>。</li>
-<li>利用<code>homebrew</code>安装<code>gcc</code>。</li>
-<li>选择用户根目录作为安装<code>xgboost</code>的地址，<code>git clone xgboost</code>仓库。</li>
-<li>进入<code>xgboost</code>目录编译。</li>
-<li>（可选）安装<code>Python</code>包。</li>
-</ol>
-<p>第4步编译时，有可能提示<code>gcc</code>版本问题，可以通过在终端中输入如下命令解决：</p>
-<pre><code class="lang-bash">export CXX=/usr/local/Cellar/gcc/6.3.0_1/bin/g++-6
-</code></pre>
-<p>注意将上面命令中的<code>6.3.0_1</code>替换成安装的实际版本。</p>
-]]></content>
-      
-        <categories>
-            
-            <category> Geek </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> Machine Learning </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[博客评论系统由多说迁移至友言]]></title>
-      <url>http://tommyjiang.github.io/2017/2017-03-22-duoshuo-to-youyan/</url>
-      <content type="html"><![CDATA[<p>多说发布通知，宣布即将关闭，博客评论系统迁移至友言。</p>
-<a id="more"></a>
-<p>昨天多说官网发布通知，宣布<a href="http://dev.duoshuo.com/threads/58d1169ae293b89a20c57241" target="_blank" rel="noopener">多说即将关闭</a>。感谢多说长久以来坚持维护的评论系统，从即日起本博客评论系统迁移至<a href="http://www.uyan.cc/" target="_blank" rel="noopener">友言</a>。</p>
-<p>注：友言评论系统无法在本地测试，需要先发布到服务器上再进行测试。</p>
-]]></content>
-      
-        <categories>
-            
-            <category> Geek </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 博客 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[2016 年风电并网运行情况]]></title>
       <url>http://tommyjiang.github.io/2017/2017-02-05-wind-waste-2016/</url>
       <content type="html"><![CDATA[<p>本文数据来源：<a href="http://www.nea.gov.cn/2017-01/26/c_136014615.htm" target="_blank" rel="noopener">国家能源局官网</a>。</p>
@@ -5373,7 +4053,7 @@ AlexNet 笔记
 <script src="http://cdn.bootcss.com/echarts/3.4.0/echarts.min.js"></script>
 <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
 
-<script> 
+<script>
 
 var myChart = echarts.init(document.getElementById('newInstalled'));
 
@@ -5466,7 +4146,7 @@ var myChart = echarts.init(document.getElementById('newInstalled'));
 myChart.setOption(option,true); //当setOption第二个参数为true时，会阻止数据合并
 </script>
 
-<script> 
+<script>
 
 //初始化
 
@@ -5564,7 +4244,7 @@ myChart2.setOption(option,true); //当setOption第二个参数为true时，会�
 
 
 
-<script> 
+<script>
 
 //初始化
 
@@ -5662,7 +4342,7 @@ myChart3.setOption(option,true); //当setOption第二个参数为true时，会�
 
 
 
-<script> 
+<script>
 
 //初始化
 
@@ -5760,7 +4440,7 @@ myChart4.setOption(option,true); //当setOption第二个参数为true时，会�
 
 
 
-<script> 
+<script>
 
 var myChart5 = echarts.init(document.getElementById('totalWasteRatio'));
 
@@ -5856,7 +4536,7 @@ myChart5.setOption(option,true); //当setOption第二个参数为true时，会�
 
 
 
-<script> 
+<script>
 
 var myChart6 = echarts.init(document.getElementById('totalHour'));
 
@@ -5978,7 +4658,7 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
 <p>大年三十初中同学建了个微信群，80%的都不说话在里面抢红包……同学是用来怀念的，拉个群不知道聊啥确实挺尴尬的。</p>
 <p>年也过完了，好好策划下2月的计划吧。</p>
 <h1 id="2月计划"><a href="#2月计划" class="headerlink" title="2月计划"></a>2月计划</h1><p>大言不惭地说一句：我个人的执行力很强，所以定了计划一般都要拼死执行，不过还是给自己留点弹性，生活太一板一眼的话会很累。</p>
-<h2 id="Geek"><a href="#Geek" class="headerlink" title="Geek"></a>Geek</h2><p>继续学习 Python，单刷两本 Python 数据分析相关书籍。 </p>
+<h2 id="Geek"><a href="#Geek" class="headerlink" title="Geek"></a>Geek</h2><p>继续学习 Python，单刷两本 Python 数据分析相关书籍。</p>
 <ul>
 <li>☐ <a href="https://book.douban.com/subject/25779298/" target="_blank" rel="noopener">利用 Python 进行数据分析</a>(Python for Data Analysis 中文版)</li>
 <li>☐ <a href="https://book.douban.com/subject/25921015/" target="_blank" rel="noopener">Python for Finance</a></li>
@@ -6433,19 +5113,19 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
 <pre><code class="lang-html">    &lt;div style=&quot;min-height: 800px; width: 100%;&quot; id=&quot;map&quot;&gt;
     &lt;/div&gt;
 </code></pre>
-<p>然后利用百度地图 API 在<code>div</code>中填充一个地图： </p>
+<p>然后利用百度地图 API 在<code>div</code>中填充一个地图：</p>
 <pre><code class="lang-javascript">&lt;script type=&quot;text/javascript&quot;&gt;
-    // 百度地图API功能
-    var map = new BMap.Map(&quot;map&quot;);    // 创建Map实例
-    map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
-    //添加地图类型控件
-    map.addControl(new BMap.MapTypeControl({
-    mapTypes:[
+        // 百度地图API功能
+        var map = new BMap.Map(&quot;map&quot;);    // 创建Map实例
+        map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
+        //添加地图类型控件
+        map.addControl(new BMap.MapTypeControl({
+        mapTypes:[
             BMAP_NORMAL_MAP,
             BMAP_HYBRID_MAP
-        ]}));      
-    map.setCurrentCity(&quot;北京&quot;);          // 设置地图显示的城市 此项是必须设置的
-    map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+        ]}));
+        map.setCurrentCity(&quot;北京&quot;);          // 设置地图显示的城市 此项是必须设置的
+        map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
 &lt;/script&gt;
 </code></pre>
 <p>上述代码直接放在 Hexo Markdown 博文中的<code>raw</code>标签中，即：</p>
@@ -6459,31 +5139,31 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
 
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=x2V7KanMxVA2GuK7oFHPOiGytFSXWoyN"></script>
     <script type="text/javascript">
-	    // 百度地图API功能
-	    var map = new BMap.Map("map");    // 创建Map实例
-	    map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
-	    //添加地图类型控件
-	    map.addControl(new BMap.MapTypeControl({
-	    mapTypes:[
+            // 百度地图API功能
+            var map = new BMap.Map("map");    // 创建Map实例
+            map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
+            //添加地图类型控件
+            map.addControl(new BMap.MapTypeControl({
+            mapTypes:[
                 BMAP_NORMAL_MAP,
                 BMAP_HYBRID_MAP
-            ]}));	  
-	    map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
-	    map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
-        
-    	// 百度地图API功能
-    	// var map = new BMap.Map("map");    // 创建Map实例
-    	// map.centerAndZoom(new BMap.Point(98.98284,18.787971), 15);  // 初始化地图,设置中心点坐标和地图级别
-    	// //添加地图类型控件
-    	// map.addControl(new BMap.MapTypeControl({
-    	// mapTypes:[
+            ]}));
+            map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+            map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+
+        // 百度地图API功能
+        // var map = new BMap.Map("map");    // 创建Map实例
+        // map.centerAndZoom(new BMap.Point(98.98284,18.787971), 15);  // 初始化地图,设置中心点坐标和地图级别
+        // //添加地图类型控件
+        // map.addControl(new BMap.MapTypeControl({
+        // mapTypes:[
         //         BMAP_NORMAL_MAP
-        //     ]}));	  
-    	// map.setCurrentCity("清迈");          // 设置地图显示的城市 此项是必须设置的
-    	// map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
-        // var point = new BMap.Point(98.965718,18.795633);    
-        // var marker = new BMap.Marker(point);        // 创建标注    
-        // map.addOverlay(marker);                     // 将标注添加到地图中 
+        //     ]}));
+        // map.setCurrentCity("清迈");          // 设置地图显示的城市 此项是必须设置的
+        // map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+        // var point = new BMap.Point(98.965718,18.795633);
+        // var marker = new BMap.Marker(point);        // 创建标注
+        // map.addOverlay(marker);                     // 将标注添加到地图中
     </script>
 
 ]]></content>
@@ -6847,11 +5527,11 @@ conda config --set show_channel_urls yes
 </code></pre>
 <h1 id="Win"><a href="#Win" class="headerlink" title="Win"></a>Win</h1><p>Win 下稍微麻烦一些，如果直接在 <code>cmd</code> 中输入上述命令，<code>conda install</code> 的时候会报错：</p>
 <blockquote>
-<p>Error: Could not find anaconda.org user ‘https: </p>
+<p>Error: Could not find anaconda.org user ‘https:</p>
 </blockquote>
 <p>方法是修改 <code>.condarc</code> 文件为以下形式(参考<a href="http://blog.5ibc.net/p/87204.html" target="_blank" rel="noopener">该网址</a>)：</p>
-<pre><code class="lang-bash">channels: 
-- https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/ 
+<pre><code class="lang-bash">channels:
+- https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
 - defaults
 
 show_channel_urls: yes
@@ -7198,7 +5878,7 @@ Airline();
 
 function TripMap(){
     var myTripMap = echarts.init(document.getElementById('tripMap'));
-    
+
     var data = [
         {name: '海门', value: 9},
         {name: '鄂尔多斯', value: 12},
@@ -7391,7 +6071,7 @@ function TripMap(){
         {name: '武汉', value: 273},
         {name: '大庆', value: 279}
     ];
-    
+
     var geoCoordMap = {
         '海门':[121.15,31.89],
         '鄂尔多斯':[109.781327,39.608266],
@@ -7584,7 +6264,7 @@ function TripMap(){
         '武汉':[114.31,30.52],
         '大庆':[125.03,46.58]
     };
-    
+
     var convertData = function (data) {
         var res = [];
         for (var i = 0; i < data.length; i++) {
@@ -7598,7 +6278,7 @@ function TripMap(){
         }
         return res;
     };
-    
+
     function getData(point) {
     var A = point[0],
         B = point[1],
@@ -7640,7 +6320,7 @@ function TripMap(){
     }
     return points;
 }
-    
+
     function renderItem(params, api) {
         var coords = [
             [116.7,39.53],
@@ -7671,7 +6351,7 @@ function TripMap(){
             })
         };
     }
-    
+
     option = {
         // backgroundColor: '#404a59',
         title: {
@@ -8518,48 +7198,6 @@ function FlightStat(){
         <tags>
             
             <tag> 铁路 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[MATLAB 中利用 m 文件修改 Simulink 模型参数的方法]]></title>
-      <url>http://tommyjiang.github.io/2015/2015-08-10-Simulink-m-file/</url>
-      <content type="html"><![CDATA[<p>介绍在 MATLAB 中利用 m 文件修改 Simulink 中模型参数的方法。</p>
-<a id="more"></a>
-<h1 id="电力系统仿真工具"><a href="#电力系统仿真工具" class="headerlink" title="电力系统仿真工具"></a>电力系统仿真工具</h1><p>我个人博士论文的隐名评审意见中有如下评语：</p>
-<blockquote>
-<p>除第二章的简单实验外，本文的所有结论均源于仿真，这大大降低了本文的创新性和说服力。</p>
-</blockquote>
-<p>说实话，和任何事一样，博士毕业其实是实力和运气综合作用的结果，尤其是研究生院负责的论文盲审环节，虽然可以填最多3个需要回避的老师，但也容易送到学术观点有争议或者导师的“宿敌”手中。比如我个人的这个评审意见——审我论文的这位老师很有可能是电力电子方向而不是电力系统方向的，因为电力系统方向的老师肯定清楚，目前电力系统领域的绝大多数研究，只能依靠仿真，因此不太会给出上述评语。但我还是应该感谢下这位老师，因为他虽然在评审时给了我2个C（一共4小项），但最后总评很厚道地给了个B，不然我还要继续在学校读博……</p>
-<p>说回电力系统的仿真工具，我个人了解的有以下软件：BPA、PSASP、MATLAB/Simulink、PSCAD、PSS/E、PowerFactory、RTDS、RT-Lab、PXI……这方面可以参考<a href="http://wenku.baidu.com/link?url=lyB8iBkcX7HUakjhmgnWHX0xNV7-E3RIWFrzxDXEgmgs4NYdomg6YlY2hBDBSOuXJ8JWKW0Amu6lZMeB_8HzXz4yjLper1sGNdGPOJajAQO" target="_blank" rel="noopener">武大曹博的PPT</a>，里面有关于各软件的详细说明和对比。就我个人而言，更喜欢用<em>纯代码</em>进行仿真，原因是纯代码调试起来更为方便，而且也更容易进行版本管理。但电力系统仿真中应用纯代码的情形毕竟较少，一般与优化相关的研究更偏好用纯代码，但动态仿真绝大多数时候还是要用 GUI 仿真软件。</p>
-<p>MATLAB/Simulink 就是一个常用的仿真工具，它的突出优点是可以和 MATLAB 代码完美对接。但利用 Simulink 模型进行仿真时，如果需要在某些时刻改变系统参数，利用 GUI 界面进行设置会比较麻烦，可以利用 m 文件实现，具体方法如下。</p>
-<h2 id="m-文件修改-Simulink-模型参数的方法"><a href="#m-文件修改-Simulink-模型参数的方法" class="headerlink" title="m 文件修改 Simulink 模型参数的方法"></a>m 文件修改 Simulink 模型参数的方法</h2><p>利用 m 文件修改 Simulink 模型参数方法的总体思想如下：首先在初始参数下仿真一段时间，记录该时间结束时系统所有状态量的值，之后修改系统参数，再以上一次仿真结束时记录的系统所有状态量的值作为初值，重新仿真，如此循环往复。</p>
-<p>可以在 m 文件中利用<code>set_param</code>函数设置 Simulink 模型仿真的相关参数：</p>
-<pre><code class="lang-MATLAB">set_param(&#39;ModelName&#39;,&#39;LoadInitialState&#39;,&#39;off&#39;,...
-          &#39;SaveFinalState&#39;,&#39;on&#39;,&#39;SaveCompleteFinalSimState&#39;,&#39;on&#39;,...
-          &#39;FinalStateName&#39;,&#39;xFinal&#39;,&#39;StartTime&#39;,&#39;0&#39;,&#39;StopTime&#39;,&#39;1&#39;);
-</code></pre>
-<p>其中<code>ModelName</code>为 Simulink 模型的文件名，注意第一次仿真不需要载入初值，因此<code>LoadInitialState</code>选项需要设为<code>off</code>，之后的仿真中则需要将该项设置为<code>on</code>。第2行对应的是保存系统状态量终值的相关设置，其中<code>FinalStateName</code>为终值存储的变量名，之后仿真的初值需要设置为该变量名。</p>
-<h1 id="相关问题"><a href="#相关问题" class="headerlink" title="相关问题"></a>相关问题</h1><h2 id="继续进行仿真时提示仿真起始时间与状态变量初始值的时间不同"><a href="#继续进行仿真时提示仿真起始时间与状态变量初始值的时间不同" class="headerlink" title="继续进行仿真时提示仿真起始时间与状态变量初始值的时间不同"></a>继续进行仿真时提示仿真起始时间与状态变量初始值的时间不同</h2><p>利用以上代码实现 m 文件修改 Simulink 模型参数继续仿真的过程中，会遇到如下警告：</p>
-<pre><code>Warning: The start time of model &#39;Exp2_1_SimModel&#39; is different from the start time saved in the initial SimState. The start time has therefore been reset to 0. 
-</code></pre><p>虽然出现了上述警告，但存储仿真结果的变量中，时间仍然是从0开始一直到全部仿真结束对应的时刻，并未出现上述警告中提到的将每次重新仿真的起始时间设置为0的情况。我试了试直接在 Simulink 中加载初始值然后仿真，并未出现上述警告。由于该警告目前对仿真结果并无影响，因此暂时将其忽略，之后如果能解决当然最好，就算解决不了也无大碍。</p>
-<h2 id="Simulink-模型中某些参数无法改变"><a href="#Simulink-模型中某些参数无法改变" class="headerlink" title="Simulink 模型中某些参数无法改变"></a>Simulink 模型中某些参数无法改变</h2><p>电力系统的仿真一般采用 Simulink 中的 SimPower 库，我利用 SimPower 搭建了一个单相半桥 PWM 的仿真模型，可以改变该模型中的调制比参数 m 以及电容电压 V_DC，但无法改变模型中反电势电源的电压幅值 Vs 和支路电阻/电感的值，修改后面二者后 MATLAB 会报以下错误：</p>
-<pre><code>Simulink cannot load the initial SimState because the model,&#39;Exp2_1_SimModel&#39;, was changed after the SimState was saved. Run the simulation again and resave the SimState.
-</code></pre><p>目前还没找到太好的解决方法，只能采用变通的方法。例如修改反电势电源电压幅值可以等效为修改调制比 m，二者对应的电流波形是相同的。</p>
-]]></content>
-      
-        <categories>
-            
-            <category> 技术 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> MATLAB </tag>
             
         </tags>
         

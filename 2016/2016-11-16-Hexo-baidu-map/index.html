@@ -126,19 +126,19 @@
 <pre><code class="lang-html">    &lt;div style=&quot;min-height: 800px; width: 100%;&quot; id=&quot;map&quot;&gt;
     &lt;/div&gt;
 </code></pre>
-<p>然后利用百度地图 API 在<code>div</code>中填充一个地图： </p>
+<p>然后利用百度地图 API 在<code>div</code>中填充一个地图：</p>
 <pre><code class="lang-javascript">&lt;script type=&quot;text/javascript&quot;&gt;
-    // 百度地图API功能
-    var map = new BMap.Map(&quot;map&quot;);    // 创建Map实例
-    map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
-    //添加地图类型控件
-    map.addControl(new BMap.MapTypeControl({
-    mapTypes:[
+        // 百度地图API功能
+        var map = new BMap.Map(&quot;map&quot;);    // 创建Map实例
+        map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
+        //添加地图类型控件
+        map.addControl(new BMap.MapTypeControl({
+        mapTypes:[
             BMAP_NORMAL_MAP,
             BMAP_HYBRID_MAP
-        ]}));      
-    map.setCurrentCity(&quot;北京&quot;);          // 设置地图显示的城市 此项是必须设置的
-    map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+        ]}));
+        map.setCurrentCity(&quot;北京&quot;);          // 设置地图显示的城市 此项是必须设置的
+        map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
 &lt;/script&gt;
 </code></pre>
 <p>上述代码直接放在 Hexo Markdown 博文中的<code>raw</code>标签中，即：</p>
@@ -152,31 +152,31 @@
 
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=x2V7KanMxVA2GuK7oFHPOiGytFSXWoyN"></script>
     <script type="text/javascript">
-	    // 百度地图API功能
-	    var map = new BMap.Map("map");    // 创建Map实例
-	    map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
-	    //添加地图类型控件
-	    map.addControl(new BMap.MapTypeControl({
-	    mapTypes:[
+            // 百度地图API功能
+            var map = new BMap.Map("map");    // 创建Map实例
+            map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
+            //添加地图类型控件
+            map.addControl(new BMap.MapTypeControl({
+            mapTypes:[
                 BMAP_NORMAL_MAP,
                 BMAP_HYBRID_MAP
-            ]}));	  
-	    map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
-	    map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
-        
-    	// 百度地图API功能
-    	// var map = new BMap.Map("map");    // 创建Map实例
-    	// map.centerAndZoom(new BMap.Point(98.98284,18.787971), 15);  // 初始化地图,设置中心点坐标和地图级别
-    	// //添加地图类型控件
-    	// map.addControl(new BMap.MapTypeControl({
-    	// mapTypes:[
+            ]}));
+            map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+            map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+
+        // 百度地图API功能
+        // var map = new BMap.Map("map");    // 创建Map实例
+        // map.centerAndZoom(new BMap.Point(98.98284,18.787971), 15);  // 初始化地图,设置中心点坐标和地图级别
+        // //添加地图类型控件
+        // map.addControl(new BMap.MapTypeControl({
+        // mapTypes:[
         //         BMAP_NORMAL_MAP
-        //     ]}));	  
-    	// map.setCurrentCity("清迈");          // 设置地图显示的城市 此项是必须设置的
-    	// map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
-        // var point = new BMap.Point(98.965718,18.795633);    
-        // var marker = new BMap.Marker(point);        // 创建标注    
-        // map.addOverlay(marker);                     // 将标注添加到地图中 
+        //     ]}));
+        // map.setCurrentCity("清迈");          // 设置地图显示的城市 此项是必须设置的
+        // map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+        // var point = new BMap.Point(98.965718,18.795633);
+        // var marker = new BMap.Marker(point);        // 创建标注
+        // map.addOverlay(marker);                     // 将标注添加到地图中
     </script>
 
 	  
@@ -263,7 +263,7 @@
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    </li><li><a href="/categories/Geek/">Geek<span>14</span></a></li>
+    </li><li><a href="/categories/Geek/">Geek<span>9</span></a></li>
   
 
     </ul>
@@ -312,7 +312,7 @@ var disqus_shortname = 'bigbossjiang';
   </div>
   <div class="container-narrow">
     <footer> <p>
-  &copy; 2019 Tommy Jiang
+  &copy; 2020 Tommy Jiang
   
       with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>

@@ -193,9 +193,9 @@ leetcode();
 
 <!-- 体重 -->
 function weight2019(ec){
-    var weight2019 = echarts.init(document.getElementById('weight2019'), 'macarons'); 
+    var weight2019 = echarts.init(document.getElementById('weight2019'), 'macarons');
     <!-- 填空 体重 -->
-    var data = [["2019-01-01", 76.2], ["2019-01-02", 75.5], ["2019-01-03", 75.6], ["2019-01-04", 75.4], 
+    var data = [["2019-01-01", 76.2], ["2019-01-02", 75.5], ["2019-01-03", 75.6], ["2019-01-04", 75.4],
                 ["2019-01-05", 75.4], ["2019-01-06", 75.8], ["2019-01-07", 75.7], ["2019-01-08", 75.8],
                 ["2019-01-09", 76.2], ["2019-01-10", 75.6], ["2019-01-11", 75.4], ["2019-01-12", 75.0],
                 ["2019-01-13", 75.4], ["2019-01-14", 74.9], ["2019-01-15", 75.0], ['2019-01-16', 74.8],
@@ -248,14 +248,14 @@ function weight2019(ec){
                 ['2019-07-21', 72.5], ['2019-07-22', 72.3], ['2019-07-23', 72.6], ['2019-07-24', 72.3],
                 ['2019-07-25', 72.7], ['2019-07-26', 73.2], ['2019-07-27', 72.9], ['2019-07-28', 72.7],
                 ['2019-07-29', 72.6], ['2019-07-30', 72.3]
-                ] 
+                ]
     var comments = {"2019-01-01": "董董元旦火锅", "2019-01-06": "烤肉乐烧烤自助", "2019-01-13": "海鲜宴",
                     '2019-01-20': '家宴吐了', "2019-02-10": "春节回家", "2019-02-15": "情人节米斯特披萨",
-                    '2019-02-17': '董来元宵节', '2019-03-29': "万人香锅(大蔡、萌哥、小牛)", 
+                    '2019-02-17': '董来元宵节', '2019-03-29': "万人香锅(大蔡、萌哥、小牛)",
                     '2019-05-27': '大宝咖喱饭', '2019-07-02': "贪吃一番街"
                    }
     var option = {
-         title: {text: '2019 体重'}, 
+         title: {text: '2019 体重'},
          tooltip: {
              trigger: 'axis',
              formatter: function (params, ticket, callback) {
@@ -333,7 +333,7 @@ function weight2019(ec){
                     show: false
                 },
                 data: [{
-                    yAxis: 70 
+                    yAxis: 70
                 }, {
                     yAxis: 72
                 }, {
@@ -351,7 +351,7 @@ function weight2019(ec){
 
 <!-- 大宝关系 -->
 function relationship2019(ec){
-    var relationship2019 = echarts.init(document.getElementById('relationship2019')); 
+    var relationship2019 = echarts.init(document.getElementById('relationship2019'));
     <!-- 填空 关系 -->
     var data = [["2019-01-01", 8], ["2019-01-02", 8], ["2019-01-03", 8], ["2019-01-04", 7],
                 ["2019-01-05", 7], ["2019-01-06", 9], ["2019-01-07", 7], ["2019-01-08", 10],
@@ -370,7 +370,7 @@ function relationship2019(ec){
                 ['2019-02-26', 8], ['2019-02-27', 10], ['2019-02-28', 10], ['2019-03-01', 10],
                 ['2019-03-02', 10], ['2019-03-03', 7], ['2019-03-04', 10], ['2019-03-05', 10],
                 ['2019-03-06', 10], ['2019-03-07', 10], ['2019-03-08', 10], ['2019-03-09', 10],
-                ['2019-03-10', 10], ['2019-03-11', 10], ['2019-03-12', 10], ['2019-03-13', 10], 
+                ['2019-03-10', 10], ['2019-03-11', 10], ['2019-03-12', 10], ['2019-03-13', 10],
                 ['2019-03-14', 10], ['2019-03-15', 4], ['2019-03-16', 10], ['2019-03-17', 10],
                 ['2019-03-18', 10], ['2019-03-19', 10], ['2019-03-20', 10], ['2019-03-21', 10],
                 ['2019-03-22', 10], ['2019-03-23', 10], ['2019-03-24', 10], ['2019-03-25', 10],
@@ -426,7 +426,7 @@ function relationship2019(ec){
                     <!-- '2019-05-12': '5(s) + 5', '2019-05-14': '5(s) + 5', -->
                     <!-- '2019-07-09': '2 + 2(涩谷惨案)' -->
                     }
-    var option = { 
+    var option = {
         tooltip: {
             position: 'top',
             formatter: function (params, ticket, callback) {
@@ -473,7 +473,7 @@ function relationship2019(ec){
 
 <!-- Leetcode -->
 function leetcode(ec){
-    var leetcode = echarts.init(document.getElementById('lc')); 
+    var leetcode = echarts.init(document.getElementById('lc'));
 
     <!-- 填空 Leetcode -->
     var data = [["2019-01-01", 219], ["2019-01-02", 219], ["2019-01-03", 225], ["2019-01-04", 228],
@@ -500,7 +500,7 @@ function leetcode(ec){
                 ['2019-03-26', 465], ['2019-03-27', 470], ['2019-03-28', 475], ['2019-03-29', 480],
                 ['2019-03-30', 485], ['2019-03-31', 500]]
     var option = {
-         title: {text: 'Leetcode'}, 
+         title: {text: 'Leetcode'},
          tooltip: {
              trigger: 'axis'
          },
@@ -637,7 +637,7 @@ function leetcode(ec){
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    </li><li><a href="/categories/生活/">生活<span>49</span></a></li>
+    </li><li><a href="/categories/生活/">生活<span>48</span></a></li>
   
 
     </ul>
@@ -686,7 +686,7 @@ var disqus_shortname = 'bigbossjiang';
   </div>
   <div class="container-narrow">
     <footer> <p>
-  &copy; 2019 Tommy Jiang
+  &copy; 2020 Tommy Jiang
   
       with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>

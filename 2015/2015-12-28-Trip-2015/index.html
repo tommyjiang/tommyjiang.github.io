@@ -223,7 +223,7 @@ Airline();
 
 function TripMap(){
     var myTripMap = echarts.init(document.getElementById('tripMap'));
-    
+
     var data = [
         {name: '海门', value: 9},
         {name: '鄂尔多斯', value: 12},
@@ -416,7 +416,7 @@ function TripMap(){
         {name: '武汉', value: 273},
         {name: '大庆', value: 279}
     ];
-    
+
     var geoCoordMap = {
         '海门':[121.15,31.89],
         '鄂尔多斯':[109.781327,39.608266],
@@ -609,7 +609,7 @@ function TripMap(){
         '武汉':[114.31,30.52],
         '大庆':[125.03,46.58]
     };
-    
+
     var convertData = function (data) {
         var res = [];
         for (var i = 0; i < data.length; i++) {
@@ -623,7 +623,7 @@ function TripMap(){
         }
         return res;
     };
-    
+
     function getData(point) {
     var A = point[0],
         B = point[1],
@@ -665,7 +665,7 @@ function TripMap(){
     }
     return points;
 }
-    
+
     function renderItem(params, api) {
         var coords = [
             [116.7,39.53],
@@ -696,7 +696,7 @@ function TripMap(){
             })
         };
     }
-    
+
     option = {
         // backgroundColor: '#404a59',
         title: {
@@ -1567,7 +1567,7 @@ function FlightStat(){
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    </li><li><a href="/categories/生活/">生活<span>49</span></a></li>
+    </li><li><a href="/categories/生活/">生活<span>48</span></a></li>
   
 
     </ul>
@@ -1616,7 +1616,7 @@ var disqus_shortname = 'bigbossjiang';
   </div>
   <div class="container-narrow">
     <footer> <p>
-  &copy; 2019 Tommy Jiang
+  &copy; 2020 Tommy Jiang
   
       with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
