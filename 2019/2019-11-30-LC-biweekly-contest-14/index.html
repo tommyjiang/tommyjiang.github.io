@@ -1,0 +1,514 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  
+  <title>LeetCode Biweekly Contest 14 | Tommy&#39;s Blog</title>
+  <meta name="author" content="Tommy Jiang">
+  
+  <meta name="description" content="LeetCode Biweekly Contest 14.">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="LeetCode Biweekly Contest 14"/>
+  <meta property="og:site_name" content="Tommy&#39;s Blog"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/journal.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/prism.css" media="screen" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  <script src="/js/prism.js" async></script>
+  
+  <!-- analytics -->
+  
+
+
+
+<meta name="generator" content="Hexo 4.2.1"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+<body>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">Tommy&#39;s Blog</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>归档
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>分类
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>标签
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>关于
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> LeetCode Biweekly Contest 14</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  
+<div class="alert alert-info"><i class="fa fa-info"></i>
+LeetCode Biweekly Contest 14.
+</div>
+
+<a id="more"></a>
+<h1 id="问题-1"><a href="#问题-1" class="headerlink" title="问题 1"></a>问题 1</h1><p><a href="https://leetcode.com/problems/hexspeak/" target="_blank" rel="noopener">题目链接</a></p>
+<p>整数转换为 16 进制字符串：</p>
+<ul>
+<li>Python 用自带的 <code>hex</code> 函数。</li>
+<li>C++ 用 <code>stringstream</code> 中的 <code>hex</code>。</li>
+</ul>
+<p>Python</p>
+<pre><code class="lang-python">class Solution:
+    def toHexspeak(self, num: str) -&gt; str:
+        num = hex(int(num))[2:]
+
+        num = num.replace(&#39;1&#39;, &#39;I&#39;).replace(&#39;0&#39;, &#39;O&#39;).upper()
+
+        for x in num:
+            if x not in {&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;, &quot;E&quot;, &quot;F&quot;, &quot;I&quot;, &quot;O&quot;}:
+                return &#39;ERROR&#39;
+
+        return num
+</code></pre>
+<p>C++</p>
+<pre><code class="lang-cpp">class Solution {
+public:
+    string toHexspeak(string num) {
+        auto n = stol(num);
+        stringstream st;
+        st &lt;&lt; hex &lt;&lt; uppercase &lt;&lt; n;  // 用 hex + uppercase 进行转换
+        string s(st.str());
+        for (auto i = 0; i &lt; s.size(); ++i) {
+            if (s[i] &gt; &#39;1&#39; &amp;&amp; s[i] &lt;= &#39;9&#39;) return &quot;ERROR&quot;;
+            if (s[i] == &#39;0&#39;) s[i] = &#39;O&#39;;
+            if (s[i] == &#39;1&#39;) s[i] = &#39;I&#39;;
+        }
+        return s;
+    }
+};
+</code></pre>
+<h1 id="问题-2"><a href="#问题-2" class="headerlink" title="问题 2"></a>问题 2</h1><p><a href="https://leetcode.com/problems/remove-interval/" target="_blank" rel="noopener">题目链接</a></p>
+<p>解法：遍历判断与每个 interval 起始/结束时间的关系。<br>复杂度：时间复杂度 O(n)，空间复杂度 O(n)。</p>
+<p>Python</p>
+<pre><code class="lang-python">class Solution:
+    def removeInterval(self, intervals: List[List[int]],
+                       toBeRemoved: List[int]) -&gt; List[List[int]]:
+        res = []
+
+        s, e = toBeRemoved
+
+        for i, interval in enumerate(intervals):
+            i_s, i_e = interval
+            if s &gt;= i_e or e &lt;= i_s:
+                res.append(interval)
+            else:
+                if i_s &lt; s &lt;= i_e:
+                    res.append([i_s, s])
+                if i_s &lt;= e &lt; i_e:
+                    res.append([e, i_e])
+
+        return res
+</code></pre>
+<p>C++</p>
+<pre><code class="lang-cpp">class Solution {
+public:
+    vector&lt;vector&lt;int&gt;&gt; removeInterval(vector&lt;vector&lt;int&gt;&gt;&amp; intervals,
+                                       vector&lt;int&gt;&amp; toBeRemoved) {
+        vector&lt;vector&lt;int&gt;&gt; res;
+
+        int s = toBeRemoved[0], e = toBeRemoved[1];
+
+        for (int i = 0; i &lt; intervals.size(); i++){
+            int i_s = intervals[i][0], i_e = intervals[i][1];
+
+            if (s &gt;= i_e || e &lt;= i_s){
+                res.push_back(vector&lt;int&gt;{i_s, i_e});
+            } else {
+                if (i_s &lt; s &amp;&amp; s &lt;= i_e) {
+                    res.push_back(vector&lt;int&gt;{i_s, s});
+                }
+                if (i_s &lt;= e &amp;&amp; e &lt; i_e) {
+                    res.push_back(vector&lt;int&gt;{e, i_e});
+                }
+            }
+
+        }
+
+        return res;
+    }
+};
+</code></pre>
+<h1 id="问题-3"><a href="#问题-3" class="headerlink" title="问题 3"></a>问题 3</h1><p><a href="https://leetcode.com/problems/can-make-palindrome-from-substring/" target="_blank" rel="noopener">题目链接</a></p>
+<p>解法：DFS，利用返回值计数。</p>
+<p>复杂度：时间复杂度 O(n)，空间复杂度 O(n)。</p>
+<p>Python</p>
+<pre><code class="lang-python">class Solution:
+    def deleteTreeNodes(self, nodes: int, parent: List[int], value: List[int]) -&gt; int:
+        nei = collections.defaultdict(list)
+
+        for i, x in enumerate(parent):
+            if x != -1:
+                nei[x].append(i)
+
+        self.n = nodes
+
+        def dfs(i):
+            res = value[i]
+            ces = 1
+            for x in nei[i]:
+                s, c = dfs(x)
+                res += s
+                ces += c if s != 0 else 0
+
+            return (res, ces) if res != 0 else (res, 0)
+
+        s, c = dfs(0)
+
+        return c
+</code></pre>
+<p>C++</p>
+<pre><code class="lang-cpp">class Solution {
+public:
+    vector&lt;int&gt; nodeNum(vector&lt;int&gt;&amp; value, int node, unordered_map&lt;int, vector&lt;int&gt;&gt;&amp; nei) {
+        int sum = value[node], count = 1;
+        for (auto &amp;child : nei[node]) {
+            vector&lt;int&gt; res = nodeNum(value, child, nei);
+            sum += res[0];
+            count += (res[0] == 0) ? 0 : res[1];
+        }
+        return {sum, sum == 0 ? 0 : count};
+    }
+    int deleteTreeNodes(int nodes, vector&lt;int&gt;&amp; parent, vector&lt;int&gt;&amp; value) {
+        int root = -1;
+        unordered_map&lt;int, vector&lt;int&gt;&gt; nei;
+
+        for (int i = 0; i &lt; parent.size(); ++i) {
+            nei[parent[i]].push_back(i);
+            if (parent[i] == -1) root = i;
+        }
+        vector&lt;int&gt; res = nodeNum(value, root, nei);
+        return res[1];
+    }
+};
+</code></pre>
+<h1 id="问题-4"><a href="#问题-4" class="headerlink" title="问题 4"></a>问题 4</h1><p><a href="https://leetcode.com/problems/number-of-ships-in-a-rectangle/" target="_blank" rel="noopener">题目链接</a><br>解法：两个坐标二分搜索。</p>
+<p>Python</p>
+<pre><code class="lang-python">class Solution(object):
+    def countShips(self, sea: &#39;Sea&#39;, P: &#39;Point&#39;, Q: &#39;Point&#39;) -&gt; int:
+        res = 0
+        if P.x &gt;= Q.x and P.y &gt;= Q.y and sea.hasShips(P, Q):
+            if P.x == Q.x and P.y == Q.y: return 1
+            mx, my = (P.x + Q.x) // 2, (P.y + Q.y) // 2
+            res += self.countShips(sea, P, Point(mx + 1, my + 1))
+            res += self.countShips(sea, Point(mx, P.y), Point(Q.x, my + 1))
+            res += self.countShips(sea, Point(mx, my), Q)
+            res += self.countShips(sea, Point(P.x, my), Point(mx + 1, Q.y))
+        return res
+</code></pre>
+<p>C++</p>
+<pre><code class="lang-cpp">class Solution {
+public:
+    int countShips(Sea sea, vector&lt;int&gt; topRight, vector&lt;int&gt; bottomLeft) {
+        int res = 0;
+
+        if (topRight[0] &gt;= bottomLeft[0] &amp;&amp; topRight[1] &gt;= bottomLeft[1] 
+            &amp;&amp; sea.hasShips(topRight, bottomLeft)) {
+            if (topRight[0] == bottomLeft[0] &amp;&amp; topRight[1] == bottomLeft[1]) {
+                return 1;
+            }
+            int mx = (topRight[0] + bottomLeft[0]) / 2;
+            int my = (topRight[1] + bottomLeft[1]) / 2;
+            res += countShips(sea, topRight, {mx+1, my+1});
+            res += countShips(sea, {mx, topRight[1]}, {bottomLeft[0], my+1});
+            res += countShips(sea, {mx, my}, bottomLeft);
+            res += countShips(sea, {topRight[0], my}, {mx+1, bottomLeft[1]});
+        }
+
+        return res;
+    }
+};
+</code></pre>
+	  
+	</div>
+
+	<!-- recommended posts -->
+	
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2019/2019-12-01-LC-weekly-contest-165/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2019/2019-09-01-imbalance-in-detection/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+
+    <!-- share -->
+    
+        
+    <div class="bdsharebuttonbox">
+        <a href="#" class="bds_more" data-cmd="more"></a>
+        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+        <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+        <a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+        <a href="#" class="bds_evernotecn" data-cmd="evernotecn" title="分享到印象笔记"></a>
+        <a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a>
+        <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+    </div>
+    <script>
+        window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};
+        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+
+
+        
+
+    
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">留言</h2>
+  
+  	 <div id="disqus_thread">
+     <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+  	 </div>
+  
+</section>
+
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2019-12-01 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/工作/">工作<span>9</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/LeetCode/">LeetCode<span>3</span></a></li>
+    </ul>
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+<script type="text/javascript">
+var disqus_shortname = 'bigbossjiang';
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2020 Tommy Jiang
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="noopener">Freemind</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="custom_mathjax_source">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+</body>
+</html>

@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Tommy&#39;s Blog</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://tommyjiang.github.io/"/>
+  <updated>2020-07-25T02:38:23.019Z</updated>
+  <id>http://tommyjiang.github.io/</id>
+  
+  <author>
+    <name>Tommy Jiang</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>三十而已影评</title>
+    <link href="http://tommyjiang.github.io/2020/2020-07-25-nothing-but-thirty/"/>
+    <id>http://tommyjiang.github.io/2020/2020-07-25-nothing-but-thirty/</id>
+    <published>2020-07-25T01:30:00.000Z</published>
+    <updated>2020-07-25T02:38:23.019Z</updated>
+    
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>好久没刷一部像样的国产情感剧了。</div><a id="more"></a><h1 id="分集影评"><a href="#分集影评" class="headerlink" title="分集影评"></a>分集影评</h1><h2 id="16-集"><a href="#16-集" class="headerlink" title="16 集"></a>16 集</h2><ul><li>芹洋组合感情升温中，骑摩托车抓上了，开心，干掉前夫哥。</li><li>漫妮升副店失败，惨遭空降，Daisy 一看就是总部有人，毕业直接进总部锻炼，现在到基层挂个职，回去马上提拔，这种人千万别惹。</li><li>Daisy 有一手，打一棒子给一甜枣，漫妮也是逢场作戏。</li><li>江疏影长得和江珊有点像。</li><li>Daisy 秀英文那段，除了王太太听不懂，其他人都能听懂。</li><li>Daisy 还是会抓富人心理，不选好看的，只选独一无二的。</li><li>顾佳这名字起得不错，暗示要顾家，一直处在事业和家庭的矛盾中。</li><li>芹洋组合喝多了以后，又送晓芹回前夫家了，编的不好。</li></ul><h2 id="17-集"><a href="#17-集" class="headerlink" title="17 集"></a>17 集</h2><ul><li>梁总当众确立关系，和他的人设不太相符，而且在确定关系后才说自己是不婚主义者，完蛋玩意儿。</li><li>末位淘汰是违反劳动法的，虽然国内大厂也是末位淘汰。雪崩之下没有一片雪花是无辜的。</li><li>梁总深刻了，灵魂拷问，结婚就能保证永远相爱吗。</li><li>顾佳和我们用的同款指甲刀，有点卡萨帝的感觉了啊。</li><li>顾佳对漫妮发动了暴击伤害，毫不留情面。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
+好久没刷一部像样的国产情感剧了。
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="国产剧" scheme="http://tommyjiang.github.io/tags/%E5%9B%BD%E4%BA%A7%E5%89%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode Weekly Contest 165</title>
+    <link href="http://tommyjiang.github.io/2019/2019-12-01-LC-weekly-contest-165/"/>
+    <id>http://tommyjiang.github.io/2019/2019-12-01-LC-weekly-contest-165/</id>
+    <published>2019-12-01T09:00:00.000Z</published>
+    <updated>2019-12-12T13:55:48.686Z</updated>
+    
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>LeetCode Weekly Contest 165.</div><a id="more"></a><h1 id="问题-1"><a href="#问题-1" class="headerlink" title="问题 1"></a>问题 1</h1><p><a href="https://leetcode.com/problems/find-winner-on-a-tic-tac-toe-game/" target="_blank" rel="noopener">题目链接</a></p><p>判断每行、每列、两条对角线的字符是否相同，棋盘状态始终有效，不需要考虑 corner case。</p><h1 id="问题-2"><a href="#问题-2" class="headerlink" title="问题 2"></a>问题 2</h1><p><a href="https://leetcode.com/problems/number-of-burgers-with-no-waste-of-ingredients/" target="_blank" rel="noopener">题目链接</a></p><p>鸡兔同笼问题，数学题。</p><h1 id="问题-3"><a href="#问题-3" class="headerlink" title="问题 3"></a>问题 3</h1><p><a href="https://leetcode.com/problems/count-square-submatrices-with-all-ones/" target="_blank" rel="noopener">题目链接</a></p><p>这道题比赛的时候没做出来，结束后发现想复杂了，进阶题是求所有元素是 1 的子矩阵(不要求方阵)。</p><p>解法：DP，根据左、上、左上三者最小值更新当前值，参考 <a href="https://leetcode.com/problems/maximal-square/" target="_blank" rel="noopener">LC 221</a>。</p><p>复杂度：时间复杂度 O(n^2)，空间复杂度 O(n^2)，可优化为 O(n)。</p><p>Python</p><pre><code class="lang-python">class Solution:    def countSquares(self, A: List[List[int]]) -&gt; int:        m, n = len(A), len(A[0])        dp = [[0 for _ in range(n+1)] for _ in range(m+1)]        res = 0        for i in range(1, m+1):            for j in range(1, n+1):                if A[i-1][j-1] == 1:                   dp[i][j] = min(dp[i][j-1], dp[i-1][j-1], dp[i-1][j]) + A[i-1][j-1]                   res += dp[i][j]        return res</code></pre><p>C++</p><pre><code class="lang-cpp">class Solution {public:    int countSquares(vector&lt;vector&lt;int&gt;&gt;&amp; matrix) {        int m = matrix.size(), n = matrix[0].size();        vector&lt;vector &lt;int&gt;&gt; dp(m+1, vector&lt;int&gt;(n+1, 0));        int res = 0;        for (int i = 0; i &lt; m; i++) {            for (int j = 0; j &lt; n; j++) {                if (matrix[i][j] == 1) {                    dp[i+1][j+1] = min(dp[i][j+1], min(dp[i+1][j], dp[i][j])) + 1;                    res += dp[i+1][j+1];                }            }        }        return res;    }};</code></pre><h1 id="问题-4"><a href="#问题-4" class="headerlink" title="问题 4"></a>问题 4</h1><p><a href="https://leetcode.com/problems/palindrome-partitioning-iii/" target="_blank" rel="noopener">题目链接</a><br>解法：DP。<br>复杂度：时间复杂度 O(kn^2)，空间复杂度 O(kn)。</p><p>Python</p><pre><code class="lang-python">class Solution:    def palindromePartition(self, s: str, k: int) -&gt; int:        n = len(s)        memo = {}        def cost(s, i, j):            r = 0            while i &lt; j:                if s[i] != s[j]:                    r += 1                i += 1                j -= 1            return r        def dfs(i, k):            if (i, k) in memo:                 return memo[(i, k)]            if n - i == k:                return 0            if k == 1:                return cost(s, i, n - 1)            res = float(&#39;inf&#39;)            for j in range(i + 1, n - k + 2):                res = min(res, cost(s, i, j - 1) + dfs(j, k - 1))            memo[(i, k)] = res            return res        return dfs(0 , k)</code></pre><p>C++</p><pre><code class="lang-cpp">class Solution {public:    int palindromePartition(string s, int k) {        int n = s.size();        vector&lt;vector &lt;int&gt;&gt; memo(n+1, vector&lt;int&gt;(k+1, -1));        return dfs(s, n, 0, k, memo);     }    int cost(string&amp; s, int i, int j) {        int res = 0;        while (i &lt; j) {            if (s[i] != s[j]) {                res++;            }            i++;            j--;        }        return res;    }    int dfs(string&amp; s, int n, int i, int k, vector&lt;vector &lt;int&gt;&gt;&amp; dp) {        if (dp[i][k] != -1) return dp[i][k];        if (n - i == k) return 0;        if (k == 1) return cost(s, i, n - 1);        int res = INT_MAX;        for (int j = i + 1; j &lt; n-k+2; j++) {            res = min(res, cost(s, i, j - 1) + dfs(s, n, j, k - 1, dp));        }        dp[i][k] = res;        return res;    }};</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
+LeetCode Weekly Contest 165.
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="工作" scheme="http://tommyjiang.github.io/categories/%E5%B7%A5%E4%BD%9C/"/>
+    
+    
+      <category term="LeetCode" scheme="http://tommyjiang.github.io/tags/LeetCode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode Biweekly Contest 14</title>
+    <link href="http://tommyjiang.github.io/2019/2019-11-30-LC-biweekly-contest-14/"/>
+    <id>http://tommyjiang.github.io/2019/2019-11-30-LC-biweekly-contest-14/</id>
+    <published>2019-12-01T04:00:00.000Z</published>
+    <updated>2019-12-12T13:55:48.685Z</updated>
+    
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>LeetCode Biweekly Contest 14.</div><a id="more"></a><h1 id="问题-1"><a href="#问题-1" class="headerlink" title="问题 1"></a>问题 1</h1><p><a href="https://leetcode.com/problems/hexspeak/" target="_blank" rel="noopener">题目链接</a></p><p>整数转换为 16 进制字符串：</p><ul><li>Python 用自带的 <code>hex</code> 函数。</li><li>C++ 用 <code>stringstream</code> 中的 <code>hex</code>。</li></ul><p>Python</p><pre><code class="lang-python">class Solution:    def toHexspeak(self, num: str) -&gt; str:        num = hex(int(num))[2:]        num = num.replace(&#39;1&#39;, &#39;I&#39;).replace(&#39;0&#39;, &#39;O&#39;).upper()        for x in num:            if x not in {&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;, &quot;E&quot;, &quot;F&quot;, &quot;I&quot;, &quot;O&quot;}:                return &#39;ERROR&#39;        return num</code></pre><p>C++</p><pre><code class="lang-cpp">class Solution {public:    string toHexspeak(string num) {        auto n = stol(num);        stringstream st;        st &lt;&lt; hex &lt;&lt; uppercase &lt;&lt; n;  // 用 hex + uppercase 进行转换        string s(st.str());        for (auto i = 0; i &lt; s.size(); ++i) {            if (s[i] &gt; &#39;1&#39; &amp;&amp; s[i] &lt;= &#39;9&#39;) return &quot;ERROR&quot;;            if (s[i] == &#39;0&#39;) s[i] = &#39;O&#39;;            if (s[i] == &#39;1&#39;) s[i] = &#39;I&#39;;        }        return s;    }};</code></pre><h1 id="问题-2"><a href="#问题-2" class="headerlink" title="问题 2"></a>问题 2</h1><p><a href="https://leetcode.com/problems/remove-interval/" target="_blank" rel="noopener">题目链接</a></p><p>解法：遍历判断与每个 interval 起始/结束时间的关系。<br>复杂度：时间复杂度 O(n)，空间复杂度 O(n)。</p><p>Python</p><pre><code class="lang-python">class Solution:    def removeInterval(self, intervals: List[List[int]],                       toBeRemoved: List[int]) -&gt; List[List[int]]:        res = []        s, e = toBeRemoved        for i, interval in enumerate(intervals):            i_s, i_e = interval            if s &gt;= i_e or e &lt;= i_s:                res.append(interval)            else:                if i_s &lt; s &lt;= i_e:                    res.append([i_s, s])                if i_s &lt;= e &lt; i_e:                    res.append([e, i_e])        return res</code></pre><p>C++</p><pre><code class="lang-cpp">class Solution {public:    vector&lt;vector&lt;int&gt;&gt; removeInterval(vector&lt;vector&lt;int&gt;&gt;&amp; intervals,                                       vector&lt;int&gt;&amp; toBeRemoved) {        vector&lt;vector&lt;int&gt;&gt; res;        int s = toBeRemoved[0], e = toBeRemoved[1];        for (int i = 0; i &lt; intervals.size(); i++){            int i_s = intervals[i][0], i_e = intervals[i][1];            if (s &gt;= i_e || e &lt;= i_s){                res.push_back(vector&lt;int&gt;{i_s, i_e});            } else {                if (i_s &lt; s &amp;&amp; s &lt;= i_e) {                    res.push_back(vector&lt;int&gt;{i_s, s});                }                if (i_s &lt;= e &amp;&amp; e &lt; i_e) {                    res.push_back(vector&lt;int&gt;{e, i_e});                }            }        }        return res;    }};</code></pre><h1 id="问题-3"><a href="#问题-3" class="headerlink" title="问题 3"></a>问题 3</h1><p><a href="https://leetcode.com/problems/can-make-palindrome-from-substring/" target="_blank" rel="noopener">题目链接</a></p><p>解法：DFS，利用返回值计数。</p><p>复杂度：时间复杂度 O(n)，空间复杂度 O(n)。</p><p>Python</p><pre><code class="lang-python">class Solution:    def deleteTreeNodes(self, nodes: int, parent: List[int], value: List[int]) -&gt; int:        nei = collections.defaultdict(list)        for i, x in enumerate(parent):            if x != -1:                nei[x].append(i)        self.n = nodes        def dfs(i):            res = value[i]            ces = 1            for x in nei[i]:                s, c = dfs(x)                res += s                ces += c if s != 0 else 0            return (res, ces) if res != 0 else (res, 0)        s, c = dfs(0)        return c</code></pre><p>C++</p><pre><code class="lang-cpp">class Solution {public:    vector&lt;int&gt; nodeNum(vector&lt;int&gt;&amp; value, int node, unordered_map&lt;int, vector&lt;int&gt;&gt;&amp; nei) {        int sum = value[node], count = 1;        for (auto &amp;child : nei[node]) {            vector&lt;int&gt; res = nodeNum(value, child, nei);            sum += res[0];            count += (res[0] == 0) ? 0 : res[1];        }        return {sum, sum == 0 ? 0 : count};    }    int deleteTreeNodes(int nodes, vector&lt;int&gt;&amp; parent, vector&lt;int&gt;&amp; value) {        int root = -1;        unordered_map&lt;int, vector&lt;int&gt;&gt; nei;        for (int i = 0; i &lt; parent.size(); ++i) {            nei[parent[i]].push_back(i);            if (parent[i] == -1) root = i;        }        vector&lt;int&gt; res = nodeNum(value, root, nei);        return res[1];    }};</code></pre><h1 id="问题-4"><a href="#问题-4" class="headerlink" title="问题 4"></a>问题 4</h1><p><a href="https://leetcode.com/problems/number-of-ships-in-a-rectangle/" target="_blank" rel="noopener">题目链接</a><br>解法：两个坐标二分搜索。</p><p>Python</p><pre><code class="lang-python">class Solution(object):    def countShips(self, sea: &#39;Sea&#39;, P: &#39;Point&#39;, Q: &#39;Point&#39;) -&gt; int:        res = 0        if P.x &gt;= Q.x and P.y &gt;= Q.y and sea.hasShips(P, Q):            if P.x == Q.x and P.y == Q.y: return 1            mx, my = (P.x + Q.x) // 2, (P.y + Q.y) // 2            res += self.countShips(sea, P, Point(mx + 1, my + 1))            res += self.countShips(sea, Point(mx, P.y), Point(Q.x, my + 1))            res += self.countShips(sea, Point(mx, my), Q)            res += self.countShips(sea, Point(P.x, my), Point(mx + 1, Q.y))        return res</code></pre><p>C++</p><pre><code class="lang-cpp">class Solution {public:    int countShips(Sea sea, vector&lt;int&gt; topRight, vector&lt;int&gt; bottomLeft) {        int res = 0;        if (topRight[0] &gt;= bottomLeft[0] &amp;&amp; topRight[1] &gt;= bottomLeft[1]             &amp;&amp; sea.hasShips(topRight, bottomLeft)) {            if (topRight[0] == bottomLeft[0] &amp;&amp; topRight[1] == bottomLeft[1]) {                return 1;            }            int mx = (topRight[0] + bottomLeft[0]) / 2;            int my = (topRight[1] + bottomLeft[1]) / 2;            res += countShips(sea, topRight, {mx+1, my+1});            res += countShips(sea, {mx, topRight[1]}, {bottomLeft[0], my+1});            res += countShips(sea, {mx, my}, bottomLeft);            res += countShips(sea, {topRight[0], my}, {mx+1, bottomLeft[1]});        }        return res;    }};</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
+LeetCode Biweekly Contest 14.
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="工作" scheme="http://tommyjiang.github.io/categories/%E5%B7%A5%E4%BD%9C/"/>
+    
+    
+      <category term="LeetCode" scheme="http://tommyjiang.github.io/tags/LeetCode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>目标检测中的样本不平衡问题</title>
+    <link href="http://tommyjiang.github.io/2019/2019-09-01-imbalance-in-detection/"/>
+    <id>http://tommyjiang.github.io/2019/2019-09-01-imbalance-in-detection/</id>
+    <published>2019-09-01T10:00:00.000Z</published>
+    <updated>2019-12-12T13:55:48.685Z</updated>
+    
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>处理 imbalance 的方法。</div><a id="more"></a><h1 id="目标检测中的样本不平衡问题"><a href="#目标检测中的样本不平衡问题" class="headerlink" title="目标检测中的样本不平衡问题"></a>目标检测中的样本不平衡问题</h1><p>目标检测中的样本不平衡问题，是指对于目标检测模型，负样本的个数远多于正样本(比例约为 10000:1)，同时，负样本中简单负样本的个数也远多于困难负样本。模型训练过程中，需要避免这种不平衡对模型性能的影响，以免模型将所有样本都判断为负样本。</p><ul><li>单阶段网络：目前绝大多数单阶段网络仍然基于 anchor 。网络 anchor 的正负样本和困难/简单负样本不平衡问题十分突出。</li><li>两阶段网络：两阶段网络中第一阶段的 RPN 与单阶段网络类似，但第二阶段 proposal 的不平衡问题得到了很大缓解，这主要是由于 RPN 处理(top N_pre + nms + top N_pos)后，proposal 中的简单负样本大大减少，从而同时减轻了正负样本和困难/简单负样本的不平衡问题。</li></ul><h1 id="解决样本不平衡的方法"><a href="#解决样本不平衡的方法" class="headerlink" title="解决样本不平衡的方法"></a>解决样本不平衡的方法</h1><h2 id="按比例随机采样"><a href="#按比例随机采样" class="headerlink" title="按比例随机采样"></a>按比例随机采样</h2><p>Faster R-CNN 中，第一阶段 RPN 采用按比例随机采样，图片 batch size 为 1，anchor batch size 为 256，正负样本比例为 1 比 1，如果正样本不足 128(256 的 1/2)，则用负样本凑。</p><blockquote><p>We randomly sample 256 anchors in an image to compute the loss function of a mini-batch, where the sampled positive and negative anchors have a ratio of up to 1:1. If there are fewer than 128 positive samples in an image, we pad the mini-batch with negative ones.(Faster R-CNN 3.1.3 Training RPN)</p></blockquote><p>第二阶段 Fast R-CNN 同样采用按比例随机采样，正负样本比例为 1:3。</p><blockquote><p>We take 25% of the RoIs from object proposals that have intersection over union (IoU) overlap with a ground truth bounding box of at least 0:5. These RoIs comprise the examples labeled with a foreground object class. The remaining RoIs are sampled from object proposals that have a maximum IoU with ground truth in the interval [0:1; 0:5), following [11].(Fast R-CNN 2.3 Mini-batch sampling)</p></blockquote><h2 id="在线难样本挖掘-OHEM-Online-Hard-Example-Mining"><a href="#在线难样本挖掘-OHEM-Online-Hard-Example-Mining" class="headerlink" title="在线难样本挖掘(OHEM, Online Hard Example Mining)"></a>在线难样本挖掘(OHEM, Online Hard Example Mining)</h2><p>按比例随机采样控制了正负样本的比例，基本解决了正负样本不平衡的问题，但负样本的随机采样会导致简单负样本占绝大多数。SSD 在训练时加入了难样本挖掘，选出负样本中 loss 最大的进行训练，同时仍然保证正负样本比例为 1:3，以解决简单/困难负样本不平衡的问题。</p><blockquote><p>Instead of using all the negative examples, we sort them using the highest confidence loss for each default box and pick the top ones so that the ratio between the negatives and positives is at most 3:1. We found that this leads to faster optimization and a more stable training.(SSD 2.2 Training Hard negative mining)</p></blockquote><h2 id="Focal-Loss"><a href="#Focal-Loss" class="headerlink" title="Focal Loss"></a>Focal Loss</h2><p>Focal loss 应该是最有名的处理不平衡问题的 paper 了，文中提出了一种新的 loss 即 focal loss：</p><script type="math/tex; mode=display">\mathrm{FL}(p_t) = -\alpha_{t}(1-p_t)^{\gamma}\mathrm{log}(p_t)</script><p>其中 $ \alpha_t $ 作用是平衡正负样本权重，$ \gamma $ 作用是平衡简单/困难负样本权重，所以 focal loss 理论上能同时解决上面提到的两方面不平衡问题。原 paper 中给出的结果，$\alpha_t = 0.25, \gamma = 2 $ 时效果最好。注意，使用 focal loss 后，不需要再保证正负样本比例，原文中使用了所有 anchor 进行训练。</p><blockquote><p>We emphasize that when training RetinaNet, the focal loss is applied to all ~100k anchors in each sampled image.(Focal loss 4.1 Inference and Training Focal Loss)</p></blockquote><h2 id="IoU-平衡采样"><a href="#IoU-平衡采样" class="headerlink" title="IoU 平衡采样"></a>IoU 平衡采样</h2><p>OHEM 存在以下两个问题：</p><ol><li>需要计算所有 anchor 的 loss，付出额外的空间和时间代价。</li><li>标注如果有 noise label，会影响模型性能。</li></ol><p>IoU 平衡采样是 Libra R-CNN 中提出的，作者发现 60% 的困难负样本与 GT 的 IoU 都大于 0.05，而随机采样时与 GT IoU 大于 0.05 的 anchor 只占 30%，说明困难负样本不容易被选中。这个方法的核心思想是根据 anchor 与 GT 的 IoU 划分不同区间，在每个区间中进行均匀采样，保证与 GT IoU 大的负样本(很多是困难负样本)能够以较大的概率被选中。</p><blockquote><p>To raise the selected probability of hard negatives, we evenly split the sampling interval into K bins according to IoU. N demanded negative samples are equally distributed to each bin. Then we select samples from them uniformly.</p></blockquote><h2 id="GHM"><a href="#GHM" class="headerlink" title="GHM"></a>GHM</h2><p>GHM 文章首先根据梯度的模和样本的 label 将样本分为难易不同的样本，梯度的模越接近 0 说明越简单，越接近 1 则说明越困难。文章发现对于训练好的 detection 模型，仍然存在相当比例的困难样本，需要解决的具体问题是如何适当降低这部分困难样本的权重，提升模型性能。</p><p>为此，文中首先定义了梯度密度的概念，用于刻画一个样本梯度模值附近所有样本的总数，总数越多说明样本处的密度越高。</p><ul><li>分类 loss：采用加权交叉熵，权重为梯度密度的倒数，即降低密集样本的权重，这样就同时降低了非常密集的简单样本和同样密集的困难样本的权重。</li><li>回归 loss：采用改进的 Smooth L1 loss($\sqrt{d^2 + \mu ^ 2} - \mu$)，类似分类 loss 同样采用加权平均，同时降低简单和困难样本的权重。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
+处理 imbalance 的方法。
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="工作" scheme="http://tommyjiang.github.io/categories/%E5%B7%A5%E4%BD%9C/"/>
+    
+    
+      <category term="CV" scheme="http://tommyjiang.github.io/tags/CV/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode Weekly Contest 152</title>
+    <link href="http://tommyjiang.github.io/2019/2019-09-01-LC-weekly-contest-152/"/>
+    <id>http://tommyjiang.github.io/2019/2019-09-01-LC-weekly-contest-152/</id>
+    <published>2019-09-01T06:00:00.000Z</published>
+    <updated>2019-12-12T13:55:48.684Z</updated>
+    
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>LeetCode Weekly Contest 152.</div><a id="more"></a><h1 id="问题-1"><a href="#问题-1" class="headerlink" title="问题 1"></a>问题 1</h1><p><a href="https://leetcode.com/problems/prime-arrangements/" target="_blank" rel="noopener">题目链接</a></p><p>思路：从 1 到 n 质数和合数分别计数，结果为<code>质数阶乘 * 合数阶乘 % MOD</code>。<br>复杂度：时间复杂度 O(n^2)，空间复杂度 O(1)。</p><p>Python</p><pre><code class="lang-python">class Solution:    def numPrimeArrangements(self, n: int) -&gt; int:        def is_prime(n):            for i in range(2, n // 2 + 1):                if n % i == 0:                    return False            return True        p = 0        c = 1        mod = 10 ** 9 + 7        for i in range(2, n+1):            if is_prime(i):                p += 1            else:                c += 1        return math.factorial(p) % mod * math.factorial(c) % mod</code></pre><p>C++</p><pre><code class="lang-cpp">class Solution {public:    bool prime(int n) {        if (n &lt; 2)            return false;        for (int i = 2; i * i &lt;= n; i++)            if (n % i == 0)                return false;        return true;    }    int numPrimeArrangements(int n) {        const int MOD = 1e9 + 7;        long long res = 1;        int p = 0;        int c = 1;        for (int i = 2; i &lt;= n; i++){            if (prime(i)) {                p += 1;            } else {                c += 1;            }        }        for (int i = 1; i &lt;= p; i++)            res = res * i % MOD;        for (int i = 1; i &lt;= c; i++)            res = res * i % MOD;        return res;    }};</code></pre><h1 id="问题-2"><a href="#问题-2" class="headerlink" title="问题 2"></a>问题 2</h1><p><a href="https://leetcode.com/problems/diet-plan-performance/" target="_blank" rel="noopener">题目链接</a></p><p>解法：计算前缀和，每次去掉一个元素，加入一个元素。<br>复杂度：时间复杂度 O(n)，空间复杂度 O(1)。</p><p>Python</p><pre><code class="lang-python">class Solution:    def dietPlanPerformance(self, A: List[int], k: int,                            lower: int, upper: int) -&gt; int:        res = 0        n = len(A)        s = sum(A[:k])        if s &gt; upper:            res += 1        elif s &lt; lower:            res -= 1        for i in range(n-k):            s -= A[i]            s += A[i+k]            if s &gt; upper:                res += 1            elif s &lt; lower:                res -= 1        return res</code></pre><p>C++</p><pre><code class="lang-cpp">class Solution {public:    int dietPlanPerformance(vector&lt;int&gt;&amp; A, int k, int lower, int upper) {        int res = 0;        int n = A.size();        int s = 0;        for (int i = 0; i &lt; k; ++i){            s += A[i];        }        if (s &gt; upper) {                res += 1;        } else if (s &lt; lower) {                res -= 1;        }        for (int i = 0; i &lt; n-k; i++){            s -= A[i];            s += A[i+k];            if (s &gt; upper) {                res += 1;            } else if (s &lt; lower) {                res -= 1;            }        }        return res;    }};</code></pre><h1 id="问题-3"><a href="#问题-3" class="headerlink" title="问题 3"></a>问题 3</h1><p><a href="https://leetcode.com/problems/can-make-palindrome-from-substring/" target="_blank" rel="noopener">题目链接</a></p><p>解法：26 个字母出现个数用前缀哈希存储，查询和比较 key 的差异为 O(1)，注意可以 rearrange，所以字母出现次数差异只保留 % 2 的值，最后对字符串奇偶长度做判断。</p><p>复杂度：时间复杂度 O(n)，空间复杂度 O(n)。</p><p>Python</p><pre><code class="lang-python">class Solution:    def canMakePaliQueries(self, s: str,                           queries: List[List[int]]) -&gt; List[bool]:        n = len(s)        f = [[0 for _ in range(n+1)] for _ in range(26)]        for c in range(26):            for i in range(n):                if s[i] == chr(ord(&#39;a&#39;) + c):                    f[c][i+1] = f[c][i] + 1                else:                    f[c][i+1] = f[c][i]        res = []        for q in queries:            l, r, k = q[0], q[1] + 1, q[2]            odd = 0            for c in range(26):                if (f[c][r] - f[c][l]) % 2 != 0:                    odd += 1            res.append(odd &lt;= 2 * k + 1);        return res</code></pre><p>C++</p><pre><code class="lang-cpp">class Solution {public:    vector&lt;bool&gt; canMakePaliQueries(string s,                                    vector&lt;vector&lt;int&gt;&gt;&amp; queries) {        int n = s.size();        vector&lt;vector&lt;int&gt;&gt; freq(26, vector&lt;int&gt;(n + 1, 0));        for (int c = 0; c &lt; 26; c++)            for (int i = 0; i &lt; n; i++)                freq[c][i + 1] = freq[c][i] + (s[i] == &#39;a&#39; + c ? 1 : 0);        vector&lt;bool&gt; answer;        for (vector&lt;int&gt; &amp;query : queries) {            int l = query[0], r = query[1] + 1, k = query[2];            int odd = 0;            for (int c = 0; c &lt; 26; c++)                if ((freq[c][r] - freq[c][l]) % 2 != 0)                    odd++;            answer.push_back(odd &lt;= 2 * k + 1);        }        return answer;    }};</code></pre><h1 id="问题-4"><a href="#问题-4" class="headerlink" title="问题 4"></a>问题 4</h1><p><a href="https://leetcode.com/problems/number-of-valid-words-for-each-puzzle/" target="_blank" rel="noopener">题目链接</a><br>解法：参考<a href="https://leetcode.com/problems/number-of-valid-words-for-each-puzzle/discuss/371864/Python-Find-all-Sub-Puzzles" target="_blank" rel="noopener">寒神的解答</a>。利用 26 位整数的 bit 存储是否包含某个字母状态(状态压缩)，遍历 puzzles 中的元素，枚举包括第一个字母的所有子 string 组合，然后求和。</p><p>复杂度：时间复杂度 O(max(W, P))，空间复杂度 O(W)。</p><p>Python</p><pre><code class="lang-python">class Solution:    def findNumOfValidWords(self, words: List[str],                            puzzles: List[str]) -&gt; List[int]:        count = collections.Counter()        for w in words:            m = 0            for c in w:                m |= 1 &lt;&lt; (ord(c) - ord(&#39;a&#39;))            count[m] += 1        res = []        for p in puzzles:            bfs = [1 &lt;&lt; (ord(p[0]) - ord(&#39;a&#39;))]            for c in set(p[1:]):                bfs += [m | 1 &lt;&lt; (ord(c) - ord(&#39;a&#39;)) for m in bfs]            res.append(sum(count[m] for m in bfs))        return res</code></pre><p>C++</p><pre><code class="lang-cpp">class Solution {public:    vector&lt;int&gt; findNumOfValidWords(vector&lt;string&gt;&amp; words,                                    vector&lt;string&gt;&amp; puzzles) {        unordered_map&lt;int, int&gt; count;        for (auto&amp; w: words) {            int mask = 0;            for (auto&amp; c : w)                mask |= (1 &lt;&lt; (c - &#39;a&#39;));            count[mask] ++;        }        vector&lt;int&gt; res;        for (auto&amp; p : puzzles) {            vector&lt;int&gt; mask_p;            vector&lt;int&gt; mask_new;            mask_p.push_back(1 &lt;&lt; (p[0] - &#39;a&#39;));            for (int i = 1; i &lt; p.size(); i++) {                mask_new = mask_p;                for (auto&amp; m : mask_p) {                    mask_new.push_back(m | (1 &lt;&lt; (p[i] - &#39;a&#39;)));                }                mask_p = mask_new;            }            int cnt = 0;            for (auto&amp; m : mask_p)                cnt += count[m];            res.push_back(cnt);        }        return res;    }};</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
+LeetCode Weekly Contest 152.
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="工作" scheme="http://tommyjiang.github.io/categories/%E5%B7%A5%E4%BD%9C/"/>
+    
+    
+      <category term="LeetCode" scheme="http://tommyjiang.github.io/tags/LeetCode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>老妹儿婚礼</title>
+    <link href="http://tommyjiang.github.io/2019/2019-08-26-old-sister-wedding/"/>
+    <id>http://tommyjiang.github.io/2019/2019-08-26-old-sister-wedding/</id>
+    <published>2019-08-26T15:00:00.000Z</published>
+    <updated>2019-12-12T13:55:48.684Z</updated>
+    
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>恭贺草原王子大婚。</div><a id="more"></a><p>周末两天时间，特意请假去了趟科尔沁草原的明珠——白城，参加草原王子——老妹儿的婚礼。</p><p>老妹儿是东北方言，使用灵活广泛，能想到和这个词比较接近的，应该是天津方言中的“小姐姐”。和鄙班第一次打交道的朋友，第一次听到鄙班一系列乱中有序的昵称(包括但不限于妹妹、叔叔、奶夫等)时一般都会崩溃，老妹儿自然也在其中。值得一提的是，一般的昵称都是一个人独有，而老妹儿和我两个人则是互称老妹儿。</p><h1 id="出发"><a href="#出发" class="headerlink" title="出发"></a>出发</h1><p>周六一大早萌嫂开车亲自送萌哥、学哥和我到南苑机场，大兴机场今年 9 月底就要投入使用了，这次也算和中国第一个机场——南苑机场(IATA 代码：NAY；ICAO 代码：ZBNY)道个别。每周二、四、六，南苑都有飞白城的航班，省得再去内蒙兴安盟首府乌兰浩特折腾一趟了。</p><p>在登机口遇到了老妹儿的伴郎靖哥哥。我们三个都是 2012 年 7 月广东佛山南海区博士生实践的队员，他俩都分到了南海区最北面的偏远地带，以至于老妹儿周末来找我的时候连住的地方都没有，还和我挤一张床睡了两晚。</p><p>航班正点起飞，沿着跑道向北起飞后一个 180 度转弯掉头向南，第一次在空中看到大兴机场。飞机 12 点降落在白城长安机场，降落时拍了一张机场附近的照片：</p><img src="/images/2019/2019-08-24-白城降落.jpg" width="500px"/><h1 id="预热"><a href="#预热" class="headerlink" title="预热"></a>预热</h1><p>下飞机先到一个饭馆吃正宗东北菜。虽然在北京吃饭的标准至少是人均一个菜，但考虑到东北菜的分量，人均 0.8 个菜都不一定能吃完，再配上独特的甜品：拔丝地瓜，连主食都可以省了。席上新娘亲自介绍一整桌亲朋好友，在见识了新娘的高端朋友后，我果断建议就不要再继续介绍新郎朋友了。老妹儿在席上发表重要讲话，欢迎大家来草原“见识”他们的婚礼。</p><p>酒足饭饱，本该是午休时间，作为长期中午只能在单位眯一小觉的人，热切地期盼能在草原宾馆的床上好好睡一觉。但同学们兴致不减，放下包就出发去 K 歌了。我和萌哥看了一会儿 TI 9 LGD 和 OG 的比赛，略有耽搁，两个人打车过去，起步价 5 元到地方才 7 元，强烈地感受到草原人民的幸福。</p><p>既然到草原 K 歌，当然要点草原歌曲，也不枉我之前去过十几次草原，一图胜千言，秀一下航线图，最密集的就是北京——通辽航线：</p><img src="/images/2019/2019-08-24-白城航线图.jpg" width="300px"/><p>第一次去通辽还是在 2012 年 3 月，有幸当时有老妹儿同行，原因是我的小老板是老妹儿大老板的博士，虽然毕业了还和原来的课题组一起做项目。算起来那是我第一次出差，北京——通辽来回都是硬卧，睡一晚上才到，虽然北京 3 月已经不算冷了，但草原还是冷得够呛，出差回来我就发烧了。</p><p>晚上安排了蒙餐烤全羊，我之前出差吃过不少，没什么特别的感觉。席上高导亲自回答各种娱乐八卦问题，长了不少见识。酒足饭饱后第二场开始，选在老金家烧烤，其实前面那顿大家吃得都差不多了，但第二天还要接亲，所以不能喝太多，简单觥筹交错之后，11 点就回宾馆休息了。</p><h1 id="接亲"><a href="#接亲" class="headerlink" title="接亲"></a>接亲</h1><p>周日早上起来，7 点 50 从酒店出发到老妹儿家楼下，步行 5 分钟就到了。楼下除了一个大彩虹门，还有一排小门，样子让我想起了京都伏见稻荷大社的千本鸟居。</p><p>早上 8 点 18 分，车队准时前往新娘住的威尼斯水上乐园。众所周知，白城是一个国际大都市，拥有威尼斯水上乐园、西雅图精品假日酒店、胜利基辅宾馆等一系列国际化建筑，丝毫不比 2012 年夏天我和老妹儿一起去开会的加州圣迭戈差。除了我们这帮同学，老妹儿的家人有不少也跟车一起过来了。</p><p>第一个项目自然是传统的撞门，这次酒店的门比较特殊，是往外开的，所以里面的兄弟们没法堵，只能往里拽。撞门环节还算顺利，但门打开之后新娘没有同意老妹儿进屋，于是在老妹儿的带领下，同学们分别用中英文表达了诚意：</p><blockquote><p>中：我来接你了。<br>英：I’m coming for you.</p></blockquote><p>高级知识分子的婚礼，没点文化水平还真不敢来。</p><p>进屋后先做三个游戏，抖甩乒乓球、诸葛帽吃糖、脸撕保鲜膜。</p><ol><li><p>抖甩乒乓球：老妹儿参加的唯一一个游戏。盒子装满乒乓球，绑在腰后面，不许用手，把所有乒乓球跳出来，老妹儿跳的劲太大，别的花都跳掉了。</p></li><li><p>诸葛帽吃糖：新娘不让老妹儿继续玩了，只能我们这群同学上了。这个游戏如果只允许自己吃自己的，还是很有难度的，好在可以几个人互换吃糖。</p></li><li><p>脸撕保鲜膜：这个游戏很熟悉，去年我婚礼的时候就玩过，重点是不能靠脸用蛮力弄破，要用头顶破。</p></li></ol><p>游戏做完就到了喜闻乐见的找鞋环节。在围观第一个游戏的时候我就在看后面窗帘架上面有没有，最后揭晓后发现是别在两个窗帘中间了，另外一只藏到了岳父岳母坐的沙发后面。</p><p>出门之前，按照新娘当地的习俗，新郎还需要面向父母和新娘家乡方向磕头，老妹儿干净利落地完成，赢得了在场群众的纷纷喝彩。顺利接亲归来，在家里合影留念，前往典礼现场。</p><h1 id="典礼"><a href="#典礼" class="headerlink" title="典礼"></a>典礼</h1><p>典礼开始前，亲朋好友就已经就位了。音乐造足了氛围后，主持人先上来了……张老师千呼万唤始出来，出来后一个急转弯踩着音乐的节拍径直往楼上走，步伐和十几年前初见时并无二致。</p><p>典礼过程中印象最深的是新娘说，感谢你能理解我做的事的意义(大意)，这一句话想必击中了在场绝大多数研究生尤其是各位博士的内心。因为每个研究生毕业答辩的时候，最害怕的问题应该就是答辩评委问，你做的工作有什么意义？</p><p>现在想起来，2015 年初我和老妹儿一起写博士论文的时候，和老妹儿互怼了好几次。当时老妹儿就说他家在草原，我不相信，后来一查，果然白城是科尔沁草原的明珠，为此我还专门把老妹的手机铃声调成了凤凰传奇的《我从草原来》。当时老妹儿还说博士论文的参考文献不能低于多少，说他师兄都是这样的，我就下载了他师兄的论文然后一个一个统计，最后把数据甩给他啪啪打脸。我认为自己博士课题的唯一意义，就是让我赶快毕业滚蛋。</p><p>典礼快结束终于发了筷子，虽然是婚宴，但菜品的味道还不错，我连着吃了好几个大虾。吃得正开心时，抬眼一看，其他桌的亲朋好友已经走了不少，看来我们桌应该是消灭得最干净的一桌了。</p><h1 id="返程"><a href="#返程" class="headerlink" title="返程"></a>返程</h1><p>中午典礼结束，回酒店休息，一觉睡到快 3 点，LGD 败者组决赛不敌 Liquid，总决赛也不用看了。老妹儿中午参加完典礼，下午还过来给我们送水果，着实让人感动。带的李子确实甜，不过沙果太酸了，咬了一口就放下了。和高师兄一唱一和，老妹儿又带我们去吃了老金家烧烤，5 点 20 多的火车，吃到了 4 点 55 才出发，到了取票直接检票上车，去长春的路上还拍到了白城的风车(手机相机效果不好，凑合看吧)。</p><img src="/images/2019/2019-08-25-白城风车.jpg" width="600px"/><p>到长春已经是晚上 8 点多了，在蔡爷带领下我们一行四人又到车站附近的饺子馆来了一顿晚餐，俗话说：上车饺子下车面，还吃了东北特色的锅包肉，应该是这次来吃到的最好吃的锅包肉了。</p><p>晚上回京的车次是 Z62 的软卧，四个人一个包厢。这个车非常好，长春始发，8 小时一站直达北京站，软卧包厢四个人一起也不用受熄灯影响，果断开始双升，从长春打到四平打到沈阳北，1 点中才睡，最终 8 比 Q 憾负。车上睡了 5 个小时，睡梦中经过了秦皇岛和唐山，5 点半列车员过来喊起床，又眯了一会儿，再一睁眼已经过建国门，列车很快停在了北京站的站台，草原王子的婚礼之旅也算正式落下了帷幕。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
+恭贺草原王子大婚。
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="婚礼" scheme="http://tommyjiang.github.io/tags/%E5%A9%9A%E7%A4%BC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>陈天奇《机器学习科研的十年》读后感</title>
+    <link href="http://tommyjiang.github.io/2019/2019-07-19-chen-tianqi-zhihu-post-thought/"/>
+    <id>http://tommyjiang.github.io/2019/2019-07-19-chen-tianqi-zhihu-post-thought/</id>
+    <published>2019-07-19T07:00:00.000Z</published>
+    <updated>2019-12-12T13:55:48.683Z</updated>
+    
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>见贤思齐。</div><a id="more"></a><p>读了陈天奇最新的文章<a href="https://zhuanlan.zhihu.com/p/74249758" target="_blank" rel="noopener">《机器学习科研的十年》</a>，写写感想。</p><h1 id="良好的外部环境"><a href="#良好的外部环境" class="headerlink" title="良好的外部环境"></a>良好的外部环境</h1><p>陈天奇在文中分享了他的主要经历：本科上海交大 ACM、实习 MSRA、交换香港、博士 UW、实习 Google、教职 CMU。文中也列出了他的主要合作者，戴文渊(第四范式创始人)、李航(统计学习方法一书的作者、字节跳动人工智能实验室总监)、Carlos、Ian Goodfellow(GAN 发明人、Apple 机器学习总监)，还有其他一些文中没有名字的同学。</p><h1 id="勤勉的个人努力"><a href="#勤勉的个人努力" class="headerlink" title="勤勉的个人努力"></a>勤勉的个人努力</h1><p>陈天奇在文中多次提到了各种想法和尝试的具体情景：</p><blockquote><p>再到时不时在树下踱步想如何加旋转不变的模型的尝试</p><p>我在排队参观西雅图艺术博物馆的 infinity mirror 展览的途中把加速器内存拷贝支持的第一个方案写在了一张星巴克的餐巾纸上</p><p>在去加州的飞机上，我尝试在纸上画出为了优化矩阵乘法可能的循环变换</p></blockquote><p>能在个人生活中穿插这么多努力，可见确实非常喜欢自己所做的事情，还记得之前电网领导问我能给自己打多少分，做到这样绝对超过 100 分了。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
+见贤思齐。
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="工作" scheme="http://tommyjiang.github.io/categories/%E5%B7%A5%E4%BD%9C/"/>
+    
+    
+      <category term="选择" scheme="http://tommyjiang.github.io/tags/%E9%80%89%E6%8B%A9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CV DL Object Detection Paper 汇总</title>
+    <link href="http://tommyjiang.github.io/2019/2019-04-30-CV-DL-OD-papers/"/>
+    <id>http://tommyjiang.github.io/2019/2019-04-30-CV-DL-OD-papers/</id>
+    <published>2019-04-30T11:00:00.000Z</published>
+    <updated>2019-12-12T13:55:48.682Z</updated>
+    
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>CV DL OD 文献引用关系图</div><a id="more"></a><div id="refs" style="width: 100%;height: 1000px;margin: 0 auto"></div><script src="https://cdn.bootcss.com/echarts/4.2.1-rc1/echarts.js"></script><script src="https://cdn.bootcss.com/echarts/4.2.1-rc1/extension/dataTool.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.js"></script><script src="https://cdn.rawgit.com/apache/incubator-echarts/master/theme/vintage.js"></script><script type="text/javascript">    // 查找函数    function findArray(array, feature, all = true) {        for(let index in array){            let cur = array[index];            if(feature instanceof Object){                let allRight = true;                for(let key in feature){                    let value = feature[key];                    if(cur[key] == value && !all) return index;                    if(all && cur[key] != value){                        allRight = false;                        break;                    }                }                if(allRight) return index;            }else{                if(cur == feature){                    return index;                }            }        }        return -1;    }    var myChart = echarts.init(document.getElementById('refs'), 'vintage');    myChart.showLoading();$.get('https://raw.githubusercontent.com/ecomfe/echarts-examples/gh-pages/public/data/asset/data/les-miserables.gexf', function (xml) {    myChart.hideLoading();    // TODO 点击节点跳转到论文 arxiv 链接    // TODO 节点 symbolSize 随年份衰减    // TODO 根据 link 两篇文章年份设定权重    var graph = {        "nodes":[        // TODO Mask-RCNN        // Object Detection        {"id":"R-CNN", "name":"2013-R-CNN", "symbolSize":10, "category":1}, // 1311.2524        {"id":"SPPNet", "name":"2014-SPPNet", "symbolSize":10, "category":1}, // 1406.4729        {"id":"Fast-RCNN", "name":"2015-Fast-RCNN", "symbolSize":10, "category":1}, // 1504.08083        {"id":"Faster-RCNN", "name":"2015-Faster-RCNN", "symbolSize":10, "category":1}, // 1506.01497        {"id":"ResNet", "name":"2015-ResNet", "symbolSize":10, "category":0}, // 1512.03385        {"id":"FPN", "name":"2016-FPN", "symbolSize":10, "category":1}, // 1612.03144        {"id":"Cascade RetinaNet", "name":"2019-Cascade-RetinaNet", "symbolSize":10, "category":2}, // 1907.06881        ],        "links":[        // 2014-SPPNet        {"source":"SPPNet", "target":"R-CNN"}, // Ref 7        // 2015-Fast-RCNN        {"source":"Fast-RCNN", "target":"R-CNN"}, // Ref 9        {"source":"Fast-RCNN", "target":"SPPNet"}, // Ref 11        // 2015-Faster-RCNN        {"source":"Faster-RCNN", "target":"SPPNet"}, // Ref 1        {"source":"Faster-RCNN", "target":"Fast-RCNN"}, // Ref 2        {"source":"Faster-RCNN", "target":"R-CNN"}, // Ref 5        // 2015-ResNet        {"source":"ResNet", "target":"Fast-RCNN"}, // Ref 7        {"source":"ResNet", "target":"R-CNN"}, // Ref 8        // 2016-FPN        {"source":"FPN", "target":"Fast-RCNN"}, // Ref 11        {"source":"FPN", "target":"R-CNN"}, // Ref 12        {"source":"FPN", "target":"SPPNet"}, // Ref 15        // {"source":"FPN", "target":"SSD"}, // Ref 22        {"source":"FPN", "target":"Faster-RCNN"}, // Ref 29        // 2019-Cascade-RetinaNet        // {"source":"Cascade RetinaNet", "target":"DSSD"}, // Ref 8        {"source":"Cascade RetinaNet", "target":"Fast-RCNN"}, // Ref 10        // {"source":"Cascade RetinaNet", "target":"Mask R-CNN"}, // Ref 11        {"source":"Cascade RetinaNet", "target":"ResNet"}, // Ref 12        ]    }    var categories = [{'name': '基础网络'},                      {'name': '两阶段网络'},                      {'name': '单阶段网络'}                     ];    // TODO 根据 link 修改 symbolSize / 根据年份加权    graph.links.forEach(function (link) {        link.id = link.source + "-" + link.target        var cur_link = link.target        var index = findArray(graph.nodes, {id: link.target});        graph.nodes[index]['symbolSize'] += 2        console.log(link)        // console.log(graph.nodes[0]['id'])    });    graph.nodes.forEach(function (node) {        node.itemStyle = null;        node.value = node.symbolSize;        node.label = {            normal: {                show: node.symbolSize > 0            }        };    });    option = {        title: {            text: 'CV refs',            subtext: 'Circular layout',            top: 'bottom',            left: 'right'        },        tooltip: {},        legend: [{            // selectedMode: 'single',            data: categories.map(function (a) {                return a.name;            })        }],        animation: false,        // animationDurationUpdate: 1500,        // animationEasingUpdate: 'quinticInOut',        series : [            {                name: 'CV refs',                type: 'graph',                // layout: 'circular',                layout: 'force',                force: {                    repulsion: 2000,                    gravity: 0.2                },                circular: {                    rotateLabel: true                },                edgeSymbol: [null, 'arrow'],  // 有向图, edgeSymbol 为 arrow                data: graph.nodes,                links: graph.links,                categories: categories,                roam: true,                focusNodeAdjacency: true,                itemStyle: {                    normal: {                        borderColor: '#fff',                        borderWidth: 1,                        shadowColor: 'rgba(0, 0, 0, 0.3)'                    }                },                label: {                    normal: {                        position: 'right',                        formatter: '{b}'                    }                },                lineStyle: {                    normal: {                        color: 'source',                        curveness: 0.3                    }                }            }        ]    };    myChart.setOption(option);}, 'xml');</script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
+CV DL OD 文献引用关系图
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://tommyjiang.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="CV" scheme="http://tommyjiang.github.io/tags/CV/"/>
+    
+      <category term="DL" scheme="http://tommyjiang.github.io/tags/DL/"/>
+    
+      <category term="目标检测" scheme="http://tommyjiang.github.io/tags/%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>多买高性价比东西</title>
+    <link href="http://tommyjiang.github.io/2019/2019-03-25-high-cost-effective-things/"/>
+    <id>http://tommyjiang.github.io/2019/2019-03-25-high-cost-effective-things/</id>
+    <published>2019-03-25T01:00:00.000Z</published>
+    <updated>2019-12-12T13:55:48.682Z</updated>
+    
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>总结过去几年买的高性价比的东西。</div><a id="more"></a><p>买东西应该秉承不买贵的，只买对的的原则，但绝大多数情况下，贵的东西肯定更好，所以更应该衡量的是性价比。在能够承担的范围内，可以优先考虑性价比高的，哪怕贵一点也没关系。比如最近几年买的这些东西：</p><ul><li><p>Cherry 原厂机械键盘(红轴和茶轴)：转行之前在电网，经常要写汇报材料，用机械键盘打字绝对是一种享受，现在需要敲代码，就更离不开机械键盘了。这两个键盘买了四、五年了，还是一如既往地好用，只是定期需要把键都卸下来擦一擦，不然都是灰尘。</p></li><li><p>Retina MacBook Pro：15 年初托小哥从香港带回来的，学生优惠价不到 14000，大陆行货要 18000。用到现在已经四年了，只换了一次电池和一个电源适配器，看 paper 写代码神器，争取再用四年。美中不足的是升级了 Mojave 系统以后，Mac 没有官方授权的 N 卡驱动，只能在 Win 下打游戏了。</p></li><li><p>iPhone：14 年底入手的，也用了四年多了，中间换过一次电池，现在电池又不行了。不过 iPhone 最近几年的品控越来越差，性价比也越来越低，下一个手机可能考虑换小米或者华为的拍照手机了。</p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
+总结过去几年买的高性价比的东西。
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="感想" scheme="http://tommyjiang.github.io/tags/%E6%84%9F%E6%83%B3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>炉石记录</title>
+    <link href="http://tommyjiang.github.io/2019/2019-02-20-hearthstone/"/>
+    <id>http://tommyjiang.github.io/2019/2019-02-20-hearthstone/</id>
+    <published>2019-02-20T12:00:00.000Z</published>
+    <updated>2019-12-12T13:55:48.681Z</updated>
+    
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>炉石老玩家</div><a id="more"></a><div id="hs" style="height:400px"></div><h1 id="2019"><a href="#2019" class="headerlink" title="2019"></a>2019</h1><ul><li>2019-02-21：<ul><li>亚服：分解部门准备退环境的卡，合伊瑟拉和玛里苟斯。</li><li>欧服：战士经典卡补齐，合哈里森。</li><li>美服：开暴龙王、合哈里森，补齐除猎人外 8 职业经典卡。</li></ul></li></ul><!-- 引入 ECharts --><script src="https://cdn.bootcss.com/echarts/4.1.0/echarts.js"></script><script src="https://cdn.rawgit.com/apache/incubator-echarts/master/theme/macarons.js"></script><script type="text/javascript">hs();function hs(ec){    var hs = echarts.init(document.getElementById('hs'), 'macarons');    <!-- 填空 -->    var data = [["2019-02-20", 3865, 18545, 4005, 21610, 3985, 22645],                ["2019-02-21", 3925, 19705, 3940, 19230, 3985, 19520],                ["2019-02-22", 3995, 19705, 4150, 19230, 4130, 19650],                ["2019-02-23", 3995, 19500, 4200, 20420, 4240, 19040],                ["2019-02-24", 4115, 19500, 4200, 20420, 4045, 19225]               ]    var option = {         title: {text: '炉石'},         legend: {             data: ['亚服金币', '亚服尘', '欧服金币', '欧服尘', '美服金币', '美服尘']         },         tooltip: {             trigger: 'axis',             formatter: function(params) {                 return params[0].name + '<br/>'                        + params[0].seriesName + ' : ' + params[0].value + '<br/>'                        + params[2].seriesName + ' : ' + params[2].value + '<br/>'                        + params[4].seriesName + ' : ' + params[4].value + '<br/>'                        + params[1].seriesName + ' : ' + params[1].value + '<br/>'                        + params[3].seriesName + ' : ' + params[3].value + '<br/>'                        + params[5].seriesName + ' : ' + params[5].value                        ;             }         },         toolbox: {             show: false         },         xAxis: {             data: data.map(function (item) {                 return item[0];             })         },         yAxis: [             {                 name: '金币',                 min: 2500,                 max: 4500,                 splitLine: {                     show: false                 }             },             {                 name: '奥术之尘',                 min: 18000,                 max: 25000,                 splitLine: {                     show: false                 }             }         ],         dataZoom: [{             startValue: '2019-02-20'         }, {             type: 'inside'         }],        series: [            {                name: '亚服金币',                type: 'line',                itemStyle: {                    normal: {                        color: '#faff72'                    }                },                data: data.map(function (item) {                    return item[1];                })            },            {                name: '亚服尘',                type: 'line',                itemStyle: {                    normal: {                        color: '#fff143'                    }                },                yAxisIndex: 1,                data: data.map(function (item) {                    return item[2];                })            },            {                name: '欧服金币',                type: 'line',                itemStyle: {                    normal: {                        color: '#44cef6'                    }                },                data: data.map(function (item) {                    return item[3];                })            },            {                name: '欧服尘',                type: 'line',                itemStyle: {                    normal: {                        color: '#3eede7'                    }                },                yAxisIndex: 1,                data: data.map(function (item) {                    return item[4];                })            },            {                name: '美服金币',                type: 'line',                itemStyle: {                    normal: {                        color: '#f00056'                    }                },                data: data.map(function (item) {                    return item[5];                })            },            {                name: '美服尘',                type: 'line',                itemStyle: {                    normal: {                        color: '#ff2121'                    }                },                yAxisIndex: 1,                data: data.map(function (item) {                    return item[6];                })            },        ]    };    hs.setOption(option, true); //当setOption第二个参数为true时，会阻止数据合并}</script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
+炉石老玩家
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="炉石" scheme="http://tommyjiang.github.io/tags/%E7%82%89%E7%9F%B3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2019-01 随想</title>
+    <link href="http://tommyjiang.github.io/2019/2019-01-24-some-thought/"/>
+    <id>http://tommyjiang.github.io/2019/2019-01-24-some-thought/</id>
+    <published>2019-01-24T03:00:00.000Z</published>
+    <updated>2019-12-12T13:55:48.680Z</updated>
+    
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>老来多健忘</div><a id="more"></a><p>读博之后感觉记忆力比巅峰状态差了很多，现在很多事儿不记在手机上很容易就忘了，一些想法也是，在这随时记下来。</p><ol><li>元旦以来将近一个月的时间，已经减了 5 斤，体重降到 74 以下。大学入学体检的时候，是 9 开头的两位数的体重，大一一年瘦到了 140，减了 40+ 斤。当年曾经被人嘲笑的小胖子，如今出现了逆生长，体重控制得还不错。反观当年身材还算正常的各位，一部分已经发福到没法看了。笑到最后才是笑得最好的，继续努力。</li><li>公司发了放假暂行规定，发现只有入职以后领证才能休婚假，之前在国网提了离职被领导忽悠，说在这就别休了，也没当回事儿就没休，现在到了这边休不了了，白白损失 10 天假期。本以为博士毕业就不会再忽悠了，没想到临走还是被电网坑了。</li><li>有些时候该放弃就要放弃，遇到困难也要及时和人沟通，别都自己扛着。现在还清楚地记得本科毕设答辩是 2010.6.22，和高考出分整整差了 4 年。由于毕设没做好，很狼狈地被取消了优良毕业生的称号。大四毕设答辩完还和萌哥吃了顿饭，当时他建议我把遇到的情况和老板反映，虽然我知道反映了也没用，但做和没做之间的差别还是挺大的，有问题应该及时和别人反映。而且话说回来，从那时候起就应该对博士的整个过程及时调低预期，也不会被坑这么惨了，更何况，从博士论文送审的时候就已经注定以后不会在电力行业混了，竟然还投入了两年半的沉没成本，教训深刻。</li><li>知乎上拿到了电气工程的优秀回答者，下一步准备往深度学习优秀回答者努力，正在写计算机视觉相关问题的回答。写的过程中发现，我的强项还是搜集整理资料，并且能用比较容易理解的方式讲给不懂的人，以后选行业可以试试教育方面。</li><li>网申了两次 + 找业务员申浦发 AE 白都被秒拒，前几天浦发竟然还厚着脸皮给我打电话，让我申请浦发男人卡，问能否直接办 AE 白，答曰不能，果断挂电话。网上看别人申额度给了 4k，果然是猴子行。</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
+老来多健忘
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="计划" scheme="http://tommyjiang.github.io/tags/%E8%AE%A1%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>海鲜宴</title>
+    <link href="http://tommyjiang.github.io/2019/2019-01-12-seafood/"/>
+    <id>http://tommyjiang.github.io/2019/2019-01-12-seafood/</id>
+    <published>2019-01-12T13:00:00.000Z</published>
+    <updated>2019-12-12T13:55:48.680Z</updated>
+    
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>许久不见的美食。</div><a id="more"></a><p><img src="/images/2019/2019-01-12-海鲜宴.jpg" alt=""></p><h2 id="菜单"><a href="#菜单" class="headerlink" title="菜单"></a>菜单</h2><ul><li>清蒸扇贝</li><li>辣炒海蛏</li><li>凉拌土豆丝</li><li>萝卜土豆丸子</li><li>辣炒生菜</li></ul><h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><h2 id="寄语"><a href="#寄语" class="headerlink" title="寄语"></a>寄语</h2><p>大厨寄语：买的海鲜一定要放在水里吐沙子两小时。小猪最爱吃这样爆炒的海鲜啦。海鲜还是带着壳吃比较有感觉！希望丰富的蛋白质可以保佑大厨减肥顺利进行，加油呀！</p><p><img src="/images/2019/2019-01-12-海鲜宴大厨.png" alt=""></p><p>小厨寄语：最近大小厨都在减肥，特意选择了海鲜，好吃不胖型。辛苦大厨把每个扇贝都冲了一遍，吃的时候完全不牙碜，好吃实惠。特意从董那拿来了土豆丝和丸子，相得益彰。很久没在家做饭了，怀念晚上早回来在家做饭的日子，以后争取回家做饭！</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
+许久不见的美食。
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="海鲜" scheme="http://tommyjiang.github.io/tags/%E6%B5%B7%E9%B2%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mac 系统降级</title>
+    <link href="http://tommyjiang.github.io/2019/2019-01-09-Mac-downgrade/"/>
+    <id>http://tommyjiang.github.io/2019/2019-01-09-Mac-downgrade/</id>
+    <published>2019-01-09T05:00:00.000Z</published>
+    <updated>2019-12-12T13:55:48.679Z</updated>
+    
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>工作电脑不要轻易升级系统！</div><a id="more"></a><p>上午在知乎看了一篇<a href="https://www.zhihu.com/question/305613293/answer/569592293" target="_blank" rel="noopener">回答</a>，跟风升级了 Mojave 系统，升级完发现 Apple 和 NVIDIA 干架，Mac 全线产品从 N 卡换成了 A 卡，现在竟然连 N 卡的驱动也不批准了，导致像我这种老 Mac 用户升级后没法用显卡。</p><p>想回退系统，发现只能抹掉重装，太麻烦了，网上还有一种方法是 Command + Alt + Shift + R，可以装 Mac 初始带的系统，但 10.13 开始磁盘格式从 HFS+ 转到了 APFS，这个方法也不行了。</p><p>总结：</p><ol><li>升级前一定要用 Time Machine 备份，可以随时降级。</li><li>工作电脑不要轻易升级系统，省得耽误干活。</li></ol><p>折腾过程中的收获：</p><ul><li><a href="http://blog.topspeedsnail.com/archives/6603" target="_blank" rel="noopener">Ubuntu 16.04 无线热点方法</a></li><li>Mac 启动时卡在进度条：启动后按住 Command + Option + P + R</li><li><a href="https://blog.csdn.net/toopoo/article/details/84765391" target="_blank" rel="noopener">Emacs 升级后无法正常打开解决方法</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
+工作电脑不要轻易升级系统！
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="工作" scheme="http://tommyjiang.github.io/categories/%E5%B7%A5%E4%BD%9C/"/>
+    
+    
+      <category term="Mac" scheme="http://tommyjiang.github.io/tags/Mac/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>提出离职一周年</title>
+    <link href="http://tommyjiang.github.io/2019/2019-01-02-resign-SGCC-one-year/"/>
+    <id>http://tommyjiang.github.io/2019/2019-01-02-resign-SGCC-one-year/</id>
+    <published>2019-01-02T11:00:00.000Z</published>
+    <updated>2019-12-12T13:55:48.678Z</updated>
+    
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>2018 年 1 月 2 日，正式向领导提出辞职。</div><a id="more"></a><p>迎新年的第二天，也迎来了从电网提离职一周年的纪念。</p><p>去年的这个时候，刚和领导提完离职回到家。那天下午，领导又组织我们技术攻坚小组开会，会上说今年我们的干劲要保持和去年一样。还说到其他部门领导说，不能培养这些博士，培养完他们都走了，说完还哈哈大笑了几声。等同事们都离开之后，我和领导汇报了我的动态——我也准备换个地方干了。然后又是和单位纠缠了两个月，3 月 7 号才正式离职。</p><p>回顾离职这一年，也曾经犹豫和彷徨过，想着如果不离职，晚上还能早点下班，6 点半就到家了，也能和大宝晚上出去转一转，不会像现在这么辛苦。但转念一想，确实没法忍受电网的诸多问题，如果继续干，最好的策略就是在里面混，可惜我又不想混。既来之，则安之，这两年多努力，以后争取轻松点。</p><p>新年在家看了央视的 MV <a href="https://www.bilibili.com/video/av39532478/?redirectFrom=h5" target="_blank" rel="noopener">《我和我的祖国》</a>，里面记录的基本都是大国企，比如：</p><ul><li>北京市消防总队故宫特勤中队</li><li>C919 飞机设计研发团队</li><li>中国电力建设集团 赞比亚下凯富峡水电站</li><li>航天科技集团一院 长征三号甲系列运载火箭研制团队</li><li>中国女排</li><li>塞罕坝机械林场</li><li>中交天津航道局有限公司 天鲲号建设者</li><li>中交四航局 港珠澳大桥岛隧工程建设者</li><li>雪龙2号 建设团队</li><li>墨子号量子科学实验卫星团队</li><li>中国铁路北京局集团有限公司 复兴号列车工作人员</li></ul><p>之前在大国企的时候，也没干什么了不起的事儿，成就感和自豪感没有，又看到各种扯淡的情况，比如各种糊弄报奖、提拔领导孩子之类的，终于选择了离开，希望以后能越走越好吧。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
+2018 年 1 月 2 日，正式向领导提出辞职。
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="工作" scheme="http://tommyjiang.github.io/categories/%E5%B7%A5%E4%BD%9C/"/>
+    
+    
+      <category term="电网" scheme="http://tommyjiang.github.io/tags/%E7%94%B5%E7%BD%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2019 新年计划</title>
+    <link href="http://tommyjiang.github.io/2019/2019-01-01-2019-plan/"/>
+    <id>http://tommyjiang.github.io/2019/2019-01-01-2019-plan/</id>
+    <published>2019-01-01T03:00:00.000Z</published>
+    <updated>2019-12-12T13:55:48.677Z</updated>
+    
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>一笔“狗”销，“猪”事顺利。</div><a id="more"></a><p>2019 年的元旦，我和老婆回家，好好计划新一年。</p><h1 id="健康"><a href="#健康" class="headerlink" title="健康"></a>健康</h1><ul><li>体检<ul><li>✅ 3 月牙周复诊(2019-04-02，牙周状况还可以，需要补牙)</li><li>🗸 9 月牙周复诊</li><li>🗸 10 月年体检</li></ul></li><li>作息<ul><li>每天 0 点 15 睡觉，7 点 15 起床，保证 7 小时睡眠，中午午休半小时</li></ul></li><li>减肥<ul><li>体重减到 72 公斤</li></ul></li></ul><div id="weight2019" style="height:400px"></div><h1 id="大宝"><a href="#大宝" class="headerlink" title="大宝"></a>大宝</h1><ul><li>和大宝相亲相爱</li></ul><div id="relationship2019" style="height:200px"></div><h1 id="专业"><a href="#专业" class="headerlink" title="专业"></a>专业</h1><ul><li>技术栈<ul><li>算法 + 数据结构(2019-01-01~2019-03-31)<ul><li>刷 Leetcode 题目 400 道(2019-01-01 完成 219 题，年底需要完成 619 题)</li><li>集中刷 LeetCode 题，LeetCode Weekly Contest 130(2019-03-31) 第一次四道题 AC。3 月 31 日已完成 500 道，精力重点转移到 C++ 方向。</li></ul></li><li>C++ 语言<ul><li>✅ C++ Primer 中文第五版(主要内容看完)</li><li>🗸 C++ 程序设计(第 8、9、11、12 章，面向对象相关内容)<h1 id="阅读"><a href="#阅读" class="headerlink" title="阅读"></a>阅读</h1></li></ul></li></ul></li><li>国学<ul><li>汉字来源<ul><li>🗸 《白鱼解字》流沙河</li><li>🗸 《细说汉字》左民安</li></ul></li><li>诗经<ul><li>🗸 《诗经注析》程俊英、蒋见元</li><li>🗸 《诗经十三经注疏》毛亨/毛苌，郑玄笺注，孔颖达疏</li></ul></li></ul></li></ul><h2 id="进度记录"><a href="#进度记录" class="headerlink" title="进度记录"></a>进度记录</h2><h3 id="Leetcode"><a href="#Leetcode" class="headerlink" title="Leetcode"></a>Leetcode</h3><div id="lc" style="height:400px"></div><!-- 引入 ECharts --><script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.1.0/echarts.js"></script><script src="https://cdn.rawgit.com/apache/incubator-echarts/master/theme/macarons.js"></script><script type="text/javascript">weight2019();relationship2019();leetcode();<!-- 体重 -->function weight2019(ec){    var weight2019 = echarts.init(document.getElementById('weight2019'), 'macarons');    <!-- 填空 体重 -->    var data = [["2019-01-01", 76.2], ["2019-01-02", 75.5], ["2019-01-03", 75.6], ["2019-01-04", 75.4],                ["2019-01-05", 75.4], ["2019-01-06", 75.8], ["2019-01-07", 75.7], ["2019-01-08", 75.8],                ["2019-01-09", 76.2], ["2019-01-10", 75.6], ["2019-01-11", 75.4], ["2019-01-12", 75.0],                ["2019-01-13", 75.4], ["2019-01-14", 74.9], ["2019-01-15", 75.0], ['2019-01-16', 74.8],                ['2019-01-17', 75.0], ['2019-01-18', 74.6], ['2019-01-19', 73.9], ['2019-01-20', 73.5],                ['2019-01-21', 74.1], ['2019-01-22', 74.0], ['2019-01-23', 73.6], ['2019-01-24', 73.3],                ['2019-01-25', 73.5], ['2019-01-26', 73.3], ['2019-01-27', 73.8], ['2019-01-28', 73.7],                ['2019-01-29', 73.5], ['2019-01-30', 73.4], ['2019-01-31', 73.6], ['2019-02-01', 73.9],                ['2019-02-02', 74.1], ['2019-02-03', 73.9], ['2019-02-04', 74.2], ['2019-02-05', 74.5],                ['2019-02-06', 75.1], ['2019-02-07', 74.8], ['2019-02-08', 74.9], ['2019-02-09', 75.1],                ['2019-02-10', 75.5], ['2019-02-11', 75.3], ['2019-02-12', 74.3], ['2019-02-13', 74.2],                ['2019-02-14', 73.7], ['2019-02-15', 74.7], ['2019-02-16', 74.2], ['2019-02-17', 73.9],                ['2019-02-18', 73.6], ['2019-02-19', 73.7], ['2019-02-20', 73.4], ['2019-02-21', 73.7],                ['2019-02-22', 73.6], ['2019-02-23', 73.7], ['2019-02-24', 73.6], ['2019-02-25', 73.7],                ['2019-02-26', 73.7], ['2019-02-27', 73.8], ['2019-02-28', 73.7], ['2019-03-01', 73.3],                ['2019-03-02', 73.6], ['2019-03-03', 73.7], ['2019-03-04', 74.0], ['2019-03-05', 73.8],                ['2019-03-06', 73.8], ['2019-03-07', 74.0], ['2019-03-08', 73.6], ['2019-03-09', 73.8],                ['2019-03-10', 73.8], ['2019-03-11', 73.5], ['2019-03-12', 73.4], ['2019-03-13', 73.1],                ['2019-03-14', 73.5], ['2019-03-15', 73.5], ['2019-03-16', 73.8], ['2019-03-17', 73.3],                ['2019-03-18', 74.0], ['2019-03-19', 73.7], ['2019-03-20', 73.5], ['2019-03-21', 73.5],                ['2019-03-22', 73.6], ['2019-03-23', 73.2], ['2019-03-24', 73.2], ['2019-03-25', 73.6],                ['2019-03-26', 73.8], ['2019-03-27', 73.9], ['2019-03-28', 73.7], ['2019-03-29', 73.6],                ['2019-03-30', 74.4], ['2019-03-31', 74.0], ['2019-04-01', 73.8], ['2019-04-02', 73.8],                ['2019-04-03', 73.9], ['2019-04-04', 73.6], ['2019-04-05', 73.7], ['2019-04-06', 74.0],                ['2019-04-07', 74.2], ['2019-04-08', 74.0], ['2019-04-09', 73.8], ['2019-04-10', 73.5],                ['2019-04-11', 73.2], ['2019-04-12', 73.6], ['2019-04-13', 73.9], ['2019-04-14', 73.9],                ['2019-04-15', 73.5], ['2019-04-16', 73.6], ['2019-04-17', 73.3], ['2019-04-18', 73.6],                ['2019-04-19', 73.3], ['2019-04-20', 73.8], ['2019-04-21', 73.6], ['2019-04-22', 73.6],                ['2019-04-23', 73.5], ['2019-04-24', 73.6], ['2019-04-25', 73.7], ['2019-04-26', 73.6],                ['2019-04-27', 73.5], ['2019-04-28', 73.6], ['2019-04-29', 73.8], ['2019-04-30', 73.6],                ['2019-05-01', 74.2], ['2019-05-02', 74.1], ['2019-05-03', 73.8], ['2019-05-04', 73.6],                ['2019-05-05', 73.7], ['2019-05-06', 73.6], ['2019-05-07', 73.8], ['2019-05-08', 73.6],                ['2019-05-09', 73.4], ['2019-05-10', 73.3], ['2019-05-11', 73.3], ['2019-05-13', 73.8],                ['2019-05-13', 74.0], ['2019-05-14', 73.4], ['2019-05-15', 73,3], ['2019-05-16', 73.5],                ['2019-05-17', 72.8], ['2019-05-18', 73.0], ['2019-05-19', 72.9], ['2019-05-20', 72.8],                ['2019-05-21', 73.0], ['2019-05-22', 72.5], ['2019-05-23', 73.1], ['2019-05-24', 73.1],                ['2019-05-25', 72.8], ['2019-05-26', 73.2], ['2019-05-27', 73.9], ['2019-05-28', 73.4],                ['2019-05-29', 72.9], ['2019-05-30', 72.6], ['2019-05-31', 72.7], ['2019-06-01', 72.9],                ['2019-06-02', 72.7], ['2019-06-03', 73.0], ['2019-06-04', 72.8], ['2019-06-05', 72.6],                ['2019-06-06', 72.8], ['2019-06-07', 73.0], ['2019-06-08', 72.6], ['2019-06-09', 73.0],                ['2019-06-11', 73.2], ['2019-06-12', 73.0], ['2019-06-13', 72.9], ['2019-06-14', 72.8],                ['2019-06-15', 72.8], ['2019-06-16', 73.0], ['2019-06-17', 72.6], ['2019-06-18', 72.8],                ['2019-06-19', 72.6], ['2019-06-20', 72.8], ['2019-06-21', 72.6], ['2019-06-22', 72.7],                ['2019-06-23', 72.6], ['2019-06-24', 73.0], ['2019-06-25', 72.8], ['2019-06-22', 72.8],                ['2019-06-27', 72.6], ['2019-06-28', 72.9], ['2019-06-29', 72.6], ['2019-06-30', 72.6],                ['2019-07-01', 72.6], ['2019-07-02', 72.5], ['2019-07-03', 72.8], ['2019-07-04', 73.0],                ['2019-07-05', 72.8], ['2019-07-06', 72.9], ['2019-07-07', 73.2], ['2019-07-08', 73.5],                ['2019-07-09', 73.6], ['2019-07-10', 73.5], ['2019-07-11', 73.2], ['2019-07-12', 73.0],                ['2019-07-13', 73.2], ['2019-07-14', 72.8], ['2019-07-15', 72.5], ['2019-07-16', 72.3],                ['2019-07-17', 72.3], ['2019-07-18', 71.9], ['2019-07-19', 72.2], ['2019-07-20', 72.6],                ['2019-07-21', 72.5], ['2019-07-22', 72.3], ['2019-07-23', 72.6], ['2019-07-24', 72.3],                ['2019-07-25', 72.7], ['2019-07-26', 73.2], ['2019-07-27', 72.9], ['2019-07-28', 72.7],                ['2019-07-29', 72.6], ['2019-07-30', 72.3]                ]    var comments = {"2019-01-01": "董董元旦火锅", "2019-01-06": "烤肉乐烧烤自助", "2019-01-13": "海鲜宴",                    '2019-01-20': '家宴吐了', "2019-02-10": "春节回家", "2019-02-15": "情人节米斯特披萨",                    '2019-02-17': '董来元宵节', '2019-03-29': "万人香锅(大蔡、萌哥、小牛)",                    '2019-05-27': '大宝咖喱饭', '2019-07-02': "贪吃一番街"                   }    var option = {         title: {text: '2019 体重'},         tooltip: {             trigger: 'axis',             formatter: function (params, ticket, callback) {                           var res='时间：' + params[0].name + '<br>'                           res += '体重：' + params[0].data + '<br>'                           if(comments[params[0].name] != null){                               res += '注释：' + comments[params[0].name]                           }                           return res             }         },         xAxis: {             data: data.map(function (item) {                 return item[0];             })         },         yAxis: {             min: 70,             max: 78,             splitLine: {                 show: false             }         },         toolbox: {             left: 'center',             feature: {                 dataZoom: {                     yAxisIndex: 'none'                 },                 restore: {},                 saveAsImage: {}             }         },         dataZoom: [{             startValue: '2019-01-01'         }, {             type: 'inside'         }],         visualMap: {             top: '30%',             right: 0,             pieces: [{                 gt: 70,                 lte: 72,                 color: '#096'             }, {                 gt: 72,                 lte: 74,                 color: '#ffde33'             }, {                 gt: 74,                 lte: 76,                 color: '#ff9933'             }, {                 gt: 76,                 lte: 78,                 color: '#cc0033'             }, {                 gt: 78,                 color: '#660099'             }],             outOfRange: {                 color: '#999'             }        },        series: {            name: '2019 体重',            type: 'line',            data: data.map(function (item) {                return item[1];            }),            markLine: {                symbolSize: 0,                label: {                    show: false                },                data: [{                    yAxis: 70                }, {                    yAxis: 72                }, {                    yAxis: 74                }, {                    yAxis: 76                }, {                    yAxis: 78                }]            }        }    };    weight2019.setOption(option, true); //当setOption第二个参数为true时，会阻止数据合并}<!-- 大宝关系 -->function relationship2019(ec){    var relationship2019 = echarts.init(document.getElementById('relationship2019'));    <!-- 填空 关系 -->    var data = [["2019-01-01", 8], ["2019-01-02", 8], ["2019-01-03", 8], ["2019-01-04", 7],                ["2019-01-05", 7], ["2019-01-06", 9], ["2019-01-07", 7], ["2019-01-08", 10],                ["2019-01-09", 10], ["2019-01-10", 9], ["2019-01-11", 10], ["2019-01-12", 10],                ["2019-01-13", 10], ['2019-01-14', 10], ['2019-01-15', 9], ['2019-01-16', 10],                ['2019-01-17', 0], ['2019-01-18', 10], ['2019-01-19', 10], ['2019-01-20', 10],                ['2019-01-21', 10], ['2019-01-22', 10], ['2019-01-23', 10], ['2019-01-24', 10],                ['2019-01-25', 10], ['2019-01-26', 10], ['2019-01-27', 7], ['2019-01-28', 9],                ['2019-01-29', 10] , ['2019-01-30', 10], ['2019-01-31', 10], ['2019-02-01', 10],                ['2019-02-02', 10], ['2019-02-03', 10], ['2019-02-04', 10], ['2019-02-05', 10],                ['2019-02-06', 10], ['2019-02-07', 10], ['2019-02-08', 10], ['2019-02-09', 10],                ['2019-02-10', 10], ['2019-02-11', 10], ['2019-02-12', 10], ['2019-02-13', 10],                ['2019-02-14', 10], ['2019-02-15', 10], ['2019-02-16', 10], ['2019-02-17', 10],                ['2019-02-18', 10], ['2019-02-19', 10], ['2019-02-20', 10], ['2019-02-21', 5],                ['2019-02-22', 10], ['2019-02-23', 10], ['2019-02-24', 10], ['2019-02-25', 10],                ['2019-02-26', 8], ['2019-02-27', 10], ['2019-02-28', 10], ['2019-03-01', 10],                ['2019-03-02', 10], ['2019-03-03', 7], ['2019-03-04', 10], ['2019-03-05', 10],                ['2019-03-06', 10], ['2019-03-07', 10], ['2019-03-08', 10], ['2019-03-09', 10],                ['2019-03-10', 10], ['2019-03-11', 10], ['2019-03-12', 10], ['2019-03-13', 10],                ['2019-03-14', 10], ['2019-03-15', 4], ['2019-03-16', 10], ['2019-03-17', 10],                ['2019-03-18', 10], ['2019-03-19', 10], ['2019-03-20', 10], ['2019-03-21', 10],                ['2019-03-22', 10], ['2019-03-23', 10], ['2019-03-24', 10], ['2019-03-25', 10],                ['2019-03-26', 10], ['2019-03-27', 10], ['2019-03-28', 10], ['2019-03-29', 4],                ['2019-03-30', 10], ['2019-03-31', 10], ['2019-04-01', 10], ['2019-04-02', 10],                ['2019-04-03', 10], ['2019-04-04', 10], ['2019-04-05', 10], ['2019-04-06', 10],                ['2019-04-07', 10], ['2019-04-08', 10], ['2019-04-09', 10], ['2019-04-10', 10],                ['2019-04-11', 10], ['2019-04-12', 10], ['2019-04-13', 10], ['2019-04-14', 7],                ['2019-04-15', 10], ['2019-04-16', 10], ['2019-04-17', 10], ['2019-04-18', 4],                ['2019-04-19', 10], ['2019-04-20', 10], ['2019-04-21', 10], ['2019-04-22', 7],                ['2019-04-23', 10], ['2019-04-24', 10], ['2019-04-25', 10], ['2019-04-26', 10],                ['2019-04-27', 10], ['2019-04-28', 10], ['2019-04-29', 10], ['2019-04-30', 10],                ['2019-05-01', 10], ['2019-05-02', 10], ['2019-05-03', 10], ['2019-05-04', 10],                ['2019-05-05', 10], ['2019-05-06', 7], ['2019-05-07', 10], ['2019-05-08', 10],                ['2019-05-09', 10], ['2019-05-10', 7], ['2019-05-11', 10], ['2019-05-12', 10],                ['2019-05-13', 10], ['2019-05-14', 10], ['2019-05-15', 10], ['2019-05-16', 10],                ['2019-05-17', 10], ['2019-05-18', 10], ['2019-05-19', 10], ['2019-05-20', 10],                ['2019-05-21', 10], ['2019-05-22', 7], ['2019-05-23', 10], ['2019-05-24', 10],                ['2019-05-25', 10], ['2019-05-26', 10], ['2019-05-27', 10], ['2019-05-28', 10],                ['2019-05-29', 10], ['2019-05-30', 10], ['2019-05-31', 8], ['2019-06-01', 10],                ['2019-06-02', 10], ['2019-06-03', 10], ['2019-06-04', 10], ['2019-06-05', 10],                ['2019-06-06', 10], ['2019-06-07', 10], ['2019-06-08', 10], ['2019-06-09', 10],                ['2019-06-10', 10], ['2019-06-11', 10], ['2019-06-12', 10], ['2019-06-13', 10],                ['2019-06-14', 10], ['2019-06-15', 10], ['2019-06-16', 10], ['2019-06-17', 10],                ['2019-06-18', 10], ['2019-06-19', 10], ['2019-06-20', 10], ['2019-06-21', 10],                ['2019-06-22', 10], ['2019-06-23', 10], ['2019-06-24', 10], ['2019-06-25', 10],                ['2019-06-26', 10], ['2019-06-27', 10], ['2019-06-28', 10], ['2019-06-29', 10],                ['2019-06-30', 10], ['2019-07-01', 10], ['2019-07-02', 10], ['2019-07-03', 10],                ['2019-07-04', 10], ['2019-07-05', 10], ['2019-07-06', 10], ['2019-07-07', 10],                ['2019-07-08', 10], ['2019-07-09', 4],  ['2019-07-10', 10], ['2019-07-11', 10],                ['2019-07-12', 10], ['2019-07-13', 10], ['2019-07-14', 10], ['2019-07-15', 10],                ['2019-07-16', 10], ['2019-07-17', 10], ['2019-07-18', 10], ['2019-07-19', 10],                ['2019-07-20', 10], ['2019-07-21', 10], ['2019-07-22', 10], ['2019-07-23', 10],                ['2019-07-24', 10], ['2019-07-25', 10], ['2019-07-26', 10], ['2019-07-27', 10],                ['2019-07-28', 10], ['2019-07-29', 10], ['2019-07-30', 10], ['2019-07-31', 10],                ]    var comments = {<!-- "2019-01-01": '3(摩擦没告诉大宝) + 5', "2019-01-02": '4 + 4(没给大宝带本回来)', -->                    <!-- "2019-01-03": '4 + 4(PMS)',  "2019-01-04": '4 + 3(大宝不理我)',  -->                    <!-- '2019-01-05': '3(不给我买电脑、身体不舒服还想要) + 4', -->                    <!-- '2019-01-06': '4 + 5', '2019-01-07': '3 + 4', -->                    <!-- '2019-01-12': '5(s) + 5', '2019-01-13': '5 + 5(狼人杀)', -->                    <!-- '2019-01-14': '5 + 5(狼人杀视频)', '2019-01-15': '4.5(没捂捂) + 4.5', -->                    <!-- '2019-01-17': '0(没抱抱吵架) + 0', -->                    <!-- '2019-01-21': '5 + 5(大宝半夜不睡觉)', '2019-01-22': '5 + 5(三起三落)', -->                    <!-- '2019-01-24': '5 + 5(新品到货)', '2019-01-27': '2(不买糕点还说我小社恐) + 5', -->                    <!-- '2019-01-28': '5 + 4(大宝流血)', '2019-02-14': '5(s) + 5', '2019-02-21': '5 + 0(不理大宝)', -->                    <!-- '2019-02-23': '5(口住) + 5', '2019-03-03': '5 + 2(不照顾大宝)',  -->                    <!-- '2019-03-15': '2(善给人压 + s) + 2', '2019-03-19': '5(s) + 5', -->                    <!-- '2019-03-29': '4 + 0(摩擦被大宝发现了)', '2019-04-06': '5 + 5(大热 J)' -->                    <!-- '2019-04-18': '4 + 0(微博)', '2019-04-22': '5 + 2(说大宝胖)' -->                    <!-- '2019-05-06': '5 + 2(弄疼兔兔了)', '2019-05-11': '5(s) + 5', -->                    <!-- '2019-05-12': '5(s) + 5', '2019-05-14': '5(s) + 5', -->                    <!-- '2019-07-09': '2 + 2(涩谷惨案)' -->                    }    var option = {        tooltip: {            position: 'top',            formatter: function (params, ticket, callback) {                          var res='日期：' + params.data[0] + '<br>'                          res += '关系指数：' + params.data[1] + '<br>'                          if(comments[params.data[0]] != null){                              res += '注释：' + comments[params.data[0]]                          }                          return res            }        },        visualMap: {            min: 0,            max: 10,            calculable: true,            orient: 'horizontal',            left: 'center',            top: 'top',            inRange: {                color: ['#268bd2', '#cb4b16']            },        },        calendar: {            range: '2019',            orient: 'horizontal',            cellSize: [14.2, 20],            dayLabel: {              firstDay: 1, // 从周一开始              nameMap: 'cn'            },            monthLabel: {              nameMap: 'cn'            },        },        series: {            type: 'heatmap',            coordinateSystem: 'calendar',            data: data        }    }    relationship2019.setOption(option, true); //当setOption第二个参数为true时，会阻止数据合并}<!-- Leetcode -->function leetcode(ec){    var leetcode = echarts.init(document.getElementById('lc'));    <!-- 填空 Leetcode -->    var data = [["2019-01-01", 219], ["2019-01-02", 219], ["2019-01-03", 225], ["2019-01-04", 228],                ["2019-01-05", 231], ["2019-01-06", 238], ["2019-01-07", 241], ["2019-01-08", 246],                ["2019-01-09", 248], ["2019-01-10", 251], ["2019-01-11", 253], ["2019-01-12", 255],                ["2019-01-13", 257], ["2019-01-14", 259], ['2019-01-15', 264], ['2019-01-16', 266],                ['2019-01-17', 267], ['2019-01-18', 269], ['2019-01-19', 270], ['2019-01-20', 271],                ['2019-01-21', 273], ['2019-01-22', 276], ['2019-01-23', 278], ['2019-01-24', 281],                ['2019-01-25', 283], ['2019-01-26', 283], ['2019-01-27', 283], ['2019-01-28', 287],                ['2019-01-29', 289], ['2019-01-30', 295], ['2019-01-31', 300], ['2019-02-01', 309],                ['2019-02-02', 309], ['2019-02-03', 309], ['2019-02-04', 312], ['2019-02-05', 312],                ['2019-02-06', 312], ['2019-02-07', 312], ['2019-02-08', 315], ['2019-02-09', 318],                ['2019-02-10', 320], ['2019-02-11', 323], ['2019-02-12', 325], ['2019-02-13', 328],                ['2019-02-14', 329], ['2019-02-15', 330], ['2019-02-16', 331], ['2019-02-17', 332],                ['2019-02-18', 333], ['2019-02-19', 334], ['2019-02-20', 335], ['2019-02-21', 339],                ['2019-02-22', 341], ['2019-02-23', 344], ['2019-02-24', 347], ['2019-02-25', 348],                ['2019-02-26', 350], ['2019-02-27', 351], ['2019-02-28', 353], ['2019-03-01', 357],                ['2019-03-02', 360], ['2019-03-03', 370], ['2019-03-04', 373], ['2019-03-05', 376],                ['2019-03-06', 380], ['2019-03-07', 382], ['2019-03-08', 388], ['2019-03-09', 395],                ['2019-03-10', 397], ['2019-03-11', 399], ['2019-03-12', 401], ['2019-03-13', 403],                ['2019-03-14', 405], ['2019-03-15', 408], ['2019-03-16', 411], ['2019-03-17', 420],                ['2019-03-18', 425], ['2019-03-19', 430], ['2019-03-20', 435], ['2019-03-21', 440],                ['2019-03-22', 445], ['2019-03-23', 450], ['2019-03-24', 455], ['2019-03-25', 460],                ['2019-03-26', 465], ['2019-03-27', 470], ['2019-03-28', 475], ['2019-03-29', 480],                ['2019-03-30', 485], ['2019-03-31', 500]]    var option = {         title: {text: 'Leetcode'},         tooltip: {             trigger: 'axis'         },         xAxis: {             data: data.map(function (item) {                 return item[0];             })         },         yAxis: {             min: 200,             max: 700,             splitLine: {                 show: false             }         },         toolbox: {             left: 'center',             feature: {                 dataZoom: {                     yAxisIndex: 'none'                 },                 restore: {},                 saveAsImage: {}             }         },         dataZoom: [{             startValue: '2019-01-01'         }, {             type: 'inside'         }],        series: {            name: 'Leetcode',            type: 'line',            lineStyle: {                normal: {                    color: '#F3B13D',                }            },            itemStyle: {                normal: {                    color: '#F3B13D',                }            },            data: data.map(function (item) {                return item[1];            }),        }    };    leetcode.setOption(option, true); //当setOption第二个参数为true时，会阻止数据合并}</script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
+一笔“狗”销，“猪”事顺利。
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="计划" scheme="http://tommyjiang.github.io/tags/%E8%AE%A1%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2018行程总结及个人飞行统计</title>
+    <link href="http://tommyjiang.github.io/2018/2018-12-31-Trip-2018/"/>
+    <id>http://tommyjiang.github.io/2018/2018-12-31-Trip-2018/</id>
+    <published>2018-12-31T02:00:00.000Z</published>
+    <updated>2019-12-12T13:55:48.677Z</updated>
+    
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>2018 行程总结。</div><a id="more"></a><h1 id="2018-行程总结"><a href="#2018-行程总结" class="headerlink" title="2018 行程总结"></a>2018 行程总结</h1><p>2018 年各月飞机里程和火车里程：</p><div id="tripSum2018" style="height:400px"></div><p>换工作以后，还没出过差，所有的火车和飞机都是旅游和回家探亲。以后要和大宝游遍全世界。</p><h1 id="个人飞行统计"><a href="#个人飞行统计" class="headerlink" title="个人飞行统计"></a>个人飞行统计</h1><p>各航空公司的里程对比如下：</p><div id="airlineStat" style="height:400px"></div><p>国航 7w + ，占比超 60%，但离 100w 的终身白金还有很长一段路……</p><!--引入百度地图的jssdk，这里需要使用你在百度地图开发者平台申请的 ak--><script src="http://api.map.baidu.com/api?v=2.0&ak=x2V7KanMxVA2GuK7oFHPOiGytFSXWoyN"></script><!-- 引入 ECharts --><script src="https://cdn.bootcss.com/echarts/4.1.0/echarts.js"></script><script src="https://cdn.rawgit.com/apache/incubator-echarts/master/theme/macarons.js"></script><!-- 引入百度地图扩展 --><script src="https://cdn.bootcss.com/echarts/4.1.0/extension/bmap.js"></script><script type="text/javascript">TripSum2018();Airline();function TripSum2018(ec){    var myTripSum2018 = echarts.init(document.getElementById('tripSum2018'), 'macarons');    var option = {        tooltip : {            trigger: 'axis'        },        toolbox: {            show : true,            feature : {                mark : {show: true},                dataView : {show: true, readOnly: false},                magicType: {show: true, type: ['bar', 'bar']},                restore : {show: true},                saveAsImage : {show: true}            }        },        calculable : true,        legend: {            data:['飞机行程','火车行程']        },        xAxis : [            {                type : 'category',                data : ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月']            }        ],        yAxis : [            {                type : 'value',                name : '飞机行程(km)',                axisLabel : {                    formatter: '{value}'                }            },            {                type : 'value',                name : '火车行程(km)',                axisLabel : {                    formatter: '{value}'                }            }        ],        series : [            {                name:'飞机行程',                type:'bar',                data:[0, 8514, 0, 0, 0, 3739, 0, 0, 0, 0, 0, 0]            },            {                name:'火车行程',                type:'bar',                yAxisIndex: 1,                data:[595, 0, 354, 0, 0, 0, 372, 574, 0, 297, 0, 0]            }        ]    };    myTripSum2018.setOption(option,true); //当setOption第二个参数为true时，会阻止数据合并}    function Airline(){        var myAirline = echarts.init(document.getElementById('airlineStat'),'macarons');        option = {            title:{                text:'航空公司&航空联盟飞行里程（飞行总里程：116757 km）',                x:'center'            },            tooltip:{                trigger:'item',                formatter:"{b}:{c} km ({d}%)"            },            legend:{                orient:'vertical',                x:'left',                data:['国航（CA）','山航（SC）', '深航（ZH）','美联航（UA）','南航（CZ）','东航（MU）','联合航空（KN）','厦航（MF）','上海航空（FM）','达美航空（DL）','海航（HU）','天津航空（GS）','其他']            },            toolbox:{                show: true,                feature:{                    mark:{show:true},                    dataView:{show:true,readOnly:false},                    magicType:{                        show:true,                        type:['pie']                    }                },                restore:{show:true},                saveAsImage : {show: true}            },            calculable:true,            selectedMode:false,            series:[                {                    name:'航空公司',                    type:'pie',                    center:['70%','50%'],                    radius:[100, 140],                    data:[                        {value:70006,name:'国航（CA）'},                        {value:4250,name:'美联航（UA）'},                        {value:3834,name:'山航（SC）'},                        {value:5613,name:'深航（ZH）'},                        {value:4212,name:'南航（CZ）'},                        {value:3614,name:'东航（MU）'},                        {value:1742,name:'厦航（MF）'},                        {value:1360,name:'联合航空（KN）'},                        {value:1133,name:'上海航空（FM）'},                        {value:8689,name:'达美航空（DL）'},                        {value:2094,name:'海航（HU）'},                        {value:639,name:'天津航空（GS）'},                        {value:5123,name:'泰狮航空（GS）'},                        {value:2675,name:'其他'}                    ]                },                {                    name:'航空联盟',                    type:'pie',                    center:['70%','50%'],                    radius:[0, 80],                    itemStyle : {                        normal : {                            label : {                                position : 'inner'                            },                        }                    },                    data:[                        {value:83703,name:'星空联盟'},                        {value:22844,name:'天合联盟'},                        {value:10210,name:'其他'}                    ]                }            ]        }        myAirline.setOption(option);    }</script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
+2018 行程总结。
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="旅行" scheme="http://tommyjiang.github.io/tags/%E6%97%85%E8%A1%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PRML 开源</title>
+    <link href="http://tommyjiang.github.io/2018/2018-11-28-PRML-open-source/"/>
+    <id>http://tommyjiang.github.io/2018/2018-11-28-PRML-open-source/</id>
+    <published>2018-11-28T14:00:00.000Z</published>
+    <updated>2019-12-12T13:55:48.676Z</updated>
+    
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>三大圣经之一都开源了。</div><a id="more"></a><p>在去年写的里，曾经介绍过机器学习三大圣经：PRML，ESL 和 MLAPP。最近，PRML 作者，微软剑桥研究院实验室负责人 Christopher Bishop 开源了他的经典著作——PRML，可以到<a href="http://link.zhihu.com/?target=https%3A//www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf">这里</a>下载。</p><p>在这本书的前面，Bishop 写了这本书奉献给妻子和孩子，还放了他们一家四口 2006 年 3 月到土耳其安卡拉看日全食的照片。最近也在看菠萝的书《癌症·新知》，书的后记提到，本来想做老师的他，通过写科普书也获得了很多成就感。以后我也要写一本经典的书，也要在前面附上一家人的照片，为了实现这个目标，努力！</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
+三大圣经之一都开源了。
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="Geek" scheme="http://tommyjiang.github.io/categories/Geek/"/>
+    
+    
+      <category term="Machine Learning" scheme="http://tommyjiang.github.io/tags/Machine-Learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Ubuntu 误删 Python 恢复记录</title>
+    <link href="http://tommyjiang.github.io/2018/2018-11-21-ubuntu-delete-python/"/>
+    <id>http://tommyjiang.github.io/2018/2018-11-21-ubuntu-delete-python/</id>
+    <published>2018-11-21T03:00:00.000Z</published>
+    <updated>2019-12-12T13:55:48.675Z</updated>
+    
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>不作死就不会死</div><a id="more"></a><p>上午想找个 Kaggle 比赛记录的方法，最后选了 jupyter notebook，自己笔记本里，python 版本装得太多，都乱套了，一不小心卸载了系统自带的 Python，重启之后桌面都消失了，键盘也没法用了。</p><p>上网查了解决方案，都是需要先进恢复模式，开机需要按 Shift，由于键盘没法用，这个方法也失效了。查到了 Ubuntu 官网写的，先用 Live USB，也就是 Ubuntu 的安装盘，试用 Ubuntu，然后再进命令行，先 mount 再利用 chroot 切换到电脑硬盘的 Ubuntu，然后执行 <code>sudo apt install ubuntu-minimal ubuntu-standard ubuntu-desktop</code>，关于 chroot 的用法可以参考 archlinux 的 <a href="https://wiki.archlinux.org/index.php/Chroot" target="_blank" rel="noopener">wiki</a></p><p>这里还有个坑，就是在 chroot 之前，需要先连网，然后将配置文件拷过去，否则 chroot 之后 apt install 会提示无法联网，具体命令为：<code>cp /etc/resolv.conf etc/resolv.conf</code>。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
+不作死就不会死
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="Geek" scheme="http://tommyjiang.github.io/categories/Geek/"/>
+    
+    
+      <category term="Ubuntu" scheme="http://tommyjiang.github.io/tags/Ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2018 双十一总结</title>
+    <link href="http://tommyjiang.github.io/2018/2018-11-11-2018-double-eleven/"/>
+    <id>http://tommyjiang.github.io/2018/2018-11-11-2018-double-eleven/</id>
+    <published>2018-11-11T15:00:00.000Z</published>
+    <updated>2019-12-12T13:55:48.675Z</updated>
+    
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>又是一年一度的双十一</div><a id="more"></a><p>双十一总结。</p><h1 id="自己购物"><a href="#自己购物" class="headerlink" title="自己购物"></a>自己购物</h1><h2 id="钢笔"><a href="#钢笔" class="headerlink" title="钢笔"></a>钢笔</h2><p>今年的主力是百利金的 M200 牛奶咖啡。本来生日的时候就想下单，这次双十一满 400 减 50，再加上店铺优惠券减 30，一共省了 180，遂拔草，静待喜提。之前想买的小米机器人，因为买了这支笔，只能割爱了，以后靠我的人工智能负责家里的卫生了。</p><h2 id="牙齿护理"><a href="#牙齿护理" class="headerlink" title="牙齿护理"></a>牙齿护理</h2><p>今年双十一的另一大主题是牙齿护理装备，包括松下冲牙器、Gum 牙线、青蛙软毛小头牙刷和小鹿妈妈牙线棒。从小我的牙就不好，9 月去复查牙周，又花了将近 2000 做龈下刮治。这下长记性了，不能再花这冤枉钱了，平时就要注意牙齿的清洁和护理。等冲牙器到了试试效果怎么样。</p><h2 id="书"><a href="#书" class="headerlink" title="书"></a>书</h2><p>今年还送了大宝一本书，是三联在公众号推送的西南联大英文课，希望能给大宝提供讲课和辅导的素材。</p><h1 id="大宝购物"><a href="#大宝购物" class="headerlink" title="大宝购物"></a>大宝购物</h1><p>待补充</p><h1 id="双十一生活"><a href="#双十一生活" class="headerlink" title="双十一生活"></a>双十一生活</h1><p>今年双十一是周日，难得休息一天和大宝在家。上午去家乐福买菜准备中午做饭，一共三个菜，孜然羊肉、鱼香肉丝、辣炒木耳菜。一顿做了两顿的量，准备晚上继续吃。中午米饭放在电饭锅里，忘了取消保温模式，一直插着电，等晚上吃的时候，饭都硬了，吃完之后我俩都不太舒服，吸取教训，下次把插头先拔了。</p><p>中午的美食：</p><p><img src="/images/2018/2018-11-11-双十一做饭.jpeg" alt=""></p><p>晚上把购物车清空了，给淘宝贡献了 5000 的销售额，晚上出发晚，不想挤地铁，选了 80 换 693 的公交路线，没想到 80 路的司机太勇猛，坐车坐得很不舒服，下次还是晚上早点出来吃个饭然后回来，新开辟的公交路线以失败告终。</p><p>11.18 补充：时隔一周，和大宝再次坐 80 路，俩人还是非常不舒服，以后不坐这个破玩意儿了，还是坐地铁吧。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
+又是一年一度的双十一
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="购物" scheme="http://tommyjiang.github.io/tags/%E8%B4%AD%E7%89%A9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>吴军 态度 摘记</title>
+    <link href="http://tommyjiang.github.io/2018/2018-11-10-attitude/"/>
+    <id>http://tommyjiang.github.io/2018/2018-11-10-attitude/</id>
+    <published>2018-11-10T08:00:00.000Z</published>
+    <updated>2019-12-12T13:55:48.674Z</updated>
+    
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>吴军老师的书都还不错。</div><a id="more"></a><h1 id="态度-吴军"><a href="#态度-吴军" class="headerlink" title="态度 吴军"></a>态度 吴军</h1><p>教育首先是关怀备至地、深思熟虑地、小心翼翼地去触及年轻的心灵。</p><p><a id="org4b8c6c8"></a></p><h2 id="1-乐观的人生态度"><a href="#1-乐观的人生态度" class="headerlink" title="1. 乐观的人生态度"></a>1. 乐观的人生态度</h2><ul><li>美国人说，拼命读书能否让将来的生活更好，还是一个未知数，但是快快乐乐地生活18年，这是能够看到的，自己也能够把握；人生能有多少个18年，与其愁眉苦脸地度过少年时光，不如先快快乐乐地过18年。</li><li>人如果不能过得快乐，有再多的钱也没有半点儿意义。</li><li>有理想并努力实现自己的愿望。</li></ul><p><a id="org9be5346"></a></p><h2 id="3-抵制诱惑"><a href="#3-抵制诱惑" class="headerlink" title="3. 抵制诱惑"></a>3. 抵制诱惑</h2><ul><li>当人们对一种简单而强烈的快感上瘾后，对于其他事情就失去了兴趣，这就如同吸毒带来的快感一样。</li><li>抵御诱惑最根本的方法是有一个长远的大目标。</li><li>做一些有成就感、有回报的事情。</li></ul><p><a id="org07e68b5"></a></p><h2 id="4-成功是成功之母"><a href="#4-成功是成功之母" class="headerlink" title="4. 成功是成功之母"></a>4. 成功是成功之母</h2><ul><li>你从四五岁开始就能听完整的严肃音乐会，那个年龄的孩子大多无法安安静静地在音乐厅里坐上两个小时。后来每当旧金山有好的音乐会、芭蕾舞和歌剧演出，你都有极大的兴趣去听去看，去现场体会。随着年龄的增加，你看了世界上很多大师的表演，你的鉴别能力也在提升。</li><li>人只有成功过一次，才更容易成功第二次、第三次，因此失败不是成功之母，成功才是成功之母。</li></ul><p><a id="orgbe689ca"></a></p><h2 id="5-最好是更好的敌人"><a href="#5-最好是更好的敌人" class="headerlink" title="5. 最好是更好的敌人"></a>5. 最好是更好的敌人</h2><ul><li>很多时候，一些人无所作为不是因为不想做事，而是一根筋地追求最好，最后什么也得不到。</li><li>做事情不怕慢，就怕停。</li></ul><p><a id="orgf369a53"></a></p><h2 id="6-好习惯成就一生"><a href="#6-好习惯成就一生" class="headerlink" title="6. 好习惯成就一生"></a>6. 好习惯成就一生</h2><ul><li>撒切尔<ul><li>注意你的想法，因为它能决定你的言辞和行动。</li><li>注意你的言辞和行动，因为它能主导你的行为。</li><li>注意你的行为，因为它能变成你的习惯。</li><li>注意你的习惯，因为它能塑造你的性格。</li><li>注意你的性格，因为它能决定你的命运。</li></ul></li></ul><p><a id="org52c6b97"></a></p><h2 id="7-格局要大"><a href="#7-格局要大" class="headerlink" title="7. 格局要大"></a>7. 格局要大</h2><ul><li>上次你们副校长埃里克·格雷姆松在我们家吃饭时对你说，MIT还在世的本科校友中，有大约1/3是大公司的高管和创始人，也就是说，他们并不是那些满足于赚小钱的人。</li></ul><p><a id="orgdb83ea7"></a></p><h2 id="8-境界要高"><a href="#8-境界要高" class="headerlink" title="8. 境界要高"></a>8. 境界要高</h2><ul><li>人一旦习惯获得短期利益，境界就高不起来了，可能永远不会追求更高的境界了。</li><li>人的境界高一点儿，多关注长远，少盯着眼前，才能走得更远。</li></ul><p><a id="org003c371"></a></p><h2 id="10-教育改变命运"><a href="#10-教育改变命运" class="headerlink" title="10. 教育改变命运"></a>10. 教育改变命运</h2><ul><li>教育能让人有见识</li></ul><p><a id="orgfd916ed"></a></p><h2 id="12-做个好人"><a href="#12-做个好人" class="headerlink" title="12. 做个好人"></a>12. 做个好人</h2><ul><li>谷歌非常独特的一点就是不作恶。这对于一家以营利为目的的公司来讲，是非常难得的。</li><li>It’s nice to be great, yet it’s great to be nice.</li></ul><p><a id="org4b9199d"></a></p><h2 id="18-第一次投资的建议"><a href="#18-第一次投资的建议" class="headerlink" title="18. 第一次投资的建议"></a>18. 第一次投资的建议</h2><ul><li>永远不要相信自己能够打败市场</li><li>要对市场有信心</li><li>定投指数基金 ETF</li></ul><p><a id="orgb0f6959"></a></p><h2 id="19-投资红线"><a href="#19-投资红线" class="headerlink" title="19. 投资红线"></a>19. 投资红线</h2><ul><li>凡事说干就干是一个好习惯</li><li>做空股票</li><li>杠杆投资</li><li>不要眼红别人抓住了投机机会</li></ul><p><a id="org6a990ae"></a></p><h2 id="20-金钱观"><a href="#20-金钱观" class="headerlink" title="20. 金钱观"></a>20. 金钱观</h2><ul><li>上大学的意义：能做一些对社会比较有影响力的事，而不是以挣钱多少来衡量。换句话说，在美国，衡量精英的标准不是钱和学历，而是影响力。对于温饱不是问题的人来说，在年轻的时候能够懂得把钱看得淡一点儿，是有必要的。</li><li>满足于做一个电脑工程师、华尔街的股票交易员，或者一个家庭医生，挣的钱或许不少，但是从社会影响力来讲，依然没有摆脱穷人的心态。</li><li>如果一个人能够在能力水平上晋升一级，不仅贡献多10倍，所做的事情的影响力，包括自己的收入也常常多10倍。做5件5级的事，花的时间可能比做一件三级的事要多，但是收益和影响只有后者的5％。</li></ul><p><a id="org799b002"></a></p><h2 id="21-交友观"><a href="#21-交友观" class="headerlink" title="21. 交友观"></a>21. 交友观</h2><ul><li>你在工作之后会发现，有些同事即使共事时间很长，也不一定能深交。在工作中，更多是业务上的关系，难免有点儿功利。但是大学却不同，同学的功利心不会太强，彼此愿意相互照应，这是出于年轻人的善意和天然的交友欲望。</li><li>大学交朋友的另一个好处是，同一个班上的同学，不论家境和其他条件相差多大，到了一个班里学习，彼此就是平等的，或者相对平等。</li></ul><p><a id="orgf5ed320"></a></p><h2 id="22-爱情观"><a href="#22-爱情观" class="headerlink" title="22. 爱情观"></a>22. 爱情观</h2><ul><li>没有爱情的人是有缺陷的，没有经历真正爱情的人生也是不完整的。</li><li>唯一要注意的就是不要凡事太强势。据我观察，很多从名校毕业的人都有这个特点。</li></ul><p><a id="org1b6b793"></a></p><h2 id="25-有效沟通"><a href="#25-有效沟通" class="headerlink" title="25. 有效沟通"></a>25. 有效沟通</h2><ul><li>有效的沟通要以对方的确认为准</li><li>要以对方听得懂的话来沟通，切忌卖弄自己的知识，把简单的问题讲复杂了。</li><li>沟通要简洁，切中要害。</li><li>善辩不等于好的沟通，沟通的目的是让对方接受自己的想法，而非把对方驳得哑口无言。</li></ul><p><a id="org6a254a6"></a></p><h2 id="26-体面拒绝别人"><a href="#26-体面拒绝别人" class="headerlink" title="26. 体面拒绝别人"></a>26. 体面拒绝别人</h2><ul><li>帮忙四种 case<ul><li>能力不及，不能帮上忙，直接在第一时间委婉拒绝。</li><li>能帮上忙，但是却不想帮，因为自己的代价太大。如果不想帮，就不要勉强自己，但也要及早通知对方。</li><li>不论多困难都愿意帮，而且极有可能办成。这时，就答应对方，然后就全力去做。</li><li>虽然愿意帮，有可能帮上，也可能帮不上。这时，要将自己的实际情况告诉对方，千万不要轻易许诺，不要拍胸脯。</li></ul></li><li>切忌不要做的事<ul><li>为了显示自己的能耐吹牛皮。</li><li>对于做不到的事情，提出给人廉价的补偿。</li><li>帮忙别指望回报。</li><li>帮违反原则的忙。</li></ul></li></ul><p><a id="orgf4c767e"></a></p><h2 id="27-上帝喜欢笨人"><a href="#27-上帝喜欢笨人" class="headerlink" title="27. 上帝喜欢笨人"></a>27. 上帝喜欢笨人</h2><ul><li>笨人不懂得打擦边球，不懂得把利益最大化，因此凡事要留很大的余量。</li></ul><p><a id="org1425e8c"></a></p><h2 id="28-科学研究方法"><a href="#28-科学研究方法" class="headerlink" title="28. 科学研究方法"></a>28. 科学研究方法</h2><ul><li>提出质疑</li><li>小心求证</li><li>复杂问题分解为多个简单问题</li><li>合理地解释结果，上升到结论并推广</li></ul><p><a id="org3a89dbf"></a></p><h2 id="29-读名著"><a href="#29-读名著" class="headerlink" title="29. 读名著"></a>29. 读名著</h2><ul><li>读一部经典的介绍，或简写本和精彩章节的节选，慢慢了解了它的内容，再整篇研读。</li><li>先快速通读一遍，了解大致内容，在重要的地方做一个标记，回来再仔细读。</li></ul><p><a id="org54e7c21"></a></p><h2 id="31-学好数学"><a href="#31-学好数学" class="headerlink" title="31. 学好数学"></a>31. 学好数学</h2><ul><li>数学是所有自然科学的基础，甚至对经济学这样的人文学科也至关重要</li><li>数学能培养人的逻辑推理能力</li><li>学习数学可以提高你的阅读理解能力</li></ul><p><a id="orgfa36dab"></a></p><h2 id="32-大学学什么"><a href="#32-大学学什么" class="headerlink" title="32. 大学学什么"></a>32. 大学学什么</h2><ul><li>学习一生要用的科学常识和人文素养</li><li>学习做事情的方法，并掌握自我学习的能力</li><li>培养协作精神</li></ul><p><a id="orge508b46"></a></p><h2 id="33-选大学"><a href="#33-选大学" class="headerlink" title="33. 选大学"></a>33. 选大学</h2><ul><li>导师比学校重要</li><li>他不仅能让你在学术界迅速站稳脚跟，而且可能对你一辈子的职业发展都有帮助。</li><li>好的导师会告诉学生哪些事情不要做，这样就能给博士省很多时间。平庸的导师则要求学生按照自己的想法去做，这就抑制了学生的兴趣和创造力。</li><li>一个年轻的博士靠自己的努力被整个学术界认可，要花很长时间，甚至是不太可能的事情。</li></ul><p><a id="org0b2c978"></a></p><h2 id="34-科技论文技巧"><a href="#34-科技论文技巧" class="headerlink" title="34. 科技论文技巧"></a>34. 科技论文技巧</h2><ul><li>四部分必须写清楚<ul><li>问题的提出和前人的工作综述</li><li>自己的工作想得到什么样的结论</li><li>比较自己工作和相关工作的优劣</li><li>实验所用的数据，要尽可能地使用那些同行能够得到的。可比性对科学研究非常重要</li></ul></li></ul><p><a id="org71e468f"></a></p><h2 id="35-做事前不要过分算概率"><a href="#35-做事前不要过分算概率" class="headerlink" title="35. 做事前不要过分算概率"></a>35. 做事前不要过分算概率</h2><ul><li>在大学时，需要尝试自己喜欢做的事情。</li><li>只有很少的人每天所做的事情都是他们非常喜欢的工作。一个人是否会喜欢一件事，也是要尝试一下才知道的，特别是在年轻的时候。人的格局不能太小，不能完全用利益来衡量自己该做什么事情。</li><li>往前走，去闯/别灰心，继续闯/随缘，别后悔</li><li>年轻人在做任何决定之前应该做好准备，三思而行，但是对于想清楚的事情，做起来就不要犹豫。</li></ul><p><a id="org96fbe71"></a></p><h2 id="36-专业和业余的区别"><a href="#36-专业和业余的区别" class="headerlink" title="36. 专业和业余的区别"></a>36. 专业和业余的区别</h2><ul><li>专业特点<ul><li>发挥稳定</li><li>很好地控制自己的情绪</li><li>对小事处理认真</li><li>遵守流程规范</li><li>成体系的领域知识</li></ul></li></ul><p><a id="orga4971f6"></a></p><h2 id="38-服从是学会领导的第一步"><a href="#38-服从是学会领导的第一步" class="headerlink" title="38. 服从是学会领导的第一步"></a>38. 服从是学会领导的第一步</h2><ul><li>领导力从学会服从开始</li><li>当你没有接受过和执行过别人给你的命令时，很难理解被领导者的心理。</li><li>服从、合作、当好助手</li></ul><p><a id="orgaf7d62e"></a></p><h2 id="39-捡重要的先做"><a href="#39-捡重要的先做" class="headerlink" title="39. 捡重要的先做"></a>39. 捡重要的先做</h2><ul><li>事实上，你几乎没有时间做完所有需要完成的工作，因此只能捡最重要的先做。不要因为任务简单就开始干，遇到事情先要强迫自己慢三拍，想清楚任务的优先级，先去做那些特别重要的工作。这样才不会被大量简单重复的劳动占去全部时间，致使重要的工作没有时间做。公司里有一个词叫伪工作（pseudo work），就是指那些花了时间做却没有影响力的工作。</li></ul><p><a id="orge94a355"></a></p><h2 id="40-主动心态"><a href="#40-主动心态" class="headerlink" title="40. 主动心态"></a>40. 主动心态</h2><ul><li>所谓主动，就是指你有自己的想法和规划，并且随时和他进行沟通，得到他甚至其他同事的反馈。</li><li>公司里的工程师或者研究员通常不会像大学教授那样给你布置作业，并且给你细节指导，因为他们通常会忙于自己的工作。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
+吴军老师的书都还不错。
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="读书" scheme="http://tommyjiang.github.io/tags/%E8%AF%BB%E4%B9%A6/"/>
+    
+      <category term="教育" scheme="http://tommyjiang.github.io/tags/%E6%95%99%E8%82%B2/"/>
+    
+  </entry>
+  
+</feed>

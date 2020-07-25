@@ -1,0 +1,928 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  
+  <title>2016 年风电并网运行情况 | Tommy&#39;s Blog</title>
+  <meta name="author" content="Tommy Jiang">
+  
+  <meta name="description" content="本文数据来源：国家能源局官网。">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="2016 年风电并网运行情况"/>
+  <meta property="og:site_name" content="Tommy&#39;s Blog"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/journal.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/prism.css" media="screen" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  <script src="/js/prism.js" async></script>
+  
+  <!-- analytics -->
+  
+
+
+
+<meta name="generator" content="Hexo 4.2.1"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+<body>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">Tommy&#39;s Blog</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>归档
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>分类
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>标签
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>关于
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> 2016 年风电并网运行情况</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <p>本文数据来源：<a href="http://www.nea.gov.cn/2017-01/26/c_136014615.htm" target="_blank" rel="noopener">国家能源局官网</a>。</p>
+<a id="more"></a>
+<p>各数据不包含香港、澳门和台湾地区数据，在作图时统一设为0。</p>
+
+<div id="newInstalled" style="height:800px"></div>
+</br>
+<div id="totalInstalled" style="height:500px"></div>
+</br>
+<div id="totalGeneration" style="height:500px"></div>
+</br>
+<div id="totalWaste" style="height:500px"></div>
+</br>
+<div id="totalWasteRatio" style="height:500px"></div>
+</br>
+<div id="totalHour" style="height:500px"></div>
+
+
+<script src="http://cdn.bootcss.com/echarts/3.4.0/echarts.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+
+<script>
+
+var myChart = echarts.init(document.getElementById('newInstalled'));
+
+    option = {
+    title: {
+        text: '2016年新增风电并网容量',
+        subtext: '单位：万千瓦',
+        left: 'center'
+    },
+    tooltip: {
+        trigger: 'item'
+    },
+    legend: {
+        orient: 'vertical',
+        left: 'left',
+        data:['2016年']
+    },
+    visualMap: {
+        min: 0,
+        max: 325,
+        left: 'left',
+        top: 'bottom',
+        calculable: true
+    },
+    toolbox: {
+        show: true,
+        orient: 'vertical',
+        left: 'right',
+        top: 'center',
+        feature: {
+            dataView: {readOnly: false},
+            restore: {},
+            saveAsImage: {}
+        }
+    },
+    series: [
+        {
+            name: '2016年',
+            type: 'map',
+            mapType: 'china',
+            roam: false,
+            label: {
+                normal: {
+                    show: true
+                },
+                emphasis: {
+                    show: true
+                }
+            },
+            data:[
+                {name: '北京',value: 4 },
+                {name: '天津',value: 0 },
+                {name: '上海',value: 10 },
+                {name: '重庆',value: 5 },
+                {name: '河北',value: 166 },
+                {name: '河南',value: 13 },
+                {name: '云南',value: 325 },
+                {name: '辽宁',value: 56 },
+                {name: '黑龙江',value: 58 },
+                {name: '湖南',value: 61 },
+                {name: '安徽',value: 41 },
+                {name: '山东',value: 118 },
+                {name: '新疆',value: 85 },
+                {name: '江苏',value: 149 },
+                {name: '浙江',value: 15 },
+                {name: '江西',value: 41 },
+                {name: '湖北',value: 66 },
+                {name: '广西',value: 24 },
+                {name: '甘肃',value: 25 },
+                {name: '山西',value: 102 },
+                {name: '内蒙古',value: 132 },
+                {name: '陕西',value: 80 },
+                {name: '吉林',value: 61 },
+                {name: '福建',value: 42 },
+                {name: '贵州',value: 39 },
+                {name: '广东',value: 22 },
+                {name: '青海',value: 22 },
+                {name: '西藏',value: 0 },
+                {name: '四川',value: 52 },
+                {name: '宁夏',value: 120 },
+                {name: '海南',value: 0 },
+                {name: '台湾',value: 0 },
+                {name: '香港',value: 0 },
+                {name: '澳门',value: 0 }
+            ]
+        },
+    ]
+};
+
+myChart.setOption(option,true); //当setOption第二个参数为true时，会阻止数据合并
+</script>
+
+<script>
+
+//初始化
+
+var myChart2 = echarts.init(document.getElementById('totalInstalled'));
+
+    option = {
+    title: {
+        text: '2016年累计风电并网容量',
+        subtext: '单位：万千瓦',
+        left: 'center'
+    },
+    tooltip: {
+        trigger: 'item'
+    },
+    legend: {
+        orient: 'vertical',
+        left: 'left',
+        data:['2016年']
+    },
+    visualMap: {
+        min: 0,
+        max: 2557,
+        left: 'left',
+        top: 'bottom',
+        calculable: true
+    },
+    toolbox: {
+        show: true,
+        orient: 'vertical',
+        left: 'right',
+        top: 'center',
+        feature: {
+            dataView: {readOnly: false},
+            restore: {},
+            saveAsImage: {}
+        }
+    },
+    series: [
+        {
+            name: '2016年',
+            type: 'map',
+            mapType: 'china',
+            roam: false,
+            label: {
+                normal: {
+                    show: true
+                },
+                emphasis: {
+                    show: true
+                }
+            },
+            data:[
+                {name: '北京',value: 19 },
+                {name: '天津',value: 29 },
+                {name: '上海',value: 71 },
+                {name: '重庆',value: 28 },
+                {name: '河北',value: 1188 },
+                {name: '河南',value: 104 },
+                {name: '云南',value: 737 },
+                {name: '辽宁',value: 695 },
+                {name: '黑龙江',value: 561 },
+                {name: '湖南',value: 217 },
+                {name: '安徽',value: 177 },
+                {name: '山东',value: 839 },
+                {name: '新疆',value: 1776 },
+                {name: '江苏',value: 561 },
+                {name: '浙江',value: 119 },
+                {name: '江西',value: 108 },
+                {name: '湖北',value: 201 },
+                {name: '广西',value: 67 },
+                {name: '甘肃',value: 1277 },
+                {name: '山西',value: 771 },
+                {name: '内蒙古',value: 2557 },
+                {name: '陕西',value: 249 },
+                {name: '吉林',value: 505 },
+                {name: '福建',value: 214 },
+                {name: '贵州',value: 362 },
+                {name: '广东',value: 268 },
+                {name: '青海',value: 69 },
+                {name: '西藏',value: 1 },
+                {name: '四川',value: 125 },
+                {name: '宁夏',value: 942 },
+                {name: '海南',value: 31 },
+                {name: '台湾',value: 0 },
+                {name: '香港',value: 0 },
+                {name: '澳门',value: 0 }
+            ]
+        },
+    ]
+};
+
+myChart2.setOption(option,true); //当setOption第二个参数为true时，会阻止数据合并
+</script>
+
+
+
+
+<script>
+
+//初始化
+
+var myChart3 = echarts.init(document.getElementById('totalGeneration'));
+
+    option = {
+    title: {
+        text: '2016年风电发电量',
+        subtext: '单位：亿千瓦时',
+        left: 'center'
+    },
+    tooltip: {
+        trigger: 'item'
+    },
+    legend: {
+        orient: 'vertical',
+        left: 'left',
+        data:['2016年']
+    },
+    visualMap: {
+        min: 0,
+        max: 464,
+        left: 'left',
+        top: 'bottom',
+        calculable: true
+    },
+    toolbox: {
+        show: true,
+        orient: 'vertical',
+        left: 'right',
+        top: 'center',
+        feature: {
+            dataView: {readOnly: false},
+            restore: {},
+            saveAsImage: {}
+        }
+    },
+    series: [
+        {
+            name: '2016年',
+            type: 'map',
+            mapType: 'china',
+            roam: false,
+            label: {
+                normal: {
+                    show: true
+                },
+                emphasis: {
+                    show: true
+                }
+            },
+            data:[
+                {name: '北京',value: 3 },
+                {name: '天津',value: 6 },
+                {name: '河北',value: 219 },
+                {name: '山西',value: 135 },
+                {name: '山东',value: 147 },
+                {name: '内蒙古',value: 464 },
+                {name: '辽宁',value: 129 },
+                {name: '吉林',value: 67 },
+                {name: '黑龙江',value: 88 },
+                {name: '上海',value: 14 },
+                {name: '江苏',value: 98 },
+                {name: '浙江',value: 23 },
+                {name: '安徽',value: 34 },
+                {name: '福建',value: 50 },
+                {name: '江西',value: 19 },
+                {name: '河南',value: 18 },
+                {name: '湖北',value: 35 },
+                {name: '湖南',value: 39 },
+                {name: '重庆',value: 5 },
+                {name: '四川',value: 21 },
+                {name: '陕西',value: 28 },
+                {name: '甘肃',value: 136 },
+                {name: '青海',value: 10 },
+                {name: '宁夏',value: 129 },
+                {name: '新疆',value: 220 },
+                {name: '西藏',value: 0.1 },
+                {name: '广东',value: 50 },
+                {name: '广西',value: 13 },
+                {name: '海南',value: 6 },
+                {name: '贵州',value: 55 },
+                {name: '云南',value: 148 },
+                {name: '台湾',value: 0 },
+                {name: '香港',value: 0 },
+                {name: '澳门',value: 0 }
+            ]
+        },
+    ]
+};
+
+myChart3.setOption(option,true); //当setOption第二个参数为true时，会阻止数据合并
+</script>
+
+
+
+
+<script>
+
+//初始化
+
+var myChart4 = echarts.init(document.getElementById('totalWaste'));
+
+    option = {
+    title: {
+        text: '2016年弃风电量',
+        subtext: '单位：亿千瓦时',
+        left: 'center'
+    },
+    tooltip: {
+        trigger: 'item'
+    },
+    legend: {
+        orient: 'vertical',
+        left: 'left',
+        data:['2016年']
+    },
+    visualMap: {
+        min: 0,
+        max: 137,
+        left: 'left',
+        top: 'bottom',
+        calculable: true
+    },
+    toolbox: {
+        show: true,
+        orient: 'vertical',
+        left: 'right',
+        top: 'center',
+        feature: {
+            dataView: {readOnly: false},
+            restore: {},
+            saveAsImage: {}
+        }
+    },
+    series: [
+        {
+            name: '2016年',
+            type: 'map',
+            mapType: 'china',
+            roam: false,
+            label: {
+                normal: {
+                    show: true
+                },
+                emphasis: {
+                    show: true
+                }
+            },
+            data:[
+                {name: '北京',value: 0 },
+                {name: '天津',value: 0 },
+                {name: '河北',value: 22 },
+                {name: '山西',value: 14 },
+                {name: '山东',value: 0 },
+                {name: '内蒙古',value: 124 },
+                {name: '辽宁',value: 19 },
+                {name: '吉林',value: 29 },
+                {name: '黑龙江',value: 20 },
+                {name: '上海',value: 0 },
+                {name: '江苏',value: 0 },
+                {name: '浙江',value: 0 },
+                {name: '安徽',value: 0 },
+                {name: '福建',value: 0 },
+                {name: '江西',value: 0 },
+                {name: '河南',value: 0 },
+                {name: '湖北',value: 0 },
+                {name: '湖南',value: 0 },
+                {name: '重庆',value: 0 },
+                {name: '四川',value: 0 },
+                {name: '陕西',value: 2 },
+                {name: '甘肃',value: 104 },
+                {name: '青海',value: 0 },
+                {name: '宁夏',value: 19 },
+                {name: '新疆',value: 137 },
+                {name: '西藏',value: 0.1 },
+                {name: '广东',value: 0 },
+                {name: '广西',value: 0 },
+                {name: '海南',value: 0 },
+                {name: '贵州',value: 0 },
+                {name: '云南',value: 0 },
+                {name: '台湾',value: 0 },
+                {name: '香港',value: 0 },
+                {name: '澳门',value: 0 }
+            ]
+        },
+    ]
+};
+
+myChart4.setOption(option,true); //当setOption第二个参数为true时，会阻止数据合并
+</script>
+
+
+
+
+<script>
+
+var myChart5 = echarts.init(document.getElementById('totalWasteRatio'));
+
+    option = {
+    title: {
+        text: '2016年弃风率',
+        subtext: '单位：百分比',
+        left: 'center'
+    },
+    tooltip: {
+        trigger: 'item'
+    },
+    legend: {
+        orient: 'vertical',
+        left: 'left',
+        data:['2016年']
+    },
+    visualMap: {
+        min: 0,
+        max: 43,
+        left: 'left',
+        top: 'bottom',
+        calculable: true
+    },
+    toolbox: {
+        show: true,
+        orient: 'vertical',
+        left: 'right',
+        top: 'center',
+        feature: {
+            dataView: {readOnly: false},
+            restore: {},
+            saveAsImage: {}
+        }
+    },
+    series: [
+        {
+            name: '2016年',
+            type: 'map',
+            mapType: 'china',
+            roam: false,
+            label: {
+                normal: {
+                    show: true
+                },
+                emphasis: {
+                    show: true
+                }
+            },
+            data:[
+                {name: '北京',value: 0 },
+                {name: '天津',value: 0 },
+                {name: '河北',value: 9 },
+                {name: '山西',value: 9 },
+                {name: '山东',value: 0 },
+                {name: '内蒙古',value: 21 },
+                {name: '辽宁',value: 13 },
+                {name: '吉林',value: 30 },
+                {name: '黑龙江',value: 19 },
+                {name: '上海',value: 0 },
+                {name: '江苏',value: 0 },
+                {name: '浙江',value: 0 },
+                {name: '安徽',value: 0 },
+                {name: '福建',value: 0 },
+                {name: '江西',value: 0 },
+                {name: '河南',value: 0 },
+                {name: '湖北',value: 0 },
+                {name: '湖南',value: 0 },
+                {name: '重庆',value: 0 },
+                {name: '四川',value: 0 },
+                {name: '陕西',value: 7 },
+                {name: '甘肃',value: 43 },
+                {name: '青海',value: 0 },
+                {name: '宁夏',value: 13 },
+                {name: '新疆',value: 38 },
+                {name: '西藏',value: 0 },
+                {name: '广东',value: 0 },
+                {name: '广西',value: 0 },
+                {name: '海南',value: 0 },
+                {name: '贵州',value: 0 },
+                {name: '云南',value: 4 },
+                {name: '台湾',value: 0 },
+                {name: '香港',value: 0 },
+                {name: '澳门',value: 0 }
+            ]
+        },
+    ]
+};
+
+myChart5.setOption(option,true); //当setOption第二个参数为true时，会阻止数据合并
+</script>
+
+
+
+
+<script>
+
+var myChart6 = echarts.init(document.getElementById('totalHour'));
+
+    option = {
+    title: {
+        text: '2016年风电利用小时数',
+        subtext: '单位：小时',
+        left: 'center'
+    },
+    tooltip: {
+        trigger: 'item'
+    },
+    legend: {
+        orient: 'vertical',
+        left: 'left',
+        data:['2016年']
+    },
+    visualMap: {
+        min: 1088,
+        max: 2503,
+        left: 'left',
+        top: 'bottom',
+        calculable: true
+    },
+    toolbox: {
+        show: true,
+        orient: 'vertical',
+        left: 'right',
+        top: 'center',
+        feature: {
+            dataView: {readOnly: false},
+            restore: {},
+            saveAsImage: {}
+        }
+    },
+    series: [
+        {
+            name: '2016年',
+            type: 'map',
+            mapType: 'china',
+            roam: false,
+            label: {
+                normal: {
+                    show: true
+                },
+                emphasis: {
+                    show: true
+                }
+            },
+            data:[
+                {name: '北京',value: 1750 },
+                {name: '天津',value: 2075 },
+                {name: '河北',value: 2077 },
+                {name: '山西',value: 1936 },
+                {name: '山东',value: 1869 },
+                {name: '内蒙古',value: 1830 },
+                {name: '辽宁',value: 1929 },
+                {name: '吉林',value: 1333 },
+                {name: '黑龙江',value: 1666 },
+                {name: '上海',value: 2162 },
+                {name: '江苏',value: 1980 },
+                {name: '浙江',value: 2161 },
+                {name: '安徽',value: 2109 },
+                {name: '福建',value: 2503 },
+                {name: '江西',value: 2114 },
+                {name: '河南',value: 1902 },
+                {name: '湖北',value: 2063 },
+                {name: '湖南',value: 2125 },
+                {name: '重庆',value: 1600 },
+                {name: '四川',value: 2247 },
+                {name: '陕西',value: 1951 },
+                {name: '甘肃',value: 1088 },
+                {name: '青海',value: 1726 },
+                {name: '宁夏',value: 1553 },
+                {name: '新疆',value: 1290 },
+                {name: '西藏',value: 1908 },
+                {name: '广东',value: 1848 },
+                {name: '广西',value: 2365 },
+                {name: '海南',value: 1781 },
+                {name: '贵州',value: 1806 },
+                {name: '云南',value: 2223 },
+                {name: '台湾',value: 0 },
+                {name: '香港',value: 0 },
+                {name: '澳门',value: 0 }
+            ]
+        },
+    ]
+};
+
+myChart6.setOption(option,true); //当setOption第二个参数为true时，会阻止数据合并
+</script>
+
+
+	  
+	</div>
+
+	<!-- recommended posts -->
+	
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2017/2017-04-27-Apple-xidan-joy-city-iphone-battery/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2017/2017-02-03-Chinese-new-year/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+
+    <!-- share -->
+    
+        
+    <div class="bdsharebuttonbox">
+        <a href="#" class="bds_more" data-cmd="more"></a>
+        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+        <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+        <a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+        <a href="#" class="bds_evernotecn" data-cmd="evernotecn" title="分享到印象笔记"></a>
+        <a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a>
+        <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+    </div>
+    <script>
+        window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};
+        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+
+
+        
+
+    
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">留言</h2>
+  
+  	 <div id="disqus_thread">
+     <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+  	 </div>
+  
+</section>
+
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2017-02-05 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/技术/">技术<span>9</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/电力/">电力<span>2</span></a></li>
+    </ul>
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+<script type="text/javascript">
+var disqus_shortname = 'bigbossjiang';
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2020 Tommy Jiang
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="noopener">Freemind</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="custom_mathjax_source">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+</body>
+</html>
