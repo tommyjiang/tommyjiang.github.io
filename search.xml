@@ -4,6 +4,38 @@
   
     
     <entry>
+      <title><![CDATA[YCM 不再支持 Python 3.5]]></title>
+      <url>http://tommyjiang.github.io/2020/2020-07-29-YCM-drop-py35/</url>
+      <content type="html"><![CDATA[
+<div class="alert alert-info"><i class="fa fa-info"></i>
+YCM 不再支持 Python 3.5 及以下版本，折腾重新编译 Vim 和 YCM。
+</div>
+
+<a id="more"></a>
+<p>YCM 最近的一次 <a href="https://github.com/ycm-core/YouCompleteMe/commit/d3db1cb3a9b83cd8e7370a2af36c82f28f2c0ddf" target="_blank" rel="noopener">commit</a> 不再支持 Python 3.5 以下版本，之前自己用 Python 3.5 编译的 Vim 也要跟着升级了。</p>
+<ol>
+<li>升级 Python：老系统没法直接升级 Python，需要自己源码安装。下载 Python 3.8 源码，编译时需要加上 <code>--enable-shared</code> 参数，否则 YCM 没法找到 .so 的动态库。</li>
+<li>重新编译 Vim：编译命令前需要加上 <code>LDFLAGS=-rdynamic</code>，否则动态库无法被其他插件找到。</li>
+<li>重新编译 YCM：现在 YCM 主流的补全用的是 clangd，写 C 系列语言需要编译，<code>python3 install.py --clangd-completer</code>。</li>
+</ol>
+]]></content>
+      
+        <categories>
+            
+            <category> Geek </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Vim </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[三十而已影评]]></title>
       <url>http://tommyjiang.github.io/2020/2020-07-25-nothing-but-thirty/</url>
       <content type="html"><![CDATA[
@@ -56,6 +88,21 @@
 <li>总部空降的 Daisy 说她都是靠自己本事，不是靠关系。</li>
 <li>晋升就是公司用来洗脑的。</li>
 <li>人走的每一步都得付出代价。</li>
+</ul>
+<h2 id="22-集"><a href="#22-集" class="headerlink" title="22 集"></a>22 集</h2><ul>
+<li>资本都爱听故事，讲故事真是核心竞争能力，包装也很重要。</li>
+</ul>
+<h2 id="23-24-集"><a href="#23-24-集" class="headerlink" title="23-24 集"></a>23-24 集</h2><ul>
+<li>有些事儿急不得。</li>
+<li>不像我，只能喝最苦的咖啡。</li>
+<li>这么拼是为了什么。</li>
+<li>该受的他们也得受。</li>
+<li>你这话是说给我听呢，还是说给自己听呢。</li>
+<li>八年了，我从未想过离开。</li>
+</ul>
+<h2 id="25-26-集"><a href="#25-26-集" class="headerlink" title="25-26 集"></a>25-26 集</h2><ul>
+<li>不过你那么拼也没啥用。</li>
+<li>还有谁的人生比我更惨呢？</li>
 </ul>
 ]]></content>
       
@@ -811,13 +858,13 @@ public:
 <p>在登机口遇到了老妹儿的伴郎靖哥哥。我们三个都是 2012 年 7 月广东佛山南海区博士生实践的队员，他俩都分到了南海区最北面的偏远地带，以至于老妹儿周末来找我的时候连住的地方都没有，还和我挤一张床睡了两晚。</p>
 <p>航班正点起飞，沿着跑道向北起飞后一个 180 度转弯掉头向南，第一次在空中看到大兴机场。飞机 12 点降落在白城长安机场，降落时拍了一张机场附近的照片：</p>
 
-<img src="/images/2019/2019-08-24-白城降落.jpg" width="500px">
+<img src="/images/2019/2019-08-24-白城降落.jpg" width="500px"/>
 
 <h1 id="预热"><a href="#预热" class="headerlink" title="预热"></a>预热</h1><p>下飞机先到一个饭馆吃正宗东北菜。虽然在北京吃饭的标准至少是人均一个菜，但考虑到东北菜的分量，人均 0.8 个菜都不一定能吃完，再配上独特的甜品：拔丝地瓜，连主食都可以省了。席上新娘亲自介绍一整桌亲朋好友，在见识了新娘的高端朋友后，我果断建议就不要再继续介绍新郎朋友了。老妹儿在席上发表重要讲话，欢迎大家来草原“见识”他们的婚礼。</p>
 <p>酒足饭饱，本该是午休时间，作为长期中午只能在单位眯一小觉的人，热切地期盼能在草原宾馆的床上好好睡一觉。但同学们兴致不减，放下包就出发去 K 歌了。我和萌哥看了一会儿 TI 9 LGD 和 OG 的比赛，略有耽搁，两个人打车过去，起步价 5 元到地方才 7 元，强烈地感受到草原人民的幸福。</p>
 <p>既然到草原 K 歌，当然要点草原歌曲，也不枉我之前去过十几次草原，一图胜千言，秀一下航线图，最密集的就是北京——通辽航线：</p>
 
-<img src="/images/2019/2019-08-24-白城航线图.jpg" width="300px">
+<img src="/images/2019/2019-08-24-白城航线图.jpg" width="300px"/>
 
 <p>第一次去通辽还是在 2012 年 3 月，有幸当时有老妹儿同行，原因是我的小老板是老妹儿大老板的博士，虽然毕业了还和原来的课题组一起做项目。算起来那是我第一次出差，北京——通辽来回都是硬卧，睡一晚上才到，虽然北京 3 月已经不算冷了，但草原还是冷得够呛，出差回来我就发烧了。</p>
 <p>晚上安排了蒙餐烤全羊，我之前出差吃过不少，没什么特别的感觉。席上高导亲自回答各种娱乐八卦问题，长了不少见识。酒足饭饱后第二场开始，选在老金家烧烤，其实前面那顿大家吃得都差不多了，但第二天还要接亲，所以不能喝太多，简单觥筹交错之后，11 点就回宾馆休息了。</p>
@@ -845,7 +892,7 @@ public:
 <p>典礼快结束终于发了筷子，虽然是婚宴，但菜品的味道还不错，我连着吃了好几个大虾。吃得正开心时，抬眼一看，其他桌的亲朋好友已经走了不少，看来我们桌应该是消灭得最干净的一桌了。</p>
 <h1 id="返程"><a href="#返程" class="headerlink" title="返程"></a>返程</h1><p>中午典礼结束，回酒店休息，一觉睡到快 3 点，LGD 败者组决赛不敌 Liquid，总决赛也不用看了。老妹儿中午参加完典礼，下午还过来给我们送水果，着实让人感动。带的李子确实甜，不过沙果太酸了，咬了一口就放下了。和高师兄一唱一和，老妹儿又带我们去吃了老金家烧烤，5 点 20 多的火车，吃到了 4 点 55 才出发，到了取票直接检票上车，去长春的路上还拍到了白城的风车(手机相机效果不好，凑合看吧)。</p>
 
-<img src="/images/2019/2019-08-25-白城风车.jpg" width="600px">
+<img src="/images/2019/2019-08-25-白城风车.jpg" width="600px"/>
 
 <p>到长春已经是晚上 8 点多了，在蔡爷带领下我们一行四人又到车站附近的饺子馆来了一顿晚餐，俗话说：上车饺子下车面，还吃了东北特色的锅包肉，应该是这次来吃到的最好吃的锅包肉了。</p>
 <p>晚上回京的车次是 Z62 的软卧，四个人一个包厢。这个车非常好，长春始发，8 小时一站直达北京站，软卧包厢四个人一起也不用受熄灯影响，果断开始双升，从长春打到四平打到沈阳北，1 点中才睡，最终 8 比 Q 憾负。车上睡了 5 个小时，睡梦中经过了秦皇岛和唐山，5 点半列车员过来喊起床，又眯了一会儿，再一睁眼已经过建国门，列车很快停在了北京站的站台，草原王子的婚礼之旅也算正式落下了帷幕。</p>
@@ -1358,7 +1405,7 @@ function hs(ec){
 </div>
 
 <a id="more"></a>
-<p><img src="/images/2019/2019-01-12-海鲜宴.jpg" alt></p>
+<p><img src="/images/2019/2019-01-12-海鲜宴.jpg" alt=""></p>
 <h2 id="菜单"><a href="#菜单" class="headerlink" title="菜单"></a>菜单</h2><ul>
 <li>清蒸扇贝</li>
 <li>辣炒海蛏</li>
@@ -1367,7 +1414,7 @@ function hs(ec){
 <li>辣炒生菜</li>
 </ul>
 <h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><h2 id="寄语"><a href="#寄语" class="headerlink" title="寄语"></a>寄语</h2><p>大厨寄语：买的海鲜一定要放在水里吐沙子两小时。小猪最爱吃这样爆炒的海鲜啦。海鲜还是带着壳吃比较有感觉！希望丰富的蛋白质可以保佑大厨减肥顺利进行，加油呀！</p>
-<p><img src="/images/2019/2019-01-12-海鲜宴大厨.png" alt></p>
+<p><img src="/images/2019/2019-01-12-海鲜宴大厨.png" alt=""></p>
 <p>小厨寄语：最近大小厨都在减肥，特意选择了海鲜，好吃不胖型。辛苦大厨把每个扇贝都冲了一遍，吃的时候完全不牙碜，好吃实惠。特意从董那拿来了土豆丝和丸子，相得益彰。很久没在家做饭了，怀念晚上早回来在家做饭的日子，以后争取回家做饭！</p>
 ]]></content>
       
@@ -2120,7 +2167,7 @@ function TripSum2018(ec){
 </div>
 
 <a id="more"></a>
-<p>在去年写的里，曾经介绍过机器学习三大圣经：PRML，ESL 和 MLAPP。最近，PRML 作者，微软剑桥研究院实验室负责人 Christopher Bishop 开源了他的经典著作——PRML，可以到<a href="http://link.zhihu.com/?target=https%3A//www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf" target="_blank" rel="noopener">这里</a>下载。</p>
+<p>在去年写的里，曾经介绍过机器学习三大圣经：PRML，ESL 和 MLAPP。最近，PRML 作者，微软剑桥研究院实验室负责人 Christopher Bishop 开源了他的经典著作——PRML，可以到<a href="http://link.zhihu.com/?target=https%3A//www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf">这里</a>下载。</p>
 <p>在这本书的前面，Bishop 写了这本书奉献给妻子和孩子，还放了他们一家四口 2006 年 3 月到土耳其安卡拉看日全食的照片。最近也在看菠萝的书《癌症·新知》，书的后记提到，本来想做老师的他，通过写科普书也获得了很多成就感。以后我也要写一本经典的书，也要在前面附上一家人的照片，为了实现这个目标，努力！</p>
 ]]></content>
       
@@ -2184,7 +2231,7 @@ function TripSum2018(ec){
 <h1 id="大宝购物"><a href="#大宝购物" class="headerlink" title="大宝购物"></a>大宝购物</h1><p>待补充</p>
 <h1 id="双十一生活"><a href="#双十一生活" class="headerlink" title="双十一生活"></a>双十一生活</h1><p>今年双十一是周日，难得休息一天和大宝在家。上午去家乐福买菜准备中午做饭，一共三个菜，孜然羊肉、鱼香肉丝、辣炒木耳菜。一顿做了两顿的量，准备晚上继续吃。中午米饭放在电饭锅里，忘了取消保温模式，一直插着电，等晚上吃的时候，饭都硬了，吃完之后我俩都不太舒服，吸取教训，下次把插头先拔了。</p>
 <p>中午的美食：</p>
-<p><img src="/images/2018/2018-11-11-双十一做饭.jpeg" alt></p>
+<p><img src="/images/2018/2018-11-11-双十一做饭.jpeg" alt=""></p>
 <p>晚上把购物车清空了，给淘宝贡献了 5000 的销售额，晚上出发晚，不想挤地铁，选了 80 换 693 的公交路线，没想到 80 路的司机太勇猛，坐车坐得很不舒服，下次还是晚上早点出来吃个饭然后回来，新开辟的公交路线以失败告终。</p>
 <p>11.18 补充：时隔一周，和大宝再次坐 80 路，俩人还是非常不舒服，以后不坐这个破玩意儿了，还是坐地铁吧。</p>
 ]]></content>
@@ -2816,9 +2863,9 @@ DotA 如人生。
 <li>2018.8.3 上午9点接到苹果店电话，已经换好可取，果断上班路上顺道去喜提，RMB 1475，把键盘、触控板、电池整个都换了，感觉焕然一新。</li>
 </ul>
 <p>苹果店喜提留念：</p>
-<p><img src="/images/2018/2018-08-03-喜提RMBP.jpeg" alt></p>
+<p><img src="/images/2018/2018-08-03-喜提RMBP.jpeg" alt=""></p>
 <p>到单位后本来想留个电池循环计数为 0 的图片留念，但开机时卡在进度条画面打不开，插上电源折腾了一会儿才打开，只能留下循环计数为 1 的图了：</p>
-<p><img src="/images/2018/2018-08-03-循环计数1.png" alt></p>
+<p><img src="/images/2018/2018-08-03-循环计数1.png" alt=""></p>
 <p>这台电脑2年前曾经去换过屏幕(<a href="https://tommyjiang.github.io/2016/2016-08-28-Apple-xidan-joy-city-retina-display/">链接</a>)，争取这台电脑再用三年！</p>
 ]]></content>
       
@@ -3133,7 +3180,7 @@ Defaults to today&#39;s date if DATE is not given.&quot;
   </tr>
 </table>
 
-<br>
+<br />
 
 <div style="min-height: 500px; width: 100%;" id="6-16"></div>
 
@@ -3296,7 +3343,7 @@ Defaults to today&#39;s date if DATE is not given.&quot;
   </tr>
 </table>
 
-<br>
+<br/>
 
 <div style="min-height: 500px; width: 100%;" id="container"></div>
 
@@ -3829,6 +3876,34 @@ Defaults to today&#39;s date if DATE is not given.&quot;
     </entry>
     
     <entry>
+      <title><![CDATA[视频/音频下载和提取方法]]></title>
+      <url>http://tommyjiang.github.io/2017/2017-09-09-download-cnn-video/</url>
+      <content type="html"><![CDATA[<p>大厨需要视频和音频，还好有我在。</p>
+<a id="more"></a>
+<h1 id="CNN-视频下载"><a href="#CNN-视频下载" class="headerlink" title="CNN 视频下载"></a>CNN 视频下载</h1><p>1.记录 CNN 视频网址，例如<a href="http://edition.cnn.com/videos/weather/2017/01/27/weather-five-things-about-earthquakes-orig.cnn/video/playlists/mexico-earthquake/" target="_blank" rel="noopener">这个</a>。</p>
+<p>2.打开 <a href="http://www.tubeoffline.com/download-CNN-videos.php" target="_blank" rel="noopener">TUBEOFFLINE</a>，在 video url 中输入上面的视频网址。</p>
+<p>3.获取视频下载地址，需要自备梯子。</p>
+<p>4.浏览器下载很慢，用终端中的<code>wget</code>实现下载，Mac OS 需要先<code>brew install wget</code>，然后<code>wegt url</code>。</p>
+<h1 id="从视频中提取音频"><a href="#从视频中提取音频" class="headerlink" title="从视频中提取音频"></a>从视频中提取音频</h1><p>利用<code>ffmpeg</code>，同样需要先<code>brew install ffmpeg</code>。</p>
+<pre><code>ffmpeg -i *.mp4/avi -q:a 0 -map a *.mp3
+</code></pre>]]></content>
+      
+        <categories>
+            
+            <category> 生活 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 工具 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[境外刷卡被 DCC 的教训]]></title>
       <url>http://tommyjiang.github.io/2017/2017-09-29-DCC/</url>
       <content type="html"><![CDATA[<p>去香港刷卡中招 DCC，吃一堑长一智吧。</p>
@@ -3860,34 +3935,6 @@ Defaults to today&#39;s date if DATE is not given.&quot;
         <tags>
             
             <tag> 香港 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[视频/音频下载和提取方法]]></title>
-      <url>http://tommyjiang.github.io/2017/2017-09-09-download-cnn-video/</url>
-      <content type="html"><![CDATA[<p>大厨需要视频和音频，还好有我在。</p>
-<a id="more"></a>
-<h1 id="CNN-视频下载"><a href="#CNN-视频下载" class="headerlink" title="CNN 视频下载"></a>CNN 视频下载</h1><p>1.记录 CNN 视频网址，例如<a href="http://edition.cnn.com/videos/weather/2017/01/27/weather-five-things-about-earthquakes-orig.cnn/video/playlists/mexico-earthquake/" target="_blank" rel="noopener">这个</a>。</p>
-<p>2.打开 <a href="http://www.tubeoffline.com/download-CNN-videos.php" target="_blank" rel="noopener">TUBEOFFLINE</a>，在 video url 中输入上面的视频网址。</p>
-<p>3.获取视频下载地址，需要自备梯子。</p>
-<p>4.浏览器下载很慢，用终端中的<code>wget</code>实现下载，Mac OS 需要先<code>brew install wget</code>，然后<code>wegt url</code>。</p>
-<h1 id="从视频中提取音频"><a href="#从视频中提取音频" class="headerlink" title="从视频中提取音频"></a>从视频中提取音频</h1><p>利用<code>ffmpeg</code>，同样需要先<code>brew install ffmpeg</code>。</p>
-<pre><code>ffmpeg -i *.mp4/avi -q:a 0 -map a *.mp3
-</code></pre>]]></content>
-      
-        <categories>
-            
-            <category> 生活 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 工具 </tag>
             
         </tags>
         
@@ -3996,7 +4043,7 @@ Defaults to today&#39;s date if DATE is not given.&quot;
       <url>http://tommyjiang.github.io/2017/2017-06-12-let-us-cook-some-food/</url>
       <content type="html"><![CDATA[<p>民以食为天，食以味为先。</p>
 <a id="more"></a>
-<h1 id="2017年6月11日-午餐"><a href="#2017年6月11日-午餐" class="headerlink" title="2017年6月11日 午餐"></a>2017年6月11日 午餐</h1><p><img src="/images/2017/2017-06-11-午餐.jpg" alt></p>
+<h1 id="2017年6月11日-午餐"><a href="#2017年6月11日-午餐" class="headerlink" title="2017年6月11日 午餐"></a>2017年6月11日 午餐</h1><p><img src="/images/2017/2017-06-11-午餐.jpg" alt=""></p>
 <h2 id="菜单"><a href="#菜单" class="headerlink" title="菜单"></a>菜单</h2><ul>
 <li>鱼香肉丝</li>
 <li>青椒土豆丝</li>
@@ -4013,7 +4060,7 @@ Defaults to today&#39;s date if DATE is not given.&quot;
 </ol>
 <h2 id="寄语"><a href="#寄语" class="headerlink" title="寄语"></a>寄语</h2><p>大厨寄语：鱼香肉丝做得很成功，小厨连汤都不放过，一道菜吃了四顿。太幸福啦！也有小厨的功劳，萝卜丝切得很辛苦，完美！<span style="color:#FF66CC">期待大厨减肥成功再做下饭的鱼香肉丝，配米饭好好吃啊！</span>从买菜到做好，觉得自己能做出这么好吃的菜，真的是一种特别大的成就感和幸福感啊！！</p>
 <p>小厨寄语：今天的菜不是快手菜，但付出的辛苦是值得的。在大厨的指挥下，切胡萝卜丝、土豆丝、青椒丝，出锅的菜品非常棒，很下饭。这次的菜不够辣，干辣椒主要提香，下次用鲜辣椒试试。</p>
-<h1 id="2017年6月13日-晚餐"><a href="#2017年6月13日-晚餐" class="headerlink" title="2017年6月13日 晚餐"></a>2017年6月13日 晚餐</h1><p><img src="/images/2017/2017-06-13-晚餐.jpeg" alt></p>
+<h1 id="2017年6月13日-晚餐"><a href="#2017年6月13日-晚餐" class="headerlink" title="2017年6月13日 晚餐"></a>2017年6月13日 晚餐</h1><p><img src="/images/2017/2017-06-13-晚餐.jpeg" alt=""></p>
 <h2 id="菜单-1"><a href="#菜单-1" class="headerlink" title="菜单"></a>菜单</h2><ul>
 <li>青椒炒鸡蛋</li>
 <li>爆炒豆芽</li>
@@ -4026,7 +4073,7 @@ Defaults to today&#39;s date if DATE is not given.&quot;
 </ol>
 <h2 id="寄语-1"><a href="#寄语-1" class="headerlink" title="寄语"></a>寄语</h2><p>大厨寄语：新开发的菜品，番茄龙利鱼汤，酸酸烫烫的，简直太好喝啦！大厨减肥也可以喝得汤，嘻嘻，简直幸福满满呀！放入蒜之后吃不出来，但是味道浓郁up，蒜简直真是一个好东西！我爱大蒜！另外，我真的是愿意做饭的，当然作为大吃货一个也喜欢在外面直接吃饭+外面吃饭的氛围。。。这并不矛盾，嘻嘻。<span style="color:#FF66CC">我爱生活，我爱猪猪。</span>🐷</p>
 <p>小厨寄语：大厨做的菜真好吃，以后要多犒劳大厨，带大厨出去吃，一起开心！</p>
-<h1 id="2017年6月14日-晚餐"><a href="#2017年6月14日-晚餐" class="headerlink" title="2017年6月14日 晚餐"></a>2017年6月14日 晚餐</h1><p><img src="/images/2017/2017-06-14-晚餐.jpeg" alt></p>
+<h1 id="2017年6月14日-晚餐"><a href="#2017年6月14日-晚餐" class="headerlink" title="2017年6月14日 晚餐"></a>2017年6月14日 晚餐</h1><p><img src="/images/2017/2017-06-14-晚餐.jpeg" alt=""></p>
 <h2 id="菜单-2"><a href="#菜单-2" class="headerlink" title="菜单"></a>菜单</h2><ul>
 <li>青椒炒鸡蛋(加热)</li>
 <li>爆炒豆芽(加热)</li>
@@ -4039,7 +4086,7 @@ Defaults to today&#39;s date if DATE is not given.&quot;
 </ol>
 <h2 id="寄语-2"><a href="#寄语-2" class="headerlink" title="寄语"></a>寄语</h2><p>大厨寄语：没想到小厨那么喜欢这个肥肠，一块一块全吃啦哈哈哈。还想用剩下的明天煮面（虽然都不剩啥啦嘻嘻）。肥肠真香啊。一点腥味没有，稻香村买的，<span style="color:#FF66CC">稻香村赛高！</span>这道菜小厨这么喜欢吃还是有点出乎我的意料，这只是第一次，以后我有信心做出更好吃的肥肠，<span style="color:#FF66CC">配上米饭！嘎嘎！口水！</span></p>
 <p>小厨寄语：大厨第一次做肥肠就这么成功，可惜最近忙于塑身不能一起品尝美味，期待塑身成功之后的庆功宴！</p>
-<h1 id="2017年6月15日-晚餐"><a href="#2017年6月15日-晚餐" class="headerlink" title="2017年6月15日 晚餐"></a>2017年6月15日 晚餐</h1><p><img src="/images/2017/2017-06-15-晚餐.jpeg" alt></p>
+<h1 id="2017年6月15日-晚餐"><a href="#2017年6月15日-晚餐" class="headerlink" title="2017年6月15日 晚餐"></a>2017年6月15日 晚餐</h1><p><img src="/images/2017/2017-06-15-晚餐.jpeg" alt=""></p>
 <h2 id="菜单-3"><a href="#菜单-3" class="headerlink" title="菜单"></a>菜单</h2><ul>
 <li>上汤娃娃菜</li>
 <li>香辣打卤面</li>
@@ -4050,7 +4097,7 @@ Defaults to today&#39;s date if DATE is not given.&quot;
 </ol>
 <h2 id="寄语-3"><a href="#寄语-3" class="headerlink" title="寄语"></a>寄语</h2><p>大厨寄语：今天的两个菜都很成功，娃娃菜不咸不淡，汤都喝光啦，味道很浓郁，nice！只是大厨不吃碳水浑身真的没劲啊，心情也不好，555。。。面条下多啦，小厨也很喜欢，都吃光啦。我想吃多纳圈。。。但是收获挺大的，开发了几个碳水低的菜菜。技能增长ing（苦笑中）嘎嘎。</p>
 <p>小厨寄语：大厨把娃娃菜吃了一大半，可见做得有多成功，大厨要克服狂吃狠减的恶性循环，保持心情舒畅最重要。</p>
-<h1 id="2017年6月22日-晚餐"><a href="#2017年6月22日-晚餐" class="headerlink" title="2017年6月22日 晚餐"></a>2017年6月22日 晚餐</h1><p><img src="/images/2017/2017-06-22-晚餐.jpeg" alt></p>
+<h1 id="2017年6月22日-晚餐"><a href="#2017年6月22日-晚餐" class="headerlink" title="2017年6月22日 晚餐"></a>2017年6月22日 晚餐</h1><p><img src="/images/2017/2017-06-22-晚餐.jpeg" alt=""></p>
 <h2 id="菜单-4"><a href="#菜单-4" class="headerlink" title="菜单"></a>菜单</h2><ul>
 <li>青椒鸡蛋炒面</li>
 </ul>
@@ -4146,15 +4193,15 @@ Defaults to today&#39;s date if DATE is not given.&quot;
 <p>各数据不包含香港、澳门和台湾地区数据，在作图时统一设为0。</p>
 
 <div id="newInstalled" style="height:800px"></div>
-<br>
+</br>
 <div id="totalInstalled" style="height:500px"></div>
-<br>
+</br>
 <div id="totalGeneration" style="height:500px"></div>
-<br>
+</br>
 <div id="totalWaste" style="height:500px"></div>
-<br>
+</br>
 <div id="totalWasteRatio" style="height:500px"></div>
-<br>
+</br>
 <div id="totalHour" style="height:500px"></div>
 
 
@@ -5120,7 +5167,7 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     <td style="text-align:center">上行</td>
     <td style="text-align:center">10:10</td>
     <td style="text-align:center">10:05-10:08</td>
-  </tr><tr>
+  <tr>
     <td style="text-align:center">5</td>
     <td style="text-align:center">K1071</td>
     <td style="text-align:center">北京西</td>
@@ -5242,7 +5289,7 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
 {% endraw %}
 </code></pre><p>结果如下：</p>
 
-    <div style="min-height: 500px; width: 100%; overflow: hidden; margin:0; font-family:" 微软雅黑";" id="map">
+    <div style="min-height: 500px; width: 100%; overflow: hidden; margin:0; font-family:"微软雅黑";" id="map">
     </div>
 
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=x2V7KanMxVA2GuK7oFHPOiGytFSXWoyN"></script>
@@ -5667,7 +5714,7 @@ show_channel_urls: yes
       <content type="html"><![CDATA[<p>今天是中国传统佳节七夕，Google 主页也很应景地换成了七夕的配图。</p>
 <a id="more"></a>
 <p>Google 不愧是一个充满人文关怀的公司，今天也应景地配上了七夕的图片。中午打开 Mac 下的 Chrome 时发现整个 UI 焕然一新，原来已经升级到 v52 版本，整体 UI 借鉴了移动设备上的 <code>Material</code> 风格，界面更加简洁，科技感更强，整体配色也更高冷了。</p>
-<p><img src="/images/2016/Chrome-v52.png" alt></p>
+<p><img src="/images/2016/Chrome-v52.png" alt=""></p>
 <p>说起七夕，印象比较深的有高考那年，也就是 2006 年的双七夕。</p>
 <p>年少轻狂，很多时候很多事儿都想不清楚，稀里糊涂地做了选择。现在回过来看，所谓成长，大概就是有能力做出选择，并且承担选择带来的后果吧。</p>
 <blockquote>
@@ -5803,9 +5850,9 @@ show_channel_urls: yes
         
         <tags>
             
-            <tag> 博士 </tag>
-            
             <tag> 感情 </tag>
+            
+            <tag> 博士 </tag>
             
         </tags>
         
@@ -5848,9 +5895,9 @@ show_channel_urls: yes
         
         <tags>
             
-            <tag> 电力 </tag>
-            
             <tag> 博士 </tag>
+            
+            <tag> 电力 </tag>
             
         </tags>
         
@@ -7290,7 +7337,7 @@ function FlightStat(){
 <h1 id="2016年春节补充"><a href="#2016年春节补充" class="headerlink" title="2016年春节补充"></a>2016年春节补充</h1><p>每次坐车回家都会有些新的心得，这次春节回来也不例外，北京南、天津和唐山站都更新了一些小 tips。</p>
 <h2 id="北京南站"><a href="#北京南站" class="headerlink" title="北京南站"></a>北京南站</h2><p>北京南作为始发大站，春运期间客流量极大。这次出地铁后走到了北出口方向，排队经由扶梯到二层处人满为患，从扶梯再往前侧面的一个小门进入，可以沿楼梯爬到二楼，不过如果拎着大件行李要谨慎，距离不近……</p>
 <h2 id="天津站"><a href="#天津站" class="headerlink" title="天津站"></a>天津站</h2><p>这次把天津站内的车道图照下来了，可以作为上面天津站布局的示例：</p>
-<p><img src="/images/2015/2015-10-01-Tianjin-railway-station.jpg" alt></p>
+<p><img src="/images/2015/2015-10-01-Tianjin-railway-station.jpg" alt=""></p>
 <p>这次京津城际列车停靠在天津站的18站台，必须要先出站再进站了。不过从18站台经过闸机后，不出站可以直接坐电梯到二楼候车大厅。在候车大厅里的一个收获是发现其中还有广发贵宾厅，正好凭广发臻尚白金卡进去坐坐。虽然每次在天津站中转的时间都不长，一般在半小时以内，不过能进去喝杯热水感觉还是不错的。</p>
 <p>返程时还想到广发贵宾厅坐坐，从天津站地下南出口出来之后，没有上到地面，直接在旁边检票进站了，结果在地下的候车厅里待了一会。检票上去后第一次遇到人到站台而车还没来的情况，看着站台上钟表上显示的正点有点慌。再一查发现买的这趟车不是天津站始发的，是从于家堡来的过路车，怪不得提前 3 分钟车才进站。赶上降温天气，在站台吹了半天冷风，还挺难受的。下次一定得注意是不是始发车，不是的话也没关系，可以在候车室里多坐会，别着急到站台就行了。</p>
 <h2 id="唐山站"><a href="#唐山站" class="headerlink" title="唐山站"></a>唐山站</h2><p>从东售票厅取票之后，可以直接从旁边的小门实名制检票进到候车大厅，不用先出去再过一次安检了，很方便。</p>
@@ -7312,6 +7359,37 @@ function FlightStat(){
     </entry>
     
     <entry>
+      <title><![CDATA[2015年毕业晚会观后感]]></title>
+      <url>http://tommyjiang.github.io/2015/2015-07-09-graduation-party/</url>
+      <content type="html"><![CDATA[<p>犹记得5年前本科毕业时的毕业晚会，中途就离场了。5年后，即将博士毕业了，再来看毕业晚会，让人唏嘘不已。</p>
+<a id="more"></a>
+<h3 id="节目单"><a href="#节目单" class="headerlink" title="节目单"></a>节目单</h3><p>整场晚会的节目单如下：</p>
+<p><img src="/images/2015/2015-07-09-Graduation-Party.png" alt=""></p>
+<h3 id="个人观后感"><a href="#个人观后感" class="headerlink" title="个人观后感"></a>个人观后感</h3><p>整场晚会印象最深刻的就是两个以毕业为主题的视频节目。</p>
+<h4 id="起点"><a href="#起点" class="headerlink" title="起点"></a>起点</h4><p>2015年清华原创毕业歌曲，视频见<a href="http://v.youku.com/v_show/id_XMTI4MjE1OTY1Mg==.html?from=s1.8-1-1.2" target="_blank" rel="noopener">这里</a>。整首歌用了大段的 Rap，精彩的歌词配上手绘的背景足以唤起每个清华毕业生对母校的留恋。</p>
+<blockquote>
+<p>几年前的一个夏天 我来到清华园<br>一辆崭新的二手车 打算骑四年<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup><br>那时的清华男女比 比现在更跑偏<br>一对儿情侣甜蜜蜜 男双男单坐一边<br>微积分的习题课 坐过道和窗前<br>大学语文平仄平 还作诗一篇<br>奥运国庆大场面 刻在学长的光盘<br>百年校庆的尾巴根儿 只见过明信片<br>小桥队伍排最长 是凌晨十二点<br>五道口的枣糕王 一等小半天<br>苏世民的小书院 叮当响三年<br>天天绕道的图书馆 临走也没见着正脸<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup><br>宿舍系馆两点一线 日子太简单<br>情人坡的每个浪漫时间 我总路过去实验<br>创业志愿和实践 假期没几天<br>我开题报告参考文献 才刚看二十篇</p>
+<p>转眼间就要告别昨天 我们何年再相见<br>(什么年 什么月 什么值得纪念)<br>那些纠结的论文和答辩 都随往事如烟<br>(什么人 什么鬼 什么值得留恋)<br>昨天 我站在起点 不知前方路多远<br>今天 我张开双手 想要拥抱这世界<br>想要飞 就必须从不妥协<br>想要追 就必须超越一切</p>
+<p>那时刚有文图馆 学霸占座一整天<br>那时清芬小包子 一个三毛钱<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup><br>那时没有 Color Run 北京没有阴天<br>那时学堂七点半 票总被抢完<br>那时的欢笑鬼脸 那时的我们班<br>那时的泪水汉水 那时的清华蓝<br>那时的下午四点半 追你的笑颜<br>你回头问我三千米 能不能过关</p>
+<p>转眼间就要告别昨天 我们何年再相见<br>(什么年 什么月 什么值得纪念)<br>那些骄傲的奖杯和绩点 都随往事如烟<br>(什么人 什么鬼 什么值得留恋)<br>昨天 我站在起点 不知前方路多远<br>今天 我张开双手 想要拥抱这世界<br>想要飞 就必须从不妥协<br>想要追 就必须超越一切<br>勇敢飞 对自己从不妥协<br>勇敢追 向着下一个起点</p>
+<p>(新起点 我们 和清华一起出发)</p>
+</blockquote>
+<h4 id="闪光的记忆"><a href="#闪光的记忆" class="headerlink" title="闪光的记忆"></a>闪光的记忆</h4><p>应该是从2012年起，每年的毕业晚会都有一个用《闪光的记忆》这首歌作为背景音乐的视频，今年当然也不例外，视频见<a href="http://v.qq.com/iframe/player.html?vid=h01594giz7r&amp;width=670&amp;height=502.5&amp;auto=0" target="_blank" rel="noopener">这里</a>。印象最深的是视频的最后一段——清华园普通一天各个整点时刻的场景：</p>
+<blockquote>
+<p>01:00AM 那些不眠的夜晚，陪伴我们的，除了大作业，还有一盏温柔的灯。<br>02:00AM 一座小小的屋子，飘香四溢的屋子，成为烧烤的代名词——小桥。<br>03:00AM 曾有一群人，为了一个共同的梦想在这里讨论甚至争执，不舍昼夜。<br>04:00AM 让人惊艳的美术设计背后，或许是熬夜到三四点的苦楚。<br>05:00AM 紫荆园后，盛夏日出，刚摘下的果蔬，也许还滴着晨露。<br>06:00AM 在晨光熹微，旁人熟睡的时刻，总有些人在忍受风吹日晒，绽放青春。<br>07:00AM 鲜红的旗帜，坚毅的面孔，月月年年。<br>08:00AM 早餐和生活一样在路上。<br>09:00AM 求知的眼睛，挥动的笔杆，在课堂上载着梦想启程。<br>10:00AM 水木清华众秀钟，真是无一景不可入画。<br>11:00AM 道旁的银杏树和来往的人潮，构成一抹极具生机的亮色。<br>12:00PM 很难在别处见到的热闹与魅力。<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup><br>01:00PM 梦里，天堂一定是图书馆的模样。<br>02:00PM 如果要真正感受清华，那么就来自习教室吧。<br>03:00PM 在实验中谨慎求索，辛苦劳碌，舔尝酸楚，积攒幸福。<br>04:00PM 那时候日色很慢，草坪很暖，一辈子只够爱一个人。<br>05:00PM 夕阳下的奔跑与伫足，那是我们昂扬的青春。<br>06:00PM 落日余晖遍布校园，感受舌尖上的清华。<br>07:00PM 生活，因为这里的嬉笑怒骂、管弦丝竹而不同。<br>08:00PM 周遭的嘈杂包围着专注讨论的我们。<br>09:00PM 这是真实而生动的生活。<br>10:00PM 既见君子，云胡不喜？<br>11:00PM 熄灯已经成为一种习惯，成为我们珍贵的共同记忆。<sup id="fnref:5"><a href="#fn:5" rel="footnote">5</a></sup></p>
+</blockquote>
+<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none; padding-left: 0;"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">1.</span><span style="display: inline-block; vertical-align: top;">清华校园很大，占地面积<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/about/about-6.html" target="_blank" rel="noopener">442.14公顷</a>，自行车是标配。二手车便宜且不容易被偷，更受新生青睐。</span><a href="#fnref:1" rev="footnote"> ↩</a></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">2.</span><span style="display: inline-block; vertical-align: top;"><a href="http://lib.tsinghua.edu.cn/about/beiguan/beiguan.html" target="_blank" rel="noopener">图书馆北馆（李文正馆）</a>于百年校庆之际——2011年4月23日奠基，预计2015年9月竣工。</span><a href="#fnref:2" rev="footnote"> ↩</a></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">3.</span><span style="display: inline-block; vertical-align: top;">清芬园即七食堂，曾经以包子和麻辣香锅闻名全校，于2013年6月15日停伙，2015年底重新开业。</span><a href="#fnref:3" rev="footnote"> ↩</a></li><li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">4.</span><span style="display: inline-block; vertical-align: top;">原视频中误为“12:00AM”，中午12点应为12:00PM。</span><a href="#fnref:4" rev="footnote"> ↩</a></li><li id="fn:5"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">5.</span><span style="display: inline-block; vertical-align: top;">最后少了一个午夜12点的时刻，我觉得可以选择静谧的紫荆宿舍外景。</span><a href="#fnref:5" rev="footnote"> ↩</a></li></ol></div></div>]]></content>
+      
+        <categories>
+            
+            <category> 生活 </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[外地驾驶证到期在北京换领新驾驶证流程总结]]></title>
       <url>http://tommyjiang.github.io/2015/2015-07-03-driver-license-renew/</url>
       <content type="html"><![CDATA[<p>2009年十一考的驾照，虽然没怎么开过车，但马上到6年，也要换新的驾照了，正好也把家里的驾照换成北京的，换驾照流程记录如下。</p>
@@ -7329,37 +7407,6 @@ function FlightStat(){
 </ol>
 <p>其中第4项材料去医院体检时已经拿到，建议把第1、2项材料提前打印和复印好带着，照片也是，最好提前照好洗出来带着，因为交管站附近的店都很贵。我去的是海淀西北旺后厂村路的海淀区车管站，下午3点40到的时候拿到的是700多号，前面有150个人在排队。最后等了一个小时，中间有一半都是空号，在4点40终于到前台把业务办了，然后又等了大概15分钟拿到新的驾照，大厅有空调，等的时候还挺凉快的，过程也还算顺利。</p>
 ]]></content>
-      
-        <categories>
-            
-            <category> 生活 </category>
-            
-        </categories>
-        
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[2015年毕业晚会观后感]]></title>
-      <url>http://tommyjiang.github.io/2015/2015-07-09-graduation-party/</url>
-      <content type="html"><![CDATA[<p>犹记得5年前本科毕业时的毕业晚会，中途就离场了。5年后，即将博士毕业了，再来看毕业晚会，让人唏嘘不已。</p>
-<a id="more"></a>
-<h3 id="节目单"><a href="#节目单" class="headerlink" title="节目单"></a>节目单</h3><p>整场晚会的节目单如下：</p>
-<p><img src="/images/2015/2015-07-09-Graduation-Party.png" alt></p>
-<h3 id="个人观后感"><a href="#个人观后感" class="headerlink" title="个人观后感"></a>个人观后感</h3><p>整场晚会印象最深刻的就是两个以毕业为主题的视频节目。</p>
-<h4 id="起点"><a href="#起点" class="headerlink" title="起点"></a>起点</h4><p>2015年清华原创毕业歌曲，视频见<a href="http://v.youku.com/v_show/id_XMTI4MjE1OTY1Mg==.html?from=s1.8-1-1.2" target="_blank" rel="noopener">这里</a>。整首歌用了大段的 Rap，精彩的歌词配上手绘的背景足以唤起每个清华毕业生对母校的留恋。</p>
-<blockquote>
-<p>几年前的一个夏天 我来到清华园<br>一辆崭新的二手车 打算骑四年<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup><br>那时的清华男女比 比现在更跑偏<br>一对儿情侣甜蜜蜜 男双男单坐一边<br>微积分的习题课 坐过道和窗前<br>大学语文平仄平 还作诗一篇<br>奥运国庆大场面 刻在学长的光盘<br>百年校庆的尾巴根儿 只见过明信片<br>小桥队伍排最长 是凌晨十二点<br>五道口的枣糕王 一等小半天<br>苏世民的小书院 叮当响三年<br>天天绕道的图书馆 临走也没见着正脸<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup><br>宿舍系馆两点一线 日子太简单<br>情人坡的每个浪漫时间 我总路过去实验<br>创业志愿和实践 假期没几天<br>我开题报告参考文献 才刚看二十篇</p>
-<p>转眼间就要告别昨天 我们何年再相见<br>(什么年 什么月 什么值得纪念)<br>那些纠结的论文和答辩 都随往事如烟<br>(什么人 什么鬼 什么值得留恋)<br>昨天 我站在起点 不知前方路多远<br>今天 我张开双手 想要拥抱这世界<br>想要飞 就必须从不妥协<br>想要追 就必须超越一切</p>
-<p>那时刚有文图馆 学霸占座一整天<br>那时清芬小包子 一个三毛钱<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup><br>那时没有 Color Run 北京没有阴天<br>那时学堂七点半 票总被抢完<br>那时的欢笑鬼脸 那时的我们班<br>那时的泪水汉水 那时的清华蓝<br>那时的下午四点半 追你的笑颜<br>你回头问我三千米 能不能过关</p>
-<p>转眼间就要告别昨天 我们何年再相见<br>(什么年 什么月 什么值得纪念)<br>那些骄傲的奖杯和绩点 都随往事如烟<br>(什么人 什么鬼 什么值得留恋)<br>昨天 我站在起点 不知前方路多远<br>今天 我张开双手 想要拥抱这世界<br>想要飞 就必须从不妥协<br>想要追 就必须超越一切<br>勇敢飞 对自己从不妥协<br>勇敢追 向着下一个起点</p>
-<p>(新起点 我们 和清华一起出发)</p>
-</blockquote>
-<h4 id="闪光的记忆"><a href="#闪光的记忆" class="headerlink" title="闪光的记忆"></a>闪光的记忆</h4><p>应该是从2012年起，每年的毕业晚会都有一个用《闪光的记忆》这首歌作为背景音乐的视频，今年当然也不例外，视频见<a href="http://v.qq.com/iframe/player.html?vid=h01594giz7r&amp;width=670&amp;height=502.5&amp;auto=0" target="_blank" rel="noopener">这里</a>。印象最深的是视频的最后一段——清华园普通一天各个整点时刻的场景：</p>
-<blockquote>
-<p>01:00AM 那些不眠的夜晚，陪伴我们的，除了大作业，还有一盏温柔的灯。<br>02:00AM 一座小小的屋子，飘香四溢的屋子，成为烧烤的代名词——小桥。<br>03:00AM 曾有一群人，为了一个共同的梦想在这里讨论甚至争执，不舍昼夜。<br>04:00AM 让人惊艳的美术设计背后，或许是熬夜到三四点的苦楚。<br>05:00AM 紫荆园后，盛夏日出，刚摘下的果蔬，也许还滴着晨露。<br>06:00AM 在晨光熹微，旁人熟睡的时刻，总有些人在忍受风吹日晒，绽放青春。<br>07:00AM 鲜红的旗帜，坚毅的面孔，月月年年。<br>08:00AM 早餐和生活一样在路上。<br>09:00AM 求知的眼睛，挥动的笔杆，在课堂上载着梦想启程。<br>10:00AM 水木清华众秀钟，真是无一景不可入画。<br>11:00AM 道旁的银杏树和来往的人潮，构成一抹极具生机的亮色。<br>12:00PM 很难在别处见到的热闹与魅力。<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup><br>01:00PM 梦里，天堂一定是图书馆的模样。<br>02:00PM 如果要真正感受清华，那么就来自习教室吧。<br>03:00PM 在实验中谨慎求索，辛苦劳碌，舔尝酸楚，积攒幸福。<br>04:00PM 那时候日色很慢，草坪很暖，一辈子只够爱一个人。<br>05:00PM 夕阳下的奔跑与伫足，那是我们昂扬的青春。<br>06:00PM 落日余晖遍布校园，感受舌尖上的清华。<br>07:00PM 生活，因为这里的嬉笑怒骂、管弦丝竹而不同。<br>08:00PM 周遭的嘈杂包围着专注讨论的我们。<br>09:00PM 这是真实而生动的生活。<br>10:00PM 既见君子，云胡不喜？<br>11:00PM 熄灯已经成为一种习惯，成为我们珍贵的共同记忆。<sup id="fnref:5"><a href="#fn:5" rel="footnote">5</a></sup></p>
-</blockquote>
-<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none; padding-left: 0;"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">1.</span><span style="display: inline-block; vertical-align: top;">清华校园很大，占地面积<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/about/about-6.html" target="_blank" rel="noopener">442.14公顷</a>，自行车是标配。二手车便宜且不容易被偷，更受新生青睐。</span><a href="#fnref:1" rev="footnote"> ↩</a></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">2.</span><span style="display: inline-block; vertical-align: top;"><a href="http://lib.tsinghua.edu.cn/about/beiguan/beiguan.html" target="_blank" rel="noopener">图书馆北馆（李文正馆）</a>于百年校庆之际——2011年4月23日奠基，预计2015年9月竣工。</span><a href="#fnref:2" rev="footnote"> ↩</a></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">3.</span><span style="display: inline-block; vertical-align: top;">清芬园即七食堂，曾经以包子和麻辣香锅闻名全校，于2013年6月15日停伙，2015年底重新开业。</span><a href="#fnref:3" rev="footnote"> ↩</a></li><li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">4.</span><span style="display: inline-block; vertical-align: top;">原视频中误为“12:00AM”，中午12点应为12:00PM。</span><a href="#fnref:4" rev="footnote"> ↩</a></li><li id="fn:5"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">5.</span><span style="display: inline-block; vertical-align: top;">最后少了一个午夜12点的时刻，我觉得可以选择静谧的紫荆宿舍外景。</span><a href="#fnref:5" rev="footnote"> ↩</a></li></ol></div></div>]]></content>
       
         <categories>
             
