@@ -140,7 +140,7 @@
 <ul class="pagination">
 	 
 				
-    	<li class="prev"><a href="/2015/2015-07-03-driver-license-renew/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+    	<li class="prev"><a href="/2015/2015-07-09-graduation-party/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
   		
 
         <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
@@ -301,7 +301,24 @@ var disqus_shortname = 'bigbossjiang';
    </script>
 
 
-<!-- syntax highlighting --><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<!-- syntax highlighting -->
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config("");
 </script>
@@ -319,7 +336,5 @@ var disqus_shortname = 'bigbossjiang';
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->
-
-
 </body>
 </html>

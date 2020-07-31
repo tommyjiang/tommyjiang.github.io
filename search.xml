@@ -104,6 +104,9 @@ YCM 不再支持 Python 3.5 及以下版本，折腾重新编译 Vim 和 YCM。
 <li>不过你那么拼也没啥用。</li>
 <li>还有谁的人生比我更惨呢？</li>
 </ul>
+<h2 id="29-30-集"><a href="#29-30-集" class="headerlink" title="29-30 集"></a>29-30 集</h2><ul>
+<li>人越努力就越不满足，越不满足就越不幸福</li>
+</ul>
 ]]></content>
       
         <categories>
@@ -3116,9 +3119,9 @@ Defaults to today&#39;s date if DATE is not given.&quot;
         
         <tags>
             
-            <tag> CS </tag>
-            
             <tag> CV </tag>
+            
+            <tag> CS </tag>
             
         </tags>
         
@@ -5639,7 +5642,7 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
     <entry>
       <title><![CDATA[工银亚洲香港账户开户攻略]]></title>
       <url>http://tommyjiang.github.io/2016/2016-08-26-ICBC-Asia/</url>
-      <content type="html"><![CDATA[<p>开了个工银亚洲的香港账户，方便进行在 HK 的交易。</p>
+      <content type="html"><![CDATA[<p>开了个工银亚洲的香港账户。</p>
 <a id="more"></a>
 <p>和小哥在 HK 一起度过了愉快的半年，即使走了也很怀念那段时光，正好最近在 HK 有些财务往来，所以决定办一张工银亚洲的香港银行卡，方便进行 HK 的交易。</p>
 <h1 id="开户流程"><a href="#开户流程" class="headerlink" title="开户流程"></a>开户流程</h1><p>到单位最近的复外支行询问，答复说要去工行北京市分行办理，也不远，就在复兴门桥南边一点的天银大厦。携带的材料就更简单了，只需要身份证和有效期三个月以上的港澳通行证，柜台交了 200 块手续费，就让回来等 HK 那边的电话确认了，负责办理的小妹还特意说了一句，估计香港那边周末不加班，工作日保持手机畅通就可以了……</p>
@@ -7359,6 +7362,34 @@ function FlightStat(){
     </entry>
     
     <entry>
+      <title><![CDATA[外地驾驶证到期在北京换领新驾驶证流程总结]]></title>
+      <url>http://tommyjiang.github.io/2015/2015-07-03-driver-license-renew/</url>
+      <content type="html"><![CDATA[<p>2009年十一考的驾照，虽然没怎么开过车，但马上到6年，也要换新的驾照了，正好也把家里的驾照换成北京的，换驾照流程记录如下。</p>
+<a id="more"></a>
+<h1 id="体检"><a href="#体检" class="headerlink" title="体检"></a>体检</h1><h2 id="第一次体检"><a href="#第一次体检" class="headerlink" title="第一次体检"></a>第一次体检</h2><p>换驾照需要提供《机动车驾驶人身体条件证明》，北京市承担机动车驾驶员体检工作的医疗机构名单可以参考这里。我选的是离学校最近的海淀医院，周一至周五中午1点到下午3点半可以进行司机体检，在2楼202房间，费用10元，只需要带身份证和驾驶证即可，不需要提前打印《身体条件证明》那张表，体检完医院会打印一份。</p>
+<p>第一次去海淀医院体检，负责体检的医生让我把视力表4.9的那一排全部念一遍，我发现完全看不清，无奈之下只好回学校配副眼镜，左右眼都是50度，戴上之后5.0都能看的很清楚了。</p>
+<h2 id="第二次体检"><a href="#第二次体检" class="headerlink" title="第二次体检"></a>第二次体检</h2><p>2015年7月8日，戴着新配的50度眼镜，第二次到海淀医院体检，拿着收据直接到体检室，顺利通过，拿到了医院提供的《机动车驾驶人身体条件证明》。</p>
+<h1 id="车管局办手续"><a href="#车管局办手续" class="headerlink" title="车管局办手续"></a>车管局办手续</h1><p>根据北京市车管所网站的信息，到车管局办理外地驾照换领北京驾照手续需要<a href="http://www.bjjtgl.gov.cn/jgj/jsrgl/205275/index.html" target="_blank" rel="noopener">以下材料</a>：</p>
+<ol>
+<li>按规定填写的《机动车驾驶证申请表》。</li>
+<li>申请人的身份证明原件、复印件。</li>
+<li>外省市核发的机动车驾驶证原件。</li>
+<li>北京市卫生局确定的县级以上医疗机构或军队、武装警察部队确定的团级以上医疗机构出具的《机动车驾驶人身体条件证明》原件。</li>
+<li>机动车驾驶人相片3张（相片要求为：申请人申请机动车驾驶证前6个月内的直边正面免冠彩色本人单人半身证件照。背景颜色为白色；不着制式服装；人像要清晰，层次丰富，神态自然，无明显畸变。照片尺寸为32mm×22mm相当于1英寸，头部宽度14mm～16mm，头部长度19mm～22mm）。</li>
+</ol>
+<p>其中第4项材料去医院体检时已经拿到，建议把第1、2项材料提前打印和复印好带着，照片也是，最好提前照好洗出来带着，因为交管站附近的店都很贵。我去的是海淀西北旺后厂村路的海淀区车管站，下午3点40到的时候拿到的是700多号，前面有150个人在排队。最后等了一个小时，中间有一半都是空号，在4点40终于到前台把业务办了，然后又等了大概15分钟拿到新的驾照，大厅有空调，等的时候还挺凉快的，过程也还算顺利。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 生活 </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[2015年毕业晚会观后感]]></title>
       <url>http://tommyjiang.github.io/2015/2015-07-09-graduation-party/</url>
       <content type="html"><![CDATA[<p>犹记得5年前本科毕业时的毕业晚会，中途就离场了。5年后，即将博士毕业了，再来看毕业晚会，让人唏嘘不已。</p>
@@ -7379,34 +7410,6 @@ function FlightStat(){
 <p>01:00AM 那些不眠的夜晚，陪伴我们的，除了大作业，还有一盏温柔的灯。<br>02:00AM 一座小小的屋子，飘香四溢的屋子，成为烧烤的代名词——小桥。<br>03:00AM 曾有一群人，为了一个共同的梦想在这里讨论甚至争执，不舍昼夜。<br>04:00AM 让人惊艳的美术设计背后，或许是熬夜到三四点的苦楚。<br>05:00AM 紫荆园后，盛夏日出，刚摘下的果蔬，也许还滴着晨露。<br>06:00AM 在晨光熹微，旁人熟睡的时刻，总有些人在忍受风吹日晒，绽放青春。<br>07:00AM 鲜红的旗帜，坚毅的面孔，月月年年。<br>08:00AM 早餐和生活一样在路上。<br>09:00AM 求知的眼睛，挥动的笔杆，在课堂上载着梦想启程。<br>10:00AM 水木清华众秀钟，真是无一景不可入画。<br>11:00AM 道旁的银杏树和来往的人潮，构成一抹极具生机的亮色。<br>12:00PM 很难在别处见到的热闹与魅力。<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup><br>01:00PM 梦里，天堂一定是图书馆的模样。<br>02:00PM 如果要真正感受清华，那么就来自习教室吧。<br>03:00PM 在实验中谨慎求索，辛苦劳碌，舔尝酸楚，积攒幸福。<br>04:00PM 那时候日色很慢，草坪很暖，一辈子只够爱一个人。<br>05:00PM 夕阳下的奔跑与伫足，那是我们昂扬的青春。<br>06:00PM 落日余晖遍布校园，感受舌尖上的清华。<br>07:00PM 生活，因为这里的嬉笑怒骂、管弦丝竹而不同。<br>08:00PM 周遭的嘈杂包围着专注讨论的我们。<br>09:00PM 这是真实而生动的生活。<br>10:00PM 既见君子，云胡不喜？<br>11:00PM 熄灯已经成为一种习惯，成为我们珍贵的共同记忆。<sup id="fnref:5"><a href="#fn:5" rel="footnote">5</a></sup></p>
 </blockquote>
 <div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none; padding-left: 0;"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">1.</span><span style="display: inline-block; vertical-align: top;">清华校园很大，占地面积<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/about/about-6.html" target="_blank" rel="noopener">442.14公顷</a>，自行车是标配。二手车便宜且不容易被偷，更受新生青睐。</span><a href="#fnref:1" rev="footnote"> ↩</a></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">2.</span><span style="display: inline-block; vertical-align: top;"><a href="http://lib.tsinghua.edu.cn/about/beiguan/beiguan.html" target="_blank" rel="noopener">图书馆北馆（李文正馆）</a>于百年校庆之际——2011年4月23日奠基，预计2015年9月竣工。</span><a href="#fnref:2" rev="footnote"> ↩</a></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">3.</span><span style="display: inline-block; vertical-align: top;">清芬园即七食堂，曾经以包子和麻辣香锅闻名全校，于2013年6月15日停伙，2015年底重新开业。</span><a href="#fnref:3" rev="footnote"> ↩</a></li><li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">4.</span><span style="display: inline-block; vertical-align: top;">原视频中误为“12:00AM”，中午12点应为12:00PM。</span><a href="#fnref:4" rev="footnote"> ↩</a></li><li id="fn:5"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">5.</span><span style="display: inline-block; vertical-align: top;">最后少了一个午夜12点的时刻，我觉得可以选择静谧的紫荆宿舍外景。</span><a href="#fnref:5" rev="footnote"> ↩</a></li></ol></div></div>]]></content>
-      
-        <categories>
-            
-            <category> 生活 </category>
-            
-        </categories>
-        
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[外地驾驶证到期在北京换领新驾驶证流程总结]]></title>
-      <url>http://tommyjiang.github.io/2015/2015-07-03-driver-license-renew/</url>
-      <content type="html"><![CDATA[<p>2009年十一考的驾照，虽然没怎么开过车，但马上到6年，也要换新的驾照了，正好也把家里的驾照换成北京的，换驾照流程记录如下。</p>
-<a id="more"></a>
-<h1 id="体检"><a href="#体检" class="headerlink" title="体检"></a>体检</h1><h2 id="第一次体检"><a href="#第一次体检" class="headerlink" title="第一次体检"></a>第一次体检</h2><p>换驾照需要提供《机动车驾驶人身体条件证明》，北京市承担机动车驾驶员体检工作的医疗机构名单可以参考这里。我选的是离学校最近的海淀医院，周一至周五中午1点到下午3点半可以进行司机体检，在2楼202房间，费用10元，只需要带身份证和驾驶证即可，不需要提前打印《身体条件证明》那张表，体检完医院会打印一份。</p>
-<p>第一次去海淀医院体检，负责体检的医生让我把视力表4.9的那一排全部念一遍，我发现完全看不清，无奈之下只好回学校配副眼镜，左右眼都是50度，戴上之后5.0都能看的很清楚了。</p>
-<h2 id="第二次体检"><a href="#第二次体检" class="headerlink" title="第二次体检"></a>第二次体检</h2><p>2015年7月8日，戴着新配的50度眼镜，第二次到海淀医院体检，拿着收据直接到体检室，顺利通过，拿到了医院提供的《机动车驾驶人身体条件证明》。</p>
-<h1 id="车管局办手续"><a href="#车管局办手续" class="headerlink" title="车管局办手续"></a>车管局办手续</h1><p>根据北京市车管所网站的信息，到车管局办理外地驾照换领北京驾照手续需要<a href="http://www.bjjtgl.gov.cn/jgj/jsrgl/205275/index.html" target="_blank" rel="noopener">以下材料</a>：</p>
-<ol>
-<li>按规定填写的《机动车驾驶证申请表》。</li>
-<li>申请人的身份证明原件、复印件。</li>
-<li>外省市核发的机动车驾驶证原件。</li>
-<li>北京市卫生局确定的县级以上医疗机构或军队、武装警察部队确定的团级以上医疗机构出具的《机动车驾驶人身体条件证明》原件。</li>
-<li>机动车驾驶人相片3张（相片要求为：申请人申请机动车驾驶证前6个月内的直边正面免冠彩色本人单人半身证件照。背景颜色为白色；不着制式服装；人像要清晰，层次丰富，神态自然，无明显畸变。照片尺寸为32mm×22mm相当于1英寸，头部宽度14mm～16mm，头部长度19mm～22mm）。</li>
-</ol>
-<p>其中第4项材料去医院体检时已经拿到，建议把第1、2项材料提前打印和复印好带着，照片也是，最好提前照好洗出来带着，因为交管站附近的店都很贵。我去的是海淀西北旺后厂村路的海淀区车管站，下午3点40到的时候拿到的是700多号，前面有150个人在排队。最后等了一个小时，中间有一半都是空号，在4点40终于到前台把业务办了，然后又等了大概15分钟拿到新的驾照，大厅有空调，等的时候还挺凉快的，过程也还算顺利。</p>
-]]></content>
       
         <categories>
             
