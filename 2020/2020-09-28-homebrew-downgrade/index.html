@@ -3,13 +3,15 @@
 <head>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   
-  <title>李健 | Tommy&#39;s Blog</title>
+  <title>Homebrew 降级 | Tommy&#39;s Blog</title>
   <meta name="author" content="Tommy Jiang">
+  
+  <meta name="description" content="Homebrew 降级。">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="Homebrew 降级"/>
   <meta property="og:site_name" content="Tommy&#39;s Blog"/>
 
   
@@ -94,202 +96,169 @@
     <div class="content">
       
 
-<!-- title -->
-<div class="page-header page-header-inverse ">
-  <h1 class="archive-title-tag title title-inverse ">李健</h1>
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> Homebrew 降级</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  
+<div class="alert alert-info"><i class="fa fa-info"></i>
+Homebrew 降级。
 </div>
 
-<div class="row page">
-  <!-- cols -->
-  
-  <div class="col-md-9">
-	
-
-	  <div id="top_search"></div>
-
-      
-         <!-- display as entry -->
-	     <div class="mypage">
-	       
-		     
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2018-08-28 </div>
-			<div class="article-title"><a href="/2018/2018-08-28-lijian-talk-1/" >吉他如何创造音乐传奇</a></div>						
-		</h3>
-	
-
-
-		     <div class="entry">
-  <div class="row">
-	
-	
-		<div class="alert alert-info"><i class="fa fa-info"></i>
-李健语录（一）
-</div>
-	
+<a id="more"></a>
+<p>Homebrew 最新的 Vim 升级到了 8.2.1750，和 <code>vim-leader-guide</code> 冲突，只能先保持原来的 8.2.1700 版本。</p>
+<ol>
+<li>Homebrew 回退：<code>cd /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core</code>，将 <code>Formula/vim.rb</code> 回退到之前的版本 <code>git checkout {commit id} vim.rb</code>。</li>
+<li>取消之前版本链接：<code>brew unlink vim</code></li>
+<li>安装旧版：<code>brew install vim</code>，注意跳过 Updating Homebrew 的阶段。</li>
+<li>固定 Vim 版本：<code>brew pin vim</code></li>
+<li>Homebrew 更新到 master：<code>cd /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core</code>，然后 <code>git reset --hard master</code>。</li>
+</ol>
+	  
 	</div>
-  <a type="button" href="/2018/2018-08-28-lijian-talk-1/#more" class="btn btn-default more">阅读此文</a>
-</div>
 
-	       
-	     </div>
-	     <div>
-	       <center>
-	         <div class="pagination">
+	<!-- recommended posts -->
+	
+
+	<div>
+  	<center>
+	<div class="pagination">
 <ul class="pagination">
 	 
+		
+          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+        
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2020/2020-08-10-a-tour-of-c++/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
 </ul>
 </div>
 
-	       </center>
-	     </div>	
-      
-
-</div> <!-- col-md-9/col-md-12 -->
-
-
-<div class="col-md-3">
-	<div id="sidebar">
-	
-			
-  <div id="site_search">
-   <div class="form-group">
-    <input type="text" id="local-search-input" name="q" results="0" placeholder="搜索" class="st-search-input st-default-search-input form-control"/>
-   </div>  
-  <div id="local-search-result"></div>
-  </div>
-
-
-		
-			<div class="widget">
-    
-</div>
-
-		
-			
-	<div class="widget">
-		<h4>分类</h4>
-		<ul class="tag_box inline list-unstyled">
-		
-			<li><a href="/categories/Geek/">Geek<span>10</span></a></li>
-		
-			<li><a href="/categories/工作/">工作<span>9</span></a></li>
-		
-			<li><a href="/categories/技术/">技术<span>9</span></a></li>
-		
-			<li><a href="/categories/投稿/">投稿<span>2</span></a></li>
-		
-			<li><a href="/categories/生活/">生活<span>50</span></a></li>
-		
-			<li><a href="/categories/读书/">读书<span>1</span></a></li>
-		
-		</ul>
+    </center>
 	</div>
 
+    <!-- share -->
+    
+        
+    <div class="bdsharebuttonbox">
+        <a href="#" class="bds_more" data-cmd="more"></a>
+        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+        <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+        <a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+        <a href="#" class="bds_evernotecn" data-cmd="evernotecn" title="分享到印象笔记"></a>
+        <a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a>
+        <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+    </div>
+    <script>
+        window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};
+        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+
+
+        
+
+    
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">留言</h2>
+  
+  	 <div id="disqus_thread">
+     <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+  	 </div>
+  
+</section>
+
+
+	</div> <!-- col-md-9/col-md-12 -->
 		
-			
-	<div class="widget">
-		<h4>标签云</h4>
-		<ul class="tag_box inline list-unstyled">		
-		
-			<li><a href="/tags/LaTeX/">LaTeX<span>1</span></a></li>
-		
-			<li><a href="/tags/性边缘人群/">性边缘人群<span>1</span></a></li>
-		
-			<li><a href="/tags/目标检测/">目标检测<span>1</span></a></li>
-		
-			<li><a href="/tags/数据/">数据<span>1</span></a></li>
-		
-			<li><a href="/tags/Google/">Google<span>1</span></a></li>
-		
-			<li><a href="/tags/Coding/">Coding<span>1</span></a></li>
-		
-			<li><a href="/tags/微言/">微言<span>2</span></a></li>
-		
-			<li><a href="/tags/计划/">计划<span>2</span></a></li>
-		
-			<li><a href="/tags/美食/">美食<span>3</span></a></li>
-		
-			<li><a href="/tags/足球/">足球<span>1</span></a></li>
-		
-			<li><a href="/tags/广州/">广州<span>1</span></a></li>
-		
-			<li><a href="/tags/大厨/">大厨<span>1</span></a></li>
-		
-			<li><a href="/tags/购物/">购物<span>1</span></a></li>
-		
-			<li><a href="/tags/Emacs/">Emacs<span>2</span></a></li>
-		
-			<li><a href="/tags/MATLAB/">MATLAB<span>1</span></a></li>
-		
-			<li><a href="/tags/DotA/">DotA<span>1</span></a></li>
-		
-			<li><a href="/tags/深圳/">深圳<span>1</span></a></li>
-		
-			<li><a href="/tags/爱情/">爱情<span>1</span></a></li>
-		
-			<li><a href="/tags/读书/">读书<span>1</span></a></li>
-		
-			<li><a href="/tags/一刻-talks/">一刻 talks<span>1</span></a></li>
-		
-		
-		   <li><a href="/tags">...<span>62</span></a></li>
-		 
-		</ul>
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2020-09-28 
 	</div>
+	
 
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/Geek/">Geek<span>12</span></a></li>
+  </li>
 
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/Homebrew/">Homebrew<span>1</span></a></li>
+    </ul>
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
 		
-			
-<div class="widget">
-  <h4>最新文章</h4>
-  <ul class="entry list-unstyled">
-    
-      <li>
-        <a href="/2020/2020-07-29-YCM-drop-py35/" ><i class="fa fa-file-o"></i>YCM 不再支持 Python 3.5</a>
-      </li>
-    
-      <li>
-        <a href="/2020/2020-07-25-nothing-but-thirty/" ><i class="fa fa-file-o"></i>三十而已影评</a>
-      </li>
-    
-      <li>
-        <a href="/2020/2020-07-25-seaside-trip/" ><i class="fa fa-file-o"></i>海滨消夏</a>
-      </li>
-    
-      <li>
-        <a href="/2019/2019-12-01-LC-weekly-contest-165/" ><i class="fa fa-file-o"></i>LeetCode Weekly Contest 165</a>
-      </li>
-    
-      <li>
-        <a href="/2019/2019-11-30-LC-biweekly-contest-14/" ><i class="fa fa-file-o"></i>LeetCode Biweekly Contest 14</a>
-      </li>
-    
-  </ul>
-</div>
 
-		
-			
-<div class="widget">
-	<h4>链接</h4>
-	<ul class="blogroll list-unstyled">
-	
-		<li><i class="fa fa-github"></i><a href="https://github.com/wzpan/freemind/" title="Freemind's Github repository." target="_blank"]);">Freemind</a></li>
-	
-		<li><i class="fa fa-github"></i><a href="http://www.github.com/tommyjiang/" title="My Github account." target="_blank"]);">My Github</a></li>
-	
-		<li><i class="fa fa-linkedin"></i><a href="https://www.linkedin.com/in/hao-jiang-983a0553/" title="My Linkin account." target="_blank"]);">My LinkedIn</a></li>
-	
-	</ul>
-</div>
+</div><!-- row -->
 
-
-		
-	</div> <!-- sidebar -->
-</div> <!-- col-md-3 -->
-
+<script type="text/javascript">
+var disqus_shortname = 'bigbossjiang';
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
 
 
 

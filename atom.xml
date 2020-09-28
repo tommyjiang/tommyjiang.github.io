@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tommyjiang.github.io/"/>
-  <updated>2020-07-29T15:41:35.676Z</updated>
+  <updated>2020-09-28T01:07:16.874Z</updated>
   <id>http://tommyjiang.github.io/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Homebrew 降级</title>
+    <link href="http://tommyjiang.github.io/2020/2020-09-28-homebrew-downgrade/"/>
+    <id>http://tommyjiang.github.io/2020/2020-09-28-homebrew-downgrade/</id>
+    <published>2020-09-28T01:00:00.000Z</published>
+    <updated>2020-09-28T01:07:16.874Z</updated>
+    
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>Homebrew 降级。</div><a id="more"></a><p>Homebrew 最新的 Vim 升级到了 8.2.1750，和 <code>vim-leader-guide</code> 冲突，只能先保持原来的 8.2.1700 版本。</p><ol><li>Homebrew 回退：<code>cd /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core</code>，将 <code>Formula/vim.rb</code> 回退到之前的版本 <code>git checkout {commit id} vim.rb</code>。</li><li>取消之前版本链接：<code>brew unlink vim</code></li><li>安装旧版：<code>brew install vim</code>，注意跳过 Updating Homebrew 的阶段。</li><li>固定 Vim 版本：<code>brew pin vim</code></li><li>Homebrew 更新到 master：<code>cd /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core</code>，然后 <code>git reset --hard master</code>。</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
+Homebrew 降级。
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="Geek" scheme="http://tommyjiang.github.io/categories/Geek/"/>
+    
+    
+      <category term="Homebrew" scheme="http://tommyjiang.github.io/tags/Homebrew/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>A Tour of C++ 笔记</title>
+    <link href="http://tommyjiang.github.io/2020/2020-08-10-a-tour-of-c++/"/>
+    <id>http://tommyjiang.github.io/2020/2020-08-10-a-tour-of-c++/</id>
+    <published>2020-08-10T14:00:00.000Z</published>
+    <updated>2020-08-13T14:05:51.137Z</updated>
+    
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>祖师爷写的入门书。</div><a id="more"></a><h1 id="The-Basics"><a href="#The-Basics" class="headerlink" title="The Basics"></a>The Basics</h1><ul><li>C++ 是编译语言，源代码需要经过编译、链接才能生成可执行程序。</li><li>ISO C++ 包括两部分：<ul><li>核心特性，例如内置类型、循环等。</li><li>标准库，例如容器、I/O 操作等。</li></ul></li><li>C++ 是静态类型语言，编译器必须了解所有变量的类型。</li><li>函数重载：函数同名但参数类型不同</li><li>C++ 逻辑运算符<ul><li>按位运算：&amp; 和 |</li><li>逻辑运算：&amp;&amp; 和 ||</li></ul></li><li>窄化转换：丢失精度的转换，例如将 double 转为 int，将 int 转为 char。初始化时使用大括号({})可避免窄化转换。</li><li>变量作用域<ul><li>局部作用域：适用于函数和 lambda 内声明的变量。作用范围为声明到 block 结束。</li><li>类作用域：类内和 enum class 内定义的变量。作用范围为整个 block。</li><li>命名空间作用域：命名空间内定义的变量。作用范围为声明到 namespace 结束。</li><li>全局作用域：不在任何 block 内定义的变量。</li></ul></li><li>nullptr 是空指针常量。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
+祖师爷写的入门书。
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="Geek" scheme="http://tommyjiang.github.io/categories/Geek/"/>
+    
+    
+      <category term="C++" scheme="http://tommyjiang.github.io/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>YCM 不再支持 Python 3.5</title>
@@ -449,54 +497,6 @@ CV DL OD 文献引用关系图
     
     
       <category term="旅行" scheme="http://tommyjiang.github.io/tags/%E6%97%85%E8%A1%8C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PRML 开源</title>
-    <link href="http://tommyjiang.github.io/2018/2018-11-28-PRML-open-source/"/>
-    <id>http://tommyjiang.github.io/2018/2018-11-28-PRML-open-source/</id>
-    <published>2018-11-28T14:00:00.000Z</published>
-    <updated>2019-12-12T13:55:48.676Z</updated>
-    
-    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>三大圣经之一都开源了。</div><a id="more"></a><p>在去年写的里，曾经介绍过机器学习三大圣经：PRML，ESL 和 MLAPP。最近，PRML 作者，微软剑桥研究院实验室负责人 Christopher Bishop 开源了他的经典著作——PRML，可以到<a href="http://link.zhihu.com/?target=https%3A//www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf">这里</a>下载。</p><p>在这本书的前面，Bishop 写了这本书奉献给妻子和孩子，还放了他们一家四口 2006 年 3 月到土耳其安卡拉看日全食的照片。最近也在看菠萝的书《癌症·新知》，书的后记提到，本来想做老师的他，通过写科普书也获得了很多成就感。以后我也要写一本经典的书，也要在前面附上一家人的照片，为了实现这个目标，努力！</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
-三大圣经之一都开源了。
-&lt;/div&gt;
-    
-    </summary>
-    
-      <category term="Geek" scheme="http://tommyjiang.github.io/categories/Geek/"/>
-    
-    
-      <category term="Machine Learning" scheme="http://tommyjiang.github.io/tags/Machine-Learning/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ubuntu 误删 Python 恢复记录</title>
-    <link href="http://tommyjiang.github.io/2018/2018-11-21-ubuntu-delete-python/"/>
-    <id>http://tommyjiang.github.io/2018/2018-11-21-ubuntu-delete-python/</id>
-    <published>2018-11-21T03:00:00.000Z</published>
-    <updated>2019-12-12T13:55:48.675Z</updated>
-    
-    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>不作死就不会死</div><a id="more"></a><p>上午想找个 Kaggle 比赛记录的方法，最后选了 jupyter notebook，自己笔记本里，python 版本装得太多，都乱套了，一不小心卸载了系统自带的 Python，重启之后桌面都消失了，键盘也没法用了。</p><p>上网查了解决方案，都是需要先进恢复模式，开机需要按 Shift，由于键盘没法用，这个方法也失效了。查到了 Ubuntu 官网写的，先用 Live USB，也就是 Ubuntu 的安装盘，试用 Ubuntu，然后再进命令行，先 mount 再利用 chroot 切换到电脑硬盘的 Ubuntu，然后执行 <code>sudo apt install ubuntu-minimal ubuntu-standard ubuntu-desktop</code>，关于 chroot 的用法可以参考 archlinux 的 <a href="https://wiki.archlinux.org/index.php/Chroot" target="_blank" rel="noopener">wiki</a></p><p>这里还有个坑，就是在 chroot 之前，需要先连网，然后将配置文件拷过去，否则 chroot 之后 apt install 会提示无法联网，具体命令为：<code>cp /etc/resolv.conf etc/resolv.conf</code>。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
-不作死就不会死
-&lt;/div&gt;
-    
-    </summary>
-    
-      <category term="Geek" scheme="http://tommyjiang.github.io/categories/Geek/"/>
-    
-    
-      <category term="Ubuntu" scheme="http://tommyjiang.github.io/tags/Ubuntu/"/>
     
   </entry>
   
