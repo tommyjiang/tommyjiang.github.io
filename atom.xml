@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tommyjiang.github.io/"/>
-  <updated>2020-09-28T01:07:16.874Z</updated>
+  <updated>2020-11-08T15:22:28.620Z</updated>
   <id>http://tommyjiang.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://tommyjiang.github.io/2020/2020-09-28-homebrew-downgrade/"/>
     <id>http://tommyjiang.github.io/2020/2020-09-28-homebrew-downgrade/</id>
     <published>2020-09-28T01:00:00.000Z</published>
-    <updated>2020-09-28T01:07:16.874Z</updated>
+    <updated>2020-11-08T15:22:28.620Z</updated>
     
-    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>Homebrew 降级。</div><a id="more"></a><p>Homebrew 最新的 Vim 升级到了 8.2.1750，和 <code>vim-leader-guide</code> 冲突，只能先保持原来的 8.2.1700 版本。</p><ol><li>Homebrew 回退：<code>cd /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core</code>，将 <code>Formula/vim.rb</code> 回退到之前的版本 <code>git checkout {commit id} vim.rb</code>。</li><li>取消之前版本链接：<code>brew unlink vim</code></li><li>安装旧版：<code>brew install vim</code>，注意跳过 Updating Homebrew 的阶段。</li><li>固定 Vim 版本：<code>brew pin vim</code></li><li>Homebrew 更新到 master：<code>cd /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core</code>，然后 <code>git reset --hard master</code>。</li></ol>]]></content>
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>Homebrew 降级。</div><a id="more"></a><p>Homebrew 最新的 Vim 升级到了 8.2.1750，和 <code>vim-leader-guide</code> 冲突，只能先保持原来的 8.2.1700 版本。</p><ol><li>Homebrew 回退：<code>cd /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core</code>，将 <code>Formula/vim.rb</code> 回退到之前的版本 <code>git checkout {commit id} vim.rb</code>。</li><li>取消之前版本链接：<code>brew unlink vim</code></li><li>安装旧版：<code>brew install vim</code>，注意跳过 Updating Homebrew 的阶段。</li><li>固定 Vim 版本：<code>brew pin vim</code></li><li>Homebrew 更新到 master：<code>cd /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core</code>，然后 <code>git reset --hard master</code>。</li></ol><p>更新：目前用 <a href="https://github.com/liuchengxu/vim-which-key" target="_blank" rel="noopener">vim-which-key</a> 代替了 <code>vim-leader-guide</code>，可以更新 Homebrew 的 Vim 最新版了。</p>]]></content>
     
     <summary type="html">
     
