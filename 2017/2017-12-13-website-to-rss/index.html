@@ -47,7 +47,7 @@
 
 
 
-<meta name="generator" content="Hexo 4.2.1"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<meta name="generator" content="Hexo 5.2.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 <body>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
@@ -121,8 +121,8 @@
 
 	  <p>为别人的网站添加 RSS 订阅。</p>
 <a id="more"></a>
-<p>最近用<code>Spacemacs</code>的<code>elfeed</code>作为 RSS 阅读器，想订阅 <a href="https://hsreplay.net/articles/" target="_blank" rel="noopener">HSReplay</a> 的技术分析文章，无奈网站不提供 RSS，自己动手，丰衣足食。</p>
-<p>不写详细教程了，直接贴一篇文章吧，<a href="https://sspai.com/post/34320" target="_blank" rel="noopener">少数派 利用 Feed43，将任意网页制作成 RSS 订阅源 | 一日一技</a></p>
+<p>最近用<code>Spacemacs</code>的<code>elfeed</code>作为 RSS 阅读器，想订阅 <a target="_blank" rel="noopener" href="https://hsreplay.net/articles/">HSReplay</a> 的技术分析文章，无奈网站不提供 RSS，自己动手，丰衣足食。</p>
+<p>不写详细教程了，直接贴一篇文章吧，<a target="_blank" rel="noopener" href="https://sspai.com/post/34320">少数派 利用 Feed43，将任意网页制作成 RSS 订阅源 | 一日一技</a></p>
 	  
 	</div>
 
@@ -180,7 +180,7 @@
   <h2 class="title">留言</h2>
   
   	 <div id="disqus_thread">
-     <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+     <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   	 </div>
   
 </section>
@@ -258,7 +258,7 @@ var disqus_shortname = 'bigbossjiang';
     <footer> <p>
   &copy; 2020 Tommy Jiang
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="noopener">Freemind</a>.    
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
   </div> <!-- container-narrow -->
   
@@ -315,7 +315,7 @@ var disqus_shortname = 'bigbossjiang';
 </script>
 <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
-  MathJax.Hub.Config("");
+  MathJax.Hub.Config({{ JSON.stringify(config) }});
 </script>
 
 <script type="text/x-mathjax-config">
@@ -327,7 +327,7 @@ var disqus_shortname = 'bigbossjiang';
   });
 </script>
 
-<script type="text/javascript" src="custom_mathjax_source">
+<script type="text/javascript" src="{{ src }}">
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->

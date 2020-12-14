@@ -47,7 +47,7 @@
 
 
 
-<meta name="generator" content="Hexo 4.2.1"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<meta name="generator" content="Hexo 5.2.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 <body>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
@@ -125,7 +125,7 @@
 </div>
 
 <a id="more"></a>
-<p>上午在知乎看了一篇<a href="https://www.zhihu.com/question/305613293/answer/569592293" target="_blank" rel="noopener">回答</a>，跟风升级了 Mojave 系统，升级完发现 Apple 和 NVIDIA 干架，Mac 全线产品从 N 卡换成了 A 卡，现在竟然连 N 卡的驱动也不批准了，导致像我这种老 Mac 用户升级后没法用显卡。</p>
+<p>上午在知乎看了一篇<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/305613293/answer/569592293">回答</a>，跟风升级了 Mojave 系统，升级完发现 Apple 和 NVIDIA 干架，Mac 全线产品从 N 卡换成了 A 卡，现在竟然连 N 卡的驱动也不批准了，导致像我这种老 Mac 用户升级后没法用显卡。</p>
 <p>想回退系统，发现只能抹掉重装，太麻烦了，网上还有一种方法是 Command + Alt + Shift + R，可以装 Mac 初始带的系统，但 10.13 开始磁盘格式从 HFS+ 转到了 APFS，这个方法也不行了。</p>
 <p>总结：</p>
 <ol>
@@ -134,9 +134,9 @@
 </ol>
 <p>折腾过程中的收获：</p>
 <ul>
-<li><a href="http://blog.topspeedsnail.com/archives/6603" target="_blank" rel="noopener">Ubuntu 16.04 无线热点方法</a></li>
+<li><a target="_blank" rel="noopener" href="http://blog.topspeedsnail.com/archives/6603">Ubuntu 16.04 无线热点方法</a></li>
 <li>Mac 启动时卡在进度条：启动后按住 Command + Option + P + R</li>
-<li><a href="https://blog.csdn.net/toopoo/article/details/84765391" target="_blank" rel="noopener">Emacs 升级后无法正常打开解决方法</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/toopoo/article/details/84765391">Emacs 升级后无法正常打开解决方法</a></li>
 </ul>
 	  
 	</div>
@@ -195,7 +195,7 @@
   <h2 class="title">留言</h2>
   
   	 <div id="disqus_thread">
-     <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+     <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   	 </div>
   
 </section>
@@ -273,7 +273,7 @@ var disqus_shortname = 'bigbossjiang';
     <footer> <p>
   &copy; 2020 Tommy Jiang
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="noopener">Freemind</a>.    
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
   </div> <!-- container-narrow -->
   
@@ -330,7 +330,7 @@ var disqus_shortname = 'bigbossjiang';
 </script>
 <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
-  MathJax.Hub.Config("");
+  MathJax.Hub.Config({{ JSON.stringify(config) }});
 </script>
 
 <script type="text/x-mathjax-config">
@@ -342,7 +342,7 @@ var disqus_shortname = 'bigbossjiang';
   });
 </script>
 
-<script type="text/javascript" src="custom_mathjax_source">
+<script type="text/javascript" src="{{ src }}">
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->

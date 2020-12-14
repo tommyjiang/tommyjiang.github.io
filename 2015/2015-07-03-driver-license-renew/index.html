@@ -47,7 +47,7 @@
 
 
 
-<meta name="generator" content="Hexo 4.2.1"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<meta name="generator" content="Hexo 5.2.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 <body>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
@@ -124,7 +124,7 @@
 <h1 id="体检"><a href="#体检" class="headerlink" title="体检"></a>体检</h1><h2 id="第一次体检"><a href="#第一次体检" class="headerlink" title="第一次体检"></a>第一次体检</h2><p>换驾照需要提供《机动车驾驶人身体条件证明》，北京市承担机动车驾驶员体检工作的医疗机构名单可以参考这里。我选的是离学校最近的海淀医院，周一至周五中午1点到下午3点半可以进行司机体检，在2楼202房间，费用10元，只需要带身份证和驾驶证即可，不需要提前打印《身体条件证明》那张表，体检完医院会打印一份。</p>
 <p>第一次去海淀医院体检，负责体检的医生让我把视力表4.9的那一排全部念一遍，我发现完全看不清，无奈之下只好回学校配副眼镜，左右眼都是50度，戴上之后5.0都能看的很清楚了。</p>
 <h2 id="第二次体检"><a href="#第二次体检" class="headerlink" title="第二次体检"></a>第二次体检</h2><p>2015年7月8日，戴着新配的50度眼镜，第二次到海淀医院体检，拿着收据直接到体检室，顺利通过，拿到了医院提供的《机动车驾驶人身体条件证明》。</p>
-<h1 id="车管局办手续"><a href="#车管局办手续" class="headerlink" title="车管局办手续"></a>车管局办手续</h1><p>根据北京市车管所网站的信息，到车管局办理外地驾照换领北京驾照手续需要<a href="http://www.bjjtgl.gov.cn/jgj/jsrgl/205275/index.html" target="_blank" rel="noopener">以下材料</a>：</p>
+<h1 id="车管局办手续"><a href="#车管局办手续" class="headerlink" title="车管局办手续"></a>车管局办手续</h1><p>根据北京市车管所网站的信息，到车管局办理外地驾照换领北京驾照手续需要<a target="_blank" rel="noopener" href="http://www.bjjtgl.gov.cn/jgj/jsrgl/205275/index.html">以下材料</a>：</p>
 <ol>
 <li>按规定填写的《机动车驾驶证申请表》。</li>
 <li>申请人的身份证明原件、复印件。</li>
@@ -190,7 +190,7 @@
   <h2 class="title">留言</h2>
   
   	 <div id="disqus_thread">
-     <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+     <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   	 </div>
   
 </section>
@@ -260,7 +260,7 @@ var disqus_shortname = 'bigbossjiang';
     <footer> <p>
   &copy; 2020 Tommy Jiang
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="noopener">Freemind</a>.    
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
   </div> <!-- container-narrow -->
   
@@ -317,7 +317,7 @@ var disqus_shortname = 'bigbossjiang';
 </script>
 <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
-  MathJax.Hub.Config("");
+  MathJax.Hub.Config({{ JSON.stringify(config) }});
 </script>
 
 <script type="text/x-mathjax-config">
@@ -329,7 +329,7 @@ var disqus_shortname = 'bigbossjiang';
   });
 </script>
 
-<script type="text/javascript" src="custom_mathjax_source">
+<script type="text/javascript" src="{{ src }}">
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->

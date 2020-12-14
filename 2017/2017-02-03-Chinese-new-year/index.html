@@ -47,7 +47,7 @@
 
 
 
-<meta name="generator" content="Hexo 4.2.1"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<meta name="generator" content="Hexo 5.2.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 <body>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
@@ -129,8 +129,8 @@
 <h1 id="2月计划"><a href="#2月计划" class="headerlink" title="2月计划"></a>2月计划</h1><p>大言不惭地说一句：我个人的执行力很强，所以定了计划一般都要拼死执行，不过还是给自己留点弹性，生活太一板一眼的话会很累。</p>
 <h2 id="Geek"><a href="#Geek" class="headerlink" title="Geek"></a>Geek</h2><p>继续学习 Python，单刷两本 Python 数据分析相关书籍。</p>
 <ul>
-<li>☐ <a href="https://book.douban.com/subject/25779298/" target="_blank" rel="noopener">利用 Python 进行数据分析</a>(Python for Data Analysis 中文版)</li>
-<li>☐ <a href="https://book.douban.com/subject/25921015/" target="_blank" rel="noopener">Python for Finance</a></li>
+<li>☐ <a target="_blank" rel="noopener" href="https://book.douban.com/subject/25779298/">利用 Python 进行数据分析</a>(Python for Data Analysis 中文版)</li>
+<li>☐ <a target="_blank" rel="noopener" href="https://book.douban.com/subject/25921015/">Python for Finance</a></li>
 </ul>
 <p>两本书大概浏览了一下，发现还是应该需求驱动型，单独看书效果一般。</p>
 <h2 id="社交"><a href="#社交" class="headerlink" title="社交"></a>社交</h2><ul>
@@ -194,7 +194,7 @@
   <h2 class="title">留言</h2>
   
   	 <div id="disqus_thread">
-     <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+     <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   	 </div>
   
 </section>
@@ -272,7 +272,7 @@ var disqus_shortname = 'bigbossjiang';
     <footer> <p>
   &copy; 2020 Tommy Jiang
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="noopener">Freemind</a>.    
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
   </div> <!-- container-narrow -->
   
@@ -329,7 +329,7 @@ var disqus_shortname = 'bigbossjiang';
 </script>
 <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
-  MathJax.Hub.Config("");
+  MathJax.Hub.Config({{ JSON.stringify(config) }});
 </script>
 
 <script type="text/x-mathjax-config">
@@ -341,7 +341,7 @@ var disqus_shortname = 'bigbossjiang';
   });
 </script>
 
-<script type="text/javascript" src="custom_mathjax_source">
+<script type="text/javascript" src="{{ src }}">
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->

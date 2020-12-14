@@ -47,7 +47,7 @@
 
 
 
-<meta name="generator" content="Hexo 4.2.1"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<meta name="generator" content="Hexo 5.2.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 <body>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
@@ -135,7 +135,7 @@
 </ul>
 <h1 id="如何避免-DCC"><a href="#如何避免-DCC" class="headerlink" title="如何避免 DCC"></a>如何避免 DCC</h1><p>由于 DCC 费用较高，所以在境外刷卡时，一定要避免 DCC。最简单的办法，就是在刷卡时提醒商家用<strong>当地货币</strong>记账，而不要用美元记账。</p>
 <p>这次在香港就是吃了这个亏，为了参加中行的活动刷的 MasterCard 全币卡，店员问我是用港币还是美元记账，我很傻地选了美元，被收了不到 4% 的 DCC 费用，将近 1000 元，其实在香港刷银联卡是最划算的，这次想薅羊毛没薅到，花钱买教训吧。</p>
-<p>附一个<a href="http://www.kuaiyilicai.com/huilv/whichcard.html" target="_blank" rel="noopener">出国刷卡指南</a>，中行万事达全币卡性价比还是不错的，以后如果还有机会出国就刷它吧。</p>
+<p>附一个<a target="_blank" rel="noopener" href="http://www.kuaiyilicai.com/huilv/whichcard.html">出国刷卡指南</a>，中行万事达全币卡性价比还是不错的，以后如果还有机会出国就刷它吧。</p>
 	  
 	</div>
 
@@ -193,7 +193,7 @@
   <h2 class="title">留言</h2>
   
   	 <div id="disqus_thread">
-     <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+     <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   	 </div>
   
 </section>
@@ -271,7 +271,7 @@ var disqus_shortname = 'bigbossjiang';
     <footer> <p>
   &copy; 2020 Tommy Jiang
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="noopener">Freemind</a>.    
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
   </div> <!-- container-narrow -->
   
@@ -328,7 +328,7 @@ var disqus_shortname = 'bigbossjiang';
 </script>
 <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
-  MathJax.Hub.Config("");
+  MathJax.Hub.Config({{ JSON.stringify(config) }});
 </script>
 
 <script type="text/x-mathjax-config">
@@ -340,7 +340,7 @@ var disqus_shortname = 'bigbossjiang';
   });
 </script>
 
-<script type="text/javascript" src="custom_mathjax_source">
+<script type="text/javascript" src="{{ src }}">
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->

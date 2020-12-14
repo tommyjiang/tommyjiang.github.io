@@ -47,7 +47,7 @@
 
 
 
-<meta name="generator" content="Hexo 4.2.1"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<meta name="generator" content="Hexo 5.2.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 <body>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
@@ -125,7 +125,7 @@ LeetCode Weekly Contest 152.
 </div>
 
 <a id="more"></a>
-<h1 id="问题-1"><a href="#问题-1" class="headerlink" title="问题 1"></a>问题 1</h1><p><a href="https://leetcode.com/problems/prime-arrangements/" target="_blank" rel="noopener">题目链接</a></p>
+<h1 id="问题-1"><a href="#问题-1" class="headerlink" title="问题 1"></a>问题 1</h1><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/prime-arrangements/">题目链接</a></p>
 <p>思路：从 1 到 n 质数和合数分别计数，结果为<code>质数阶乘 * 合数阶乘 % MOD</code>。<br>复杂度：时间复杂度 O(n^2)，空间复杂度 O(1)。</p>
 <p>Python</p>
 <pre><code class="lang-python">class Solution:
@@ -150,9 +150,9 @@ LeetCode Weekly Contest 152.
         return math.factorial(p) % mod * math.factorial(c) % mod
 </code></pre>
 <p>C++</p>
-<pre><code class="lang-cpp">class Solution {
+<pre><code class="lang-cpp">class Solution &#123;
 public:
-    bool prime(int n) {
+    bool prime(int n) &#123;
         if (n &lt; 2)
             return false;
 
@@ -161,21 +161,21 @@ public:
                 return false;
 
         return true;
-    }
-    int numPrimeArrangements(int n) {
+    &#125;
+    int numPrimeArrangements(int n) &#123;
         const int MOD = 1e9 + 7;
         long long res = 1;
 
         int p = 0;
         int c = 1;
 
-        for (int i = 2; i &lt;= n; i++){
-            if (prime(i)) {
+        for (int i = 2; i &lt;= n; i++)&#123;
+            if (prime(i)) &#123;
                 p += 1;
-            } else {
+            &#125; else &#123;
                 c += 1;
-            }
-        }
+            &#125;
+        &#125;
 
         for (int i = 1; i &lt;= p; i++)
             res = res * i % MOD;
@@ -184,10 +184,10 @@ public:
             res = res * i % MOD;
 
         return res;
-    }
-};
+    &#125;
+&#125;;
 </code></pre>
-<h1 id="问题-2"><a href="#问题-2" class="headerlink" title="问题 2"></a>问题 2</h1><p><a href="https://leetcode.com/problems/diet-plan-performance/" target="_blank" rel="noopener">题目链接</a></p>
+<h1 id="问题-2"><a href="#问题-2" class="headerlink" title="问题 2"></a>问题 2</h1><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/diet-plan-performance/">题目链接</a></p>
 <p>解法：计算前缀和，每次去掉一个元素，加入一个元素。<br>复杂度：时间复杂度 O(n)，空间复杂度 O(1)。</p>
 <p>Python</p>
 <pre><code class="lang-python">class Solution:
@@ -215,41 +215,41 @@ public:
         return res
 </code></pre>
 <p>C++</p>
-<pre><code class="lang-cpp">class Solution {
+<pre><code class="lang-cpp">class Solution &#123;
 public:
-    int dietPlanPerformance(vector&lt;int&gt;&amp; A, int k, int lower, int upper) {
+    int dietPlanPerformance(vector&lt;int&gt;&amp; A, int k, int lower, int upper) &#123;
         int res = 0;
 
         int n = A.size();
 
         int s = 0;
 
-        for (int i = 0; i &lt; k; ++i){
+        for (int i = 0; i &lt; k; ++i)&#123;
             s += A[i];
-        }
+        &#125;
 
-        if (s &gt; upper) {
+        if (s &gt; upper) &#123;
                 res += 1;
-        } else if (s &lt; lower) {
+        &#125; else if (s &lt; lower) &#123;
                 res -= 1;
-        }
+        &#125;
 
-        for (int i = 0; i &lt; n-k; i++){
+        for (int i = 0; i &lt; n-k; i++)&#123;
             s -= A[i];
             s += A[i+k];
 
-            if (s &gt; upper) {
+            if (s &gt; upper) &#123;
                 res += 1;
-            } else if (s &lt; lower) {
+            &#125; else if (s &lt; lower) &#123;
                 res -= 1;
-            }
-        }
+            &#125;
+        &#125;
 
         return res;
-    }
-};
+    &#125;
+&#125;;
 </code></pre>
-<h1 id="问题-3"><a href="#问题-3" class="headerlink" title="问题 3"></a>问题 3</h1><p><a href="https://leetcode.com/problems/can-make-palindrome-from-substring/" target="_blank" rel="noopener">题目链接</a></p>
+<h1 id="问题-3"><a href="#问题-3" class="headerlink" title="问题 3"></a>问题 3</h1><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/can-make-palindrome-from-substring/">题目链接</a></p>
 <p>解法：26 个字母出现个数用前缀哈希存储，查询和比较 key 的差异为 O(1)，注意可以 rearrange，所以字母出现次数差异只保留 % 2 的值，最后对字符串奇偶长度做判断。</p>
 <p>复杂度：时间复杂度 O(n)，空间复杂度 O(n)。</p>
 <p>Python</p>
@@ -281,10 +281,10 @@ public:
         return res
 </code></pre>
 <p>C++</p>
-<pre><code class="lang-cpp">class Solution {
+<pre><code class="lang-cpp">class Solution &#123;
 public:
     vector&lt;bool&gt; canMakePaliQueries(string s,
-                                    vector&lt;vector&lt;int&gt;&gt;&amp; queries) {
+                                    vector&lt;vector&lt;int&gt;&gt;&amp; queries) &#123;
         int n = s.size();
         vector&lt;vector&lt;int&gt;&gt; freq(26, vector&lt;int&gt;(n + 1, 0));
 
@@ -294,7 +294,7 @@ public:
 
         vector&lt;bool&gt; answer;
 
-        for (vector&lt;int&gt; &amp;query : queries) {
+        for (vector&lt;int&gt; &amp;query : queries) &#123;
             int l = query[0], r = query[1] + 1, k = query[2];
 
             int odd = 0;
@@ -304,13 +304,13 @@ public:
                     odd++;
 
             answer.push_back(odd &lt;= 2 * k + 1);
-        }
+        &#125;
 
         return answer;
-    }
-};
+    &#125;
+&#125;;
 </code></pre>
-<h1 id="问题-4"><a href="#问题-4" class="headerlink" title="问题 4"></a>问题 4</h1><p><a href="https://leetcode.com/problems/number-of-valid-words-for-each-puzzle/" target="_blank" rel="noopener">题目链接</a><br>解法：参考<a href="https://leetcode.com/problems/number-of-valid-words-for-each-puzzle/discuss/371864/Python-Find-all-Sub-Puzzles" target="_blank" rel="noopener">寒神的解答</a>。利用 26 位整数的 bit 存储是否包含某个字母状态(状态压缩)，遍历 puzzles 中的元素，枚举包括第一个字母的所有子 string 组合，然后求和。</p>
+<h1 id="问题-4"><a href="#问题-4" class="headerlink" title="问题 4"></a>问题 4</h1><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/number-of-valid-words-for-each-puzzle/">题目链接</a><br>解法：参考<a target="_blank" rel="noopener" href="https://leetcode.com/problems/number-of-valid-words-for-each-puzzle/discuss/371864/Python-Find-all-Sub-Puzzles">寒神的解答</a>。利用 26 位整数的 bit 存储是否包含某个字母状态(状态压缩)，遍历 puzzles 中的元素，枚举包括第一个字母的所有子 string 组合，然后求和。</p>
 <p>复杂度：时间复杂度 O(max(W, P))，空间复杂度 O(W)。</p>
 <p>Python</p>
 <pre><code class="lang-python">class Solution:
@@ -334,34 +334,34 @@ public:
         return res
 </code></pre>
 <p>C++</p>
-<pre><code class="lang-cpp">class Solution {
+<pre><code class="lang-cpp">class Solution &#123;
 public:
     vector&lt;int&gt; findNumOfValidWords(vector&lt;string&gt;&amp; words,
-                                    vector&lt;string&gt;&amp; puzzles) {
+                                    vector&lt;string&gt;&amp; puzzles) &#123;
         unordered_map&lt;int, int&gt; count;
 
-        for (auto&amp; w: words) {
+        for (auto&amp; w: words) &#123;
             int mask = 0;
             for (auto&amp; c : w)
                 mask |= (1 &lt;&lt; (c - &#39;a&#39;));
             count[mask] ++;
-        }
+        &#125;
 
         vector&lt;int&gt; res;
 
-        for (auto&amp; p : puzzles) {
+        for (auto&amp; p : puzzles) &#123;
             vector&lt;int&gt; mask_p;
             vector&lt;int&gt; mask_new;
 
             mask_p.push_back(1 &lt;&lt; (p[0] - &#39;a&#39;));
 
-            for (int i = 1; i &lt; p.size(); i++) {
+            for (int i = 1; i &lt; p.size(); i++) &#123;
                 mask_new = mask_p;
-                for (auto&amp; m : mask_p) {
+                for (auto&amp; m : mask_p) &#123;
                     mask_new.push_back(m | (1 &lt;&lt; (p[i] - &#39;a&#39;)));
-                }
+                &#125;
                 mask_p = mask_new;
-            }
+            &#125;
 
             int cnt = 0;
 
@@ -369,11 +369,11 @@ public:
                 cnt += count[m];
 
             res.push_back(cnt);
-        }
+        &#125;
 
         return res;
-    }
-};
+    &#125;
+&#125;;
 </code></pre>
 	  
 	</div>
@@ -432,7 +432,7 @@ public:
   <h2 class="title">留言</h2>
   
   	 <div id="disqus_thread">
-     <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+     <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   	 </div>
   
 </section>
@@ -510,7 +510,7 @@ var disqus_shortname = 'bigbossjiang';
     <footer> <p>
   &copy; 2020 Tommy Jiang
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="noopener">Freemind</a>.    
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
   </div> <!-- container-narrow -->
   
@@ -567,7 +567,7 @@ var disqus_shortname = 'bigbossjiang';
 </script>
 <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
-  MathJax.Hub.Config("");
+  MathJax.Hub.Config({{ JSON.stringify(config) }});
 </script>
 
 <script type="text/x-mathjax-config">
@@ -579,7 +579,7 @@ var disqus_shortname = 'bigbossjiang';
   });
 </script>
 
-<script type="text/javascript" src="custom_mathjax_source">
+<script type="text/javascript" src="{{ src }}">
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->

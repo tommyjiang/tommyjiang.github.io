@@ -47,7 +47,7 @@
 
 
 
-<meta name="generator" content="Hexo 4.2.1"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<meta name="generator" content="Hexo 5.2.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 <body>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
@@ -145,7 +145,7 @@
 <!-- markdown-toc end -->
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><h2 id="出国前准备"><a href="#出国前准备" class="headerlink" title="出国前准备"></a>出国前准备</h2><ol>
 <li>签证：淘宝上到处都是，建议至少提前1个月准备，费用250左右。落地签也可以，据说排队时间会比较长。</li>
-<li>换汇：参考这篇<a href="http://tommyjiang.coding.me/2018/2018-02-05-cash-BOC/" target="_blank" rel="noopener">博文</a>。</li>
+<li>换汇：参考这篇<a target="_blank" rel="noopener" href="http://tommyjiang.coding.me/2018/2018-02-05-cash-BOC/">博文</a>。</li>
 </ol>
 <h2 id="清迈"><a href="#清迈" class="headerlink" title="清迈"></a>清迈</h2><ol>
 <li>感觉清迈3天行程足够了，1天上午素贴山双龙寺+下午晚上夜间动物园，1天白天帕辛寺契迪龙寺+按摩/SPA，晚上宁曼路夜市，1天白天瓦洛洛市场+晚上长康路夜市，如果赶上周六/周日夜市会更热闹。</li>
@@ -232,7 +232,7 @@
   <h2 class="title">留言</h2>
   
   	 <div id="disqus_thread">
-     <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+     <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   	 </div>
   
 </section>
@@ -310,7 +310,7 @@ var disqus_shortname = 'bigbossjiang';
     <footer> <p>
   &copy; 2020 Tommy Jiang
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="noopener">Freemind</a>.    
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
   </div> <!-- container-narrow -->
   
@@ -367,7 +367,7 @@ var disqus_shortname = 'bigbossjiang';
 </script>
 <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
-  MathJax.Hub.Config("");
+  MathJax.Hub.Config({{ JSON.stringify(config) }});
 </script>
 
 <script type="text/x-mathjax-config">
@@ -379,7 +379,7 @@ var disqus_shortname = 'bigbossjiang';
   });
 </script>
 
-<script type="text/javascript" src="custom_mathjax_source">
+<script type="text/javascript" src="{{ src }}">
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->

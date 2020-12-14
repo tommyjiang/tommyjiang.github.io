@@ -47,7 +47,7 @@
 
 
 
-<meta name="generator" content="Hexo 4.2.1"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<meta name="generator" content="Hexo 5.2.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 <body>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
@@ -121,8 +121,8 @@
 
 	  <p>全球各地气候统计数据可视化分析，旅游出行好帮手。</p>
 <a id="more"></a>
-<p>之前忘了在哪看到过 <a href="https://weatherspark.com/" target="_blank" rel="noopener">Weather Spark 这个网站</a>，觉得统计数据非常全，而且展现方式也很漂亮。这次特意记下来，出去旅游的话可以参考。</p>
-<h1 id="整体介绍"><a href="#整体介绍" class="headerlink" title="整体介绍"></a>整体介绍</h1><p>以<a href="https://weatherspark.com/y/131055/Average-Weather-in-Beijing-China-Year-Round" target="_blank" rel="noopener">北京全年天气</a>为例，看看这个网站都有哪些内容。</p>
+<p>之前忘了在哪看到过 <a target="_blank" rel="noopener" href="https://weatherspark.com/">Weather Spark 这个网站</a>，觉得统计数据非常全，而且展现方式也很漂亮。这次特意记下来，出去旅游的话可以参考。</p>
+<h1 id="整体介绍"><a href="#整体介绍" class="headerlink" title="整体介绍"></a>整体介绍</h1><p>以<a target="_blank" rel="noopener" href="https://weatherspark.com/y/131055/Average-Weather-in-Beijing-China-Year-Round">北京全年天气</a>为例，看看这个网站都有哪些内容。</p>
 <ul>
 <li>天气概述</li>
 <li>温度</li>
@@ -137,7 +137,7 @@
 <li>地形</li>
 <li>数据源</li>
 </ul>
-<p>除全年天气外，还可以看每日天气，例如<a href="https://weatherspark.com/d/112821/1/28/Average-Weather-on-January-28-in-Chiang-Mai-Thailand#Sections-Temperature" target="_blank" rel="noopener">北京1月28日天气</a>。</p>
+<p>除全年天气外，还可以看每日天气，例如<a target="_blank" rel="noopener" href="https://weatherspark.com/d/112821/1/28/Average-Weather-on-January-28-in-Chiang-Mai-Thailand#Sections-Temperature">北京1月28日天气</a>。</p>
 <h1 id="具体信息"><a href="#具体信息" class="headerlink" title="具体信息"></a>具体信息</h1><h2 id="天气概述"><a href="#天气概述" class="headerlink" title="天气概述"></a>天气概述</h2><p>全年季节描述，温度范围，最重要的是<code>tourism score</code>，说明什么时候旅游最好，关于这个指标后面还有详细的叙述。</p>
 <h2 id="温度"><a href="#温度" class="headerlink" title="温度"></a>温度</h2><p>最热/最冷季节的时间和温度，全年平均温度折线图，全年时刻平均温度热力图（标准：frigid &lt; -9°C &lt; freezing &lt; 0°C &lt; very cold &lt; 7°C &lt; cold &lt; 13°C &lt; cool &lt; 18°C &lt; comfortable &lt; 24°C &lt; warm &lt; 29°C &lt; hot &lt; 35°C &lt; sweltering），世界上距离最远气候最接近的城市。</p>
 <h2 id="云量"><a href="#云量" class="headerlink" title="云量"></a>云量</h2><p>云量最多/最少时期和云量，全年云量图(标准：clear &lt; 20% &lt; mostly clear &lt; 40% &lt; partly cloudy &lt; 60% &lt; mostly cloudy &lt; 80% &lt; overcast)</p>
@@ -213,7 +213,7 @@
   <h2 class="title">留言</h2>
   
   	 <div id="disqus_thread">
-     <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+     <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   	 </div>
   
 </section>
@@ -291,7 +291,7 @@ var disqus_shortname = 'bigbossjiang';
     <footer> <p>
   &copy; 2020 Tommy Jiang
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="noopener">Freemind</a>.    
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
   </div> <!-- container-narrow -->
   
@@ -348,7 +348,7 @@ var disqus_shortname = 'bigbossjiang';
 </script>
 <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
-  MathJax.Hub.Config("");
+  MathJax.Hub.Config({{ JSON.stringify(config) }});
 </script>
 
 <script type="text/x-mathjax-config">
@@ -360,7 +360,7 @@ var disqus_shortname = 'bigbossjiang';
   });
 </script>
 
-<script type="text/javascript" src="custom_mathjax_source">
+<script type="text/javascript" src="{{ src }}">
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->
