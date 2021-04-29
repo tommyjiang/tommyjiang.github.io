@@ -3,7 +3,7 @@
 <head>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   
-  <title>《彼得·林奇的成功投资》 | Tommy&#39;s Blog</title>
+  <title>《彼得·林奇的成功投资》读书笔记 | Tommy&#39;s Blog</title>
   <meta name="author" content="Tommy Jiang">
   
   <meta name="description" content="传奇基金经理彼得·林奇的投资心得。">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="《彼得·林奇的成功投资》"/>
+  <meta property="og:title" content="《彼得·林奇的成功投资》读书笔记"/>
   <meta property="og:site_name" content="Tommy&#39;s Blog"/>
 
   
@@ -99,7 +99,7 @@
 
 	
 		<div class="page-header page-header-inverse ">		
-			<h1 class="title title-inverse "> 《彼得·林奇的成功投资》</h1>
+			<h1 class="title title-inverse "> 《彼得·林奇的成功投资》读书笔记</h1>
 		</div>		
 	
 
@@ -148,9 +148,9 @@
 	<div class="pagination">
 <ul class="pagination">
 	 
-		
-          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
-        
+				
+    	<li class="prev"><a href="/2021/2021-02-15-etf/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+  		
 
         <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
 
@@ -234,7 +234,7 @@
 	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
     <ul id="tags" class="tag_box list-unstyled collapse in">	  
 	    
-  <li><a href="/tags/投资/">投资<span>2</span></a></li>
+  <li><a href="/tags/投资/">投资<span>4</span></a></li>
     </ul>
 	</div>
 	
@@ -310,9 +310,26 @@ var disqus_shortname = 'bigbossjiang';
    </script>
 
 
-<!-- syntax highlighting --><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<!-- syntax highlighting -->
+
+
 <script type="text/x-mathjax-config">
-  MathJax.Hub.Config({{ JSON.stringify(config) }});
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
 </script>
 
 <script type="text/x-mathjax-config">
@@ -324,11 +341,9 @@ var disqus_shortname = 'bigbossjiang';
   });
 </script>
 
-<script type="text/javascript" src="{{ src }}">
+<script type="text/javascript" src="custom_mathjax_source">
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->
-
-
 </body>
 </html>

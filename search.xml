@@ -4,7 +4,397 @@
   
     
     <entry>
-      <title><![CDATA[《彼得·林奇的成功投资》]]></title>
+      <title><![CDATA[《看透银行》读书笔记]]></title>
+      <url>http://tommyjiang.github.io/2021/2021-04-24-dive-into-bank/</url>
+      <content type="html"><![CDATA[
+<div class="alert alert-info"><i class="fa fa-info"></i>
+入手了冰哥的签名版。
+</div>
+
+<a id="more"></a>
+<h1 id="负债业务"><a href="#负债业务" class="headerlink" title="负债业务"></a>负债业务</h1><p>银行的负债主要包括存款、同业借款、同业存单、央行借款。负债业务的评价指标包括：</p>
+<ol>
+<li>负债成本。包括直接成本和间接成本。直接成本是计息负债的综合利率，间接成本是获取负债的运营费用。2017 年典型银行的负债利率在 1.5%-3% 之间，负债间接成本约在 0.3%-0.6% 之间。</li>
+<li>流动性覆盖率。等于合格优质流动性资产 / 未来 30 天现金净流出量。需要银行多配置优质资产和现金净流出。</li>
+</ol>
+<h2 id="存款业务"><a href="#存款业务" class="headerlink" title="存款业务"></a>存款业务</h2><p>存款类型按存期划分包括活期存款、定期存款、通知存款、协议存款、结构化存款等。按客户性质划分包括对公存款、零售存款存款业务的评价指标包括：</p>
+<ol>
+<li>数量，存款绝对数量和相对增速。</li>
+<li>质量，存款直接成本。活期存款占比越高，成本越低，越有优势。招行 AUM 导向的考核体系，可以帮助招行获得存款成本优势。(中国银行存款成本显著高于其他三大航和招商银行？)</li>
+</ol>
+<p>存款相关指标包括：</p>
+<ol>
+<li>货币流动性指标。通常使用 M2(流通中现金 + 企业存款 + 机关团体存款 + 农村存款 + 个人储蓄存款 + 证券客户保证金)，可近似看做银行存款增速和资产规模增速。</li>
+<li>存款准备金率。指金融机构为保证客户提取存款和资金清算需要而准备的资金，是缴存在中央银行的存款。存款准备金占其存款总额的比例即存款准备金率。存款准备金率可以用来调节流动性，该比率越高，流动性越紧。</li>
+<li>存贷比。应成为贷存比，指银行贷款总额与存款总额的比例，从盈利的角度考虑，该指标越高越好，但过高的存贷比可能意味着银行存款增长乏力，只能依靠成本较高的同业拆借和向央行拆借满足负债需求。</li>
+</ol>
+<h2 id="同业负债"><a href="#同业负债" class="headerlink" title="同业负债"></a>同业负债</h2><p>同业负债包括同业和其他金融机构存放、同业拆入和卖出回购。</p>
+<ol>
+<li>同业和其他金融机构存放。同业存放相对较少，是指各银行为方便结算，在相关结算单位开立存款账户，利率参考上海银行间同业拆放利率(Shibor)。其他金融机构存放，不同银行间有很大差别，也会导致不同银行负债成本有很大差别。</li>
+<li>同业拆入。又称同业拆放，是金融机构之间进行短期、临时性头寸调剂的市场，手头资金富余的银行，将资金拆借给缺乏资金的银行。同业拆借市场没有资产抵押，完全建立在信用基础上。</li>
+<li>卖出回购。这部分在同业负债中占比最小，指银行先将一些资产卖给其他银行，并约定好回购时间和价格，类似有抵押借贷。</li>
+</ol>
+<p>同业负债有一定流动性风险，基本上属于短期负债，如果配置过多长期资产，“短借长贷”造成资产期限错配，可能会出现流动性危机。</p>
+<h2 id="同业存单"><a href="#同业存单" class="headerlink" title="同业存单"></a>同业存单</h2><p>同业存单是存款类金融机构在全国银行间市场上发型的记账式定期存款凭证，相当于银行花钱向另一家银行买存款，采用零息债券的形式，即买入同业存单的机构付出的金额是票面金额减去到期时的利息。</p>
+<p>同业存单的利率实际上形成了银行间中长期资金拆借的利率，流动性紧张的时候，同业存单利率走高。存款基础好的银行，愿意作为同业存单的买入行。虽然通过同业存单拿到负债不需要像吸储一样付出附加成本，可以快速扩张负债规模，但同业存单是所有负债中对流动性最敏感的，同时成本较高，是一把双刃剑。</p>
+<h2 id="央行借款"><a href="#央行借款" class="headerlink" title="央行借款"></a>央行借款</h2><p>主要包括再贷款、再贴现和结构性货币政策工具。再贴现即通过票据债权转让，从央行进行再贷款。结构性货币政策工具包括：</p>
+<ol>
+<li>SLF，常备借贷便利，俗称“酸辣粉”。SLF 是银行利用高信用评级债券等优质资产向央行一对一申请抵押贷款。</li>
+<li>MLF，中期借贷便利，俗称“麻辣粉”。MLF 与 SLF 类似，主要功能是投放中期基础货币，实现对特定领域的定向支持。</li>
+<li>TMLF，定向中期借贷便利，俗称“特麻辣粉”。TMLF 经续作可使用 3 年，利率比 MLF 利率优惠 15 个基点。</li>
+</ol>
+<h1 id="资产业务"><a href="#资产业务" class="headerlink" title="资产业务"></a>资产业务</h1><p>银行的资产业务是真正帮助银行赚钱的业务线，配置资产需要兼顾收益率和风险，不能只配置高收益率的资产。同时也需要考虑资产的久期，不能全部配置长久期资产，否则就会面临流动性风险和期限错配引发的利率风险。</p>
+<p>银行资产主要包括贷款、投资、存放央行、存放同业或其他金融机构、拆出资金及买入返售资产、现金、贵金属、商誉、其他资产等，其中前面五项产生利息收入，是生息资产，后面四项是非生息资产。</p>
+<h2 id="贷款业务"><a href="#贷款业务" class="headerlink" title="贷款业务"></a>贷款业务</h2><p>贷款业务分为零售贷款、对公贷款和票据贴现三大类。</p>
+<ol>
+<li>零售贷款。即发放给个人或个体经营者的贷款，优势是风险相对较低(社会信用体系完善、没有个人破产保护制度)，收益率相对较高(客户议息能力弱)，劣势是需要强大的客户基础和较高的尽调成本。</li>
+<li>对公贷款。即发放给企事业单位的贷款，优势是单笔金额大尽调成本低，可以派生存款变相扩张资产负债规模，劣势是不良率比零售贷款高、收益率比零售贷款低。</li>
+<li>票据贴现。即资金借贷者将未到期的商业票据、银行承兑汇票等向银行要求变为现款，银行收到票据，按票面金额扣除贴现利息后付给借贷者现款。</li>
+</ol>
+<h2 id="投资业务"><a href="#投资业务" class="headerlink" title="投资业务"></a>投资业务</h2><p>投资资产包括债券、非标资产、基金、贵金属、股权投资等。</p>
+<ol>
+<li>债券。政府债券比例最高，政策性银行债券次之，企业债最少。</li>
+<li>非标资产。非标业务可以规避贷款监管指标限制，同时也可以减少资本金消耗和资产减值损失计提。目前非标资产受到的监管越来越严格，未来这部分资产会显著收缩。</li>
+</ol>
+<p>投资时，对投资资产占比过高的银行，要更加谨慎。</p>
+<h2 id="信用卡业务"><a href="#信用卡业务" class="headerlink" title="信用卡业务"></a>信用卡业务</h2><p>信用卡刷卡手续费，国内一般按 0.6% 收取，按 7:2:1 比例在发卡行、收单行和银联间进行分配。</p>
+<p>对于没有全额还款的信用卡，发卡行将收取罚息。罚息的特点是利率高(年化 18%)、按月计复息、全额罚息(以全部消费额计息)。对于无法全额还款的持卡人，可以选择分期支付。分期支付对银行有如下好处：</p>
+<ol>
+<li>分期费率的实际利率高。分期费率的计算并不能简单的用利息除以本金，考虑时间加权的分期利率通常在 15%-16% 之间，略低于罚息利率，但相比贷款也高出很多，可以为银行创造收入。</li>
+<li>分期违约时，银行损失小。分期途中即使客户发生违约，银行之前也已经收到一部分本金，不会全部损失。</li>
+<li>美化财报。目前只有招商银行和光大银行将分期手续费计入利息收入，其他银行均算作非息收入，多数投资者默认非息收入越高越好，相当于美化了财报。</li>
+</ol>
+<h1 id="中间业务"><a href="#中间业务" class="headerlink" title="中间业务"></a>中间业务</h1><p>银行的中间业务是指不构成商业银行表内资产、表内负债，形成银行非利息收入的业务。中间业务具体可以分为金融服务业务和表外业务。中间业务的最大特征是没有风险或风险资产很少，费率不高，消耗人力资源大，但由于几乎不消耗资本金，依然是商业银行未来发展的重要方向。同时，中间业务也可以增强用户的黏性。</p>
+<ol>
+<li>金融服务业务。金融服务业务不形成或有资产和或有负债，或有的意思是因过去的交易或事项，今后可望获得。金融服务业务中，商业银行以代理人身份为客户办理业务，并从中收取手续费，完全不承担任何风险，也不会产生任何减值需求。具体包括清算结算业务、银行卡业务、代理业务、托管业务、咨询顾问业务等。</li>
+<li>表外业务。表外业务与银行的资产和负债业务关系紧密，未来很可能由于某些条件触发转换为资产业务和负债业务，主要包括担保业务、承诺业务和金融衍生业务。</li>
+</ol>
+<h2 id="资产管理业务"><a href="#资产管理业务" class="headerlink" title="资产管理业务"></a>资产管理业务</h2><p>资产管理业务，简称资管业务，是指证券、期货、基金等金融机构作为资产管理人，根据合同约定，为客户提供投资管理服务，并从中收取一定的管理费甚至提成。银行资管业务是为了应对创新性理财产品对客户资产的冲击，目前银行理财占国内资管市场近 30%。</p>
+<ol>
+<li>理财业务。在银行购买理财产品，银行把募集的资金按合同约定投入某类资产，收取一定的管理费。理财业务可以增加用户黏性，也可以提升银行的盈利能力。理财业务是资管业务中最多的。</li>
+<li>委托投资业务。委托行以委托理财服务的名义吸收个人客户资金，以同业存款的方式投给受托行，规定受托行必须将这笔资金投向指定的投资对象。与通道业务一样，都是为了绕开监管，有一定的风险。</li>
+<li>通道业务。银行找第三方金融公司，由第三方将贷款放给客户，然后将收益权包装成理财产品卖给个人客户，银行只收取管理费或手续费，不承担额外的风险，也没有额外的收益。</li>
+</ol>
+<p>2018 年资管新规对银行业务的影响：</p>
+<ol>
+<li>公募理财可以配置非标产品，但必须是国家支持的重点工程或者小微信贷，严谨六入房地产和地方债务平台。</li>
+<li>过渡期内货币型和封闭 6 个月以上的定期开放产品，可以使用摊余成本法，降低理财产品净值的波动，稳定投资者心理。</li>
+<li>拓宽公募理财产品投资范围，起售点从 5 万元降低至 1 万元。</li>
+<li>对非标资产回表补充资本工具支持。</li>
+</ol>
+<h2 id="代理业务"><a href="#代理业务" class="headerlink" title="代理业务"></a>代理业务</h2><p>代理业务是代理人接受客户委托，以被代理人的名义代为办理指定经济业务。代理业务与信托业务非常相似，最本质的差别是代理业务财产归属不发生转移，信托业务财产权转移给受托人，由于不涉及财产转移，银行承担的风险和连带责任更小。</p>
+<p>代理业务包括代收代付业务、代理证券业务、代理保险业务和其他代理业务。代理证券和代理保险业务都可以收取手续费，代理证券业务的手续费在 1% 左右，代理保险的手续费在 3%-6%。</p>
+<h1 id="银行的收入"><a href="#银行的收入" class="headerlink" title="银行的收入"></a>银行的收入</h1><p>银行的收入主要包括净利息收入和非息收入两部分。</p>
+<h2 id="净利息收入"><a href="#净利息收入" class="headerlink" title="净利息收入"></a>净利息收入</h2><p>净利息收入是银行利息收入减去利息支出后的差额。银行的利息收入来源包括：信贷资产、投资资产、同业资产和存放央行款项。目前法定存款准备金利率为 1.62%，超额存款准备金利率为 0.72%，所以存款准备金基本是赔钱的买卖。银行的利息支出来源包括：存款负债、同业负债和央行拆借。</p>
+<p>净利息收入指标包括：</p>
+<ol>
+<li>净息差。即净资产收益率，等于净利息收入，除以总生息资产。</li>
+<li>净利息收入增速。等于(生息资产增速 + 1)，乘以(净息差增速 + 1)，再减 1。</li>
+</ol>
+<h3 id="净息差"><a href="#净息差" class="headerlink" title="净息差"></a>净息差</h3><p>净息差是评价一家银行的重要指标。触及投资者可以通过净息差评估银行的盈利能力，高级投资者需要分析高净息差的风险，顶级投资者需要对净息差趋势进行预测。</p>
+<p>影响净息差的因素主要包括贷款利率、存款成本、同业负债成本、负债和资产配置占比。</p>
+<p>加减息对银行的净息差有显著影响。</p>
+<ol>
+<li>对称加减息。对应档期加减息程度相同的，叫做对称加减息。但不同久期的幅度不同，活期经常不加息。加息时，银行的净息差会扩张，活期存款占比越高的银行，扩大越多。</li>
+<li>非对称加减息。非对称加息情况下，银行净息差扩张会受到限制，如果活期加息，会严重影响净利息收入增加力度，甚至出现净利息收入减少。</li>
+</ol>
+<h3 id="利率市场化"><a href="#利率市场化" class="headerlink" title="利率市场化"></a>利率市场化</h3><p>利率市场化的目的是放开存贷款利率浮动限制，最终取消存贷款基准利率。2019 年 8 月 16 日，中国人民银行宣布了最新的 “LPR 定价机制”，贷款基础利率是商业银行对其最优质客户执行的贷款利率，其他贷款利率在此基础上加减点生成。LPR 将会以 MLF 加点的方式定价，相当于贷款利率与 MLF 利率相关，后续存贷款利率可能自动向 MLF 并轨。</p>
+<h2 id="非利息收入"><a href="#非利息收入" class="headerlink" title="非利息收入"></a>非利息收入</h2><p>非利息收入主要包括手续费和佣金收入，以及其他非利息收入。非利息收入占比越高，收入中和风险相关的利息收入占比越低，银行会将一些模棱两可的业务收入计入手续费收入，以美化财报。一个典型的做法是将信用卡分期收入放入手续费收入，只有招行将其放入利息收入。</p>
+<h1 id="银行的费用"><a href="#银行的费用" class="headerlink" title="银行的费用"></a>银行的费用</h1><ol>
+<li>信用减值损失。信用减值损失是银行应对未来风险的一种方法，也是调节利润波动的一种有效手段。银行的生意特点是利润前置，风险后置，在贷款发放到全额收回本息之间，都可能发生无法偿付的风险。根据贷款资产 5 级分类标准，对不同等级的贷款，银行会计提减值准备金。</li>
+<li>业务及管理费。业务及管理费作为支出，通常投资者会认为越低越好，但过低的业务及管理费可能意味着银行发展和转型动力不足。</li>
+</ol>
+<h1 id="银行业的特质"><a href="#银行业的特质" class="headerlink" title="银行业的特质"></a>银行业的特质</h1><h2 id="高杠杆"><a href="#高杠杆" class="headerlink" title="高杠杆"></a>高杠杆</h2><p>高杠杆的意思是，银行的总资产远远大于其净资产，即银行的负债体量巨大。如果银行 1% 的总资产成为坏账，就会给银行带来净资产 10% 以上的损失，因此资产质量对于盈利至关重要。压制银行杠杆倍数的关键手段是提高资本充足率。</p>
+<h3 id="资本充足率"><a href="#资本充足率" class="headerlink" title="资本充足率"></a>资本充足率</h3><p>资本充足率，公式为资本/风险加权资产，是资本总额对齐风险加权资产的比率，反映了银行以自有资本承担损失的能力，具体包括核心一级资本充足率，一级资本充足率和资本充足率。</p>
+<ol>
+<li>核心一级资本。可以永久使用和支配的自有资金，包括实收资本(主要是普通股权)、资本公积、盈余公积、未分配利润等。</li>
+<li>其他一级资本。主要包括优先股、永续债。</li>
+<li>附属资本。包括未披露准备金、一般损失准备金、从属有期债务、混合资本工具和次级长期债券。</li>
+</ol>
+<p>风险加权资产的计算，包括权重法和高级法两种。权重法是将全部资产按照监管规定类别进行分类，采用监管规定的风险权重，计量信用风险加权资产。而高级法是银行用自己内部的评估系统，对风险资产的主体进行评级，并根据评级结果设定风险资产的风险系数。简单来看，权重法的风险系数是统一规定的，高级法的风险系数是银行内部评估的。</p>
+<p>我国制定了中国版的巴塞尔协议，对银行的资本充足率和杠杆率提出了具体要求。为了满足要求，有以下几种办法：</p>
+<ol>
+<li>减少分红，提高资本。</li>
+<li>降低利息收入，增加非息收入。</li>
+<li>提高净息差，降低风险。增加利息收入，降低风险减值损失。</li>
+<li>增加低风险权重的资产配置。</li>
+</ol>
+<h2 id="高风险"><a href="#高风险" class="headerlink" title="高风险"></a>高风险</h2><ol>
+<li>信用风险。即借款者违约的风险。</li>
+<li>市场风险。指由利率、汇率、股票等价格变化导致银行损失的风险。</li>
+<li>操作风险。指由银行不完善的内部程序、员工、信息系统即外部事件造成损失的风险。</li>
+<li>合规风险。指由于银行没有遵循法律、规则而可能受到法律制裁、监管处罚、重大财务损失和声誉损失的风险。</li>
+<li>流动性风险。指因无法应对因负债下降或资产增加导致流动性困难的风险。流动性风险通常由资产大规模违约或者期限严重错配导致，需要控制信用风险，合理安排期限错配。</li>
+</ol>
+<h3 id="信用风险"><a href="#信用风险" class="headerlink" title="信用风险"></a>信用风险</h3><p>信用风险评估通常用贷款分类体系，包括正常、关注、次级、可疑、损失五类，其中后三类成为不良贷款。评估银行信用风险的指标主要包括：</p>
+<ol>
+<li>不良贷款率。等于不良贷款余额/贷款总额。</li>
+<li>新生成不良率。等于新生成不良贷款/贷款总额。</li>
+<li>逾期 90 天以上贷款占比。等于逾期 90 天以上贷款余额/贷款总额。</li>
+<li>不良偏离度。等于逾期 90 天以上贷款余额/不良贷款余额，这个指标可以看出银行的不良认定是否严格。</li>
+<li>贷款迁徙率。等于期初正常类贷款向下迁徙金额/（期初正常贷款月-期初正常贷款减少金额），这个指标可以反映有多少贷款从正常类转移到其他四类。</li>
+</ol>
+<p>为应对信用风险，银行需根据贷款类型计提一般准备贷款减值。银行信用风险抵补机制的评价指标包括：</p>
+<ol>
+<li>不良贷款拨备覆盖率。简称不良覆盖率，计算方法为贷款减值准备余额/不良贷款余额 * 100%。</li>
+<li>拨贷比。等于拨备余额/贷款总额。</li>
+<li>风险加权资产减值准备率。根据不同资产的风险系数，计算风险加权资产，优势是可以覆盖资产负债表中的所有资产，同时考虑不同资产的风险系数。</li>
+</ol>
+<h2 id="周期性"><a href="#周期性" class="headerlink" title="周期性"></a>周期性</h2><p>银行是顺周期行业，但不是强周期行业。</p>
+<h3 id="内因"><a href="#内因" class="headerlink" title="内因"></a>内因</h3><ol>
+<li>银行的信贷投放具有顺周期倾向。经济景气时，企业愿意承受风险，通过信贷进行投资。</li>
+<li>银行的信用风险具有顺周期倾向。经济景气时，企业信贷质量高，信用减值损失下降。</li>
+<li>银行的抵押品价格具有顺周期倾向。经济景气时，抵押品价值更高。</li>
+</ol>
+<h3 id="外因"><a href="#外因" class="headerlink" title="外因"></a>外因</h3><ol>
+<li>监管要求。巴塞尔协议中要求银行资本充足率高于下限，经济景气时，银行资本积累更快，信贷投放能力更强。</li>
+<li>新版会计准则影响。引入公允价值评估资产价值，经济景气时，资产价格出现泡沫，银行利润更多。</li>
+</ol>
+<h3 id="应对办法"><a href="#应对办法" class="headerlink" title="应对办法"></a>应对办法</h3><ol>
+<li>风险抵补机制。银行每年从营收中提取一定比例的风险减值准备金，积累逆周期资本。</li>
+<li>逆周期调节。经济过热时，收紧银行信贷。</li>
+</ol>
+<h1 id="银行面临的挑战和应对"><a href="#银行面临的挑战和应对" class="headerlink" title="银行面临的挑战和应对"></a>银行面临的挑战和应对</h1><h2 id="挑战"><a href="#挑战" class="headerlink" title="挑战"></a>挑战</h2><ol>
+<li>宏观领域。宏观经济增速减缓，资产质量下降。直接融资比例增加，企业债券由核准制改为注册制，龙头企业申报短期债进行直接融资。</li>
+<li>行业内。资本充足率要求导致杠杆倍数降低，利率市场化影响期限错配净息差，金融业全面开放迎接国际资本挑战。</li>
+<li>行业外。互联网支付企业的兴起。</li>
+</ol>
+<h2 id="应对"><a href="#应对" class="headerlink" title="应对"></a>应对</h2><ol>
+<li>发展高收益低风险的零售业务，提高净息差，降低不良率。</li>
+<li>从单纯的资金出借方，向提供全方位综合金融服务转变。</li>
+<li>提供满足客户资产增值需求，且不消耗资本金的资管业务。</li>
+</ol>
+<h1 id="银行的评估指标"><a href="#银行的评估指标" class="headerlink" title="银行的评估指标"></a>银行的评估指标</h1><ol>
+<li>净息差。净息差反映了利息收入的盈利水平，但净息差高可能由于高风险资产的收益率高导致。</li>
+<li>非息收入占比。非息收入和风险资产无关，但可能会计入公允价值计量资产变动值，建议多关注手续费收入占比。</li>
+<li>不良率、不良偏离度。反映了银行的资产质量。</li>
+<li>核心一级资本充足率。银行增长动力的底线。</li>
+<li>风险加权资产收益率。反映银行如何利用最少的风险资产赚钱最多的利润。</li>
+</ol>
+<h1 id="银行的财报"><a href="#银行的财报" class="headerlink" title="银行的财报"></a>银行的财报</h1><h2 id="资产负债表"><a href="#资产负债表" class="headerlink" title="资产负债表"></a>资产负债表</h2><p>关注总资产余额增速和资产分布。</p>
+<ol>
+<li>资产端。总资产增速既不能太低也不能太高，太高会影响资本充足率。关注贷款占比和金融占比，包括贷款的行业分布、五级分类、贷款余额和不良率。</li>
+<li>负债端。负债总量和负债分布，特别是同业负债的占比。关注存款中活期存款的占比。</li>
+</ol>
+<h2 id="利润表"><a href="#利润表" class="headerlink" title="利润表"></a>利润表</h2><ol>
+<li>总营收和同比增速。</li>
+<li>净利息收入。</li>
+<li>非息收入中的手续费收入。</li>
+<li>信用减值损失和不良贷款减值损失。</li>
+</ol>
+<h2 id="现金流量表"><a href="#现金流量表" class="headerlink" title="现金流量表"></a>现金流量表</h2><p>无需过渡关注经营现金流，需要综合一个相对长的周期，全面统计经营现金流、投资现金流和筹资现金流。</p>
+<h1 id="银行相关的几个问题"><a href="#银行相关的几个问题" class="headerlink" title="银行相关的几个问题"></a>银行相关的几个问题</h1><ol>
+<li>低利率。低利率市场的共同特点是经济体名义 GDP 增速较低，过去三十年由于中国的利率管制，贷款利率相对名义 GDP 增速严重偏低，存款利率更低，以保护银行的利差，所有储户都为国家的经济发展做了贡献。20-30 年后中国会进入低利率时代，股票市场会有一次持续时间很长的慢牛长牛过程。</li>
+<li>不良率高导致破产。银行为应对不良资产，会提前提取风险减值准备金，目前我国对于减值准备的要求是拨贷比 2.5%，部分优秀的银行已经突破 4%。依靠历年计提的减值准备，不可能出现亏损。</li>
+<li>低估值。巴塞尔协议大幅提高对银行资本金的要求，银行的发展受限。</li>
+</ol>
+<h1 id="招行的护城河"><a href="#招行的护城河" class="headerlink" title="招行的护城河"></a>招行的护城河</h1><ol>
+<li>净息差高。招行在资产端配置了较多高收益零售贷款，如信用卡贷款和小微贷款，同时零售业务的活期存款比例高，存款成本较低。</li>
+<li>风控能力出色。贷款不良率低，贷款迁徙率低，风险抵补能力强，拨贷比和资本充足率高。主要得益于比例较大的低风险、高收益零售贷款。</li>
+<li>客户群优质。金葵花和私人银行客户占比少，但 AUM 很高，对公客户黏性不断增强。</li>
+<li>前瞻的战略布局。推出一卡通、信用卡、私人银行。</li>
+</ol>
+]]></content>
+      
+        <categories>
+            
+            <category> 生活 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 投资 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[《巴芒演义》读书笔记]]></title>
+      <url>http://tommyjiang.github.io/2021/2021-04-21-warrent-buffett-charlie-munger/</url>
+      <content type="html"><![CDATA[
+<div class="alert alert-info"><i class="fa fa-info"></i>
+老唐的书
+</div>
+
+<a id="more"></a>
+<h1 id="投资名人"><a href="#投资名人" class="headerlink" title="投资名人"></a>投资名人</h1><h2 id="利弗莫尔"><a href="#利弗莫尔" class="headerlink" title="利弗莫尔"></a>利弗莫尔</h2><p>股票大作手，1934 年最后一次破产，1940 年饮弹自杀。</p>
+<h2 id="格雷厄姆"><a href="#格雷厄姆" class="headerlink" title="格雷厄姆"></a>格雷厄姆</h2><ul>
+<li>烟蒂股投资，永远只买股价低于净有形资产三分之二的公司的股票。</li>
+<li>市场先生寓言，利用市场先生的报价，但不要受他的影响</li>
+</ul>
+<h2 id="巴菲特"><a href="#巴菲特" class="headerlink" title="巴菲特"></a>巴菲特</h2><ul>
+<li>以合理的价格买入好企业，比用低廉的价格买入普通企业好得多。</li>
+<li>远离杠杆，不要做空。你只能小额下注，不能把全部身家都投进去。</li>
+</ul>
+<h2 id="沃尔特·施洛斯"><a href="#沃尔特·施洛斯" class="headerlink" title="沃尔特·施洛斯"></a>沃尔特·施洛斯</h2><ul>
+<li>坚持烟蒂股投资，1955 - 2002 年，年化收益率 20.1%，扣费后年化收益率 15.3%。不会以两倍净资产的价格买入任何股票。</li>
+<li>对自己性格优劣势的清醒认识，其实也是能力圈，自我认知、自我约束</li>
+<li>1985 年抱怨巴菲特：沃伦整天巴拉巴拉，搞得谁都知道价值投资，现在寻找投资目标是越来越难了</li>
+<li>股债比：愿意持有股票，年轻人应该多关注股票，债券是属于老年人的</li>
+<li>上涨时分批卖出，坦然接受股价卖出后无情飙升的事实</li>
+</ul>
+<h2 id="爱德华·索普"><a href="#爱德华·索普" class="headerlink" title="爱德华·索普"></a>爱德华·索普</h2><ul>
+<li>分散风险、量化风险、赔率有利时要敢于加大赌注(凯利公式)</li>
+</ul>
+<h2 id="迈克尔·米尔肯"><a href="#迈克尔·米尔肯" class="headerlink" title="迈克尔·米尔肯"></a>迈克尔·米尔肯</h2><p>垃圾债券之王，但收益率并没有高于其他产品</p>
+<h2 id="查理·芒格"><a href="#查理·芒格" class="headerlink" title="查理·芒格"></a>查理·芒格</h2><ul>
+<li>律师出身，擅长商业法，律师事务所拥有大量专业律师人才</li>
+<li>有些行业天然就容易赚到钱</li>
+</ul>
+<h2 id="菲利普·费雪"><a href="#菲利普·费雪" class="headerlink" title="菲利普·费雪"></a>菲利普·费雪</h2><ul>
+<li>成长股选择标准</li>
+</ul>
+<h1 id="巴菲特、芒格与可口可乐"><a href="#巴菲特、芒格与可口可乐" class="headerlink" title="巴菲特、芒格与可口可乐"></a>巴菲特、芒格与可口可乐</h1><ul>
+<li>1985 年，可口可乐董事长和总裁投入几千万美元研制新可乐，遭到市场强烈反对，使巴菲特确认可口可乐公司的竞争力。</li>
+<li>1999 年，巴菲特忘记自己之前说的相信道格的话，一起逼迫 52 岁的可口可乐 CEO 道格退休。</li>
+<li>1996 年，芒格预计可口可乐每年 8% 的涨幅，但到 2019 年，年增长率仅 2.8%。说明即使对简单企业做出准确预测，依然相当困难。</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> 理财 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 价值投资 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[《巴菲特传》读书笔记]]></title>
+      <url>http://tommyjiang.github.io/2021/2021-03-14-buffett/</url>
+      <content type="html"><![CDATA[
+<div class="alert alert-info"><i class="fa fa-info"></i>
+向价值投资最伟大的践行者学习。
+</div>
+
+<a id="more"></a>
+<h1 id="巴菲特对格雷厄姆投资思想的发展"><a href="#巴菲特对格雷厄姆投资思想的发展" class="headerlink" title="巴菲特对格雷厄姆投资思想的发展"></a>巴菲特对格雷厄姆投资思想的发展</h1><p>格雷厄姆的投资思想，可以参考《聪明的投资者》一书。</p>
+<ul>
+<li>会考虑没有在资产负债表上体现的价值，例如品牌特许权，例如美国运通和迪士尼。</li>
+<li>对于投资专家，应该考虑集中投资而非分散投资。</li>
+</ul>
+<h1 id="巴菲特的成功和失败经历"><a href="#巴菲特的成功和失败经历" class="headerlink" title="巴菲特的成功和失败经历"></a>巴菲特的成功和失败经历</h1><p>幼时的商业经历：</p>
+<ul>
+<li>摆摊卖口香糖、柠檬汁，统计自动售货机饮料瓶盖数</li>
+<li>高尔夫球场当球童，捡打飞的高尔夫球让同伴卖，自己拿提成</li>
+<li>送报员，自己设计送报路线，免费送女服务生报纸，获取搬家消息</li>
+<li>理发店摆弹子球机和店铺分成，伪装成小伙计，上大学之前卖给一个退伍军人</li>
+<li>拿出 1200 美元积蓄，买下内布拉斯加的 40 英亩农场</li>
+</ul>
+<h1 id="巴菲特的特点"><a href="#巴菲特的特点" class="headerlink" title="巴菲特的特点"></a>巴菲特的特点</h1><ul>
+<li>对数字着迷。</li>
+<li>对钱有浓厚兴趣，想尽办法赚钱，很清楚自己想要什么。总有一天我会变得很富有，成为报纸上的焦点人物。只是觉得赚钱的同时看着财富慢慢积累，是件很有意思的事情。不会，我要住在奥马哈。17 岁进入沃顿商学院，大部分时间泡在费城一家经纪公司办公室，跟踪各种股票行情，注意力几乎放在校外。提醒好友及时结清欠款</li>
+<li>不断储备知识，用理性的方式把知识转化为创造财富的能力。</li>
+<li>跟随大师学习。哥伦比亚商学院，跟随格雷厄姆。毕业后，不愿意为不认识的人工作。</li>
+<li>做事时心无旁骛，思维缜密严谨。</li>
+<li>理性，性格温和。</li>
+</ul>
+<h1 id="其他人的失败"><a href="#其他人的失败" class="headerlink" title="其他人的失败"></a>其他人的失败</h1><ul>
+<li>巴菲特毕业时，格雷厄姆建议他找个安稳工作，推迟到第二次大萧条之后再进入股市</li>
+<li>巴菲特毕业之后选择当经纪人，但他的利益与投资人利益并不一致。后来采用超额业绩提成的方法开办投资公司。</li>
+<li>投机基金：我们不会爱上任何东西，每天早晨起来，每样东西都是要出售的，包括证券组合里的每一只股票，乃至我的西服和领带。</li>
+</ul>
+<h1 id="名句摘录"><a href="#名句摘录" class="headerlink" title="名句摘录"></a>名句摘录</h1><h2 id="投资和投机"><a href="#投资和投机" class="headerlink" title="投资和投机"></a>投资和投机</h2><ul>
+<li>故意以高于内在价值的价格购买股票，同时期待能够很快以更高价值卖出的行为，这种行为应该被做投机。(Consciously paying more for a stock than its calculated value-in the hope that it can soon be sold for a still-higher price-should be labeled speculation.)</li>
+</ul>
+<h2 id="选股"><a href="#选股" class="headerlink" title="选股"></a>选股</h2><h2 id="耐心持股"><a href="#耐心持股" class="headerlink" title="耐心持股"></a>耐心持股</h2><ul>
+<li>我不会只为一个诱人的价格，就把由我喜欢和敬佩的人经营的好公司卖掉。(I certainly have no desire to sell a good controlled business run by people I like and admire, merely to obtain a fancy price.)</li>
+</ul>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ul>
+<li>行动，立即行动！无论你有什么梦想，千万不要等待。</li>
+<li>股海沉浮中，投资者必须要有耐心和定力。</li>
+<li>选一只股票靠的不是别人信口开河的评价，而是事实。</li>
+<li>永远不要指望转让时能卖个好价钱，而是要让自己的买入价低得诱人。</li>
+<li>一个好的经理人在一个糟糕的行业也等于是巧妇难为无米之炊。</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> 理财 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 价值投资 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[ETF 汇总]]></title>
+      <url>http://tommyjiang.github.io/2021/2021-02-15-etf/</url>
+      <content type="html"><![CDATA[
+<div class="alert alert-info"><i class="fa fa-info"></i>
+ETF 相关资料整理
+</div>
+
+<a id="more"></a>
+<p>新手远离杠杆类 ETF。</p>
+<h1 id="美股-ETF"><a href="#美股-ETF" class="headerlink" title="美股 ETF"></a>美股 ETF</h1><ul>
+<li>标普 500 指数<ul>
+<li>标普 500 ETF-SPDR(ARCA:SPY)，年管理费 0.09%。</li>
+<li>标普 500 ETF-iShares(ARCA:IVV)，年管理费 0.04%。</li>
+<li>标普 500 ETF-Vanguard(ARCA:VOO)，年管理费 0.05%。</li>
+<li>标普 500 等权指数 ETF-Guggenheim(ARCA:RSP)。</li>
+</ul>
+</li>
+<li>小盘指数<ul>
+<li>罗素 2000 指数 ETF-iShares(ARCA:IWM)，追踪罗素 2000 指数。</li>
+<li>标普小盘股 ETF-iShares(ARCA:IJR)，追踪标普 600 小盘股指数。</li>
+<li>美国小盘股 ETF-Vanguard(ARCA:VB)，追踪 CRSP 美国小盘股指数。</li>
+</ul>
+</li>
+<li>板块 ETF<ul>
+<li>科技板块：纳指 100 ETF-Invesco(NASDAQ:QQQ)，追踪纳斯达克市值最大的 100 家公司纳斯达克 100 指数。</li>
+<li>消费板块：日常消费品 ETF-SPDR(ARCA:XLP)和可选消费 ETF-SPDR(ARCA:XLY)。</li>
+<li>生物板块：生物科技指数 ETF-iShares Nasdaq(NASDAQ:IBB)，追踪纳斯达克生物 100 指数。</li>
+<li>军工板块：美国航天国防股指数 ETF-iShares Nasdaq(BATS:ITA)。</li>
+<li>房地产板块：美国房地产 ETF-Vanguard(ARCA:VNQ)。</li>
+</ul>
+</li>
+<li>国家/地区 ETF<ul>
+<li>非美发达国家/地区：EAFE 指数 ETF-iShares(ARCA:EFA)。</li>
+<li>新兴市场：新兴市场ETF-Vanguard(ARCA:VWO)。</li>
+</ul>
+</li>
+<li>其他 ETF<ul>
+<li>动量投资：MSCI 美国动量因素 ETF-iShare(BATS:MTUM)。</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> 生活 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 投资 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[《彼得·林奇的成功投资》读书笔记]]></title>
       <url>http://tommyjiang.github.io/2021/2021-02-08-one-up-on-wall-street/</url>
       <content type="html"><![CDATA[
 <div class="alert alert-info"><i class="fa fa-info"></i>
@@ -582,115 +972,107 @@ LeetCode Weekly Contest 165.
 <p>这道题比赛的时候没做出来，结束后发现想复杂了，进阶题是求所有元素是 1 的子矩阵(不要求方阵)。</p>
 <p>解法：DP，根据左、上、左上三者最小值更新当前值，参考 <a href="https://leetcode.com/problems/maximal-square/">LC 221</a>。</p>
 <p>复杂度：时间复杂度 O(n^2)，空间复杂度 O(n^2)，可优化为 O(n)。</p>
-<p>Python</p>
-<pre><code class="lang-python">class Solution:
-    def countSquares(self, A: List[List[int]]) -&gt; int:
-        m, n = len(A), len(A[0])
+<p>Python<br><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">countSquares</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> A<span class="token punctuation">:</span> List<span class="token punctuation">[</span>List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">:</span>
+        m<span class="token punctuation">,</span> n <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>A<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
 
-        dp = [[0 for _ in range(n+1)] for _ in range(m+1)]
+        dp <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span> <span class="token keyword">for</span> _ <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token keyword">for</span> _ <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>m<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
 
-        res = 0
-        for i in range(1, m+1):
-            for j in range(1, n+1):
-                if A[i-1][j-1] == 1:
-                   dp[i][j] = min(dp[i][j-1], dp[i-1][j-1], dp[i-1][j]) + A[i-1][j-1]
-                   res += dp[i][j]
+        res <span class="token operator">=</span> <span class="token number">0</span>
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> m<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> n<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                <span class="token keyword">if</span> A<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">:</span>
+                   dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token builtin">min</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> dp<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> dp<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">+</span> A<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+                   res <span class="token operator">+=</span> dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span>
 
-        return res
-</code></pre>
-<p>C++</p>
-<pre><code class="lang-cpp">class Solution &#123;
-public:
-    int countSquares(vector&lt;vector&lt;int&gt;&gt;&amp; matrix) &#123;
-        int m = matrix.size(), n = matrix[0].size();
+        <span class="token keyword">return</span> res<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
+<p>C++<br><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">&#123;</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token keyword">int</span> <span class="token function">countSquares</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">>></span><span class="token operator">&amp;</span> matrix<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">int</span> m <span class="token operator">=</span> matrix<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> n <span class="token operator">=</span> matrix<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        vector&lt;vector &lt;int&gt;&gt; dp(m+1, vector&lt;int&gt;(n+1, 0));
-        int res = 0;
+        vector<span class="token operator">&lt;</span>vector <span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">>></span> <span class="token function">dp</span><span class="token punctuation">(</span>m<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span> vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span><span class="token punctuation">(</span>n<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> res <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
 
-        for (int i = 0; i &lt; m; i++) &#123;
-            for (int j = 0; j &lt; n; j++) &#123;
-                if (matrix[i][j] == 1) &#123;
-                    dp[i+1][j+1] = min(dp[i][j+1], min(dp[i+1][j], dp[i][j])) + 1;
-                    res += dp[i+1][j+1];
-                &#125;
-            &#125;
-        &#125;
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> m<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>matrix<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                    dp<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">min</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token function">min</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span> dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+                    res <span class="token operator">+=</span> dp<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+                <span class="token punctuation">&#125;</span>
+            <span class="token punctuation">&#125;</span>
+        <span class="token punctuation">&#125;</span>
 
-        return res;
-    &#125;
-&#125;;
-</code></pre>
+        <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
 <h1 id="问题-4"><a href="#问题-4" class="headerlink" title="问题 4"></a>问题 4</h1><p><a href="https://leetcode.com/problems/palindrome-partitioning-iii/">题目链接</a><br>解法：DP。<br>复杂度：时间复杂度 O(kn^2)，空间复杂度 O(kn)。</p>
-<p>Python</p>
-<pre><code class="lang-python">class Solution:
-    def palindromePartition(self, s: str, k: int) -&gt; int:
-        n = len(s)
-        memo = &#123;&#125;
+<p>Python<br><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">palindromePartition</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> s<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span> k<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">:</span>
+        n <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span>
+        memo <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
 
-        def cost(s, i, j):
-            r = 0
-            while i &lt; j:
-                if s[i] != s[j]:
-                    r += 1
-                i += 1
-                j -= 1
-            return r
+        <span class="token keyword">def</span> <span class="token function">cost</span><span class="token punctuation">(</span>s<span class="token punctuation">,</span> i<span class="token punctuation">,</span> j<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            r <span class="token operator">=</span> <span class="token number">0</span>
+            <span class="token keyword">while</span> i <span class="token operator">&lt;</span> j<span class="token punctuation">:</span>
+                <span class="token keyword">if</span> s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> s<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">:</span>
+                    r <span class="token operator">+=</span> <span class="token number">1</span>
+                i <span class="token operator">+=</span> <span class="token number">1</span>
+                j <span class="token operator">-=</span> <span class="token number">1</span>
+            <span class="token keyword">return</span> r
 
-        def dfs(i, k):
-            if (i, k) in memo: 
-                return memo[(i, k)]
-            if n - i == k:
-                return 0
-            if k == 1:
-                return cost(s, i, n - 1)
-            res = float(&#39;inf&#39;)
-            for j in range(i + 1, n - k + 2):
-                res = min(res, cost(s, i, j - 1) + dfs(j, k - 1))
-            memo[(i, k)] = res
-            return res
+        <span class="token keyword">def</span> <span class="token function">dfs</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> k<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>i<span class="token punctuation">,</span> k<span class="token punctuation">)</span> <span class="token keyword">in</span> memo<span class="token punctuation">:</span> 
+                <span class="token keyword">return</span> memo<span class="token punctuation">[</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> k<span class="token punctuation">)</span><span class="token punctuation">]</span>
+            <span class="token keyword">if</span> n <span class="token operator">-</span> i <span class="token operator">==</span> k<span class="token punctuation">:</span>
+                <span class="token keyword">return</span> <span class="token number">0</span>
+            <span class="token keyword">if</span> k <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">:</span>
+                <span class="token keyword">return</span> cost<span class="token punctuation">(</span>s<span class="token punctuation">,</span> i<span class="token punctuation">,</span> n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span>
+            res <span class="token operator">=</span> <span class="token builtin">float</span><span class="token punctuation">(</span><span class="token string">'inf'</span><span class="token punctuation">)</span>
+            <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> n <span class="token operator">-</span> k <span class="token operator">+</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                res <span class="token operator">=</span> <span class="token builtin">min</span><span class="token punctuation">(</span>res<span class="token punctuation">,</span> cost<span class="token punctuation">(</span>s<span class="token punctuation">,</span> i<span class="token punctuation">,</span> j <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span> dfs<span class="token punctuation">(</span>j<span class="token punctuation">,</span> k <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            memo<span class="token punctuation">[</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> k<span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">=</span> res
+            <span class="token keyword">return</span> res
 
-        return dfs(0 , k)
-</code></pre>
-<p>C++</p>
-<pre><code class="lang-cpp">class Solution &#123;
-public:
-    int palindromePartition(string s, int k) &#123;
-        int n = s.size();
-        vector&lt;vector &lt;int&gt;&gt; memo(n+1, vector&lt;int&gt;(k+1, -1));
+        <span class="token keyword">return</span> dfs<span class="token punctuation">(</span><span class="token number">0</span> <span class="token punctuation">,</span> k<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
+<p>C++<br><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">&#123;</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token keyword">int</span> <span class="token function">palindromePartition</span><span class="token punctuation">(</span>string s<span class="token punctuation">,</span> <span class="token keyword">int</span> k<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">int</span> n <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        vector<span class="token operator">&lt;</span>vector <span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">>></span> <span class="token function">memo</span><span class="token punctuation">(</span>n<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span> vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span><span class="token punctuation">(</span>k<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        return dfs(s, n, 0, k, memo); 
-    &#125;
+        <span class="token keyword">return</span> <span class="token function">dfs</span><span class="token punctuation">(</span>s<span class="token punctuation">,</span> n<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> k<span class="token punctuation">,</span> memo<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">&#125;</span>
 
-    int cost(string&amp; s, int i, int j) &#123;
-        int res = 0;
-        while (i &lt; j) &#123;
-            if (s[i] != s[j]) &#123;
-                res++;
-            &#125;
-            i++;
-            j--;
-        &#125;
-        return res;
-    &#125;
+    <span class="token keyword">int</span> <span class="token function">cost</span><span class="token punctuation">(</span>string<span class="token operator">&amp;</span> s<span class="token punctuation">,</span> <span class="token keyword">int</span> i<span class="token punctuation">,</span> <span class="token keyword">int</span> j<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">int</span> res <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> j<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> s<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                res<span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+            i<span class="token operator">++</span><span class="token punctuation">;</span>
+            j<span class="token operator">--</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+        <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
 
 
-    int dfs(string&amp; s, int n, int i, int k, vector&lt;vector &lt;int&gt;&gt;&amp; dp) &#123;
-        if (dp[i][k] != -1) return dp[i][k];
+    <span class="token keyword">int</span> <span class="token function">dfs</span><span class="token punctuation">(</span>string<span class="token operator">&amp;</span> s<span class="token punctuation">,</span> <span class="token keyword">int</span> n<span class="token punctuation">,</span> <span class="token keyword">int</span> i<span class="token punctuation">,</span> <span class="token keyword">int</span> k<span class="token punctuation">,</span> vector<span class="token operator">&lt;</span>vector <span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">>></span><span class="token operator">&amp;</span> dp<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">return</span> dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">;</span>
 
-        if (n - i == k) return 0;
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">-</span> i <span class="token operator">==</span> k<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 
-        if (k == 1) return cost(s, i, n - 1);
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>k <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token function">cost</span><span class="token punctuation">(</span>s<span class="token punctuation">,</span> i<span class="token punctuation">,</span> n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        int res = INT_MAX;
-        for (int j = i + 1; j &lt; n-k+2; j++) &#123;
-            res = min(res, cost(s, i, j - 1) + dfs(s, n, j, k - 1, dp));
-        &#125;
+        <span class="token keyword">int</span> res <span class="token operator">=</span> INT_MAX<span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> n<span class="token operator">-</span>k<span class="token operator">+</span><span class="token number">2</span><span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            res <span class="token operator">=</span> <span class="token function">min</span><span class="token punctuation">(</span>res<span class="token punctuation">,</span> <span class="token function">cost</span><span class="token punctuation">(</span>s<span class="token punctuation">,</span> i<span class="token punctuation">,</span> j <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token function">dfs</span><span class="token punctuation">(</span>s<span class="token punctuation">,</span> n<span class="token punctuation">,</span> j<span class="token punctuation">,</span> k <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span> dp<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
 
-        dp[i][k] = res;
-        return res;
-    &#125;
-&#125;;
-</code></pre>
+        dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> res<span class="token punctuation">;</span>
+        <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
 ]]></content>
       
         <categories>
@@ -723,177 +1105,161 @@ LeetCode Biweekly Contest 14.
 <li>Python 用自带的 <code>hex</code> 函数。</li>
 <li>C++ 用 <code>stringstream</code> 中的 <code>hex</code>。</li>
 </ul>
-<p>Python</p>
-<pre><code class="lang-python">class Solution:
-    def toHexspeak(self, num: str) -&gt; str:
-        num = hex(int(num))[2:]
+<p>Python<br><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">toHexspeak</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> num<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">str</span><span class="token punctuation">:</span>
+        num <span class="token operator">=</span> <span class="token builtin">hex</span><span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">:</span><span class="token punctuation">]</span>
 
-        num = num.replace(&#39;1&#39;, &#39;I&#39;).replace(&#39;0&#39;, &#39;O&#39;).upper()
+        num <span class="token operator">=</span> num<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'1'</span><span class="token punctuation">,</span> <span class="token string">'I'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'0'</span><span class="token punctuation">,</span> <span class="token string">'O'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>upper<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-        for x in num:
-            if x not in &#123;&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;, &quot;E&quot;, &quot;F&quot;, &quot;I&quot;, &quot;O&quot;&#125;:
-                return &#39;ERROR&#39;
+        <span class="token keyword">for</span> x <span class="token keyword">in</span> num<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> x <span class="token keyword">not</span> <span class="token keyword">in</span> <span class="token punctuation">&#123;</span><span class="token string">"A"</span><span class="token punctuation">,</span> <span class="token string">"B"</span><span class="token punctuation">,</span> <span class="token string">"C"</span><span class="token punctuation">,</span> <span class="token string">"D"</span><span class="token punctuation">,</span> <span class="token string">"E"</span><span class="token punctuation">,</span> <span class="token string">"F"</span><span class="token punctuation">,</span> <span class="token string">"I"</span><span class="token punctuation">,</span> <span class="token string">"O"</span><span class="token punctuation">&#125;</span><span class="token punctuation">:</span>
+                <span class="token keyword">return</span> <span class="token string">'ERROR'</span>
 
-        return num
-</code></pre>
-<p>C++</p>
-<pre><code class="lang-cpp">class Solution &#123;
-public:
-    string toHexspeak(string num) &#123;
-        auto n = stol(num);
-        stringstream st;
-        st &lt;&lt; hex &lt;&lt; uppercase &lt;&lt; n;  // 用 hex + uppercase 进行转换
-        string s(st.str());
-        for (auto i = 0; i &lt; s.size(); ++i) &#123;
-            if (s[i] &gt; &#39;1&#39; &amp;&amp; s[i] &lt;= &#39;9&#39;) return &quot;ERROR&quot;;
-            if (s[i] == &#39;0&#39;) s[i] = &#39;O&#39;;
-            if (s[i] == &#39;1&#39;) s[i] = &#39;I&#39;;
-        &#125;
-        return s;
-    &#125;
-&#125;;
-</code></pre>
+        <span class="token keyword">return</span> num<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
+<p>C++<br><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">&#123;</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    string <span class="token function">toHexspeak</span><span class="token punctuation">(</span>string num<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">auto</span> n <span class="token operator">=</span> <span class="token function">stol</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        stringstream st<span class="token punctuation">;</span>
+        st <span class="token operator">&lt;&lt;</span> hex <span class="token operator">&lt;&lt;</span> uppercase <span class="token operator">&lt;&lt;</span> n<span class="token punctuation">;</span>  <span class="token comment">// 用 hex + uppercase 进行转换</span>
+        string <span class="token function">s</span><span class="token punctuation">(</span>st<span class="token punctuation">.</span><span class="token function">str</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">auto</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> s<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">></span> <span class="token string">'1'</span> <span class="token operator">&amp;&amp;</span> s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;=</span> <span class="token string">'9'</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token string">"ERROR"</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'0'</span><span class="token punctuation">)</span> s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'O'</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'1'</span><span class="token punctuation">)</span> s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'I'</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+        <span class="token keyword">return</span> s<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
 <h1 id="问题-2"><a href="#问题-2" class="headerlink" title="问题 2"></a>问题 2</h1><p><a href="https://leetcode.com/problems/remove-interval/">题目链接</a></p>
 <p>解法：遍历判断与每个 interval 起始/结束时间的关系。<br>复杂度：时间复杂度 O(n)，空间复杂度 O(n)。</p>
-<p>Python</p>
-<pre><code class="lang-python">class Solution:
-    def removeInterval(self, intervals: List[List[int]],
-                       toBeRemoved: List[int]) -&gt; List[List[int]]:
-        res = []
+<p>Python<br><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">removeInterval</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> intervals<span class="token punctuation">:</span> List<span class="token punctuation">[</span>List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                       toBeRemoved<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> List<span class="token punctuation">[</span>List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+        res <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
 
-        s, e = toBeRemoved
+        s<span class="token punctuation">,</span> e <span class="token operator">=</span> toBeRemoved
 
-        for i, interval in enumerate(intervals):
-            i_s, i_e = interval
-            if s &gt;= i_e or e &lt;= i_s:
-                res.append(interval)
-            else:
-                if i_s &lt; s &lt;= i_e:
-                    res.append([i_s, s])
-                if i_s &lt;= e &lt; i_e:
-                    res.append([e, i_e])
+        <span class="token keyword">for</span> i<span class="token punctuation">,</span> interval <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>intervals<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            i_s<span class="token punctuation">,</span> i_e <span class="token operator">=</span> interval
+            <span class="token keyword">if</span> s <span class="token operator">>=</span> i_e <span class="token keyword">or</span> e <span class="token operator">&lt;=</span> i_s<span class="token punctuation">:</span>
+                res<span class="token punctuation">.</span>append<span class="token punctuation">(</span>interval<span class="token punctuation">)</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                <span class="token keyword">if</span> i_s <span class="token operator">&lt;</span> s <span class="token operator">&lt;=</span> i_e<span class="token punctuation">:</span>
+                    res<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">[</span>i_s<span class="token punctuation">,</span> s<span class="token punctuation">]</span><span class="token punctuation">)</span>
+                <span class="token keyword">if</span> i_s <span class="token operator">&lt;=</span> e <span class="token operator">&lt;</span> i_e<span class="token punctuation">:</span>
+                    res<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">[</span>e<span class="token punctuation">,</span> i_e<span class="token punctuation">]</span><span class="token punctuation">)</span>
 
-        return res
-</code></pre>
-<p>C++</p>
-<pre><code class="lang-cpp">class Solution &#123;
-public:
-    vector&lt;vector&lt;int&gt;&gt; removeInterval(vector&lt;vector&lt;int&gt;&gt;&amp; intervals,
-                                       vector&lt;int&gt;&amp; toBeRemoved) &#123;
-        vector&lt;vector&lt;int&gt;&gt; res;
+        <span class="token keyword">return</span> res<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
+<p>C++<br><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">&#123;</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    vector<span class="token operator">&lt;</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">>></span> <span class="token function">removeInterval</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">>></span><span class="token operator">&amp;</span> intervals<span class="token punctuation">,</span>
+                                       vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span><span class="token operator">&amp;</span> toBeRemoved<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        vector<span class="token operator">&lt;</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">>></span> res<span class="token punctuation">;</span>
 
-        int s = toBeRemoved[0], e = toBeRemoved[1];
+        <span class="token keyword">int</span> s <span class="token operator">=</span> toBeRemoved<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> e <span class="token operator">=</span> toBeRemoved<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 
-        for (int i = 0; i &lt; intervals.size(); i++)&#123;
-            int i_s = intervals[i][0], i_e = intervals[i][1];
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> intervals<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+            <span class="token keyword">int</span> i_s <span class="token operator">=</span> intervals<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> i_e <span class="token operator">=</span> intervals<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 
-            if (s &gt;= i_e || e &lt;= i_s)&#123;
-                res.push_back(vector&lt;int&gt;&#123;i_s, i_e&#125;);
-            &#125; else &#123;
-                if (i_s &lt; s &amp;&amp; s &lt;= i_e) &#123;
-                    res.push_back(vector&lt;int&gt;&#123;i_s, s&#125;);
-                &#125;
-                if (i_s &lt;= e &amp;&amp; e &lt; i_e) &#123;
-                    res.push_back(vector&lt;int&gt;&#123;e, i_e&#125;);
-                &#125;
-            &#125;
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>s <span class="token operator">>=</span> i_e <span class="token operator">||</span> e <span class="token operator">&lt;=</span> i_s<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+                res<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span><span class="token punctuation">&#123;</span>i_s<span class="token punctuation">,</span> i_e<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>i_s <span class="token operator">&lt;</span> s <span class="token operator">&amp;&amp;</span> s <span class="token operator">&lt;=</span> i_e<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                    res<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span><span class="token punctuation">&#123;</span>i_s<span class="token punctuation">,</span> s<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">&#125;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>i_s <span class="token operator">&lt;=</span> e <span class="token operator">&amp;&amp;</span> e <span class="token operator">&lt;</span> i_e<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                    res<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span><span class="token punctuation">&#123;</span>e<span class="token punctuation">,</span> i_e<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">&#125;</span>
+            <span class="token punctuation">&#125;</span>
 
-        &#125;
+        <span class="token punctuation">&#125;</span>
 
-        return res;
-    &#125;
-&#125;;
-</code></pre>
+        <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
 <h1 id="问题-3"><a href="#问题-3" class="headerlink" title="问题 3"></a>问题 3</h1><p><a href="https://leetcode.com/problems/can-make-palindrome-from-substring/">题目链接</a></p>
 <p>解法：DFS，利用返回值计数。</p>
 <p>复杂度：时间复杂度 O(n)，空间复杂度 O(n)。</p>
-<p>Python</p>
-<pre><code class="lang-python">class Solution:
-    def deleteTreeNodes(self, nodes: int, parent: List[int], value: List[int]) -&gt; int:
-        nei = collections.defaultdict(list)
+<p>Python<br><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">deleteTreeNodes</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nodes<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> parent<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">,</span> value<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">:</span>
+        nei <span class="token operator">=</span> collections<span class="token punctuation">.</span>defaultdict<span class="token punctuation">(</span><span class="token builtin">list</span><span class="token punctuation">)</span>
 
-        for i, x in enumerate(parent):
-            if x != -1:
-                nei[x].append(i)
+        <span class="token keyword">for</span> i<span class="token punctuation">,</span> x <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>parent<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> x <span class="token operator">!=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span>
+                nei<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">.</span>append<span class="token punctuation">(</span>i<span class="token punctuation">)</span>
 
-        self.n = nodes
+        self<span class="token punctuation">.</span>n <span class="token operator">=</span> nodes
 
-        def dfs(i):
-            res = value[i]
-            ces = 1
-            for x in nei[i]:
-                s, c = dfs(x)
-                res += s
-                ces += c if s != 0 else 0
+        <span class="token keyword">def</span> <span class="token function">dfs</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            res <span class="token operator">=</span> value<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+            ces <span class="token operator">=</span> <span class="token number">1</span>
+            <span class="token keyword">for</span> x <span class="token keyword">in</span> nei<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">:</span>
+                s<span class="token punctuation">,</span> c <span class="token operator">=</span> dfs<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+                res <span class="token operator">+=</span> s
+                ces <span class="token operator">+=</span> c <span class="token keyword">if</span> s <span class="token operator">!=</span> <span class="token number">0</span> <span class="token keyword">else</span> <span class="token number">0</span>
 
-            return (res, ces) if res != 0 else (res, 0)
+            <span class="token keyword">return</span> <span class="token punctuation">(</span>res<span class="token punctuation">,</span> ces<span class="token punctuation">)</span> <span class="token keyword">if</span> res <span class="token operator">!=</span> <span class="token number">0</span> <span class="token keyword">else</span> <span class="token punctuation">(</span>res<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
 
-        s, c = dfs(0)
+        s<span class="token punctuation">,</span> c <span class="token operator">=</span> dfs<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
 
-        return c
-</code></pre>
-<p>C++</p>
-<pre><code class="lang-cpp">class Solution &#123;
-public:
-    vector&lt;int&gt; nodeNum(vector&lt;int&gt;&amp; value, int node, unordered_map&lt;int, vector&lt;int&gt;&gt;&amp; nei) &#123;
-        int sum = value[node], count = 1;
-        for (auto &amp;child : nei[node]) &#123;
-            vector&lt;int&gt; res = nodeNum(value, child, nei);
-            sum += res[0];
-            count += (res[0] == 0) ? 0 : res[1];
-        &#125;
-        return &#123;sum, sum == 0 ? 0 : count&#125;;
-    &#125;
-    int deleteTreeNodes(int nodes, vector&lt;int&gt;&amp; parent, vector&lt;int&gt;&amp; value) &#123;
-        int root = -1;
-        unordered_map&lt;int, vector&lt;int&gt;&gt; nei;
+        <span class="token keyword">return</span> c<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
+<p>C++<br><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">&#123;</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> <span class="token function">nodeNum</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span><span class="token operator">&amp;</span> value<span class="token punctuation">,</span> <span class="token keyword">int</span> node<span class="token punctuation">,</span> unordered_map<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">>></span><span class="token operator">&amp;</span> nei<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">int</span> sum <span class="token operator">=</span> value<span class="token punctuation">[</span>node<span class="token punctuation">]</span><span class="token punctuation">,</span> count <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">auto</span> <span class="token operator">&amp;</span>child <span class="token operator">:</span> nei<span class="token punctuation">[</span>node<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> res <span class="token operator">=</span> <span class="token function">nodeNum</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span> child<span class="token punctuation">,</span> nei<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            sum <span class="token operator">+=</span> res<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            count <span class="token operator">+=</span> <span class="token punctuation">(</span>res<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token number">0</span> <span class="token operator">:</span> res<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+        <span class="token keyword">return</span> <span class="token punctuation">&#123;</span>sum<span class="token punctuation">,</span> sum <span class="token operator">==</span> <span class="token number">0</span> <span class="token operator">?</span> <span class="token number">0</span> <span class="token operator">:</span> count<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">int</span> <span class="token function">deleteTreeNodes</span><span class="token punctuation">(</span><span class="token keyword">int</span> nodes<span class="token punctuation">,</span> vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span><span class="token operator">&amp;</span> parent<span class="token punctuation">,</span> vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span><span class="token operator">&amp;</span> value<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">int</span> root <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+        unordered_map<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">>></span> nei<span class="token punctuation">;</span>
 
-        for (int i = 0; i &lt; parent.size(); ++i) &#123;
-            nei[parent[i]].push_back(i);
-            if (parent[i] == -1) root = i;
-        &#125;
-        vector&lt;int&gt; res = nodeNum(value, root, nei);
-        return res[1];
-    &#125;
-&#125;;
-</code></pre>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> parent<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            nei<span class="token punctuation">[</span>parent<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>parent<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> root <span class="token operator">=</span> i<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+        vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> res <span class="token operator">=</span> <span class="token function">nodeNum</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span> root<span class="token punctuation">,</span> nei<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> res<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
 <h1 id="问题-4"><a href="#问题-4" class="headerlink" title="问题 4"></a>问题 4</h1><p><a href="https://leetcode.com/problems/number-of-ships-in-a-rectangle/">题目链接</a><br>解法：两个坐标二分搜索。</p>
-<p>Python</p>
-<pre><code class="lang-python">class Solution(object):
-    def countShips(self, sea: &#39;Sea&#39;, P: &#39;Point&#39;, Q: &#39;Point&#39;) -&gt; int:
-        res = 0
-        if P.x &gt;= Q.x and P.y &gt;= Q.y and sea.hasShips(P, Q):
-            if P.x == Q.x and P.y == Q.y: return 1
-            mx, my = (P.x + Q.x) // 2, (P.y + Q.y) // 2
-            res += self.countShips(sea, P, Point(mx + 1, my + 1))
-            res += self.countShips(sea, Point(mx, P.y), Point(Q.x, my + 1))
-            res += self.countShips(sea, Point(mx, my), Q)
-            res += self.countShips(sea, Point(P.x, my), Point(mx + 1, Q.y))
-        return res
-</code></pre>
-<p>C++</p>
-<pre><code class="lang-cpp">class Solution &#123;
-public:
-    int countShips(Sea sea, vector&lt;int&gt; topRight, vector&lt;int&gt; bottomLeft) &#123;
-        int res = 0;
+<p>Python<br><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">countShips</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> sea<span class="token punctuation">:</span> <span class="token string">'Sea'</span><span class="token punctuation">,</span> P<span class="token punctuation">:</span> <span class="token string">'Point'</span><span class="token punctuation">,</span> Q<span class="token punctuation">:</span> <span class="token string">'Point'</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">:</span>
+        res <span class="token operator">=</span> <span class="token number">0</span>
+        <span class="token keyword">if</span> P<span class="token punctuation">.</span>x <span class="token operator">>=</span> Q<span class="token punctuation">.</span>x <span class="token keyword">and</span> P<span class="token punctuation">.</span>y <span class="token operator">>=</span> Q<span class="token punctuation">.</span>y <span class="token keyword">and</span> sea<span class="token punctuation">.</span>hasShips<span class="token punctuation">(</span>P<span class="token punctuation">,</span> Q<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> P<span class="token punctuation">.</span>x <span class="token operator">==</span> Q<span class="token punctuation">.</span>x <span class="token keyword">and</span> P<span class="token punctuation">.</span>y <span class="token operator">==</span> Q<span class="token punctuation">.</span>y<span class="token punctuation">:</span> <span class="token keyword">return</span> <span class="token number">1</span>
+            mx<span class="token punctuation">,</span> my <span class="token operator">=</span> <span class="token punctuation">(</span>P<span class="token punctuation">.</span>x <span class="token operator">+</span> Q<span class="token punctuation">.</span>x<span class="token punctuation">)</span> <span class="token operator">//</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>P<span class="token punctuation">.</span>y <span class="token operator">+</span> Q<span class="token punctuation">.</span>y<span class="token punctuation">)</span> <span class="token operator">//</span> <span class="token number">2</span>
+            res <span class="token operator">+=</span> self<span class="token punctuation">.</span>countShips<span class="token punctuation">(</span>sea<span class="token punctuation">,</span> P<span class="token punctuation">,</span> Point<span class="token punctuation">(</span>mx <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> my <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            res <span class="token operator">+=</span> self<span class="token punctuation">.</span>countShips<span class="token punctuation">(</span>sea<span class="token punctuation">,</span> Point<span class="token punctuation">(</span>mx<span class="token punctuation">,</span> P<span class="token punctuation">.</span>y<span class="token punctuation">)</span><span class="token punctuation">,</span> Point<span class="token punctuation">(</span>Q<span class="token punctuation">.</span>x<span class="token punctuation">,</span> my <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            res <span class="token operator">+=</span> self<span class="token punctuation">.</span>countShips<span class="token punctuation">(</span>sea<span class="token punctuation">,</span> Point<span class="token punctuation">(</span>mx<span class="token punctuation">,</span> my<span class="token punctuation">)</span><span class="token punctuation">,</span> Q<span class="token punctuation">)</span>
+            res <span class="token operator">+=</span> self<span class="token punctuation">.</span>countShips<span class="token punctuation">(</span>sea<span class="token punctuation">,</span> Point<span class="token punctuation">(</span>P<span class="token punctuation">.</span>x<span class="token punctuation">,</span> my<span class="token punctuation">)</span><span class="token punctuation">,</span> Point<span class="token punctuation">(</span>mx <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> Q<span class="token punctuation">.</span>y<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> res<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
+<p>C++<br><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">&#123;</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token keyword">int</span> <span class="token function">countShips</span><span class="token punctuation">(</span>Sea sea<span class="token punctuation">,</span> vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> topRight<span class="token punctuation">,</span> vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> bottomLeft<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">int</span> res <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
 
-        if (topRight[0] &gt;= bottomLeft[0] &amp;&amp; topRight[1] &gt;= bottomLeft[1] 
-            &amp;&amp; sea.hasShips(topRight, bottomLeft)) &#123;
-            if (topRight[0] == bottomLeft[0] &amp;&amp; topRight[1] == bottomLeft[1]) &#123;
-                return 1;
-            &#125;
-            int mx = (topRight[0] + bottomLeft[0]) / 2;
-            int my = (topRight[1] + bottomLeft[1]) / 2;
-            res += countShips(sea, topRight, &#123;mx+1, my+1&#125;);
-            res += countShips(sea, &#123;mx, topRight[1]&#125;, &#123;bottomLeft[0], my+1&#125;);
-            res += countShips(sea, &#123;mx, my&#125;, bottomLeft);
-            res += countShips(sea, &#123;topRight[0], my&#125;, &#123;mx+1, bottomLeft[1]&#125;);
-        &#125;
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>topRight<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">>=</span> bottomLeft<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span> topRight<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">>=</span> bottomLeft<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> 
+            <span class="token operator">&amp;&amp;</span> sea<span class="token punctuation">.</span><span class="token function">hasShips</span><span class="token punctuation">(</span>topRight<span class="token punctuation">,</span> bottomLeft<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>topRight<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">==</span> bottomLeft<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span> topRight<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">==</span> bottomLeft<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+            <span class="token keyword">int</span> mx <span class="token operator">=</span> <span class="token punctuation">(</span>topRight<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> bottomLeft<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>
+            <span class="token keyword">int</span> my <span class="token operator">=</span> <span class="token punctuation">(</span>topRight<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span> bottomLeft<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>
+            res <span class="token operator">+=</span> <span class="token function">countShips</span><span class="token punctuation">(</span>sea<span class="token punctuation">,</span> topRight<span class="token punctuation">,</span> <span class="token punctuation">&#123;</span>mx<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span> my<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            res <span class="token operator">+=</span> <span class="token function">countShips</span><span class="token punctuation">(</span>sea<span class="token punctuation">,</span> <span class="token punctuation">&#123;</span>mx<span class="token punctuation">,</span> topRight<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span>bottomLeft<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> my<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            res <span class="token operator">+=</span> <span class="token function">countShips</span><span class="token punctuation">(</span>sea<span class="token punctuation">,</span> <span class="token punctuation">&#123;</span>mx<span class="token punctuation">,</span> my<span class="token punctuation">&#125;</span><span class="token punctuation">,</span> bottomLeft<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            res <span class="token operator">+=</span> <span class="token function">countShips</span><span class="token punctuation">(</span>sea<span class="token punctuation">,</span> <span class="token punctuation">&#123;</span>topRight<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> my<span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span>mx<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span> bottomLeft<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
 
-        return res;
-    &#125;
-&#125;;
-</code></pre>
+        <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
 ]]></content>
       
         <categories>
@@ -985,254 +1351,238 @@ LeetCode Weekly Contest 152.
 <a id="more"></a>
 <h1 id="问题-1"><a href="#问题-1" class="headerlink" title="问题 1"></a>问题 1</h1><p><a href="https://leetcode.com/problems/prime-arrangements/">题目链接</a></p>
 <p>思路：从 1 到 n 质数和合数分别计数，结果为<code>质数阶乘 * 合数阶乘 % MOD</code>。<br>复杂度：时间复杂度 O(n^2)，空间复杂度 O(1)。</p>
-<p>Python</p>
-<pre><code class="lang-python">class Solution:
-    def numPrimeArrangements(self, n: int) -&gt; int:
-        def is_prime(n):
-            for i in range(2, n // 2 + 1):
-                if n % i == 0:
-                    return False
+<p>Python<br><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">numPrimeArrangements</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> n<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">:</span>
+        <span class="token keyword">def</span> <span class="token function">is_prime</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> n <span class="token operator">//</span> <span class="token number">2</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                <span class="token keyword">if</span> n <span class="token operator">%</span> i <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+                    <span class="token keyword">return</span> <span class="token boolean">False</span>
 
-            return True
+            <span class="token keyword">return</span> <span class="token boolean">True</span>
 
-        p = 0
-        c = 1
-        mod = 10 ** 9 + 7
+        p <span class="token operator">=</span> <span class="token number">0</span>
+        c <span class="token operator">=</span> <span class="token number">1</span>
+        mod <span class="token operator">=</span> <span class="token number">10</span> <span class="token operator">**</span> <span class="token number">9</span> <span class="token operator">+</span> <span class="token number">7</span>
 
-        for i in range(2, n+1):
-            if is_prime(i):
-                p += 1
-            else:
-                c += 1
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> n<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> is_prime<span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                p <span class="token operator">+=</span> <span class="token number">1</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                c <span class="token operator">+=</span> <span class="token number">1</span>
 
-        return math.factorial(p) % mod * math.factorial(c) % mod
-</code></pre>
-<p>C++</p>
-<pre><code class="lang-cpp">class Solution &#123;
-public:
-    bool prime(int n) &#123;
-        if (n &lt; 2)
-            return false;
+        <span class="token keyword">return</span> math<span class="token punctuation">.</span>factorial<span class="token punctuation">(</span>p<span class="token punctuation">)</span> <span class="token operator">%</span> mod <span class="token operator">*</span> math<span class="token punctuation">.</span>factorial<span class="token punctuation">(</span>c<span class="token punctuation">)</span> <span class="token operator">%</span> mod<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
+<p>C++<br><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">&#123;</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token keyword">bool</span> <span class="token function">prime</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">&lt;</span> <span class="token number">2</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
 
-        for (int i = 2; i * i &lt;= n; i++)
-            if (n % i == 0)
-                return false;
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> i <span class="token operator">*</span> i <span class="token operator">&lt;=</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">%</span> i <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+                <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
 
-        return true;
-    &#125;
-    int numPrimeArrangements(int n) &#123;
-        const int MOD = 1e9 + 7;
-        long long res = 1;
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">int</span> <span class="token function">numPrimeArrangements</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">const</span> <span class="token keyword">int</span> MOD <span class="token operator">=</span> <span class="token number">1e9</span> <span class="token operator">+</span> <span class="token number">7</span><span class="token punctuation">;</span>
+        <span class="token keyword">long</span> <span class="token keyword">long</span> res <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
 
-        int p = 0;
-        int c = 1;
+        <span class="token keyword">int</span> p <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> c <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
 
-        for (int i = 2; i &lt;= n; i++)&#123;
-            if (prime(i)) &#123;
-                p += 1;
-            &#125; else &#123;
-                c += 1;
-            &#125;
-        &#125;
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">prime</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                p <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+                c <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+        <span class="token punctuation">&#125;</span>
 
-        for (int i = 1; i &lt;= p; i++)
-            res = res * i % MOD;
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> p<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+            res <span class="token operator">=</span> res <span class="token operator">*</span> i <span class="token operator">%</span> MOD<span class="token punctuation">;</span>
 
-        for (int i = 1; i &lt;= c; i++)
-            res = res * i % MOD;
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> c<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+            res <span class="token operator">=</span> res <span class="token operator">*</span> i <span class="token operator">%</span> MOD<span class="token punctuation">;</span>
 
-        return res;
-    &#125;
-&#125;;
-</code></pre>
+        <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
 <h1 id="问题-2"><a href="#问题-2" class="headerlink" title="问题 2"></a>问题 2</h1><p><a href="https://leetcode.com/problems/diet-plan-performance/">题目链接</a></p>
 <p>解法：计算前缀和，每次去掉一个元素，加入一个元素。<br>复杂度：时间复杂度 O(n)，空间复杂度 O(1)。</p>
-<p>Python</p>
-<pre><code class="lang-python">class Solution:
-    def dietPlanPerformance(self, A: List[int], k: int,
-                            lower: int, upper: int) -&gt; int:
-        res = 0
-        n = len(A)
+<p>Python<br><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">dietPlanPerformance</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> A<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">,</span> k<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span>
+                            lower<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> upper<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">:</span>
+        res <span class="token operator">=</span> <span class="token number">0</span>
+        n <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span>
 
-        s = sum(A[:k])
+        s <span class="token operator">=</span> <span class="token builtin">sum</span><span class="token punctuation">(</span>A<span class="token punctuation">[</span><span class="token punctuation">:</span>k<span class="token punctuation">]</span><span class="token punctuation">)</span>
 
-        if s &gt; upper:
-            res += 1
-        elif s &lt; lower:
-            res -= 1
+        <span class="token keyword">if</span> s <span class="token operator">></span> upper<span class="token punctuation">:</span>
+            res <span class="token operator">+=</span> <span class="token number">1</span>
+        <span class="token keyword">elif</span> s <span class="token operator">&lt;</span> lower<span class="token punctuation">:</span>
+            res <span class="token operator">-=</span> <span class="token number">1</span>
 
-        for i in range(n-k):
-            s -= A[i]
-            s += A[i+k]
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token operator">-</span>k<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            s <span class="token operator">-=</span> A<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+            s <span class="token operator">+=</span> A<span class="token punctuation">[</span>i<span class="token operator">+</span>k<span class="token punctuation">]</span>
 
-            if s &gt; upper:
-                res += 1
-            elif s &lt; lower:
-                res -= 1
+            <span class="token keyword">if</span> s <span class="token operator">></span> upper<span class="token punctuation">:</span>
+                res <span class="token operator">+=</span> <span class="token number">1</span>
+            <span class="token keyword">elif</span> s <span class="token operator">&lt;</span> lower<span class="token punctuation">:</span>
+                res <span class="token operator">-=</span> <span class="token number">1</span>
 
-        return res
-</code></pre>
-<p>C++</p>
-<pre><code class="lang-cpp">class Solution &#123;
-public:
-    int dietPlanPerformance(vector&lt;int&gt;&amp; A, int k, int lower, int upper) &#123;
-        int res = 0;
+        <span class="token keyword">return</span> res<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
+<p>C++<br><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">&#123;</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token keyword">int</span> <span class="token function">dietPlanPerformance</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span><span class="token operator">&amp;</span> A<span class="token punctuation">,</span> <span class="token keyword">int</span> k<span class="token punctuation">,</span> <span class="token keyword">int</span> lower<span class="token punctuation">,</span> <span class="token keyword">int</span> upper<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">int</span> res <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
 
-        int n = A.size();
+        <span class="token keyword">int</span> n <span class="token operator">=</span> A<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        int s = 0;
+        <span class="token keyword">int</span> s <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
 
-        for (int i = 0; i &lt; k; ++i)&#123;
-            s += A[i];
-        &#125;
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> k<span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+            s <span class="token operator">+=</span> A<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
 
-        if (s &gt; upper) &#123;
-                res += 1;
-        &#125; else if (s &lt; lower) &#123;
-                res -= 1;
-        &#125;
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>s <span class="token operator">></span> upper<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                res <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>s <span class="token operator">&lt;</span> lower<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                res <span class="token operator">-=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
 
-        for (int i = 0; i &lt; n-k; i++)&#123;
-            s -= A[i];
-            s += A[i+k];
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token operator">-</span>k<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+            s <span class="token operator">-=</span> A<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            s <span class="token operator">+=</span> A<span class="token punctuation">[</span>i<span class="token operator">+</span>k<span class="token punctuation">]</span><span class="token punctuation">;</span>
 
-            if (s &gt; upper) &#123;
-                res += 1;
-            &#125; else if (s &lt; lower) &#123;
-                res -= 1;
-            &#125;
-        &#125;
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>s <span class="token operator">></span> upper<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                res <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>s <span class="token operator">&lt;</span> lower<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                res <span class="token operator">-=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+        <span class="token punctuation">&#125;</span>
 
-        return res;
-    &#125;
-&#125;;
-</code></pre>
+        <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
 <h1 id="问题-3"><a href="#问题-3" class="headerlink" title="问题 3"></a>问题 3</h1><p><a href="https://leetcode.com/problems/can-make-palindrome-from-substring/">题目链接</a></p>
 <p>解法：26 个字母出现个数用前缀哈希存储，查询和比较 key 的差异为 O(1)，注意可以 rearrange，所以字母出现次数差异只保留 % 2 的值，最后对字符串奇偶长度做判断。</p>
 <p>复杂度：时间复杂度 O(n)，空间复杂度 O(n)。</p>
-<p>Python</p>
-<pre><code class="lang-python">class Solution:
-    def canMakePaliQueries(self, s: str,
-                           queries: List[List[int]]) -&gt; List[bool]:
-        n = len(s)
+<p>Python<br><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">canMakePaliQueries</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> s<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span>
+                           queries<span class="token punctuation">:</span> List<span class="token punctuation">[</span>List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> List<span class="token punctuation">[</span><span class="token builtin">bool</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+        n <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span>
 
-        f = [[0 for _ in range(n+1)] for _ in range(26)]
+        f <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span> <span class="token keyword">for</span> _ <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token keyword">for</span> _ <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">26</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
 
-        for c in range(26):
-            for i in range(n):
-                if s[i] == chr(ord(&#39;a&#39;) + c):
-                    f[c][i+1] = f[c][i] + 1
-                else:
-                    f[c][i+1] = f[c][i]
-        res = []
+        <span class="token keyword">for</span> c <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">26</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                <span class="token keyword">if</span> s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token builtin">chr</span><span class="token punctuation">(</span><span class="token builtin">ord</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">)</span> <span class="token operator">+</span> c<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                    f<span class="token punctuation">[</span>c<span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> f<span class="token punctuation">[</span>c<span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token number">1</span>
+                <span class="token keyword">else</span><span class="token punctuation">:</span>
+                    f<span class="token punctuation">[</span>c<span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> f<span class="token punctuation">[</span>c<span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+        res <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
 
-        for q in queries:
-            l, r, k = q[0], q[1] + 1, q[2]
-            odd = 0
+        <span class="token keyword">for</span> q <span class="token keyword">in</span> queries<span class="token punctuation">:</span>
+            l<span class="token punctuation">,</span> r<span class="token punctuation">,</span> k <span class="token operator">=</span> q<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> q<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> q<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span>
+            odd <span class="token operator">=</span> <span class="token number">0</span>
 
-            for c in range(26):
-                if (f[c][r] - f[c][l]) % 2 != 0:
-                    odd += 1
+            <span class="token keyword">for</span> c <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">26</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>f<span class="token punctuation">[</span>c<span class="token punctuation">]</span><span class="token punctuation">[</span>r<span class="token punctuation">]</span> <span class="token operator">-</span> f<span class="token punctuation">[</span>c<span class="token punctuation">]</span><span class="token punctuation">[</span>l<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">:</span>
+                    odd <span class="token operator">+=</span> <span class="token number">1</span>
 
-            res.append(odd &lt;= 2 * k + 1);
+            res<span class="token punctuation">.</span>append<span class="token punctuation">(</span>odd <span class="token operator">&lt;=</span> <span class="token number">2</span> <span class="token operator">*</span> k <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        return res
-</code></pre>
-<p>C++</p>
-<pre><code class="lang-cpp">class Solution &#123;
-public:
-    vector&lt;bool&gt; canMakePaliQueries(string s,
-                                    vector&lt;vector&lt;int&gt;&gt;&amp; queries) &#123;
-        int n = s.size();
-        vector&lt;vector&lt;int&gt;&gt; freq(26, vector&lt;int&gt;(n + 1, 0));
+        <span class="token keyword">return</span> res<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
+<p>C++<br><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">&#123;</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    vector<span class="token operator">&lt;</span><span class="token keyword">bool</span><span class="token operator">></span> <span class="token function">canMakePaliQueries</span><span class="token punctuation">(</span>string s<span class="token punctuation">,</span>
+                                    vector<span class="token operator">&lt;</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">>></span><span class="token operator">&amp;</span> queries<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">int</span> n <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        vector<span class="token operator">&lt;</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">>></span> <span class="token function">freq</span><span class="token punctuation">(</span><span class="token number">26</span><span class="token punctuation">,</span> vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span><span class="token punctuation">(</span>n <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        for (int c = 0; c &lt; 26; c++)
-            for (int i = 0; i &lt; n; i++)
-                freq[c][i + 1] = freq[c][i] + (s[i] == &#39;a&#39; + c ? 1 : 0);
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> c <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> c <span class="token operator">&lt;</span> <span class="token number">26</span><span class="token punctuation">;</span> c<span class="token operator">++</span><span class="token punctuation">)</span>
+            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+                freq<span class="token punctuation">[</span>c<span class="token punctuation">]</span><span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> freq<span class="token punctuation">[</span>c<span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token punctuation">(</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'a'</span> <span class="token operator">+</span> c <span class="token operator">?</span> <span class="token number">1</span> <span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        vector&lt;bool&gt; answer;
+        vector<span class="token operator">&lt;</span><span class="token keyword">bool</span><span class="token operator">></span> answer<span class="token punctuation">;</span>
 
-        for (vector&lt;int&gt; &amp;query : queries) &#123;
-            int l = query[0], r = query[1] + 1, k = query[2];
+        <span class="token keyword">for</span> <span class="token punctuation">(</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> <span class="token operator">&amp;</span>query <span class="token operator">:</span> queries<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token keyword">int</span> l <span class="token operator">=</span> query<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> r <span class="token operator">=</span> query<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> k <span class="token operator">=</span> query<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 
-            int odd = 0;
+            <span class="token keyword">int</span> odd <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
 
-            for (int c = 0; c &lt; 26; c++)
-                if ((freq[c][r] - freq[c][l]) % 2 != 0)
-                    odd++;
+            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> c <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> c <span class="token operator">&lt;</span> <span class="token number">26</span><span class="token punctuation">;</span> c<span class="token operator">++</span><span class="token punctuation">)</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>freq<span class="token punctuation">[</span>c<span class="token punctuation">]</span><span class="token punctuation">[</span>r<span class="token punctuation">]</span> <span class="token operator">-</span> freq<span class="token punctuation">[</span>c<span class="token punctuation">]</span><span class="token punctuation">[</span>l<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span>
+                    odd<span class="token operator">++</span><span class="token punctuation">;</span>
 
-            answer.push_back(odd &lt;= 2 * k + 1);
-        &#125;
+            answer<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span>odd <span class="token operator">&lt;=</span> <span class="token number">2</span> <span class="token operator">*</span> k <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
 
-        return answer;
-    &#125;
-&#125;;
-</code></pre>
+        <span class="token keyword">return</span> answer<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
 <h1 id="问题-4"><a href="#问题-4" class="headerlink" title="问题 4"></a>问题 4</h1><p><a href="https://leetcode.com/problems/number-of-valid-words-for-each-puzzle/">题目链接</a><br>解法：参考<a href="https://leetcode.com/problems/number-of-valid-words-for-each-puzzle/discuss/371864/Python-Find-all-Sub-Puzzles">寒神的解答</a>。利用 26 位整数的 bit 存储是否包含某个字母状态(状态压缩)，遍历 puzzles 中的元素，枚举包括第一个字母的所有子 string 组合，然后求和。</p>
 <p>复杂度：时间复杂度 O(max(W, P))，空间复杂度 O(W)。</p>
-<p>Python</p>
-<pre><code class="lang-python">class Solution:
-    def findNumOfValidWords(self, words: List[str],
-                            puzzles: List[str]) -&gt; List[int]:
-        count = collections.Counter()
-        for w in words:
-            m = 0
-            for c in w:
-                m |= 1 &lt;&lt; (ord(c) - ord(&#39;a&#39;))
-            count[m] += 1
+<p>Python<br><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">findNumOfValidWords</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> words<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">str</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                            puzzles<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">str</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+        count <span class="token operator">=</span> collections<span class="token punctuation">.</span>Counter<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span> w <span class="token keyword">in</span> words<span class="token punctuation">:</span>
+            m <span class="token operator">=</span> <span class="token number">0</span>
+            <span class="token keyword">for</span> c <span class="token keyword">in</span> w<span class="token punctuation">:</span>
+                m <span class="token operator">|</span><span class="token operator">=</span> <span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token punctuation">(</span><span class="token builtin">ord</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token builtin">ord</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            count<span class="token punctuation">[</span>m<span class="token punctuation">]</span> <span class="token operator">+=</span> <span class="token number">1</span>
 
-        res = []
+        res <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
 
-        for p in puzzles:
-            bfs = [1 &lt;&lt; (ord(p[0]) - ord(&#39;a&#39;))]
-            for c in set(p[1:]):
-                bfs += [m | 1 &lt;&lt; (ord(c) - ord(&#39;a&#39;)) for m in bfs]
-            res.append(sum(count[m] for m in bfs))
+        <span class="token keyword">for</span> p <span class="token keyword">in</span> puzzles<span class="token punctuation">:</span>
+            bfs <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token punctuation">(</span><span class="token builtin">ord</span><span class="token punctuation">(</span>p<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token builtin">ord</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+            <span class="token keyword">for</span> c <span class="token keyword">in</span> <span class="token builtin">set</span><span class="token punctuation">(</span>p<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                bfs <span class="token operator">+=</span> <span class="token punctuation">[</span>m <span class="token operator">|</span> <span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token punctuation">(</span><span class="token builtin">ord</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token builtin">ord</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">for</span> m <span class="token keyword">in</span> bfs<span class="token punctuation">]</span>
+            res<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token builtin">sum</span><span class="token punctuation">(</span>count<span class="token punctuation">[</span>m<span class="token punctuation">]</span> <span class="token keyword">for</span> m <span class="token keyword">in</span> bfs<span class="token punctuation">)</span><span class="token punctuation">)</span>
 
-        return res
-</code></pre>
-<p>C++</p>
-<pre><code class="lang-cpp">class Solution &#123;
-public:
-    vector&lt;int&gt; findNumOfValidWords(vector&lt;string&gt;&amp; words,
-                                    vector&lt;string&gt;&amp; puzzles) &#123;
-        unordered_map&lt;int, int&gt; count;
+        <span class="token keyword">return</span> res<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
+<p>C++<br><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">&#123;</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> <span class="token function">findNumOfValidWords</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span>string<span class="token operator">></span><span class="token operator">&amp;</span> words<span class="token punctuation">,</span>
+                                    vector<span class="token operator">&lt;</span>string<span class="token operator">></span><span class="token operator">&amp;</span> puzzles<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        unordered_map<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">></span> count<span class="token punctuation">;</span>
 
-        for (auto&amp; w: words) &#123;
-            int mask = 0;
-            for (auto&amp; c : w)
-                mask |= (1 &lt;&lt; (c - &#39;a&#39;));
-            count[mask] ++;
-        &#125;
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">auto</span><span class="token operator">&amp;</span> w<span class="token operator">:</span> words<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token keyword">int</span> mask <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">auto</span><span class="token operator">&amp;</span> c <span class="token operator">:</span> w<span class="token punctuation">)</span>
+                mask <span class="token operator">|=</span> <span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token punctuation">(</span>c <span class="token operator">-</span> <span class="token string">'a'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            count<span class="token punctuation">[</span>mask<span class="token punctuation">]</span> <span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
 
-        vector&lt;int&gt; res;
+        vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> res<span class="token punctuation">;</span>
 
-        for (auto&amp; p : puzzles) &#123;
-            vector&lt;int&gt; mask_p;
-            vector&lt;int&gt; mask_new;
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">auto</span><span class="token operator">&amp;</span> p <span class="token operator">:</span> puzzles<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> mask_p<span class="token punctuation">;</span>
+            vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> mask_new<span class="token punctuation">;</span>
 
-            mask_p.push_back(1 &lt;&lt; (p[0] - &#39;a&#39;));
+            mask_p<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token punctuation">(</span>p<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token string">'a'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-            for (int i = 1; i &lt; p.size(); i++) &#123;
-                mask_new = mask_p;
-                for (auto&amp; m : mask_p) &#123;
-                    mask_new.push_back(m | (1 &lt;&lt; (p[i] - &#39;a&#39;)));
-                &#125;
-                mask_p = mask_new;
-            &#125;
+            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> p<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                mask_new <span class="token operator">=</span> mask_p<span class="token punctuation">;</span>
+                <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">auto</span><span class="token operator">&amp;</span> m <span class="token operator">:</span> mask_p<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                    mask_new<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span>m <span class="token operator">|</span> <span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token punctuation">(</span>p<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token string">'a'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">&#125;</span>
+                mask_p <span class="token operator">=</span> mask_new<span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
 
-            int cnt = 0;
+            <span class="token keyword">int</span> cnt <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
 
-            for (auto&amp; m : mask_p)
-                cnt += count[m];
+            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">auto</span><span class="token operator">&amp;</span> m <span class="token operator">:</span> mask_p<span class="token punctuation">)</span>
+                cnt <span class="token operator">+=</span> count<span class="token punctuation">[</span>m<span class="token punctuation">]</span><span class="token punctuation">;</span>
 
-            res.push_back(cnt);
-        &#125;
+            res<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span>cnt<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
 
-        return res;
-    &#125;
-&#125;;
-</code></pre>
+        <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
 ]]></content>
       
         <categories>
@@ -3213,16 +3563,15 @@ DotA 如人生。
 <a id="more"></a>
 <p>Lisp 诞生于 1958 年，发明人是 John McCarthy，是目前仍在使用的第二古老的高级语言(最早的是 Fortran，诞生于 1957 年)。</p>
 <p>Lisp 来源于 <code>LISt Processing</code>(有调侃说是 <code>Lots of Isolated Stupid Parentheses</code>)，这个古老的语言和目前主流语言例如 C++，Python 和 Java 等有显著区别，下面是一段代码示例：</p>
-<pre><code class="lang-elisp">(defun cal-china-x-winter-solstice-date (date)
-  &quot;Return winter solstice(冬至) date in Gregorian form.
+<pre class="line-numbers language-elisp" data-language="elisp"><code class="language-elisp"><span class="token punctuation">(</span><span class="token defun"><span class="token keyword">defun</span> <span class="token function">cal-china-x-winter-solstice-date</span> <span class="token punctuation">(</span><span class="token arguments"><span class="token argument variable">date</span></span><span class="token punctuation">)</span></span>
+  <span class="token string">"Return winter solstice(冬至) date in Gregorian form.
 
-If MONTH = 12, return current year&#39;s date
-Else return last year&#39;s date&quot;
-  (let* ((cyear (if (= (calendar-extract-month date) 12)
-                    (calendar-extract-year date)
-                  (1- (calendar-extract-year date)))))
-    (car (rassoc &#39;&quot;冬至&quot; (cal-china-x-solar-term-alist-new cyear)))))
-</code></pre>
+If <span class="token argument">MONTH</span> = 12, return current year's date
+Else return last year's date"</span>
+  <span class="token punctuation">(</span><span class="token keyword">let*</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token car">cyear</span> <span class="token punctuation">(</span><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token car">=</span> <span class="token punctuation">(</span><span class="token car">calendar-extract-month</span> date<span class="token punctuation">)</span> <span class="token number">12</span><span class="token punctuation">)</span>
+                    <span class="token punctuation">(</span><span class="token car">calendar-extract-year</span> date<span class="token punctuation">)</span>
+                  <span class="token punctuation">(</span><span class="token car">1-</span> <span class="token punctuation">(</span><span class="token car">calendar-extract-year</span> date<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">(</span><span class="token car">car</span> <span class="token punctuation">(</span><span class="token car">rassoc</span> '<span class="token string">"冬至"</span> <span class="token punctuation">(</span><span class="token car">cal-china-x-solar-term-alist-new</span> cyear<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><code>Emacs</code> 也许是用 Lisp 编写的最著名的软件了。<code>Emacs</code> 自带了日历功能，<a href="https://github.com/xwl/cal-china-x"><code>cal-china-x</code></a> 扩展实现了阴历、节气、生肖等的计算，但没有实现数九天和伏天的计算功能。正好借这个机会实现下功能，练练手。</p>
 <h1 id="数九天计算"><a href="#数九天计算" class="headerlink" title="数九天计算"></a>数九天计算</h1><p>数九天的计算相对比较简单。从冬至当天开始算一九第一天，每过九天加一九，一直到九九第九天。</p>
 <p>思路也比较清楚，对于某一个 <code>date</code>，先计算其与冬至的天数差。由于冬至始终在阳历的十二月，因此可以分情况讨论：</p>
@@ -3230,99 +3579,96 @@ Else return last year&#39;s date&quot;
 <li>阳历非十二月，计算与去年冬至的天数差。</li>
 <li>阳历为十二月，计算与今年冬至的天数差。此时若 <code>date</code> 在冬至前则差为负数，但负数情况可以不管，因为不属于数九天。</li>
 </ul>
-<p>如果天数差在 0~80 天内，则需要显示数九天，具体显示格式为<code>一九(1)</code>，整个代码如下：</p>
-<pre><code class="lang-lisp">(defconst cal-china-x-nine-characters  ; 数九天 array
-  [&quot;一九&quot; &quot;二九&quot; &quot;三九&quot; &quot;四九&quot; &quot;五九&quot; &quot;六九&quot; &quot;七九&quot; &quot;八九&quot; &quot;九九&quot;])
+<p>如果天数差在 0~80 天内，则需要显示数九天，具体显示格式为<code>一九(1)</code>，整个代码如下：<br><pre class="line-numbers language-lisp" data-language="lisp"><code class="language-lisp"><span class="token punctuation">(</span><span class="token defvar"><span class="token keyword">defconst</span> <span class="token variable">cal-china-x-nine-characters</span></span>  <span class="token comment">; 数九天 array</span>
+  <span class="token punctuation">[</span><span class="token string">"一九"</span> <span class="token string">"二九"</span> <span class="token string">"三九"</span> <span class="token string">"四九"</span> <span class="token string">"五九"</span> <span class="token string">"六九"</span> <span class="token string">"七九"</span> <span class="token string">"八九"</span> <span class="token string">"九九"</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
 
-(defun cal-china-x-winter-solstice-date (date)  ; 计算冬至日期(1-11月为去年，12月为今年)
-  &quot;Return winter solstice(冬至) date in Gregorian form.
+<span class="token punctuation">(</span><span class="token defun"><span class="token keyword">defun</span> <span class="token function">cal-china-x-winter-solstice-date</span> <span class="token punctuation">(</span><span class="token arguments"><span class="token argument variable">date</span></span><span class="token punctuation">)</span></span>  <span class="token comment">; 计算冬至日期(1-11月为去年，12月为今年)</span>
+  <span class="token string">"Return winter solstice(冬至) date in Gregorian form.
 
-If MONTH = 12, return current year&#39;s date
-Else return last year&#39;s date&quot;
-  (let* ((cyear (if (= (calendar-extract-month date) 12)
-                    (calendar-extract-year date)
-                  (1- (calendar-extract-year date)))))
-    (car (rassoc &#39;&quot;冬至&quot; (cal-china-x-solar-term-alist-new cyear)))))
+If <span class="token argument">MONTH</span> = 12, return current year's date
+Else return last year's date"</span>
+  <span class="token punctuation">(</span><span class="token keyword">let*</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token car">cyear</span> <span class="token punctuation">(</span><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token car">=</span> <span class="token punctuation">(</span><span class="token car">calendar-extract-month</span> date<span class="token punctuation">)</span> <span class="token number">12</span><span class="token punctuation">)</span>
+                    <span class="token punctuation">(</span><span class="token car">calendar-extract-year</span> date<span class="token punctuation">)</span>
+                  <span class="token punctuation">(</span><span class="token car">1-</span> <span class="token punctuation">(</span><span class="token car">calendar-extract-year</span> date<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">(</span><span class="token car">car</span> <span class="token punctuation">(</span><span class="token car">rassoc</span> '<span class="token string">"冬至"</span> <span class="token punctuation">(</span><span class="token car">cal-china-x-solar-term-alist-new</span> cyear<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 
-(defun winter-solstice-day-diff (date)  ; 计算与指定冬至的天数差
-  (cal-china-x-days-diff date (cal-china-x-winter-solstice-date date)))
+<span class="token punctuation">(</span><span class="token defun"><span class="token keyword">defun</span> <span class="token function">winter-solstice-day-diff</span> <span class="token punctuation">(</span><span class="token arguments"><span class="token argument variable">date</span></span><span class="token punctuation">)</span></span>  <span class="token comment">; 计算与指定冬至的天数差</span>
+  <span class="token punctuation">(</span><span class="token car">cal-china-x-days-diff</span> date <span class="token punctuation">(</span><span class="token car">cal-china-x-winter-solstice-date</span> date<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 
-(defun cal-china-x-get-several-nines-string (date)  ; 生成数九天的 string
-  (let ((daygap (winter-solstice-day-diff date)))
-    (if (or (&lt; daygap 0) (&gt; daygap 80))
-        &quot;&quot;
-      (concat (aref cal-china-x-nine-characters (/ daygap 9))
-              &quot;(&quot;
-              (number-to-string (1+ (% daygap 9)))
-              &quot;)&quot;
-              ))))
-</code></pre>
+<span class="token punctuation">(</span><span class="token defun"><span class="token keyword">defun</span> <span class="token function">cal-china-x-get-several-nines-string</span> <span class="token punctuation">(</span><span class="token arguments"><span class="token argument variable">date</span></span><span class="token punctuation">)</span></span>  <span class="token comment">; 生成数九天的 string</span>
+  <span class="token punctuation">(</span><span class="token keyword">let</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token car">daygap</span> <span class="token punctuation">(</span><span class="token car">winter-solstice-day-diff</span> date<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">(</span><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">or</span> <span class="token punctuation">(</span><span class="token car">&lt;</span> daygap <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token car">></span> daygap <span class="token number">80</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token string">""</span>
+      <span class="token punctuation">(</span><span class="token keyword">concat</span> <span class="token punctuation">(</span><span class="token car">aref</span> cal-china-x-nine-characters <span class="token punctuation">(</span><span class="token car">/</span> daygap <span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+              <span class="token string">"("</span>
+              <span class="token punctuation">(</span><span class="token car">number-to-string</span> <span class="token punctuation">(</span><span class="token car">1+</span> <span class="token punctuation">(</span><span class="token car">%</span> daygap <span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+              <span class="token string">")"</span>
+              <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
 <h1 id="伏天计算"><a href="#伏天计算" class="headerlink" title="伏天计算"></a>伏天计算</h1><p>民间有“头伏饺子二伏面，三伏烙饼摊鸡蛋”的习俗，看到这么多面食可以判断这基本是华北、黄淮一带的风俗。伏天计算比较复杂，原因是涉及到两个节气(夏至和立秋)，以及每日的干支。具体计算方法是：</p>
 <blockquote>
 <p>从夏至开始，依照干支纪日的排列，第3个庚日出现时，为初伏第一天(夏至三庚数头伏)，第4个庚日为中伏第一天，立秋后第1个庚日为末伏第一天。当夏至与立秋之间出现4个庚日时中伏为10天，出现5个庚日则为20天。</p>
 </blockquote>
-<pre><code class="lang-lisp">(defun cal-china-x-solar-term-date (date solar-term)
-  &quot;Return solar-term date in Gregorian form.&quot;
-  (let* ((cyear (calendar-extract-year date)))
-    (car (rassoc solar-term (cal-china-x-solar-term-alist-new cyear)))))
+<pre class="line-numbers language-lisp" data-language="lisp"><code class="language-lisp"><span class="token punctuation">(</span><span class="token defun"><span class="token keyword">defun</span> <span class="token function">cal-china-x-solar-term-date</span> <span class="token punctuation">(</span><span class="token arguments"><span class="token argument variable">date</span> <span class="token argument variable">solar-term</span></span><span class="token punctuation">)</span></span>
+  <span class="token string">"Return solar-term date in Gregorian form."</span>
+  <span class="token punctuation">(</span><span class="token keyword">let*</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token car">cyear</span> <span class="token punctuation">(</span><span class="token car">calendar-extract-year</span> date<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">(</span><span class="token car">car</span> <span class="token punctuation">(</span><span class="token car">rassoc</span> solar-term <span class="token punctuation">(</span><span class="token car">cal-china-x-solar-term-alist-new</span> cyear<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 
-(defun cal-china-x-chinese-day-celestial-stem-number (date)
-  &quot;String of Chinese date of Gregorian DATE.
-Defaults to today&#39;s date if DATE is not given.&quot;
-  (let* ((a-date (calendar-absolute-from-gregorian date)))
-    (% (+ a-date 15) 10)))
+<span class="token punctuation">(</span><span class="token defun"><span class="token keyword">defun</span> <span class="token function">cal-china-x-chinese-day-celestial-stem-number</span> <span class="token punctuation">(</span><span class="token arguments"><span class="token argument variable">date</span></span><span class="token punctuation">)</span></span>
+  <span class="token string">"String of Chinese date of Gregorian <span class="token argument">DATE</span>.
+Defaults to today's date if <span class="token argument">DATE</span> is not given."</span>
+  <span class="token punctuation">(</span><span class="token keyword">let*</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token car">a-date</span> <span class="token punctuation">(</span><span class="token car">calendar-absolute-from-gregorian</span> date<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">(</span><span class="token car">%</span> <span class="token punctuation">(</span><span class="token car">+</span> a-date <span class="token number">15</span><span class="token punctuation">)</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 
-(defun cal-china-x-solar-term-celestical-stem (date solar-term)
-  (cal-china-x-chinese-day-celestial-stem-number
-   (cal-china-x-solar-term-date date solar-term)))
+<span class="token punctuation">(</span><span class="token defun"><span class="token keyword">defun</span> <span class="token function">cal-china-x-solar-term-celestical-stem</span> <span class="token punctuation">(</span><span class="token arguments"><span class="token argument variable">date</span> <span class="token argument variable">solar-term</span></span><span class="token punctuation">)</span></span>
+  <span class="token punctuation">(</span><span class="token car">cal-china-x-chinese-day-celestial-stem-number</span>
+   <span class="token punctuation">(</span><span class="token car">cal-china-x-solar-term-date</span> date solar-term<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 
-(defun cal-china-x-day-diff-from-solar-term (date solar-term) ; 庚日
-  (let ((ss-stem (- 7 (cal-china-x-solar-term-celestical-stem date solar-term))))
-    (if (&lt; ss-stem 0) (+ ss-stem 10)
-      ss-stem)))
+<span class="token punctuation">(</span><span class="token defun"><span class="token keyword">defun</span> <span class="token function">cal-china-x-day-diff-from-solar-term</span> <span class="token punctuation">(</span><span class="token arguments"><span class="token argument variable">date</span> <span class="token argument variable">solar-term</span></span><span class="token punctuation">)</span></span> <span class="token comment">; 庚日</span>
+  <span class="token punctuation">(</span><span class="token keyword">let</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token car">ss-stem</span> <span class="token punctuation">(</span><span class="token car">-</span> <span class="token number">7</span> <span class="token punctuation">(</span><span class="token car">cal-china-x-solar-term-celestical-stem</span> date solar-term<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">(</span><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token car">&lt;</span> ss-stem <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token car">+</span> ss-stem <span class="token number">10</span><span class="token punctuation">)</span>
+      ss-stem<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 
-(defun cal-china-x-chufu-date (date)
-  (let* ((ss-date (cal-china-x-solar-term-date date &quot;夏至&quot;))
-         (ss-year (calendar-extract-year ss-date))
-         (ss-day (calendar-extract-day ss-date))
-         (day-diff (+ 20 (cal-china-x-day-diff-from-solar-term date &quot;夏至&quot;)))
-         (chufu-day (- day-diff (- 30 ss-day))))
-    (list 7 chufu-day ss-year)))
+<span class="token punctuation">(</span><span class="token defun"><span class="token keyword">defun</span> <span class="token function">cal-china-x-chufu-date</span> <span class="token punctuation">(</span><span class="token arguments"><span class="token argument variable">date</span></span><span class="token punctuation">)</span></span>
+  <span class="token punctuation">(</span><span class="token keyword">let*</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token car">ss-date</span> <span class="token punctuation">(</span><span class="token car">cal-china-x-solar-term-date</span> date <span class="token string">"夏至"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+         <span class="token punctuation">(</span><span class="token car">ss-year</span> <span class="token punctuation">(</span><span class="token car">calendar-extract-year</span> ss-date<span class="token punctuation">)</span><span class="token punctuation">)</span>
+         <span class="token punctuation">(</span><span class="token car">ss-day</span> <span class="token punctuation">(</span><span class="token car">calendar-extract-day</span> ss-date<span class="token punctuation">)</span><span class="token punctuation">)</span>
+         <span class="token punctuation">(</span><span class="token car">day-diff</span> <span class="token punctuation">(</span><span class="token car">+</span> <span class="token number">20</span> <span class="token punctuation">(</span><span class="token car">cal-china-x-day-diff-from-solar-term</span> date <span class="token string">"夏至"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+         <span class="token punctuation">(</span><span class="token car">chufu-day</span> <span class="token punctuation">(</span><span class="token car">-</span> day-diff <span class="token punctuation">(</span><span class="token car">-</span> <span class="token number">30</span> ss-day<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">(</span><span class="token car">list</span> <span class="token number">7</span> chufu-day ss-year<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 
-(defun cal-china-x-zhongfu-date (date)
-  (list 7 (+ (calendar-extract-day (cal-china-x-chufu-date date)) 10)
-        (calendar-extract-year date)))
+<span class="token punctuation">(</span><span class="token defun"><span class="token keyword">defun</span> <span class="token function">cal-china-x-zhongfu-date</span> <span class="token punctuation">(</span><span class="token arguments"><span class="token argument variable">date</span></span><span class="token punctuation">)</span></span>
+  <span class="token punctuation">(</span><span class="token car">list</span> <span class="token number">7</span> <span class="token punctuation">(</span><span class="token car">+</span> <span class="token punctuation">(</span><span class="token car">calendar-extract-day</span> <span class="token punctuation">(</span><span class="token car">cal-china-x-chufu-date</span> date<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token number">10</span><span class="token punctuation">)</span>
+        <span class="token punctuation">(</span><span class="token car">calendar-extract-year</span> date<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 
-(defun cal-china-x-mofu-date (date)
-  (let* ((ss-date (cal-china-x-solar-term-date date &quot;立秋&quot;))
-         (ss-year (calendar-extract-year ss-date))
-         (ss-day (calendar-extract-day ss-date))
-         (day-diff (cal-china-x-day-diff-from-solar-term date &quot;立秋&quot;))
-         (mofu-day (+ day-diff ss-day)))
-    (list 8 mofu-day ss-year)))
+<span class="token punctuation">(</span><span class="token defun"><span class="token keyword">defun</span> <span class="token function">cal-china-x-mofu-date</span> <span class="token punctuation">(</span><span class="token arguments"><span class="token argument variable">date</span></span><span class="token punctuation">)</span></span>
+  <span class="token punctuation">(</span><span class="token keyword">let*</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token car">ss-date</span> <span class="token punctuation">(</span><span class="token car">cal-china-x-solar-term-date</span> date <span class="token string">"立秋"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+         <span class="token punctuation">(</span><span class="token car">ss-year</span> <span class="token punctuation">(</span><span class="token car">calendar-extract-year</span> ss-date<span class="token punctuation">)</span><span class="token punctuation">)</span>
+         <span class="token punctuation">(</span><span class="token car">ss-day</span> <span class="token punctuation">(</span><span class="token car">calendar-extract-day</span> ss-date<span class="token punctuation">)</span><span class="token punctuation">)</span>
+         <span class="token punctuation">(</span><span class="token car">day-diff</span> <span class="token punctuation">(</span><span class="token car">cal-china-x-day-diff-from-solar-term</span> date <span class="token string">"立秋"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+         <span class="token punctuation">(</span><span class="token car">mofu-day</span> <span class="token punctuation">(</span><span class="token car">+</span> day-diff ss-day<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">(</span><span class="token car">list</span> <span class="token number">8</span> mofu-day ss-year<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 
-(defun cal-china-x-get-futian-string (date)
-  (let* ((chufu (cal-china-x-chufu-date date))
-         (zhongfu (cal-china-x-zhongfu-date date))
-         (mofu (cal-china-x-mofu-date date))
-         (chufu-gap (cal-china-x-days-diff date chufu))
-         (zhongfu-gap (cal-china-x-days-diff date zhongfu))
-         (mofu-gap (cal-china-x-days-diff date mofu))
-         )
-    (if (or (&lt; chufu-gap 0) (&gt; mofu-gap 9))
-        &quot;&quot;
-      (if (and (&gt;= chufu-gap 0) (&lt; zhongfu-gap 0))
-          (concat &quot;初伏(&quot;
-                  (number-to-string (1+ chufu-gap))
-                  &quot;)&quot;)
-        (if (and (&gt;= zhongfu-gap 0) (&lt; mofu-gap 0))
-            (concat &quot;中伏(&quot;
-                    (number-to-string (1+ zhongfu-gap))
-                    &quot;)&quot;)
-          (concat &quot;末伏(&quot;
-                  (number-to-string (1+ mofu-gap))
-                  &quot;)&quot;))))))
-</code></pre>
+<span class="token punctuation">(</span><span class="token defun"><span class="token keyword">defun</span> <span class="token function">cal-china-x-get-futian-string</span> <span class="token punctuation">(</span><span class="token arguments"><span class="token argument variable">date</span></span><span class="token punctuation">)</span></span>
+  <span class="token punctuation">(</span><span class="token keyword">let*</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token car">chufu</span> <span class="token punctuation">(</span><span class="token car">cal-china-x-chufu-date</span> date<span class="token punctuation">)</span><span class="token punctuation">)</span>
+         <span class="token punctuation">(</span><span class="token car">zhongfu</span> <span class="token punctuation">(</span><span class="token car">cal-china-x-zhongfu-date</span> date<span class="token punctuation">)</span><span class="token punctuation">)</span>
+         <span class="token punctuation">(</span><span class="token car">mofu</span> <span class="token punctuation">(</span><span class="token car">cal-china-x-mofu-date</span> date<span class="token punctuation">)</span><span class="token punctuation">)</span>
+         <span class="token punctuation">(</span><span class="token car">chufu-gap</span> <span class="token punctuation">(</span><span class="token car">cal-china-x-days-diff</span> date chufu<span class="token punctuation">)</span><span class="token punctuation">)</span>
+         <span class="token punctuation">(</span><span class="token car">zhongfu-gap</span> <span class="token punctuation">(</span><span class="token car">cal-china-x-days-diff</span> date zhongfu<span class="token punctuation">)</span><span class="token punctuation">)</span>
+         <span class="token punctuation">(</span><span class="token car">mofu-gap</span> <span class="token punctuation">(</span><span class="token car">cal-china-x-days-diff</span> date mofu<span class="token punctuation">)</span><span class="token punctuation">)</span>
+         <span class="token punctuation">)</span>
+    <span class="token punctuation">(</span><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">or</span> <span class="token punctuation">(</span><span class="token car">&lt;</span> chufu-gap <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token car">></span> mofu-gap <span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token string">""</span>
+      <span class="token punctuation">(</span><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">and</span> <span class="token punctuation">(</span><span class="token car">>=</span> chufu-gap <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token car">&lt;</span> zhongfu-gap <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+          <span class="token punctuation">(</span><span class="token keyword">concat</span> <span class="token string">"初伏("</span>
+                  <span class="token punctuation">(</span><span class="token car">number-to-string</span> <span class="token punctuation">(</span><span class="token car">1+</span> chufu-gap<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                  <span class="token string">")"</span><span class="token punctuation">)</span>
+        <span class="token punctuation">(</span><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">and</span> <span class="token punctuation">(</span><span class="token car">>=</span> zhongfu-gap <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token car">&lt;</span> mofu-gap <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token punctuation">(</span><span class="token keyword">concat</span> <span class="token string">"中伏("</span>
+                    <span class="token punctuation">(</span><span class="token car">number-to-string</span> <span class="token punctuation">(</span><span class="token car">1+</span> zhongfu-gap<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                    <span class="token string">")"</span><span class="token punctuation">)</span>
+          <span class="token punctuation">(</span><span class="token keyword">concat</span> <span class="token string">"末伏("</span>
+                  <span class="token punctuation">(</span><span class="token car">number-to-string</span> <span class="token punctuation">(</span><span class="token car">1+</span> mofu-gap<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                  <span class="token string">")"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>注意如果夏至当天是庚日，则算第一个庚日，相当于初伏在夏至20天之后。</p>
 <p>另外，<code>cal-china-x</code> 中月和日的天干地支计算有点问题，需要用 <code>Emacs</code> 自带的计算。</p>
 ]]></content>
@@ -3405,9 +3751,9 @@ Defaults to today&#39;s date if DATE is not given.&quot;
         
         <tags>
             
-            <tag> CS </tag>
-            
             <tag> CV </tag>
+            
+            <tag> CS </tag>
             
         </tags>
         
@@ -4174,8 +4520,8 @@ Defaults to today&#39;s date if DATE is not given.&quot;
 <p>3.获取视频下载地址，需要自备梯子。</p>
 <p>4.浏览器下载很慢，用终端中的<code>wget</code>实现下载，Mac OS 需要先<code>brew install wget</code>，然后<code>wegt url</code>。</p>
 <h1 id="从视频中提取音频"><a href="#从视频中提取音频" class="headerlink" title="从视频中提取音频"></a>从视频中提取音频</h1><p>利用<code>ffmpeg</code>，同样需要先<code>brew install ffmpeg</code>。</p>
-<pre><code>ffmpeg -i *.mp4/avi -q:a 0 -map a *.mp3
-</code></pre>]]></content>
+<pre class="line-numbers language-none"><code class="language-none">ffmpeg -i *.mp4&#x2F;avi -q:a 0 -map a *.mp3 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+]]></content>
       
         <categories>
             
@@ -5554,29 +5900,27 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
 <a id="more"></a>
 <p>最近想丰富下生活，最先想到的就是多品尝点北京的美食。作为一个认真的人，吃过就想记下来，但只有饭馆的名字和地址显得太单调了，就想能在地图上显示的话会比较直观。搜了下百度地图的 API，不多说，直接上代码吧。更详细的内容可以参考百度地图 Javascript 的 <a href="http://lbsyun.baidu.com/index.php?title=jspopular">API</a>。</p>
 <p>首先新建一个<code>div</code>：</p>
-<pre><code class="lang-html">    &lt;div style=&quot;min-height: 800px; width: 100%;&quot; id=&quot;map&quot;&gt;
-    &lt;/div&gt;
-</code></pre>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">min-height</span><span class="token punctuation">:</span> 800px<span class="token punctuation">;</span> <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>map<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>然后利用百度地图 API 在<code>div</code>中填充一个地图：</p>
-<pre><code class="lang-javascript">&lt;script type=&quot;text/javascript&quot;&gt;
-        // 百度地图API功能
-        var map = new BMap.Map(&quot;map&quot;);    // 创建Map实例
-        map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
-        //添加地图类型控件
-        map.addControl(new BMap.MapTypeControl(&#123;
-        mapTypes:[
-            BMAP_NORMAL_MAP,
-            BMAP_HYBRID_MAP
-        ]&#125;));
-        map.setCurrentCity(&quot;北京&quot;);          // 设置地图显示的城市 此项是必须设置的
-        map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
-&lt;/script&gt;
-</code></pre>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span><span class="token operator">></span>
+        <span class="token comment">// 百度地图API功能</span>
+        <span class="token keyword">var</span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BMap<span class="token punctuation">.</span>Map</span><span class="token punctuation">(</span><span class="token string">"map"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// 创建Map实例</span>
+        map<span class="token punctuation">.</span><span class="token function">centerAndZoom</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">BMap<span class="token punctuation">.</span>Point</span><span class="token punctuation">(</span><span class="token number">116.404</span><span class="token punctuation">,</span> <span class="token number">39.915</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 初始化地图,设置中心点坐标和地图级别</span>
+        <span class="token comment">//添加地图类型控件</span>
+        map<span class="token punctuation">.</span><span class="token function">addControl</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">BMap<span class="token punctuation">.</span>MapTypeControl</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+        mapTypes<span class="token operator">:</span><span class="token punctuation">[</span>
+            <span class="token constant">BMAP_NORMAL_MAP</span><span class="token punctuation">,</span>
+            <span class="token constant">BMAP_HYBRID_MAP</span>
+        <span class="token punctuation">]</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        map<span class="token punctuation">.</span><span class="token function">setCurrentCity</span><span class="token punctuation">(</span><span class="token string">"北京"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>          <span class="token comment">// 设置地图显示的城市 此项是必须设置的</span>
+        map<span class="token punctuation">.</span><span class="token function">enableScrollWheelZoom</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">//开启鼠标滚轮缩放</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>上述代码直接放在 Hexo Markdown 博文中的<code>raw</code>标签中，即：</p>
-<pre><code>
+<pre class="line-numbers language-none"><code class="language-none">&#123;% raw %&#125;
 上边的代码
-
-</code></pre><p>结果如下：</p>
+&#123;% endraw %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>结果如下：</p>
 
     <div style="min-height: 500px; width: 100%; overflow: hidden; margin:0; font-family:"微软雅黑";" id="map">
     </div>
@@ -5868,11 +6212,9 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
 <a id="more"></a>
 <p>迁移到<code>Spacemacs</code>之后感觉很方便，<code>base package</code>中自带了<code>exec-path-from-shell</code>，可以直接使用 Mac 系统的环境变量。</p>
 <p>前天用<code>org-encrypt-entry</code>把<code>org</code>文件加密的时候报错，查了下<code>homebrew</code>安装的<code>gnupg</code>，发现已经更新到<code>gnupg2</code>了。所以果断自己下载了<code>gnupg 1.4.21</code>的稳定版：</p>
-<pre><code class="lang-shell">brew install gpg1
-</code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">brew <span class="token function">install</span> gpg1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>同时在<code>.spacemacs.d</code>的<code>init.el</code>中加入了<code>gnupg 1.4.21</code>的路径：</p>
-<pre><code class="lang-lisp">(add-to-list &#39;exec-path &quot;/usr/local/opt/gnupg/libexec/gpgbin&quot;)
-</code></pre>
+<pre class="line-numbers language-lisp" data-language="lisp"><code class="language-lisp"><span class="token punctuation">(</span><span class="token car">add-to-list</span> <span class="token quoted-symbol variable symbol">'exec-path</span> <span class="token string">"/usr/local/opt/gnupg/libexec/gpgbin"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>又可以用来<code>gnupg</code>来给<code>org</code>文件加密了。</p>
 ]]></content>
       
@@ -5885,9 +6227,9 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
         
         <tags>
             
-            <tag> Mac </tag>
-            
             <tag> Emacs </tag>
+            
+            <tag> Mac </tag>
             
         </tags>
         
@@ -5966,20 +6308,18 @@ myChart6.setOption(option,true); //当setOption第二个参数为true时，会�
 <p>但这种一键式安装工具极为依赖镜像源，国内的网络在连国外某些镜像时实在是太慢了，所以有很多组织和个人在国内搭建了镜像服务器，造福大众。</p>
 <p><code>Anaconda</code> 是 Python 的一个发行包，这个单词的原意是南美发现的一种巨蟒，可能是由于它包括了很多 Python 的 <code>package</code>所以叫这个名字。<code>Anaconda</code> 的 <code>defaults</code> 镜像源实在是太慢了，清华 TUNA 提供了一个<a href="https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/">国内镜像源</a>，我们要做的就是将这个镜像源作为 <code>Anaconda</code> 的默认镜像源。</p>
 <h1 id="Mac"><a href="#Mac" class="headerlink" title="Mac"></a>Mac</h1><p>Mac 下切换很简单，直接在 <code>terminal</code> 中输入(参考<a href="https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/">清华 TUNA 国内镜像源</a>)：</p>
-<pre><code class="lang-bash">conda config --add channels &#39;https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/&#39;
-conda config --set show_channel_urls yes
-</code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda config --add channels <span class="token string">'https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/'</span>
+conda config --set show_channel_urls <span class="token function">yes</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <h1 id="Win"><a href="#Win" class="headerlink" title="Win"></a>Win</h1><p>Win 下稍微麻烦一些，如果直接在 <code>cmd</code> 中输入上述命令，<code>conda install</code> 的时候会报错：</p>
 <blockquote>
 <p>Error: Could not find anaconda.org user ‘https:</p>
 </blockquote>
 <p>方法是修改 <code>.condarc</code> 文件为以下形式(参考<a href="http://blog.5ibc.net/p/87204.html">该网址</a>)：</p>
-<pre><code class="lang-bash">channels:
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">channels:
 - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
 - defaults
 
-show_channel_urls: yes
-</code></pre>
+show_channel_urls: <span class="token function">yes</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 ]]></content>
       
         <categories>
@@ -6036,8 +6376,7 @@ show_channel_urls: yes
 <a id="more"></a>
 <p>新的默认配色名称为 <code>parula</code>，意为北美生活的一种森莺。</p>
 <p>如果想了解 <code>parula</code> 的配色方案，可以在 MATLAB 中输入以下命令：</p>
-<pre><code class="lang-matlab">get(gca,&#39;colororder&#39;)
-</code></pre>
+<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token function">get</span><span class="token punctuation">(</span>gca<span class="token punctuation">,</span><span class="token string">'colororder'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>默认配色 <code>parula</code> 的前七种颜色如下：</p>
 
 <table border="1px" align="center">

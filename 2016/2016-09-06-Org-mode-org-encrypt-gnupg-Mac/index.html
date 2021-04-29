@@ -123,11 +123,9 @@
 <a id="more"></a>
 <p>迁移到<code>Spacemacs</code>之后感觉很方便，<code>base package</code>中自带了<code>exec-path-from-shell</code>，可以直接使用 Mac 系统的环境变量。</p>
 <p>前天用<code>org-encrypt-entry</code>把<code>org</code>文件加密的时候报错，查了下<code>homebrew</code>安装的<code>gnupg</code>，发现已经更新到<code>gnupg2</code>了。所以果断自己下载了<code>gnupg 1.4.21</code>的稳定版：</p>
-<pre><code class="lang-shell">brew install gpg1
-</code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">brew <span class="token function">install</span> gpg1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>同时在<code>.spacemacs.d</code>的<code>init.el</code>中加入了<code>gnupg 1.4.21</code>的路径：</p>
-<pre><code class="lang-lisp">(add-to-list &#39;exec-path &quot;/usr/local/opt/gnupg/libexec/gpgbin&quot;)
-</code></pre>
+<pre class="line-numbers language-lisp" data-language="lisp"><code class="language-lisp"><span class="token punctuation">(</span><span class="token car">add-to-list</span> <span class="token quoted-symbol variable symbol">'exec-path</span> <span class="token string">"/usr/local/opt/gnupg/libexec/gpgbin"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>又可以用来<code>gnupg</code>来给<code>org</code>文件加密了。</p>
 	  
 	</div>
@@ -226,7 +224,7 @@
 	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
     <ul id="tags" class="tag_box list-unstyled collapse in">	  
 	    
-  <li><a href="/tags/Mac/">Mac<span>4</span></a></li> <li><a href="/tags/Emacs/">Emacs<span>2</span></a></li>
+  <li><a href="/tags/Emacs/">Emacs<span>2</span></a></li> <li><a href="/tags/Mac/">Mac<span>4</span></a></li>
     </ul>
 	</div>
 	
@@ -302,9 +300,26 @@ var disqus_shortname = 'bigbossjiang';
    </script>
 
 
-<!-- syntax highlighting --><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<!-- syntax highlighting -->
+
+
 <script type="text/x-mathjax-config">
-  MathJax.Hub.Config({{ JSON.stringify(config) }});
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
 </script>
 
 <script type="text/x-mathjax-config">
@@ -316,11 +331,9 @@ var disqus_shortname = 'bigbossjiang';
   });
 </script>
 
-<script type="text/javascript" src="{{ src }}">
+<script type="text/javascript" src="custom_mathjax_source">
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->
-
-
 </body>
 </html>

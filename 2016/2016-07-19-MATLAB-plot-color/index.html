@@ -123,8 +123,7 @@
 <a id="more"></a>
 <p>新的默认配色名称为 <code>parula</code>，意为北美生活的一种森莺。</p>
 <p>如果想了解 <code>parula</code> 的配色方案，可以在 MATLAB 中输入以下命令：</p>
-<pre><code class="lang-matlab">get(gca,&#39;colororder&#39;)
-</code></pre>
+<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token function">get</span><span class="token punctuation">(</span>gca<span class="token punctuation">,</span><span class="token string">'colororder'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>默认配色 <code>parula</code> 的前七种颜色如下：</p>
 
 <table border="1px" align="center">
@@ -344,9 +343,26 @@ var disqus_shortname = 'bigbossjiang';
    </script>
 
 
-<!-- syntax highlighting --><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<!-- syntax highlighting -->
+
+
 <script type="text/x-mathjax-config">
-  MathJax.Hub.Config({{ JSON.stringify(config) }});
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
 </script>
 
 <script type="text/x-mathjax-config">
@@ -358,11 +374,9 @@ var disqus_shortname = 'bigbossjiang';
   });
 </script>
 
-<script type="text/javascript" src="{{ src }}">
+<script type="text/javascript" src="custom_mathjax_source">
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->
-
-
 </body>
 </html>
