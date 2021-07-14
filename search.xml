@@ -12,7 +12,7 @@
 </div>
 
 <a id="more"></a>
-<h1 id="主要指标"><a href="#主要指标" class="headerlink" title="主要指标"></a>主要指标</h1><p>本月末本金净增，净收益，目前浮亏，收益率。</p>
+<h1 id="主要指标"><a href="#主要指标" class="headerlink" title="主要指标"></a>主要指标</h1><p>本月末本金 95000 元，比上月增加 35000 元，目前浮盈 1500.47 元，比上月减少 700 元。以 2021.6.1 日账户净值为基准值 100 计算，目前账户净值 99.15，和上月比减少 0.85%。</p>
 <h1 id="盘面回顾"><a href="#盘面回顾" class="headerlink" title="盘面回顾"></a>盘面回顾</h1><ul>
 <li>2021.6.1，市场利率定价自律机制工作会议召开，会议内容之一是审议通过了优化存款利率自律管理方案，将现有基准利率 × 倍数改为基准利率 + 基点方式。</li>
 <li>2021.6.20，金融时报发表评论《没有根据的所谓流动性预测可以休矣》，提到货币政策稳字当头，央行会保持流动性合理充裕，市场对加息预期减弱，银行股全线下跌。</li>
@@ -20,7 +20,10 @@
 <li>2021.6.22，美股银行股大涨带动 A 股招商银行、宁波银行、平安银行等头部银行股大涨。</li>
 <li>2021.6.28，A 股银行继续全面熄火。</li>
 </ul>
-<h1 id="后续展望"><a href="#后续展望" class="headerlink" title="后续展望"></a>后续展望</h1>
+
+<div id="self_profit" style="height:400px"></div>
+
+
 <div id="self_hs300_202106" style="height:400px"></div>
 
 
@@ -41,14 +44,14 @@
         },
         series: [{
             name: '个人账户',
-            data: [100, 98],
+            data: [100, 99.15],
             type: 'line',
             color: '#660874',
             smooth: true
         },
         {
             name: '沪深 300',
-            data: [100, 102],
+            data: [100, 97.98],
             type: 'line',
             color: '#ec0000',
             smooth: true
@@ -63,7 +66,6 @@
 </script>
 
 
-<script src="https://cdn.jsdelivr.net/npm/echarts@5.1.2/dist/echarts.js"></script>
 <script type="text/javascript">
     var myChart = echarts.init(document.getElementById('hz_202106'));
 
@@ -156,6 +158,9 @@
         ['2021/06/23',3559.4,3566.22,3577.47,3549.85],
         ['2021/06/24',3568.58,3566.65,3570.49,3548.82],
         ['2021/06/25',3567.38,3607.56,3614.3,3564.52],
+        ['2021/06/28',3612.25,3606.37,3614.36,3594.22],
+        ['2021/06/29',3601.68,3573.18,3601.83,3570.52],
+        ['2021/06/30',3572.62,3591.2,3594.12,3569.5],
     ]);
 
     function splitData(rawData) {
@@ -248,31 +253,6 @@
                     borderColor: upBorderColor,
                     borderColor0: downBorderColor
                 },
-                markPoint: {
-                    symbol: 'diamond',
-                    label: {
-                        normal: {
-                            formatter: function (param) {
-                                return param != null ? param.name : '';
-                            }
-                        }
-                    },
-                    data: [
-                        {
-                            name: '央行\n降息',
-                            coord: ['2013/5/31', 2280],
-                            value: 2300,
-                            itemStyle: {
-                                color: upColor,
-                            }
-                        },
-                    ],
-                    tooltip: {
-                        formatter: function (param) {
-                            return param.name;
-                        }
-                    }
-                },
                 markLine: {
                     symbol: ['none', 'none'],
                     data: [
@@ -347,7 +327,143 @@
 
 </script>
 
+
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.1.2/dist/echarts.js"></script>
+<script type="text/javascript">
+    var self_profit = echarts.init(document.getElementById('self_profit'));
+
+    option = {
+    color: ['#FFBF00', '#FF0087'],
+    title: {
+        text: '本金浮盈图'
+    },
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'cross',
+            label: {
+                backgroundColor: '#6a7985'
+            }
+        }
+    },
+    legend: {
+        data: ['本金', '浮盈']
+    },
+    toolbox: {
+        feature: {
+            saveAsImage: {}
+        }
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: [
+        {
+            type: 'category',
+            boundaryGap: false,
+            data: ['2021-05', '2021-06']
+        }
+    ],
+    yAxis: [
+        {
+            type: 'value'
+        }
+    ],
+    series: [
+        {
+            name: '本金',
+            type: 'line',
+            stack: '总量',
+            smooth: true,
+            lineStyle: {
+                width: 0
+            },
+            showSymbol: false,
+            label: {
+                show: true,
+                position: 'top'
+            },
+            areaStyle: {
+                opacity: 0.8,
+                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                    offset: 0,
+                    color: 'rgba(255, 191, 0)'
+                }, {
+                    offset: 1,
+                    color: 'rgba(224, 62, 76)'
+                }])
+            },
+            emphasis: {
+                focus: 'series'
+            },
+            data: [60000, 95000]
+        },
+        {
+            name: '浮盈',
+            type: 'line',
+            stack: '总量',
+            smooth: true,
+            lineStyle: {
+                width: 0
+            },
+            showSymbol: false,
+            areaStyle: {
+                opacity: 0.8,
+                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                    offset: 0,
+                    color: 'rgba(255, 0, 135)'
+                }, {
+                    offset: 1,
+                    color: 'rgba(135, 0, 157)'
+                }])
+            },
+            emphasis: {
+                focus: 'series'
+            },
+            data: [2200, 1500]
+        },
+    ]
+    };
+
+    self_profit.setOption(option, true); //当setOption第二个参数为true时，会阻止数据合并
+</script>
+
 ]]></content>
+      
+        <categories>
+            
+            <category> 生活 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 投资 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[《股市进阶之道》读书笔记]]></title>
+      <url>http://tommyjiang.github.io/2021/2021-06-29-advance-in-stock-market/</url>
+      <content type="html"><![CDATA[
+<div class="alert alert-info"><i class="fa fa-info"></i>
+水晶苍蝇拍李杰的神书
+</div>
+
+<a id="more"></a>
+<h1 id="投资"><a href="#投资" class="headerlink" title="投资"></a>投资</h1><p>巴菲特说过：投资很简单，但并不容易。投资看起来门槛低，但存在很多困难。</p>
+<ol>
+<li>企业经营的不确定性。真正值得长期持有的伟大企业是极少数。</li>
+<li>证券市场定价的复杂性。市场短期内不一定惩罚做错的行为，奖励做对的行为。</li>
+<li>市场对人性弱点的放大。</li>
+</ol>
+<h1 id="价值"><a href="#价值" class="headerlink" title="价值"></a>价值</h1><h1 id="市场"><a href="#市场" class="headerlink" title="市场"></a>市场</h1>]]></content>
       
         <categories>
             
@@ -916,7 +1032,7 @@
 <li>投机基金：我们不会爱上任何东西，每天早晨起来，每样东西都是要出售的，包括证券组合里的每一只股票，乃至我的西服和领带。</li>
 </ul>
 <h1 id="名句摘录"><a href="#名句摘录" class="headerlink" title="名句摘录"></a>名句摘录</h1><h2 id="投资和投机"><a href="#投资和投机" class="headerlink" title="投资和投机"></a>投资和投机</h2><ul>
-<li>故意以高于内在价值的价格购买股票，同时期待能够很快以更高价值卖出的行为，这种行为应该被做投机。(Consciously paying more for a stock than its calculated value-in the hope that it can soon be sold for a still-higher price-should be labeled speculation.)</li>
+<li>故意以高于内在价值的价格购买股票，同时期待能够很快以更高价值卖出的行为，这种行为应该被叫做投机。(Consciously paying more for a stock than its calculated value-in the hope that it can soon be sold for a still-higher price-should be labeled speculation.)</li>
 </ul>
 <h2 id="选股"><a href="#选股" class="headerlink" title="选股"></a>选股</h2><h2 id="耐心持股"><a href="#耐心持股" class="headerlink" title="耐心持股"></a>耐心持股</h2><ul>
 <li>我不会只为一个诱人的价格，就把由我喜欢和敬佩的人经营的好公司卖掉。(I certainly have no desire to sell a good controlled business run by people I like and admire, merely to obtain a fancy price.)</li>
@@ -1156,7 +1272,15 @@ ETF 相关资料整理
 </div>
 
 <a id="more"></a>
-<h1 id="健康"><a href="#健康" class="headerlink" title="健康"></a>健康</h1>
+<h1 id="健康"><a href="#健康" class="headerlink" title="健康"></a>健康</h1><ul>
+<li>6 月底减到 80 公斤，差 0.30 公斤达到目标。</li>
+<li>7 月底减到 79 公斤</li>
+<li>8 月底减到 78 公斤</li>
+<li>9 月底减到 77 公斤</li>
+<li>10 月底减到 76 公斤</li>
+<li>11 月底减到 75 公斤</li>
+</ul>
+
 <div id="self_weight" style="height:400px"></div>
 
 <h1 id="文艺"><a href="#文艺" class="headerlink" title="文艺"></a>文艺</h1><h2 id="电影"><a href="#电影" class="headerlink" title="电影"></a>电影</h2><div class="douban-card-block">
@@ -1241,174 +1365,16 @@ ETF 相关资料整理
 </style>
 <div class="douban-card-block">
 	<a class="douban-card" href="https://movie.douban.com/subject/35161768">
-		<div class="douban-card-bgimg" style="background-image: url('https://images.weserv.nl/?url=https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2642900423.jpg');"></div>
+		<div class="douban-card-bgimg" style="background-image: url('https://images.weserv.nl/?url=https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2642899925.jpg');"></div>
 		<div class="douban-card-left">
-			<div class="douban-card-img" style="background-image: url('https://images.weserv.nl/?url=https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2642900423.jpg');"></div>
+			<div class="douban-card-img" style="background-image: url('https://images.weserv.nl/?url=https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2642899925.jpg');"></div>
 		</div>
 		<div class="douban-card-right">
 			<div class="douban-card-item"><span>电影名: </span><strong>夏日友晴天Luca(2021)</strong></div>
 			<div class="douban-card-item"><span>导演: </span><span>埃里康·卡萨罗萨</span></div>
 			<div class="douban-card-item"><span>主演: </span><span>雅各布·特伦布莱/杰克·迪伦·格雷泽</span></div>
-			<div class="douban-card-item"><span>上映时间: </span><span>2021-06(中国大陆)</span></div>
+			<div class="douban-card-item"><span>上映时间: </span><span>2021-07(中国大陆)</span></div>
 			<div class="douban-card-item"><span>评分: </span><span>7.3</span></div>
-		</div>
-	</a>
-</div>
-<style>
-	.douban-card-block {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
-		max-height: 400px;
-	}
-	.douban-card {
-		display: flex;
-		margin: 30px 10px;
-		padding: 15px;
-		border-radius: 10px;
-		position: relative;
-		justify-content: center;
-		align-items: center;
-		overflow: hidden;
-		color: antiquewhite;
-		text-decoration: none;
-	}
-	.douban-card:hover {
-		text-decoration: none;
-	}
-	.douban-card-bgimg {
-		position: absolute;
-		width: 115%;
-		height: 115%;
-		filter: blur(15px) brightness(0.6);
-		background-size: 100%;
-		background-position: center;
-		background-repeat: no-repeat;
-	}
-	.douban-card-img {
-		position: relative;
-		height: 130px;
-		width: 80px;
-		background-size: 100%;
-		background-position: center;
-		background-repeat: no-repeat;
-	}
-	.douban-card-img {
-		position: relative;
-		height: 130px;
-		width: 80px;
-	}
-	.douban-card-left {
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-	.douban-card-right {
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		margin-left: 12px;
-		font-size: 16px;
-		font-family: 'Courier New', Courier, monospace;
-		line-height: 1.3;
-		color: antiquewhite;
-	}
-	.douban-card-item {
-		margin-top: 4px;
-	}
-</style>
-<h2 id="读书"><a href="#读书" class="headerlink" title="读书"></a>读书</h2><div class="douban-card-block">
-	<a class="douban-card" href="https://book.douban.com/subject/35342914">
-		<div class="douban-card-bgimg" style="background-image: url('https://images.weserv.nl/?url=https://img2.doubanio.com/view/subject/s/public/s33862182.jpg');"></div>
-		<div class="douban-card-left">
-			<div class="douban-card-img" style="background-image: url('https://images.weserv.nl/?url=https://img2.doubanio.com/view/subject/s/public/s33862182.jpg');"></div>
-		</div>
-		<div class="douban-card-right" style="line-height: 1.7;">
-			<div class="douban-card-item"><span>书名: </span><strong>追寻价值之路</strong></div>
-			<div class="douban-card-item"><span>作者: </span><span>燕翔</span></div>
-			<div class="douban-card-item"><span>出版年份: </span><span>2021-1</span></div>
-			<div class="douban-card-item"><span>评分: </span><span>8.6</span></div>
-		</div>
-	</a>
-</div>
-<style>
-	.douban-card-block {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
-		max-height: 400px;
-	}
-	.douban-card {
-		display: flex;
-		margin: 30px 10px;
-		padding: 15px;
-		border-radius: 10px;
-		position: relative;
-		justify-content: center;
-		align-items: center;
-		overflow: hidden;
-		color: antiquewhite;
-		text-decoration: none;
-	}
-	.douban-card:hover {
-		text-decoration: none;
-	}
-	.douban-card-bgimg {
-		position: absolute;
-		width: 115%;
-		height: 115%;
-		filter: blur(15px) brightness(0.6);
-		background-size: 100%;
-		background-position: center;
-		background-repeat: no-repeat;
-	}
-	.douban-card-img {
-		position: relative;
-		height: 130px;
-		width: 80px;
-		background-size: 100%;
-		background-position: center;
-		background-repeat: no-repeat;
-	}
-	.douban-card-img {
-		position: relative;
-		height: 130px;
-		width: 80px;
-	}
-	.douban-card-left {
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-	.douban-card-right {
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		margin-left: 12px;
-		font-size: 16px;
-		font-family: 'Courier New', Courier, monospace;
-		line-height: 1.3;
-		color: antiquewhite;
-	}
-	.douban-card-item {
-		margin-top: 4px;
-	}
-</style>
-<div class="douban-card-block">
-	<a class="douban-card" href="https://book.douban.com/subject/35341441">
-		<div class="douban-card-bgimg" style="background-image: url('https://images.weserv.nl/?url=https://img2.doubanio.com/view/subject/s/public/s33813841.jpg');"></div>
-		<div class="douban-card-left">
-			<div class="douban-card-img" style="background-image: url('https://images.weserv.nl/?url=https://img2.doubanio.com/view/subject/s/public/s33813841.jpg');"></div>
-		</div>
-		<div class="douban-card-right" style="line-height: 1.7;">
-			<div class="douban-card-item"><span>书名: </span><strong>巴菲特内部讲话</strong></div>
-			<div class="douban-card-item"><span>作者: </span><span>孙力科编著</span></div>
-			<div class="douban-card-item"><span>出版年份: </span><span>2020-9</span></div>
-			<div class="douban-card-item"><span>评分: </span><span></span></div>
 		</div>
 	</a>
 </div>
@@ -1481,11 +1447,15 @@ ETF 相关资料整理
 <div id="happy" style="height:500px"></div>
 
 
-<script src="https://cdn.jsdelivr.net/npm/echarts@5.1.2/dist/echarts.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.1.2/echarts.js"></script>
 <script type="text/javascript">
     var self_weight = echarts.init(document.getElementById('self_weight'));
     <!-- 填空 体重 -->
-    var data = [["2021-06-27", 80.4], ["2021-06-28", 80.7]
+    var data = [["2021-06-27", 80.4], ["2021-06-28", 80.7], ["2021-06-29", 80.75], ["2021-06-30", 80.30],
+                ["2021-07-01", 80.3], ["2021-07-02", 79.95], ["2021-07-03", 79.95], ["2021-07-04", 80.00],
+                ["2021-07-05", 80.3], ["2021-07-06", 80.30], ["2021-07-07", 79.75], ["2021-07-08", 79.95],
+                ["2021-07-09", 79.95], ["2021-07-10", 79.95], ["2021-07-11", 79.95], ["2021-07-12", 80.65],
+                ["2021-07-13", 80.5], ["2021-07-14", 80.1],
                 ]
     var comments = {"2021-06-27": "海底捞火锅",
                    }
@@ -1586,18 +1556,34 @@ ETF 相关资料整理
 </script>
 
 
-<script src="https://cdn.jsdelivr.net/npm/echarts@5.1.2/dist/echarts.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/echarts@5.1.2/dist/extension/bmap.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.1.2/echarts.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.1.2/extension/bmap.js"></script>
 <script src="http://api.map.baidu.com/api?v=2.0&ak=x2V7KanMxVA2GuK7oFHPOiGytFSXWoyN"></script>
 <script type="text/javascript">
     var happy = echarts.init(document.getElementById('happy'));
 
     var data = [
         {name: '海底捞(国奥村店)', value: 3},
+        {name: '胜博殿(西单店)', value: 2},
+        {name: 'Bada KITCHEN(中关村店)', value: 1},
+        {name: '四世同堂(魏公村店)', value: 1},
+        {name: '泸州幺妹私房菜', value: 1},
+        {name: '芙南人', value: 1},
+        {name: '花盐街(丽泽店)', value: 1},
+        {name: '金谷园饺子馆(北师大店)', value: 1},
+        {name: '八九零邀', value: 1},
     ];
 
     var geoCoordMap = {
-        '海底捞(国奥村店)':[116.387882,40.015684],
+        '海底捞(国奥村店)': [116.387882,40.015684],
+        '胜博殿(西单店)': [116.379939,39.915753],
+        'Bada KITCHEN(中关村店)': [116.328309,39.979343],
+        '四世同堂(魏公村店)': [116.33022,39.965244],
+        '泸州幺妹私房菜': [116.477509,39.994897],
+        '芙南人': [116.489263,39.995472],
+        '花盐街(丽泽店)': [116.341344,39.872796],
+        '金谷园饺子馆(北师大店)': [116.367707,39.972617],
+        '八九零邀': [116.359496,39.94731],
     };
 
     var convertData = function (data) {
@@ -1616,12 +1602,12 @@ ETF 相关资料整理
 
     option = {
         tooltip : {
-            trigger: 'item'
+            trigger: 'item',
         },
         bmap: {
-                center: [116.4, 39.58],
+                center: [116.4, 39.63],
                 zoom: 12,
-                roam: false,
+                roam: true,
         },
         series : [
             {
@@ -1644,7 +1630,7 @@ ETF 相关资料整理
                 },
                 emphasis: {
                     label: {
-                        show: true
+                        show: false,
                     }
                 }
             },

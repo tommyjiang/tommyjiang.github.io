@@ -125,7 +125,7 @@
 </div>
 
 <a id="more"></a>
-<h1 id="主要指标"><a href="#主要指标" class="headerlink" title="主要指标"></a>主要指标</h1><p>本月末本金净增，净收益，目前浮亏，收益率。</p>
+<h1 id="主要指标"><a href="#主要指标" class="headerlink" title="主要指标"></a>主要指标</h1><p>本月末本金 95000 元，比上月增加 35000 元，目前浮盈 1500.47 元，比上月减少 700 元。以 2021.6.1 日账户净值为基准值 100 计算，目前账户净值 99.15，和上月比减少 0.85%。</p>
 <h1 id="盘面回顾"><a href="#盘面回顾" class="headerlink" title="盘面回顾"></a>盘面回顾</h1><ul>
 <li>2021.6.1，市场利率定价自律机制工作会议召开，会议内容之一是审议通过了优化存款利率自律管理方案，将现有基准利率 × 倍数改为基准利率 + 基点方式。</li>
 <li>2021.6.20，金融时报发表评论《没有根据的所谓流动性预测可以休矣》，提到货币政策稳字当头，央行会保持流动性合理充裕，市场对加息预期减弱，银行股全线下跌。</li>
@@ -133,7 +133,10 @@
 <li>2021.6.22，美股银行股大涨带动 A 股招商银行、宁波银行、平安银行等头部银行股大涨。</li>
 <li>2021.6.28，A 股银行继续全面熄火。</li>
 </ul>
-<h1 id="后续展望"><a href="#后续展望" class="headerlink" title="后续展望"></a>后续展望</h1>
+
+<div id="self_profit" style="height:400px"></div>
+
+
 <div id="self_hs300_202106" style="height:400px"></div>
 
 
@@ -154,14 +157,14 @@
         },
         series: [{
             name: '个人账户',
-            data: [100, 98],
+            data: [100, 99.15],
             type: 'line',
             color: '#660874',
             smooth: true
         },
         {
             name: '沪深 300',
-            data: [100, 102],
+            data: [100, 97.98],
             type: 'line',
             color: '#ec0000',
             smooth: true
@@ -176,7 +179,6 @@
 </script>
 
 
-<script src="https://cdn.jsdelivr.net/npm/echarts@5.1.2/dist/echarts.js"></script>
 <script type="text/javascript">
     var myChart = echarts.init(document.getElementById('hz_202106'));
 
@@ -269,6 +271,9 @@
         ['2021/06/23',3559.4,3566.22,3577.47,3549.85],
         ['2021/06/24',3568.58,3566.65,3570.49,3548.82],
         ['2021/06/25',3567.38,3607.56,3614.3,3564.52],
+        ['2021/06/28',3612.25,3606.37,3614.36,3594.22],
+        ['2021/06/29',3601.68,3573.18,3601.83,3570.52],
+        ['2021/06/30',3572.62,3591.2,3594.12,3569.5],
     ]);
 
     function splitData(rawData) {
@@ -361,31 +366,6 @@
                     borderColor: upBorderColor,
                     borderColor0: downBorderColor
                 },
-                markPoint: {
-                    symbol: 'diamond',
-                    label: {
-                        normal: {
-                            formatter: function (param) {
-                                return param != null ? param.name : '';
-                            }
-                        }
-                    },
-                    data: [
-                        {
-                            name: '央行\n降息',
-                            coord: ['2013/5/31', 2280],
-                            value: 2300,
-                            itemStyle: {
-                                color: upColor,
-                            }
-                        },
-                    ],
-                    tooltip: {
-                        formatter: function (param) {
-                            return param.name;
-                        }
-                    }
-                },
                 markLine: {
                     symbol: ['none', 'none'],
                     data: [
@@ -460,6 +440,110 @@
 
 </script>
 
+
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.1.2/dist/echarts.js"></script>
+<script type="text/javascript">
+    var self_profit = echarts.init(document.getElementById('self_profit'));
+
+    option = {
+    color: ['#FFBF00', '#FF0087'],
+    title: {
+        text: '本金浮盈图'
+    },
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'cross',
+            label: {
+                backgroundColor: '#6a7985'
+            }
+        }
+    },
+    legend: {
+        data: ['本金', '浮盈']
+    },
+    toolbox: {
+        feature: {
+            saveAsImage: {}
+        }
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: [
+        {
+            type: 'category',
+            boundaryGap: false,
+            data: ['2021-05', '2021-06']
+        }
+    ],
+    yAxis: [
+        {
+            type: 'value'
+        }
+    ],
+    series: [
+        {
+            name: '本金',
+            type: 'line',
+            stack: '总量',
+            smooth: true,
+            lineStyle: {
+                width: 0
+            },
+            showSymbol: false,
+            label: {
+                show: true,
+                position: 'top'
+            },
+            areaStyle: {
+                opacity: 0.8,
+                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                    offset: 0,
+                    color: 'rgba(255, 191, 0)'
+                }, {
+                    offset: 1,
+                    color: 'rgba(224, 62, 76)'
+                }])
+            },
+            emphasis: {
+                focus: 'series'
+            },
+            data: [60000, 95000]
+        },
+        {
+            name: '浮盈',
+            type: 'line',
+            stack: '总量',
+            smooth: true,
+            lineStyle: {
+                width: 0
+            },
+            showSymbol: false,
+            areaStyle: {
+                opacity: 0.8,
+                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                    offset: 0,
+                    color: 'rgba(255, 0, 135)'
+                }, {
+                    offset: 1,
+                    color: 'rgba(135, 0, 157)'
+                }])
+            },
+            emphasis: {
+                focus: 'series'
+            },
+            data: [2200, 1500]
+        },
+    ]
+    };
+
+    self_profit.setOption(option, true); //当setOption第二个参数为true时，会阻止数据合并
+</script>
+
 	  
 	</div>
 
@@ -478,7 +562,7 @@
         <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
 
 		
-		   <li class="next"><a href="/2021/2021-05-09-cmb-2020-annual-report/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+		   <li class="next"><a href="/2021/2021-06-29-advance-in-stock-market/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
         
 	
 </ul>
@@ -544,7 +628,7 @@
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    <li><a href="/categories/生活/">生活<span>56</span></a></li>
+    <li><a href="/categories/生活/">生活<span>57</span></a></li>
   </li>
 
     </ul>
@@ -557,7 +641,7 @@
 	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
     <ul id="tags" class="tag_box list-unstyled collapse in">	  
 	    
-  <li><a href="/tags/投资/">投资<span>7</span></a></li>
+  <li><a href="/tags/投资/">投资<span>8</span></a></li>
     </ul>
 	</div>
 	
