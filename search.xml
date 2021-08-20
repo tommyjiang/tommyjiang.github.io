@@ -1681,7 +1681,7 @@ ETF 相关资料整理
 <a id="more"></a>
 <h1 id="健康"><a href="#健康" class="headerlink" title="健康"></a>健康</h1><ul>
 <li>6 月底减到 80 公斤，差 0.30 公斤达到目标。</li>
-<li>7 月底减到 79 公斤</li>
+<li>7 月底减到 79 公斤，四杯茶颜 + 小龙虾加成，基本实现目标，继续努力。</li>
 <li>8 月底减到 78 公斤</li>
 <li>9 月底减到 77 公斤</li>
 <li>10 月底减到 76 公斤</li>
@@ -1772,16 +1772,16 @@ ETF 相关资料整理
 </style>
 <div class="douban-card-block">
 	<a class="douban-card" href="https://movie.douban.com/subject/35161768">
-		<div class="douban-card-bgimg" style="background-image: url('https://images.weserv.nl/?url=https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2642899925.jpg');"></div>
+		<div class="douban-card-bgimg" style="background-image: url('https://images.weserv.nl/?url=https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2675958609.jpg');"></div>
 		<div class="douban-card-left">
-			<div class="douban-card-img" style="background-image: url('https://images.weserv.nl/?url=https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2642899925.jpg');"></div>
+			<div class="douban-card-img" style="background-image: url('https://images.weserv.nl/?url=https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2675958609.jpg');"></div>
 		</div>
 		<div class="douban-card-right">
 			<div class="douban-card-item"><span>电影名: </span><strong>夏日友晴天Luca(2021)</strong></div>
 			<div class="douban-card-item"><span>导演: </span><span>埃里康·卡萨罗萨</span></div>
 			<div class="douban-card-item"><span>主演: </span><span>雅各布·特伦布莱/杰克·迪伦·格雷泽</span></div>
-			<div class="douban-card-item"><span>上映时间: </span><span>2021-07(中国大陆)</span></div>
-			<div class="douban-card-item"><span>评分: </span><span>7.3</span></div>
+			<div class="douban-card-item"><span>上映时间: </span><span>2021-08-20(中国大陆)</span></div>
+			<div class="douban-card-item"><span>评分: </span><span>7.2</span></div>
 		</div>
 	</a>
 </div>
@@ -1866,22 +1866,43 @@ ETF 相关资料整理
                 ["2021-07-17", 79.75], ["2021-07-18", 80.05], ["2021-07-19", 80.25], ["2021-07-20", 79.95],
                 ["2021-07-21", 79.55], ["2021-07-22", 79.15], ["2021-07-23", 79.25], ["2021-07-24", 79.30],
                 ["2021-07-25", 79.05], ["2021-07-26", 78.85], ["2021-07-27", 78.40], ["2021-07-28", 78.50],
-                ["2021-07-29", 78.35], ["2021-07-30", 78.30],
+                ["2021-07-29", 78.35], ["2021-07-30", 78.30], ["2021-07-31", 78.70],
+                ["2021-08-01", 79.00], ["2021-08-02", 79.35], ["2021-08-03", 79.30], ["2021-08-04", 79.35],
+                ["2021-08-05", 78.90], ["2021-08-06", 78.70], ["2021-08-07", 78.60], ["2021-08-08", 79.90],
+                ["2021-08-09", 79.60], ["2021-08-10", 79.50], ["2021-08-11", 79.00], ["2021'08-12", 79.00],
+                ["2021-08-13", 79.30], ["2021-08-14", 79.50], ["2021-08-15", 79.30], ["2021'08-16", 79.50],
+                ["2021-08-17", 79.30], ["2021-08-18", 79.00], ["2021-08-19", 79.00], ["2021'08-20", 78.60],
                 ]
+    var xgdata = [["2021-06-27", 85.0], ["2021-06-28", 85.0], ["2021-06-29", 85.0], ["2021-06-30", 85.0],
+                  ["2021-07-01", 85.0], ["2021-07-02", 85.0], ["2021-07-03", 85.0], ["2021-07-04", 85.0],
+                  ["2021-07-05", 85.0], ["2021-07-06", 85.0], ["2021-07-07", 85.0], ["2021-07-08", 85.0],
+                  ["2021-07-09", 85.0], ["2021-07-10", 85.0], ["2021-07-11", 85.0], ["2021-07-12", 85.0],
+                  ["2021-07-13", 85.0], ["2021-07-14", 85.0], ["2021-07-15", 85.0], ["2021-07-16", 85.0],
+                  ["2021-07-17", 85.0], ["2021-07-18", 85.0], ["2021-07-19", 85.0], ["2021-07-20", 85.0],
+                  ["2021-07-21", 85.0], ["2021-07-22", 85.0], ["2021-07-23", 85.0], ["2021-07-24", 85.0],
+                  ["2021-07-25", 85.0], ["2021-07-26", 85.0], ["2021-07-27", 85.0], ["2021-07-28", 85.0],
+                  ["2021-07-29", 85.0], ["2021-07-30", 85.0], ["2021-07-31", 85.0],
+                  ["2021-08-01", 85.0], ["2021-08-02", 85.0], ["2021-08-03", 85.0], ["2021-08-04", 85.9],
+                  ["2021-08-05", 85.9], ["2021-08-06", 85.9], ["2021-08-07", 85.9], ["2021-08-08", 85.9],
+                  ["2021-08-09", 85.9], ["2021-08-10", 85.9], ["2021-08-11", 85.9], ["2021-08-12", 86.6],
+                  ["2021-08-13", 86.20], ["2021-08-14", 86.20], ["2021-08-15", 86.20], ["2021'08-16", 85.90],
+                  ["2021-08-17", 85.00], ["2021-08-18", 85.00], ["2021-08-19", 84.90], ["2021'08-20", 84.40],
+                  ]
+
     var comments = {"2021-06-27": "海底捞火锅",
                    }
     var option = {
          title: {text: '2021 体重'},
          tooltip: {
              trigger: 'axis',
-             formatter: function (params, ticket, callback) {
+             /* formatter: function (params, ticket, callback) {
                            var res='时间：' + params[0].name + '<br>'
                            res += '体重：' + params[0].data + '<br>'
                            if(comments[params[0].name] != null){
                                res += '注释：' + comments[params[0].name]
                            }
                            return res
-             }
+             } */
          },
          xAxis: {
              data: data.map(function (item) {
@@ -1889,8 +1910,8 @@ ETF 相关资料整理
              })
          },
          yAxis: {
-             min: 72,
-             max: 82,
+             min: 71,
+             max: 87,
              splitLine: {
                  show: false
              }
@@ -1937,12 +1958,22 @@ ETF 相关资料整理
                  color: '#999'
              }
         },
-        series: {
-            name: '2021 体重',
-            type: 'line',
-            data: data.map(function (item) {
-                return item[1];
-            }),
+        series: [
+                {
+                  name: '自己体重',
+                  type: 'line',
+                  data: data.map(function (item) {
+                      return item[1];
+                  }),
+                },
+                {
+                  name: '小哥体重',
+                  type: 'line',
+                  data: xgdata.map(function (item) {
+                      return item[1];
+                  }),
+                },
+        ],
             markLine: {
                 symbolSize: 0,
                 label: {
@@ -1960,7 +1991,6 @@ ETF 相关资料整理
                     yAxis: 80
                 }]
             }
-        }
     };
     self_weight.setOption(option, true); //当setOption第二个参数为true时，会阻止数据合并
 
@@ -5303,9 +5333,9 @@ Defaults to today's date if <span class="token argument">DATE</span> is not give
         
         <tags>
             
-            <tag> CS </tag>
-            
             <tag> CV </tag>
+            
+            <tag> CS </tag>
             
         </tags>
         
