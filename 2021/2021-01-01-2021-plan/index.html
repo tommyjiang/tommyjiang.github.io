@@ -128,7 +128,7 @@
 <h1 id="健康"><a href="#健康" class="headerlink" title="健康"></a>健康</h1><ul>
 <li>6 月底减到 80 公斤，差 0.30 公斤达到目标。</li>
 <li>7 月底减到 79 公斤，四杯茶颜 + 小龙虾加成，基本实现目标，继续努力。</li>
-<li>8 月底减到 78 公斤，目标未达成，最后一个周末尼岔 + 红福居饺子 + 老张牛肉面吃太多了，9 月目标不变。</li>
+<li>8 月底减到 78 公斤，9 月 1 日体重 80 公斤，目标未达成，最后一个周末尼岔 + 红福居饺子 + 老张牛肉面吃太多了，9 月目标不变。</li>
 <li>9 月底减到 77 公斤。</li>
 <li>10 月底减到 76 公斤。</li>
 <li>11 月底减到 75 公斤。</li>
@@ -165,7 +165,8 @@
                 ["2021-09-01", 80.00], ["2021-09-02", 79.20], ["2021-09-03", 79.00], ["2021-09-04", 78.50],
                 ["2021-09-05", 79.00], ["2021-09-06", 79.00], ["2021-09-07", 79.30], ["2021-09-08", 78.70],
                 ["2021-09-09", 78.10], ["2021-09-10", 78.30], ["2021-09-11", 77.80], ["2021-09-12", 77.50],
-                ["2021-09-13", 78.00],
+                ["2021-09-13", 78.00], ["2021-09-14", 77.90], ["2021-09-15", 78.10], ["2021-09-16", 79.00],
+                ["2021-09-17", 78.30], ["2021-09-18", 77.90], ["2021-09-19", 77.30],
                 ]
     var xgdata = [["2021-06-27", 85.0], ["2021-06-28", 85.0], ["2021-06-29", 85.0], ["2021-06-30", 85.0],
                   ["2021-07-01", 85.0], ["2021-07-02", 85.0], ["2021-07-03", 85.0], ["2021-07-04", 85.0],
@@ -187,7 +188,8 @@
                   ["2021-09-01", 83.30], ["2021-09-02", 82.80], ["2021-09-03", 84.00], ["2021-09-04", 83.10],
                   ["2021-09-05", 83.10], ["2021-09-06", 83.10], ["2021-09-07", 82.50], ["2021-09-08", 82.10],
                   ["2021-09-09", 81.70], ["2021-09-10", 81.90], ["2021-09-11", 81.80], ["2021-09-12", 81.80],
-                  ["2021-09-13", 82.00],
+                  ["2021-09-13", 82.00], ["2021-09-14", 81.60], ["2021-09-15", 81.30], ["2021-09-16", 81.20],
+                  ["2021-09-17", 81.00], ["2021-09-18", 80.90], ["2021-09-19", 80.60],
                   ]
 
     var comments = {"2021-06-27": "海底捞火锅",
@@ -522,7 +524,7 @@
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    <li><a href="/categories/生活/">生活<span>58</span></a></li>
+    <li><a href="/categories/生活/">生活<span>59</span></a></li>
   </li>
 
     </ul>
@@ -611,7 +613,24 @@ var disqus_shortname = 'bigbossjiang';
    </script>
 
 
-<!-- syntax highlighting --><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<!-- syntax highlighting -->
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({{ JSON.stringify(config) }});
 </script>
@@ -629,7 +648,5 @@ var disqus_shortname = 'bigbossjiang';
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->
-
-
 </body>
 </html>
