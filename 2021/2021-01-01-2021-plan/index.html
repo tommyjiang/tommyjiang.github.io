@@ -172,7 +172,7 @@
                 ["2021-09-29", 76.25], ["2021-09-30", 76.50],
                 ["2021-10-01", 76.90], ["2021-10-02", 76.90], ["2021-10-03", 77.10], ["2021-10-04", 77.50],
                 ["2021-10-05", 77.40], ["2021-10-06", 77.00], ["2021-10-07", 77.00], ["2021-10-08", 77.00],
-                ["2021-10-09", 76.70], ["2021-10-10", 76,90], ["2021-10-11", 76.80],
+                ["2021-10-09", 76.70], ["2021-10-10", 76.90], ["2021-10-11", 76.80],
                 ]
     var xgdata = [["2021-06-27", 85.0], ["2021-06-28", 85.0], ["2021-06-29", 85.0], ["2021-06-30", 85.0],
                   ["2021-07-01", 85.0], ["2021-07-02", 85.0], ["2021-07-03", 85.0], ["2021-07-04", 85.0],
@@ -639,7 +639,24 @@ var disqus_shortname = 'bigbossjiang';
    </script>
 
 
-<!-- syntax highlighting --><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<!-- syntax highlighting -->
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({{ JSON.stringify(config) }});
 </script>
@@ -657,7 +674,5 @@ var disqus_shortname = 'bigbossjiang';
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->
-
-
 </body>
 </html>
