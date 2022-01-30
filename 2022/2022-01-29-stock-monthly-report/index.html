@@ -166,13 +166,22 @@
               borderWidth: 2
             },
             label: {
-              show: false,
-              position: 'center'
+                normal: {
+                    show: true,
+                    formatter: '{b} {d}%',//模板变量有 {a}、{b}、{c}、{d}，分别表示系列名，数据名，数据值，百分比。{d}数据会根据value值计算百分比
+
+                    textStyle : {
+                        align : 'center',
+                        baseline : 'middle',
+                        fontFamily : '微软雅黑',
+                        fontSize : 10,
+                    }
+               },
             },
             emphasis: {
               label: {
-                show: false,
-                fontSize: '40',
+                show: true,
+                fontSize: '15',
                 fontWeight: 'bold'
               }
             },
@@ -182,10 +191,10 @@
             data: [
               { value: 31.04, name: '洋河股份' },
               { value: 22.35, name: '腾讯控股' },
+              { value: 1.78, name: '阿里巴巴-SW' },
               { value: 14.66, name: '招商银行' },
               { value: 23.51, name: '中概互联 ETF' },
               { value: 6.66, name: '医疗 ETF' },
-              { value: 1.78, name: '阿里巴巴-SW' },
             ]
           }
         ]
@@ -221,7 +230,7 @@
             }
       },
       legend: {
-        data: ['洋河股份', '腾讯控股', '招商银行', '', '中概互联 ETF', '医疗 ETF', '阿里巴巴-SW']
+        data: ['洋河股份', '腾讯控股', '阿里巴巴-SW', '', '招商银行', '中概互联 ETF', '医疗 ETF'],
       },
       toolbox: {
         feature: {
@@ -282,6 +291,27 @@
           data: [20.56, 22.35],
         },
         {
+          name: '阿里巴巴-SW',
+          type: 'line',
+          stack: 'Total',
+          smooth: true,
+          lineStyle: {
+            width: 0
+          },
+          showSymbol: false,
+          label: {
+            show: true,
+            position: 'top'
+          },
+          areaStyle: {
+            opacity: 0.8,
+          },
+          emphasis: {
+            focus: 'series'
+          },
+          data: [0, 1.78],
+        },
+        {
           name: '招商银行',
           type: 'line',
           stack: 'Total',
@@ -335,27 +365,6 @@
             focus: 'series'
           },
           data: [6.41, 6.66],
-        },
-        {
-          name: '阿里巴巴-SW',
-          type: 'line',
-          stack: 'Total',
-          smooth: true,
-          lineStyle: {
-            width: 0
-          },
-          showSymbol: false,
-          label: {
-            show: true,
-            position: 'top'
-          },
-          areaStyle: {
-            opacity: 0.8,
-          },
-          emphasis: {
-            focus: 'series'
-          },
-          data: [0, 1.78],
         },
       ]
     };
