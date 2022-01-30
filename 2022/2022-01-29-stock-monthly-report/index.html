@@ -3,15 +3,15 @@
 <head>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   
-  <title>羊城潮汕避寒游 | Tommy&#39;s Blog</title>
+  <title>2022 年 1 月账户总结 | Tommy&#39;s Blog</title>
   <meta name="author" content="Tommy Jiang">
   
-  <meta name="description" content="冬天到广东避寒。">
+  <meta name="description" content="2022 年 1 月账户总结。">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="羊城潮汕避寒游"/>
+  <meta property="og:title" content="2022 年 1 月账户总结"/>
   <meta property="og:site_name" content="Tommy&#39;s Blog"/>
 
   
@@ -102,7 +102,7 @@
 
 	
 		<div class="page-header page-header-inverse ">		
-			<h1 class="title title-inverse "> 羊城潮汕避寒游</h1>
+			<h1 class="title title-inverse "> 2022 年 1 月账户总结</h1>
 		</div>		
 	
 
@@ -124,20 +124,299 @@
 
 	  
 <div class="alert alert-info"><i class="fa fa-info"></i>
-冬天到广东避寒。
+2022 年 1 月账户总结。
 </div>
 
-<a id="more"></a>
-<h1 id="北京"><a href="#北京" class="headerlink" title="北京"></a>北京</h1><p>凌晨 5 点半从家出发，到首都机场的时候天还黑着。早上首都机场早高峰，支付宝铂金以上会员可以领快速通道，安检不用排队。大兴机场投运后，东航和南航的航班基本都迁过去了，首都机场本来就是国航的大本营，坐摆渡车到远机位的时候看到了好几架国航的 747-8。</p>
-<h1 id="广州"><a href="#广州" class="headerlink" title="广州"></a>广州</h1><p>虽然 2013 年 12 月就来过白云机场，但这次还是第一次坐航班白云机场。白云机场的地址是白云区花东镇机场大道东 888 号，老广见面喜欢说恭喜发财，八就是发，讨个好彩头。</p>
-<h2 id="第一天"><a href="#第一天" class="headerlink" title="第一天"></a>第一天</h2><p>炳胜——沙面——北京路煲仔饭——茶理宜世——天字码头珠江夜游</p>
-<h2 id="第二天"><a href="#第二天" class="headerlink" title="第二天"></a>第二天</h2><p>人民公园——中山纪念堂——越秀公园——西华路——珠江新城——花城广场——烧鹅——姜撞奶</p>
-<h1 id="汕头"><a href="#汕头" class="headerlink" title="汕头"></a>汕头</h1><p>汕头给我最深的印象就是路上摩托车多，骑得猛，明年要举办亚青会，到处都在修路和修楼。</p>
-<h2 id="第一天-1"><a href="#第一天-1" class="headerlink" title="第一天"></a>第一天</h2><p>点都德早茶——广州东动车——汕头站——杏花吴记牛肉火锅——豆花——一杯潮茶——杏园白粥</p>
-<h2 id="第二天-1"><a href="#第二天-1" class="headerlink" title="第二天"></a>第二天</h2><p>老胡牛肉粿——成川治茶——猪肚鸡——亚强果汁冰——炸鸡翅——十二中鸡柳——虾生鱼生</p>
-<h2 id="第三天"><a href="#第三天" class="headerlink" title="第三天"></a>第三天</h2><p>干粿——梅州腌面——汕头站——潮州站</p>
-<h1 id="潮州"><a href="#潮州" class="headerlink" title="潮州"></a>潮州</h1><p>牌坊街——杏仁奶——砂锅粥/腌蟹——广济桥灯光秀——果汁冰</p>
-<p>韩文公祠——牛肉火锅——金信酒店机场大巴——揭阳潮汕机场 SWA swatow——大兴机场——草桥</p>
+<span id="more"></span>
+
+<div id="self_chicang" style="height:400px"></div>
+
+
+<div id="self_chicang_pubu" style="height:400px"></div>
+
+
+<div id="self_hs300" style="height:400px"></div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.1.2/dist/echarts.js"></script>
+<script type="text/javascript">
+    var self_chicang = echarts.init(document.getElementById('self_chicang'));
+
+    option = {
+        title: {
+          text: '持仓占比'
+        },
+        tooltip: {
+          trigger: 'item',
+          formatter: "{b}: {c}%",
+        },
+        legend: {
+          top: '5%',
+          left: 'center'
+        },
+        series: [
+          {
+            name: '持仓占比',
+            type: 'pie',
+            radius: ['40%', '70%'],
+            avoidLabelOverlap: false,
+            itemStyle: {
+              borderRadius: 10,
+              borderColor: '#fff',
+              borderWidth: 2
+            },
+            label: {
+              show: false,
+              position: 'center'
+            },
+            emphasis: {
+              label: {
+                show: false,
+                fontSize: '40',
+                fontWeight: 'bold'
+              }
+            },
+            labelLine: {
+              show: false
+            },
+            data: [
+              { value: 31.04, name: '洋河股份' },
+              { value: 22.35, name: '腾讯控股' },
+              { value: 14.66, name: '招商银行' },
+              { value: 23.51, name: '中概互联 ETF' },
+              { value: 6.66, name: '医疗 ETF' },
+              { value: 1.78, name: '阿里巴巴-SW' },
+            ]
+          }
+        ]
+    };
+
+    self_chicang.setOption(option, true); //当setOption第二个参数为true时，会阻止数据合并
+</script>
+
+
+<script type="text/javascript">
+    var self_chicang_pubu = echarts.init(document.getElementById('self_chicang_pubu'));
+
+    option = {
+      title: {
+        text: '持仓时间瀑布图'
+      },
+      tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+          type: 'cross',
+          label: {
+            backgroundColor: '#6a7985'
+          }
+        },
+        formatter: function (params) {
+                var html=params[0].name+"<br>";
+                for(var i=0;i<params.length;i++){
+                    html += params[i].marker+ params[i].seriesName+ ": " + params[i].value;
+                    html += "%";
+                    html += "<br>";
+                }
+                return html;
+            }
+      },
+      legend: {
+        data: ['洋河股份', '腾讯控股', '招商银行', '', '中概互联 ETF', '医疗 ETF', '阿里巴巴-SW']
+      },
+      toolbox: {
+        feature: {
+          saveAsImage: {}
+        }
+      },
+      grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+      },
+      xAxis: [
+        {
+          type: 'category',
+          boundaryGap: false,
+          data: ['2022-01-01', '2022-01-31'],
+        }
+      ],
+      yAxis: [
+        {
+          type: 'value'
+        }
+      ],
+      series: [
+        {
+          name: '洋河股份',
+          type: 'line',
+          stack: 'Total',
+          smooth: true,
+          lineStyle: {
+            width: 0
+          },
+          showSymbol: false,
+          areaStyle: {
+            opacity: 0.8,
+          },
+          emphasis: {
+            focus: 'series'
+          },
+          data: [31.20, 31.04],
+        },
+        {
+          name: '腾讯控股',
+          type: 'line',
+          stack: 'Total',
+          smooth: true,
+          lineStyle: {
+            width: 0
+          },
+          showSymbol: false,
+          areaStyle: {
+            opacity: 0.8,
+          },
+          emphasis: {
+            focus: 'series'
+          },
+          data: [20.56, 22.35],
+        },
+        {
+          name: '招商银行',
+          type: 'line',
+          stack: 'Total',
+          smooth: true,
+          lineStyle: {
+            width: 0
+          },
+          showSymbol: false,
+          areaStyle: {
+            opacity: 0.8,
+          },
+          emphasis: {
+            focus: 'series'
+          },
+          data: [18.45, 14.66],
+        },
+        {
+          name: '中概互联 ETF',
+          type: 'line',
+          stack: 'Total',
+          smooth: true,
+          lineStyle: {
+            width: 0
+          },
+          showSymbol: false,
+          areaStyle: {
+            opacity: 0.8,
+          },
+          emphasis: {
+            focus: 'series'
+          },
+          data: [23.38, 23.51],
+        },
+        {
+          name: '医疗 ETF',
+          type: 'line',
+          stack: 'Total',
+          smooth: true,
+          lineStyle: {
+            width: 0
+          },
+          showSymbol: false,
+          label: {
+            show: true,
+            position: 'top'
+          },
+          areaStyle: {
+            opacity: 0.8,
+          },
+          emphasis: {
+            focus: 'series'
+          },
+          data: [6.41, 6.66],
+        },
+        {
+          name: '阿里巴巴-SW',
+          type: 'line',
+          stack: 'Total',
+          smooth: true,
+          lineStyle: {
+            width: 0
+          },
+          showSymbol: false,
+          label: {
+            show: true,
+            position: 'top'
+          },
+          areaStyle: {
+            opacity: 0.8,
+          },
+          emphasis: {
+            focus: 'series'
+          },
+          data: [0, 1.78],
+        },
+      ]
+    };
+
+    self_chicang_pubu.setOption(option, true); //当setOption第二个参数为true时，会阻止数据合并
+</script>
+
+
+<script type="text/javascript">
+    var self_hs300 = echarts.init(document.getElementById('self_hs300'));
+
+    option = {
+        xAxis: {
+            type: 'category',
+            data: ['2022-01-01', '2022-01-31']
+        },
+        yAxis: {
+            type: 'value',
+            name: "收益率",
+            axisLabel: {
+              formatter: "{value} %"
+            }
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'cross'
+            },
+            formatter: function (params) {
+                var html=params[0].name+"<br>";
+                for(var i=0;i<params.length;i++){
+                    html += params[i].marker+ params[i].seriesName+ ": " + params[i].value;
+                    html += "%";
+                    html += "<br>";
+                }
+                return html;
+            }
+        },
+        series: [{
+            name: '个人账户',
+            data: [0, -2.09],
+            type: 'line',
+            color: '#2a9efc',
+            smooth: true,
+        },
+        {
+            name: '沪深 300',
+            data: [0, -7.61],
+            type: 'line',
+            color: '#cab8fd',
+            smooth: true
+        },
+        ],
+        legend: {
+            data: ['个人账户', '沪深 300']
+        },
+    };
+
+    self_hs300.setOption(option, true); //当setOption第二个参数为true时，会阻止数据合并
+</script>
+
 	  
 	</div>
 
@@ -149,14 +428,14 @@
 	<div class="pagination">
 <ul class="pagination">
 	 
-				
-    	<li class="prev"><a href="/2021/2021-01-01-2021-plan/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
-  		
+		
+          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+        
 
         <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
 
 		
-		   <li class="next"><a href="/2020/2020-12-10-the-education-of-a-value-investor/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+		   <li class="next"><a href="/2022/2022-01-15-son-hundred-days/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
         
 	
 </ul>
@@ -211,7 +490,7 @@
 	
 	<div class="meta-widget">
 	<i class="fa fa-clock-o"></i>
-	2020-12-25 
+	2022-01-29 
 	</div>
 	
 
@@ -235,7 +514,7 @@
 	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
     <ul id="tags" class="tag_box list-unstyled collapse in">	  
 	    
-  <li><a href="/tags/广州/">广州<span>2</span></a></li> <li><a href="/tags/潮汕/">潮汕<span>1</span></a></li>
+  <li><a href="/tags/投资/">投资<span>7</span></a></li>
     </ul>
 	</div>
 	
