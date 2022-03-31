@@ -6,7 +6,7 @@
   <link href="http://tommyjiang.github.io/atom.xml" rel="self"/>
   
   <link href="http://tommyjiang.github.io/"/>
-  <updated>2022-01-31T10:23:25.119Z</updated>
+  <updated>2022-03-31T23:52:40.378Z</updated>
   <id>http://tommyjiang.github.io/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2022 年 3 月账户总结</title>
+    <link href="http://tommyjiang.github.io/2022/2022-03-31-stock-monthly-report/"/>
+    <id>http://tommyjiang.github.io/2022/2022-03-31-stock-monthly-report/</id>
+    <published>2022-03-31T14:00:00.000Z</published>
+    <updated>2022-03-31T23:52:40.378Z</updated>
+    
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>2022 年 3 月账户总结。</div><span id="more"></span><div id="self_chicang" style="height:400px"></div><div id="self_chicang_pubu" style="height:400px"></div><div id="self_hs300" style="height:400px"></div><script src="https://cdn.jsdelivr.net/npm/echarts@5.1.2/dist/echarts.js"></script><script type="text/javascript">    var self_chicang = echarts.init(document.getElementById('self_chicang'));    option = {        title: {          text: '持仓占比'        },        tooltip: {          trigger: 'item',          formatter: "{b}: {c}%",        },        legend: {          top: '5%',          left: 'center'        },        series: [          {            name: '持仓占比',            type: 'pie',            radius: ['40%', '70%'],            avoidLabelOverlap: false,            itemStyle: {              borderRadius: 10,              borderColor: '#fff',              borderWidth: 2            },            label: {                normal: {                    show: true,                    formatter: '{b} {d}%',//模板变量有 {a}、{b}、{c}、{d}，分别表示系列名，数据名，数据值，百分比。{d}数据会根据value值计算百分比                    textStyle : {                        align : 'center',                        baseline : 'middle',                        fontFamily : '微软雅黑',                        fontSize : 10,                    }               },            },            emphasis: {              label: {                show: true,                fontSize: '15',                fontWeight: 'bold'              }            },            labelLine: {              show: false            },            data: [              { value: 28.07, name: '洋河股份' },              { value: 15.83, name: '腾讯控股' },              { value: 2.29, name: '恒生科技 ETF' },              { value: 16.14, name: '招商银行' },              { value: 23.40, name: '中概互联 ETF' },              { value: 7.73, name: '医疗 ETF' },              { value: 4.21, name: '分众传媒' },              { value: 2.33, name: '现金' },            ]          }        ]    };    self_chicang.setOption(option, true); //当setOption第二个参数为true时，会阻止数据合并</script><script type="text/javascript">    var self_chicang_pubu = echarts.init(document.getElementById('self_chicang_pubu'));    option = {      title: {        text: '持仓时间瀑布图'      },      tooltip: {        trigger: 'axis',        axisPointer: {          type: 'cross',          label: {            backgroundColor: '#6a7985'          }        },        formatter: function (params) {                var html=params[0].name+"<br>";                for(var i=0;i<params.length;i++){                    html += params[i].marker+ params[i].seriesName+ ": " + params[i].value;                    html += "%";                    html += "<br>";                }                return html;            }      },      legend: {        data: ['洋河股份', '腾讯控股', '阿里巴巴-SW', '招商银行', '',               '中概互联 ETF', '医疗 ETF', '恒生科技 ETF', '分众传媒', '现金'],      },      toolbox: {        feature: {          saveAsImage: {}        }      },      grid: {        left: '3%',        right: '4%',        bottom: '3%',        containLabel: true      },      xAxis: [        {          type: 'category',          boundaryGap: false,          data: ['2022-01-01', '2022-01-31', '2022-02-28', '2022-03-31'],        }      ],      yAxis: [        {          type: 'value'        }      ],      series: [        {          name: '洋河股份',          type: 'line',          stack: 'Total',          smooth: true,          lineStyle: {            width: 0          },          showSymbol: false,          areaStyle: {            opacity: 0.8,          },          emphasis: {            focus: 'series'          },          data: [31.20, 31.04, 29.64, 28.07],        },        {          name: '腾讯控股',          type: 'line',          stack: 'Total',          smooth: true,          lineStyle: {            width: 0          },          showSymbol: false,          areaStyle: {            opacity: 0.8,          },          emphasis: {            focus: 'series'          },          data: [20.56, 22.35, 18.37, 15.83],        },        {          name: '阿里巴巴-SW',          type: 'line',          stack: 'Total',          smooth: true,          lineStyle: {            width: 0          },          showSymbol: false,          label: {            show: true,            position: 'top'          },          areaStyle: {            opacity: 0.8,          },          emphasis: {            focus: 'series'          },          data: [0, 1.78, 1.50, 0],        },        {          name: '招商银行',          type: 'line',          stack: 'Total',          smooth: true,          lineStyle: {            width: 0          },          showSymbol: false,          areaStyle: {            opacity: 0.8,          },          emphasis: {            focus: 'series'          },          data: [18.45, 14.66, 13.4, 16.14],        },        {          name: '中概互联 ETF',          type: 'line',          stack: 'Total',          smooth: true,          lineStyle: {            width: 0          },          showSymbol: false,          areaStyle: {            opacity: 0.8,          },          emphasis: {            focus: 'series'          },          data: [23.38, 23.51, 28.71, 23.40],        },        {          name: '医疗 ETF',          type: 'line',          stack: 'Total',          smooth: true,          lineStyle: {            width: 0          },          showSymbol: false,          label: {            show: true,            position: 'top'          },          areaStyle: {            opacity: 0.8,          },          emphasis: {            focus: 'series'          },          data: [6.41, 6.66, 8.33, 7.73],        },        {          name: '分众传媒',          type: 'line',          stack: 'Total',          smooth: true,          lineStyle: {            width: 0          },          showSymbol: false,          label: {            show: true,            position: 'top'          },          areaStyle: {            opacity: 0.8,          },          emphasis: {            focus: 'series'          },          data: [0, 0, 0, 4.21],        },        {          name: '现金',          type: 'line',          stack: 'Total',          smooth: true,          lineStyle: {            width: 0          },          showSymbol: false,          label: {            show: true,            position: 'top'          },          areaStyle: {            opacity: 0.8,          },          emphasis: {            focus: 'series'          },          data: [0, 0, 0, 2.33],        },        {          name: '恒生科技ETF',          type: 'line',          stack: 'Total',          smooth: true,          lineStyle: {            width: 0          },          showSymbol: false,          label: {            show: true,            position: 'top'          },          areaStyle: {            opacity: 0.8,          },          emphasis: {            focus: 'series'          },          data: [0, 0, 0, 2.29],        },      ]    };    self_chicang_pubu.setOption(option, true); //当setOption第二个参数为true时，会阻止数据合并</script><script type="text/javascript">    var self_hs300 = echarts.init(document.getElementById('self_hs300'));    option = {        xAxis: {            type: 'category',            data: ['2022-01-01', '2022-01-31', '2022-02-28', '2022-03-31'],        },        yAxis: {            type: 'value',            name: "收益率",            axisLabel: {              formatter: "{value} %"            }        },        tooltip: {            trigger: 'axis',            formatter: function (params) {                var html=params[0].name+"<br>";                for(var i=0;i<params.length;i++){                    html += params[i].marker+ params[i].seriesName+ ": " + params[i].value;                    html += "%";                    html += "<br>";                }                return html;            }        },        series: [{            name: '个人账户',            data: [0, -2.09, -4.78, -15.66],            type: 'line',            color: '#2a9efc',            smooth: true,        },        {            name: '沪深 300',            data: [0, -7.61, -7.25, -14.53],            type: 'line',            color: '#cab8fd',            smooth: true        },        ],        legend: {            data: ['个人账户', '沪深 300']        },    };    self_hs300.setOption(option, true); //当setOption第二个参数为true时，会阻止数据合并</script>]]></content>
+    
+    
+    <summary type="html">&lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
+2022 年 3 月账户总结。
+&lt;/div&gt;</summary>
+    
+    
+    
+    <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="投资" scheme="http://tommyjiang.github.io/tags/%E6%8A%95%E8%B5%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2022 年 2 月账户总结</title>
+    <link href="http://tommyjiang.github.io/2022/2022-02-28-stock-monthly-report/"/>
+    <id>http://tommyjiang.github.io/2022/2022-02-28-stock-monthly-report/</id>
+    <published>2022-02-28T14:00:00.000Z</published>
+    <updated>2022-03-01T00:31:11.658Z</updated>
+    
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>2022 年 2 月账户总结。</div><span id="more"></span><div id="self_chicang" style="height:400px"></div><div id="self_chicang_pubu" style="height:400px"></div><div id="self_hs300" style="height:400px"></div><script src="https://cdn.jsdelivr.net/npm/echarts@5.1.2/dist/echarts.js"></script><script type="text/javascript">    var self_chicang = echarts.init(document.getElementById('self_chicang'));    option = {        title: {          text: '持仓占比'        },        tooltip: {          trigger: 'item',          formatter: "{b}: {c}%",        },        legend: {          top: '5%',          left: 'center'        },        series: [          {            name: '持仓占比',            type: 'pie',            radius: ['40%', '70%'],            avoidLabelOverlap: false,            itemStyle: {              borderRadius: 10,              borderColor: '#fff',              borderWidth: 2            },            label: {                normal: {                    show: true,                    formatter: '{b} {d}%',//模板变量有 {a}、{b}、{c}、{d}，分别表示系列名，数据名，数据值，百分比。{d}数据会根据value值计算百分比                    textStyle : {                        align : 'center',                        baseline : 'middle',                        fontFamily : '微软雅黑',                        fontSize : 10,                    }               },            },            emphasis: {              label: {                show: true,                fontSize: '15',                fontWeight: 'bold'              }            },            labelLine: {              show: false            },            data: [              { value: 29.64, name: '洋河股份' },              { value: 18.37, name: '腾讯控股' },              { value: 1.51, name: '阿里巴巴-SW' },              { value: 13.44, name: '招商银行' },              { value: 28.71, name: '中概互联 ETF' },              { value: 8.33, name: '医疗 ETF' },            ]          }        ]    };    self_chicang.setOption(option, true); //当setOption第二个参数为true时，会阻止数据合并</script><script type="text/javascript">    var self_chicang_pubu = echarts.init(document.getElementById('self_chicang_pubu'));    option = {      title: {        text: '持仓时间瀑布图'      },      tooltip: {        trigger: 'axis',        axisPointer: {          type: 'cross',          label: {            backgroundColor: '#6a7985'          }        },        formatter: function (params) {                var html=params[0].name+"<br>";                for(var i=0;i<params.length;i++){                    html += params[i].marker+ params[i].seriesName+ ": " + params[i].value;                    html += "%";                    html += "<br>";                }                return html;            }      },      legend: {        data: ['洋河股份', '腾讯控股', '阿里巴巴-SW', '', '招商银行', '中概互联 ETF', '医疗 ETF'],      },      toolbox: {        feature: {          saveAsImage: {}        }      },      grid: {        left: '3%',        right: '4%',        bottom: '3%',        containLabel: true      },      xAxis: [        {          type: 'category',          boundaryGap: false,          data: ['2022-01-01', '2022-01-31', '2022-02-28'],        }      ],      yAxis: [        {          type: 'value'        }      ],      series: [        {          name: '洋河股份',          type: 'line',          stack: 'Total',          smooth: true,          lineStyle: {            width: 0          },          showSymbol: false,          areaStyle: {            opacity: 0.8,          },          emphasis: {            focus: 'series'          },          data: [31.20, 31.04, 29.64],        },        {          name: '腾讯控股',          type: 'line',          stack: 'Total',          smooth: true,          lineStyle: {            width: 0          },          showSymbol: false,          areaStyle: {            opacity: 0.8,          },          emphasis: {            focus: 'series'          },          data: [20.56, 22.35, 18.37],        },        {          name: '阿里巴巴-SW',          type: 'line',          stack: 'Total',          smooth: true,          lineStyle: {            width: 0          },          showSymbol: false,          label: {            show: true,            position: 'top'          },          areaStyle: {            opacity: 0.8,          },          emphasis: {            focus: 'series'          },          data: [0, 1.78, 1.50],        },        {          name: '招商银行',          type: 'line',          stack: 'Total',          smooth: true,          lineStyle: {            width: 0          },          showSymbol: false,          areaStyle: {            opacity: 0.8,          },          emphasis: {            focus: 'series'          },          data: [18.45, 14.66, 13.4],        },        {          name: '中概互联 ETF',          type: 'line',          stack: 'Total',          smooth: true,          lineStyle: {            width: 0          },          showSymbol: false,          areaStyle: {            opacity: 0.8,          },          emphasis: {            focus: 'series'          },          data: [23.38, 23.51, 28.71],        },        {          name: '医疗 ETF',          type: 'line',          stack: 'Total',          smooth: true,          lineStyle: {            width: 0          },          showSymbol: false,          label: {            show: true,            position: 'top'          },          areaStyle: {            opacity: 0.8,          },          emphasis: {            focus: 'series'          },          data: [6.41, 6.66, 8.33],        },      ]    };    self_chicang_pubu.setOption(option, true); //当setOption第二个参数为true时，会阻止数据合并</script><script type="text/javascript">    var self_hs300 = echarts.init(document.getElementById('self_hs300'));    option = {        xAxis: {            type: 'category',            data: ['2022-01-01', '2022-01-31', '2022-02-28'],        },        yAxis: {            type: 'value',            name: "收益率",            axisLabel: {              formatter: "{value} %"            }        },        tooltip: {            trigger: 'axis',            formatter: function (params) {                var html=params[0].name+"<br>";                for(var i=0;i<params.length;i++){                    html += params[i].marker+ params[i].seriesName+ ": " + params[i].value;                    html += "%";                    html += "<br>";                }                return html;            }        },        series: [{            name: '个人账户',            data: [0, -2.09, -4.78],            type: 'line',            color: '#2a9efc',            smooth: true,        },        {            name: '沪深 300',            data: [0, -7.61, -7.25],            type: 'line',            color: '#cab8fd',            smooth: true        },        ],        legend: {            data: ['个人账户', '沪深 300']        },    };    self_hs300.setOption(option, true); //当setOption第二个参数为true时，会阻止数据合并</script>]]></content>
+    
+    
+    <summary type="html">&lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
+2022 年 2 月账户总结。
+&lt;/div&gt;</summary>
+    
+    
+    
+    <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="投资" scheme="http://tommyjiang.github.io/tags/%E6%8A%95%E8%B5%84/"/>
+    
+  </entry>
   
   <entry>
     <title>2022 年 1 月账户总结</title>
@@ -435,52 +481,6 @@ YCM 不再支持 Python 3.5 及以下版本，折腾重新编译 Vim 和 YCM。
     
     
     <category term="Vim" scheme="http://tommyjiang.github.io/tags/Vim/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>三十而已影评</title>
-    <link href="http://tommyjiang.github.io/2020/2020-07-25-nothing-but-thirty/"/>
-    <id>http://tommyjiang.github.io/2020/2020-07-25-nothing-but-thirty/</id>
-    <published>2020-07-25T01:30:00.000Z</published>
-    <updated>2020-07-31T16:17:54.317Z</updated>
-    
-    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>好久没刷一部像样的国产情感剧了。</div><a id="more"></a><!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc --><p><strong>目录</strong></p><ul><li><a href="#分集影评">分集影评</a><ul><li><a href="#16-集">16 集</a></li><li><a href="#17-集">17 集</a></li><li><a href="#18-集">18 集</a></li><li><a href="#19-集">19 集</a></li><li><a href="#20-集">20 集</a></li></ul></li></ul><!-- markdown-toc end --><h1 id="分集影评"><a href="#分集影评" class="headerlink" title="分集影评"></a>分集影评</h1><h2 id="16-集"><a href="#16-集" class="headerlink" title="16 集"></a>16 集</h2><ul><li>芹阳组合感情升温中，骑摩托车抓上了，开心，干掉前夫哥。</li><li>漫妮升副店失败，惨遭空降，Daisy 一看就是总部有人，毕业直接进总部锻炼，现在到基层挂个职，回去马上提拔，这种人千万别惹。</li><li>Daisy 有一手，打一棒子给一甜枣，漫妮也是逢场作戏。</li><li>江疏影长得和江珊有点像。</li><li>Daisy 秀英文那段，除了王太太听不懂，其他人都能听懂。</li><li>Daisy 还是会抓富人心理，不选好看的，只选独一无二的。</li><li>顾佳这名字起得不错，暗示要顾家，一直处在事业和家庭的矛盾中。</li><li>芹洋组合喝多了以后，又送晓芹回前夫家了，编的不好。</li></ul><h2 id="17-集"><a href="#17-集" class="headerlink" title="17 集"></a>17 集</h2><ul><li>梁总当众确立关系，和他的人设不太相符，而且在确定关系后才说自己是不婚主义者，完蛋玩意儿。</li><li>末位淘汰是违反劳动法的，虽然国内大厂也是末位淘汰。雪崩之下没有一片雪花是无辜的。</li><li>梁总深刻了，灵魂拷问，结婚就能保证永远相爱吗。</li><li>顾佳和我们用的同款指甲刀，有点卡萨帝的感觉了啊。</li><li>顾佳对漫妮发动了暴击伤害，毫不留情面。</li></ul><h2 id="18-集"><a href="#18-集" class="headerlink" title="18 集"></a>18 集</h2><ul><li>场景切换时顾佳生日四个字显得很傻。</li><li>佳爸说评上先进了，年底发了奖金就换车，体制内一般先进也发不了多少钱。</li></ul><h2 id="19-集"><a href="#19-集" class="headerlink" title="19 集"></a>19 集</h2><ul><li>店长心态不行，还害怕受伤顾客讹她们，这是有钱人干的事儿么。</li><li>什么都能忍，忍到最后忍无可忍。</li><li>人没得选，事儿就简单了。选择多，诱惑就多，人就想不明白了。</li><li>自己 SB，别赖别人。</li></ul><h2 id="20-集"><a href="#20-集" class="headerlink" title="20 集"></a>20 集</h2><ul><li>总部空降的 Daisy 说她都是靠自己本事，不是靠关系。</li><li>晋升就是公司用来洗脑的。</li><li>人走的每一步都得付出代价。</li></ul><h2 id="22-集"><a href="#22-集" class="headerlink" title="22 集"></a>22 集</h2><ul><li>资本都爱听故事，讲故事真是核心竞争能力，包装也很重要。</li></ul><h2 id="23-24-集"><a href="#23-24-集" class="headerlink" title="23-24 集"></a>23-24 集</h2><ul><li>有些事儿急不得。</li><li>不像我，只能喝最苦的咖啡。</li><li>这么拼是为了什么。</li><li>该受的他们也得受。</li><li>你这话是说给我听呢，还是说给自己听呢。</li><li>八年了，我从未想过离开。</li></ul><h2 id="25-26-集"><a href="#25-26-集" class="headerlink" title="25-26 集"></a>25-26 集</h2><ul><li>不过你那么拼也没啥用。</li><li>还有谁的人生比我更惨呢？</li></ul><h2 id="29-30-集"><a href="#29-30-集" class="headerlink" title="29-30 集"></a>29-30 集</h2><ul><li>人越努力就越不满足，越不满足就越不幸福</li></ul>]]></content>
-    
-    
-    <summary type="html">&lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
-好久没刷一部像样的国产情感剧了。
-&lt;/div&gt;</summary>
-    
-    
-    
-    <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
-    
-    
-    <category term="国产剧" scheme="http://tommyjiang.github.io/tags/%E5%9B%BD%E4%BA%A7%E5%89%A7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>海滨消夏</title>
-    <link href="http://tommyjiang.github.io/2020/2020-07-25-seaside-trip/"/>
-    <id>http://tommyjiang.github.io/2020/2020-07-25-seaside-trip/</id>
-    <published>2020-07-20T01:30:00.000Z</published>
-    <updated>2020-07-26T16:13:56.024Z</updated>
-    
-    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>夏天到秦皇岛来避暑。</div><a id="more"></a><p>又是一年盛夏，时隔两年再次来海边度假。</p><p>周五晚从北京出发，东五环有点堵，改道机场高速+京秦高速+塘承高速转到 G1 上，路过唐山的时候还下了不小的雨，九点多才到家。</p><p>第二天早上一大早被外面的知了吵醒，这两天正好赶上河北省中考。在之前住的小区转了转，喝了拆骨汤，现在分量也不如原来了。回来稍作休整到体育基地海边，下了一小会儿雨，拍到了积雨云掠过的海景。</p><p>中午到秦皇国际吃自助，和奶奶家的亲戚会合，老正一听来海边高兴了。前几天北京疫情严重的时候，酒店的自助还有大龙虾，最近人多了只剩麻小了。吃完中午饭到北戴河海滨的宾馆休息，下午本想在旁边的海边玩，疫情原因全部收口只能在一个地方进到浴场，还好北京的大部队没有完全开过来。晚上在同德海鲜·烤鸭店吃的晚饭，海鲜不错，尤其喜欢蒜蓉粉丝蒸虾，海边的还是新鲜。</p><p>第二天早上没有继续在北戴河海边了，还是回秦皇岛体育基地，天气还是多云，不算太晒，但我们也把帐篷都搭起来了。老正一蹦一蹦地跟着后边跑。中午还是赵家馆饺子，饺子放油多还是香，榴莲馅的也挺有特色。中午休息会返京，双井附近的潮汕牛肉火锅解决晚饭。就是稍微有点远，不然可以多来几次玩玩。</p><img src="/images/2020/北戴河.jpg" width="500px"/><img src="/images/2020/秦皇岛.jpg" width="500px"/>]]></content>
-    
-    
-    <summary type="html">&lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
-夏天到秦皇岛来避暑。
-&lt;/div&gt;</summary>
-    
-    
-    
-    <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
-    
-    
-    <category term="秦皇岛" scheme="http://tommyjiang.github.io/tags/%E7%A7%A6%E7%9A%87%E5%B2%9B/"/>
     
   </entry>
   
