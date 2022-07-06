@@ -3,15 +3,15 @@
 <head>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   
-  <title>2022 年 1 月账户总结 | Tommy&#39;s Blog</title>
+  <title>2022 减肥 | Tommy&#39;s Blog</title>
   <meta name="author" content="Tommy Jiang">
   
-  <meta name="description" content="2022 年 1 月账户总结。">
+  <meta name="description" content="2022 减肥。">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="2022 年 1 月账户总结"/>
+  <meta property="og:title" content="2022 减肥"/>
   <meta property="og:site_name" content="Tommy&#39;s Blog"/>
 
   
@@ -102,7 +102,7 @@
 
 	
 		<div class="page-header page-header-inverse ">		
-			<h1 class="title title-inverse "> 2022 年 1 月账户总结</h1>
+			<h1 class="title title-inverse "> 2022 减肥</h1>
 		</div>		
 	
 
@@ -124,303 +124,160 @@
 
 	  
 <div class="alert alert-info"><i class="fa fa-info"></i>
-2022 年 1 月账户总结。
+2022 减肥。
 </div>
 
 <span id="more"></span>
+<p>继续减肥</p>
 
-<div id="self_chicang" style="height:400px"></div>
-
-
-<div id="self_chicang_pubu" style="height:400px"></div>
+<div id="self_weight" style="height:400px"></div>
 
 
-<div id="self_hs300" style="height:400px"></div>
-
-
-<script src="https://cdn.jsdelivr.net/npm/echarts@5.1.2/dist/echarts.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.1.2/echarts.js"></script>
 <script type="text/javascript">
-    var self_chicang = echarts.init(document.getElementById('self_chicang'));
+    var self_weight = echarts.init(document.getElementById('self_weight'));
+    <!-- 填空 体重 -->
+    var data = [["2022-07-04", 77.2],
+                ["2022-07-05", 76.6], ["2022-07-06", 77.2], ["2022-07-07", 77.2], ["2022-07-08", 77.2],
+                ]
+    var xgdata = [["2022-07-04", 82.4],
+                  ["2022-07-05", 81.7], ["2022-07-06", 81.8], ["2022-07-07", 81.8], ["2022-07-08", 81.8],
+                  ]
 
-    option = {
-        title: {
-          text: '持仓占比'
-        },
-        tooltip: {
-          trigger: 'item',
-          formatter: "{b}: {c}%",
-        },
-        legend: {
-          top: '5%',
-          left: 'center'
+    var comments = {"2021-06-27": "海底捞火锅",
+                   }
+    var option = {
+         title: {text: '2022 体重'},
+         tooltip: {
+             trigger: 'axis',
+             /* formatter: function (params, ticket, callback) {
+                           var res='时间：' + params[0].name + '<br>'
+                           res += '体重：' + params[0].data + '<br>'
+                           if(comments[params[0].name] != null){
+                               res += '注释：' + comments[params[0].name]
+                           }
+                           return res
+             } */
+         },
+         xAxis: {
+             data: data.map(function (item) {
+                 return item[0];
+             })
+         },
+         yAxis: {
+             min: 66,
+             max: 88,
+             splitNumber: 11,
+             splitLine: {
+                 show: false,
+             }
+         },
+         toolbox: {
+             left: 'center',
+             feature: {
+                 dataZoom: {
+                     yAxisIndex: 'none'
+                 },
+                 restore: {},
+                 saveAsImage: {}
+             }
+         },
+         dataZoom: [{
+             startValue: '2021-01-01'
+         }, {
+             type: 'inside'
+         }],
+         visualMap: {
+             top: '30%',
+             right: 0,
+             pieces: [
+             {
+                 gt: 66,
+                 lte: 68,
+                 color: '#0eb0c9'
+             }, {
+                 gt: 68,
+                 lte: 70,
+                 color: '#00ff7f'
+             }, {
+                 gt: 70,
+                 lte: 72,
+                 color: '#00bb33'
+             }, {
+                 gt: 72,
+                 lte: 74,
+                 color: '#257d24'
+             }, {
+                 gt: 74,
+                 lte: 76,
+                 color: '#ffde33'
+             }, {
+                 gt: 76,
+                 lte: 78,
+                 color: '#ff9933'
+             }, {
+                 gt: 78,
+                 lte: 80,
+                 color: '#cc0033'
+             }, {
+                 gt: 80,
+                 color: '#660099'
+             }],
+             outOfRange: {
+                 color: '#999'
+             }
         },
         series: [
-          {
-            name: '持仓占比',
-            type: 'pie',
-            radius: ['40%', '70%'],
-            avoidLabelOverlap: false,
-            itemStyle: {
-              borderRadius: 10,
-              borderColor: '#fff',
-              borderWidth: 2
-            },
-            label: {
-                normal: {
-                    show: true,
-                    formatter: '{b} {d}%',//模板变量有 {a}、{b}、{c}、{d}，分别表示系列名，数据名，数据值，百分比。{d}数据会根据value值计算百分比
+                {
+                  name: '自己体重',
+                  type: 'line',
+                  data: data.map(function (item) {
+                      return item[1];
+                  }),
+                  markLine: {
+                      symbolSize: 0,
+                      label: {
+                          show: false
+                      },
+                      data: [{
+                          yAxis: 66
+                      }, {
+                          yAxis: 68
+                      }, {
+                          yAxis: 70
+                      }, {
+                          yAxis: 72
+                      }, {
+                          yAxis: 74
+                      }, {
+                          yAxis: 76
+                      }, {
+                          yAxis: 78
+                      }, {
+                          yAxis: 80
+                      }, {
+                          yAxis: 82
+                      }, {
+                          yAxis: 84
+                      }, {
+                          yAxis: 86
+                      }
+                      ]
+                  },
+                },
 
-                    textStyle : {
-                        align : 'center',
-                        baseline : 'middle',
-                        fontFamily : '微软雅黑',
-                        fontSize : 10,
-                    }
-               },
-            },
-            emphasis: {
-              label: {
-                show: true,
-                fontSize: '15',
-                fontWeight: 'bold'
-              }
-            },
-            labelLine: {
-              show: false
-            },
-            data: [
-              { value: 31.04, name: '洋河股份' },
-              { value: 22.35, name: '腾讯控股' },
-              { value: 1.78, name: '阿里巴巴-SW' },
-              { value: 14.66, name: '招商银行' },
-              { value: 23.51, name: '中概互联 ETF' },
-              { value: 6.66, name: '医疗 ETF' },
-            ]
-          }
-        ]
-    };
+                {
+                  name: '小哥体重',
+                  type: 'line',
+                  data: xgdata.map(function (item) {
+                      return item[1];
+                  }),
+                },
 
-    self_chicang.setOption(option, true); //当setOption第二个参数为true时，会阻止数据合并
-</script>
+                ]
+};
+    self_weight.setOption(option, true); //当setOption第二个参数为true时，会阻止数据合并
 
-
-<script type="text/javascript">
-    var self_chicang_pubu = echarts.init(document.getElementById('self_chicang_pubu'));
-
-    option = {
-      title: {
-        text: '持仓时间瀑布图'
-      },
-      tooltip: {
-        trigger: 'axis',
-        axisPointer: {
-          type: 'cross',
-          label: {
-            backgroundColor: '#6a7985'
-          }
-        },
-        formatter: function (params) {
-                var html=params[0].name+"<br>";
-                for(var i=0;i<params.length;i++){
-                    html += params[i].marker+ params[i].seriesName+ ": " + params[i].value;
-                    html += "%";
-                    html += "<br>";
-                }
-                return html;
-            }
-      },
-      legend: {
-        data: ['洋河股份', '腾讯控股', '阿里巴巴-SW', '', '招商银行', '中概互联 ETF', '医疗 ETF'],
-      },
-      toolbox: {
-        feature: {
-          saveAsImage: {}
-        }
-      },
-      grid: {
-        left: '3%',
-        right: '4%',
-        bottom: '3%',
-        containLabel: true
-      },
-      xAxis: [
-        {
-          type: 'category',
-          boundaryGap: false,
-          data: ['2022-01-01', '2022-01-31'],
-        }
-      ],
-      yAxis: [
-        {
-          type: 'value'
-        }
-      ],
-      series: [
-        {
-          name: '洋河股份',
-          type: 'line',
-          stack: 'Total',
-          smooth: true,
-          lineStyle: {
-            width: 0
-          },
-          showSymbol: false,
-          areaStyle: {
-            opacity: 0.8,
-          },
-          emphasis: {
-            focus: 'series'
-          },
-          data: [31.20, 31.04],
-        },
-        {
-          name: '腾讯控股',
-          type: 'line',
-          stack: 'Total',
-          smooth: true,
-          lineStyle: {
-            width: 0
-          },
-          showSymbol: false,
-          areaStyle: {
-            opacity: 0.8,
-          },
-          emphasis: {
-            focus: 'series'
-          },
-          data: [20.56, 22.35],
-        },
-        {
-          name: '阿里巴巴-SW',
-          type: 'line',
-          stack: 'Total',
-          smooth: true,
-          lineStyle: {
-            width: 0
-          },
-          showSymbol: false,
-          label: {
-            show: true,
-            position: 'top'
-          },
-          areaStyle: {
-            opacity: 0.8,
-          },
-          emphasis: {
-            focus: 'series'
-          },
-          data: [0, 1.78],
-        },
-        {
-          name: '招商银行',
-          type: 'line',
-          stack: 'Total',
-          smooth: true,
-          lineStyle: {
-            width: 0
-          },
-          showSymbol: false,
-          areaStyle: {
-            opacity: 0.8,
-          },
-          emphasis: {
-            focus: 'series'
-          },
-          data: [18.45, 14.66],
-        },
-        {
-          name: '中概互联 ETF',
-          type: 'line',
-          stack: 'Total',
-          smooth: true,
-          lineStyle: {
-            width: 0
-          },
-          showSymbol: false,
-          areaStyle: {
-            opacity: 0.8,
-          },
-          emphasis: {
-            focus: 'series'
-          },
-          data: [23.38, 23.51],
-        },
-        {
-          name: '医疗 ETF',
-          type: 'line',
-          stack: 'Total',
-          smooth: true,
-          lineStyle: {
-            width: 0
-          },
-          showSymbol: false,
-          label: {
-            show: true,
-            position: 'top'
-          },
-          areaStyle: {
-            opacity: 0.8,
-          },
-          emphasis: {
-            focus: 'series'
-          },
-          data: [6.41, 6.66],
-        },
-      ]
-    };
-
-    self_chicang_pubu.setOption(option, true); //当setOption第二个参数为true时，会阻止数据合并
-</script>
-
-
-<script type="text/javascript">
-    var self_hs300 = echarts.init(document.getElementById('self_hs300'));
-
-    option = {
-        xAxis: {
-            type: 'category',
-            data: ['2022-01-01', '2022-01-31']
-        },
-        yAxis: {
-            type: 'value',
-            name: "收益率",
-            axisLabel: {
-              formatter: "{value} %"
-            }
-        },
-        tooltip: {
-            trigger: 'axis',
-            formatter: function (params) {
-                var html=params[0].name+"<br>";
-                for(var i=0;i<params.length;i++){
-                    html += params[i].marker+ params[i].seriesName+ ": " + params[i].value;
-                    html += "%";
-                    html += "<br>";
-                }
-                return html;
-            }
-        },
-        series: [{
-            name: '个人账户',
-            data: [0, -2.09],
-            type: 'line',
-            color: '#2a9efc',
-            smooth: true,
-        },
-        {
-            name: '沪深 300',
-            data: [0, -7.61],
-            type: 'line',
-            color: '#cab8fd',
-            smooth: true
-        },
-        ],
-        legend: {
-            data: ['个人账户', '沪深 300']
-        },
-    };
-
-    self_hs300.setOption(option, true); //当setOption第二个参数为true时，会阻止数据合并
 </script>
 
 	  
@@ -434,14 +291,14 @@
 	<div class="pagination">
 <ul class="pagination">
 	 
-				
-    	<li class="prev"><a href="/2022/2022-02-28-stock-monthly-report/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
-  		
+		
+          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+        
 
         <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
 
 		
-		   <li class="next"><a href="/2022/2022-01-15-son-hundred-days/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+		   <li class="next"><a href="/2022/2022-07-03-starbucks-member/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
         
 	
 </ul>
@@ -496,7 +353,7 @@
 	
 	<div class="meta-widget">
 	<i class="fa fa-clock-o"></i>
-	2022-01-29 
+	2022-07-06 
 	</div>
 	
 
@@ -520,7 +377,7 @@
 	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
     <ul id="tags" class="tag_box list-unstyled collapse in">	  
 	    
-  <li><a href="/tags/投资/">投资<span>10</span></a></li>
+  <li><a href="/tags/减肥/">减肥<span>1</span></a></li>
     </ul>
 	</div>
 	

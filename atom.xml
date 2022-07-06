@@ -6,7 +6,7 @@
   <link href="http://tommyjiang.github.io/atom.xml" rel="self"/>
   
   <link href="http://tommyjiang.github.io/"/>
-  <updated>2022-07-06T00:00:29.318Z</updated>
+  <updated>2022-07-06T00:12:49.905Z</updated>
   <id>http://tommyjiang.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2022 减肥</title>
+    <link href="http://tommyjiang.github.io/2022/2022-07-06-lose-weight-2022/"/>
+    <id>http://tommyjiang.github.io/2022/2022-07-06-lose-weight-2022/</id>
+    <published>2022-07-06T03:00:00.000Z</published>
+    <updated>2022-07-06T00:12:49.905Z</updated>
+    
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>2022 减肥。</div><span id="more"></span><p>继续减肥</p><div id="self_weight" style="height:400px"></div><script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.1.2/echarts.js"></script><script type="text/javascript">    var self_weight = echarts.init(document.getElementById('self_weight'));    <!-- 填空 体重 -->    var data = [["2022-07-04", 77.2],                ["2022-07-05", 76.6], ["2022-07-06", 77.2], ["2022-07-07", 77.2], ["2022-07-08", 77.2],                ]    var xgdata = [["2022-07-04", 82.4],                  ["2022-07-05", 81.7], ["2022-07-06", 81.8], ["2022-07-07", 81.8], ["2022-07-08", 81.8],                  ]    var comments = {"2021-06-27": "海底捞火锅",                   }    var option = {         title: {text: '2022 体重'},         tooltip: {             trigger: 'axis',             /* formatter: function (params, ticket, callback) {                           var res='时间：' + params[0].name + '<br>'                           res += '体重：' + params[0].data + '<br>'                           if(comments[params[0].name] != null){                               res += '注释：' + comments[params[0].name]                           }                           return res             } */         },         xAxis: {             data: data.map(function (item) {                 return item[0];             })         },         yAxis: {             min: 66,             max: 88,             splitNumber: 11,             splitLine: {                 show: false,             }         },         toolbox: {             left: 'center',             feature: {                 dataZoom: {                     yAxisIndex: 'none'                 },                 restore: {},                 saveAsImage: {}             }         },         dataZoom: [{             startValue: '2021-01-01'         }, {             type: 'inside'         }],         visualMap: {             top: '30%',             right: 0,             pieces: [             {                 gt: 66,                 lte: 68,                 color: '#0eb0c9'             }, {                 gt: 68,                 lte: 70,                 color: '#00ff7f'             }, {                 gt: 70,                 lte: 72,                 color: '#00bb33'             }, {                 gt: 72,                 lte: 74,                 color: '#257d24'             }, {                 gt: 74,                 lte: 76,                 color: '#ffde33'             }, {                 gt: 76,                 lte: 78,                 color: '#ff9933'             }, {                 gt: 78,                 lte: 80,                 color: '#cc0033'             }, {                 gt: 80,                 color: '#660099'             }],             outOfRange: {                 color: '#999'             }        },        series: [                {                  name: '自己体重',                  type: 'line',                  data: data.map(function (item) {                      return item[1];                  }),                  markLine: {                      symbolSize: 0,                      label: {                          show: false                      },                      data: [{                          yAxis: 66                      }, {                          yAxis: 68                      }, {                          yAxis: 70                      }, {                          yAxis: 72                      }, {                          yAxis: 74                      }, {                          yAxis: 76                      }, {                          yAxis: 78                      }, {                          yAxis: 80                      }, {                          yAxis: 82                      }, {                          yAxis: 84                      }, {                          yAxis: 86                      }                      ]                  },                },                {                  name: '小哥体重',                  type: 'line',                  data: xgdata.map(function (item) {                      return item[1];                  }),                },                ]};    self_weight.setOption(option, true); //当setOption第二个参数为true时，会阻止数据合并</script>]]></content>
+    
+    
+    <summary type="html">&lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
+2022 减肥。
+&lt;/div&gt;</summary>
+    
+    
+    
+    <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="减肥" scheme="http://tommyjiang.github.io/tags/%E5%87%8F%E8%82%A5/"/>
+    
+  </entry>
   
   <entry>
     <title>星巴克羊毛体验</title>
@@ -462,29 +485,6 @@ Homebrew 降级。
     
     
     <category term="Homebrew" scheme="http://tommyjiang.github.io/tags/Homebrew/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>A Tour of C++ 笔记</title>
-    <link href="http://tommyjiang.github.io/2020/2020-08-10-a-tour-of-c++/"/>
-    <id>http://tommyjiang.github.io/2020/2020-08-10-a-tour-of-c++/</id>
-    <published>2020-08-10T14:00:00.000Z</published>
-    <updated>2020-08-13T14:05:51.137Z</updated>
-    
-    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>祖师爷写的入门书。</div><a id="more"></a><h1 id="The-Basics"><a href="#The-Basics" class="headerlink" title="The Basics"></a>The Basics</h1><ul><li>C++ 是编译语言，源代码需要经过编译、链接才能生成可执行程序。</li><li>ISO C++ 包括两部分：<ul><li>核心特性，例如内置类型、循环等。</li><li>标准库，例如容器、I/O 操作等。</li></ul></li><li>C++ 是静态类型语言，编译器必须了解所有变量的类型。</li><li>函数重载：函数同名但参数类型不同</li><li>C++ 逻辑运算符<ul><li>按位运算：&amp; 和 |</li><li>逻辑运算：&amp;&amp; 和 ||</li></ul></li><li>窄化转换：丢失精度的转换，例如将 double 转为 int，将 int 转为 char。初始化时使用大括号({})可避免窄化转换。</li><li>变量作用域<ul><li>局部作用域：适用于函数和 lambda 内声明的变量。作用范围为声明到 block 结束。</li><li>类作用域：类内和 enum class 内定义的变量。作用范围为整个 block。</li><li>命名空间作用域：命名空间内定义的变量。作用范围为声明到 namespace 结束。</li><li>全局作用域：不在任何 block 内定义的变量。</li></ul></li><li>nullptr 是空指针常量。</li></ul>]]></content>
-    
-    
-    <summary type="html">&lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
-祖师爷写的入门书。
-&lt;/div&gt;</summary>
-    
-    
-    
-    <category term="Geek" scheme="http://tommyjiang.github.io/categories/Geek/"/>
-    
-    
-    <category term="C++" scheme="http://tommyjiang.github.io/tags/C/"/>
     
   </entry>
   
