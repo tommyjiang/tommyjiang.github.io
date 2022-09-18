@@ -1,7 +1,98 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+<head><!-- hexo injector head_begin start --><style type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->.douban-card-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 400px;
+}
+
+.douban-card {
+    display: flex;
+    margin: 30px 10px;
+    padding: 15px;
+    border-radius: 15px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.douban-card:hover {
+    text-decoration: none;
+}
+
+.douban-card-bgimg {
+    position: absolute;
+    width: 115%;
+    height: 115%;
+    filter: blur(15px) brightness(0.6);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-img {
+    position: relative;
+    height: 130px;
+    width: 80px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-left:hover .douban-card-img {
+    filter: blur(5px) brightness(0.6);
+    transform: perspective(800px) rotateX(180deg);
+}
+
+.douban-card-left .douban-card-img {
+    transition: all 500ms ease;
+}
+
+.douban-card-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.douban-card-left .douban-card-status {
+    height: 130px;
+    width: 80px;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 30%;
+    transform: rotateX(180deg);
+    backface-visibility: hidden;
+    transition: all 500ms ease;
+}
+
+.douban-card-left:hover .douban-card-status {
+    transform: perspective(800px) rotateX(0deg);
+}
+
+.douban-card-right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+    font-size: 16px;
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.3;
+    color: antiquewhite;
+}
+
+.douban-card-item {
+    margin-top: 4px;
+}
+</style><!-- hexo injector head_begin end -->
+  <meta charset="utf-8">
   
   <title>新生儿各种手续 | Tommy&#39;s Blog</title>
   <meta name="author" content="Tommy Jiang">
@@ -49,7 +140,7 @@
 
 <!-- hexo injector head_end start -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="Tommy's Blog" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Tommy's Blog" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body>
@@ -127,7 +218,7 @@
 记录新生儿的各种手续。
 </div>
 
-<a id="more"></a>
+<span id="more"></span>
 <h1 id="出生证明"><a href="#出生证明" class="headerlink" title="出生证明"></a>出生证明</h1><p>现在出生证明可以线上办理，下载北京通，首屏出生证申领。尽量在小孩儿出生一周后，满月前办理。</p>
 <h1 id="协和新生儿建档-复查"><a href="#协和新生儿建档-复查" class="headerlink" title="协和新生儿建档 + 复查"></a>协和新生儿建档 + 复查</h1><p>新生儿出生后戴的手环上有 ID 号，产妇和新生儿出院时，协和也会告知 ID 号。家长自行到收费处提供新生儿 ID 直接建档。42 天复查时，提前 7 天在协和 App 上建档，然后预约儿科新生儿或儿童保健的号。</p>
 <h1 id="户口"><a href="#户口" class="headerlink" title="户口"></a>户口</h1><p>需要的材料：</p>
@@ -144,11 +235,17 @@
 <li>出生证明复印件。</li>
 <li>北京市预防接种证(出生接种疫苗时，出生医院办理)。</li>
 <li>出生时卡介苗、乙肝疫苗第一针接种记录，儿童转诊单。我们的这个都在预防接种证上。</li>
-<li>北京市母子健康手册儿童保健记录(怀孕后到社区卫生服务中心领取)。这个会记录儿童体检结果。</li>
+<li>北京市母子健康手册儿童保健记录(怀孕后到社区卫生服务中心领取)，用于记录体检结果。</li>
 </ol>
 <p>预约体检和打疫苗都是在“儿宝宝”小程序里预约，要先到社区卫生服务中心预防保健科建本才能预约，疫苗提前一个月放号，体检提前一周放号。</p>
-<h2 id="自费疫苗"><a href="#自费疫苗" class="headerlink" title="自费疫苗"></a>自费疫苗</h2><p>参考了<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/435139950/answer/1640524903">知乎这个回答</a>，必选的自费疫苗包括水痘疫苗、五联疫苗、13 价肺炎疫苗、肠道病毒 71 型灭活疫苗(手足口疫苗)、五价轮状病毒疫苗，有可能的话免费的流脑疫苗换成自费的流脑疫苗，注意是流脑疫苗，不是乙脑疫苗，乙脑疫苗选免费的就可以。</p>
-	  
+<h2 id="自费疫苗"><a href="#自费疫苗" class="headerlink" title="自费疫苗"></a>自费疫苗</h2><p>参考了<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/435139950/answer/1640524903">知乎这个回答</a>，必选的自费疫苗包括水痘疫苗、五联疫苗、13 价肺炎疫苗、肠道病毒 71 型灭活疫苗(手足口疫苗)、五价轮状病毒疫苗，有可能的话免费的流脑疫苗换成自费的流脑疫苗，注意是流脑疫苗，不是乙脑疫苗，乙脑疫苗选免费的减毒疫苗就可以。</p>
+<h1 id="银行卡"><a href="#银行卡" class="headerlink" title="银行卡"></a>银行卡</h1><p>银行卡主要是医保缴费使用，北京银行需要的材料包括：</p>
+<ol>
+<li>宝宝户口对应的户口本原件，即使和代办人不在一个户口本也没关系。</li>
+<li>出生证明原件。</li>
+<li>代办人本人身份证。</li>
+</ol>
+<h1 id="医保卡"><a href="#医保卡" class="headerlink" title="医保卡"></a>医保卡</h1>	  
 	</div>
 
 	<!-- recommended posts -->
@@ -232,7 +329,7 @@
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    <li><a href="/categories/生活/">生活<span>62</span></a></li>
+    <li><a href="/categories/生活/">生活<span>61</span></a></li>
   </li>
 
     </ul>

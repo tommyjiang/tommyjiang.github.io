@@ -1,7 +1,98 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+<head><!-- hexo injector head_begin start --><style type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->.douban-card-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 400px;
+}
+
+.douban-card {
+    display: flex;
+    margin: 30px 10px;
+    padding: 15px;
+    border-radius: 15px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.douban-card:hover {
+    text-decoration: none;
+}
+
+.douban-card-bgimg {
+    position: absolute;
+    width: 115%;
+    height: 115%;
+    filter: blur(15px) brightness(0.6);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-img {
+    position: relative;
+    height: 130px;
+    width: 80px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-left:hover .douban-card-img {
+    filter: blur(5px) brightness(0.6);
+    transform: perspective(800px) rotateX(180deg);
+}
+
+.douban-card-left .douban-card-img {
+    transition: all 500ms ease;
+}
+
+.douban-card-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.douban-card-left .douban-card-status {
+    height: 130px;
+    width: 80px;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 30%;
+    transform: rotateX(180deg);
+    backface-visibility: hidden;
+    transition: all 500ms ease;
+}
+
+.douban-card-left:hover .douban-card-status {
+    transform: perspective(800px) rotateX(0deg);
+}
+
+.douban-card-right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+    font-size: 16px;
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.3;
+    color: antiquewhite;
+}
+
+.douban-card-item {
+    margin-top: 4px;
+}
+</style><!-- hexo injector head_begin end -->
+  <meta charset="utf-8">
   
   <title>Emacs Lisp 计算数九天和伏天 | Tommy&#39;s Blog</title>
   <meta name="author" content="Tommy Jiang">
@@ -49,7 +140,7 @@
 
 <!-- hexo injector head_end start -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="Tommy's Blog" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Tommy's Blog" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body>
@@ -127,17 +218,17 @@
 第一个用 Emacs Lisp 实现的小功能。
 </div>
 
-<a id="more"></a>
+<span id="more"></span>
 <p>Lisp 诞生于 1958 年，发明人是 John McCarthy，是目前仍在使用的第二古老的高级语言(最早的是 Fortran，诞生于 1957 年)。</p>
 <p>Lisp 来源于 <code>LISt Processing</code>(有调侃说是 <code>Lots of Isolated Stupid Parentheses</code>)，这个古老的语言和目前主流语言例如 C++，Python 和 Java 等有显著区别，下面是一段代码示例：</p>
-<pre class="line-numbers language-elisp" data-language="elisp"><code class="language-elisp"><span class="token punctuation">(</span><span class="token defun"><span class="token keyword">defun</span> <span class="token function">cal-china-x-winter-solstice-date</span> <span class="token punctuation">(</span><span class="token arguments"><span class="token argument variable">date</span></span><span class="token punctuation">)</span></span>
+<pre class="line-numbers language-lisp" data-language="lisp"><code class="language-lisp"><span class="token punctuation">(</span><span class="token defun"><span class="token keyword">defun</span> <span class="token function">cal-china-x-winter-solstice-date</span> <span class="token punctuation">(</span><span class="token arguments"><span class="token argument variable">date</span></span><span class="token punctuation">)</span></span>
   <span class="token string">"Return winter solstice(冬至) date in Gregorian form.
 
 If <span class="token argument">MONTH</span> = 12, return current year's date
 Else return last year's date"</span>
   <span class="token punctuation">(</span><span class="token keyword">let*</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token car">cyear</span> <span class="token punctuation">(</span><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token car">=</span> <span class="token punctuation">(</span><span class="token car">calendar-extract-month</span> date<span class="token punctuation">)</span> <span class="token number">12</span><span class="token punctuation">)</span>
                     <span class="token punctuation">(</span><span class="token car">calendar-extract-year</span> date<span class="token punctuation">)</span>
-                  <span class="token punctuation">(</span><span class="token car">1-</span> <span class="token punctuation">(</span><span class="token car">calendar-extract-year</span> date<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                  <span class="token punctuation">(</span>1- <span class="token punctuation">(</span><span class="token car">calendar-extract-year</span> date<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
     <span class="token punctuation">(</span><span class="token car">car</span> <span class="token punctuation">(</span><span class="token car">rassoc</span> '<span class="token string">"冬至"</span> <span class="token punctuation">(</span><span class="token car">cal-china-x-solar-term-alist-new</span> cyear<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><code>Emacs</code> 也许是用 Lisp 编写的最著名的软件了。<code>Emacs</code> 自带了日历功能，<a target="_blank" rel="noopener" href="https://github.com/xwl/cal-china-x"><code>cal-china-x</code></a> 扩展实现了阴历、节气、生肖等的计算，但没有实现数九天和伏天的计算功能。正好借这个机会实现下功能，练练手。</p>
 <h1 id="数九天计算"><a href="#数九天计算" class="headerlink" title="数九天计算"></a>数九天计算</h1><p>数九天的计算相对比较简单。从冬至当天开始算一九第一天，每过九天加一九，一直到九九第九天。</p>
@@ -156,7 +247,7 @@ If <span class="token argument">MONTH</span> = 12, return current year's date
 Else return last year's date"</span>
   <span class="token punctuation">(</span><span class="token keyword">let*</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token car">cyear</span> <span class="token punctuation">(</span><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token car">=</span> <span class="token punctuation">(</span><span class="token car">calendar-extract-month</span> date<span class="token punctuation">)</span> <span class="token number">12</span><span class="token punctuation">)</span>
                     <span class="token punctuation">(</span><span class="token car">calendar-extract-year</span> date<span class="token punctuation">)</span>
-                  <span class="token punctuation">(</span><span class="token car">1-</span> <span class="token punctuation">(</span><span class="token car">calendar-extract-year</span> date<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                  <span class="token punctuation">(</span>1- <span class="token punctuation">(</span><span class="token car">calendar-extract-year</span> date<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
     <span class="token punctuation">(</span><span class="token car">car</span> <span class="token punctuation">(</span><span class="token car">rassoc</span> '<span class="token string">"冬至"</span> <span class="token punctuation">(</span><span class="token car">cal-china-x-solar-term-alist-new</span> cyear<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 
 <span class="token punctuation">(</span><span class="token defun"><span class="token keyword">defun</span> <span class="token function">winter-solstice-day-diff</span> <span class="token punctuation">(</span><span class="token arguments"><span class="token argument variable">date</span></span><span class="token punctuation">)</span></span>  <span class="token comment">; 计算与指定冬至的天数差</span>
@@ -168,7 +259,7 @@ Else return last year's date"</span>
         <span class="token string">""</span>
       <span class="token punctuation">(</span><span class="token keyword">concat</span> <span class="token punctuation">(</span><span class="token car">aref</span> cal-china-x-nine-characters <span class="token punctuation">(</span><span class="token car">/</span> daygap <span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
               <span class="token string">"("</span>
-              <span class="token punctuation">(</span><span class="token car">number-to-string</span> <span class="token punctuation">(</span><span class="token car">1+</span> <span class="token punctuation">(</span><span class="token car">%</span> daygap <span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+              <span class="token punctuation">(</span><span class="token car">number-to-string</span> <span class="token punctuation">(</span>1+ <span class="token punctuation">(</span><span class="token car">%</span> daygap <span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
               <span class="token string">")"</span>
               <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
 <h1 id="伏天计算"><a href="#伏天计算" class="headerlink" title="伏天计算"></a>伏天计算</h1><p>民间有“头伏饺子二伏面，三伏烙饼摊鸡蛋”的习俗，看到这么多面食可以判断这基本是华北、黄淮一带的风俗。伏天计算比较复杂，原因是涉及到两个节气(夏至和立秋)，以及每日的干支。具体计算方法是：</p>
@@ -227,14 +318,14 @@ Defaults to today's date if <span class="token argument">DATE</span> is not give
         <span class="token string">""</span>
       <span class="token punctuation">(</span><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">and</span> <span class="token punctuation">(</span><span class="token car">>=</span> chufu-gap <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token car">&lt;</span> zhongfu-gap <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
           <span class="token punctuation">(</span><span class="token keyword">concat</span> <span class="token string">"初伏("</span>
-                  <span class="token punctuation">(</span><span class="token car">number-to-string</span> <span class="token punctuation">(</span><span class="token car">1+</span> chufu-gap<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                  <span class="token punctuation">(</span><span class="token car">number-to-string</span> <span class="token punctuation">(</span>1+ chufu-gap<span class="token punctuation">)</span><span class="token punctuation">)</span>
                   <span class="token string">")"</span><span class="token punctuation">)</span>
         <span class="token punctuation">(</span><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">and</span> <span class="token punctuation">(</span><span class="token car">>=</span> zhongfu-gap <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token car">&lt;</span> mofu-gap <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
             <span class="token punctuation">(</span><span class="token keyword">concat</span> <span class="token string">"中伏("</span>
-                    <span class="token punctuation">(</span><span class="token car">number-to-string</span> <span class="token punctuation">(</span><span class="token car">1+</span> zhongfu-gap<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                    <span class="token punctuation">(</span><span class="token car">number-to-string</span> <span class="token punctuation">(</span>1+ zhongfu-gap<span class="token punctuation">)</span><span class="token punctuation">)</span>
                     <span class="token string">")"</span><span class="token punctuation">)</span>
           <span class="token punctuation">(</span><span class="token keyword">concat</span> <span class="token string">"末伏("</span>
-                  <span class="token punctuation">(</span><span class="token car">number-to-string</span> <span class="token punctuation">(</span><span class="token car">1+</span> mofu-gap<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                  <span class="token punctuation">(</span><span class="token car">number-to-string</span> <span class="token punctuation">(</span>1+ mofu-gap<span class="token punctuation">)</span><span class="token punctuation">)</span>
                   <span class="token string">")"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>注意如果夏至当天是庚日，则算第一个庚日，相当于初伏在夏至20天之后。</p>
 <p>另外，<code>cal-china-x</code> 中月和日的天干地支计算有点问题，需要用 <code>Emacs</code> 自带的计算。</p>
@@ -322,7 +413,7 @@ Defaults to today's date if <span class="token argument">DATE</span> is not give
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    <li><a href="/categories/Geek/">Geek<span>12</span></a></li>
+    <li><a href="/categories/Geek/">Geek<span>11</span></a></li>
   </li>
 
     </ul>

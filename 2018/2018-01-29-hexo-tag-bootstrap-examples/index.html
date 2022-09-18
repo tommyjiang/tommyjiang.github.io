@@ -1,7 +1,98 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+<head><!-- hexo injector head_begin start --><style type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->.douban-card-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 400px;
+}
+
+.douban-card {
+    display: flex;
+    margin: 30px 10px;
+    padding: 15px;
+    border-radius: 15px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.douban-card:hover {
+    text-decoration: none;
+}
+
+.douban-card-bgimg {
+    position: absolute;
+    width: 115%;
+    height: 115%;
+    filter: blur(15px) brightness(0.6);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-img {
+    position: relative;
+    height: 130px;
+    width: 80px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-left:hover .douban-card-img {
+    filter: blur(5px) brightness(0.6);
+    transform: perspective(800px) rotateX(180deg);
+}
+
+.douban-card-left .douban-card-img {
+    transition: all 500ms ease;
+}
+
+.douban-card-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.douban-card-left .douban-card-status {
+    height: 130px;
+    width: 80px;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 30%;
+    transform: rotateX(180deg);
+    backface-visibility: hidden;
+    transition: all 500ms ease;
+}
+
+.douban-card-left:hover .douban-card-status {
+    transform: perspective(800px) rotateX(0deg);
+}
+
+.douban-card-right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+    font-size: 16px;
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.3;
+    color: antiquewhite;
+}
+
+.douban-card-item {
+    margin-top: 4px;
+}
+</style><!-- hexo injector head_begin end -->
+  <meta charset="utf-8">
   
   <title>Hexo-tag-bootstrap 示例 | Tommy&#39;s Blog</title>
   <meta name="author" content="Tommy Jiang">
@@ -49,7 +140,7 @@
 
 <!-- hexo injector head_end start -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="Tommy's Blog" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Tommy's Blog" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body>
@@ -123,14 +214,26 @@
 	  		
 
 	  <p>让博客更丰富多彩。</p>
-<a id="more"></a>
-<h1 id="Syntax"><a href="#Syntax" class="headerlink" title="Syntax"></a>Syntax</h1><p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
-<p class="text-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-<p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
-<p class="text-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-<p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
-<p class="text-danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
-<h1 id="Buttons"><a href="#Buttons" class="headerlink" title="Buttons"></a>Buttons</h1><a class="btn btn-default" target="_blank" rel="noopener" href="http://hahack.com">hahack</a>
+<span id="more"></span>
+<h1 id="Syntax"><a href="#Syntax" class="headerlink" title="Syntax"></a>Syntax</h1><p class="text-muted"><p>Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+</p>
+
+<p class="text-primary"><p>Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+</p>
+
+<p class="text-success"><p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+</p>
+
+<p class="text-info"><p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+</p>
+
+<p class="text-warning"><p>Etiam porta sem malesuada magna mollis euismod.</p>
+</p>
+
+<p class="text-danger"><p>Donec ullamcorper nulla non metus auctor fringilla.</p>
+</p>
+
+<h1 id="Buttons"><a href="#Buttons" class="headerlink" title="Buttons"></a>Buttons</h1><a class="btn btn-secondary" target="_blank" rel="noopener" href="http://hahack.com">hahack</a>
 <a class="btn btn-primary" target="_blank" rel="noopener" href="http://hahack.com">hahack</a>
 <a class="btn btn-success" target="_blank" rel="noopener" href="http://hahack.com">hahack</a>
 <a class="btn btn-warning" target="_blank" rel="noopener" href="http://hahack.com">hahack</a>
@@ -142,11 +245,15 @@
 <span class="label label-danger">danger</span>
 <span class="label label-primary">primary</span>
 <span class="label label-info">info</span>
-<h1 id="Badges"><a href="#Badges" class="headerlink" title="Badges"></a>Badges</h1><span class="badge">42</span>
-<h1 id="Alerts"><a href="#Alerts" class="headerlink" title="Alerts"></a>Alerts</h1><div class="alert alert-warning"><i class="fa fa-bell"></i>  Best check yo self, you're not looking too good.</div>
-<div class="alert alert-danger"><i class="fa fa-bug"></i>  Change a few things up and try submitting again.</div>
-<div class="alert alert-success"><i class="fa fa-lightbulb-o"></i>  You successfully read this important alert message.</div>
-<div class="alert alert-info"><i class="fa fa-info"></i>  This alert needs your attention, but it's not super important.</div>
+<h1 id="Badges"><a href="#Badges" class="headerlink" title="Badges"></a>Badges</h1><span class="badge badge-secondary">42</span>
+<h1 id="Alerts"><a href="#Alerts" class="headerlink" title="Alerts"></a>Alerts</h1><div class="alert alert-warning"><i class="fa fa-bell  float-left"></i>  <p>Best check yo self, you’re not looking too good.</p>
+</div>
+<div class="alert alert-danger"><i class="fa fa-bug  float-left"></i>  <p>Change a few things up and try submitting again.</p>
+</div>
+<div class="alert alert-success"><i class="fa fa-lightbulb-o  float-left"></i>  <p>You successfully read this important alert message.</p>
+</div>
+<div class="alert alert-info"><i class="fa fa-info  float-left"></i>  <p>This alert needs your attention, but it’s not super important.</p>
+</div>
 	  
 	</div>
 
@@ -231,7 +338,7 @@
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    <li><a href="/categories/Geek/">Geek<span>12</span></a></li>
+    <li><a href="/categories/Geek/">Geek<span>11</span></a></li>
   </li>
 
     </ul>
