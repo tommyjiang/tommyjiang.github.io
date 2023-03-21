@@ -6,7 +6,7 @@
   <link href="http://tommyjiang.github.io/atom.xml" rel="self"/>
   
   <link href="http://tommyjiang.github.io/"/>
-  <updated>2022-07-06T00:00:29.318Z</updated>
+  <updated>2023-03-21T15:08:07.722Z</updated>
   <id>http://tommyjiang.github.io/</id>
   
   <author>
@@ -15,6 +15,98 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>云尊府事件</title>
+    <link href="http://tommyjiang.github.io/2023/2023-03-20-yunzunfu/"/>
+    <id>http://tommyjiang.github.io/2023/2023-03-20-yunzunfu/</id>
+    <published>2023-03-20T12:00:00.000Z</published>
+    <updated>2023-03-21T15:08:07.722Z</updated>
+    
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>饿极生悲。</div><span id="more"></span><p>听我老婆说学校旁边云尊府的米线味道不错，我也来尝尝。在路边停车之后，直奔云尊府大牌子，进去之后是一个门和一个向右的小过道，在门和过道之间还摆着一个云尊府石锅鱼的大个易拉宝，结果我直接冲到有吗过道里的门，进去点米线的时候服务员说只有一种过桥米线，后来发现是走错路走到云尊府旁边的众成豆浆了……</p>]]></content>
+    
+    
+    <summary type="html">&lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
+饿极生悲。
+&lt;/div&gt;</summary>
+    
+    
+    
+    <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="记录" scheme="http://tommyjiang.github.io/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2023 年 2 月账户总结</title>
+    <link href="http://tommyjiang.github.io/2023/2023-02-28-stock-monthly-report/"/>
+    <id>http://tommyjiang.github.io/2023/2023-02-28-stock-monthly-report/</id>
+    <published>2023-02-28T14:00:00.000Z</published>
+    <updated>2023-02-28T13:27:19.968Z</updated>
+    
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>2023 年 2 月账户总结。</div><span id="more"></span><div id="self_chicang" style="height:400px"></div><div id="self_chicang_pubu" style="height:400px"></div><div id="self_hs300" style="height:400px"></div><script src="https://cdn.jsdelivr.net/npm/echarts@5.1.2/dist/echarts.js"></script><script type="text/javascript">    var self_chicang = echarts.init(document.getElementById('self_chicang'));    option = {        title: {          text: '持仓占比'        },        toolbox: {          feature: {            saveAsImage: {}          }        },        tooltip: {          trigger: 'item',          formatter: "{b}: {c}%",        },        legend: {          left: 'center'        },        series: [          {            name: '持仓占比',            type: 'pie',            radius: ['40%', '70%'],            avoidLabelOverlap: false,            itemStyle: {              borderRadius: 10,              borderColor: '#fff',              borderWidth: 2            },            label: {                normal: {                    show: true,                    formatter: '{b} {d}%',//模板变量有 {a}、{b}、{c}、{d}，分别表示系列名，数据名，数据值，百分比。{d}数据会根据value值计算百分比                    textStyle : {                        align : 'center',                        baseline : 'middle',                        fontFamily : '微软雅黑',                        fontSize : 10,                    }               },            },            emphasis: {              label: {                show: true,                fontSize: '15',                fontWeight: 'bold'              }            },            labelLine: {              show: false            },            data: [              { value: 45.02, name: '腾讯控股' },              { value: 19.40, name: '洋河股份' },              { value: 12.77, name: '招商银行' },              { value: 9.70, name: '分众传媒' },              { value: 9.46, name: '医疗 ETF' },              { value: 2.23, name: '美团' },              { value: 1.42, name: '恒生科技 ETF' },            ]          }        ]    };    self_chicang.setOption(option, true); //当setOption第二个参数为true时，会阻止数据合并</script><script type="text/javascript">    var self_chicang_pubu = echarts.init(document.getElementById('self_chicang_pubu'));    option = {      title: {        text: '持仓瀑布图'      },      tooltip: {        trigger: 'axis',        axisPointer: {          type: 'cross',          label: {            backgroundColor: '#6a7985'          }        },        formatter: function (params) {                var html=params[0].name+"<br>";                for(var i=0;i<params.length;i++){                    html += params[i].marker+ params[i].seriesName+ ": " + params[i].value;                    html += "%";                    html += "<br>";                }                return html;            }      },      legend: {        data: ['腾讯控股', '洋河股份', '招商银行', '分众传媒', '', '医疗 ETF', '美团', '恒生科技 ETF'],      },      toolbox: {        feature: {          saveAsImage: {}        }      },      grid: {        left: '3%',        right: '4%',        bottom: '3%',        containLabel: true      },      xAxis: [        {          type: 'category',          boundaryGap: false,          data: ['2022-12-31', '2023-01-31', '2023-02-28'],        }      ],      yAxis: [        {          type: 'value',          axisLabel: {            formatter: '{value} %',            align: 'right',          },        }      ],      series: [        {          name: '腾讯控股',          type: 'line',          stack: 'Total',          smooth: true,          lineStyle: {            width: 0          },          showSymbol: false,          areaStyle: {            opacity: 0.8,          },          emphasis: {            focus: 'series'          },          data: [45.80, 45.64, 45.02],        },        {          name: '洋河股份',          type: 'line',          stack: 'Total',          smooth: true,          lineStyle: {            width: 0          },          showSymbol: false,          areaStyle: {            opacity: 0.8,          },          emphasis: {            focus: 'series'          },          data: [19.18, 18.73, 19.40],        },        {          name: '招商银行',          type: 'line',          stack: 'Total',          smooth: true,          lineStyle: {            width: 0          },          showSymbol: false,          areaStyle: {            opacity: 0.8,          },          emphasis: {            focus: 'series'          },          data: [13.36, 13.18, 12.77],        },        {          name: '分众传媒',          type: 'line',          stack: 'Total',          smooth: true,          lineStyle: {            width: 0          },          showSymbol: false,          areaStyle: {            opacity: 0.8,          },          emphasis: {            focus: 'series'          },          data: [10.38, 9.64, 9.70],        },        {          name: '医疗 ETF',          type: 'line',          stack: 'Total',          smooth: true,          lineStyle: {            width: 0          },          showSymbol: false,          label: {            show: true,            position: 'top'          },          areaStyle: {            opacity: 0.8,          },          emphasis: {            focus: 'series'          },          data: [9.71, 9.23, 9.46],        },        {          name: '美团',          type: 'line',          stack: 'Total',          smooth: true,          lineStyle: {            width: 0          },          showSymbol: false,          label: {            show: true,            position: 'top'          },          areaStyle: {            opacity: 0.8,          },          emphasis: {            focus: 'series'          },          data: [0, 2.09, 2.23],        },        {          name: '恒生科技 ETF',          type: 'line',          stack: 'Total',          smooth: true,          lineStyle: {            width: 0          },          showSymbol: false,          label: {            show: true,            position: 'top'          },          areaStyle: {            opacity: 0.8,          },          emphasis: {            focus: 'series'          },          data: [1.56, 1.49, 1.42],        },      ]    };    self_chicang_pubu.setOption(option, true); //当setOption第二个参数为true时，会阻止数据合并</script><script type="text/javascript">    var self_hs300 = echarts.init(document.getElementById('self_hs300'));    option = {        title: {          text: '收益率对比'        },        xAxis: {            type: 'category',            data: ['2022-12-31', '2023-01-31', '2023-02-28']        },        yAxis: {            type: 'value',            name: "收益率",            axisLabel: {              formatter: "{value} %"            }        },        tooltip: {            trigger: 'axis',            formatter: function (params) {                var html=params[0].name+"<br>";                for(var i=0;i<params.length;i++){                    html += params[i].marker+ params[i].seriesName+ ": " + params[i].value;                    html += "%";                    html += "<br>";                }                return html;            }        },        toolbox: {          feature: {            saveAsImage: {}          }        },        series: [{            name: '个人账户',            data: [0, 11.56, 3.97],            type: 'line',            color: '#2a9efc',            smooth: true,        },        {            name: '沪深 300',            data: [0, 7.37, 5.11],            type: 'line',            color: '#cab8fd',            smooth: true        },        ],        legend: {            data: ['个人账户', '沪深 300']        },    };    self_hs300.setOption(option, true); //当setOption第二个参数为true时，会阻止数据合并</script>]]></content>
+    
+    
+    <summary type="html">&lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
+2023 年 2 月账户总结。
+&lt;/div&gt;</summary>
+    
+    
+    
+    <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="投资" scheme="http://tommyjiang.github.io/tags/%E6%8A%95%E8%B5%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2023 年 1 月账户总结</title>
+    <link href="http://tommyjiang.github.io/2023/2023-01-31-stock-monthly-report/"/>
+    <id>http://tommyjiang.github.io/2023/2023-01-31-stock-monthly-report/</id>
+    <published>2023-01-31T14:00:00.000Z</published>
+    <updated>2023-01-31T13:30:03.186Z</updated>
+    
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>2023 年 1 月账户总结。</div><span id="more"></span><div id="self_chicang" style="height:400px"></div><div id="self_chicang_pubu" style="height:400px"></div><div id="self_hs300" style="height:400px"></div><script src="https://cdn.jsdelivr.net/npm/echarts@5.1.2/dist/echarts.js"></script><script type="text/javascript">    var self_chicang = echarts.init(document.getElementById('self_chicang'));    option = {        title: {          text: '持仓占比'        },        toolbox: {          feature: {            saveAsImage: {}          }        },        tooltip: {          trigger: 'item',          formatter: "{b}: {c}%",        },        legend: {          left: 'center'        },        series: [          {            name: '持仓占比',            type: 'pie',            radius: ['40%', '70%'],            avoidLabelOverlap: false,            itemStyle: {              borderRadius: 10,              borderColor: '#fff',              borderWidth: 2            },            label: {                normal: {                    show: true,                    formatter: '{b} {d}%',//模板变量有 {a}、{b}、{c}、{d}，分别表示系列名，数据名，数据值，百分比。{d}数据会根据value值计算百分比                    textStyle : {                        align : 'center',                        baseline : 'middle',                        fontFamily : '微软雅黑',                        fontSize : 10,                    }               },            },            emphasis: {              label: {                show: true,                fontSize: '15',                fontWeight: 'bold'              }            },            labelLine: {              show: false            },            data: [              { value: 45.64, name: '腾讯控股' },              { value: 18.73, name: '洋河股份' },              { value: 13.18, name: '招商银行' },              { value: 9.64, name: '分众传媒' },              { value: 9.23, name: '医疗 ETF' },              { value: 2.09, name: '美团' },              { value: 1.49, name: '恒生科技 ETF' },            ]          }        ]    };    self_chicang.setOption(option, true); //当setOption第二个参数为true时，会阻止数据合并</script><script type="text/javascript">    var self_chicang_pubu = echarts.init(document.getElementById('self_chicang_pubu'));    option = {      title: {        text: '持仓瀑布图'      },      tooltip: {        trigger: 'axis',        axisPointer: {          type: 'cross',          label: {            backgroundColor: '#6a7985'          }        },        formatter: function (params) {                var html=params[0].name+"<br>";                for(var i=0;i<params.length;i++){                    html += params[i].marker+ params[i].seriesName+ ": " + params[i].value;                    html += "%";                    html += "<br>";                }                return html;            }      },      legend: {        data: ['腾讯控股', '洋河股份', '招商银行', '分众传媒', '', '医疗 ETF', '美团', '恒生科技 ETF'],      },      toolbox: {        feature: {          saveAsImage: {}        }      },      grid: {        left: '3%',        right: '4%',        bottom: '3%',        containLabel: true      },      xAxis: [        {          type: 'category',          boundaryGap: false,          data: ['2022-12-31', '2023-01-31'],        }      ],      yAxis: [        {          type: 'value'        }      ],      series: [        {          name: '腾讯控股',          type: 'line',          stack: 'Total',          smooth: true,          lineStyle: {            width: 0          },          showSymbol: false,          areaStyle: {            opacity: 0.8,          },          emphasis: {            focus: 'series'          },          data: [45.80, 45.64],        },        {          name: '洋河股份',          type: 'line',          stack: 'Total',          smooth: true,          lineStyle: {            width: 0          },          showSymbol: false,          areaStyle: {            opacity: 0.8,          },          emphasis: {            focus: 'series'          },          data: [19.18, 18.73],        },        {          name: '招商银行',          type: 'line',          stack: 'Total',          smooth: true,          lineStyle: {            width: 0          },          showSymbol: false,          areaStyle: {            opacity: 0.8,          },          emphasis: {            focus: 'series'          },          data: [13.36, 13.18],        },        {          name: '分众传媒',          type: 'line',          stack: 'Total',          smooth: true,          lineStyle: {            width: 0          },          showSymbol: false,          areaStyle: {            opacity: 0.8,          },          emphasis: {            focus: 'series'          },          data: [10.38, 9.64],        },        {          name: '医疗 ETF',          type: 'line',          stack: 'Total',          smooth: true,          lineStyle: {            width: 0          },          showSymbol: false,          label: {            show: true,            position: 'top'          },          areaStyle: {            opacity: 0.8,          },          emphasis: {            focus: 'series'          },          data: [9.71, 9.23],        },        {          name: '美团',          type: 'line',          stack: 'Total',          smooth: true,          lineStyle: {            width: 0          },          showSymbol: false,          label: {            show: true,            position: 'top'          },          areaStyle: {            opacity: 0.8,          },          emphasis: {            focus: 'series'          },          data: [0, 2.09],        },        {          name: '恒生科技 ETF',          type: 'line',          stack: 'Total',          smooth: true,          lineStyle: {            width: 0          },          showSymbol: false,          label: {            show: true,            position: 'top'          },          areaStyle: {            opacity: 0.8,          },          emphasis: {            focus: 'series'          },          data: [1.56, 1.49],        },      ]    };    self_chicang_pubu.setOption(option, true); //当setOption第二个参数为true时，会阻止数据合并</script><script type="text/javascript">    var self_hs300 = echarts.init(document.getElementById('self_hs300'));    option = {        title: {          text: '收益率对比'        },        xAxis: {            type: 'category',            data: ['2022-12-31', '2023-01-31']        },        yAxis: {            type: 'value',            name: "收益率",            axisLabel: {              formatter: "{value} %"            }        },        tooltip: {            trigger: 'axis',            formatter: function (params) {                var html=params[0].name+"<br>";                for(var i=0;i<params.length;i++){                    html += params[i].marker+ params[i].seriesName+ ": " + params[i].value;                    html += "%";                    html += "<br>";                }                return html;            }        },        toolbox: {          feature: {            saveAsImage: {}          }        },        series: [{            name: '个人账户',            data: [0, 11.56],            type: 'line',            color: '#2a9efc',            smooth: true,        },        {            name: '沪深 300',            data: [0, 7.37],            type: 'line',            color: '#cab8fd',            smooth: true        },        ],        legend: {            data: ['个人账户', '沪深 300']        },    };    self_hs300.setOption(option, true); //当setOption第二个参数为true时，会阻止数据合并</script>]]></content>
+    
+    
+    <summary type="html">&lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
+2023 年 1 月账户总结。
+&lt;/div&gt;</summary>
+    
+    
+    
+    <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="投资" scheme="http://tommyjiang.github.io/tags/%E6%8A%95%E8%B5%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>宝宝一周岁信</title>
+    <link href="http://tommyjiang.github.io/2022/2022-10-08-son-1-year-anniversary/"/>
+    <id>http://tommyjiang.github.io/2022/2022-10-08-son-1-year-anniversary/</id>
+    <published>2022-10-24T13:00:00.000Z</published>
+    <updated>2022-11-03T14:17:09.479Z</updated>
+    
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>宝宝一周岁啦。</div><span id="more"></span><h1 id="爸爸给宝宝的信"><a href="#爸爸给宝宝的信" class="headerlink" title="爸爸给宝宝的信"></a>爸爸给宝宝的信</h1><p>亲爱的晴宝：</p><p>这是一封稍微迟到的一周岁信。</p><p>时间过得真快，年初的时候你刚百天，秋天就一周岁了，不过和百天刚会翻身的你相比，现在的你可是越来越不好带了。十一期间，妈妈要上课，2号和4号晚上加上3号和5号上午爸爸自己带你，压力太大头皮一直一跳一跳的疼。上网查了症状，也在微信上问了一位大夫，都说是神经痛，要多休养，放松精神，现在过了半个多月终于好了，可以腾出时间和精力给你写信了。感谢这半个月来妈妈每天早上起床带你，保证爸爸有充足的睡眠。</p><p>爸爸现在是一名程序员，是从垄断国企国家电网跑出来的，等你长大以后就能了解爸爸转行的具体经历了。正好今天妈妈还问到现在工作感觉怎么样，我觉得还不错，能干自己喜欢的事情，挣钱养家，晚上还能回来陪你长大，就已经很知足了。适当降低期望，是幸福的一大秘诀，这也是我三十多岁了才明白的。希望你以后也能做自己喜欢的工作，只要做的是自己喜欢的事，结果都不会太差，而且还能顺便把钱也赚了。</p><p>这次你的周岁照还是去建外 SOHO 拍的，不过拍摄商家从妈妈糖换成了可可兔，拍之前的几天你的小脸被蚊子咬了好几个包，只能让后期老师帮你把包都修掉了。妈妈说本来以为你百天的时候是颜值巅峰，但现在看还是挺可爱。同样是小孩，看自己的孩子和看别人家的孩子的感觉完全不一样，用妈妈的话说，你长在我们萌点上了。</p><p>从百天到周岁，你从只会翻身，到匍匐爬、手脚爬，这两天又开始推着空饮用水桶和凳子开始练走路了。现在有时候你不扶东西，自己一直试图保持平衡，竟然也能站上十几秒，估计没多久你就能自己一点一点走路了。奶奶现在家庭早教，每天教你认识动物，上午教一遍，下午还得复习一遍。不过你到现在还不会叫爸爸妈妈，还好我和妈妈都很佛系，不盲目和别人攀比，也没着急，嘿嘿。</p><p>周岁的你和小时候比，最大的特点就是越来越贪吃，脾气也越来越大。现在一有不顺着你心意的事，你就会嗷嗷叫唤，看到什么都想吃，大人吃饭的时候你都要爬到他们腿旁边扶着，小手还往桌上指，意思是想跟着一起吃。现在我们经常在厨房里吃饭，就是怕被你看到你也想吃，不给你吃你又嗷嗷叫。奶奶说爸爸小时候不这样，说不让干啥就不干了，也不叫唤，怪不得爸爸之前一路博士和进国企被 PUA 得这么惨呢，真是三岁看老啊。</p><p>送给你的周岁礼物，在妈妈的提议下，选了两瓶爱马仕配色的牛年茅台生肖酒，你抓周的时候一起合影了，爸爸先帮你保管好，等你长大成人和结婚的时候再开瓶庆祝。</p><p>希望你健康平安地成长，期待你学会叫爸爸。</p><div align="right">  爱你的爸爸  <br>  2022.11.3</div><h1 id="妈妈给宝宝的信"><a href="#妈妈给宝宝的信" class="headerlink" title="妈妈给宝宝的信"></a>妈妈给宝宝的信</h1><p>亲爱的晴宝：</p><p>今天是你出生的103天啦。妈妈终于有时间写一些话给你。</p><p>那天看着你努力地一再尝试翻身，小身子侧过去，哼哼唧唧看着非常痛苦地想爬起来。一次不行又一次。妈妈真是对生命又敬畏了几分。这样一个小小的生命，在本能的驱使下，即使再不舒服，也还想不断扩张自己的生命。</p><p>其实我之前一直对自己为什么要生孩子这个问题给不出一个答案。现在妈妈可以给你一个答案，为什么要生下你。因为妈妈想和你一起享受生活，享受生命。生命是多么美好啊！你会尝到很多妈妈爱吃的东西：甜中带点微苦的冰爽爽的巧克力冰激凌，充满油脂感的浓郁柔滑的鹅肝寿司，清甜又复合着玫瑰香口感的晴王葡萄…（当你能读懂这些字的时候，你应该知道妈妈是一个怎样的吃货啦）。还有很多时候你会感觉到这生命真是不枉走一遭，比如当你听到了直击灵魂深处的音乐，当你烦躁的时候看到了爱人温暖的笑脸和听到了柔声的抚慰…人生中也会遇到一些所谓不如意不顺利的时刻，而这些时刻仅仅是在提醒你，你有多少智慧、勇气和力量来超越这些所谓的困难和痛苦。</p><p>经常逗你，把你抱在怀里的时候，看着你软糯可爱的模样，会想起有些人说的“男孩子青春期以后就不理你了”，“养男孩子就是放虎归山的过程”…想想还是有点小伤感。是啊，你的成长注定是和父母渐行渐远的。而爸爸妈妈教育的成功，就是让你意识到你离开我们是可以的。这是一个令人伤心的悖论。但是，如果你以后真的要叛逆的话，就请叛逆吧，我做好准备了。你是一个新的生命力，希望你的到来能扩展爸爸妈妈的生命认知，并且让我们放下自己身上无谓的执着。</p><p>但是叛逆的反面是“负责”，你是唯一可以为你的人生负责的人。无论我再怎么爱你，我都没办法替你承担，因为妈妈也要承担她自己生命中的责任。我唯一能做的就是做一个明亮的人，让你知道这里有方向和温暖，让你去经历你的人生。除此之外， 我什么也做不了。</p><p>亲爱的晴宝，谢谢你来到我们身边，和爸爸妈妈一起庆祝生命！</p><div align="right">  爱你的妈妈  <br>  2022.1.18</div>]]></content>
+    
+    
+    <summary type="html">&lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
+宝宝一周岁啦。
+&lt;/div&gt;</summary>
+    
+    
+    
+    <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="儿子" scheme="http://tommyjiang.github.io/tags/%E5%84%BF%E5%AD%90/"/>
+    
+  </entry>
   
   <entry>
     <title>星巴克羊毛体验</title>
@@ -140,9 +232,9 @@
     <link href="http://tommyjiang.github.io/2021/2021-11-11-new-child-things/"/>
     <id>http://tommyjiang.github.io/2021/2021-11-11-new-child-things/</id>
     <published>2021-11-11T01:00:00.000Z</published>
-    <updated>2022-09-17T12:17:58.686Z</updated>
+    <updated>2022-09-20T11:44:03.361Z</updated>
     
-    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>记录新生儿的各种手续。</div><span id="more"></span><h1 id="出生证明"><a href="#出生证明" class="headerlink" title="出生证明"></a>出生证明</h1><p>现在出生证明可以线上办理，下载北京通，首屏出生证申领。尽量在小孩儿出生一周后，满月前办理。</p><h1 id="协和新生儿建档-复查"><a href="#协和新生儿建档-复查" class="headerlink" title="协和新生儿建档 + 复查"></a>协和新生儿建档 + 复查</h1><p>新生儿出生后戴的手环上有 ID 号，产妇和新生儿出院时，协和也会告知 ID 号。家长自行到收费处提供新生儿 ID 直接建档。42 天复查时，提前 7 天在协和 App 上建档，然后预约儿科新生儿或儿童保健的号。</p><h1 id="户口"><a href="#户口" class="headerlink" title="户口"></a>户口</h1><p>需要的材料：</p><ol><li>夫妻双方身份证。</li><li>夫妻双方户口本。</li><li>夫妻双方结婚证。</li><li>夫妻双方房本。</li><li>出生证明原件。</li></ol><h1 id="体检疫苗新生儿建本"><a href="#体检疫苗新生儿建本" class="headerlink" title="体检疫苗新生儿建本"></a>体检疫苗新生儿建本</h1><p>需要的材料：</p><ol><li>出生证明原件。</li><li>出生证明复印件。</li><li>北京市预防接种证(出生接种疫苗时，出生医院办理)。</li><li>出生时卡介苗、乙肝疫苗第一针接种记录，儿童转诊单。我们的这个都在预防接种证上。</li><li>北京市母子健康手册儿童保健记录(怀孕后到社区卫生服务中心领取)，用于记录体检结果。</li></ol><p>预约体检和打疫苗都是在“儿宝宝”小程序里预约，要先到社区卫生服务中心预防保健科建本才能预约，疫苗提前一个月放号，体检提前一周放号。</p><h2 id="自费疫苗"><a href="#自费疫苗" class="headerlink" title="自费疫苗"></a>自费疫苗</h2><p>参考了<a href="https://www.zhihu.com/question/435139950/answer/1640524903">知乎这个回答</a>，必选的自费疫苗包括水痘疫苗、五联疫苗、13 价肺炎疫苗、肠道病毒 71 型灭活疫苗(手足口疫苗)、五价轮状病毒疫苗，有可能的话免费的流脑疫苗换成自费的流脑疫苗，注意是流脑疫苗，不是乙脑疫苗，乙脑疫苗选免费的减毒疫苗就可以。</p><h1 id="银行卡"><a href="#银行卡" class="headerlink" title="银行卡"></a>银行卡</h1><p>银行卡主要是医保缴费使用，北京银行需要的材料包括：</p><ol><li>宝宝户口对应的户口本原件，即使和代办人不在一个户口本也没关系。</li><li>出生证明原件。</li><li>代办人本人身份证。</li></ol><h1 id="医保卡"><a href="#医保卡" class="headerlink" title="医保卡"></a>医保卡</h1>]]></content>
+    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>记录新生儿的各种手续。</div><span id="more"></span><p>不同居委会/社区等对材料的要求不同，建议先联系后再针对性准备。</p><h1 id="出生证明"><a href="#出生证明" class="headerlink" title="出生证明"></a>出生证明</h1><p>现在出生证明可以线上办理，下载北京通，首屏出生证申领。尽量在小孩儿出生一周后，满月前办理。</p><h1 id="协和新生儿建档-复查"><a href="#协和新生儿建档-复查" class="headerlink" title="协和新生儿建档 + 复查"></a>协和新生儿建档 + 复查</h1><p>新生儿出生后戴的手环上有 ID 号，产妇和新生儿出院时，协和也会告知 ID 号。家长自行到收费处提供新生儿 ID 直接建档。42 天复查时，提前 7 天在协和 App 上建档，然后预约儿科新生儿或儿童保健的号。</p><h1 id="户口"><a href="#户口" class="headerlink" title="户口"></a>户口</h1><p>需要的材料：</p><ol><li>夫妻双方身份证。</li><li>夫妻双方户口本。</li><li>夫妻双方结婚证。</li><li>夫妻双方房本。</li><li>出生证明原件。</li></ol><h1 id="体检疫苗新生儿建本"><a href="#体检疫苗新生儿建本" class="headerlink" title="体检疫苗新生儿建本"></a>体检疫苗新生儿建本</h1><p>需要的材料：</p><ol><li>出生证明原件。</li><li>出生证明复印件。</li><li>北京市预防接种证(出生接种疫苗时，出生医院办理)。</li><li>出生时卡介苗、乙肝疫苗第一针接种记录，儿童转诊单。我们的这个都在预防接种证上。</li><li>北京市母子健康手册儿童保健记录(怀孕后到社区卫生服务中心领取)，用于记录体检结果。</li></ol><p>预约体检和打疫苗都是在“儿宝宝”小程序里预约，要先到社区卫生服务中心预防保健科建本才能预约，疫苗提前一个月放号，体检提前一周放号。</p><h2 id="自费疫苗"><a href="#自费疫苗" class="headerlink" title="自费疫苗"></a>自费疫苗</h2><p>参考了<a href="https://www.zhihu.com/question/435139950/answer/1640524903">知乎这个回答</a>，必选的自费疫苗包括水痘疫苗、五联疫苗、13 价肺炎疫苗、肠道病毒 71 型灭活疫苗(手足口疫苗)、五价轮状病毒疫苗，有可能的话免费的流脑疫苗换成自费的流脑疫苗，注意是流脑疫苗，不是乙脑疫苗，乙脑疫苗选免费的减毒疫苗就可以。</p><h1 id="银行卡"><a href="#银行卡" class="headerlink" title="银行卡"></a>银行卡</h1><p>银行卡主要是医保缴费使用，北京银行需要的材料包括：</p><ol><li>宝宝户口对应的户口本原件，即使和代办人不在一个户口本也没关系。</li><li>出生证明原件。</li><li>代办人本人身份证。</li></ol><h1 id="医保卡"><a href="#医保卡" class="headerlink" title="医保卡"></a>医保卡</h1><ol><li>出生证明原件 + 两份复印件。</li><li>户口本原件，首页 + 宝宝本人页复印在同一张 A4 纸上两份，宝宝本人页再单独复印两份。</li><li>填表时要求选三家医保机构，需要提前准备，不过孩子看病一般都去 A 类医院或者专科医院，意义不大，可以填一个家旁边的医院方便开药。</li></ol>]]></content>
     
     
     <summary type="html">&lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
@@ -391,100 +483,6 @@ ETF 相关资料整理
     
     
     <category term="计划" scheme="http://tommyjiang.github.io/tags/%E8%AE%A1%E5%88%92/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>羊城潮汕避寒游</title>
-    <link href="http://tommyjiang.github.io/2020/2020-12-25-canton-trip/"/>
-    <id>http://tommyjiang.github.io/2020/2020-12-25-canton-trip/</id>
-    <published>2020-12-25T01:30:00.000Z</published>
-    <updated>2021-01-05T15:27:08.780Z</updated>
-    
-    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>冬天到广东避寒。</div><span id="more"></span><h1 id="北京"><a href="#北京" class="headerlink" title="北京"></a>北京</h1><p>凌晨 5 点半从家出发，到首都机场的时候天还黑着。早上首都机场早高峰，支付宝铂金以上会员可以领快速通道，安检不用排队。大兴机场投运后，东航和南航的航班基本都迁过去了，首都机场本来就是国航的大本营，坐摆渡车到远机位的时候看到了好几架国航的 747-8。</p><h1 id="广州"><a href="#广州" class="headerlink" title="广州"></a>广州</h1><p>虽然 2013 年 12 月就来过白云机场，但这次还是第一次坐航班白云机场。白云机场的地址是白云区花东镇机场大道东 888 号，老广见面喜欢说恭喜发财，八就是发，讨个好彩头。</p><h2 id="第一天"><a href="#第一天" class="headerlink" title="第一天"></a>第一天</h2><p>炳胜——沙面——北京路煲仔饭——茶理宜世——天字码头珠江夜游</p><h2 id="第二天"><a href="#第二天" class="headerlink" title="第二天"></a>第二天</h2><p>人民公园——中山纪念堂——越秀公园——西华路——珠江新城——花城广场——烧鹅——姜撞奶</p><h1 id="汕头"><a href="#汕头" class="headerlink" title="汕头"></a>汕头</h1><p>汕头给我最深的印象就是路上摩托车多，骑得猛，明年要举办亚青会，到处都在修路和修楼。</p><h2 id="第一天-1"><a href="#第一天-1" class="headerlink" title="第一天"></a>第一天</h2><p>点都德早茶——广州东动车——汕头站——杏花吴记牛肉火锅——豆花——一杯潮茶——杏园白粥</p><h2 id="第二天-1"><a href="#第二天-1" class="headerlink" title="第二天"></a>第二天</h2><p>老胡牛肉粿——成川治茶——猪肚鸡——亚强果汁冰——炸鸡翅——十二中鸡柳——虾生鱼生</p><h2 id="第三天"><a href="#第三天" class="headerlink" title="第三天"></a>第三天</h2><p>干粿——梅州腌面——汕头站——潮州站</p><h1 id="潮州"><a href="#潮州" class="headerlink" title="潮州"></a>潮州</h1><p>牌坊街——杏仁奶——砂锅粥/腌蟹——广济桥灯光秀——果汁冰</p><p>韩文公祠——牛肉火锅——金信酒店机场大巴——揭阳潮汕机场 SWA swatow——大兴机场——草桥</p>]]></content>
-    
-    
-    <summary type="html">&lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
-冬天到广东避寒。
-&lt;/div&gt;</summary>
-    
-    
-    
-    <category term="生活" scheme="http://tommyjiang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
-    
-    
-    <category term="广州" scheme="http://tommyjiang.github.io/tags/%E5%B9%BF%E5%B7%9E/"/>
-    
-    <category term="潮汕" scheme="http://tommyjiang.github.io/tags/%E6%BD%AE%E6%B1%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《价值投资者的教育》读书笔记</title>
-    <link href="http://tommyjiang.github.io/2020/2020-12-10-the-education-of-a-value-investor/"/>
-    <id>http://tommyjiang.github.io/2020/2020-12-10-the-education-of-a-value-investor/</id>
-    <published>2020-12-10T04:00:00.000Z</published>
-    <updated>2020-12-14T00:31:48.044Z</updated>
-    
-    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>2020 年度最佳图书。</div><span id="more"></span><p>先上<a href="https://book.douban.com/subject/26427201/">豆瓣链接</a>。</p><p>一本差点被书名毁了的好书，在流量为王的时代，干点啥都想着博眼球，还是中国青年出版社出的，中国青年要都这样可完了。</p><h1 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h1><h2 id="第-1-章"><a href="#第-1-章" class="headerlink" title="第 1 章"></a>第 1 章</h2><p>作者在这一章讲了他毕业后的第一份工作——加入了一家华尔街的投行，这家投行就在 J. P. 摩根的隔壁。从世俗的视角来看他或许很成功，但作者自己却认为这是一个非常失败的工作经历。原因是这家投行是一家“声名狼藉”的证券公司。金融公司听起来高大上，很多干的其实就是割韭菜的活儿，比如把一个烂公司包装上市让韭菜接盘。这是一个典型的博傻游戏，比的是谁跑得快，只要不做最后一个接盘的傻子，大家都有钱赚。在这种公司工作，你的任务就是去寻找更多接盘的韭菜，把烂公司包装成好公司卖给他们，从中赚取服务费和交易佣金。这个行业的从业者都有着光鲜亮丽的学历背景，但每个人都默认这样一个潜规则，但作者觉得这样违背了自己的道德，最终在 18 个月后，作者离开了这个投行。</p><ul><li>不要因为一个人的 title 而轻易相信他的话，他的利益可能和你的并不一致，他也可能没有道德底线。</li><li>谨慎选择正确的环境，与正确的人共事和交往，严格来说，应该选择比自己更优秀的人交往。</li><li>不要试图改变环境，要及时止损。</li></ul><h2 id="第-2-章"><a href="#第-2-章" class="headerlink" title="第 2 章"></a>第 2 章</h2><p>这一章作者主要反思了他接受的教育。他高中就读于英国福瑞曼中学，接受的是典型的应试教育，这帮助他进入了牛津布雷奇诺斯学院学习法律。但作者对法律并不感兴趣，甚至做梦烧掉全世界的普通法卷宗。幸运的是，他大三转到了 PPE(政治、哲学和经济) 专业，这样后来他才有机会成为一个投资者。转系之后，他仍然被巴菲特所说的“外部记分卡”驱动，希望得到公众的赞同和认可，最终他也成功了，以全班第一的优异成绩毕业，但他一直被外部所裹挟，内心从来没有接受过自己的选择。</p><ul><li>高学历的人依然会做蠢事，依然会做出不道德的选择。每个人的道德标准不同，你眼中不道德的事儿，别人可能觉得很正常。</li><li>不要活在外人的认可中，要努力让自己接受自己，把衡量自己的方式从“外部记分卡”转变为“内部记分卡”。</li></ul><h2 id="第-3-章"><a href="#第-3-章" class="headerlink" title="第 3 章"></a>第 3 章</h2><p>由于第一份工作的污点，作者在接下来找工作的时候四处碰壁。一个偶然的机会，作者参加了旧金山的一个教人释放内心积极力量的研讨班，从此他开始更多地做不确定但有可能成功的事。他开始尝试镜像模仿巴菲特，想象巴菲特面临相同情况时会怎么做。后来他没有再找新的工作，而是从父亲手中接过一笔钱，建立了自己的基金公司。</p><ul><li>要找到好的导师，然后有意识地模仿，想象他在面对你现在的情况时会怎么做。</li></ul><h2 id="第-4-章"><a href="#第-4-章" class="headerlink" title="第 4 章"></a>第 4 章</h2><p>作者成立的基金选择了标准的对冲基金费率结构，收取 1% 的管理费加上 20% 收益的激励费，而不是像伯克希尔公司那样，没有年度管理费，但收益超过 6% 时收取净收益的 25%。赎回方式上，也没有采取每年只能赎回一次的方案，选择了提前 30 天预约赎回。他管理的基金增长到 5000 万美元，开始受到华尔街的关注。他被周围的阿谀奉承冲昏了头脑，开始推销自己，还好他参加了价值投资俱乐部，回到了正确的道路。作者还做空了一只股票，虽然获得了不错的收益，但他认识到这不是他想要做的事。</p><ul><li>盲从大众永远比标新立异容易。</li><li>赚钱是最重要的，做好自己的事，不要发起不必要的斗争，也不必让自己站在道德制高点充当复仇十字军战士。</li></ul><h2 id="第-5-章"><a href="#第-5-章" class="headerlink" title="第 5 章"></a>第 5 章</h2><p>作者受到西奥迪尼和里根写的书的启发，开始给别人写信表达感激之情。在参加莫尼什公司年会之后，他给莫尼什写了一封信表达感激，莫尼什之后邀请他一起共进晚餐，后来在一次早餐上提出一起和巴菲特共进午餐的想法，这使作者有机会近距离和巴菲特接触。</p><ul><li>我们复制最好的思想，并把它们变成我们自己的思想。</li><li>有些人之所以成功，是因为他们做对了一件大事，但大部分成功是因为他们做对了很多小事。</li></ul><h2 id="第-6-章"><a href="#第-6-章" class="headerlink" title="第 6 章"></a>第 6 章</h2><p>这一章终于轮到标题党提到的午餐了，主要是一些闲聊的细节，比较轻松的一章。</p><ul><li>如果你想要做某件事，最好全身心投入其中。</li><li>小动作积累起来，也能造成很大的差异。</li><li>哪怕你只是个稍微超过一般水平的投资者，只要花的比赚的少，一生时间也足够你非常富有了——只要你有耐心。</li></ul><h2 id="第-7-章-真理-1-坚持自己的原则"><a href="#第-7-章-真理-1-坚持自己的原则" class="headerlink" title="第 7 章 真理 1 坚持自己的原则"></a>第 7 章 真理 1 坚持自己的原则</h2><ul><li>不要选择对冲，例如做空指数或者买入看跌期权，减小波动的同时会降低长期收益率。</li><li>对社会来说，债务是至关重要的经济润滑剂，但对个人投资者来说，债务是灾难性的。</li><li>投资时，性格比智商更重要。</li><li>我们应该怀着感恩的心欢迎逆境，把它当作证明我们勇气、坚毅和韧性的机会。</li></ul><h2 id="第-8-章-真理-2-远离疯狂人群与噪音"><a href="#第-8-章-真理-2-远离疯狂人群与噪音" class="headerlink" title="第 8 章 真理 2 远离疯狂人群与噪音"></a>第 8 章 真理 2 远离疯狂人群与噪音</h2><ul><li>控制大脑中非理性的因素，必须成为投资中必不可少的一部分。</li><li>理想的通勤时间在十到二十分钟之间。</li><li>意志力是有限的，要用在最需要的地方。</li></ul><h2 id="第-9-章-真理-3-永葆童真与好奇心"><a href="#第-9-章-真理-3-永葆童真与好奇心" class="headerlink" title="第 9 章 真理 3 永葆童真与好奇心"></a>第 9 章 真理 3 永葆童真与好奇心</h2><ul><li>如果你的生活出问题了，那你很难良好的工作。</li><li>我们对任何事物都不可能有完全充分的了解，必须进行概率推测。</li><li>保持自己的原则，以审慎的策略追求更好的长期机会，最终结果会更好。</li><li>当你看到一步好棋的时候，想想有没有更好的走法。</li><li>人类的所有问题，都源于人们不能安静地坐在一个房间里。</li></ul><h2 id="第-10-章-真理-4-培养并维系有价值的人际关系"><a href="#第-10-章-真理-4-培养并维系有价值的人际关系" class="headerlink" title="第 10 章 真理 4 培养并维系有价值的人际关系"></a>第 10 章 真理 4 培养并维系有价值的人际关系</h2><ul><li>把正确的人带入你的生活，没有什么比这更重要。</li><li>通过观察比我们更好的人怎么做，模仿他们的行为，然后亲身实践为什么他们的做法明智有效。</li><li>把时间和精力集中到少数拿得准的人身上，把其他人放一边。</li><li>和更优秀的人在一起，你就会不知不觉地进步。</li></ul><h2 id="第-12-章-投资的-8-条规则"><a href="#第-12-章-投资的-8-条规则" class="headerlink" title="第 12 章 投资的 8 条规则"></a>第 12 章 投资的 8 条规则</h2><ul><li>不要总是查看股价。短期下跌会引发消极情绪，影响大脑。</li><li>如果有人给你推销什么东西，不要买它。</li><li>按照正确顺序研究投资信息。先看最客观的信息，包括年报、季报、股东委托书。</li><li>不要在开市期间买卖股票。</li><li>如果你买的股票下跌了，两年之内不要卖。</li></ul><h2 id="第-13-章-一位投资者的检查清单"><a href="#第-13-章-一位投资者的检查清单" class="headerlink" title="第 13 章 一位投资者的检查清单"></a>第 13 章 一位投资者的检查清单</h2><ul><li>管理团队关键人物是否正在经历个人困难，之前有没有愚蠢自私的行为。</li><li>这家公司能否为社会创造价值。</li><li>公司的收益是否严重依赖信贷市场或某种商品的价格。</li><li>这家公司的股票够便宜吗。</li></ul><h1 id="推荐书单"><a href="#推荐书单" class="headerlink" title="推荐书单"></a>推荐书单</h1><p>这本书的一大特点是行文中推荐了很多书，就像读学术 paper 一样，好 paper 的 reference 也值得好好读一读，所以把每章推荐书目和豆瓣链接整理到下面。</p><h2 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h2><ul><li><a href="https://book.douban.com/subject/5243775/">聪明的投资者 本杰明·格雷厄姆</a></li><li><a href="https://book.douban.com/subject/26831789/">穷查理宝典 彼得·考夫曼</a></li></ul><h2 id="第-1-章-1"><a href="#第-1-章-1" class="headerlink" title="第 1 章"></a>第 1 章</h2><ul><li><a href="https://book.douban.com/subject/5291820/">我是这样从销售失败走向销售成功的 弗兰克·贝特格</a></li><li><a href="https://movie.douban.com/subject/2997076/">华尔街之狼 马丁·斯科塞斯</a></li><li><a href="https://book.douban.com/subject/6014021/">债券市场：分析与策略 弗兰克·法博齐</a></li><li><a href="https://book.douban.com/subject/3164123/">巴菲特传：一个美国资本家的成长</a></li></ul><h2 id="第-3-章-1"><a href="#第-3-章-1" class="headerlink" title="第 3 章"></a>第 3 章</h2><ul><li><a href="https://book.douban.com/subject/3129355/">憨夺型投资者 : 低风险高收益的投资模式 莫尼什·帕伯莱</a></li><li><a href="https://book.douban.com/subject/1056295/">人性的弱点 戴尔·卡耐基</a></li><li><a href="https://book.douban.com/subject/2368126/">思考致富 拿破仑·希尔</a></li></ul><h2 id="第-5-章-1"><a href="#第-5-章-1" class="headerlink" title="第 5 章"></a>第 5 章</h2><ul><li><a href="https://book.douban.com/subject/1786387/">影响力 罗伯特·西奥迪尼</a></li><li><a href="https://book.douban.com/subject/10799082/">投资最重要的事 霍华德·马克斯</a></li></ul><h2 id="第-7-章"><a href="#第-7-章" class="headerlink" title="第 7 章"></a>第 7 章</h2><ul><li><a href="https://book.douban.com/subject/2359003/">沉思录 马可·奥勒留</a></li></ul><h2 id="第-8-章"><a href="#第-8-章" class="headerlink" title="第 8 章"></a>第 8 章</h2><ul><li><a href="https://book.douban.com/subject/10785583/">思考，快与慢 丹尼尔·卡尼曼</a></li><li><a href="https://book.douban.com/subject/34459315/">蚂蚁的故事 博尔特·霍尔多布勒/爱德华·威尔逊</a></li><li><a href="https://book.douban.com/subject/6854525/">黑天鹅：如何应对不可预知的未来 纳西姆•尼古拉斯•塔勒布</a></li><li><a href="https://book.douban.com/subject/10773358/">意志力 罗伊·鲍迈斯特</a></li></ul><h2 id="第-10-章"><a href="#第-10-章" class="headerlink" title="第 10 章"></a>第 10 章</h2><ul><li><a href="https://book.douban.com/subject/2158889/">权力的48条法则 罗伯特·格林</a></li></ul><h2 id="第-11-章"><a href="#第-11-章" class="headerlink" title="第 11 章"></a>第 11 章</h2><ul><li><a href="https://book.douban.com/subject/1539067/">柏拉图灵丹 娄·马里诺夫</a></li></ul><h2 id="第-12-章"><a href="#第-12-章" class="headerlink" title="第 12 章"></a>第 12 章</h2><ul><li><a href="https://book.douban.com/subject/26411602/">富甲美国 山姆·沃尔顿</a></li></ul><h2 id="第-13-章"><a href="#第-13-章" class="headerlink" title="第 13 章"></a>第 13 章</h2><ul><li><a href="https://book.douban.com/subject/27168564/">清单革命 阿图·葛文德</a></li></ul>]]></content>
-    
-    
-    <summary type="html">&lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
-2020 年度最佳图书。
-&lt;/div&gt;</summary>
-    
-    
-    
-    <category term="读书" scheme="http://tommyjiang.github.io/categories/%E8%AF%BB%E4%B9%A6/"/>
-    
-    
-    <category term="投资" scheme="http://tommyjiang.github.io/tags/%E6%8A%95%E8%B5%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Homebrew 降级</title>
-    <link href="http://tommyjiang.github.io/2020/2020-09-28-homebrew-downgrade/"/>
-    <id>http://tommyjiang.github.io/2020/2020-09-28-homebrew-downgrade/</id>
-    <published>2020-09-28T01:00:00.000Z</published>
-    <updated>2020-12-31T16:02:50.419Z</updated>
-    
-    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>Homebrew 降级。</div><span id="more"></span><p>Homebrew 最新的 Vim 升级到了 8.2.1750，和 <code>vim-leader-guide</code> 冲突，只能先保持原来的 8.2.1700 版本。</p><ol><li>Homebrew 回退：<code>cd /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core</code>，将 <code>Formula/vim.rb</code> 回退到之前的版本 <code>git checkout &#123;commit id&#125; Formula/vim.rb</code>。</li><li>取消之前版本链接：<code>brew unlink vim</code></li><li>安装旧版：<code>brew install vim</code>，注意 <code>Ctrl + C</code> 跳过 Updating Homebrew 的阶段。</li><li>固定 Vim 版本：<code>brew pin vim</code></li><li>Homebrew 更新到 master：<code>cd /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core</code>，然后 <code>git reset --hard master</code>。</li></ol><p>2020.11.28 更新：目前用 <a href="https://github.com/liuchengxu/vim-which-key">vim-which-key</a> 代替了 <code>vim-leader-guide</code>，可以更新 Homebrew 的 Vim 最新版了。</p><p>2020.12.31 更新：<a href="https://github.com/vim-airline/vim-airline/issues/2312">vim-airline</a> 未兼容 Vim 8.2.2250 版本，先回退到 8.2.2200 版本。</p>]]></content>
-    
-    
-    <summary type="html">&lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
-Homebrew 降级。
-&lt;/div&gt;</summary>
-    
-    
-    
-    <category term="Geek" scheme="http://tommyjiang.github.io/categories/Geek/"/>
-    
-    
-    <category term="Homebrew" scheme="http://tommyjiang.github.io/tags/Homebrew/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>A Tour of C++ 笔记</title>
-    <link href="http://tommyjiang.github.io/2020/2020-08-10-a-tour-of-c++/"/>
-    <id>http://tommyjiang.github.io/2020/2020-08-10-a-tour-of-c++/</id>
-    <published>2020-08-10T14:00:00.000Z</published>
-    <updated>2020-08-13T14:05:51.137Z</updated>
-    
-    <content type="html"><![CDATA[<div class="alert alert-info"><i class="fa fa-info"></i>祖师爷写的入门书。</div><span id="more"></span><h1 id="The-Basics"><a href="#The-Basics" class="headerlink" title="The Basics"></a>The Basics</h1><ul><li>C++ 是编译语言，源代码需要经过编译、链接才能生成可执行程序。</li><li>ISO C++ 包括两部分：<ul><li>核心特性，例如内置类型、循环等。</li><li>标准库，例如容器、I/O 操作等。</li></ul></li><li>C++ 是静态类型语言，编译器必须了解所有变量的类型。</li><li>函数重载：函数同名但参数类型不同</li><li>C++ 逻辑运算符<ul><li>按位运算：&amp; 和 |</li><li>逻辑运算：&amp;&amp; 和 ||</li></ul></li><li>窄化转换：丢失精度的转换，例如将 double 转为 int，将 int 转为 char。初始化时使用大括号({})可避免窄化转换。</li><li>变量作用域<ul><li>局部作用域：适用于函数和 lambda 内声明的变量。作用范围为声明到 block 结束。</li><li>类作用域：类内和 enum class 内定义的变量。作用范围为整个 block。</li><li>命名空间作用域：命名空间内定义的变量。作用范围为声明到 namespace 结束。</li><li>全局作用域：不在任何 block 内定义的变量。</li></ul></li><li>nullptr 是空指针常量。</li></ul>]]></content>
-    
-    
-    <summary type="html">&lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;
-祖师爷写的入门书。
-&lt;/div&gt;</summary>
-    
-    
-    
-    <category term="Geek" scheme="http://tommyjiang.github.io/categories/Geek/"/>
-    
-    
-    <category term="C++" scheme="http://tommyjiang.github.io/tags/C/"/>
     
   </entry>
   
