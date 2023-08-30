@@ -123,6 +123,10 @@ li i {
   margin-left: 5px;  
 }
 
+li p {
+  text-indent: 0;
+}
+
 .listing-item {
   line-height: 24px;
 }
