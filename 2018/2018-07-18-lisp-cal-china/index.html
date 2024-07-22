@@ -1,7 +1,98 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+<head><!-- hexo injector head_begin start --><style type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->.douban-card-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 400px;
+}
+
+.douban-card {
+    display: flex;
+    margin: 30px 10px;
+    padding: 15px;
+    border-radius: 15px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.douban-card:hover {
+    text-decoration: none;
+}
+
+.douban-card-bgimg {
+    position: absolute;
+    width: 115%;
+    height: 115%;
+    filter: blur(15px) brightness(0.6);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-img {
+    position: relative;
+    height: 130px;
+    width: 80px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-left:hover .douban-card-img {
+    filter: blur(5px) brightness(0.6);
+    transform: perspective(800px) rotateX(180deg);
+}
+
+.douban-card-left .douban-card-img {
+    transition: all 500ms ease;
+}
+
+.douban-card-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.douban-card-left .douban-card-status {
+    height: 130px;
+    width: 80px;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 30%;
+    transform: rotateX(180deg);
+    backface-visibility: hidden;
+    transition: all 500ms ease;
+}
+
+.douban-card-left:hover .douban-card-status {
+    transform: perspective(800px) rotateX(0deg);
+}
+
+.douban-card-right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+    font-size: 16px;
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.3;
+    color: antiquewhite;
+}
+
+.douban-card-item {
+    margin-top: 4px;
+}
+</style><!-- hexo injector head_begin end -->
+  <meta charset="utf-8">
   
   <title>Emacs Lisp 计算数九天和伏天 | Tommy&#39;s Blog</title>
   <meta name="author" content="Tommy Jiang">
@@ -15,7 +106,7 @@
   <meta property="og:site_name" content="Tommy&#39;s Blog"/>
 
   
-    <meta property="og:image" content="undefined"/>
+    <meta property="og:image" content=""/>
   
 
   
@@ -47,7 +138,7 @@
 
 
 
-<meta name="generator" content="Hexo 5.2.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<meta name="generator" content="Hexo 7.3.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 <body>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
@@ -119,23 +210,15 @@
 	<div class="mypage">		
 	  		
 
-	  
+	  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css">
 <div class="alert alert-info"><i class="fa fa-info"></i>
 第一个用 Emacs Lisp 实现的小功能。
 </div>
 
-<a id="more"></a>
+<span id="more"></span>
 <p>Lisp 诞生于 1958 年，发明人是 John McCarthy，是目前仍在使用的第二古老的高级语言(最早的是 Fortran，诞生于 1957 年)。</p>
 <p>Lisp 来源于 <code>LISt Processing</code>(有调侃说是 <code>Lots of Isolated Stupid Parentheses</code>)，这个古老的语言和目前主流语言例如 C++，Python 和 Java 等有显著区别，下面是一段代码示例：</p>
-<pre class="line-numbers language-elisp" data-language="elisp"><code class="language-elisp"><span class="token punctuation">(</span><span class="token defun"><span class="token keyword">defun</span> <span class="token function">cal-china-x-winter-solstice-date</span> <span class="token punctuation">(</span><span class="token arguments"><span class="token argument variable">date</span></span><span class="token punctuation">)</span></span>
-  <span class="token string">"Return winter solstice(冬至) date in Gregorian form.
-
-If <span class="token argument">MONTH</span> = 12, return current year's date
-Else return last year's date"</span>
-  <span class="token punctuation">(</span><span class="token keyword">let*</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token car">cyear</span> <span class="token punctuation">(</span><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token car">=</span> <span class="token punctuation">(</span><span class="token car">calendar-extract-month</span> date<span class="token punctuation">)</span> <span class="token number">12</span><span class="token punctuation">)</span>
-                    <span class="token punctuation">(</span><span class="token car">calendar-extract-year</span> date<span class="token punctuation">)</span>
-                  <span class="token punctuation">(</span><span class="token car">1-</span> <span class="token punctuation">(</span><span class="token car">calendar-extract-year</span> date<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-    <span class="token punctuation">(</span><span class="token car">car</span> <span class="token punctuation">(</span><span class="token car">rassoc</span> '<span class="token string">"冬至"</span> <span class="token punctuation">(</span><span class="token car">cal-china-x-solar-term-alist-new</span> cyear<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">(defun cal-china-x-winter-solstice-date (date)</span><br><span class="line">  &quot;Return winter solstice(冬至) date in Gregorian form.</span><br><span class="line"></span><br><span class="line">If MONTH = 12, return current year&#x27;s date</span><br><span class="line">Else return last year&#x27;s date&quot;</span><br><span class="line">  (let* ((cyear (if (= (calendar-extract-month date) 12)</span><br><span class="line">                    (calendar-extract-year date)</span><br><span class="line">                  (1- (calendar-extract-year date)))))</span><br><span class="line">    (car (rassoc &#x27;&quot;冬至&quot; (cal-china-x-solar-term-alist-new cyear)))))</span><br></pre></td></tr></table></figure>
 <p><code>Emacs</code> 也许是用 Lisp 编写的最著名的软件了。<code>Emacs</code> 自带了日历功能，<a target="_blank" rel="noopener" href="https://github.com/xwl/cal-china-x"><code>cal-china-x</code></a> 扩展实现了阴历、节气、生肖等的计算，但没有实现数九天和伏天的计算功能。正好借这个机会实现下功能，练练手。</p>
 <h1 id="数九天计算"><a href="#数九天计算" class="headerlink" title="数九天计算"></a>数九天计算</h1><p>数九天的计算相对比较简单。从冬至当天开始算一九第一天，每过九天加一九，一直到九九第九天。</p>
 <p>思路也比较清楚，对于某一个 <code>date</code>，先计算其与冬至的天数差。由于冬至始终在阳历的十二月，因此可以分情况讨论：</p>
@@ -143,96 +226,12 @@ Else return last year's date"</span>
 <li>阳历非十二月，计算与去年冬至的天数差。</li>
 <li>阳历为十二月，计算与今年冬至的天数差。此时若 <code>date</code> 在冬至前则差为负数，但负数情况可以不管，因为不属于数九天。</li>
 </ul>
-<p>如果天数差在 0~80 天内，则需要显示数九天，具体显示格式为<code>一九(1)</code>，整个代码如下：<br><pre class="line-numbers language-lisp" data-language="lisp"><code class="language-lisp"><span class="token punctuation">(</span><span class="token defvar"><span class="token keyword">defconst</span> <span class="token variable">cal-china-x-nine-characters</span></span>  <span class="token comment">; 数九天 array</span>
-  <span class="token punctuation">[</span><span class="token string">"一九"</span> <span class="token string">"二九"</span> <span class="token string">"三九"</span> <span class="token string">"四九"</span> <span class="token string">"五九"</span> <span class="token string">"六九"</span> <span class="token string">"七九"</span> <span class="token string">"八九"</span> <span class="token string">"九九"</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-
-<span class="token punctuation">(</span><span class="token defun"><span class="token keyword">defun</span> <span class="token function">cal-china-x-winter-solstice-date</span> <span class="token punctuation">(</span><span class="token arguments"><span class="token argument variable">date</span></span><span class="token punctuation">)</span></span>  <span class="token comment">; 计算冬至日期(1-11月为去年，12月为今年)</span>
-  <span class="token string">"Return winter solstice(冬至) date in Gregorian form.
-
-If <span class="token argument">MONTH</span> = 12, return current year's date
-Else return last year's date"</span>
-  <span class="token punctuation">(</span><span class="token keyword">let*</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token car">cyear</span> <span class="token punctuation">(</span><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token car">=</span> <span class="token punctuation">(</span><span class="token car">calendar-extract-month</span> date<span class="token punctuation">)</span> <span class="token number">12</span><span class="token punctuation">)</span>
-                    <span class="token punctuation">(</span><span class="token car">calendar-extract-year</span> date<span class="token punctuation">)</span>
-                  <span class="token punctuation">(</span><span class="token car">1-</span> <span class="token punctuation">(</span><span class="token car">calendar-extract-year</span> date<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-    <span class="token punctuation">(</span><span class="token car">car</span> <span class="token punctuation">(</span><span class="token car">rassoc</span> '<span class="token string">"冬至"</span> <span class="token punctuation">(</span><span class="token car">cal-china-x-solar-term-alist-new</span> cyear<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-
-<span class="token punctuation">(</span><span class="token defun"><span class="token keyword">defun</span> <span class="token function">winter-solstice-day-diff</span> <span class="token punctuation">(</span><span class="token arguments"><span class="token argument variable">date</span></span><span class="token punctuation">)</span></span>  <span class="token comment">; 计算与指定冬至的天数差</span>
-  <span class="token punctuation">(</span><span class="token car">cal-china-x-days-diff</span> date <span class="token punctuation">(</span><span class="token car">cal-china-x-winter-solstice-date</span> date<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-
-<span class="token punctuation">(</span><span class="token defun"><span class="token keyword">defun</span> <span class="token function">cal-china-x-get-several-nines-string</span> <span class="token punctuation">(</span><span class="token arguments"><span class="token argument variable">date</span></span><span class="token punctuation">)</span></span>  <span class="token comment">; 生成数九天的 string</span>
-  <span class="token punctuation">(</span><span class="token keyword">let</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token car">daygap</span> <span class="token punctuation">(</span><span class="token car">winter-solstice-day-diff</span> date<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-    <span class="token punctuation">(</span><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">or</span> <span class="token punctuation">(</span><span class="token car">&lt;</span> daygap <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token car">></span> daygap <span class="token number">80</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-        <span class="token string">""</span>
-      <span class="token punctuation">(</span><span class="token keyword">concat</span> <span class="token punctuation">(</span><span class="token car">aref</span> cal-china-x-nine-characters <span class="token punctuation">(</span><span class="token car">/</span> daygap <span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-              <span class="token string">"("</span>
-              <span class="token punctuation">(</span><span class="token car">number-to-string</span> <span class="token punctuation">(</span><span class="token car">1+</span> <span class="token punctuation">(</span><span class="token car">%</span> daygap <span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-              <span class="token string">")"</span>
-              <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
+<p>如果天数差在 0~80 天内，则需要显示数九天，具体显示格式为<code>一九(1)</code>，整个代码如下：<br><figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">defconst</span> cal-china-x-nine-characters  <span class="comment">; 数九天 array</span></span><br><span class="line">  [<span class="string">&quot;一九&quot;</span> <span class="string">&quot;二九&quot;</span> <span class="string">&quot;三九&quot;</span> <span class="string">&quot;四九&quot;</span> <span class="string">&quot;五九&quot;</span> <span class="string">&quot;六九&quot;</span> <span class="string">&quot;七九&quot;</span> <span class="string">&quot;八九&quot;</span> <span class="string">&quot;九九&quot;</span>])</span><br><span class="line"></span><br><span class="line">(<span class="name">defun</span> cal-china-x-winter-solstice-date (<span class="name">date</span>)  <span class="comment">; 计算冬至日期(1-11月为去年，12月为今年)</span></span><br><span class="line">  <span class="string">&quot;Return winter solstice(冬至) date in Gregorian form.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">If MONTH = 12, return current year&#x27;s date</span></span><br><span class="line"><span class="string">Else return last year&#x27;s date&quot;</span></span><br><span class="line">  (<span class="name">let*</span> ((<span class="name">cyear</span> (<span class="name">if</span> (<span class="name">=</span> (<span class="name">calendar-extract-month</span> date) <span class="number">12</span>)</span><br><span class="line">                    (<span class="name">calendar-extract-year</span> date)</span><br><span class="line">                  (<span class="number">1</span>- (<span class="name">calendar-extract-year</span> date)))))</span><br><span class="line">    (<span class="name">car</span> (<span class="name">rassoc</span> &#x27;<span class="string">&quot;冬至&quot;</span> (<span class="name">cal-china-x-solar-term-alist-new</span> cyear)))))</span><br><span class="line"></span><br><span class="line">(<span class="name">defun</span> winter-solstice-day-diff (<span class="name">date</span>)  <span class="comment">; 计算与指定冬至的天数差</span></span><br><span class="line">  (<span class="name">cal-china-x-days-diff</span> date (<span class="name">cal-china-x-winter-solstice-date</span> date)))</span><br><span class="line"></span><br><span class="line">(<span class="name">defun</span> cal-china-x-get-several-nines-string (<span class="name">date</span>)  <span class="comment">; 生成数九天的 string</span></span><br><span class="line">  (<span class="name">let</span> ((<span class="name">daygap</span> (<span class="name">winter-solstice-day-diff</span> date)))</span><br><span class="line">    (<span class="name">if</span> (<span class="name">or</span> (<span class="name">&lt;</span> daygap <span class="number">0</span>) (<span class="name">&gt;</span> daygap <span class="number">80</span>))</span><br><span class="line">        <span class="string">&quot;&quot;</span></span><br><span class="line">      (<span class="name">concat</span> (<span class="name">aref</span> cal-china-x-nine-characters (<span class="name">/</span> daygap <span class="number">9</span>))</span><br><span class="line">              <span class="string">&quot;(&quot;</span></span><br><span class="line">              (<span class="name">number-to-string</span> (<span class="number">1</span>+ (% daygap <span class="number">9</span>)))</span><br><span class="line">              <span class="string">&quot;)&quot;</span></span><br><span class="line">              ))))</span><br></pre></td></tr></table></figure></p>
 <h1 id="伏天计算"><a href="#伏天计算" class="headerlink" title="伏天计算"></a>伏天计算</h1><p>民间有“头伏饺子二伏面，三伏烙饼摊鸡蛋”的习俗，看到这么多面食可以判断这基本是华北、黄淮一带的风俗。伏天计算比较复杂，原因是涉及到两个节气(夏至和立秋)，以及每日的干支。具体计算方法是：</p>
 <blockquote>
 <p>从夏至开始，依照干支纪日的排列，第3个庚日出现时，为初伏第一天(夏至三庚数头伏)，第4个庚日为中伏第一天，立秋后第1个庚日为末伏第一天。当夏至与立秋之间出现4个庚日时中伏为10天，出现5个庚日则为20天。</p>
 </blockquote>
-<pre class="line-numbers language-lisp" data-language="lisp"><code class="language-lisp"><span class="token punctuation">(</span><span class="token defun"><span class="token keyword">defun</span> <span class="token function">cal-china-x-solar-term-date</span> <span class="token punctuation">(</span><span class="token arguments"><span class="token argument variable">date</span> <span class="token argument variable">solar-term</span></span><span class="token punctuation">)</span></span>
-  <span class="token string">"Return solar-term date in Gregorian form."</span>
-  <span class="token punctuation">(</span><span class="token keyword">let*</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token car">cyear</span> <span class="token punctuation">(</span><span class="token car">calendar-extract-year</span> date<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-    <span class="token punctuation">(</span><span class="token car">car</span> <span class="token punctuation">(</span><span class="token car">rassoc</span> solar-term <span class="token punctuation">(</span><span class="token car">cal-china-x-solar-term-alist-new</span> cyear<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-
-<span class="token punctuation">(</span><span class="token defun"><span class="token keyword">defun</span> <span class="token function">cal-china-x-chinese-day-celestial-stem-number</span> <span class="token punctuation">(</span><span class="token arguments"><span class="token argument variable">date</span></span><span class="token punctuation">)</span></span>
-  <span class="token string">"String of Chinese date of Gregorian <span class="token argument">DATE</span>.
-Defaults to today's date if <span class="token argument">DATE</span> is not given."</span>
-  <span class="token punctuation">(</span><span class="token keyword">let*</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token car">a-date</span> <span class="token punctuation">(</span><span class="token car">calendar-absolute-from-gregorian</span> date<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-    <span class="token punctuation">(</span><span class="token car">%</span> <span class="token punctuation">(</span><span class="token car">+</span> a-date <span class="token number">15</span><span class="token punctuation">)</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-
-<span class="token punctuation">(</span><span class="token defun"><span class="token keyword">defun</span> <span class="token function">cal-china-x-solar-term-celestical-stem</span> <span class="token punctuation">(</span><span class="token arguments"><span class="token argument variable">date</span> <span class="token argument variable">solar-term</span></span><span class="token punctuation">)</span></span>
-  <span class="token punctuation">(</span><span class="token car">cal-china-x-chinese-day-celestial-stem-number</span>
-   <span class="token punctuation">(</span><span class="token car">cal-china-x-solar-term-date</span> date solar-term<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-
-<span class="token punctuation">(</span><span class="token defun"><span class="token keyword">defun</span> <span class="token function">cal-china-x-day-diff-from-solar-term</span> <span class="token punctuation">(</span><span class="token arguments"><span class="token argument variable">date</span> <span class="token argument variable">solar-term</span></span><span class="token punctuation">)</span></span> <span class="token comment">; 庚日</span>
-  <span class="token punctuation">(</span><span class="token keyword">let</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token car">ss-stem</span> <span class="token punctuation">(</span><span class="token car">-</span> <span class="token number">7</span> <span class="token punctuation">(</span><span class="token car">cal-china-x-solar-term-celestical-stem</span> date solar-term<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-    <span class="token punctuation">(</span><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token car">&lt;</span> ss-stem <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token car">+</span> ss-stem <span class="token number">10</span><span class="token punctuation">)</span>
-      ss-stem<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-
-<span class="token punctuation">(</span><span class="token defun"><span class="token keyword">defun</span> <span class="token function">cal-china-x-chufu-date</span> <span class="token punctuation">(</span><span class="token arguments"><span class="token argument variable">date</span></span><span class="token punctuation">)</span></span>
-  <span class="token punctuation">(</span><span class="token keyword">let*</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token car">ss-date</span> <span class="token punctuation">(</span><span class="token car">cal-china-x-solar-term-date</span> date <span class="token string">"夏至"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-         <span class="token punctuation">(</span><span class="token car">ss-year</span> <span class="token punctuation">(</span><span class="token car">calendar-extract-year</span> ss-date<span class="token punctuation">)</span><span class="token punctuation">)</span>
-         <span class="token punctuation">(</span><span class="token car">ss-day</span> <span class="token punctuation">(</span><span class="token car">calendar-extract-day</span> ss-date<span class="token punctuation">)</span><span class="token punctuation">)</span>
-         <span class="token punctuation">(</span><span class="token car">day-diff</span> <span class="token punctuation">(</span><span class="token car">+</span> <span class="token number">20</span> <span class="token punctuation">(</span><span class="token car">cal-china-x-day-diff-from-solar-term</span> date <span class="token string">"夏至"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-         <span class="token punctuation">(</span><span class="token car">chufu-day</span> <span class="token punctuation">(</span><span class="token car">-</span> day-diff <span class="token punctuation">(</span><span class="token car">-</span> <span class="token number">30</span> ss-day<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-    <span class="token punctuation">(</span><span class="token car">list</span> <span class="token number">7</span> chufu-day ss-year<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-
-<span class="token punctuation">(</span><span class="token defun"><span class="token keyword">defun</span> <span class="token function">cal-china-x-zhongfu-date</span> <span class="token punctuation">(</span><span class="token arguments"><span class="token argument variable">date</span></span><span class="token punctuation">)</span></span>
-  <span class="token punctuation">(</span><span class="token car">list</span> <span class="token number">7</span> <span class="token punctuation">(</span><span class="token car">+</span> <span class="token punctuation">(</span><span class="token car">calendar-extract-day</span> <span class="token punctuation">(</span><span class="token car">cal-china-x-chufu-date</span> date<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token number">10</span><span class="token punctuation">)</span>
-        <span class="token punctuation">(</span><span class="token car">calendar-extract-year</span> date<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-
-<span class="token punctuation">(</span><span class="token defun"><span class="token keyword">defun</span> <span class="token function">cal-china-x-mofu-date</span> <span class="token punctuation">(</span><span class="token arguments"><span class="token argument variable">date</span></span><span class="token punctuation">)</span></span>
-  <span class="token punctuation">(</span><span class="token keyword">let*</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token car">ss-date</span> <span class="token punctuation">(</span><span class="token car">cal-china-x-solar-term-date</span> date <span class="token string">"立秋"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-         <span class="token punctuation">(</span><span class="token car">ss-year</span> <span class="token punctuation">(</span><span class="token car">calendar-extract-year</span> ss-date<span class="token punctuation">)</span><span class="token punctuation">)</span>
-         <span class="token punctuation">(</span><span class="token car">ss-day</span> <span class="token punctuation">(</span><span class="token car">calendar-extract-day</span> ss-date<span class="token punctuation">)</span><span class="token punctuation">)</span>
-         <span class="token punctuation">(</span><span class="token car">day-diff</span> <span class="token punctuation">(</span><span class="token car">cal-china-x-day-diff-from-solar-term</span> date <span class="token string">"立秋"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-         <span class="token punctuation">(</span><span class="token car">mofu-day</span> <span class="token punctuation">(</span><span class="token car">+</span> day-diff ss-day<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-    <span class="token punctuation">(</span><span class="token car">list</span> <span class="token number">8</span> mofu-day ss-year<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-
-<span class="token punctuation">(</span><span class="token defun"><span class="token keyword">defun</span> <span class="token function">cal-china-x-get-futian-string</span> <span class="token punctuation">(</span><span class="token arguments"><span class="token argument variable">date</span></span><span class="token punctuation">)</span></span>
-  <span class="token punctuation">(</span><span class="token keyword">let*</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token car">chufu</span> <span class="token punctuation">(</span><span class="token car">cal-china-x-chufu-date</span> date<span class="token punctuation">)</span><span class="token punctuation">)</span>
-         <span class="token punctuation">(</span><span class="token car">zhongfu</span> <span class="token punctuation">(</span><span class="token car">cal-china-x-zhongfu-date</span> date<span class="token punctuation">)</span><span class="token punctuation">)</span>
-         <span class="token punctuation">(</span><span class="token car">mofu</span> <span class="token punctuation">(</span><span class="token car">cal-china-x-mofu-date</span> date<span class="token punctuation">)</span><span class="token punctuation">)</span>
-         <span class="token punctuation">(</span><span class="token car">chufu-gap</span> <span class="token punctuation">(</span><span class="token car">cal-china-x-days-diff</span> date chufu<span class="token punctuation">)</span><span class="token punctuation">)</span>
-         <span class="token punctuation">(</span><span class="token car">zhongfu-gap</span> <span class="token punctuation">(</span><span class="token car">cal-china-x-days-diff</span> date zhongfu<span class="token punctuation">)</span><span class="token punctuation">)</span>
-         <span class="token punctuation">(</span><span class="token car">mofu-gap</span> <span class="token punctuation">(</span><span class="token car">cal-china-x-days-diff</span> date mofu<span class="token punctuation">)</span><span class="token punctuation">)</span>
-         <span class="token punctuation">)</span>
-    <span class="token punctuation">(</span><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">or</span> <span class="token punctuation">(</span><span class="token car">&lt;</span> chufu-gap <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token car">></span> mofu-gap <span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-        <span class="token string">""</span>
-      <span class="token punctuation">(</span><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">and</span> <span class="token punctuation">(</span><span class="token car">>=</span> chufu-gap <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token car">&lt;</span> zhongfu-gap <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-          <span class="token punctuation">(</span><span class="token keyword">concat</span> <span class="token string">"初伏("</span>
-                  <span class="token punctuation">(</span><span class="token car">number-to-string</span> <span class="token punctuation">(</span><span class="token car">1+</span> chufu-gap<span class="token punctuation">)</span><span class="token punctuation">)</span>
-                  <span class="token string">")"</span><span class="token punctuation">)</span>
-        <span class="token punctuation">(</span><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">and</span> <span class="token punctuation">(</span><span class="token car">>=</span> zhongfu-gap <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token car">&lt;</span> mofu-gap <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-            <span class="token punctuation">(</span><span class="token keyword">concat</span> <span class="token string">"中伏("</span>
-                    <span class="token punctuation">(</span><span class="token car">number-to-string</span> <span class="token punctuation">(</span><span class="token car">1+</span> zhongfu-gap<span class="token punctuation">)</span><span class="token punctuation">)</span>
-                    <span class="token string">")"</span><span class="token punctuation">)</span>
-          <span class="token punctuation">(</span><span class="token keyword">concat</span> <span class="token string">"末伏("</span>
-                  <span class="token punctuation">(</span><span class="token car">number-to-string</span> <span class="token punctuation">(</span><span class="token car">1+</span> mofu-gap<span class="token punctuation">)</span><span class="token punctuation">)</span>
-                  <span class="token string">")"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">defun</span> cal-china-x-solar-term-date (<span class="name">date</span> solar-term)</span><br><span class="line">  <span class="string">&quot;Return solar-term date in Gregorian form.&quot;</span></span><br><span class="line">  (<span class="name">let*</span> ((<span class="name">cyear</span> (<span class="name">calendar-extract-year</span> date)))</span><br><span class="line">    (<span class="name">car</span> (<span class="name">rassoc</span> solar-term (<span class="name">cal-china-x-solar-term-alist-new</span> cyear)))))</span><br><span class="line"></span><br><span class="line">(<span class="name">defun</span> cal-china-x-chinese-day-celestial-stem-number (<span class="name">date</span>)</span><br><span class="line">  <span class="string">&quot;String of Chinese date of Gregorian DATE.</span></span><br><span class="line"><span class="string">Defaults to today&#x27;s date if DATE is not given.&quot;</span></span><br><span class="line">  (<span class="name">let*</span> ((<span class="name">a-date</span> (<span class="name">calendar-absolute-from-gregorian</span> date)))</span><br><span class="line">    (% (<span class="name">+</span> a-date <span class="number">15</span>) <span class="number">10</span>)))</span><br><span class="line"></span><br><span class="line">(<span class="name">defun</span> cal-china-x-solar-term-celestical-stem (<span class="name">date</span> solar-term)</span><br><span class="line">  (<span class="name">cal-china-x-chinese-day-celestial-stem-number</span></span><br><span class="line">   (<span class="name">cal-china-x-solar-term-date</span> date solar-term)))</span><br><span class="line"></span><br><span class="line">(<span class="name">defun</span> cal-china-x-day-diff-from-solar-term (<span class="name">date</span> solar-term) <span class="comment">; 庚日</span></span><br><span class="line">  (<span class="name">let</span> ((<span class="name">ss-stem</span> (<span class="name">-</span> <span class="number">7</span> (<span class="name">cal-china-x-solar-term-celestical-stem</span> date solar-term))))</span><br><span class="line">    (<span class="name">if</span> (<span class="name">&lt;</span> ss-stem <span class="number">0</span>) (<span class="name">+</span> ss-stem <span class="number">10</span>)</span><br><span class="line">      ss-stem)))</span><br><span class="line"></span><br><span class="line">(<span class="name">defun</span> cal-china-x-chufu-date (<span class="name">date</span>)</span><br><span class="line">  (<span class="name">let*</span> ((<span class="name">ss-date</span> (<span class="name">cal-china-x-solar-term-date</span> date <span class="string">&quot;夏至&quot;</span>))</span><br><span class="line">         (<span class="name">ss-year</span> (<span class="name">calendar-extract-year</span> ss-date))</span><br><span class="line">         (<span class="name">ss-day</span> (<span class="name">calendar-extract-day</span> ss-date))</span><br><span class="line">         (<span class="name">day-diff</span> (<span class="name">+</span> <span class="number">20</span> (<span class="name">cal-china-x-day-diff-from-solar-term</span> date <span class="string">&quot;夏至&quot;</span>)))</span><br><span class="line">         (<span class="name">chufu-day</span> (<span class="name">-</span> day-diff (<span class="name">-</span> <span class="number">30</span> ss-day))))</span><br><span class="line">    (<span class="name">list</span> <span class="number">7</span> chufu-day ss-year)))</span><br><span class="line"></span><br><span class="line">(<span class="name">defun</span> cal-china-x-zhongfu-date (<span class="name">date</span>)</span><br><span class="line">  (<span class="name">list</span> <span class="number">7</span> (<span class="name">+</span> (<span class="name">calendar-extract-day</span> (<span class="name">cal-china-x-chufu-date</span> date)) <span class="number">10</span>)</span><br><span class="line">        (<span class="name">calendar-extract-year</span> date)))</span><br><span class="line"></span><br><span class="line">(<span class="name">defun</span> cal-china-x-mofu-date (<span class="name">date</span>)</span><br><span class="line">  (<span class="name">let*</span> ((<span class="name">ss-date</span> (<span class="name">cal-china-x-solar-term-date</span> date <span class="string">&quot;立秋&quot;</span>))</span><br><span class="line">         (<span class="name">ss-year</span> (<span class="name">calendar-extract-year</span> ss-date))</span><br><span class="line">         (<span class="name">ss-day</span> (<span class="name">calendar-extract-day</span> ss-date))</span><br><span class="line">         (<span class="name">day-diff</span> (<span class="name">cal-china-x-day-diff-from-solar-term</span> date <span class="string">&quot;立秋&quot;</span>))</span><br><span class="line">         (<span class="name">mofu-day</span> (<span class="name">+</span> day-diff ss-day)))</span><br><span class="line">    (<span class="name">list</span> <span class="number">8</span> mofu-day ss-year)))</span><br><span class="line"></span><br><span class="line">(<span class="name">defun</span> cal-china-x-get-futian-string (<span class="name">date</span>)</span><br><span class="line">  (<span class="name">let*</span> ((<span class="name">chufu</span> (<span class="name">cal-china-x-chufu-date</span> date))</span><br><span class="line">         (<span class="name">zhongfu</span> (<span class="name">cal-china-x-zhongfu-date</span> date))</span><br><span class="line">         (<span class="name">mofu</span> (<span class="name">cal-china-x-mofu-date</span> date))</span><br><span class="line">         (<span class="name">chufu-gap</span> (<span class="name">cal-china-x-days-diff</span> date chufu))</span><br><span class="line">         (<span class="name">zhongfu-gap</span> (<span class="name">cal-china-x-days-diff</span> date zhongfu))</span><br><span class="line">         (<span class="name">mofu-gap</span> (<span class="name">cal-china-x-days-diff</span> date mofu))</span><br><span class="line">         )</span><br><span class="line">    (<span class="name">if</span> (<span class="name">or</span> (<span class="name">&lt;</span> chufu-gap <span class="number">0</span>) (<span class="name">&gt;</span> mofu-gap <span class="number">9</span>))</span><br><span class="line">        <span class="string">&quot;&quot;</span></span><br><span class="line">      (<span class="name">if</span> (<span class="name">and</span> (<span class="name">&gt;=</span> chufu-gap <span class="number">0</span>) (<span class="name">&lt;</span> zhongfu-gap <span class="number">0</span>))</span><br><span class="line">          (<span class="name">concat</span> <span class="string">&quot;初伏(&quot;</span></span><br><span class="line">                  (<span class="name">number-to-string</span> (<span class="number">1</span>+ chufu-gap))</span><br><span class="line">                  <span class="string">&quot;)&quot;</span>)</span><br><span class="line">        (<span class="name">if</span> (<span class="name">and</span> (<span class="name">&gt;=</span> zhongfu-gap <span class="number">0</span>) (<span class="name">&lt;</span> mofu-gap <span class="number">0</span>))</span><br><span class="line">            (<span class="name">concat</span> <span class="string">&quot;中伏(&quot;</span></span><br><span class="line">                    (<span class="name">number-to-string</span> (<span class="number">1</span>+ zhongfu-gap))</span><br><span class="line">                    <span class="string">&quot;)&quot;</span>)</span><br><span class="line">          (<span class="name">concat</span> <span class="string">&quot;末伏(&quot;</span></span><br><span class="line">                  (<span class="name">number-to-string</span> (<span class="number">1</span>+ mofu-gap))</span><br><span class="line">                  <span class="string">&quot;)&quot;</span>))))))</span><br></pre></td></tr></table></figure>
 <p>注意如果夏至当天是庚日，则算第一个庚日，相当于初伏在夏至20天之后。</p>
 <p>另外，<code>cal-china-x</code> 中月和日的天干地支计算有点问题，需要用 <code>Emacs</code> 自带的计算。</p>
 	  
@@ -319,7 +318,7 @@ Defaults to today's date if <span class="token argument">DATE</span> is not give
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    <li><a href="/categories/Geek/">Geek<span>12</span></a></li>
+    <li><a href="/categories/Geek/">Geek<span>11</span></a></li>
   </li>
 
     </ul>
@@ -368,7 +367,7 @@ var disqus_shortname = 'bigbossjiang';
   </div>
   <div class="container-narrow">
     <footer> <p>
-  &copy; 2021 Tommy Jiang
+  &copy; 2024 Tommy Jiang
   
       with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>

@@ -1,7 +1,98 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+<head><!-- hexo injector head_begin start --><style type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->.douban-card-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 400px;
+}
+
+.douban-card {
+    display: flex;
+    margin: 30px 10px;
+    padding: 15px;
+    border-radius: 15px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.douban-card:hover {
+    text-decoration: none;
+}
+
+.douban-card-bgimg {
+    position: absolute;
+    width: 115%;
+    height: 115%;
+    filter: blur(15px) brightness(0.6);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-img {
+    position: relative;
+    height: 130px;
+    width: 80px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-left:hover .douban-card-img {
+    filter: blur(5px) brightness(0.6);
+    transform: perspective(800px) rotateX(180deg);
+}
+
+.douban-card-left .douban-card-img {
+    transition: all 500ms ease;
+}
+
+.douban-card-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.douban-card-left .douban-card-status {
+    height: 130px;
+    width: 80px;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 30%;
+    transform: rotateX(180deg);
+    backface-visibility: hidden;
+    transition: all 500ms ease;
+}
+
+.douban-card-left:hover .douban-card-status {
+    transform: perspective(800px) rotateX(0deg);
+}
+
+.douban-card-right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+    font-size: 16px;
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.3;
+    color: antiquewhite;
+}
+
+.douban-card-item {
+    margin-top: 4px;
+}
+</style><!-- hexo injector head_begin end -->
+  <meta charset="utf-8">
   
   <title>七夕·Google | Tommy&#39;s Blog</title>
   <meta name="author" content="Tommy Jiang">
@@ -15,7 +106,7 @@
   <meta property="og:site_name" content="Tommy&#39;s Blog"/>
 
   
-    <meta property="og:image" content="undefined"/>
+    <meta property="og:image" content=""/>
   
 
   
@@ -47,7 +138,7 @@
 
 
 
-<meta name="generator" content="Hexo 5.2.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<meta name="generator" content="Hexo 7.3.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 <body>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
@@ -119,8 +210,8 @@
 	<div class="mypage">		
 	  		
 
-	  <p>今天是中国传统佳节七夕，Google 主页也很应景地换成了七夕的配图。</p>
-<a id="more"></a>
+	  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>今天是中国传统佳节七夕，Google 主页也很应景地换成了七夕的配图。</p>
+<span id="more"></span>
 <p>Google 不愧是一个充满人文关怀的公司，今天也应景地配上了七夕的图片。中午打开 Mac 下的 Chrome 时发现整个 UI 焕然一新，原来已经升级到 v52 版本，整体 UI 借鉴了移动设备上的 <code>Material</code> 风格，界面更加简洁，科技感更强，整体配色也更高冷了。</p>
 <p><img src="/images/2016/Chrome-v52.png" alt=""></p>
 <p>说起七夕，印象比较深的有高考那年，也就是 2006 年的双七夕。</p>
@@ -213,7 +304,7 @@
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    <li><a href="/categories/生活/">生活<span>59</span></a></li>
+    <li><a href="/categories/生活/">生活<span>78</span></a></li>
   </li>
 
     </ul>
@@ -262,7 +353,7 @@ var disqus_shortname = 'bigbossjiang';
   </div>
   <div class="container-narrow">
     <footer> <p>
-  &copy; 2021 Tommy Jiang
+  &copy; 2024 Tommy Jiang
   
       with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>

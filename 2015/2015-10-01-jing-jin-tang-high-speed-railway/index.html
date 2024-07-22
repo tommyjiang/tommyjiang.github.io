@@ -1,7 +1,98 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+<head><!-- hexo injector head_begin start --><style type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->.douban-card-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 400px;
+}
+
+.douban-card {
+    display: flex;
+    margin: 30px 10px;
+    padding: 15px;
+    border-radius: 15px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.douban-card:hover {
+    text-decoration: none;
+}
+
+.douban-card-bgimg {
+    position: absolute;
+    width: 115%;
+    height: 115%;
+    filter: blur(15px) brightness(0.6);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-img {
+    position: relative;
+    height: 130px;
+    width: 80px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-left:hover .douban-card-img {
+    filter: blur(5px) brightness(0.6);
+    transform: perspective(800px) rotateX(180deg);
+}
+
+.douban-card-left .douban-card-img {
+    transition: all 500ms ease;
+}
+
+.douban-card-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.douban-card-left .douban-card-status {
+    height: 130px;
+    width: 80px;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 30%;
+    transform: rotateX(180deg);
+    backface-visibility: hidden;
+    transition: all 500ms ease;
+}
+
+.douban-card-left:hover .douban-card-status {
+    transform: perspective(800px) rotateX(0deg);
+}
+
+.douban-card-right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+    font-size: 16px;
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.3;
+    color: antiquewhite;
+}
+
+.douban-card-item {
+    margin-top: 4px;
+}
+</style><!-- hexo injector head_begin end -->
+  <meta charset="utf-8">
   
   <title>京、津、唐高铁乘车方案和乘车小技巧 | Tommy&#39;s Blog</title>
   <meta name="author" content="Tommy Jiang">
@@ -15,7 +106,7 @@
   <meta property="og:site_name" content="Tommy&#39;s Blog"/>
 
   
-    <meta property="og:image" content="undefined"/>
+    <meta property="og:image" content=""/>
   
 
   
@@ -47,7 +138,7 @@
 
 
 
-<meta name="generator" content="Hexo 5.2.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<meta name="generator" content="Hexo 7.3.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 <body>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
@@ -119,8 +210,8 @@
 	<div class="mypage">		
 	  		
 
-	  <p>2015年十一回家，由于买不到直达唐山/唐山北的票，选择了经天津中转的方案，将三地铁路资料汇总如下。</p>
-<a id="more"></a>
+	  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>2015年十一回家，由于买不到直达唐山/唐山北的票，选择了经天津中转的方案，将三地铁路资料汇总如下。</p>
+<span id="more"></span>
 <h1 id="京唐高铁"><a href="#京唐高铁" class="headerlink" title="京唐高铁"></a>京唐高铁</h1><p>2015年8月25日，铁道第三勘察设计院公布了<a target="_blank" rel="noopener" href="http://www.tsdig.com/infom.aspx?Id=684&amp;FileName=info&amp;Language=1">京唐高铁环评二次公告</a>，京唐高铁的走向也正式确定，起点为位于北京的新北京东站，终点为唐山站。</p>
 <p>其实早在2009年，就有新闻说京唐高铁即将开工，但后来由于发改委未批复而搁浅。2013年8月，习近平在北戴河主持研究河北发展问题时，提出要推动京津冀协同发展。借此东风，京唐城际重新提上日程，预计年内开工，施工周期3年半，预计2018年底通车。</p>
 <p>2016.05.26更新：有传闻说京唐城际的起点可能会改为通州九棵树附近的通州站，这样一来地铁上的时间就太长了，和北京站的动车相比没有太大优势。</p>
@@ -231,7 +322,7 @@
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    <li><a href="/categories/生活/">生活<span>59</span></a></li>
+    <li><a href="/categories/生活/">生活<span>78</span></a></li>
   </li>
 
     </ul>
@@ -280,7 +371,7 @@ var disqus_shortname = 'bigbossjiang';
   </div>
   <div class="container-narrow">
     <footer> <p>
-  &copy; 2021 Tommy Jiang
+  &copy; 2024 Tommy Jiang
   
       with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>

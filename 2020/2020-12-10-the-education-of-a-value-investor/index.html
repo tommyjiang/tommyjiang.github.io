@@ -1,7 +1,98 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+<head><!-- hexo injector head_begin start --><style type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->.douban-card-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 400px;
+}
+
+.douban-card {
+    display: flex;
+    margin: 30px 10px;
+    padding: 15px;
+    border-radius: 15px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.douban-card:hover {
+    text-decoration: none;
+}
+
+.douban-card-bgimg {
+    position: absolute;
+    width: 115%;
+    height: 115%;
+    filter: blur(15px) brightness(0.6);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-img {
+    position: relative;
+    height: 130px;
+    width: 80px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-left:hover .douban-card-img {
+    filter: blur(5px) brightness(0.6);
+    transform: perspective(800px) rotateX(180deg);
+}
+
+.douban-card-left .douban-card-img {
+    transition: all 500ms ease;
+}
+
+.douban-card-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.douban-card-left .douban-card-status {
+    height: 130px;
+    width: 80px;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 30%;
+    transform: rotateX(180deg);
+    backface-visibility: hidden;
+    transition: all 500ms ease;
+}
+
+.douban-card-left:hover .douban-card-status {
+    transform: perspective(800px) rotateX(0deg);
+}
+
+.douban-card-right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+    font-size: 16px;
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.3;
+    color: antiquewhite;
+}
+
+.douban-card-item {
+    margin-top: 4px;
+}
+</style><!-- hexo injector head_begin end -->
+  <meta charset="utf-8">
   
   <title>《价值投资者的教育》读书笔记 | Tommy&#39;s Blog</title>
   <meta name="author" content="Tommy Jiang">
@@ -15,7 +106,7 @@
   <meta property="og:site_name" content="Tommy&#39;s Blog"/>
 
   
-    <meta property="og:image" content="undefined"/>
+    <meta property="og:image" content=""/>
   
 
   
@@ -47,7 +138,7 @@
 
 
 
-<meta name="generator" content="Hexo 5.2.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<meta name="generator" content="Hexo 7.3.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 <body>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
@@ -119,12 +210,12 @@
 	<div class="mypage">		
 	  		
 
-	  
+	  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css">
 <div class="alert alert-info"><i class="fa fa-info"></i>
 2020 年度最佳图书。
 </div>
 
-<a id="more"></a>
+<span id="more"></span>
 <p>先上<a target="_blank" rel="noopener" href="https://book.douban.com/subject/26427201/">豆瓣链接</a>。</p>
 <p>一本差点被书名毁了的好书，在流量为王的时代，干点啥都想着博眼球，还是中国青年出版社出的，中国青年要都这样可完了。</p>
 <h1 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h1><h2 id="第-1-章"><a href="#第-1-章" class="headerlink" title="第 1 章"></a>第 1 章</h2><p>作者在这一章讲了他毕业后的第一份工作——加入了一家华尔街的投行，这家投行就在 J. P. 摩根的隔壁。从世俗的视角来看他或许很成功，但作者自己却认为这是一个非常失败的工作经历。原因是这家投行是一家“声名狼藉”的证券公司。金融公司听起来高大上，很多干的其实就是割韭菜的活儿，比如把一个烂公司包装上市让韭菜接盘。这是一个典型的博傻游戏，比的是谁跑得快，只要不做最后一个接盘的傻子，大家都有钱赚。在这种公司工作，你的任务就是去寻找更多接盘的韭菜，把烂公司包装成好公司卖给他们，从中赚取服务费和交易佣金。这个行业的从业者都有着光鲜亮丽的学历背景，但每个人都默认这样一个潜规则，但作者觉得这样违背了自己的道德，最终在 18 个月后，作者离开了这个投行。</p>
@@ -333,7 +424,7 @@
 	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
     <ul id="tags" class="tag_box list-unstyled collapse in">	  
 	    
-  <li><a href="/tags/投资/">投资<span>10</span></a></li>
+  <li><a href="/tags/投资/">投资<span>21</span></a></li>
     </ul>
 	</div>
 	
@@ -369,7 +460,7 @@ var disqus_shortname = 'bigbossjiang';
   </div>
   <div class="container-narrow">
     <footer> <p>
-  &copy; 2021 Tommy Jiang
+  &copy; 2024 Tommy Jiang
   
       with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>

@@ -1280,7 +1280,7 @@ h6,
 p {
   margin: 0 0 5px;
   text-align: justify;
-  text-indent: 0em;
+  text-indent: 2em;
 }
 .lead {
   margin-bottom: 21px;
@@ -6892,4 +6892,5 @@ a:hover {
 blockquote {
   border-left: 5px solid #eeeeee;
   font-size: 18.75px;
+  margin-left: 2em;
 }
